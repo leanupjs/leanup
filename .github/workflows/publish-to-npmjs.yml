@@ -23,10 +23,26 @@ jobs:
         run: npm i lerna
       - name: Publish
         run: |
-          npm publish cli/core --access public --tag next
-          # npm publish cli/core/e2e --access public --tag next
-          # npm publish cli/core/format --access public --tag next
-          # npm publish cli/core/lint --access public --tag next
-          # npm publish cli/core/test --access public --tag next
+          npm run publish
+          # npm publish cli/core --access public --tag next || true
+          # npm publish cli/core/e2e --access public --tag next || true
+          # npm publish cli/core/format --access public --tag next || true
+          # npm publish cli/core/lint --access public --tag next || true
+          # npm publish cli/core/test --access public --tag next || true
+          # npm publish frameworks/angular --access public --tag next || true
+          # npm publish frameworks/angularjs --access public --tag next || true
+          # npm publish frameworks/aurelia --access public --tag next || true
+          # npm publish frameworks/inferno --access public --tag next || true
+          # npm publish frameworks/preact --access public --tag next || true
+          # npm publish frameworks/react --access public --tag next || true
+          # npm publish frameworks/svelte --access public --tag next || true
+          # npm publish frameworks/vue --access public --tag next || true
+          # npm publish frameworks/vue3 --access public --tag next || true
+          # npm publish plugins/addons --access public --tag next || true
+          # npm publish plugins/cucumber --access public --tag next || true
+          # npm publish plugins/graphql --access public --tag next || true
+          # npm publish plugins/pwa --access public --tag next || true
+          # npm publish plugins/webhint --access public --tag next || true
+          # npm publish git-hooks --access public --tag next || true
         env:
           NODE_AUTH_TOKEN: $NPMJS_AUTH_TOKEN
