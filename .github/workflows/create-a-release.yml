@@ -24,11 +24,11 @@ jobs:
         run: |
           content=`cat ./lerna.json | tr -d "\n"`
           echo "::set-output name=lernaJson::$content"
-      - name: Install
-        run: npm ci
-      - name: Coverage
-        run: npx do coverage
-      # # // https://github.com/actions/create-release
+      # - name: Install
+      #   run: npm ci
+      # - name: Coverage
+      #   run: npx do coverage
+      # // https://github.com/actions/create-release
       - name: Create Release
         uses: actions/create-release@v1
         env:
