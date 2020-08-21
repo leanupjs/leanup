@@ -16,33 +16,14 @@ jobs:
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
       - name: Install
-        run: npm run update
-      - name: Publish
         run: |
-          npm run publish
-          # npm publish cli/core --access public --tag next || true
-          # npm publish cli/core/e2e --access public --tag next || true
-          # npm publish cli/core/format --access public --tag next || true
-          # npm publish cli/core/lint --access public --tag next || true
-          # npm publish cli/core/test --access public --tag next || true
-          # npm publish frameworks/angular --access public --tag next || true
-          # npm publish frameworks/angularjs --access public --tag next || true
-          # npm publish frameworks/aurelia --access public --tag next || true
-          # npm publish frameworks/inferno --access public --tag next || true
-          # npm publish frameworks/preact --access public --tag next || true
-          # npm publish frameworks/react --access public --tag next || true
-          # npm publish frameworks/svelte --access public --tag next || true
-          # npm publish frameworks/vue --access public --tag next || true
-          # npm publish frameworks/vue3 --access public --tag next || true
-          # npm publish plugins/addons --access public --tag next || true
-          # npm publish plugins/cucumber --access public --tag next || true
-          # npm publish plugins/graphql --access public --tag next || true
-          # npm publish plugins/pwa --access public --tag next || true
-          # npm publish plugins/webhint --access public --tag next || true
-          # npm publish git-hooks --access public --tag next || true
+          npm ci
+          npx lerna exec --ignore @template/* --stream -- npm ci
+      - name: Public
+        run: npx lerna exec --ignore @template/* --no-bail --stream -- npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
