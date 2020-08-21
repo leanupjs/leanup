@@ -20,7 +20,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
       - name: Install
-        run: npm i lerna
+        run: npm run update
       - name: Publish
         run: |
           npm run publish
@@ -45,4 +45,4 @@ jobs:
           # npm publish plugins/webhint --access public --tag next || true
           # npm publish git-hooks --access public --tag next || true
         env:
-          NODE_AUTH_TOKEN: $NPMJS_AUTH_TOKEN
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
