@@ -18,7 +18,7 @@ export interface CommandItem {
   actions: Function[];
 }
 
-const projectNameRexExp = new RegExp(`<%PROJECT_NAME%>`, 'g');
+const projectNameRexExp = new RegExp(`@template/[^"]+`, 'g');
 
 export abstract class AbstractCLI {
   private name: string;
