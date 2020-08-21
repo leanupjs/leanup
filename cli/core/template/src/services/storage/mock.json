@@ -1,0 +1,9 @@
+{
+  "measuredSeries": [
+    { "id": 5, "title": "Gas", "unit": "m³" },
+    { "id": 4, "title": "Strom", "unit": "kWh" },
+    { "id": 3, "title": "Wasser", "unit": "m³" },
+    { "id": 2, "title": "Außentemparatur", "unit": "°C" },
+    { "id": 1, "title": "Sonnenstunden", "unit": "h" }
+  ]
+}

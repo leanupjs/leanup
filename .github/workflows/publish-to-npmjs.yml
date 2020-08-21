@@ -1,0 +1,32 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: GitHub CI - Publish to NPM
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@leanup'
+      - name: Install
+        run: npm i lerna
+      - name: Publish
+        run: |
+          npm publish cli/core --access public --tag next
+          # npm publish cli/core/e2e --access public --tag next
+          # npm publish cli/core/format --access public --tag next
+          # npm publish cli/core/lint --access public --tag next
+          # npm publish cli/core/test --access public --tag next
+        env:
+          NODE_AUTH_TOKEN: $NPMJS_AUTH_TOKEN

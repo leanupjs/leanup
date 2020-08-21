@@ -1,0 +1,5 @@
+.reports/
+node_modules/
+templates/
+*.log
+*.tgz

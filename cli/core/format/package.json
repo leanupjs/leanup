@@ -1,0 +1,27 @@
+{
+  "name": "@leanup/cli-core-format",
+  "version": "1.0.0-beta.0",
+  "description": "This module contains the format feature for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "keywords": [
+    "prettier",
+    "formatter",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/cli/issues"
+  },
+  "dependencies": {
+    "prettier": "^2.0.5"
+  },
+  "peerDependencies": {
+    "@leanup/cli": "1.0.0-beta.0"
+  },
+  "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
+}

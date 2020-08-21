@@ -1,0 +1,13 @@
+<template>
+  <require from="../series/create/component.aurelia"></require>
+  <require from="../series/edit/component.aurelia"></require>
+  <require from="../series/list/component.aurelia"></require>
+  <div id="app">
+    <h4>${framework.name} v${framework.version}</h4>
+    <small>${finishedRendering} ms upcomming time</small>
+    <list-serie if.bind="resolvedRoute.url === 'series'"></list-serie>
+    <create-serie if.bind="resolvedRoute.url === 'series/create'"></create-serie>
+    <edit-serie if.bind="resolvedRoute.url === 'series/:id/edit'" resolved-route.bind="resolvedRoute"></edit-serie>
+    <small>Used filters: ${filters.date(dummies.date)} | ${filters.currency(dummies.price)} €</small>
+  </div>
+</template>

@@ -1,0 +1,44 @@
+{
+  "name": "@leanup/cli-cucumber",
+  "version": "1.0.0-beta.0",
+  "description": "This module contains the cucumber feature for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "files": [
+    "lib/**",
+    "template/**",
+    "cucumber.conf.js",
+    "index.js",
+    "webpack.config.js"
+  ],
+  "keywords": [
+    "cucumber"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/cli/issues"
+  },
+  "dependencies": {
+    "@types/cucumber": "^6.0.1",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "cucumber-pretty": "^6.0.0",
+    "nightwatch-api": "^3.0.1"
+  },
+  "devDependencies": {
+    "@leanup/cli": "1.0.0-beta.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@types/node": "^14.6.0",
+    "rollup": "^2.26.4",
+    "rollup-plugin-add-shebang": "0.3.1",
+    "rollup-plugin-terser": "^7.0.0",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "@leanup/cli": "1.0.0-beta.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "connector": {
+    "name": "puppeteer",
+    "options": {
+      "headless": true
+    }
+  },
+  "extends": ["accessibility", "progressive-web-apps"],
+  "formatters": ["html", "summary"]
+}

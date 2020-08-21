@@ -1,0 +1,59 @@
+{
+  "name": "@template/angular",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
+    "build": "angular build --gzip",
+    "coverage": "angular coverage",
+    "e2e": "angular e2e",
+    "reinstall": "npm run remove && npm run update",
+    "remove": "rm -rf node_modules package-lock.json",
+    "serve": "angular serve",
+    "start": "npm run serve -- --open",
+    "test": "angular test",
+    "update": "npm install && npm update"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
+      "eslint"
+    ],
+    "{src,tests}/**": [
+      "prettier"
+    ]
+  },
+  "dependencies": {
+    "@angular/common": "^10.0.11",
+    "@angular/compiler": "^10.0.11",
+    "@angular/compiler-cli": "^10.0.11",
+    "@angular/core": "^10.0.11",
+    "@angular/forms": "^10.0.11",
+    "@angular/platform-browser": "^10.0.11",
+    "@angular/platform-browser-dynamic": "^10.0.11",
+    "@leanup/features": "latest",
+    "@leanup/forms": "latest",
+    "core-js": "^3.6.5",
+    "navigo": "^7.1.2",
+    "register-service-worker": "^1.7.1",
+    "rxjs": "^6.6.2",
+    "zone.js": "^0.11.1"
+  },
+  "devDependencies": {
+    "@leanup/cli": "^1.0.0-beta.0",
+    "@leanup/cli-addons": "^1.0.0-beta.0",
+    "@leanup/cli-angular": "^1.0.0-beta.0",
+    "@leanup/cli-pwa": "^1.0.0-beta.0",
+    "@leanup/git-hooks": "^1.0.0-beta.0",
+    "@ngtools/webpack": "^10.0.5",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2",
+    "workbox-cli": "^5.1.3"
+  },
+  "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
+}

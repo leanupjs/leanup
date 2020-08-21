@@ -1,0 +1,51 @@
+{
+  "name": "@template/vue",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
+    "build": "vue build --gzip",
+    "coverage": "vue coverage",
+    "e2e": "vue e2e",
+    "reinstall": "npm run remove && npm run update",
+    "remove": "rm -rf node_modules package-lock.json",
+    "serve": "vue serve",
+    "start": "npm run serve -- --open",
+    "test": "vue test",
+    "update": "npm install && npm update"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
+      "eslint"
+    ],
+    "{src,tests}/**": [
+      "prettier"
+    ]
+  },
+  "dependencies": {
+    "@leanup/features": "latest",
+    "@leanup/forms": "latest",
+    "@vue/composition-api": "^0.6.7",
+    "navigo": "^7.1.2",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "@leanup/cli": "^1.0.0-beta.0",
+    "@leanup/cli-addons": "^1.0.0-beta.0",
+    "@leanup/cli-pwa": "^1.0.0-beta.0",
+    "@leanup/cli-vue": "^1.0.0-beta.0",
+    "@leanup/git-hooks": "^1.0.0-beta.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2",
+    "workbox-cli": "^5.1.3"
+  },
+  "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
+}

@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "types": ["mocha", "node"],
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "strict": false
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
+  "include": ["src/**/*.ts", "node_modules/@leanup/**/*.ts"],
+  "exclude": [
+    "node_modules/@leanup/**/template/**/*",
+    "src/**/svelte.ts",
+    "src/**/vue.ts",
+    "src/**/*angularjs*.ts",
+    "src/**/*aurelia*.ts",
+    "src/**/*inferno*.ts",
+    "src/**/*preact*.ts",
+    "src/**/*react*.ts",
+    "src/**/*vanilla*.ts"
+  ]
+}

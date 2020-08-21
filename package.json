@@ -1,0 +1,34 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "outdated": "(npm outdated || true) && lerna exec --ignore @template/* --stream --no-bail -- npm outdated",
+    "publish": "lerna exec --ignore @template/* --stream --no-bail -- npm publish --access public --tag next",
+    "latest": "lerna exec --ignore @template/* --stream --no-bail -- npm dist-tag latest",
+    "remove": "(lerna exec --ignore @template/* --stream -- rm -rf node_modules || true) && rm -rf node_modules",
+    "reinstall": "npm run remove && npm run update",
+    "update": "npm install && lerna exec --ignore @template/* --stream -- npm install && npm update && lerna exec --ignore @template/* --stream -- npm update && npm run outdated",
+    "version": "lerna version prerelease --ignore @template/* --no-push --yes"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
+      "eslint"
+    ],
+    "**": [
+      "prettier"
+    ]
+  },
+  "devDependencies": {
+    "@leanup/cli": "next",
+    "@leanup/cli-vanilla": "next",
+    "@leanup/git-hooks": "next",
+    "lerna": "^3.22.1",
+    "typescript": "^4.0.2"
+  }
+}

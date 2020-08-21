@@ -1,0 +1,47 @@
+{
+  "name": "@leanup/cli-core-test",
+  "version": "1.0.0-beta.0",
+  "description": "This module contains the test feature for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "keywords": [
+    "mocha",
+    "jsdom",
+    "nyc",
+    "chai",
+    "coverage",
+    "sinon",
+    "mock",
+    "unit-test",
+    "test",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/cli/issues"
+  },
+  "dependencies": {
+    "@babel/register": "^7.10.5",
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "@types/sinon": "^9.0.4",
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "esm": "^3.2.0",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.0",
+    "mocha": "^8.1.1",
+    "mock-local-storage": "^1.1.15",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.3"
+  },
+  "peerDependencies": {
+    "@leanup/cli": "1.0.0-beta.0"
+  },
+  "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
+}
