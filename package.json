@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "outdated": "(npm outdated || true) && lerna exec --ignore @template/* --stream --no-bail -- npm outdated",
-    "publish": "lerna exec --ignore @template/* --stream --no-bail -- npm publish --access public --tag next",
     "latest": "lerna exec --ignore @template/* --stream --no-bail -- npm dist-tag latest",
     "remove": "(lerna exec --ignore @template/* --stream -- rm -rf node_modules || true) && rm -rf node_modules",
     "reinstall": "npm run remove && npm run update",

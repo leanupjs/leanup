@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
-  name: '<%PROJECT_NAME%> - SPA/PWA',
-  short_name: '<%PROJECT_NAME%>',
+  name: '@template/pwa - SPA/PWA',
+  short_name: '@template/pwa',
   description: '...',
   lang: 'de-DE',
   start_url: 'https://',
@@ -13,13 +13,13 @@ module.exports = {
   icons: [
     {
       src: path.resolve('public/assets/pwa.icon.png'),
-      sizes: [96, 128, 192, 256, 384, 512]
-    }
+      sizes: [96, 128, 192, 256, 384, 512],
+    },
   ],
   crossorigin: null,
   inject: true,
   fingerprints: false,
   ios: false,
   publicPath: null,
-  includeDirectory: true
+  includeDirectory: true,
 };
