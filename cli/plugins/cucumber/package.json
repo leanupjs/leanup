@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-cucumber",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.4",
   "description": "This module contains the cucumber feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/martinoppitz/leanup#readme",
