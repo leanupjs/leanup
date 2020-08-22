@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/martinoppitz/leanup#readme",
