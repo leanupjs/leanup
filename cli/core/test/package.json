@@ -28,7 +28,7 @@
     "@babel/register": "^7.10.5",
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.3",
-    "@types/sinon": "^9.0.4",
+    "@types/sinon": "^9.0.5",
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
@@ -42,6 +42,9 @@
   },
   "peerDependencies": {
     "@leanup/cli": "1.0.0-beta.0"
+  },
+  "scripts": {
+    "prepack": "rm package-lock.json && npm install --only=dev"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

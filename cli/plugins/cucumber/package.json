@@ -30,7 +30,6 @@
     "nightwatch-api": "^3.0.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.0-beta.1",
     "@rollup/plugin-typescript": "^5.0.2",
     "@types/node": "^14.6.0",
     "rollup": "^2.26.4",
@@ -40,5 +39,8 @@
   },
   "peerDependencies": {
     "@leanup/cli": "1.0.0-beta.0"
+  },
+  "scripts": {
+    "prepack": "rm package-lock.json && npm install --only=dev"
   }
 }
