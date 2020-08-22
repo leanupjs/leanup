@@ -16,13 +16,9 @@ jobs:
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@leanup'
-      - name: Install
-        run: |
-          npm ci
-          npx lerna exec --ignore @template/* --stream -- npm ci
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@leanup"
       # // https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#fromjson
       - name: Read Lerna
         id: lerna
