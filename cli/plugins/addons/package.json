@@ -56,6 +56,6 @@
     "@leanup/cli": "^1.0.0-beta.0"
   },
   "scripts": {
-    "prepack": "npm install && npm update"
+    "prepack": "npm install && npm update && sh build.sh"
   }
 }
