@@ -34,8 +34,8 @@
     "@vue/composition-api": "^0.6.7",
     "navigo": "^7.1.2",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.0-beta.6",
