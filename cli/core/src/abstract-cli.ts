@@ -18,7 +18,7 @@ export interface CommandItem {
   actions: Function[];
 }
 
-const projectNameRexExp = new RegExp(`@template/[^"]+`, 'g');
+const projectNameRexExp = new RegExp(`@template/[a-z]+`, 'g');
 
 export abstract class AbstractCLI {
   private name: string;
@@ -128,6 +128,9 @@ export abstract class AbstractCLI {
       .join('')
       .replace(/(\\|\/).+/g, '')
       // .replace(/^([^\/]+\/)+/g, '')
+      .split('')
+      .reverse()
+      .join('')
       .toLowerCase();
 
     if (options.namespace) {

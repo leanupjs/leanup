@@ -33,10 +33,6 @@ export class CommonCLI extends AbstractCLI {
       'Create a new project.',
       [
         { flags: '-n, --namespace <namespace>', description: 'individual npm namespace (@.../)' },
-        { flags: '-i, --install', description: 'do install dependencies' },
-        { flags: '--no-install', description: 'do not install dependencies' },
-        { flags: '-u, --update', description: 'do update dependencies' },
-        { flags: '--no-update', description: 'do not update dependencies' },
         { flags: '-o, --overwrite', description: 'do overwrite existing files' },
       ].concat(commonOptions),
       (options: CreateOps): string[] => {
@@ -47,6 +43,9 @@ export class CommonCLI extends AbstractCLI {
           .join('')
           .replace(/(\\|\/).+/g, '')
           // .replace(/^([^\/]+\/)+/g, '')
+          .split('')
+          .reverse()
+          .join('')
           .toLowerCase();
         if (options.namespace) {
           projectName = `@${options.namespace}/${projectName}`;
@@ -71,18 +70,7 @@ export class CommonCLI extends AbstractCLI {
           } catch (error) {}
         });
 
-        const spawnArgs = ['npm'];
-        if (options.install === true && options.update === true) {
-          spawnArgs.push('run');
-          spawnArgs.push('update');
-        } else if (options.install === true) {
-          spawnArgs.push('install');
-        } else if (options.update === true) {
-          spawnArgs.push('update');
-        } else {
-          spawnArgs.push('outdated');
-        }
-        return spawnArgs;
+        return ['npm', 'install'];
       }
     );
 
