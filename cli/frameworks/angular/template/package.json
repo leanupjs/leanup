@@ -42,7 +42,7 @@
     "navigo": "^7.1.2",
     "register-service-worker": "^1.7.1",
     "rxjs": "^6.6.2",
-    "zone.js": "^0.11.1"
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.0-beta.3",
