@@ -32,7 +32,7 @@
     "@leanup/cli": "1.0.0-beta.0"
   },
   "scripts": {
-    "prepack": "rm package-lock.json && npm install --only=dev"
+    "prepack": "npm install && npm update"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

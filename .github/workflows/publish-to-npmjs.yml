@@ -19,11 +19,10 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
-      - name: Install
+      - name: Publish
         run: |
-          npm ci
-          npx lerna exec --ignore @template/* --stream -- npm ci
-      - name: Public
-        run: npx lerna exec --ignore @template/* --no-bail --stream -- npm publish --access public --tag next
+          npm install lerna
+          npx lerna exec --concurrency 1 --ignore @template/* --stream -- npm install --only=dev
+          npx lerna exec --concurrency 1 --ignore @template/* --no-bail --stream -- npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}

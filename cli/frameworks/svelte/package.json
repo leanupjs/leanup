@@ -59,7 +59,7 @@
     "svelte": "^3.0.0"
   },
   "scripts": {
-    "prepack": "rm package-lock.json && npm install --only=dev && sh build.sh"
+    "prepack": "npm install && npm update && sh build.sh"
   },
   "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
 }

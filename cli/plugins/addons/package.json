@@ -56,6 +56,6 @@
     "@leanup/cli": "1.0.0-beta.0"
   },
   "scripts": {
-    "prepack": "rm package-lock.json && npm install --only=dev"
+    "prepack": "npm install && npm update"
   }
 }
