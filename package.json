@@ -7,7 +7,7 @@
     "remove": "(lerna exec --ignore @template/* --stream -- rm -rf node_modules || true) && rm -rf node_modules",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && lerna exec --ignore @template/* --stream -- npm install && npm update && lerna exec --ignore @template/* --stream -- npm update && npm run outdated",
-    "version": "lerna version prerelease --ignore @template/* --no-push --yes"
+    "version": "lerna version prerelease --no-push --yes"
   },
   "husky": {
     "hooks": {
