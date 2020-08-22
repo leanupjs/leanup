@@ -123,7 +123,11 @@ export abstract class AbstractCLI {
   protected copyAndPrint(folder: string, subfolder = '', options: CreateOps): void {
     let projectName = path
       .resolve(process.cwd())
-      .replace(/^([^\/]+\/)+/, '')
+      .split('')
+      .reverse()
+      .join('')
+      .replace(/(\\|\/).+/g, '')
+      // .replace(/^([^\/]+\/)+/g, '')
       .toLowerCase();
 
     if (options.namespace) {

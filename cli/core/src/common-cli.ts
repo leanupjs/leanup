@@ -42,7 +42,11 @@ export class CommonCLI extends AbstractCLI {
       (options: CreateOps): string[] => {
         let projectName = path
           .resolve(process.cwd())
-          .replace(/^([^\/]+\/)+/, '')
+          .split('')
+          .reverse()
+          .join('')
+          .replace(/(\\|\/).+/g, '')
+          // .replace(/^([^\/]+\/)+/g, '')
           .toLowerCase();
         if (options.namespace) {
           projectName = `@${options.namespace}/${projectName}`;
