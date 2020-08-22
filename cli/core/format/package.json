@@ -21,7 +21,7 @@
     "prettier": "^2.0.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "1.0.0-beta.0"
+    "@leanup/cli": "^1.0.0-beta.0"
   },
   "scripts": {
     "prepack": "npm install && npm update"
