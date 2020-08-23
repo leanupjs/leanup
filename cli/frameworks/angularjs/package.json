@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-angularjs",
-  "version": "1.0.0-rc.502",
+  "version": "1.0.0-rc.503",
   "description": "This package contains the AngularJS framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/martinoppitz/leanup#readme",
