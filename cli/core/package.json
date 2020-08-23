@@ -97,7 +97,7 @@
   },
   "scripts": {
     "postinstall": "node postinstall.js",
-    "prepack": "npm install && npm update && sh build.sh"
+    "prepack": "sh build.sh"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

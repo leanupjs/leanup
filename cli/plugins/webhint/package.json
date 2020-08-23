@@ -45,6 +45,6 @@
     "@leanup/cli": "^1.0.0-rc.500"
   },
   "scripts": {
-    "prepack": "npm install && npm update && sh build.sh"
+    "prepack": "sh build.sh"
   }
 }

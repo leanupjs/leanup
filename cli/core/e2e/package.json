@@ -32,8 +32,5 @@
     "geckodriver": ">=1",
     "selenium-server": ">=3"
   },
-  "scripts": {
-    "prepack": "npm install && npm update"
-  },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }
