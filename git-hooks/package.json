@@ -1,6 +1,6 @@
 {
   "name": "@leanup/git-hooks",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0-rc.500",
   "description": "This module contains some nice tools to organize git hooks for NodeJs projects.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/martinoppitz/leanup#readme",
@@ -28,7 +28,7 @@
     "lint-staged": "^10.2.11"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0-rc.0"
+    "@leanup/cli": "^1.0.0-rc.500"
   },
   "scripts": {
     "prepack": "npm install && npm update"
