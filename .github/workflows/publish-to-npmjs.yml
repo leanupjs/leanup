@@ -19,9 +19,44 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
-      - name: Install and publish
+      - name: Install and publish only @leanup/cli-core-e2e
         run: |
-          npx lerna exec --ignore @template/* --stream -- npm install --only=dev
-          npx lerna exec --ignore @template/* --no-bail --stream -- npm publish --access public
+          npm install
+          npm publish --access public
+        working-directory: cli/core/e2e
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Install and publish only @leanup/cli-core-format
+        run: |
+          npm install
+          npm publish --access public
+        working-directory: cli/core/format
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Install and publish only @leanup/cli-core-lint
+        run: |
+          npm install
+          npm publish --access public
+        working-directory: cli/core/lint
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Install and publish only @leanup/cli-core-test
+        run: |
+          npm install
+          npm publish --access public
+        working-directory: cli/core/test
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Publish only @leanup/cli
+        run: |
+          npm install
+          npm publish --access public
+        working-directory: cli/core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint and @leanup/cli-core-test
+        run: |
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --no-bail --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --no-bail --stream --npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}

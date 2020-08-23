@@ -19,10 +19,10 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
-      - name: Dry install and pack
-        run: |
-          npx lerna exec --ignore @template/* --stream -- npm install --only=dev
-          npx lerna exec --ignore @template/* --stream -- npm pack
+      # - name: Dry install and pack
+      #   run: |
+      #     npx lerna exec --ignore @template/* --stream -- npm install --only=dev
+      #     npx lerna exec --ignore @template/* --stream -- npm pack
       # // https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#fromjson
       - name: Read Lerna
         id: lerna
