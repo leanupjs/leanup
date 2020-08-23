@@ -18,7 +18,26 @@ export interface CommandItem {
   actions: Function[];
 }
 
-const projectNameRexExp = new RegExp(`@template/[a-z]+`, 'g');
+export function getProjectName(namespace: string = '') {
+  let projectName = path
+    .resolve(process.cwd())
+    .split('')
+    .reverse()
+    .join('')
+    .replace(/(\\|\/).+/g, '')
+    // .replace(/^([^\/]+\/)+/g, '')
+    .split('')
+    .reverse()
+    .join('')
+    .toLowerCase();
+
+  if (typeof namespace === 'string' && namespace.length > 0) {
+    projectName = `@${namespace}/${projectName}`;
+  }
+  return projectName;
+}
+
+const PROJECT_NAME_REG_EXP = new RegExp(`@template/[a-z0-9]+`, 'g');
 
 export abstract class AbstractCLI {
   private name: string;
@@ -121,21 +140,7 @@ export abstract class AbstractCLI {
   }
 
   protected copyAndPrint(folder: string, subfolder = '', options: CreateOps): void {
-    let projectName = path
-      .resolve(process.cwd())
-      .split('')
-      .reverse()
-      .join('')
-      .replace(/(\\|\/).+/g, '')
-      // .replace(/^([^\/]+\/)+/g, '')
-      .split('')
-      .reverse()
-      .join('')
-      .toLowerCase();
-
-    if (options.namespace) {
-      projectName = `@${options.namespace}/${projectName}`;
-    }
+    const projectName = getProjectName(options.namespace);
 
     const currentDir = path.join(folder, subfolder);
     let dirs: string[];
@@ -159,7 +164,7 @@ export abstract class AbstractCLI {
       } else if (stat.isFile()) {
         if (fs.existsSync(dirPath) === false || options.overwrite === true) {
           let data = fs.readFileSync(path.join(folder, subDirent), { encoding: 'utf8' });
-          data = data.replace(projectNameRexExp, projectName);
+          data = data.replace(PROJECT_NAME_REG_EXP, projectName);
           try {
             fs.unlinkSync(dirPath);
           } catch (error) {}

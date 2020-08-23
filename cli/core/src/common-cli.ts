@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { CommandOption, AbstractCLI } from './abstract-cli';
+import { CommandOption, AbstractCLI, getProjectName } from './abstract-cli';
 import { BuildOps, CreateOps, ServeOps, E2eTestOps, FixOps, UnitTestOps, CommonOps } from './interfaces';
 
 export const commonOptions: CommandOption[] = [
@@ -36,22 +36,7 @@ export class CommonCLI extends AbstractCLI {
         { flags: '-o, --overwrite', description: 'do overwrite existing files' },
       ].concat(commonOptions),
       (options: CreateOps): string[] => {
-        let projectName = path
-          .resolve(process.cwd())
-          .split('')
-          .reverse()
-          .join('')
-          .replace(/(\\|\/).+/g, '')
-          // .replace(/^([^\/]+\/)+/g, '')
-          .split('')
-          .reverse()
-          .join('')
-          .toLowerCase();
-        if (options.namespace) {
-          projectName = `@${options.namespace}/${projectName}`;
-        }
-        const projectNameRexExp = new RegExp(`<%PROJECT_NAME%>`, 'g');
-        this.consoleLog(`Project name: ${projectName}`, options.silent);
+        this.consoleLog(`Project name: ${getProjectName(options.namespace)}`, options.silent);
 
         // Core and Vanilla
         this.copyAndPrint(path.join(__dirname, '../template'), '', options);

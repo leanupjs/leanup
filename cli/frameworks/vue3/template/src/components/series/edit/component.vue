@@ -11,7 +11,7 @@
 <script>
 import { EditSerieController } from './controller';
 import EditorSerieComponent from '../editor/component.vue';
-import { ref, watch } from 'vue';
+import { ref, watchEffect } from 'vue';
 
 export default {
   props: ['resolvedRoute'],
@@ -22,17 +22,9 @@ export default {
     const $ctrl = new EditSerieController(props.resolvedRoute.params.id);
     const editorFormRef = ref(null);
 
-    watch(
-      // this function is required for the following function
-      () => {
-        return props.resolvedRoute;
-      },
-      // get the return value of the previous function
-      (resolvedRoute) => {
-        $ctrl.changeMeasuredSerie(resolvedRoute.params.id);
-        editorFormRef.value = $ctrl.editorForm;
-      }
-    );
+    watchEffect(() => {
+      editorFormRef.value = $ctrl.editorForm;
+    });
 
     const onCancel = (event) => {
       $ctrl.onCancel();
