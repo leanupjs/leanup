@@ -17,33 +17,33 @@ import { ref } from '@vue/composition-api';
 import ListSerieComponent from '../series/list/component.vue';
 import CreateSerieComponent from '../series/create/component.vue';
 import EditSerieComponent from '../series/edit/component.vue';
-import { currency, date } from '@leanup/features/filters';
+  import { currency, date } from '@leanup/lib/shares/filters';
 
 export default {
   components: {
     'app-input': InputComponent,
     'list-serie': ListSerieComponent,
     'create-serie': CreateSerieComponent,
-    'edit-serie': EditSerieComponent,
+    'edit-serie': EditSerieComponent
   },
   setup() {
     const $ctrl = new AppController();
     const resolvedRouteRef = ref({
-      url: 'series',
+      url: 'series'
     });
     RouterService.subscribe((route, params, query) => {
       resolvedRouteRef.value = {
         params,
         query,
-        url: route.url,
+        url: route.url
       };
     });
     return {
       $ctrl,
       currency,
       date,
-      resolvedRouteRef,
+      resolvedRouteRef
     };
-  },
+  }
 };
 </script>

@@ -214,7 +214,7 @@ A separate package contains some nice but not required addons for webpack.
 
 There a separate packages for important application features.
 
-- [`@leanup/features`](https://www.npmjs.com/package/@leanup/features) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/features/badge.svg)](https://snyk.io/test/npm/@leanup/features)
+- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
 - [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/git-hooks/badge.svg)](https://snyk.io/test/npm/@leanup/git-hooks)
 - [`@leanup/forms`](https://www.npmjs.com/package/@leanup/forms) ⌛ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/forms/badge.svg)](https://snyk.io/test/npm/@leanup/forms)
 - [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-preact/badge.svg)](https://snyk.io/test/npm/@leanup/material-preact)
@@ -313,7 +313,7 @@ The following variable names are replaced by the values from `package.json` file
   "version": "1.1.0",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "homepage": "https://github.com/leanupjs/cli#readme",
   ...
 ```
 

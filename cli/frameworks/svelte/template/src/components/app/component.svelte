@@ -4,7 +4,7 @@
   import ListSerieComponent from '../series/list/component.svelte';
   import CreateSerieComponent from '../series/create/component.svelte';
   import EditSerieComponent from '../series/edit/component.svelte';
-  import { currency, date } from '@leanup/features/filters';
+  import { currency, date } from '@leanup/lib/shares/filters';
 
   const ctrl = new AppController();
   let resolvedRoute = {

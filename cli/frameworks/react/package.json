@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.503",
   "description": "This package contains the React framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "homepage": "https://github.com/leanupjs/cli#readme",
   "files": [
     "lib/**",
     "template/**",

@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.502",
   "description": "This module contains the test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "homepage": "https://github.com/leanupjs/cli#readme",
   "keywords": [
     "mocha",
     "jsdom",

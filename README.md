@@ -96,31 +96,31 @@ Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `seleniu
 
 | Tool/Technology  |   Description    | Status | Note                       |
 | ---------------- | :--------------: | :----: | :------------------------- |
-| [Babel]          |    Transpiler    |   ✔️    | ready                      |
-| [Webpack]        |     Bundler      |   ✔️    | ready                      |
-| [TypeScript]     |     Language     |   ✔️    | ready                      |
-| [Mocha]          | Unit-Test-Runner |   ✔️    | ready                      |
-| [Chai]           |    Assertion     |   ✔️    | ready                      |
-| [Sinon]          |     Mocking      |   ✔️    | ready                      |
-| [NYC]            |  Code-Coverage   |   ✔️    | ready                      |
-| [ESLint]         |   Code-Checker   |   ✔️    | ready                      |
-| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️    | ready                      |
-| [Allsure]        |      Report      |   ✔️    | ready                      |
-| [Cucumber]       |       BDD        |   ✔️    | ready                      |
-| [robotframework] |       BDD        |   ⌛    | will be evaluated          |
-| [Storybook]      |  Documentation   |   ⌛    | upcoming                   |
-| [GraphQL]        |       API        |   ✔️    | ready                      |
-| [Workbox]        |       PWA        |   ✔️    | ready                      |
-| [Lerna]          |    Mono-Repo     |   ✔️    | ready                      |
-| [Ant-Design]     | Material Design  |   ✔️    | proved                     |
-| [Material]       | Material Design  |   ✔️    | proved                     |
-| [Bootstrap]      | Material Design  |   ✔️    | proved                     |
-| [Less]           |       CSS        |   ✔️    | proved                     |
-| [Sass]           |       CSS        |   ✔️    | proved                     |
-| [Webhint]        |     Webhint      |   ✔️    | moved \*\*\*               |
-| [TestCafe]       | E2E-Test-Runner  |   ⌛    | will be evaluated \*\*\*\* |
-| [TSLint]         |   Code-Checker   |   ❌    | removed \*\*               |
-| [Cypress]        | E2E-Test-Runner  |   ❌    | excluded \*                |
+| [Babel]          |    Transpiler    |   ✔️   | ready                      |
+| [Webpack]        |     Bundler      |   ✔️   | ready                      |
+| [TypeScript]     |     Language     |   ✔️   | ready                      |
+| [Mocha]          | Unit-Test-Runner |   ✔️   | ready                      |
+| [Chai]           |    Assertion     |   ✔️   | ready                      |
+| [Sinon]          |     Mocking      |   ✔️   | ready                      |
+| [NYC]            |  Code-Coverage   |   ✔️   | ready                      |
+| [ESLint]         |   Code-Checker   |   ✔️   | ready                      |
+| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️   | ready                      |
+| [Allsure]        |      Report      |   ✔️   | ready                      |
+| [Cucumber]       |       BDD        |   ✔️   | ready                      |
+| [robotframework] |       BDD        |   ⌛   | will be evaluated          |
+| [Storybook]      |  Documentation   |   ⌛   | upcoming                   |
+| [GraphQL]        |       API        |   ✔️   | ready                      |
+| [Workbox]        |       PWA        |   ✔️   | ready                      |
+| [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
+| [Ant-Design]     | Material Design  |   ✔️   | proved                     |
+| [Material]       | Material Design  |   ✔️   | proved                     |
+| [Bootstrap]      | Material Design  |   ✔️   | proved                     |
+| [Less]           |       CSS        |   ✔️   | proved                     |
+| [Sass]           |       CSS        |   ✔️   | proved                     |
+| [Webhint]        |     Webhint      |   ✔️   | moved \*\*\*               |
+| [TestCafe]       | E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
+| [TSLint]         |   Code-Checker   |   ❌   | removed \*\*               |
+| [Cypress]        | E2E-Test-Runner  |   ❌   | excluded \*                |
 
 > \*
 > Arguments agains [Cypress]:
@@ -187,7 +187,7 @@ A separate package contains some nice but not required addons for webpack.
 
 There a separate packages for important application features.
 
-- [`@leanup/features`](https://www.npmjs.com/package/@leanup/features) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/features/badge.svg)](https://snyk.io/test/npm/@leanup/features)
+- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
 - [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/git-hooks/badge.svg)](https://snyk.io/test/npm/@leanup/git-hooks)
 - [`@leanup/forms`](https://www.npmjs.com/package/@leanup/forms) ⌛ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/forms/badge.svg)](https://snyk.io/test/npm/@leanup/forms)
 - [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-preact/badge.svg)](https://snyk.io/test/npm/@leanup/material-preact)

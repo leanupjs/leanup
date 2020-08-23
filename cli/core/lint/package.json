@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.501",
   "description": "This module contains the lint feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/martinoppitz/leanup#readme",
+  "homepage": "https://github.com/leanupjs/cli#readme",
   "keywords": [
     "babel",
     "eslint",
