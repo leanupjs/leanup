@@ -1,6 +1,6 @@
 {
   "name": "@template/preact",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,7 +36,7 @@
     "register-service-worker": "^1.7.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.0-beta.6",
+    "@leanup/cli": "^1.0.0-beta.7",
     "@leanup/cli-addons": "^1.0.0-beta.5",
     "@leanup/cli-preact": "^1.0.0-beta.4",
     "@leanup/cli-pwa": "^1.0.0-beta.5",
