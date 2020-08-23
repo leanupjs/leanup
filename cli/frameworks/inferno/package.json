@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-inferno",
-  "version": "1.0.0-rc.506",
+  "version": "1.0.0-rc.507",
   "description": "This package contains the Inferno framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/cli#readme",
