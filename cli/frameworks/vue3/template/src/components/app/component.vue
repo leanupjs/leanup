@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <h4>{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }}</h4>
-    <small>{{ $ctrl.finishedRendering }} ms upcomming time</small>
+    <h4>{{ framework.name }} v{{ framework.version }}</h4>
+    <small>{{ finishedRendering }} ms upcomming time</small>
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
     <edit-serie v-if="resolvedRouteRef.url === 'series/:id/edit'" :resolvedRoute="resolvedRouteRef"></edit-serie>
-    <small>Used filters: {{ date($ctrl.dummies.date) }} | {{ currency($ctrl.dummies.price) }} €</small>
+    <small>Used filters: {{ date(dummies.date) }} | {{ currency(dummies.price) }} €</small>
   </div>
 </template>
 
@@ -39,9 +39,11 @@ export default {
       };
     });
     return {
-      $ctrl,
+      finishedRendering: $ctrl.finishedRendering,
+      dummies: $ctrl.dummies,
       currency,
       date,
+      framework: $ctrl.framework,
       resolvedRouteRef,
     };
   },
