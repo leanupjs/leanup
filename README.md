@@ -189,7 +189,7 @@ There a separate packages for important application features.
 
 - [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
 - [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/git-hooks/badge.svg)](https://snyk.io/test/npm/@leanup/git-hooks)
-- [`@leanup/forms`](https://www.npmjs.com/package/@leanup/forms) ⌛ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/forms/badge.svg)](https://snyk.io/test/npm/@leanup/forms)
+- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ⌛ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/form/badge.svg)](https://snyk.io/test/npm/@leanup/form)
 - [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-preact/badge.svg)](https://snyk.io/test/npm/@leanup/material-preact)
 - [`@leanup/material-vanilla`](https://www.npmjs.com/package/@leanup/material-vanilla) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-vanilla/badge.svg)](https://snyk.io/test/npm/@leanup/material-vanilla)
 
