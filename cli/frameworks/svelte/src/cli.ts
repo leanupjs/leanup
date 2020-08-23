@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { SvelteCLI } from './svelte-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
 

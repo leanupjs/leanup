@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { AngularJSCLI } from './angularjs-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
 
