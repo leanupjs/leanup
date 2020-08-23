@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-svelte",
-  "version": "1.0.0-beta.8",
+  "version": "1.0.0-rc.0",
   "description": "This package contains the Svelte framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/martinoppitz/leanup#readme",
@@ -55,7 +55,7 @@
     "typescript": "^4.0.2"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0-beta.0",
+    "@leanup/cli": "^1.0.0-rc.0",
     "svelte": "^3.0.0"
   },
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-cucumber",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-rc.0",
   "description": "This module contains the cucumber feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/martinoppitz/leanup#readme",
@@ -38,7 +38,7 @@
     "typescript": "^4.0.2"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0-beta.0"
+    "@leanup/cli": "^1.0.0-rc.0"
   },
   "scripts": {
     "prepack": "npm install && npm update && sh build.sh"
