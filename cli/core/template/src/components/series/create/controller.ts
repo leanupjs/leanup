@@ -1,4 +1,4 @@
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { MeasurementService } from '../../../services/measurements/service';

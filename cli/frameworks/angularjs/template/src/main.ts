@@ -8,7 +8,7 @@ import './components/series/list/component.angularjs';
 
 import * as angular from 'angular';
 
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { APP_HTML_ELEMENT } from './shares/constant';
 

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 import VueCompositionApi from '@vue/composition-api';
 
 import App from './components/app/component.vue';
@@ -11,7 +11,7 @@ Vue.config.devtools = process.env.NODE_ENV === 'development';
 
 DI.register('Framework', {
   name: 'Vue',
-  version: Vue.version,
+  version: Vue.version
 });
 require('./shares/register');
 require('./shares/routing');
@@ -25,6 +25,6 @@ if (htmlDivElement instanceof HTMLDivElement) {
   // tslint:disable-next-line: no-unused-expression
   new Vue({
     el: APP_HTML_ELEMENT,
-    render: (h: any) => h(App),
+    render: (h: any) => h(App)
   });
 }

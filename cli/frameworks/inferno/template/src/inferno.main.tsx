@@ -1,6 +1,6 @@
 import { render, version } from 'inferno';
 
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { AppComponent } from './components/app/component.inferno';
 

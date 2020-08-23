@@ -1,7 +1,7 @@
 import React, { version } from 'react';
 import ReactDOM from 'react-dom';
 
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { AppComponent } from './components/app/component.react';
 

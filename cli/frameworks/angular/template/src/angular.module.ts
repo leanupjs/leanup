@@ -1,7 +1,7 @@
 import { NgModule, VERSION } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { AppComponent } from './components/app/component.angular';
 import { InputComponent } from './components/input/component.angular';

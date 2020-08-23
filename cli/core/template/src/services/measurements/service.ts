@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs';
 
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { MeasuredItemModel } from '../../models/measured-item.model';
 import { MeasuredSerieModel } from '../../models/measured-series.model';

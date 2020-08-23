@@ -1,6 +1,6 @@
 import './components/app/component.vanilla';
 
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 DI.register('Framework', {
   name: 'Vanilla',

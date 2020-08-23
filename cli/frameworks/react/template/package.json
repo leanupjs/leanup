@@ -29,8 +29,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/features": "latest",
-    "@leanup/forms": "latest",
+    "@leanup/lib": "latest",
+    "@leanup/form": "latest",
     "@types/react": "^16.9.43",
     "navigo": "^7.1.2",
     "react": "^16.13.1",

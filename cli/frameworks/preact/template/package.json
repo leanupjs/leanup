@@ -29,8 +29,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/features": "latest",
-    "@leanup/forms": "latest",
+    "@leanup/lib": "latest",
+    "@leanup/form": "latest",
     "navigo": "^7.1.2",
     "preact": "^10.4.7",
     "register-service-worker": "^1.7.1"

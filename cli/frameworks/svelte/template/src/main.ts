@@ -1,4 +1,4 @@
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import App from './components/app/component.svelte';
 

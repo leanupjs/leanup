@@ -1,7 +1,5 @@
-// @flow
-
 import { expect } from 'chai';
-import { Injector, DI } from '@leanup/features/injector';
+import { Injector, DI } from '@leanup/lib/helpers/injector';
 
 describe(`Test: Injector-Service (DI)`, () => {
   const myDI: Injector = new Injector();

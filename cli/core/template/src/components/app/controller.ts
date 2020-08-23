@@ -1,4 +1,4 @@
-import { DI } from '@leanup/features/injector';
+import { DI } from '@leanup/lib/helpers/injector';
 
 import { RouterService } from '../../services/router/service';
 import { STARTUP_TIMESTAMP } from '../../shares/constant';
