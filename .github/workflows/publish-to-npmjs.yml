@@ -22,6 +22,6 @@ jobs:
       - name: Publish
         run: |
           npm install lerna
-          npx lerna exec --concurrency 1 --ignore @template/* --no-bail --stream -- npm publish --access public --tag next
+          npx lerna exec --concurrency 1 --ignore @template/* --no-bail --stream -- npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
