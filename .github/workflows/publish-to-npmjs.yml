@@ -19,18 +19,9 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
-      - name: Install lerna
-        run: npm install lerna
       - name: Publish non @leanup/cli
         run: |
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --no-bail --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --no-bail --stream -- npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Publish only @leanup/cli
-        run: |
-          npm install
-          npm publish --access public
-        working-directory: cli/core
+          npx lerna exec --ignore @template/* --no-bail --stream -- npm install --only dev
+          npx lerna exec --ignore @template/* --no-bail --stream -- npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
