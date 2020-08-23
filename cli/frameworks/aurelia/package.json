@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-aurelia",
-  "version": "1.0.0-rc.503",
+  "version": "1.0.0-rc.504",
   "description": "This package contains the Aurelia framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/cli#readme",
