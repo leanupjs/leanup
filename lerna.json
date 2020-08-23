@@ -1,7 +1,4 @@
 {
-  "packages": [
-    "cli/**",
-    "git-hooks/**"
-  ],
-  "version": "1.0.0-beta.8"
+  "packages": ["cli/**", "git-hooks/**"],
+  "version": "1.0.0-rc.0"
 }
