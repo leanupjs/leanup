@@ -29,10 +29,10 @@ export class AppController {
     this.finishedRendering = Date.now() - STARTUP_TIMESTAMP;
     RouterService.navigate('series');
     const APP_METADATE = {
-      author: 'APP_AUTHOR',
-      homepage: 'APP_HOMEPAGE',
-      name: 'APP_NAME',
-      version: 'APP_VERSION',
+      author: '$$APP_AUTHOR$$',
+      homepage: '$$APP_HOMEPAGE$$',
+      name: '$$APP_NAME$$',
+      version: '$$APP_VERSION$$',
     };
     console.log('APP_METADATE', APP_METADATE);
   }

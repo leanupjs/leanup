@@ -5,7 +5,10 @@ import { DI } from '@leanup/lib/helpers/injector';
 import { AppComponent } from './components/app/component.preact';
 
 // https://github.com/preactjs/preact/blob/master/README.md#debug-mode
-if (process.env.NODE_ENV === 'development') {
+const ENVs = {
+  NODE_ENV: '$$NODE_ENV$$',
+};
+if (ENVs.NODE_ENV === 'development') {
   require('preact/debug');
 }
 
