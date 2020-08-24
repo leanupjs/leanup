@@ -103,31 +103,32 @@ export function webpackConfig(env: any, argv: any): Object {
 
   const MULTIPLE_REPLACEMENTS = [
     // https://nodejs.org/dist/latest-v14.x/docs/api/process.html#process_process_env
-    { search: 'NODE_ENV', replace: process.env.NODE_ENV },
+    // https://github.com/webpack/webpack/issues/7074#issuecomment-663855534
+    { search: '$$NODE_ENV$$', replace: argv.mode },
   ];
 
   // https://docs.npmjs.com/files/package.json#people-fields-author-contributors
   if (typeof packageJson.name === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: 'APP_NAME', replace: packageJson.name });
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_NAME$$', replace: packageJson.name });
   }
   if (typeof packageJson.version === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: 'APP_VERSION', replace: packageJson.version });
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_VERSION$$', replace: packageJson.version });
   }
   if (typeof packageJson.author === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: 'APP_AUTHOR', replace: packageJson.author });
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR$$', replace: packageJson.author });
   } else if (typeof packageJson.author === 'object' && packageJson.author != null) {
     if (typeof packageJson.author.name === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: 'APP_AUTHOR_NAME', replace: packageJson.author.name });
+      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_NAME$$', replace: packageJson.author.name });
     }
     if (typeof packageJson.author.mail === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: 'APP_AUTHOR_MAIL', replace: packageJson.author.mail });
+      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_MAIL$$', replace: packageJson.author.mail });
     }
     if (typeof packageJson.author.url === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: 'APP_AUTHOR_URL', replace: packageJson.author.url });
+      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_URL$$', replace: packageJson.author.url });
     }
   }
   if (typeof packageJson.homepage === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: 'APP_HOMEPAGE', replace: packageJson.homepage });
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_HOMEPAGE$$', replace: packageJson.homepage });
   }
   const STRING_REPLACE_LOADER = {
     test: /\.(j|t)sx?$/,

@@ -123,31 +123,31 @@ Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `seleniu
 
 | Tool/Technology  |   Description    | Status | Note                       |
 | ---------------- | :--------------: | :----: | :------------------------- |
-| [Babel]          |    Transpiler    |   ✔️   | ready                      |
-| [Webpack]        |     Bundler      |   ✔️   | ready                      |
-| [TypeScript]     |     Language     |   ✔️   | ready                      |
-| [Mocha]          | Unit-Test-Runner |   ✔️   | ready                      |
-| [Chai]           |    Assertion     |   ✔️   | ready                      |
-| [Sinon]          |     Mocking      |   ✔️   | ready                      |
-| [NYC]            |  Code-Coverage   |   ✔️   | ready                      |
-| [ESLint]         |   Code-Checker   |   ✔️   | ready                      |
-| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️   | ready                      |
-| [Allsure]        |      Report      |   ✔️   | ready                      |
-| [Cucumber]       |       BDD        |   ✔️   | ready                      |
-| [robotframework] |       BDD        |   ⌛   | will be evaluated          |
-| [Storybook]      |  Documentation   |   ⌛   | upcoming                   |
-| [GraphQL]        |       API        |   ✔️   | ready                      |
-| [Workbox]        |       PWA        |   ✔️   | ready                      |
-| [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
-| [Ant-Design]     | Material Design  |   ✔️   | proved                     |
-| [Material]       | Material Design  |   ✔️   | proved                     |
-| [Bootstrap]      | Material Design  |   ✔️   | proved                     |
-| [Less]           |       CSS        |   ✔️   | proved                     |
-| [Sass]           |       CSS        |   ✔️   | proved                     |
-| [Webhint]        |     Webhint      |   ✔️   | moved \*\*\*               |
-| [TestCafe]       | E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
-| [TSLint]         |   Code-Checker   |   ❌   | removed \*\*               |
-| [Cypress]        | E2E-Test-Runner  |   ❌   | excluded \*                |
+| [Babel]          |    Transpiler    |   ✔️    | ready                      |
+| [Webpack]        |     Bundler      |   ✔️    | ready                      |
+| [TypeScript]     |     Language     |   ✔️    | ready                      |
+| [Mocha]          | Unit-Test-Runner |   ✔️    | ready                      |
+| [Chai]           |    Assertion     |   ✔️    | ready                      |
+| [Sinon]          |     Mocking      |   ✔️    | ready                      |
+| [NYC]            |  Code-Coverage   |   ✔️    | ready                      |
+| [ESLint]         |   Code-Checker   |   ✔️    | ready                      |
+| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️    | ready                      |
+| [Allsure]        |      Report      |   ✔️    | ready                      |
+| [Cucumber]       |       BDD        |   ✔️    | ready                      |
+| [robotframework] |       BDD        |   ⌛    | will be evaluated          |
+| [Storybook]      |  Documentation   |   ⌛    | upcoming                   |
+| [GraphQL]        |       API        |   ✔️    | ready                      |
+| [Workbox]        |       PWA        |   ✔️    | ready                      |
+| [Lerna]          |    Mono-Repo     |   ✔️    | ready                      |
+| [Ant-Design]     | Material Design  |   ✔️    | proved                     |
+| [Material]       | Material Design  |   ✔️    | proved                     |
+| [Bootstrap]      | Material Design  |   ✔️    | proved                     |
+| [Less]           |       CSS        |   ✔️    | proved                     |
+| [Sass]           |       CSS        |   ✔️    | proved                     |
+| [Webhint]        |     Webhint      |   ✔️    | moved \*\*\*               |
+| [TestCafe]       | E2E-Test-Runner  |   ⌛    | will be evaluated \*\*\*\* |
+| [TSLint]         |   Code-Checker   |   ❌    | removed \*\*               |
+| [Cypress]        | E2E-Test-Runner  |   ❌    | excluded \*                |
 
 > \*
 > Arguments agains [Cypress]:
@@ -302,6 +302,7 @@ The following variable names are replaced by the values from `package.json` file
 | APP_HOMEPAGE | The value of the `homepage` attribute from the package.json file. |
 | APP_NAME     | The value of the `name` attribute from the package.json file.     |
 | APP_VERSION  | The value of the `version` attribute from the package.json file.  |
+| NODE_ENV     | The value of the `version` attribute from the package.json file.  |
 
 **For example:**
 
@@ -321,11 +322,11 @@ App code:
 
 ```js
 const APP_METADATA = {
-  author: 'APP_AUTHER',
-  homepage: 'APP_HOMEPAGE',
-  name: 'APP_NAME',
-  version: 'APP_VERSION',
-  environment: 'NODE_ENV', // development | test | production ⌛
+  author: '$$APP_AUTHER$$',
+  homepage: '$$APP_HOMEPAGE$$',
+  name: '$$APP_NAME$$',
+  version: '$$APP_VERSION$$',
+  environment: '$$NODE_ENV$$', // development | test | production ⌛
 };
 console.log(APP_METADATA);
 ```
