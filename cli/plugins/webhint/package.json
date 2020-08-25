@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.508",
   "description": "This module contains the webhint feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/leanupjs/cli#readme",
+  "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
     "template/**",
@@ -31,7 +31,7 @@
     "url": "https://github.com/leanupjs/cli/issues"
   },
   "dependencies": {
-    "hint": "^6.0.7"
+    "hint": "^6.1.0"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.0-rc.508",

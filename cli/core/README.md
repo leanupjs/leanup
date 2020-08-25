@@ -123,31 +123,31 @@ Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `seleniu
 
 | Tool/Technology  |   Description    | Status | Note                       |
 | ---------------- | :--------------: | :----: | :------------------------- |
-| [Babel]          |    Transpiler    |   ✔️    | ready                      |
-| [Webpack]        |     Bundler      |   ✔️    | ready                      |
-| [TypeScript]     |     Language     |   ✔️    | ready                      |
-| [Mocha]          | Unit-Test-Runner |   ✔️    | ready                      |
-| [Chai]           |    Assertion     |   ✔️    | ready                      |
-| [Sinon]          |     Mocking      |   ✔️    | ready                      |
-| [NYC]            |  Code-Coverage   |   ✔️    | ready                      |
-| [ESLint]         |   Code-Checker   |   ✔️    | ready                      |
-| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️    | ready                      |
-| [Allsure]        |      Report      |   ✔️    | ready                      |
-| [Cucumber]       |       BDD        |   ✔️    | ready                      |
-| [robotframework] |       BDD        |   ⌛    | will be evaluated          |
-| [Storybook]      |  Documentation   |   ⌛    | upcoming                   |
-| [GraphQL]        |       API        |   ✔️    | ready                      |
-| [Workbox]        |       PWA        |   ✔️    | ready                      |
-| [Lerna]          |    Mono-Repo     |   ✔️    | ready                      |
-| [Ant-Design]     | Material Design  |   ✔️    | proved                     |
-| [Material]       | Material Design  |   ✔️    | proved                     |
-| [Bootstrap]      | Material Design  |   ✔️    | proved                     |
-| [Less]           |       CSS        |   ✔️    | proved                     |
-| [Sass]           |       CSS        |   ✔️    | proved                     |
-| [Webhint]        |     Webhint      |   ✔️    | moved \*\*\*               |
-| [TestCafe]       | E2E-Test-Runner  |   ⌛    | will be evaluated \*\*\*\* |
-| [TSLint]         |   Code-Checker   |   ❌    | removed \*\*               |
-| [Cypress]        | E2E-Test-Runner  |   ❌    | excluded \*                |
+| [Babel]          |    Transpiler    |   ✔️   | ready                      |
+| [Webpack]        |     Bundler      |   ✔️   | ready                      |
+| [TypeScript]     |     Language     |   ✔️   | ready                      |
+| [Mocha]          | Unit-Test-Runner |   ✔️   | ready                      |
+| [Chai]           |    Assertion     |   ✔️   | ready                      |
+| [Sinon]          |     Mocking      |   ✔️   | ready                      |
+| [NYC]            |  Code-Coverage   |   ✔️   | ready                      |
+| [ESLint]         |   Code-Checker   |   ✔️   | ready                      |
+| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️   | ready                      |
+| [Allsure]        |      Report      |   ✔️   | ready                      |
+| [Cucumber]       |       BDD        |   ✔️   | ready                      |
+| [robotframework] |       BDD        |   ⌛   | will be evaluated          |
+| [Storybook]      |  Documentation   |   ⌛   | upcoming                   |
+| [GraphQL]        |       API        |   ✔️   | ready                      |
+| [Workbox]        |       PWA        |   ✔️   | ready                      |
+| [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
+| [Ant-Design]     | Material Design  |   ✔️   | proved                     |
+| [Material]       | Material Design  |   ✔️   | proved                     |
+| [Bootstrap]      | Material Design  |   ✔️   | proved                     |
+| [Less]           |       CSS        |   ✔️   | proved                     |
+| [Sass]           |       CSS        |   ✔️   | proved                     |
+| [Webhint]        |     Webhint      |   ✔️   | moved \*\*\*               |
+| [TestCafe]       | E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
+| [TSLint]         |   Code-Checker   |   ❌   | removed \*\*               |
+| [Cypress]        | E2E-Test-Runner  |   ❌   | excluded \*                |
 
 > \*
 > Arguments agains [Cypress]:
@@ -314,7 +314,7 @@ The following variable names are replaced by the values from `package.json` file
   "version": "1.1.0",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/leanupjs/cli#readme",
+  "homepage": "https://leanupjs.org",
   ...
 ```
 

@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.508",
   "description": "This package contains the Vue framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/leanupjs/cli#readme",
+  "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
     "template/**",

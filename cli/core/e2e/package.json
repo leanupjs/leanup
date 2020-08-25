@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.505",
   "description": "This module contains the e2e test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/leanupjs/cli#readme",
+  "homepage": "https://leanupjs.org",
   "keywords": [
     "nightwatch",
     "cucumber",

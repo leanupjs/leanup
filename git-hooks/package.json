@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.505",
   "description": "This module contains some nice tools to organize git hooks for NodeJs projects.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/leanupjs/cli#readme",
+  "homepage": "https://leanupjs.org",
   "keywords": [
     "git",
     "hooks",

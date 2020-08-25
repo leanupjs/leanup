@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.505",
   "description": "This module contains the format feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "homepage": "https://github.com/leanupjs/cli#readme",
+  "homepage": "https://leanupjs.org",
   "keywords": [
     "prettier",
     "formatter",
@@ -18,7 +18,7 @@
     "url": "https://github.com/leanupjs/cli/issues"
   },
   "dependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.0"
   },
   "peerDependencies": {
     "@leanup/cli": "^1.0.0-rc.500"
