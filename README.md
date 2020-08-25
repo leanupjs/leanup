@@ -7,8 +7,6 @@
 [dependencies-url]: https://david-dm.org/modevel/leanup?type=dev
 [downloads]: https://img.shields.io/npm/dm/@leanup/cli
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli?minimal=true
-[travis-ci]: https://travis-ci.com/modevel/leanup.svg?branch=master
-[travis-ci-url]: https://travis-ci.com/modevel/leanup
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet

@@ -1,4 +1,4 @@
-[![travis-ci][travis-ci]][travis-ci-url]
+![GitHub CI - Publish to NPM](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
 [![dependencies][dependencies]][dependencies-url]
 [![peer-dependencies][peer-dependencies]][peer-dependencies-url]
 [![vulnerabilities][vulnerabilities]][vulnerabilities-url]
@@ -18,8 +18,6 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-inferno
 [downloads]: https://img.shields.io/npm/dm/@leanup/cli-inferno
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-inferno?minimal=true
-[travis-ci]: https://travis-ci.com/martinoppitz/leanup.svg?branch=master
-[travis-ci-url]: https://travis-ci.com/martinoppitz/leanup
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-inferno
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-inferno
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
