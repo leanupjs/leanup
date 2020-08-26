@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-test",
-  "version": "1.0.0-rc.509",
+  "version": "1.0.0-rc.511",
   "description": "This module contains the test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -35,7 +35,7 @@
     "esm": "^3.2.0",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.0",
-    "mocha": "^8.1.1",
+    "mocha": "^8.1.2",
     "mock-local-storage": "^1.1.15",
     "nyc": "^15.1.0",
     "sinon": "^9.0.3"

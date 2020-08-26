@@ -3,5 +3,5 @@
     "cli/**",
     "git-hooks/**"
   ],
-  "version": "1.0.0-rc.510"
+  "version": "1.0.0-rc.511"
 }
