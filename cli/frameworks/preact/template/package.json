@@ -1,6 +1,6 @@
 {
   "name": "@template/preact",
-  "version": "1.0.0-rc.511",
+  "version": "1.0.0-rc.512",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,11 +36,11 @@
     "register-service-worker": "^1.7.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.0-rc.511",
-    "@leanup/cli-addons": "^1.0.0-rc.511",
-    "@leanup/cli-preact": "^1.0.0-rc.511",
-    "@leanup/cli-pwa": "^1.0.0-rc.511",
-    "@leanup/git-hooks": "^1.0.0-rc.511",
+    "@leanup/cli": "^1.0.0-rc.512",
+    "@leanup/cli-addons": "^1.0.0-rc.512",
+    "@leanup/cli-preact": "^1.0.0-rc.512",
+    "@leanup/cli-pwa": "^1.0.0-rc.512",
+    "@leanup/git-hooks": "^1.0.0-rc.512",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2",
     "workbox-cli": "^5.1.3"
