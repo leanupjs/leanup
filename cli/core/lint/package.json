@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-lint",
-  "version": "1.0.0-rc.514",
+  "version": "1.0.0-rc.515",
   "description": "This module contains the lint feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -21,8 +21,8 @@
     "url": "https://github.com/leanupjs/cli/issues"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.8.0",
     "eslint-plugin-html": "^6.0.3",
