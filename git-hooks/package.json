@@ -1,6 +1,6 @@
 {
   "name": "@leanup/git-hooks",
-  "version": "1.0.0-rc.513",
+  "version": "1.0.0-rc.514",
   "description": "This module contains some nice tools to organize git hooks for NodeJs projects.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
