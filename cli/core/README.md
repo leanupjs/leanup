@@ -271,12 +271,12 @@ Use this scripts in your `package.json`:
 ```json
 ...
   scripts {
-    "build": "webpack --colors --config=node_modules/@leanup/cli/webpack.config.js --mode=production",
+    "build": "webpack --config=node_modules/@leanup/cli/webpack.config.js --mode=production",
     "coverage": "cross-env NODE_ENV=test nyc mocha --config=node_modules/@leanup/cli/.mocharc.js && nyc check-coverage",
     "e2e": "nightwatch --config=node_modules/@leanup/cli/nightwatch.conf",
     "format": "prettier \"src/**/*\"",
     "lint": "tslint \"src/**/*.ts*\"",
-    "serve": "webpack-dev-server --colors --config=node_modules/@leanup/cli/webpack.config.js --devtool=source-map --progress",
+    "serve": "webpack-dev-server --config=node_modules/@leanup/cli/webpack.config.js --devtool=source-map --progress",
     "test": "cross-env NODE_ENV=test mocha --config=node_modules/@leanup/cli/.mocharc.js"
   }
 ...

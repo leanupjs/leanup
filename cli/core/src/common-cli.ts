@@ -70,7 +70,7 @@ export class CommonCLI extends AbstractCLI {
         ])
         .concat(commonOptions),
       (options: ServeOps): string[] => {
-        const spawnArgs = ['webpack-dev-server', '--colors', '--devtool=source-map'];
+        const spawnArgs = ['webpack-dev-server', '--devtool=source-map'];
         if (options.environment) {
           spawnArgs.push(`--environment=${options.environment}`);
         }
@@ -101,7 +101,7 @@ export class CommonCLI extends AbstractCLI {
       'Building (https://webpack.js.org/)',
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
-        const spawnArgs = ['webpack', '--colors'];
+        const spawnArgs = ['webpack'];
         if (options.environment) {
           spawnArgs.push(`--env=${options.environment}`);
         }
