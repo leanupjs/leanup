@@ -48,10 +48,8 @@
     "@leanup/cli": "^1.0.0-rc.515",
     "@leanup/cli-addons": "^1.0.0-rc.515",
     "@leanup/cli-angular": "^1.0.0-rc.515",
-    "@leanup/cli-pwa": "^1.0.0-rc.515",
     "@leanup/git-hooks": "^1.0.0-rc.515",
     "@ngtools/webpack": "^10.0.8",
-    "tslib": "^2.0.1",
     "typescript": "^3.9.7",
     "workbox-cli": "^5.1.3"
   },
