@@ -29,8 +29,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "latest",
-    "@leanup/lib": "latest",
+    "@leanup/form": "^0.9.0-rc.1",
     "@vue/composition-api": "^0.6.7",
     "navigo": "^7.1.2",
     "vue": "^2.6.12",
