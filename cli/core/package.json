@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli",
-  "version": "1.0.0-rc.517",
+  "version": "1.0.0-rc.518",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -49,7 +49,7 @@
     "mono-repo",
     "lerna"
   ],
-  "license": "MIT",
+  "license": "Apache 2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leanupjs/cli.git"
@@ -63,10 +63,10 @@
     "@babel/plugin-proposal-decorators": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-typescript": "^7.10.4",
-    "@leanup/cli-core-e2e": "^1.0.0-rc.517",
-    "@leanup/cli-core-format": "^1.0.0-rc.517",
-    "@leanup/cli-core-lint": "^1.0.0-rc.517",
-    "@leanup/cli-core-test": "^1.0.0-rc.517",
+    "@leanup/cli-core-e2e": "^1.0.0-rc.518",
+    "@leanup/cli-core-format": "^1.0.0-rc.518",
+    "@leanup/cli-core-lint": "^1.0.0-rc.518",
+    "@leanup/cli-core-test": "^1.0.0-rc.518",
     "autoprefixer": "^9.8.5",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",

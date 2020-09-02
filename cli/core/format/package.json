@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-format",
-  "version": "1.0.0-rc.517",
+  "version": "1.0.0-rc.518",
   "description": "This module contains the format feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -9,7 +9,7 @@
     "formatter",
     "cli"
   ],
-  "license": "MIT",
+  "license": "Apache 2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leanupjs/cli.git"
