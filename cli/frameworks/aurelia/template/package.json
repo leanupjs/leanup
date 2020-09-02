@@ -33,16 +33,14 @@
     "@leanup/lib": "latest",
     "aurelia-bootstrapper": "^2.3.3",
     "aurelia-framework": "^1.3.1",
-    "navigo": "^7.1.2",
-    "register-service-worker": "^1.7.1"
+    "navigo": "^7.1.2"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.0-rc.516",
     "@leanup/cli-addons": "^1.0.0-rc.516",
     "@leanup/cli-aurelia": "^1.0.0-rc.516",
     "@leanup/git-hooks": "^1.0.0-rc.516",
-    "typescript": "^4.0.2",
-    "workbox-cli": "^5.1.3"
+    "typescript": "^4.0.2"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }

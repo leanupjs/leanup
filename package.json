@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
-    "remove": "(lerna exec --stream -- rm -rf node_modules || true) && rm -rf node_modules",
+    "remove": "npm i lerna && lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
-    "update": "npm install && lerna exec --stream -- npm install && npm update && lerna exec --stream -- npm update && npm run outdated",
+    "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update && npm run outdated",
     "version": "lerna version prerelease --amend --no-git-tag-version --no-push --yes"
   },
   "husky": {
@@ -23,10 +23,8 @@
     ]
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.0-rc.515",
-    "@leanup/cli-vanilla": "^1.0.0-rc.515",
-    "@leanup/git-hooks": "^1.0.0-rc.515",
-    "lerna": "^3.22.1",
-    "typescript": "^4.0.2"
+    "@leanup/cli": "file:cli/core",
+    "@leanup/git-hooks": "file:git-hooks",
+    "lerna": "^3.22.1"
   }
 }

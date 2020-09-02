@@ -2,9 +2,6 @@ import '../style.sass';
 
 // import { register } from 'register-service-worker';
 
-export const APP_HTML_ELEMENT: HTMLElement = document.createElement('app');
-export const STARTUP_TIMESTAMP: number = Date.now();
-
 // register(`sw.js`, {
 //   ready() {
 //     console.log(
@@ -30,3 +27,6 @@ export const STARTUP_TIMESTAMP: number = Date.now();
 //     console.error('Error during service worker registration:', error);
 //   },
 // });
+
+export const APP_HTML_ELEMENT: HTMLElement = document.createElement('app');
+export const STARTUP_TIMESTAMP: number = Date.now();

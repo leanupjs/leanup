@@ -32,16 +32,14 @@
     "@leanup/form": "latest",
     "@leanup/lib": "latest",
     "navigo": "^7.1.2",
-    "preact": "^10.4.8",
-    "register-service-worker": "^1.7.1"
+    "preact": "^10.4.8"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.0-rc.516",
     "@leanup/cli-addons": "^1.0.0-rc.516",
     "@leanup/cli-preact": "^1.0.0-rc.516",
     "@leanup/git-hooks": "^1.0.0-rc.516",
-    "typescript": "^4.0.2",
-    "workbox-cli": "^5.1.3"
+    "typescript": "^4.0.2"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }
