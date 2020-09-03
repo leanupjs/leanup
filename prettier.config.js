@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-core-format/prettier.config');
+module.exports = require('./cli/core/format/prettier.config');

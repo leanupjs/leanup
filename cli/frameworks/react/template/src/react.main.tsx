@@ -1,4 +1,4 @@
-import React, { version } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { DI } from '@leanup/lib/helpers/injector';
@@ -6,8 +6,8 @@ import { DI } from '@leanup/lib/helpers/injector';
 import { AppComponent } from './components/app/component.react';
 
 DI.register('Framework', {
+  ...require('react/package.json'),
   name: 'React',
-  version,
 });
 require('./shares/register');
 require('./shares/routing');

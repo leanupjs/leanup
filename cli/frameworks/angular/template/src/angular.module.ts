@@ -1,4 +1,4 @@
-import { NgModule, VERSION } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { DI } from '@leanup/lib/helpers/injector';
@@ -12,8 +12,8 @@ import { ListSerieComponent } from './components/series/list/component.angular';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
 DI.register('Framework', {
+  ...require('@angular/core/package.json'),
   name: 'Angular',
-  version: VERSION.full,
 });
 require('./shares/register');
 require('./shares/routing');

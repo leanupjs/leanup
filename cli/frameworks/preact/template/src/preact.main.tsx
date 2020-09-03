@@ -13,8 +13,8 @@ if (ENVs.NODE_ENV === 'development') {
 }
 
 DI.register('Framework', {
+  ...require('preact/package.json'),
   name: 'Preact',
-  version: require('preact/package.json').version,
 });
 require('./shares/register');
 require('./shares/routing');

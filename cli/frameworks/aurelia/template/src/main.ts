@@ -5,8 +5,8 @@ import { PLATFORM } from 'aurelia-pal';
 import { DI } from '@leanup/lib/helpers/injector';
 
 DI.register('Framework', {
+  ...require('aurelia-framework/package.json'),
   name: 'Aurelia',
-  version: require('aurelia-framework/package.json').version,
 });
 require('./shares/register');
 require('./shares/routing');

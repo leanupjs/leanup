@@ -5,8 +5,8 @@ import App from './components/app/component.vue';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
 DI.register('Framework', {
+  ...require('vue/package.json'),
   name: 'Vue',
-  version: require('vue/package.json').version,
 });
 require('./shares/register');
 require('./shares/routing');

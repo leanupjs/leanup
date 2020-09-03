@@ -1,12 +1,12 @@
-import { render, version } from 'inferno';
+import { render } from 'inferno';
 
 import { DI } from '@leanup/lib/helpers/injector';
 
 import { AppComponent } from './components/app/component.inferno';
 
 DI.register('Framework', {
+  ...require('inferno/package.json'),
   name: 'Inferno',
-  version,
 });
 require('./shares/register');
 require('./shares/routing');

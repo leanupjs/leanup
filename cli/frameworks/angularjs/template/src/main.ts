@@ -13,8 +13,8 @@ import { DI } from '@leanup/lib/helpers/injector';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
 DI.register('Framework', {
+  ...require('angular/package.json'),
   name: 'AngularJS',
-  version: angular.version.full,
 });
 require('./shares/register');
 require('./shares/routing');
