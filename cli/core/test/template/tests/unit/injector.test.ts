@@ -35,6 +35,7 @@ describe(`Test: Injector-Service (DI)`, () => {
     test(`string`, '');
     test(`boolean`, true);
     test(`null`, null);
+    test(`undefined`, undefined);
   });
   describe(`Service fehlerhaft registrieren`, () => {
     function test(type: string, service: any) {
@@ -46,16 +47,13 @@ describe(`Test: Injector-Service (DI)`, () => {
         }).throw();
         // then
       });
-
-      it(`Test-Case get (${type})`, () => {
-        // given
-        // when
-        expect(() => {
-          DI.get(type);
-        }).throw();
-        // then
-      });
     }
+    test(`Array`, []);
+    test(`Object`, {});
+    test(`number`, 0);
+    test(`string`, '');
+    test(`boolean`, true);
+    test(`null`, null);
     test(`undefined`, undefined);
   });
 });

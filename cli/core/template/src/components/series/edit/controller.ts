@@ -6,7 +6,7 @@ import { RouterService } from '../../../services/router/service';
 import { EditorForm } from '../editor/editor.form';
 
 export class EditSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService') as MeasurementService;
+  private readonly measurementService: MeasurementService = DI.get('MeasurementService');
   public editorForm: EditorForm | null = null;
   private measuredSerie: MeasuredSerieModel | undefined;
 
@@ -29,8 +29,8 @@ export class EditSerieController {
   public mapTo(measuredSerie: MeasuredSerieModel): void {
     if (measuredSerie instanceof MeasuredSerieModel) {
       this.editorForm = new EditorForm('edit');
-      this.editorForm.getInput('title').value = this.measuredSerie.getTitle();
-      this.editorForm.getInput('unit').value = this.measuredSerie.getUnit();
+      this.editorForm.getControl('title').value = this.measuredSerie.getTitle();
+      this.editorForm.getControl('unit').value = this.measuredSerie.getUnit();
     }
   }
 
@@ -43,8 +43,8 @@ export class EditSerieController {
 
   public onSubmit(): void {
     if (this.measuredSerie instanceof MeasuredSerieModel && this.editorForm instanceof EditorForm) {
-      this.measuredSerie.setTitle(this.editorForm.getInput('title').value);
-      this.measuredSerie.setUnit(this.editorForm.getInput('unit').value);
+      this.measuredSerie.setTitle(this.editorForm.getControl('title').value);
+      this.measuredSerie.setUnit(this.editorForm.getControl('unit').value);
       this.measurementService.store();
       this.onCancel();
     }
