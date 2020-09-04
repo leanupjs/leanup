@@ -1,0 +1,36 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Auto dependency update
+
+on:
+  push:
+    branches:
+      - release/*
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      # - name: Delete branch if exists
+      #   run: git push origin --delete auto/dependency-update
+      - name: Create branch if not exists
+        run: git checkout -b auto/dependency-update
+      - name: Install dependencies (npm ci)
+        run: npm ci && lerna exec --ignore=@template/* --stream -- npm ci
+      - name: Update dependencies (npm update)
+        run: npm update && lerna exec --ignore=@template/* --stream -- npm update
+      - name: Push change files
+        run: |
+          git add .
+          git status
+          git commit -m "Auto dependency update"
+          # git push --set-upstream origin auto/dependency-update
