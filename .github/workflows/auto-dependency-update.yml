@@ -25,11 +25,17 @@ jobs:
       - name: Create branch if not exists
         run: git checkout -b auto/dependency-update
       - name: Install dependencies (npm ci)
-        run: npm ci && lerna exec --ignore=@template/* --stream -- npm ci
+        run: |
+          npm ci
+          npx lerna exec --ignore=@template/* --stream -- npm ci
       - name: Update dependencies (npm update)
-        run: npm update && lerna exec --ignore=@template/* --stream -- npm update
+        run: |
+          npm update
+          npx lerna exec --ignore=@template/* --stream -- npm update
       - name: Push change files
         run: |
+          git config --local user.email "github@martinoppitz.com"
+          git config --local user.name "Martin Oppitz"
           git add .
           git status
           git commit -m "Auto dependency update"
