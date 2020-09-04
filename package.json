@@ -5,7 +5,7 @@
     "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
     "remove": "npm i lerna && lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
-    "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update && npm run outdated",
+    "update": "npm ci && lerna exec --ignore=@template/* --stream -- npm ci && npm update && lerna exec --ignore=@template/* --stream -- npm update",
     "version": "lerna version prerelease --amend --no-git-tag-version --no-push --yes"
   },
   "husky": {
