@@ -25,13 +25,9 @@ jobs:
       - name: Create branch if not exists
         run: git checkout -b auto/dependency-update
       - name: Install dependencies (npm ci)
-        run: |
-          npm ci
-          npx lerna exec --ignore=@template/* --stream -- npm ci
+        run: npm run ci
       - name: Update dependencies (npm update)
-        run: |
-          npm update
-          npx lerna exec --ignore=@template/* --stream -- npm update
+        run: npm run update
       - name: Push change files
         run: |
           git config --local user.email "github@martinoppitz.com"

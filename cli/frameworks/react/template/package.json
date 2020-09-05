@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.0.0-rc.523",
+  "version": "1.0.0-rc.524",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,10 +36,10 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.0-rc.523",
-    "@leanup/cli-addons": "^1.0.0-rc.523",
-    "@leanup/cli-react": "^1.0.0-rc.523",
-    "@leanup/git-hooks": "^1.0.0-rc.523",
+    "@leanup/cli": "^1.0.0-rc.524",
+    "@leanup/cli-addons": "^1.0.0-rc.524",
+    "@leanup/cli-react": "^1.0.0-rc.524",
+    "@leanup/git-hooks": "^1.0.0-rc.524",
     "typescript": "^4.0.2"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
