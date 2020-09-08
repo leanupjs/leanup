@@ -4,9 +4,6 @@
 name: Auto dependency update
 
 on:
-  push:
-    branches:
-      - release/*
   schedule:
     - cron: '0 4 * * *'
 
@@ -25,9 +22,13 @@ jobs:
       - name: Create branch if not exists
         run: git checkout -b auto/dependency-update
       - name: Install dependencies (npm ci)
-        run: npm run ci
+        run: |
+          npm install
+          lerna exec --ignore=@template/* --stream -- npm install
       - name: Update dependencies (npm update)
-        run: npm run update
+        run: |
+          npm update
+          lerna exec --ignore=@template/* --stream -- npm update
       - name: Push change files
         run: |
           git config --local user.email "github@martinoppitz.com"
