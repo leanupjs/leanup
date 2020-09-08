@@ -1,5 +1,3 @@
-<!-- [![https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg][https://github.com/leanupjs/cli/workflows/github%20ci%20-%20publish%20to%20npm/badge.svg]][https://github.com/leanupjs/cli/actions] -->
-
 <p style="text-align: center; background: white;">
 <a href="https://leanupjs.org">
   <img src="https://leanupjs.org/assets/logo.svg" height="250">

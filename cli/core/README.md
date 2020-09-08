@@ -1,63 +1,78 @@
-![GitHub CI - Publish to NPM](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
-[![dependencies][dependencies]][dependencies-url]
-[![peerDependencies][peerdependencies]][peerdependencies-url]
-[![vulnerabilities][vulnerabilities]][vulnerabilities-url]
-[![npm][npm]][npm-url]
-[![downloads][downloads]][downloads-url]
-[![install-size][install-size]][install-size-url]
-[![lernajs][lernajs]][lernajs-url]
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+<p style="text-align: center; background: white;">
+<a href="https://leanupjs.org">
+  <img src="https://leanupjs.org/assets/logo.svg" height="250">
+</a><br>
+<h2 style="text-align: center;">
+<cite><b>Make things pure</b> ... to become lean.</cite></h2>
+<p>
+<br>
+<hr>
 
+<!-- [![https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg][https://github.com/leanupjs/cli/workflows/github%20ci%20-%20publish%20to%20npm/badge.svg]][https://github.com/leanupjs/cli/actions] -->
+
+[![downloads][downloads]][downloads-url]
+[![npm][npm]][npm-url]
+[![license][license]][license-url]
+
+<!-- [![dependencies][dependencies]][dependencies-url] -->
+<!-- [![peerDependencies][peerdependencies]][peerdependencies-url] -->
+
+[![vulnerabilities][vulnerabilities]][vulnerabilities-url]
+[![install-size][install-size]][install-size-url]
+
+[![lernajs][lernajs]][lernajs-url]
+[![prettier][prettier]][prettier-url]
+
+[leanup]: https://leanupjs.org/assets/logo.svg
+[leanup-url]: https://leanupjs.org
+[downloads]: https://img.shields.io/npm/dm/@leanup/cli
+[downloads-url]: https://npmcharts.com/compare/@leanup/cli
 [npm]: https://img.shields.io/npm/v/@leanup/cli
 [npm-url]: https://www.npmjs.com/package/@leanup/cli
+[license]: https://img.shields.io/npm/l/@leanup/cli
+[license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
 [dependencies]: https://img.shields.io/david/martinoppitz/leanup?path=cli/core
 [dependencies-url]: https://david-dm.org/martinoppitz/leanup?path=cli/core
 [peerdependencies]: https://img.shields.io/david/peer/martinoppitz/leanup?path=cli/core
 [peerdependencies-url]: https://david-dm.org/martinoppitz/leanup?path=cli/core&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli
-[downloads-url]: https://npmcharts.com/compare/@leanup/cli?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
+[prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[prettier-url]: https://prettier.io
 
-# LEAN⭧up (CLI)
+<h1>leanup<sup style="color: grey; font-size: 75%"> CLI</sup></h1>
 
-`@leanup/cli` shows how much is really required to develop, test and build a realisitic sized JavaScript web application.
+The **`@leanup` CLI** contains all required popular tools in there minimal default, transparent and extensible configuration to develop JavaScript/TypeScript web applications.
 
-- [LEAN⭧up (CLI)](#leanup-cli)
-  - [Motivation](#motivation)
-  - [Tools and technologies](#tools-and-technologies)
-  - [Principles](#principles)
-  - [Arguments](#arguments)
-    - [Pro](#pro)
-    - [Contra](#contra)
-  - [Demo](#demo)
-  - [Installation](#installation)
-  - [Features](#features)
-  - [Structure](#structure)
-    - [Extensions](#extensions)
-      - [Frameworks](#frameworks)
-      - [Addons](#addons)
-      - [Thinks](#thinks)
-  - [Usage](#usage)
-    - [Command-Line-Interface (CLI)](#command-line-interface-cli)
-      - [Help](#help)
-      - [Create](#create)
-      - [Developing](#developing)
-      - [Building](#building)
-      - [Unit-Testing](#unit-testing)
-      - [Test-Coverage](#test-coverage)
-      - [E2E-Testing](#e2e-testing)
-      - [Formatter](#formatter)
-      - [Linter](#linter)
-    - [Scripts (NPM)](#scripts-npm)
-  - [Replaced environment variables](#replaced-environment-variables)
-  - [Dependencies](#dependencies)
-  - [Peer dependencies](#peer-dependencies)
-  - [Optional tools](#optional-tools)
+- [Motivation](#motivation)
+- [Tools and technologies](#tools-and-technologies)
+- [Principles](#principles)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Features](#features)
+- [Structure](#structure)
+  - [Extensions](#extensions)
+    - [Frameworks](#frameworks)
+    - [Addons](#addons)
+    - [Thinks](#thinks)
+- [Usage](#usage)
+  - [Help](#help)
+  - [Create](#create)
+  - [Developing](#developing)
+  - [Building](#building)
+  - [Unit-Testing](#unit-testing)
+  - [Test-Coverage](#test-coverage)
+  - [E2E-Testing](#e2e-testing)
+  - [Formatter](#formatter)
+  - [Linter](#linter)
+- [Replaced environment variables](#replaced-environment-variables)
+- [Dependencies](#dependencies)
+- [Peer dependencies](#peer-dependencies)
+- [Optional tools](#optional-tools)
 
 ## Motivation
 
@@ -81,22 +96,6 @@ We use all tools and technologies without cluttered facades.
 - following the generic instead of the influenced way
 - keep the dependencies always up to date
 
-## Arguments
-
-The arguments for and against this concept are documented here:
-
-### Pro
-
-- select only one pure and popular tool for each use case (e.g. bundling, unit-test)
-- there are extensible configuration files for each tool
-- the CLI bundles all the necessary tools in a portable/scalable way
-- the risk to get vulnerabilites in dependencies is lower
-
-### Contra
-
-> - please give feedback
-> - please show us your perspective
-
 ## Demo
 
 There are some working examples:
@@ -107,15 +106,33 @@ There are some working examples:
 
 ## Installation
 
-`npm install @leanup/cli typescript --save-dev` and `npm audit fix`
+To install the **`@leanup` CLI** execute the following command:
 
-Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `selenium-server` or `typescript` in the required version, if you need that feature.
+> `npm install @leanup/cli typescript --save-dev`
+
+And a non-framework or framework strategy must also be selected:
+
+Non-framework:
+
+> `npm install @leanup/cli-vanilla --save-dev`
+
+Or with framework:
+
+`npm install @leanup/cli-angular --save-dev` or<br>
+`npm install @leanup/cli-angularjs --save-dev` or<br>
+`npm install @leanup/cli-aurelia --save-dev` or<br>
+`npm install @leanup/cli-inferno --save-dev` or<br>
+`npm install @leanup/cli-preact --save-dev` or<br>
+`npm install @leanup/cli-react --save-dev` or<br>
+`npm install @leanup/cli-svelte --save-dev` or<br>
+`npm install @leanup/cli-vue --save-dev` or<br>
+`npm install @leanup/cli-vue3 --save-dev`
+
+Install the peer dependencies `chromedriver`, `geckodriver` or `selenium-server` in the required version, if you need that features.
 
 - `npm install chromedriver --save-dev`
 - `npm install geckodriver --save-dev`
-- `npm install graphql --save-dev`
 - `npm install selenium-server--save-dev`
-- `npm install typescript --save-dev`
 
 ## Features
 
@@ -133,7 +150,7 @@ Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `seleniu
 | [Allsure]        |      Report      |   ✔️   | ready                      |
 | [Cucumber]       |       BDD        |   ✔️   | ready                      |
 | [robotframework] |       BDD        |   ⌛   | will be evaluated          |
-| [Storybook]      |  Documentation   |   ⌛   | upcoming                   |
+| [Storybook]      |  Documentation   |   ⌛   | in progress                |
 | [GraphQL]        |       API        |   ✔️   | ready                      |
 | [Workbox]        |       PWA        |   ✔️   | ready                      |
 | [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
@@ -220,75 +237,45 @@ There a separate packages for important application features.
 
 ## Usage
 
-### Command-Line-Interface (CLI)
-
 If the CLI is also installed globally with `npm install -g @leanup/cli`, you can use the command `lean` directly in the bash.
 
 If not, you must use `npx` and put it before the command. Like this: `npx lean`
 
-#### Help
+### Help
 
 > `> lean -h` (or `npx lean -h`)
 
-#### Create
+### Create
 
 > `> lean create -h` (or `npx lean create -h`)
 
-#### Developing
+### Developing
 
 > `> lean serve -h` (or `npx lean serve -h`)
 
-#### Building
+### Building
 
 > `> lean build -h` (or `npx lean build -h`)
 
-#### Unit-Testing
+### Unit-Testing
 
 > `> lean test -h` (or `npx lean test -h`)
 
-#### Test-Coverage
+### Test-Coverage
 
 > `> lean coverage -h` (or `npx lean coverage -h`)
 
-#### E2E-Testing
+### E2E-Testing
 
 > `> lean e2e -h` (or `npx lean e2e -h`)
 
-#### Formatter
+### Formatter
 
 > `> lean format -h` (or `npx lean format -h`)
 
-#### Linter
+### Linter
 
 > `> lean lint -h` (or `npx lean lint -h`)
-
-### Scripts (NPM)
-
-The following script commands are exactly the same executions that the CLI has under the hood.
-
-Use this scripts in your `package.json`:
-
-```json
-...
-  scripts {
-    "build": "webpack --config=node_modules/@leanup/cli/webpack.config.js --mode=production",
-    "coverage": "cross-env NODE_ENV=test nyc mocha --config=node_modules/@leanup/cli/.mocharc.js && nyc check-coverage",
-    "e2e": "nightwatch --config=node_modules/@leanup/cli/nightwatch.conf",
-    "format": "prettier \"src/**/*\"",
-    "lint": "tslint \"src/**/*.ts*\"",
-    "serve": "webpack-dev-server --config=node_modules/@leanup/cli/webpack.config.js --devtool=source-map --progress",
-    "test": "cross-env NODE_ENV=test mocha --config=node_modules/@leanup/cli/.mocharc.js"
-  }
-...
-```
-
-- Developing: `npm run serve -- [options]`
-- Building: `npm run serve -- [options]`
-- Unit-Testing: `npm run test -- [options]`
-- Coverage: `npm run coverage`
-- E2E-Testing: `npm run e2e -- [options]`
-- Formatter: `npm run format -- [options]`
-- Linter: `npm run lint -- [options]`
 
 ## Replaced environment variables
 
@@ -385,7 +372,7 @@ console.log(APP_METADATA);
 |        workbox-cli |                      [![install size of workbox-cli](https://packagephobia.now.sh/badge?p=workbox-cli)](https://packagephobia.now.sh/result?p=workbox-cli) |           [![vulnerabilities of workbox-cli](https://snyk.io/test/npm/workbox-cli/badge.svg)](https://snyk.io/test/npm/workbox-cli)            |
 
 [babel]: https://babeljs.io
-[typescript]: https:/typescriptlang.org
+[typescript]: https://typescriptlang.org
 [webpack]: https://webpack.js.org
 [mocha]: https://mochajs.org
 [chai]: https://www.chaijs.com
