@@ -1,36 +1,44 @@
-[![lernajs][lernajs]][lernajs-url]
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+<!-- [![https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg][https://github.com/leanupjs/cli/workflows/github%20ci%20-%20publish%20to%20npm/badge.svg]][https://github.com/leanupjs/cli/actions] -->
 
-[npm]: https://img.shields.io/npm/v/@leanup/cli
-[npm-url]: https://www.npmjs.com/package/@leanup/cli
-[dependencies]: https://img.shields.io/david/dev/modevel/leanup
-[dependencies-url]: https://david-dm.org/modevel/leanup?type=dev
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli
-[downloads-url]: https://npmcharts.com/compare/@leanup/cli?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli
+<p style="text-align: center; background: white;">
+<a href="https://leanupjs.org">
+  <img src="https://leanupjs.org/assets/logo.svg" height="250">
+</a><br>
+<h2 style="text-align: center;">
+<cite><b>Make things pure</b> ... to become lean.</cite></h2>
+<p>
+<br>
+<hr>
+
+[![license][license]][license-url]
+[![lernajs][lernajs]][lernajs-url]
+[![prettier][prettier]][prettier-url]
+
+[license]: https://img.shields.io/npm/l/@leanup/cli
+[license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
+[prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[prettier-url]: https://prettier.io
 
-# LEAN⭧up
+<h1>leanup<sup style="color: grey; font-size: 75%"> js</sup></h1>
 
-`@leanup/cli` shows how much is really required to develop, test and build a realisitic sized JavaScript web application.
+The **`@leanup` ecosystem** stands for a lightweight and pure way for application development in JavaScript/TypeScript.
 
-- [LEAN⭧up](#leanup)
-  - [Motivation](#motivation)
-  - [Tools and technologies](#tools-and-technologies)
-  - [Principles](#principles)
-  - [Arguments](#arguments)
-    - [Pro](#pro)
-    - [Contra](#contra)
-  - [Demo](#demo)
-  - [Installation](#installation)
-  - [Features](#features)
-  - [Structure](#structure)
-    - [Extensions](#extensions)
-      - [Frameworks](#frameworks)
-      - [Addons](#addons)
-      - [Thinks](#thinks)
+- [Motivation](#motivation)
+- [What makes the difference](#what-makes-the-difference)
+- [Tools and technologies](#tools-and-technologies)
+- [Principles](#principles)
+- [Arguments](#arguments)
+  - [Pro](#pro)
+  - [Contra](#contra)
+- [Demo](#demo)
+- [Features](#features)
+- [Structure](#structure)
+  - [Extensions](#extensions)
+    - [Frameworks](#frameworks)
+    - [Addons](#addons)
+    - [Thinks](#thinks)
 
 ## Motivation
 
@@ -41,6 +49,12 @@
 - Scalability
 - Durability
 - Transparency
+
+## What makes the difference
+
+> <cite>Stop the transitive knowledge.</cite>
+
+We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.
 
 ## Tools and technologies
 
@@ -62,8 +76,10 @@ The arguments for and against this concept are documented here:
 
 - select only one pure and popular tool for each use case (e.g. bundling, unit-test)
 - there are extensible configuration files for each tool
+- due to the flat dependencies we can always stay up to date
 - the CLI bundles all the necessary tools in a portable/scalable way
 - the risk to get vulnerabilites in dependencies is lower
+- leanup's own code is kept to a minimum
 
 ### Contra
 
@@ -77,18 +93,6 @@ There are some working examples:
 - [https://github.modevel.de/poc/](https://github.modevel.de/poc/)
 - [PoC - Flexible web application architecture](https://github.com/martinoppitz/poc-flexible-web-application-architecture#readme)
 - [Hello World - Comparison](https://github.com/martinoppitz/hello-world-comparison#readme)
-
-## Installation
-
-`npm install @leanup/cli typescript --save-dev` and `npm audit fix`
-
-Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `selenium-server` or `typescript` in the required version, if you need that feature.
-
-- `npm install chromedriver --save-dev`
-- `npm install geckodriver --save-dev`
-- `npm install graphql --save-dev`
-- `npm install selenium-server--save-dev`
-- `npm install typescript --save-dev`
 
 ## Features
 
@@ -106,7 +110,7 @@ Install the peer dependencies `chromedriver`, `geckodriver`, `graphql`, `seleniu
 | [Allsure]        |      Report      |   ✔️   | ready                      |
 | [Cucumber]       |       BDD        |   ✔️   | ready                      |
 | [robotframework] |       BDD        |   ⌛   | will be evaluated          |
-| [Storybook]      |  Documentation   |   ⌛   | upcoming                   |
+| [Storybook]      |  Documentation   |   ⌛   | in progress                |
 | [GraphQL]        |       API        |   ✔️   | ready                      |
 | [Workbox]        |       PWA        |   ✔️   | ready                      |
 | [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
@@ -185,14 +189,15 @@ A separate package contains some nice but not required addons for webpack.
 
 There a separate packages for important application features.
 
-- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
+- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
 - [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/git-hooks/badge.svg)](https://snyk.io/test/npm/@leanup/git-hooks)
-- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ⌛ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/form/badge.svg)](https://snyk.io/test/npm/@leanup/form)
+- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/form/badge.svg)](https://snyk.io/test/npm/@leanup/form)
 - [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-preact/badge.svg)](https://snyk.io/test/npm/@leanup/material-preact)
 - [`@leanup/material-vanilla`](https://www.npmjs.com/package/@leanup/material-vanilla) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-vanilla/badge.svg)](https://snyk.io/test/npm/@leanup/material-vanilla)
+- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛ IN PROGRESS
 
 [babel]: https://babeljs.io
-[typescript]: https:/typescriptlang.org
+[typescript]: https://typescriptlang.org
 [webpack]: https://webpack.js.org
 [mocha]: https://mochajs.org
 [chai]: https://www.chaijs.com
