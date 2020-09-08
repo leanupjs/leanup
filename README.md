@@ -1,10 +1,11 @@
 <p style="text-align: center; background: white;">
-<a href="https://leanupjs.org">
-  <img src="https://leanupjs.org/assets/logo.svg" height="250">
-</a><br>
-<h2 style="text-align: center;">
-<cite><b>Make things pure</b> ... to become lean.</cite></h2>
-<p>
+  <a href="https://leanupjs.org">
+    <img src="https://leanupjs.org/assets/logo.svg" height="250">
+  </a><br>
+  <h2 style="text-align: center;">
+    <cite><b>Make things pure</b> ... to become lean.</cite>
+  </h2>
+</p>
 <br>
 <hr>
 
