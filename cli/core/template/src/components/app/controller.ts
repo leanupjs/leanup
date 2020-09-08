@@ -17,6 +17,11 @@ type Dummy = {
   price: number;
 };
 
+const OPTIONAL_CHAINING = {
+  ok: true,
+  nok: null,
+};
+
 export class AppController {
   public finishedRendering: number;
   public readonly framework: Framework = DI.get('Framework') as Framework;
@@ -35,5 +40,7 @@ export class AppController {
       version: '$$APP_VERSION$$',
     };
     console.log('APP_METADATE', APP_METADATE);
+    console.log('OPTIONAL_CHAINING', OPTIONAL_CHAINING?.ok);
+    console.log('OPTIONAL_CHAINING', OPTIONAL_CHAINING?.nok);
   }
 }
