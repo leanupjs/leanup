@@ -26,18 +26,16 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 
 - [Motivation](#motivation)
 - [What makes the difference](#what-makes-the-difference)
-- [Tools and technologies](#tools-and-technologies)
 - [Principles](#principles)
 - [Arguments](#arguments)
   - [Pro](#pro)
   - [Contra](#contra)
-- [Demo](#demo)
-- [Features](#features)
-- [Structure](#structure)
+- [Demo's](#demos)
+- [Tools](#tools)
+- [Ecosystem structure](#ecosystem-structure)
+  - [Frameworks](#frameworks)
   - [Extensions](#extensions)
-    - [Frameworks](#frameworks)
-    - [Addons](#addons)
-    - [Thinks](#thinks)
+  - [Thinks](#thinks)
 
 ## Motivation
 
@@ -54,10 +52,6 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 > <cite>Stop the transitive knowledge.</cite>
 
 We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.
-
-## Tools and technologies
-
-We use all tools and technologies without cluttered facades.
 
 ## Principles
 
@@ -85,7 +79,7 @@ The arguments for and against this concept are documented here:
 > - please give feedback
 > - please show us your perspective
 
-## Demo
+## Demo's
 
 There are some working examples:
 
@@ -93,7 +87,7 @@ There are some working examples:
 - [PoC - Flexible web application architecture](https://github.com/martinoppitz/poc-flexible-web-application-architecture#readme)
 - [Hello World - Comparison](https://github.com/martinoppitz/hello-world-comparison#readme)
 
-## Features
+## Tools
 
 | Tool/Technology  |   Description    | Status | Note                       |
 | ---------------- | :--------------: | :----: | :------------------------- |
@@ -113,11 +107,12 @@ There are some working examples:
 | [GraphQL]        |       API        |   ✔️   | ready                      |
 | [Workbox]        |       PWA        |   ✔️   | ready                      |
 | [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
-| [Ant-Design]     | Material Design  |   ✔️   | proved                     |
-| [Material]       | Material Design  |   ✔️   | proved                     |
-| [Bootstrap]      | Material Design  |   ✔️   | proved                     |
-| [Less]           |       CSS        |   ✔️   | proved                     |
-| [Sass]           |       CSS        |   ✔️   | proved                     |
+| [Ant-Design]     |  Design-System   |   ✔️   | proved                     |
+| [Material]       |  Design-System   |   ✔️   | proved                     |
+| [Bootstrap]      |  Design-System   |   ✔️   | proved                     |
+| [Tailwindcss]    |  Design-System   |   ✔️   | proved                     |
+| [Less]           |       CSS        |   ✔️   | ready                      |
+| [Sass]           |       CSS        |   ✔️   | ready                      |
 | [Webhint]        |     Webhint      |   ✔️   | moved \*\*\*               |
 | [TestCafe]       | E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
 | [TSLint]         |   Code-Checker   |   ❌   | removed \*\*               |
@@ -143,15 +138,14 @@ There are some working examples:
 
 > \*\*\*\* [TestCafe] The idea that defined TestCafe architecture was that you don't really need an external driver to run end-to-end tests in the browser. That's interesting.
 
-## Structure
+## Ecosystem structure
 
 Vanilla Java-/TypeScript are supported by default. That means for example custom elements and any plain Java-/TypeScript code.
 
 - [`@leanup/cli`](https://www.npmjs.com/package/@leanup/cli) ✔️
+- [`@leanup/cli-vanilla`](https://www.npmjs.com/package/@leanup/cli-vanilla) (optional) ✔️
 
-### Extensions
-
-#### Frameworks
+### Frameworks
 
 Vanilla Java-/TypeScript are supported by default. That means for example custom elements and any plain Java-/TypeScript code.
 
@@ -163,37 +157,36 @@ The selection of the following frameworks depends in parts on the following refe
 
 Currently the following framework extensions are available:
 
-- [`@leanup/cli-angular`](https://www.npmjs.com/package/@leanup/cli-angular) ✔️ [![vulnerabilities of @leanup/cli-angular](https://snyk.io/test/npm/@leanup/cli-angular/badge.svg)](https://snyk.io/test/npm/@leanup/cli-angular)
-- [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️ [![vulnerabilities of @leanup/cli-angularjs](https://snyk.io/test/npm/@leanup/cli-angularjs/badge.svg)](https://snyk.io/test/npm/@leanup/cli-angularjs)
-- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ [![vulnerabilities of @leanup/cli-aurelia](https://snyk.io/test/npm/@leanup/cli-aurelia/badge.svg)](https://snyk.io/test/npm/@leanup/cli-aurelia)
-- [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️ [![vulnerabilities of @leanup/cli-inferno](https://snyk.io/test/npm/@leanup/cli-inferno/badge.svg)](https://snyk.io/test/npm/@leanup/cli-inferno)
-- [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️ [![vulnerabilities of @leanup/cli-preact](https://snyk.io/test/npm/@leanup/cli-preact/badge.svg)](https://snyk.io/test/npm/@leanup/cli-preact)
-- [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️ [![vulnerabilities of @leanup/cli-react](https://snyk.io/test/npm/@leanup/cli-react/badge.svg)](https://snyk.io/test/npm/@leanup/cli-react)
-- [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️ [![vulnerabilities of @leanup/cli-svelte](https://snyk.io/test/npm/@leanup/cli-svelte/badge.svg)](https://snyk.io/test/npm/@leanup/cli-svelte)
-- [`@leanup/cli-vanilla`](https://www.npmjs.com/package/@leanup/cli-vanilla) ✔️ [![vulnerabilities of @leanup/cli-vanilla](https://snyk.io/test/npm/@leanup/cli-vanilla/badge.svg)](https://snyk.io/test/npm/@leanup/cli-vanilla)
-- [`@leanup/cli-vue`](https://www.npmjs.com/package/@leanup/cli-vue) ✔️ [![vulnerabilities of @leanup/cli-vue](https://snyk.io/test/npm/@leanup/cli-vue/badge.svg)](https://snyk.io/test/npm/@leanup/cli-vue)
-- [`@leanup/cli-vue3`](https://www.npmjs.com/package/@leanup/cli-vue3) ✔️ (RC) [![vulnerabilities of @leanup/cli-vue3](https://snyk.io/test/npm/@leanup/cli-vue3/badge.svg)](https://snyk.io/test/npm/@leanup/cli-vue3)
+- [`@leanup/cli-angular`](https://www.npmjs.com/package/@leanup/cli-angular) ✔️
+- [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️
+- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️
+- [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️
+- [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
+- [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
+- [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️
+- [`@leanup/cli-vue`](https://www.npmjs.com/package/@leanup/cli-vue) ✔️
+- [`@leanup/cli-vue3`](https://www.npmjs.com/package/@leanup/cli-vue3) ✔️
 
-#### Addons
+### Extensions
 
 A separate package contains some nice but not required addons for webpack.
 
-- [`@leanup/cli-addons`](https://www.npmjs.com/package/@leanup/cli-addons) ✔️ [![vulnerabilities of @leanup/cli-addons](https://snyk.io/test/npm/@leanup/cli-addons/badge.svg)](https://snyk.io/test/npm/@leanup/cli-addons)
-- [`@leanup/cli-cucumber`](https://www.npmjs.com/package/@leanup/cli-cucumber) NEW ✔️ [![vulnerabilities of @leanup/cli-cucumber](https://snyk.io/test/npm/@leanup/cli-cucumber/badge.svg)](https://snyk.io/test/npm/@leanup/cli-cucumber)
-- [`@leanup/cli-graphql`](https://www.npmjs.com/package/@leanup/cli-graphql) NEW ✔️ [![vulnerabilities of @leanup/cli-graphql](https://snyk.io/test/npm/@leanup/cli-graphql/badge.svg)](https://snyk.io/test/npm/@leanup/cli-cucumber)
-- [`@leanup/cli-pwa`](https://www.npmjs.com/package/@leanup/cli-pwa) ✔️ [![vulnerabilities of @leanup/cli-pwa](https://snyk.io/test/npm/@leanup/cli-pwa/badge.svg)](https://snyk.io/test/npm/@leanup/cli-pwa)
-- [`@leanup/cli-webhint`](https://www.npmjs.com/package/@leanup/cli-webhint) ✔️ [![vulnerabilities of @leanup/cli-webhint](https://snyk.io/test/npm/@leanup/cli-webhint/badge.svg)](https://snyk.io/test/npm/@leanup/cli-webhint)
+- [`@leanup/cli-addons`](https://www.npmjs.com/package/@leanup/cli-addons) ✔️
+- [`@leanup/cli-cucumber`](https://www.npmjs.com/package/@leanup/cli-cucumber) ✔️
+- [`@leanup/cli-graphql`](https://www.npmjs.com/package/@leanup/cli-graphql) ✔️
+- [`@leanup/cli-pwa`](https://www.npmjs.com/package/@leanup/cli-pwa) ✔️
+- [`@leanup/cli-webhint`](https://www.npmjs.com/package/@leanup/cli-webhint) ✔️
 
-#### Thinks
+### Thinks
 
 There a separate packages for important application features.
 
-- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
-- [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/git-hooks/badge.svg)](https://snyk.io/test/npm/@leanup/git-hooks)
-- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️ NEW [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/form/badge.svg)](https://snyk.io/test/npm/@leanup/form)
-- [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-preact/badge.svg)](https://snyk.io/test/npm/@leanup/material-preact)
-- [`@leanup/material-vanilla`](https://www.npmjs.com/package/@leanup/material-vanilla) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-vanilla/badge.svg)](https://snyk.io/test/npm/@leanup/material-vanilla)
-- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛ IN PROGRESS
+- [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️
+- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️
+- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️
+- [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛
+- [`@leanup/material-vanilla`](https://www.npmjs.com/package/@leanup/material-vanilla) ⌛
+- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛
 
 [babel]: https://babeljs.io
 [typescript]: https://typescriptlang.org
@@ -221,3 +214,4 @@ There a separate packages for important application features.
 [webhint]: https://www.webhint.io
 [testcafe]: https://devexpress.github.io/testcafe/
 [robotframework]: https://robotframework.org
+[tailwindcss]: https://tailwindcss.com
