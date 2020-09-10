@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.0.0-rc.527",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -43,10 +43,10 @@
     "zone.js": "^0.11.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.0-rc.527",
-    "@leanup/cli-addons": "^1.0.0-rc.527",
-    "@leanup/cli-angular": "^1.0.0-rc.527",
-    "@leanup/git-hooks": "^1.0.0-rc.527",
+    "@leanup/cli": "^1.0.0",
+    "@leanup/cli-addons": "^1.0.0",
+    "@leanup/cli-angular": "^1.0.0",
+    "@leanup/git-hooks": "^1.0.0",
     "@ngtools/webpack": "^10.0.8",
     "typescript": "^4.0.2"
   },
