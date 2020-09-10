@@ -1,7 +1,4 @@
 {
-  "packages": [
-    "cli/**",
-    "git-hooks/**"
-  ],
-  "version": "1.0.0-rc.527"
+  "packages": ["cli/**", "git-hooks/**"],
+  "version": "independent"
 }

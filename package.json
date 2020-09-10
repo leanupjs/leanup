@@ -7,7 +7,7 @@
     "remove": "npm i lerna && lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
     "update": "npm update && lerna exec --ignore=@template/* --stream -- npm update",
-    "version": "lerna version prerelease --amend --no-git-tag-version --no-push --yes"
+    "version": "lerna version --amend --no-git-tag-version --no-push --yes"
   },
   "husky": {
     "hooks": {
@@ -24,7 +24,6 @@
     ]
   },
   "devDependencies": {
-    "@leanup/cli": "file:cli/core",
     "@leanup/git-hooks": "file:git-hooks",
     "lerna": "^3.22.1"
   }
