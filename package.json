@@ -24,7 +24,7 @@
     ]
   },
   "devDependencies": {
-    "@leanup/git-hooks": "file:git-hooks",
+    "@leanup/git-hooks": "file:packages/git-hooks",
     "lerna": "^3.22.1"
   }
 }
