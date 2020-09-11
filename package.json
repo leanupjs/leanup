@@ -2,13 +2,11 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "outdated": "(npm outdated || true) && lerna exec --ignore @template/* --stream --no-bail -- npm outdated",
-    "publish": "lerna exec --ignore @template/* --stream --no-bail -- npm publish --access public --tag next",
-    "latest": "lerna exec --ignore @template/* --stream --no-bail -- npm dist-tag latest",
-    "remove": "(lerna exec --ignore @template/* --stream -- rm -rf node_modules || true) && rm -rf node_modules",
+    "ci": "npm ci && lerna exec --ignore=@template/* --stream -- npm ci",
+    "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
+    "remove": "npm i lerna && lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
-    "update": "npm install && lerna exec --ignore @template/* --stream -- npm install && npm update && lerna exec --ignore @template/* --stream -- npm update && npm run outdated",
-    "version": "lerna version prerelease --ignore @template/* --no-push --yes"
+    "update": "npm update && lerna exec --ignore=@template/* --stream -- npm update"
   },
   "husky": {
     "hooks": {
@@ -25,10 +23,7 @@
     ]
   },
   "devDependencies": {
-    "@leanup/cli": "next",
-    "@leanup/cli-vanilla": "next",
-    "@leanup/git-hooks": "next",
-    "lerna": "^3.22.1",
-    "typescript": "^4.0.2"
+    "@leanup/git-hooks": "file:packages/git-hooks",
+    "lerna": "^3.22.1"
   }
 }

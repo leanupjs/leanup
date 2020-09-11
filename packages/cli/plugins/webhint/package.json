@@ -1,0 +1,47 @@
+{
+  "name": "@leanup/cli-webhint",
+  "version": "1.0.1",
+  "description": "This module contains the webhint feature for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "lib/**",
+    "template/**",
+    ".hintrc",
+    "index.js",
+    "webpack.config.js"
+  ],
+  "keywords": [
+    "hint",
+    "webhint",
+    "accessibility",
+    "cli",
+    "common errors",
+    "speed",
+    "compatibility",
+    "best practices",
+    "cross-browser"
+  ],
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/cli/issues"
+  },
+  "dependencies": {
+    "hint": "^6.1.0"
+  },
+  "devDependencies": {
+    "@leanup/cli": "^1.0.1",
+    "@types/node": "^14.10.0",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "@leanup/cli": "^1.0.0-rc.500"
+  },
+  "scripts": {
+    "prepack": "rm -rf lib && tsc"
+  }
+}

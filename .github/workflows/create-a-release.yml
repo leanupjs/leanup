@@ -16,19 +16,20 @@ jobs:
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
+      # - name: Dry install and pack
+      #   run: |
+      #     npx lerna exec --ignore @template/* --stream -- npm install --only=dev
+      #     npx lerna exec --ignore @template/* --stream -- npm pack
       # // https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#fromjson
       - name: Read Lerna
         id: lerna
         run: |
           content=`cat ./lerna.json | tr -d "\n"`
           echo "::set-output name=lernaJson::$content"
-      - name: Install
-        run: npm ci
-      - name: Coverage
-        run: npx do coverage
-      # # // https://github.com/actions/create-release
+      # // https://github.com/actions/create-release
       - name: Create Release
         uses: actions/create-release@v1
         env:

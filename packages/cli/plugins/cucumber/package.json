@@ -1,0 +1,43 @@
+{
+  "name": "@leanup/cli-cucumber",
+  "version": "1.0.1",
+  "description": "This module contains the cucumber feature for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "lib/**",
+    "template/**",
+    "cucumber.conf.js",
+    "index.js",
+    "webpack.config.js"
+  ],
+  "keywords": [
+    "cucumber"
+  ],
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/cli/issues"
+  },
+  "dependencies": {
+    "@types/cucumber": "^6.0.1",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "cucumber-pretty": "^6.0.0",
+    "nightwatch-api": "^3.0.1"
+  },
+  "devDependencies": {
+    "@leanup/cli": "^1.0.1",
+    "@types/node": "^14.10.0",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "@leanup/cli": "^1.0.0-rc.500"
+  },
+  "scripts": {
+    "prepack": "rm -rf lib && tsc"
+  }
+}
