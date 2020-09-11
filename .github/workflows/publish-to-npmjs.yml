@@ -21,6 +21,7 @@ jobs:
           scope: '@leanup'
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
+          ls -la
           npm install
           npm publish --access=public --tag=canary || true
         working-directory: packages/cli/core/e2e
