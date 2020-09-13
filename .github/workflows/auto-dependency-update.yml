@@ -4,6 +4,9 @@
 name: Auto dependency update
 
 on:
+  push:
+    branches:
+      - workflow/*
   schedule:
     - cron: '0 4 * * *'
 
@@ -17,18 +20,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      # - name: Delete branch if exists
-      #   run: git push origin --delete auto/dependency-update
+      - name: Delete branch if exists
+        run: git push origin --delete $GITHUB_REF-update
       - name: Create branch if not exists
-        run: git checkout -b auto/dependency-update
+        run: git checkout -b $GITHUB_REF-update
       - name: Install dependencies (npm ci)
         run: |
           npm install
-          lerna exec --ignore=@template/* --stream -- npm install
+          lerna exec --stream -- npm install
       - name: Update dependencies (npm update)
         run: |
           npm update
-          lerna exec --ignore=@template/* --stream -- npm update
+          lerna exec --stream -- npm update
       - name: Push change files
         run: |
           git config --local user.email "github@martinoppitz.com"
@@ -36,4 +39,4 @@ jobs:
           git add .
           git status
           git commit -m "Auto dependency update"
-          # git push --set-upstream origin auto/dependency-update
+          git push --set-upstream origin auto/dependency-update
