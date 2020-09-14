@@ -36,8 +36,7 @@ export class AppComponent extends ReactComponent<Props, unknown> {
         {this.resolvedRoute.url === 'series/create' && <CreateSerieComponent />}
         {this.resolvedRoute.url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={this.resolvedRoute} />}
         <small>
-          Used filters: {Filters.date(this.$ctrl.dummies.date)} |{' '}
-          {Filters.currency(this.$ctrl.dummies.price)} €
+          Used filters: {Filters.date(this.$ctrl.dummies.date)} | {Filters.currency(this.$ctrl.dummies.price)} €
         </small>
       </div>
     );

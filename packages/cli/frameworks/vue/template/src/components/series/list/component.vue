@@ -24,9 +24,7 @@
           <td>{{ serie.getTitle() }}</td>
           <td>{{ serie.getUnit() }}</td>
           <td>
-            <button class="btn btn-info" :id="'edit-' + index" type="button" @click="onEdit(serie)">
-              Edit
-            </button>
+            <button class="btn btn-info" :id="'edit-' + index" type="button" @click="onEdit(serie)">Edit</button>
           </td>
         </tr>
       </tbody>
