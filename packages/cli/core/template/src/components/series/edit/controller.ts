@@ -1,3 +1,4 @@
+import { InputControl } from '@leanup/form/controls/controls';
 import { DI } from '@leanup/lib/helpers/injector';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
@@ -7,8 +8,8 @@ import { EditorForm } from '../editor/editor.form';
 
 export class EditSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
-  public editorForm: EditorForm | null = null;
-  private measuredSerie: MeasuredSerieModel | undefined;
+  public editorForm: EditorForm = new EditorForm('edit');
+  private measuredSerie: MeasuredSerieModel = new MeasuredSerieModel('', '');
 
   public constructor(measuredSerieId: number) {
     this.changeMeasuredSerie(measuredSerieId);
@@ -29,8 +30,10 @@ export class EditSerieController {
   public mapTo(measuredSerie: MeasuredSerieModel): void {
     if (measuredSerie instanceof MeasuredSerieModel) {
       this.editorForm = new EditorForm('edit');
-      this.editorForm.getControl('title').value = this.measuredSerie.getTitle();
-      this.editorForm.getControl('unit').value = this.measuredSerie.getUnit();
+      const title = <InputControl>this.editorForm.getControl('title');
+      const unit = <InputControl>this.editorForm.getControl('unit');
+      title.value = this.measuredSerie.getTitle();
+      unit.value = this.measuredSerie.getUnit();
     }
   }
 
@@ -43,8 +46,10 @@ export class EditSerieController {
 
   public onSubmit(): void {
     if (this.measuredSerie instanceof MeasuredSerieModel && this.editorForm instanceof EditorForm) {
-      this.measuredSerie.setTitle(this.editorForm.getControl('title').value);
-      this.measuredSerie.setUnit(this.editorForm.getControl('unit').value);
+      const title = <InputControl>this.editorForm.getControl('title');
+      const unit = <InputControl>this.editorForm.getControl('unit');
+      this.measuredSerie.setTitle(<string>title.value);
+      this.measuredSerie.setUnit(<string>unit.value);
       this.measurementService.store();
       this.onCancel();
     }
