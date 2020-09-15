@@ -24,14 +24,8 @@ jobs:
         run: git push origin --delete $GITHUB_REF-update
       - name: Create branch if not exists
         run: git checkout -b $GITHUB_REF-update
-      - name: Install dependencies (npm ci)
-        run: |
-          npm install
-          lerna exec --stream -- npm install
-      - name: Update dependencies (npm update)
-        run: |
-          npm update
-          lerna exec --stream -- npm update
+      - name: Install and update dependencies
+        run: npm run update
       - name: Push change files
         run: |
           git config --local user.email "github@martinoppitz.com"
@@ -39,4 +33,4 @@ jobs:
           git add .
           git status
           git commit -m "Auto dependency update"
-          git push --set-upstream origin auto/dependency-update
+          # git push --set-upstream origin $GITHUB_REF-update
