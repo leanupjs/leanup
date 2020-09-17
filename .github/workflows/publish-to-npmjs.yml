@@ -53,6 +53,8 @@ jobs:
           npm install
           npm publish --access=public --tag=canary || true
         working-directory: packages/cli/core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/lib
         run: |
           npm install
