@@ -20,7 +20,7 @@ interface MeasuredSerieInterface {
 
 export class MeasurementService {
   private measuredSeries: MeasuredSerieModel[] = [];
-  private readonly storageStorage: StorageService = DI.get('StorageService') as StorageService;
+  private readonly storageStorage: StorageService = DI.get<StorageService>('StorageService');
   public readonly observe: Subject<MeasuredSerieModel[]> = new Subject();
 
   public constructor() {

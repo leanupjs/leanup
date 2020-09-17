@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-test",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "This module contains the test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -41,7 +41,7 @@
     "sinon": "^9.0.3"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0-rc.500"
+    "@leanup/cli": "^1.0.0"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

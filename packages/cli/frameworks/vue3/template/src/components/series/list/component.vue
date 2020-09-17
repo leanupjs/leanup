@@ -3,13 +3,9 @@
     <h5>List</h5>
     <div>
       <button class="btn btn-success" id="add" type="button" @click="onAdd()">Add</button>
-      <button
-        class="btn btn-info"
-        id="start"
-        type="button"
-        v-if="showPerformanceButtonRef"
-        @click="onStart()"
-      >Performance</button>
+      <button class="btn btn-info" id="start" type="button" v-if="showPerformanceButtonRef" @click="onStart()">
+        Performance
+      </button>
     </div>
     <table class="table" v-for="(element, index) in elementsRef" :key="index">
       <thead>
@@ -28,12 +24,7 @@
           <td>{{ serie.getTitle() }}</td>
           <td>{{ serie.getUnit() }}</td>
           <td>
-            <button
-              class="btn btn-info"
-              :id="'edit-' + index"
-              type="button"
-              @click="onEdit(serie)"
-            >Edit</button>
+            <button class="btn btn-info" :id="'edit-' + index" type="button" @click="onEdit(serie)">Edit</button>
           </td>
         </tr>
       </tbody>

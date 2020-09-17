@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-preact
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-preact
-[dependencies]: https://img.shields.io/david/martinoppitz/leanup?path=cli/plugins/preact
-[dependencies-url]: https://david-dm.org/martinoppitz/leanup?path=cli/plugins/preact
-[peer-dependencies]: https://img.shields.io/david/peer/martinoppitz/leanup?path=cli/plugins/preact
-[peer-dependencies-url]: https://david-dm.org/martinoppitz/leanup?path=cli/plugins/preact&type=peer
+[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/frameworks/preact
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/preact
+[peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/preact
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/preact&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-preact/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-preact
 [downloads]: https://img.shields.io/npm/dm/@leanup/cli-preact
