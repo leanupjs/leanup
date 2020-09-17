@@ -1,19 +1,27 @@
 import { h } from 'preact';
 
-import { PreactComponent } from '../../component.preact';
+import { InputControl } from '@leanup/form/controls/controls';
+import { GenericComponent } from '@leanup/lib/components/generic';
+import { PreactComponent } from '@leanup/lib/components/preact';
+
 import { InputComponent } from '../../input/component.preact';
 import { EditorSerieController } from './controller';
+import { EditorForm } from './editor.form';
 
-export class EditorSerieComponent extends PreactComponent {
-  public constructor(props: any) {
+interface Props {
+  editorForm: EditorForm;
+}
+
+export class EditorSerieComponent extends PreactComponent<Props, unknown> {
+  public constructor(props: Props) {
     super(props, new EditorSerieController());
   }
 
-  public render() {
+  public render(): preact.JSX.Element {
     return (
       <div>
-        <InputComponent control={this.props.editorForm.getInput('title')} />
-        <InputComponent control={this.props.editorForm.getInput('unit')} />
+        <InputComponent control={this.props.editorForm.getControl('title') as InputControl} />
+        <InputComponent control={this.props.editorForm.getControl('unit') as InputControl} />
       </div>
     );
   }

@@ -1,5 +1,9 @@
+interface INameToValueMap {
+  [key: string]: any;
+}
+
 export class StorageService {
-  private memoryStorage: any = {};
+  private memoryStorage: INameToValueMap = {};
   private namespace: string;
 
   public constructor(namespace = 'app-store') {

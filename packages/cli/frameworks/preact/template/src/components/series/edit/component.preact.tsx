@@ -1,30 +1,39 @@
 import { h } from 'preact';
 
-import { PreactComponent } from '../../component.preact';
+import { GenericComponent } from '@leanup/lib/components/generic';
+import { PreactComponent } from '@leanup/lib/components/preact';
+
+import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.preact';
 import { EditSerieController } from './controller';
 
-export class EditSerieComponent extends PreactComponent {
-  public constructor(props: any) {
+interface Props {
+  resolvedRoute: ResolvedRoute;
+}
+
+export class EditSerieComponent extends PreactComponent<Props, EditSerieController> implements GenericComponent {
+  public ctrl: EditSerieController = new EditSerieController(0);
+
+  public constructor(props: Props) {
     super(props, new EditSerieController(props.resolvedRoute.params.id));
     this.handleDelete.bind(this);
   }
 
   private handleDelete() {
-    this.$ctrl.onDelete();
+    this.ctrl.onDelete();
   }
 
-  public render() {
+  public render(): preact.JSX.Element {
     return (
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
           event.stopPropagation();
-          this.$ctrl.onSubmit();
+          this.ctrl.onSubmit();
         }}
       >
         <h5>Edit a existing measuring serie</h5>
-        <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
+        <EditorSerieComponent editorForm={this.ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit">
           Edit
         </button>
@@ -33,7 +42,7 @@ export class EditSerieComponent extends PreactComponent {
           type="reset"
           id="cancel"
           onClick={() => {
-            this.$ctrl.onCancel();
+            this.ctrl.onCancel();
           }}
         >
           Abbrechen
