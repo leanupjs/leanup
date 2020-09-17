@@ -24,7 +24,7 @@ const OPTIONAL_CHAINING = {
 
 export class AppController {
   public finishedRendering: number;
-  public readonly framework: Framework = DI.get('Framework') as Framework;
+  public readonly framework: Framework = DI.get<Framework>('Framework');
   public readonly dummies: Dummy = {
     date: new Date(2010, 3, 5),
     price: 123123123,

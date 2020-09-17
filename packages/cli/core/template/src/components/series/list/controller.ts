@@ -7,7 +7,7 @@ import { RouterService } from '../../../services/router/service';
 const PERFORMANCE_ANZAHL = 2500;
 
 export class ListSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService') as MeasurementService;
+  private readonly measurementService: MeasurementService = DI.get<MeasurementService>('MeasurementService');
   public measuredSeries: MeasuredSerieModel[] = [];
   public measuredSerie: MeasuredSerieModel | null = null;
   // tslint:disable-next-line: no-empty

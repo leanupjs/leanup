@@ -9,14 +9,16 @@
 <br>
 <hr>
 
-<!-- [![https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg][https://github.com/leanupjs/cli/workflows/github%20ci%20-%20publish%20to%20npm/badge.svg]][https://github.com/leanupjs/cli/actions] -->
+![GitHub CI](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
 
 [![downloads][downloads]][downloads-url]
 [![npm][npm]][npm-url]
 [![license][license]][license-url]
 
-<!-- [![dependencies][dependencies]][dependencies-url] -->
-<!-- [![peerDependencies][peerdependencies]][peerdependencies-url] -->
+[![dependencies][dependencies]][dependencies-url]
+[![devDependencies][devdependencies]][devdependencies-url]
+[![peerDependencies][peerdependencies]][peerdependencies-url]
+[![optionalDependencies][optionaldependencies]][optionaldependencies-url]
 
 [![vulnerabilities][vulnerabilities]][vulnerabilities-url]
 [![install-size][install-size]][install-size-url]
@@ -32,10 +34,14 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/cli
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
-[dependencies]: https://img.shields.io/david/martinoppitz/leanup?path=cli/core
-[dependencies-url]: https://david-dm.org/martinoppitz/leanup?path=cli/core
-[peerdependencies]: https://img.shields.io/david/peer/martinoppitz/leanup?path=cli/core
-[peerdependencies-url]: https://david-dm.org/martinoppitz/leanup?path=cli/core&type=peer
+[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core
+[devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/core
+[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&type=dev
+[peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/core
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&type=peer
+[optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/core
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli

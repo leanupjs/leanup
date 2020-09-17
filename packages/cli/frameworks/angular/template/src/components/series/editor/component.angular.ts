@@ -7,8 +7,8 @@ import { EditorForm } from './editor.form';
   selector: 'editor-serie',
   template: `
     <div>
-      <app-input [control]="editorForm.getInput('title')"></app-input>
-      <app-input [control]="editorForm.getInput('unit')"></app-input>
+      <app-input [control]="editorForm.getControl('title')"></app-input>
+      <app-input [control]="editorForm.getControl('unit')"></app-input>
     </div>
   `,
 })
