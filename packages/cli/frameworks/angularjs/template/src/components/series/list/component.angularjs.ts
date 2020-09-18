@@ -3,10 +3,12 @@ import { ListSerieController } from './controller';
 
 ANGULARJS_MODULE.component('listSerie', {
   controller: class extends ListSerieController {
-    public constructor($scope) {
+    public constructor($scope: { $apply: Function }) {
       super();
       this.renderView = () => {
-        setTimeout($scope.$apply.bind(this));
+        setTimeout(() => {
+          $scope.$apply();
+        }, 0);
       };
     }
   },

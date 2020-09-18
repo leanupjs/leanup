@@ -1,23 +1,27 @@
-import { InfernoComponent } from '../../component.inferno';
+import { GenericComponent } from '@leanup/lib/components/generic';
+import { InvernoComponent } from '@leanup/lib/components/inferno';
+
 import { EditorSerieComponent } from '../editor/component.inferno';
 import { CreateSerieController } from './controller';
 
-export class CreateSerieComponent extends InfernoComponent {
-  public constructor(props: any) {
+export class CreateSerieComponent extends InvernoComponent<unknown, unknown> implements GenericComponent {
+  public ctrl: CreateSerieController = new CreateSerieController();
+
+  public constructor(props: unknown) {
     super(props, new CreateSerieController());
   }
 
-  public render() {
+  public render(): JSX.Element {
     return (
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
           event.stopPropagation();
-          this.$ctrl.onSubmit();
+          this.ctrl.onSubmit();
         }}
       >
         <h5>Create a new measuring serie</h5>
-        <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
+        <EditorSerieComponent editorForm={this.ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit">
           Add
         </button>
@@ -26,7 +30,7 @@ export class CreateSerieComponent extends InfernoComponent {
           type="reset"
           id="cancel"
           onClick={() => {
-            this.$ctrl.onCancel();
+            this.ctrl.onCancel();
           }}
         >
           Abbrechen

@@ -31,6 +31,7 @@
   "dependencies": {
     "@leanup/form": "^1.1.0-rc.102",
     "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "navigo": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
