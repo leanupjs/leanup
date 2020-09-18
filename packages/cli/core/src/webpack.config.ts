@@ -55,14 +55,7 @@ export function webpackConfig(env: any, argv: any): Object {
       MiniCssExtractPlugin.loader,
       // 'style-loader',
       'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          config: {
-            path: path.join(process.cwd()),
-          },
-        },
-      },
+      'postcss-loader',
       {
         loader: 'less-loader',
         options: {
@@ -81,14 +74,7 @@ export function webpackConfig(env: any, argv: any): Object {
       MiniCssExtractPlugin.loader,
       // 'style-loader',
       'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          config: {
-            path: path.join(process.cwd()),
-          },
-        },
-      },
+      'postcss-loader',
       {
         loader: 'sass-loader',
         options: {
