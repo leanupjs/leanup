@@ -33,7 +33,7 @@
     "typescript": "^4.0.2"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.1.0-rc.0"
+    "@leanup/cli": "^1.1.0-rc.100"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

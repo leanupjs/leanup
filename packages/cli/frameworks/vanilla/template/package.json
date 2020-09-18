@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.1",
+    "@leanup/form": "^1.1.0-rc.100",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
