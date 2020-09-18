@@ -25,10 +25,7 @@ jobs:
         with:
           ref: workflow/auto-updates-release-1.0
       - name: Install and update dependencies
-        run: |
-          npm install
-          npm update
-          # npm run update
+        run: npm run update
       - name: Commit changed files
         run: |
           git config --local user.email "github@martinoppitz.com"
@@ -39,9 +36,3 @@ jobs:
           git push
       - name: Increment version
         run: npx lerna version patch --yes
-      - name: Commit and push changed files
-        run: |
-          git add .
-          git status
-          git commit -m "Increment version number"
-          git push
