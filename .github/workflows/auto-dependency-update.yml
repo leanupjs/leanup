@@ -23,6 +23,7 @@ jobs:
       - name: Delete branch if exists
         run: git push origin --delete auto/release-1.0-update
       - uses: actions/checkout@v2
+        if: always()
         with:
           ref: release/1.0
       - name: Create branch if not exists
