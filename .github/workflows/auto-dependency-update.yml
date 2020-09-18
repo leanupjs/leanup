@@ -4,9 +4,6 @@
 name: Auto dependency update
 
 on:
-  push:
-    branches:
-      - workflow/*
   schedule:
     - cron: '0 4 * * *'
 
@@ -23,7 +20,7 @@ jobs:
       - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
-          ref: workflow/auto-updates-release-1.0
+          ref: release/1.0
       - name: Install and update dependencies
         run: npm run update
       - name: Commit changed files
