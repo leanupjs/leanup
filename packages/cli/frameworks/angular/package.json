@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-angular",
-  "version": "1.1.0-rc.100",
+  "version": "1.1.0-rc.101",
   "description": "This package contains the Angular framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -41,7 +41,7 @@
     "angular": "lib/cli.js"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.100",
+    "@leanup/cli": "^1.1.0-rc.101",
     "@types/node": "^14.11.1",
     "typescript": "^4.0.2"
   },
