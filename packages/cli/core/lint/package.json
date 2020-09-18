@@ -29,7 +29,7 @@
     "eslint-plugin-json": "^2.1.2"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0"
+    "@leanup/cli": "^1.1.0-rc.0"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

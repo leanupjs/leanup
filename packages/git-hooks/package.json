@@ -21,13 +21,13 @@
     "url": "https://github.com/leanupjs/cli/issues"
   },
   "dependencies": {
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
-    "@commitlint/format": "^9.1.2",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/format": "^11.0.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0"
+    "@leanup/cli": "^1.1.0-rc.0"
   }
 }
