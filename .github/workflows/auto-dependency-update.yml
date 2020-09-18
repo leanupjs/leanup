@@ -38,7 +38,7 @@ jobs:
           git commit -m "Auto dependency update"
           git push
       - name: Increment version
-        run: npx lerna verson patch --yes
+        run: npx lerna version patch --yes
       - name: Commit and push changed files
         run: |
           git add .
