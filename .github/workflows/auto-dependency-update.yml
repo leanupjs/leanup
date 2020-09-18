@@ -8,7 +8,7 @@ on:
     branches:
       - workflow/*
   schedule:
-    - cron: "0 4 * * *"
+    - cron: '0 4 * * *'
 
 jobs:
   build:
@@ -20,20 +20,28 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Delete branch if exists
-        run: git push origin --delete auto/release-1.0-update || true
-      - name: Create branch if not exists
-        run: git checkout -b auto/release-1.0-update
+      - name: Checkout specific branch
+        uses: actions/checkout@v2
+        with:
+          ref: workflow/auto-updates-release-1.0
       - name: Install and update dependencies
         run: |
           npm install
           npm update
           # npm run update
-      - name: Push change files
+      - name: Commit changed files
         run: |
           git config --local user.email "github@martinoppitz.com"
           git config --local user.name "Martin Oppitz"
           git add .
           git status
           git commit -m "Auto dependency update"
-          git push --set-upstream origin auto/release-1.0-update
+          git push
+      - name: Increment version
+        run: npx lerna verson patch --yes
+      - name: Commit and push changed files
+        run: |
+          git add .
+          git status
+          git commit -m "Increment version number"
+          git push
