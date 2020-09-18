@@ -8,13 +8,13 @@ import { APP_HTML_ELEMENT } from './shares/constant';
 
 // https://github.com/vuejs/vue-devtools
 const ENVs = {
-  NODE_ENV: '$$NODE_ENV$$'
+  NODE_ENV: '$$NODE_ENV$$',
 };
 Vue.config.devtools = ENVs.NODE_ENV === 'development';
 
 DI.register('Framework', {
   ...require('vue/package.json'),
-  name: 'Vue'
+  name: 'Vue',
 });
 require('./shares/register');
 require('./shares/routing');
@@ -28,6 +28,6 @@ if (htmlDivElement instanceof HTMLDivElement) {
   // tslint:disable-next-line: no-unused-expression
   new Vue({
     el: APP_HTML_ELEMENT,
-    render: (h: any) => h(App)
+    render: (h: any) => h(App),
   });
 }

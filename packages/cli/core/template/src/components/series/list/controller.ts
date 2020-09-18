@@ -1,3 +1,4 @@
+import { AbstractController } from '@leanup/lib/components/generic';
 import { DI } from '@leanup/lib/helpers/injector';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
@@ -6,8 +7,8 @@ import { RouterService } from '../../../services/router/service';
 
 const PERFORMANCE_ANZAHL = 2500;
 
-export class ListSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService') as MeasurementService;
+export class ListSerieController extends AbstractController {
+  private readonly measurementService: MeasurementService = DI.get<MeasurementService>('MeasurementService');
   public measuredSeries: MeasuredSerieModel[] = [];
   public measuredSerie: MeasuredSerieModel | null = null;
   // tslint:disable-next-line: no-empty
@@ -17,6 +18,7 @@ export class ListSerieController {
   public showPerformanceButton = true;
 
   public constructor() {
+    super();
     this.measurementService.observe.subscribe(() => {
       this.update();
     });
