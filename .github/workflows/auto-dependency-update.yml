@@ -33,4 +33,4 @@ jobs:
           git add .
           git status
           git commit -m "Auto dependency update"
-          # git push --set-upstream origin $GITHUB_REF-update
+          git push --set-upstream origin $GITHUB_REF-update
