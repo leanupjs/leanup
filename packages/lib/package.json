@@ -27,7 +27,7 @@
     "preact": "^10.4.8",
     "react": "^16.13.1",
     "tsc": "^1.20150623.0",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.3"
   },
   "peerDependencies": {
     "inferno": "^7.4.3",
