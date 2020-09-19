@@ -1,18 +1,18 @@
 import { ANGULARJS_MODULE } from '../../angularjs.module';
 import { RouterService } from '../../services/router/service';
-import { AppController } from './controller';
+import { AppController, ResolvedRoute } from './controller';
 
 ANGULARJS_MODULE.component('app', {
   controller: [
     '$scope',
     class extends AppController {
-      public resolvedRoute: any = {
+      public resolvedRoute: ResolvedRoute = {
         url: 'series',
       };
 
-      public constructor($scope: any) {
+      public constructor($scope: { $apply: Function }) {
         super();
-        RouterService.subscribe((route: any, params: any, query: any) => {
+        RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
           this.resolvedRoute = {
             params,
             query,

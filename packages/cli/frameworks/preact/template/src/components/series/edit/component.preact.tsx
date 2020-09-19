@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import { h, JSX } from 'preact';
 
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { PreactComponent } from '@leanup/lib/components/preact';
@@ -23,7 +23,7 @@ export class EditSerieComponent extends PreactComponent<Props, EditSerieControll
     this.ctrl.onDelete();
   }
 
-  public render(): preact.JSX.Element {
+  public render(): JSX.Element {
     return (
       <form
         onSubmit={(event: Event) => {

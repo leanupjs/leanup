@@ -20,5 +20,7 @@ require('./shares/register');
 require('./shares/routing');
 
 const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
-htmlDivElement.style.display = 'inline';
-render(<AppComponent />, htmlDivElement);
+if (htmlDivElement instanceof HTMLDivElement) {
+  htmlDivElement.style.display = 'inline';
+  render(<AppComponent />, htmlDivElement);
+}

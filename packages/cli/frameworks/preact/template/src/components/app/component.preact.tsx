@@ -1,26 +1,23 @@
-import { createRef, h } from 'preact';
+import { createRef, h, JSX } from 'preact';
 
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { PreactComponent } from '@leanup/lib/components/preact';
 
-// import { ButtonComponent } from '@leanup/material-preact/button.component';
-// import { SliderComponent } from '@leanup/material-preact/slider.component';
-// import { TextFieldComponent } from '@leanup/material-preact/text-field.component';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
 import { CreateSerieComponent } from '../series/create/component.preact';
 import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';
-import { AppController, Props, ResolvedRoute } from './controller';
+import { AppController, ResolvedRoute } from './controller';
 
-export class AppComponent extends PreactComponent<Props, AppController> implements GenericComponent {
+export class AppComponent extends PreactComponent<unknown, AppController> implements GenericComponent {
   public ctrl: AppController = new AppController();
   private resolvedRoute: ResolvedRoute = {
     url: 'series',
   };
   public ref = createRef();
 
-  public constructor(props: Props) {
+  public constructor(props: unknown) {
     super(props, new AppController());
     RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
       this.resolvedRoute = {
@@ -32,7 +29,7 @@ export class AppComponent extends PreactComponent<Props, AppController> implemen
     });
   }
 
-  public render(): preact.JSX.Element {
+  public render(): JSX.Element {
     return (
       <div id="app">
         <h4>

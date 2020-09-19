@@ -8,7 +8,7 @@ interface Props {
 }
 
 export class InputComponent extends PreactComponent<Props, unknown> {
-  public render(): preact.JSX.Element {
+  public render(): JSX.Element {
     return (
       <div className="form-group">
         <label htmlFor={this.props.control.id}>{this.props.control.label}</label>

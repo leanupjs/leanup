@@ -1,30 +1,39 @@
 import React from 'react';
 
-import { ReactComponent } from '../../component.react';
+import { GenericComponent } from '@leanup/lib/components/generic';
+import { ReactComponent } from '@leanup/lib/components/react';
+
+import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.react';
 import { EditSerieController } from './controller';
 
-export class EditSerieComponent extends ReactComponent {
-  public constructor(props: any) {
+interface Props {
+  resolvedRoute: ResolvedRoute;
+}
+
+export class EditSerieComponent extends ReactComponent<Props, EditSerieController> implements GenericComponent {
+  public ctrl: EditSerieController = new EditSerieController(0);
+
+  public constructor(props: Props) {
     super(props, new EditSerieController(props.resolvedRoute.params.id));
     this.handleDelete.bind(this);
   }
 
   private handleDelete() {
-    this.$ctrl.onDelete();
+    this.ctrl.onDelete();
   }
 
-  public render() {
+  public render(): JSX.Element {
     return (
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
           event.stopPropagation();
-          this.$ctrl.onSubmit();
+          this.ctrl.onSubmit();
         }}
       >
         <h5>Edit a existing measuring serie</h5>
-        <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
+        <EditorSerieComponent editorForm={this.ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit">
           Edit
         </button>
@@ -33,7 +42,7 @@ export class EditSerieComponent extends ReactComponent {
           type="reset"
           id="cancel"
           onClick={() => {
-            this.$ctrl.onCancel();
+            this.ctrl.onCancel();
           }}
         >
           Abbrechen

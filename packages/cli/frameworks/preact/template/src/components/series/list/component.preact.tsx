@@ -20,7 +20,7 @@ export class ListSerieComponent extends PreactComponent<unknown, unknown> implem
     this.forceUpdate();
   }
 
-  public render(): preact.JSX.Element {
+  public render(): JSX.Element {
     const tables: any[] = [];
     for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
