@@ -34,9 +34,9 @@
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.7",
-    "@leanup/cli-addons": "^1.0.7",
-    "@leanup/cli-vanilla": "^1.0.7",
-    "typescript": "^4.0.2"
+    "@leanup/cli": "^1.0.6",
+    "@leanup/cli-addons": "^1.0.6",
+    "@leanup/cli-vanilla": "^1.0.6",
+    "typescript": "^4.0.3"
   }
 }
