@@ -1,11 +1,12 @@
 import { bindable, bindingMode } from 'aurelia-framework';
 
+import { ResolvedRoute } from '../../app/controller';
 import { EditSerieController } from '../edit/controller';
 
 export class EditSerie extends EditSerieController {
-  @bindable({ defaultBindingMode: bindingMode.twoWay }) public resolvedRoute;
+  @bindable({ defaultBindingMode: bindingMode.twoWay }) public resolvedRoute: ResolvedRoute;
 
-  public bind() {
+  public bind(): void {
     this.changeMeasuredSerie(this.resolvedRoute.params.id);
   }
 }

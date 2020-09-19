@@ -1,7 +1,6 @@
-import { h } from 'preact';
+import { h, JSX } from 'preact';
 
 import { InputControl } from '@leanup/form/controls/controls';
-import { GenericComponent } from '@leanup/lib/components/generic';
 import { PreactComponent } from '@leanup/lib/components/preact';
 
 import { InputComponent } from '../../input/component.preact';
@@ -17,7 +16,7 @@ export class EditorSerieComponent extends PreactComponent<Props, unknown> {
     super(props, new EditorSerieController());
   }
 
-  public render(): preact.JSX.Element {
+  public render(): JSX.Element {
     return (
       <div>
         <InputComponent control={this.props.editorForm.getControl('title') as InputControl} />

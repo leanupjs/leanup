@@ -1,8 +1,8 @@
 import { ApplicationRef, Component } from '@angular/core';
 
 import { RouterService } from '../../services/router/service';
-import { AppController } from './controller';
 import { Filters } from '../../shares/filters';
+import { AppController, ResolvedRoute } from './controller';
 
 @Component({
   selector: 'app',
@@ -19,13 +19,13 @@ import { Filters } from '../../shares/filters';
 })
 export class AppComponent extends AppController {
   public filters = Filters;
-  public resolvedRoute: any = {
+  public resolvedRoute: ResolvedRoute = {
     url: 'series',
   };
 
   public constructor(appRef: ApplicationRef) {
     super();
-    RouterService.subscribe((route: any, params: any, query: any) => {
+    RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
       this.resolvedRoute = {
         params,
         query,

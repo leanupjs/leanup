@@ -1,9 +1,14 @@
 import React from 'react';
 
-import { ReactComponent } from '../component.react';
+import { InputControl } from '@leanup/form/controls/controls';
+import { ReactComponent } from '@leanup/lib/components/react';
 
-export class InputComponent extends ReactComponent {
-  public render() {
+interface Props {
+  control: InputControl;
+}
+
+export class InputComponent extends ReactComponent<Props, unknown> {
+  public render(): JSX.Element {
     return (
       <div className="form-group">
         <label htmlFor={this.props.control.id}>{this.props.control.label}</label>
@@ -11,9 +16,9 @@ export class InputComponent extends ReactComponent {
           className="form-control"
           id={this.props.control.id}
           name={this.props.control.name}
-          value={this.props.control.value}
+          value={this.props.control.value as string}
           onChange={(event: Event) => {
-            this.props.control.value = event.target.value;
+            this.props.control.value = event.target === null ? '' : event.target.value;
             this.forceUpdate();
           }}
         />

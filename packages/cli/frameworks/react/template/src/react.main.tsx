@@ -13,5 +13,7 @@ require('./shares/register');
 require('./shares/routing');
 
 const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
-htmlDivElement.style.display = 'inline';
-ReactDOM.render(<AppComponent />, htmlDivElement);
+if (htmlDivElement instanceof HTMLDivElement) {
+  htmlDivElement.style.display = 'inline';
+  ReactDOM.render(<AppComponent />, htmlDivElement);
+}

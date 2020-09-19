@@ -1,26 +1,26 @@
-import { Component } from 'inferno';
-import { element } from 'prop-types';
+import { GenericComponent } from '@leanup/lib/components/generic';
+import { InvernoComponent } from '@leanup/lib/components/inferno';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
-export class ListSerieComponent extends Component {
-  public $ctrl: ListSerieController = new ListSerieController();
+export class ListSerieComponent extends InvernoComponent<unknown, unknown> implements GenericComponent {
+  public ctrl: ListSerieController = new ListSerieController();
 
-  constructor(props) {
+  constructor(props: unknown) {
     super(props);
-    this.$ctrl.renderView = this.forceUpdate.bind(this);
+    this.ctrl.renderView = this.forceUpdate.bind(this);
     this.handleEdit.bind(this);
   }
 
   private handleEdit(measuredSerie: MeasuredSerieModel) {
-    this.$ctrl.edit(measuredSerie);
+    this.ctrl.edit(measuredSerie);
     this.forceUpdate();
   }
 
-  public render() {
+  public render(): JSX.Element {
     const tables: any[] = [];
-    for (let i = 0; i < this.$ctrl.elements.length; i++) {
+    for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
         <table className="table" key={i}>
           <thead>
@@ -33,7 +33,7 @@ export class ListSerieComponent extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.$ctrl.measuredSeries.map((serie: MeasuredSerieModel, index: number) => {
+            {this.ctrl.measuredSeries.map((serie: MeasuredSerieModel, index: number) => {
               return (
                 <tr key={index}>
                   <td>{index + 1}</td>
@@ -68,18 +68,18 @@ export class ListSerieComponent extends Component {
             id="add"
             type="button"
             onClick={() => {
-              this.$ctrl.add();
+              this.ctrl.add();
             }}
           >
             Add
           </button>
-          {this.$ctrl.showPerformanceButton && (
+          {this.ctrl.showPerformanceButton && (
             <button
               className="btn btn-info"
               id="start"
               type="button"
               onClick={() => {
-                this.$ctrl.onStart();
+                this.ctrl.onStart();
               }}
             >
               Performance
@@ -87,7 +87,7 @@ export class ListSerieComponent extends Component {
           )}
         </div>
         {tables}
-        <small>Duration: {this.$ctrl.duration} ms</small>
+        <small>Duration: {this.ctrl.duration} ms</small>
       </div>
     );
   }

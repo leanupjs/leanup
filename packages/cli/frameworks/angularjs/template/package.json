@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@leanup/form": "^1.0.6",
+    "@leanup/lib": "^1.0.6",
     "angular": "^1.8.0",
     "navigo": "^7.1.2"
   },

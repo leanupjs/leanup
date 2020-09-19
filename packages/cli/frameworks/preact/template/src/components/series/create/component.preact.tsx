@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import { h, JSX } from 'preact';
 
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { PreactComponent } from '@leanup/lib/components/preact';
@@ -13,7 +13,7 @@ export class CreateSerieComponent extends PreactComponent<unknown, unknown> impl
     super(props, new CreateSerieController());
   }
 
-  public render(): preact.JSX.Element {
+  public render(): JSX.Element {
     return (
       <form
         onSubmit={(event: Event) => {

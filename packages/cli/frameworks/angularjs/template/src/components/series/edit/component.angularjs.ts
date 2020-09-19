@@ -1,4 +1,5 @@
 import { ANGULARJS_MODULE } from '../../../angularjs.module';
+import { ResolvedRoute } from '../../app/controller';
 import { EditSerieController } from './controller';
 
 ANGULARJS_MODULE.component('editSerie', {
@@ -6,7 +7,7 @@ ANGULARJS_MODULE.component('editSerie', {
     resolvedRoute: '<',
   },
   controller: class extends EditSerieController {
-    public resolvedRoute: any;
+    public resolvedRoute: ResolvedRoute;
 
     public $onChanges() {
       this.changeMeasuredSerie(this.resolvedRoute.params.id);
