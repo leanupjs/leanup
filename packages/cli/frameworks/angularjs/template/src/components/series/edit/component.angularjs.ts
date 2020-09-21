@@ -6,13 +6,16 @@ ANGULARJS_MODULE.component('editSerie', {
   bindings: {
     resolvedRoute: '<',
   },
-  controller: class extends EditSerieController {
-    public resolvedRoute: ResolvedRoute;
+  controller: [
+    '$scope',
+    class extends EditSerieController {
+      public resolvedRoute: ResolvedRoute;
 
-    public $onChanges() {
-      this.changeMeasuredSerie(this.resolvedRoute.params.id);
-    }
-  },
+      public $onChanges() {
+        this.changeMeasuredSerie(this.resolvedRoute.params.id);
+      }
+    },
+  ],
   template: `
     <form ng-submit="$ctrl.onSubmit()">
       <h5>Edit a existing measuring serie</h5>

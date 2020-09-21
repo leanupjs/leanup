@@ -2,16 +2,19 @@ import { ANGULARJS_MODULE } from '../../../angularjs.module';
 import { ListSerieController } from './controller';
 
 ANGULARJS_MODULE.component('listSerie', {
-  controller: class extends ListSerieController {
-    public constructor($scope: { $apply: Function }) {
-      super();
-      this.renderView = () => {
-        setTimeout(() => {
-          $scope.$apply();
-        }, 0);
-      };
-    }
-  },
+  controller: [
+    '$scope',
+    class extends ListSerieController {
+      public constructor($scope: { $apply: Function }) {
+        super();
+        this.renderView = () => {
+          setTimeout(() => {
+            $scope.$apply();
+          }, 0);
+        };
+      }
+    },
+  ],
   template: `
     <div>
       <h5>List</h5>

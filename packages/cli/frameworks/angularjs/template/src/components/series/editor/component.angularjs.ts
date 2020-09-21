@@ -5,11 +5,11 @@ ANGULARJS_MODULE.component('editorSerie', {
   bindings: {
     editorForm: '<',
   },
-  controller: EditorSerieController,
+  controller: ['$scope', EditorSerieController],
   template: `
   <div>
-    <app-input control="$ctrl.editorForm.getInput('title')"></app-input>
-    <app-input control="$ctrl.editorForm.getInput('unit')"></app-input>
+    <app-input control="$ctrl.editorForm.getControl('title')"></app-input>
+    <app-input control="$ctrl.editorForm.getControl('unit')"></app-input>
   </div>
 `,
 });
