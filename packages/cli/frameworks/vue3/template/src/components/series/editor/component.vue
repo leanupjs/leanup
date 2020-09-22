@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-input :control="props.editorForm.getInput('title')"></app-input>
-    <app-input :control="props.editorForm.getInput('unit')"></app-input>
+    <app-input :control="props.editorForm.getControl('title')"></app-input>
+    <app-input :control="props.editorForm.getControl('unit')"></app-input>
   </div>
 </template>
 
