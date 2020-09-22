@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.1.0-rc.104",
+  "version": "1.1.0-rc.105",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,17 +36,17 @@
     "@angular/forms": "^10.1.2",
     "@angular/platform-browser": "^10.1.2",
     "@angular/platform-browser-dynamic": "^10.1.2",
-    "@leanup/form": "^1.1.0-rc.104",
-    "@leanup/lib": "^1.1.0-rc.104",
+    "@leanup/form": "^1.1.0-rc.105",
+    "@leanup/lib": "^1.1.0-rc.105",
     "core-js": "^3.6.5",
     "navigo": "^7.1.2",
     "rxjs": "^6.6.3",
     "zone.js": "^0.11.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.104",
-    "@leanup/cli-addons": "^1.1.0-rc.104",
-    "@leanup/cli-angular": "^1.1.0-rc.104",
+    "@leanup/cli": "^1.1.0-rc.105",
+    "@leanup/cli-addons": "^1.1.0-rc.105",
+    "@leanup/cli-angular": "^1.1.0-rc.105",
     "@leanup/git-hooks": "^1.1.0-rc.102",
     "@ngtools/webpack": "^10.1.2",
     "typescript": "^4.0.3"
