@@ -51,7 +51,7 @@
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [prettier-url]: https://prettier.io
 
-<h1>leanup<sup style="color: grey; font-size: 75%"> CLI*</sup></h1>
+<h1>leanup<sup style="color: grey; font-size: 75%"> CLI</sup></h1>
 
 The **`@leanup` CLI** contains all required popular tools in there minimal default, transparent and extensible configuration to develop JavaScript/TypeScript web applications.
 
