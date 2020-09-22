@@ -2,7 +2,7 @@ import { ANGULARJS_MODULE } from '../../../angularjs.module';
 import { CreateSerieController } from './controller';
 
 ANGULARJS_MODULE.component('createSerie', {
-  controller: CreateSerieController,
+  controller: ['$scope', CreateSerieController],
   template: `
   <form ng-submit="$ctrl.onSubmit()">
     <h5>Create a new measuring serie</h5>
