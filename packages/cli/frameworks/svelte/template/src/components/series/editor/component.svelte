@@ -7,6 +7,6 @@
 </script>
 
 <div>
-  <InputComponent control={editorForm.getInput('title')} />
-  <InputComponent control={editorForm.getInput('unit')} />
+  <InputComponent control={editorForm.getControl('title')} />
+  <InputComponent control={editorForm.getControl('unit')} />
 </div>

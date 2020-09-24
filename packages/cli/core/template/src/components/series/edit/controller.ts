@@ -13,6 +13,7 @@ export class EditSerieController extends AbstractController {
   private measuredSerie: MeasuredSerieModel = new MeasuredSerieModel('', '');
 
   public constructor(measuredSerieId: number) {
+    super();
     this.changeMeasuredSerie(measuredSerieId);
   }
 

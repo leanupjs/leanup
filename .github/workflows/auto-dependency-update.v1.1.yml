@@ -1,0 +1,35 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Auto dependency update (v1.1)
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Checkout specific branch
+        uses: actions/checkout@v2
+        with:
+          ref: release/1.1
+      - name: Install and update dependencies
+        run: npm run update
+      - name: Commit changed files
+        run: |
+          git config --local user.email "github@martinoppitz.com"
+          git config --local user.name "Martin Oppitz"
+          git add .
+          git status
+          git commit -m "Auto dependency update"
+          git push
+      # - name: Increment version
+      #   run: npx lerna version patch --yes
