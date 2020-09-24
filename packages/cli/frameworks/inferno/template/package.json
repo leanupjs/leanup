@@ -1,6 +1,6 @@
 {
   "name": "@template/inferno",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@leanup/cli": "^1.0.11",
     "@leanup/cli-addons": "^1.0.11",
-    "@leanup/cli-inferno": "^1.0.11",
+    "@leanup/cli-inferno": "^1.0.12",
     "@leanup/git-hooks": "^1.0.8",
     "typescript": "^4.0.3"
   },
