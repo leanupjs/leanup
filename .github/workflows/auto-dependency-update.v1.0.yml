@@ -5,7 +5,7 @@ name: Auto dependency update (v1.0)
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 2 * * *'
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
-          ref: release/1.1
+          ref: release/1.0
       - name: Install and update dependencies
         run: npm run update
       - name: Commit changed files

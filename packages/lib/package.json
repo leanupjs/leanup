@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "inferno": "^7.4.3",
-    "preact": "^10.4.8",
+    "preact": "^10.5.2",
     "react": "^16.13.1"
   },
   "scripts": {
