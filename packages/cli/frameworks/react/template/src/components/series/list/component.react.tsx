@@ -12,12 +12,6 @@ export class ListSerieComponent extends ReactComponent<unknown, unknown> impleme
   constructor(props: unknown) {
     super(props);
     this.ctrl.renderView = this.forceUpdate.bind(this);
-    this.handleEdit.bind(this);
-  }
-
-  private handleEdit(measuredSerie: MeasuredSerieModel) {
-    this.ctrl.edit(measuredSerie);
-    this.forceUpdate();
   }
 
   public render(): JSX.Element {
@@ -48,7 +42,8 @@ export class ListSerieComponent extends ReactComponent<unknown, unknown> impleme
                       id={`edit-${index}`}
                       type="button"
                       onClick={() => {
-                        this.handleEdit(serie);
+                        this.ctrl.edit(serie);
+                        this.forceUpdate();
                       }}
                     >
                       Edit
