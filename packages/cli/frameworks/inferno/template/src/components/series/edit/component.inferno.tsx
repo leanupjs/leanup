@@ -10,15 +10,11 @@ interface Props {
 }
 
 export class EditSerieComponent extends InvernoComponent<Props, EditSerieController> implements GenericComponent {
-  public ctrl: EditSerieController = new EditSerieController(0);
+  public ctrl: EditSerieController;
 
   public constructor(props: Props) {
-    super(props, new EditSerieController(props.resolvedRoute.params.id));
-    this.handleDelete.bind(this);
-  }
-
-  private handleDelete() {
-    this.ctrl.onDelete();
+    super(props);
+    this.ctrl = new EditSerieController(props.resolvedRoute.params.id);
   }
 
   public render(): JSX.Element {
@@ -50,7 +46,7 @@ export class EditSerieComponent extends InvernoComponent<Props, EditSerieControl
           id="delete"
           type="button"
           onClick={() => {
-            this.handleDelete();
+            this.ctrl.onDelete();
           }}
         >
           Delete
