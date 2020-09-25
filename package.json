@@ -22,6 +22,7 @@
     ]
   },
   "devDependencies": {
+    "@leanup/cli": "file:packages/cli/core",
     "@leanup/git-hooks": "file:packages/git-hooks",
     "lerna": "^3.22.1"
   }

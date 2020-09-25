@@ -1,6 +1,6 @@
-import { ListOf } from "@leanup/lib/pattern/list-of";
+import { ListOf } from '@leanup/lib/pattern/list-of';
 
-import { ValidationHandler } from "../handlers/validation.handler";
+import { ValidationHandler } from '../handlers/validation.handler';
 
 abstract class AbstractControl {
   public readonly changeListeners: ListOf<Function> = new ListOf(Function);
@@ -8,7 +8,7 @@ abstract class AbstractControl {
   protected readonly errors: ListOf<Error> = new ListOf(Error);
 
   private readonly _parentForms: FormControl[] = [];
-  private _name = "unnamed";
+  private _name = 'unnamed';
   private _validationHandler: ValidationHandler = new ValidationHandler();
 
   constructor(name: string) {
@@ -19,14 +19,14 @@ abstract class AbstractControl {
     return this._name;
   }
   set name(value: string) {
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       if (value.length > 0) {
         this._name = value;
       } else {
-        throw new Error("The name of a control must have a min-length of 1.");
+        throw new Error('The name of a control must have a min-length of 1.');
       }
     } else {
-      throw new Error("The name of a control must be a string.");
+      throw new Error('The name of a control must be a string.');
     }
   }
 
@@ -68,14 +68,10 @@ abstract class AbstractControl {
       if (form.findMeInParentForm(this) === false) {
         this._parentForms.push(form);
       } else {
-        throw new Error(
-          `The same form control (${form.name}) leads to a form control loop.`
-        );
+        throw new Error(`The same form control (${form.name}) leads to a form control loop.`);
       }
     } else {
-      throw new Error(
-        `An form control with the name '${form.name}' already exists.`
-      );
+      throw new Error(`An form control with the name '${form.name}' already exists.`);
     }
   }
 
@@ -84,15 +80,11 @@ abstract class AbstractControl {
     if (index >= 0) {
       this._parentForms.splice(index, 1);
     } else {
-      throw new Error(
-        `An form control with the name '${form.name}' does not exists.`
-      );
+      throw new Error(`An form control with the name '${form.name}' does not exists.`);
     }
   }
 
-  public setValidationHandler(
-    validationHandler: ValidationHandler = new ValidationHandler()
-  ) {
+  public setValidationHandler(validationHandler: ValidationHandler = new ValidationHandler()) {
     this._validationHandler = validationHandler;
   }
 
@@ -105,15 +97,15 @@ abstract class AbstractControl {
 }
 
 export enum InputControlTypes {
-  checkbox = "checkbox",
-  date = "date",
-  email = "email",
-  number = "number",
-  password = "password",
-  radio = "radio",
-  select = "select",
-  slider = "slider",
-  text = "text",
+  checkbox = 'checkbox',
+  date = 'date',
+  email = 'email',
+  number = 'number',
+  password = 'password',
+  radio = 'radio',
+  select = 'select',
+  slider = 'slider',
+  text = 'text',
 }
 export interface InputControlProps {
   info?: string;
@@ -127,27 +119,28 @@ export interface InputControlProps {
 }
 
 export class InputControl extends AbstractControl implements InputControlProps {
-  private _info = "";
-  private _label = "";
+  private _info = '';
+  private _label = '';
   private _disabled = false;
   private _mandatory = false;
   private _readonly = false;
-  private _placeholder = "";
-  private _type = "text";
+  private _placeholder = '';
+  private _type = 'text';
   private _value: unknown = null;
+  private _oldValue: unknown = null;
   private _notifyTimeout: NodeJS.Timeout = setTimeout(() => {}, 1);
   private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 1);
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
     if (properties) {
-      this.info = properties.info ? properties.info : "";
-      this.label = properties.label ? properties.label : "";
+      this.info = properties.info ? properties.info : '';
+      this.label = properties.label ? properties.label : '';
       this.disabled = properties.disabled ? properties.disabled : false;
       this.mandatory = properties.mandatory ? properties.mandatory : false;
       this.readonly = properties.readonly ? properties.readonly : false;
-      this.placeholder = properties.placeholder ? properties.placeholder : "";
-      this.type = properties.type ? properties.type : "text";
+      this.placeholder = properties.placeholder ? properties.placeholder : '';
+      this.type = properties.type ? properties.type : 'text';
       this.value = properties.value ? properties.value : null;
     }
   }
@@ -156,11 +149,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._info;
   }
   set info(value: string) {
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       this._info = value;
       this.notify();
     } else {
-      throw new Error("The info of a input control must be a string.");
+      throw new Error('The info of a input control must be a string.');
     }
   }
 
@@ -168,11 +161,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._disabled;
   }
   set disabled(value: boolean) {
-    if (typeof value === "boolean") {
+    if (typeof value === 'boolean') {
       this._disabled = value;
       this.notify();
     } else {
-      throw new Error("The disabled flag of a input control must be a string.");
+      throw new Error('The disabled flag of a input control must be a string.');
     }
   }
 
@@ -180,13 +173,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._mandatory;
   }
   set mandatory(value: boolean) {
-    if (typeof value === "boolean") {
+    if (typeof value === 'boolean') {
       this._mandatory = value;
       this.notify();
     } else {
-      throw new Error(
-        "The mandatory flag of a input control must be a string."
-      );
+      throw new Error('The mandatory flag of a input control must be a string.');
     }
   }
 
@@ -194,11 +185,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._readonly;
   }
   set readonly(value: boolean) {
-    if (typeof value === "boolean") {
+    if (typeof value === 'boolean') {
       this._readonly = value;
       this.notify();
     } else {
-      throw new Error("The readonly flag of a input control must be a string.");
+      throw new Error('The readonly flag of a input control must be a string.');
     }
   }
 
@@ -206,11 +197,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._label;
   }
   set label(value: string) {
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       this._label = value;
       this.notify();
     } else {
-      throw new Error("The label of a input control must be a string.");
+      throw new Error('The label of a input control must be a string.');
     }
   }
 
@@ -218,11 +209,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._placeholder;
   }
   set placeholder(value: string) {
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       this._placeholder = value;
       this.notify();
     } else {
-      throw new Error("The placeholder of a input control must be a string.");
+      throw new Error('The placeholder of a input control must be a string.');
     }
   }
 
@@ -230,28 +221,26 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._type.toString();
   }
   set type(value: string) {
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       // https://developer.mozilla.org/de/docs/Web/HTML/Element/Input#Arten_des_%3Cinput%3E-Elements
       switch (value) {
-        case "checkbox":
-        case "date":
-        case "email":
-        case "number":
-        case "password":
-        case "radio":
-        case "select":
-        case "slider":
-        case "text":
+        case 'checkbox':
+        case 'date':
+        case 'email':
+        case 'number':
+        case 'password':
+        case 'radio':
+        case 'select':
+        case 'slider':
+        case 'text':
           this._type = value;
           this.notify();
           break;
         default:
-          throw new Error(
-            "The type of a input control must be a of the following types: ???."
-          );
+          throw new Error('The type of a input control must be a of the following types: ???.');
       }
     } else {
-      throw new Error("The type of a input control must be a string.");
+      throw new Error('The type of a input control must be a string.');
     }
   }
 
@@ -259,14 +248,14 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._value;
   }
   set value(value: unknown) {
+    this._value = value;
     if (this._valueTimeout) {
       clearTimeout(this._valueTimeout);
     }
     this._valueTimeout = setTimeout(() => {
-      const oldValue = this._value;
-      this._value = value;
       this.validate(value);
-      this.notify(oldValue);
+      this.notify(this._oldValue);
+      this._oldValue = this._value;
     }, 250);
   }
 
@@ -283,10 +272,7 @@ export class InputControl extends AbstractControl implements InputControlProps {
 }
 
 export class FormControl extends AbstractControl {
-  private readonly controls: ListOf<FormControl | InputControl> = new ListOf([
-    FormControl,
-    InputControl,
-  ]);
+  private readonly controls: ListOf<FormControl | InputControl> = new ListOf([FormControl, InputControl]);
 
   get valid(): boolean {
     return (
@@ -302,9 +288,7 @@ export class FormControl extends AbstractControl {
       control.addParentForm(this);
       this.controls.add(control);
     } else {
-      throw new Error(
-        `A control with the same name '${control.name}' already exists.`
-      );
+      throw new Error(`A control with the same name '${control.name}' already exists.`);
     }
   }
 
@@ -315,9 +299,7 @@ export class FormControl extends AbstractControl {
         this.controls.remove(control);
       }
     } else {
-      throw new Error(
-        `A control with the name '${control.name}' does not exists.`
-      );
+      throw new Error(`A control with the name '${control.name}' does not exists.`);
     }
   }
 
@@ -339,9 +321,7 @@ export class FormControl extends AbstractControl {
       } else if (control instanceof InputControl) {
         data[control.name] = control.value;
       } else {
-        throw new Error(
-          `The control is neither an instance of FormControl or InputControl.`
-        );
+        throw new Error(`The control is neither an instance of FormControl or InputControl.`);
       }
     });
     return data;
@@ -353,7 +333,7 @@ export class FormFactory {
     const form = new FormControl(name);
     for (const name in json) {
       if (json.hasOwnProperty(name)) {
-        if (typeof json[name] === "object" && json[name] !== null) {
+        if (typeof json[name] === 'object' && json[name] !== null) {
           form.addConrol(FormFactory.createForm(name, json[name]));
         } else {
           const input = new InputControl(name);
