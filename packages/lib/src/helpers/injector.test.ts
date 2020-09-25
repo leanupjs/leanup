@@ -1,11 +1,11 @@
 // @flow
 
-import { expect } from "chai";
+import { expect } from 'chai';
 
-import { DI, Injector } from "./injector";
+import { DI, Injector } from './injector';
 
 describe(`Test: Injector-Service (DI)`, () => {
-  it("DI is instance of Injector", () => {
+  it('DI is instance of Injector', () => {
     expect(DI instanceof Injector).be.true;
     expect(new Injector() instanceof Injector).be.true;
   });
@@ -33,9 +33,10 @@ describe(`Test: Injector-Service (DI)`, () => {
     test(`Array`, []);
     test(`Object`, {});
     test(`number`, 0);
-    test(`string`, "");
+    test(`string`, '');
     test(`boolean`, true);
     test(`null`, null);
+    test(`undefined`, undefined);
   });
   describe(`Service fehlerhaft registrieren`, () => {
     function test(type: string, service: any) {
@@ -44,15 +45,6 @@ describe(`Test: Injector-Service (DI)`, () => {
         // when
         expect(() => {
           DI.register(type, service);
-        }).throw();
-        // then
-      });
-
-      it(`Test-Case get (${type})`, () => {
-        // given
-        // when
-        expect(() => {
-          DI.get(type);
         }).throw();
         // then
       });
