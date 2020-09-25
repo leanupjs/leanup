@@ -1,5 +1,4 @@
+controls/
+handlers/
 node_modules/
-*.d.ts
-*.js
-*.js.map
 *.tgz
