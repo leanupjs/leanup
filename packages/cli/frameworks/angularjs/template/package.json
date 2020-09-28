@@ -31,6 +31,7 @@
   "dependencies": {
     "@leanup/form": "^1.0.15",
     "@leanup/lib": "^1.0.14",
+    "@types/angular": "1.6.45",
     "angular": "^1.8.0",
     "navigo": "^7.1.2"
   },
