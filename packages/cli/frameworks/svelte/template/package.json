@@ -1,6 +1,6 @@
 {
   "name": "@template/svelte",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,15 +29,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.14",
+    "@leanup/form": "^1.0.15",
     "@leanup/lib": "^1.0.14",
     "navigo": "^7.1.2",
     "svelte": "^3.24.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.14",
-    "@leanup/cli-addons": "^1.0.14",
-    "@leanup/cli-svelte": "^1.0.14",
+    "@leanup/cli": "^1.0.15",
+    "@leanup/cli-addons": "^1.0.15",
+    "@leanup/cli-svelte": "^1.0.15",
     "@leanup/git-hooks": "^1.0.8",
     "typescript": "^4.0.3"
   },
