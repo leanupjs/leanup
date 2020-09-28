@@ -1,7 +1,9 @@
 import * as path from 'path';
 
-import { CommandOption, AbstractCLI, getProjectName } from './abstract-cli';
-import { BuildOps, CreateOps, ServeOps, E2eTestOps, FixOps, UnitTestOps, CommonOps } from './interfaces';
+import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
+import {
+    BuildOps, CommonOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
+} from './interfaces';
 
 export const commonOptions: CommandOption[] = [
   {
@@ -190,9 +192,12 @@ export class CommonCLI extends AbstractCLI {
     this.addCommand(
       'coverage',
       'Unit-Test-Coverage (https://istanbul.js.org/)',
-      [{ flags: '-w, --watch', description: 'run tests in watch mode' }].concat(commonOptions),
-      (options: CommonOps): string[] => {
+      [{ flags: '-c, --check-coverage', description: 'check coverage watermarks' }].concat(commonOptions),
+      (options: UnitTestCoverageOps): string[] => {
         const spawnArgs = ['cross-env', 'NODE_ENV=test', 'nyc', 'mocha'];
+        if (options.checkCoverage) {
+          spawnArgs.push('--check-coverage');
+        }
         return spawnArgs;
       }
     );
