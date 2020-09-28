@@ -1,10 +1,9 @@
-import { Command } from 'commander';
-import * as commander from 'commander';
-
 import * as chalk from 'chalk';
+import { spawn } from 'child_process';
+import * as commander from 'commander';
 import * as fs from 'fs';
 import * as path from 'path';
-import { spawn } from 'child_process';
+
 import { CommonOps, CreateOps } from './interfaces';
 
 export interface CommandOption {
@@ -42,7 +41,7 @@ const PROJECT_NAME_REG_EXP = new RegExp(`@template/[a-z0-9]+`, 'g');
 export abstract class AbstractCLI {
   private name: string;
   private version: string;
-  private program = new Command();
+  private program = new commander.Command();
   private commands = new Map<string, CommandItem>();
 
   constructor(name: string, version: string) {
@@ -106,11 +105,11 @@ export abstract class AbstractCLI {
     console.log(
       `
 `,
-      chalk.yellow.bold('☀ @leanup/cli'),
+      `${chalk.magenta.bold(`☀ ${chalk.underline(`@leanup/cli`)}-${this.name}`)}`,
       `(v${this.version})`,
       chalk.italic.gray('execute the following pure command ...'),
       `
-    >`,
+>`,
       chalk.bold('npx'),
       chalk.italic(...args),
       `
@@ -125,7 +124,7 @@ export abstract class AbstractCLI {
         console.log(
           `
 `,
-          chalk.red.bold('✘ @leanup/cli'),
+          chalk.red.bold(`✘ ${chalk.underline(`@leanup/cli`)}`),
           chalk.italic.gray('command execution ended with error')
         );
         process.exit(code);
@@ -133,7 +132,7 @@ export abstract class AbstractCLI {
       console.log(
         `
 `,
-        chalk.green.bold('✔ @leanup/cli'),
+        chalk.green.bold(`✔ ${chalk.underline(`@leanup/cli`)}`),
         chalk.italic.gray('command execution successfully completed')
       );
     });
