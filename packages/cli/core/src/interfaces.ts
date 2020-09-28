@@ -38,6 +38,10 @@ export interface UnitTestOps extends CommonOps {
   watch: boolean;
 }
 
+export interface UnitTestCoverageOps extends CommonOps {
+  checkCoverage: boolean;
+}
+
 export interface PackageJson {
   bin: Object;
   version: string;
