@@ -42,6 +42,10 @@ export class AppComponent extends PreactComponent<unknown, AppController> implem
         <small>
           Used filters: {Filters.date(this.ctrl.dummies.date)} |{Filters.currency(this.ctrl.dummies.price)} €
         </small>
+        <br />
+        <small>
+          Build with: {this.ctrl.cli.name} v{this.ctrl.cli.version}
+        </small>
         {/* <hr />
         <div style="border: 1px solid; max-width: 350px; background: #ddd">
           <p>

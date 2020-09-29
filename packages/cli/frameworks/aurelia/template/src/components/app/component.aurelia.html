@@ -8,6 +8,7 @@
     <list-serie if.bind="resolvedRoute.url === 'series'"></list-serie>
     <create-serie if.bind="resolvedRoute.url === 'series/create'"></create-serie>
     <edit-serie if.bind="resolvedRoute.url === 'series/:id/edit'" resolved-route.bind="resolvedRoute"></edit-serie>
-    <small>Used filters: ${filters.date(dummies.date)} | ${filters.currency(dummies.price)} €</small>
+    <small>Used filters: ${filters.date(dummies.date)} | ${filters.currency(dummies.price)} €</small><br />
+    <small>Build with: ${cli.name} v${cli.version}</small>
   </div>
 </template>

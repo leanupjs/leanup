@@ -2,9 +2,9 @@ import '../series/create/component.vanilla';
 import '../series/list/component.vanilla';
 
 import { RouterService } from '../../services/router/service';
+import { Filters } from '../../shares/filters';
 import { VanillaComponent } from '../component.vanilla';
 import { AppController } from './controller';
-import { Filters } from '../../shares/filters';
 
 function render(component: AppComponent) {
   let html = `<div id="app">
@@ -21,7 +21,8 @@ function render(component: AppComponent) {
   html += `<!-- small>${component.counter} s ticks</small -->
   <small>Used filters: ${Filters.date(component.$ctrl.dummies.date)} | ${Filters.currency(
     component.$ctrl.dummies.price
-  )} €</small>
+  )} €</small><br />
+  <small>Build with: ${component.$ctrl.cli.name} v${component.$ctrl.cli.version}}</small>
   </div>`;
   return html;
 }

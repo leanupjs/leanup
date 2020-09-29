@@ -31,5 +31,6 @@
   {#if resolvedRoute.url === 'series/:id/edit'}
     <EditSerieComponent {resolvedRoute} />
   {/if}
-  <small>Used filters: {date(ctrl.dummies.date)} | {currency(ctrl.dummies.price)} €</small>
+  <small>Used filters: {date(ctrl.dummies.date)} | {currency(ctrl.dummies.price)} €</small><br />
+  <small>Build with {ctrl.cli.name} v{ctrl.cli.version}</small>
 </div>
