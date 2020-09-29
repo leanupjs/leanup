@@ -3,15 +3,16 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const packageJson = require(path.join(process.cwd(), 'package.json'));
+const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
+const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
 export function mapToExclude(include: string) {
   include = typeof include === 'string' ? `|${include}` : '';
 
   const aliasRegExp = /^(@[^/]+)\/.+/;
   let alias = '';
-  if (aliasRegExp.test(packageJson.name)) {
-    alias = `|${packageJson.name.replace(/^(@[^/]+)\/.+/, '$1')}`;
+  if (aliasRegExp.test(packageJsonApp.name)) {
+    alias = `|${packageJsonApp.name.replace(/^(@[^/]+)\/.+/, '$1')}`;
   }
   return new RegExp(`node_modules(\\/|\\\\)(?!@leanup${alias}${include}).+`);
 }
@@ -94,27 +95,33 @@ export function webpackConfig(env: any, argv: any): Object {
   ];
 
   // https://docs.npmjs.com/files/package.json#people-fields-author-contributors
-  if (typeof packageJson.name === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_NAME$$', replace: packageJson.name });
+  if (typeof packageJsonApp.name === 'string') {
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_NAME$$', replace: packageJsonApp.name });
   }
-  if (typeof packageJson.version === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_VERSION$$', replace: packageJson.version });
+  if (typeof packageJsonApp.version === 'string') {
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_VERSION$$', replace: packageJsonApp.version });
   }
-  if (typeof packageJson.author === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR$$', replace: packageJson.author });
-  } else if (typeof packageJson.author === 'object' && packageJson.author != null) {
-    if (typeof packageJson.author.name === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_NAME$$', replace: packageJson.author.name });
+  if (typeof packageJsonApp.author === 'string') {
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR$$', replace: packageJsonApp.author });
+  } else if (typeof packageJsonApp.author === 'object' && packageJsonApp.author != null) {
+    if (typeof packageJsonApp.author.name === 'string') {
+      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_NAME$$', replace: packageJsonApp.author.name });
     }
-    if (typeof packageJson.author.mail === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_MAIL$$', replace: packageJson.author.mail });
+    if (typeof packageJsonApp.author.mail === 'string') {
+      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_MAIL$$', replace: packageJsonApp.author.mail });
     }
-    if (typeof packageJson.author.url === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_URL$$', replace: packageJson.author.url });
+    if (typeof packageJsonApp.author.url === 'string') {
+      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_URL$$', replace: packageJsonApp.author.url });
     }
   }
-  if (typeof packageJson.homepage === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_HOMEPAGE$$', replace: packageJson.homepage });
+  if (typeof packageJsonApp.homepage === 'string') {
+    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_HOMEPAGE$$', replace: packageJsonApp.homepage });
+  }
+  if (typeof packageJsonCli.name === 'string') {
+    MULTIPLE_REPLACEMENTS.push({ search: '$$CLI_NAME$$', replace: packageJsonCli.name });
+  }
+  if (typeof packageJsonCli.version === 'string') {
+    MULTIPLE_REPLACEMENTS.push({ search: '$$CLI_VERSION$$', replace: packageJsonCli.version });
   }
   const STRING_REPLACE_LOADER = {
     test: /\.(j|t)sx?$/,
