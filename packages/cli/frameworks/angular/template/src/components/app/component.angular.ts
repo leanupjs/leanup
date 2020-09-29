@@ -13,7 +13,8 @@ import { AppController, ResolvedRoute } from './controller';
       <list-serie *ngIf="resolvedRoute.url === 'series'"></list-serie>
       <create-serie *ngIf="resolvedRoute.url === 'series/create'"></create-serie>
       <edit-serie *ngIf="resolvedRoute.url === 'series/:id/edit'" [resolvedRoute]="resolvedRoute"></edit-serie>
-      <small>Used filters: {{ filters.date(dummies.date) }} | {{ filters.currency(dummies.price) }} €</small>
+      <small>Used filters: {{ filters.date(dummies.date) }} | {{ filters.currency(dummies.price) }} €</small><br />
+      <small>Build with: {{ cli.name }} v{{ cli.version }}</small>
     </div>
   `,
 })

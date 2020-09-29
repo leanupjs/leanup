@@ -1,5 +1,7 @@
 import '../style.sass';
 
+import { Framework } from '../models/framework.interface';
+
 // import { register } from 'register-service-worker';
 
 // register(`sw.js`, {
@@ -30,3 +32,7 @@ import '../style.sass';
 
 export const APP_HTML_ELEMENT: HTMLElement = document.createElement('app');
 export const STARTUP_TIMESTAMP: number = Date.now();
+export const CLI_DETAILS: Framework = {
+  name: '$$CLI_NAME$$',
+  version: '$$CLI_VERSION$$',
+};

@@ -30,7 +30,8 @@ ANGULARJS_MODULE.component('app', {
     <list-serie ng-if="$ctrl.resolvedRoute.url === 'series'"></list-serie>
     <create-serie ng-if="$ctrl.resolvedRoute.url === 'series/create'"></create-serie>
     <edit-serie ng-if="$ctrl.resolvedRoute.url === 'series/:id/edit'" resolved-route="$ctrl.resolvedRoute" test="$ctrl.resolvedRoute"></edit-serie>
-    <small>Used filters: {{ $ctrl.filters.date($ctrl.dummies.date) }} | {{ $ctrl.filters.currency($ctrl.dummies.price) }} €</small>
+    <small>Used filters: {{ $ctrl.filters.date($ctrl.dummies.date) }} | {{ $ctrl.filters.currency($ctrl.dummies.price) }} €</small><br />
+    <small>Build with: {{ $ctrl.cli.name }} v{{ $ctrl.cli.version }}</small>
   </div>
 `,
 });

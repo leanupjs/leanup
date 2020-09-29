@@ -5,7 +5,8 @@
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
     <edit-serie v-if="resolvedRouteRef.url === 'series/:id/edit'" :resolvedRoute="resolvedRouteRef"></edit-serie>
-    <small>Used filters: {{ date(dummies.date) }} | {{ currency(dummies.price) }} €</small>
+    <small>Used filters: {{ date(dummies.date) }} | {{ currency(dummies.price) }} €</small><br />
+    <small>Build with {{ cli.name }} v{{ cli.version }}</small>
   </div>
 </template>
 
@@ -44,6 +45,7 @@ export default {
       currency,
       date,
       framework: $ctrl.framework,
+      cli: $ctrl.cli,
       resolvedRouteRef,
     };
   },
