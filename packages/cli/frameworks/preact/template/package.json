@@ -32,7 +32,7 @@
     "@leanup/form": "^1.1.0-rc.111",
     "@leanup/lib": "^1.1.0-rc.110",
     "navigo": "^7.1.2",
-    "preact": "^10.5.2"
+    "preact": "^10.5.3"
   },
   "devDependencies": {
     "@leanup/cli": "^1.1.0-rc.111",
