@@ -5,7 +5,7 @@ name: Auto dependency update (v1.0)
 
 on:
   schedule:
-    - cron: "0 2 * * *"
+    - cron: '0 2 * * *'
 
 jobs:
   build:
@@ -31,5 +31,5 @@ jobs:
           git status
           git commit -m "Auto dependency update"
           git push
-      - name: Increment version
-        run: npx lerna version patch --yes
+#       - name: Increment version
+#         run: npx lerna version patch --yes
