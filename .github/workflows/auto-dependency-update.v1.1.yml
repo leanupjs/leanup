@@ -5,7 +5,7 @@ name: Auto dependency update (v1.1)
 
 on:
   schedule:
-    - cron: "0 2 * * *"
+    - cron: '0 2 * * *'
 
 jobs:
   build:
