@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
-    "remove": "npm i lerna && lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
+    "remove": "lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update"
   },
