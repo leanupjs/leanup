@@ -1,6 +1,6 @@
 .reports/
 node_modules/
 templates/
-package-lock.json
+**/package-lock.json
 *.log
 *.tgz
