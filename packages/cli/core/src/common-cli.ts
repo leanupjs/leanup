@@ -194,10 +194,11 @@ export class CommonCLI extends AbstractCLI {
       'Unit-Test-Coverage (https://istanbul.js.org/)',
       [{ flags: '-c, --check-coverage', description: 'check coverage watermarks' }].concat(commonOptions),
       (options: UnitTestCoverageOps): string[] => {
-        const spawnArgs = ['cross-env', 'NODE_ENV=test', 'nyc', 'mocha'];
+        const spawnArgs = ['cross-env', 'NODE_ENV=test', 'nyc'];
         if (options.checkCoverage) {
           spawnArgs.push('--check-coverage');
         }
+        spawnArgs.push('mocha');
         return spawnArgs;
       }
     );
