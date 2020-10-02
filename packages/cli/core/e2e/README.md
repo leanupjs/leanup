@@ -1,4 +1,4 @@
-![GitHub CI - Publish to NPM](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
+![GitHub CI - Publish to NPM](https://github.com/leanupjs/leanup/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
 
 [![downloads][downloads]][downloads-url]
 [![npm][npm]][npm-url]
@@ -32,7 +32,7 @@
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-core-e2e
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-core-e2e
 [license]: https://img.shields.io/npm/l/@leanup/cli
-[license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
+[license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
