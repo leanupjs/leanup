@@ -9,7 +9,7 @@
 <br>
 <hr>
 
-![GitHub CI](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
+![GitHub CI](https://github.com/leanupjs/leanup/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
 
 [![downloads][downloads]][downloads-url]
 [![npm][npm]][npm-url]
@@ -33,7 +33,7 @@
 [npm]: https://img.shields.io/npm/v/@leanup/cli
 [npm-url]: https://www.npmjs.com/package/@leanup/cli
 [license]: https://img.shields.io/npm/l/@leanup/cli
-[license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
+[license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
 [dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core
 [devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/core

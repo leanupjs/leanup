@@ -1,4 +1,4 @@
-![GitHub CI - Publish to NPM](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
+![GitHub CI - Publish to NPM](https://github.com/leanupjs/leanup/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
 [![dependencies][dependencies]][dependencies-url]
 [![peerDependencies][peerdependencies]][peerdependencies-url]
 [![optionalDependencies][optionaldependencies]][optionaldependencies-url]

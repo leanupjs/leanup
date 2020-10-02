@@ -19,10 +19,10 @@
   "license": "Apache 2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leanupjs/cli.git"
+    "url": "git+https://github.com/leanupjs/leanup.git"
   },
   "bugs": {
-    "url": "https://github.com/leanupjs/cli/issues"
+    "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
     "@babel/register": "^7.11.5",

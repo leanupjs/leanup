@@ -32,10 +32,10 @@
   "main": "webpack.svelte.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leanupjs/cli.git"
+    "url": "git+https://github.com/leanupjs/leanup.git"
   },
   "bugs": {
-    "url": "https://github.com/leanupjs/cli/issues"
+    "url": "https://github.com/leanupjs/leanup/issues"
   },
   "bin": {
     "lean": "lib/cli.js",

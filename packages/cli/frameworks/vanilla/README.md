@@ -1,4 +1,4 @@
-![GitHub CI - Publish to NPM](https://github.com/leanupjs/cli/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
+![GitHub CI - Publish to NPM](https://github.com/leanupjs/leanup/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
 [![npm][npm]][npm-url]
 [![downloads][downloads]][downloads-url]
 [![install-size][install-size]][install-size-url]
