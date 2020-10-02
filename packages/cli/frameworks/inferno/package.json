@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-inferno",
-  "version": "1.1.0-rc.112",
+  "version": "1.1.0-rc.113",
   "description": "This package contains the Inferno framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -44,7 +44,7 @@
     "babel-plugin-inferno": "^6.1.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.112",
+    "@leanup/cli": "^1.1.0-rc.113",
     "@types/node": "^14.11.2",
     "typescript": "^4.0.3"
   },
