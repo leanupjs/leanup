@@ -71,3 +71,7 @@ jobs:
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=canary || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Test all framework variants
+        run: sh wake-up-all.sh canary
+      - name: Tag all packages as latest
+        run: sh dist-tag-all.sh canary latest
