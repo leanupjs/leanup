@@ -1,1 +1,1 @@
-module.exports = require('./cli/core/lint/.eslintrc');
+module.exports = require('./packages/cli/core/lint/.eslintrc');
