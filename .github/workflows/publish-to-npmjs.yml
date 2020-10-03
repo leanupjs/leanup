@@ -4,6 +4,7 @@
 name: GitHub CI - Publish to NPM
 
 on:
+  workflow_dispatch:
   release:
     types:
       - published
@@ -16,13 +17,14 @@ jobs:
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
-          registry-url: "https://registry.npmjs.org"
-          scope: "@leanup"
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@leanup'
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
           ls -la
           npm install
+          npm unpublish --force || true
           npm publish --access=public --tag=next || true
         working-directory: packages/cli/core/e2e
         env:
@@ -30,6 +32,7 @@ jobs:
       - name: Install and publish only @leanup/cli-core-format
         run: |
           npm install
+          npm unpublish --force || true
           npm publish --access=public --tag=next || true
         working-directory: packages/cli/core/format
         env:
@@ -37,6 +40,7 @@ jobs:
       - name: Install and publish only @leanup/cli-core-lint
         run: |
           npm install
+          npm unpublish --force || true
           npm publish --access=public --tag=next || true
         working-directory: packages/cli/core/lint
         env:
@@ -44,6 +48,7 @@ jobs:
       - name: Install and publish only @leanup/cli-core-test
         run: |
           npm install
+          npm unpublish --force || true
           npm publish --access=public --tag=next || true
         working-directory: packages/cli/core/test
         env:
@@ -52,6 +57,7 @@ jobs:
         run: |
           sleep 15
           npm install
+          npm unpublish --force || true
           npm publish --access=public --tag=next || true
         working-directory: packages/cli/core
         env:
@@ -60,6 +66,7 @@ jobs:
         run: |
           sleep 15
           npm install
+          npm unpublish --force || true
           npm publish --access=public --tag=next || true
         working-directory: packages/lib
         env:
@@ -68,10 +75,13 @@ jobs:
         run: |
           sleep 15
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm unpublish --force || true
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=next || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Test all framework variants
         run: sh wake-up-all.sh canary
+        working-directory: scripts
       - name: Tag all packages as latest
         run: sh dist-tag-all.sh canary latest
+        working-directory: scripts
