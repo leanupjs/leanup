@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { InputControl } from '@leanup/form/controls/controls';
 
 import { EditorSerieController } from './controller';
 import { EditorForm } from './editor.form';
@@ -7,11 +8,18 @@ import { EditorForm } from './editor.form';
   selector: 'editor-serie',
   template: `
     <div>
-      <app-input [control]="editorForm.getControl('title')"></app-input>
-      <app-input [control]="editorForm.getControl('unit')"></app-input>
+      <app-input [control]="titleInput"></app-input>
+      <app-input [control]="unitInput"></app-input>
     </div>
   `,
 })
-export class EditorSerieComponent extends EditorSerieController {
+export class EditorSerieComponent extends EditorSerieController implements OnChanges {
   @Input() public editorForm: EditorForm;
+  public titleInput: InputControl = new InputControl('title');
+  public unitInput: InputControl = new InputControl('title');
+
+  ngOnChanges() {
+    this.titleInput = <InputControl>this.editorForm.getControl('title');
+    this.unitInput = <InputControl>this.editorForm.getControl('unit');
+  }
 }

@@ -45,7 +45,13 @@ export class AppController extends AbstractController {
       version: '$$APP_VERSION$$',
     };
     console.log('APP_METADATE', APP_METADATE);
-    console.log('OPTIONAL_CHAINING', OPTIONAL_CHAINING?.ok);
-    console.log('OPTIONAL_CHAINING', OPTIONAL_CHAINING?.nok);
+    try {
+      console.log('OPTIONAL_CHAINING', OPTIONAL_CHAINING?.ok);
+      console.log('OPTIONAL_CHAINING', OPTIONAL_CHAINING?.nok);
+    } catch (error) {
+      console.log(
+        `Node, that legacy framework support depends sometimes to use a older typescript version without optional chaining support.`
+      );
+    }
   }
 }
