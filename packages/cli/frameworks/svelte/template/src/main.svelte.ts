@@ -9,8 +9,14 @@ DI.register('Framework', {
 require('./shares/register');
 require('./shares/routing');
 
+let app: unknown;
+
 const htmlDivElement: HTMLDivElement | null = document.querySelector('div#svelte');
-htmlDivElement.style.display = 'inline';
-export default new App({
-  target: htmlDivElement,
-});
+if (htmlDivElement instanceof HTMLDivElement) {
+  htmlDivElement.style.display = 'inline';
+  app = new App({
+    target: htmlDivElement,
+  });
+}
+
+export default app;
