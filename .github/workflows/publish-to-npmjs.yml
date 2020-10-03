@@ -4,6 +4,7 @@
 name: GitHub CI - Publish to NPM
 
 on:
+  workflow_dispatch:
   release:
     types:
       - published
@@ -73,5 +74,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Test all framework variants
         run: sh wake-up-all.sh canary
+        working-directory: scripts
       - name: Tag all packages as latest
         run: sh dist-tag-all.sh canary latest
+        working-directory: scripts
