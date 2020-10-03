@@ -16,9 +16,9 @@ jobs:
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@leanup'
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@leanup"
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
           ls -la
@@ -50,6 +50,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli
         run: |
+          sleep 15
           npm install
           npm publish --access=public --tag=canary || true
         working-directory: packages/cli/core
@@ -57,6 +58,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/lib
         run: |
+          sleep 15
           npm install
           npm publish --access=public --tag=canary || true
         working-directory: packages/lib
@@ -64,6 +66,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
         run: |
+          sleep 15
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=canary || true
         env:
