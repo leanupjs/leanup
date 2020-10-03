@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -37,9 +37,9 @@
     "vue-template-compiler": "^2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.18",
-    "@leanup/cli-addons": "^1.0.18",
-    "@leanup/cli-vue": "^1.0.18",
+    "@leanup/cli": "^1.0.19",
+    "@leanup/cli-addons": "^1.0.19",
+    "@leanup/cli-vue": "^1.0.19",
     "@leanup/git-hooks": "^1.0.18",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
