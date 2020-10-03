@@ -10,7 +10,7 @@ on:
       - published
 
 env:
-  tag: canary
+  tag: webpack
 
 jobs:
   build:
@@ -20,9 +20,9 @@ jobs:
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
-          registry-url: "https://registry.npmjs.org"
-          scope: "@leanup"
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@leanup'
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
           ls -la

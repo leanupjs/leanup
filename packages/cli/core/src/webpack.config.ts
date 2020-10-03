@@ -144,6 +144,10 @@ export function webpackConfig(env: any, argv: any): Object {
     module: {
       rules: [STRING_REPLACE_LOADER, BABEL_LOADER, FILE_LOADER, LESS_LOADER, SASS_LOADER],
     },
+    node: {
+      Buffer: false,
+      process: false,
+    },
     output: {
       path: path.join(process.cwd(), 'dist'),
     },
