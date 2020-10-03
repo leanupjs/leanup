@@ -38,4 +38,4 @@ jobs:
           tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           draft: true
-          prerelease: false
+          prerelease: true
