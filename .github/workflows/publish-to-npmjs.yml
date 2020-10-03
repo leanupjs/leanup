@@ -27,7 +27,6 @@ jobs:
         run: |
           ls -la
           npm install
-          # npm unpublish --force || true
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/e2e
         env:
@@ -35,7 +34,6 @@ jobs:
       - name: Install and publish only @leanup/cli-core-format
         run: |
           npm install
-          # npm unpublish --force || true
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/format
         env:
@@ -43,7 +41,6 @@ jobs:
       - name: Install and publish only @leanup/cli-core-lint
         run: |
           npm install
-          # npm unpublish --force || true
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/lint
         env:
@@ -51,7 +48,6 @@ jobs:
       - name: Install and publish only @leanup/cli-core-test
         run: |
           npm install
-          # npm unpublish --force || true
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/test
         env:
@@ -60,7 +56,6 @@ jobs:
         run: |
           sleep 60
           npm install
-          # npm unpublish --force || true
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
@@ -69,7 +64,6 @@ jobs:
         run: |
           sleep 60
           npm install
-          # npm unpublish --force || true
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
@@ -78,7 +72,6 @@ jobs:
         run: |
           sleep 60
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
-          # npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm unpublish --force || true
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
