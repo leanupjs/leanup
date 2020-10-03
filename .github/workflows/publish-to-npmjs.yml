@@ -9,6 +9,9 @@ on:
     types:
       - published
 
+env:
+  tag: next
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,64 +27,64 @@ jobs:
         run: |
           ls -la
           npm install
-          npm unpublish --force || true
-          npm publish --access=public --tag=next || true
+          # npm unpublish --force || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/e2e
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli-core-format
         run: |
           npm install
-          npm unpublish --force || true
-          npm publish --access=public --tag=next || true
+          # npm unpublish --force || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/format
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli-core-lint
         run: |
           npm install
-          npm unpublish --force || true
-          npm publish --access=public --tag=next || true
+          # npm unpublish --force || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/lint
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli-core-test
         run: |
           npm install
-          npm unpublish --force || true
-          npm publish --access=public --tag=next || true
+          # npm unpublish --force || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core/test
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli
         run: |
-          sleep 15
+          sleep 60
           npm install
-          npm unpublish --force || true
-          npm publish --access=public --tag=next || true
+          # npm unpublish --force || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/lib
         run: |
-          sleep 15
+          sleep 60
           npm install
-          npm unpublish --force || true
-          npm publish --access=public --tag=next || true
+          # npm unpublish --force || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
         run: |
-          sleep 15
+          sleep 60
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm unpublish --force || true
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=next || true
+          # npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm unpublish --force || true
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Test all framework variants
-        run: sh wake-up-all.sh canary
+        run: sh wake-up-all.sh ${{env.tag}}
         working-directory: scripts
       - name: Tag all packages as latest
-        run: sh dist-tag-all.sh canary latest
+        run: sh dist-tag-all.sh ${{env.tag}} latest
         working-directory: scripts
