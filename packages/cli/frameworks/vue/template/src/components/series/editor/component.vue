@@ -11,13 +11,13 @@ import InputComponent from '../../input/component.vue';
 export default {
   props: ['editor-form'],
   components: {
-    'app-input': InputComponent
+    'app-input': InputComponent,
   },
   setup(props) {
     // const $ctrl = new EditorSerieController();
     return {
-      props
+      props,
     };
-  }
+  },
 };
 </script>

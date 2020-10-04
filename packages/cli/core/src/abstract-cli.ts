@@ -109,7 +109,7 @@ export abstract class AbstractCLI {
       `(v${this.version})`,
       chalk.italic.gray('execute the following pure command ...'),
       `
-      >`,
+    >`,
       chalk.bold('npx'),
       chalk.italic(...args),
       `
