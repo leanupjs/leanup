@@ -30,11 +30,11 @@ jobs:
           content=`cat ./lerna.json | tr -d "\n"`
           echo "::set-output name=lernaJson::$content"
       - name: Create Release
-        uses: release-drafter/release-drafter@v5.11.0
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
-          tag: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+          draft: true
           prerelease: true
-          version: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+          release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+          tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
