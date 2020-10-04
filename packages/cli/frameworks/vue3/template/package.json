@@ -1,6 +1,6 @@
 {
   "name": "@template/vue3",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,8 +29,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.20",
-    "@leanup/lib": "^1.0.18",
+    "@leanup/form": "^1.0.24",
+    "@leanup/lib": "^1.0.24",
     "navigo": "^7.1.2",
     "vue": "^3.0.0-rc.10"
   },
