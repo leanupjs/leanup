@@ -36,5 +36,5 @@ jobs:
         with:
           name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           tag: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
-          prerelease: false
+          prerelease: true
           version: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
