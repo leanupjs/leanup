@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-aurelia",
-  "version": "1.0.22-webpack.1",
+  "version": "1.0.22-webpack.2",
   "description": "This package contains the Aurelia framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -44,7 +44,7 @@
     "aurelia-webpack-plugin": "^4.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.22-webpack.1",
+    "@leanup/cli": "^1.0.22-webpack.2",
     "@types/node": "^14.11.2",
     "typescript": "^4.0.3"
   },
