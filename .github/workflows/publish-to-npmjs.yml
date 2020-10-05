@@ -78,6 +78,3 @@ jobs:
       - name: Test all framework variants
         run: sh wake-up-all.sh ${{env.tag}}
         working-directory: scripts
-      - name: Tag all packages as latest
-        run: sh dist-tag-all.sh ${{env.tag}} latest
-        working-directory: scripts
