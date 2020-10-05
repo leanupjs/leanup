@@ -28,6 +28,6 @@
     "lint-staged": "^10.4.0"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0"
+    "@leanup/cli": "^1.0.22-webpack.2"
   }
 }

@@ -49,7 +49,7 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.0",
+    "@leanup/cli": "^1.0.22-webpack.2",
     "angular": "^1.0.0"
   },
   "scripts": {
