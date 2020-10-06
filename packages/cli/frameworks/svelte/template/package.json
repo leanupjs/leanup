@@ -32,7 +32,7 @@
     "@leanup/form": "^1.1.0-rc.121",
     "@leanup/lib": "^1.1.0-rc.121",
     "navigo": "^7.1.2",
-    "svelte": "^3.24.1"
+    "svelte": "^3.0.0"
   },
   "devDependencies": {
     "@leanup/cli": "^1.1.0-rc.121",

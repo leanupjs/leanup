@@ -32,7 +32,7 @@
     "@leanup/form": "^1.1.0-rc.121",
     "@leanup/lib": "^1.1.0-rc.121",
     "@types/angular": "1.6.45",
-    "angular": "^1.8.0",
+    "angular": "^1.5.0",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
