@@ -50,7 +50,7 @@
   },
   "peerDependencies": {
     "@leanup/cli": "^1.0.0",
-    "angular": "^1.0.0"
+    "angular": "^1.5.0"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

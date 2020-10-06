@@ -31,11 +31,11 @@
   "dependencies": {
     "@leanup/form": "^1.0.24",
     "@leanup/lib": "^1.0.24",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^16.0.0",
     "navigo": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.23",

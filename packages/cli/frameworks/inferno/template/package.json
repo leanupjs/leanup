@@ -31,7 +31,7 @@
   "dependencies": {
     "@leanup/form": "^1.0.24",
     "@leanup/lib": "^1.0.24",
-    "inferno": "^7.4.3",
+    "inferno": "^7.0.0",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
