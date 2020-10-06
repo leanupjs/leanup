@@ -2,5 +2,5 @@
   "packages": [
     "packages/**"
   ],
-  "version": "1.0.22-webpack.3"
+  "version": "1.0.22-webpack.4"
 }
