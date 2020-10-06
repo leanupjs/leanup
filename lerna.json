@@ -1,4 +1,4 @@
 {
   "packages": ["packages/**"],
-  "version": "1.1.0-rc.121"
+  "version": "1.1.0-webpack.0"
 }
