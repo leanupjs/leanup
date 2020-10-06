@@ -46,7 +46,7 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
-    "@angular/core": ">=9",
+    "@angular/core": ">=8",
     "@leanup/cli": "^1.0.0",
     "@ngtools/webpack": ">=8"
   },
