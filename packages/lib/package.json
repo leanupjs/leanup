@@ -1,6 +1,6 @@
 {
   "name": "@leanup/lib",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "This module is a collection of lightweight application features.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
