@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.1.0-webpack.1",
+  "version": "1.1.0-webpack.2",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,8 +29,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-webpack.1",
-    "@leanup/lib": "^1.1.0-webpack.1",
+    "@leanup/form": "^1.1.0-webpack.2",
+    "@leanup/lib": "^1.1.0-webpack.2",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "navigo": "^7.1.2",
@@ -38,9 +38,9 @@
     "react-dom": "~17.0.0-rc"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.1",
-    "@leanup/cli-addons": "^1.1.0-webpack.1",
-    "@leanup/cli-react": "^1.1.0-webpack.1",
+    "@leanup/cli": "^1.1.0-webpack.2",
+    "@leanup/cli-addons": "^1.1.0-webpack.2",
+    "@leanup/cli-react": "^1.1.0-webpack.2",
     "@leanup/git-hooks": "^1.1.0-webpack.1",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
