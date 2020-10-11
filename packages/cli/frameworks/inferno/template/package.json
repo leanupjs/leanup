@@ -29,16 +29,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-webpack.3",
-    "@leanup/lib": "^1.1.0-webpack.2",
+    "@leanup/form": "~1.1.0-webpack.3",
+    "@leanup/lib": "~1.1.0-webpack.2",
     "inferno": "^7.4.3",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.3",
-    "@leanup/cli-addons": "^1.1.0-webpack.3",
-    "@leanup/cli-inferno": "^1.1.0-webpack.3",
-    "@leanup/git-hooks": "^1.1.0-webpack.1",
+    "@leanup/cli": "~1.1.0-webpack.3",
+    "@leanup/cli-addons": "~1.1.0-webpack.3",
+    "@leanup/cli-inferno": "~1.1.0-webpack.3",
+    "@leanup/git-hooks": "~1.1.0-webpack.1",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
