@@ -29,16 +29,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.127",
+    "@leanup/form": "~1.1.0-rc.127",
     "@leanup/lib": "~1.1.0-rc.125",
     "navigo": "^7.1.2",
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.127",
-    "@leanup/cli-addons": "^1.1.0-rc.127",
-    "@leanup/cli-vue3": "^1.1.0-rc.127",
-    "@leanup/git-hooks": "^1.1.0-rc.127",
+    "@leanup/cli": "~1.1.0-rc.127",
+    "@leanup/cli-addons": "~1.1.0-rc.127",
+    "@leanup/cli-vue3": "~1.1.0-rc.127",
+    "@leanup/git-hooks": "~1.1.0-rc.127",
     "@vue/compiler-sfc": "^3.0.0",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",

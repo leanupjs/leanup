@@ -29,17 +29,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.127",
+    "@leanup/form": "~1.1.0-rc.127",
     "@leanup/lib": "~1.1.0-rc.125",
     "@types/angular": "1.6.45",
     "angular": "^1.5.0",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.127",
-    "@leanup/cli-addons": "^1.1.0-rc.127",
-    "@leanup/cli-angularjs": "^1.1.0-rc.127",
-    "@leanup/git-hooks": "^1.1.0-rc.127",
+    "@leanup/cli": "~1.1.0-rc.127",
+    "@leanup/cli-addons": "~1.1.0-rc.127",
+    "@leanup/cli-angularjs": "~1.1.0-rc.127",
+    "@leanup/git-hooks": "~1.1.0-rc.127",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
