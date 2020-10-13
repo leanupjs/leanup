@@ -51,12 +51,12 @@
   },
   "peerDependencies": {
     "@leanup/cli": "~1.1.0-webpack.0",
-    "vue": "^2.0.0",
-    "vue-template-compiler": "^2.0.0"
+    "vue": "^2",
+    "vue-template-compiler": "^2"
   },
   "optionalDependencies": {
     "@vue/composition-api": "^0.6.7",
-    "vuetify-loader": "^1.6.0"
+    "vuetify-loader": "^1.6"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

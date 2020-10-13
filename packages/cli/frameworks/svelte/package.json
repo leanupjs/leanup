@@ -52,7 +52,7 @@
   },
   "peerDependencies": {
     "@leanup/cli": "~1.1.0-webpack.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
