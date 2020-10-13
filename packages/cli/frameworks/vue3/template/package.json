@@ -29,15 +29,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-webpack.4",
+    "@leanup/form": "~1.1.0-webpack.4",
     "@leanup/lib": "~1.1.0-webpack.2",
     "navigo": "^7.1.2",
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.5",
-    "@leanup/cli-addons": "^1.1.0-webpack.5",
-    "@leanup/cli-vue3": "^1.1.0-webpack.5",
+    "@leanup/cli": "~1.1.0-webpack.5",
+    "@leanup/cli-addons": "~1.1.0-webpack.5",
+    "@leanup/cli-vue3": "~1.1.0-webpack.5",
     "@leanup/git-hooks": "~1.1.0-webpack.1",
     "@vue/compiler-sfc": "^3.0.0",
     "chromedriver": "^85.0.1",

@@ -29,15 +29,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-webpack.4",
+    "@leanup/form": "~1.1.0-webpack.4",
     "@leanup/lib": "~1.1.0-webpack.2",
     "navigo": "^7.1.2",
     "svelte": "^3.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.5",
-    "@leanup/cli-addons": "^1.1.0-webpack.5",
-    "@leanup/cli-svelte": "^1.1.0-webpack.5",
+    "@leanup/cli": "~1.1.0-webpack.5",
+    "@leanup/cli-addons": "~1.1.0-webpack.5",
+    "@leanup/cli-svelte": "~1.1.0-webpack.5",
     "@leanup/git-hooks": "~1.1.0-webpack.1",
     "@pyoner/svelte-types": "^3.4.4-2",
     "chromedriver": "^85.0.1",
