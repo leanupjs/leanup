@@ -35,9 +35,9 @@
     "svelte": "^3.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.129",
-    "@leanup/cli-addons": "^1.1.0-rc.129",
-    "@leanup/cli-svelte": "^1.1.0-rc.129",
+    "@leanup/cli": "~1.1.0-rc.129",
+    "@leanup/cli-addons": "~1.1.0-rc.129",
+    "@leanup/cli-svelte": "~1.1.0-rc.129",
     "@leanup/git-hooks": "~1.1.0-rc.127",
     "@pyoner/svelte-types": "^3.4.4-2",
     "chromedriver": "^85.0.1",

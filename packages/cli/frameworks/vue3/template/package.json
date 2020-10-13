@@ -35,9 +35,9 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.129",
-    "@leanup/cli-addons": "^1.1.0-rc.129",
-    "@leanup/cli-vue3": "^1.1.0-rc.129",
+    "@leanup/cli": "~1.1.0-rc.129",
+    "@leanup/cli-addons": "~1.1.0-rc.129",
+    "@leanup/cli-vue3": "~1.1.0-rc.129",
     "@leanup/git-hooks": "~1.1.0-rc.127",
     "@vue/compiler-sfc": "^3.0.0",
     "chromedriver": "^85.0.1",
