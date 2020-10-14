@@ -42,7 +42,7 @@
     "svelte": "lib/cli.js"
   },
   "dependencies": {
-    "prettier-plugin-svelte": "^1.4.0",
+    "prettier-plugin-svelte": "^1.4.1",
     "svelte-loader": "^2.13.0"
   },
   "devDependencies": {
