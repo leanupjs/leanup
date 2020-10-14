@@ -43,10 +43,10 @@ Add the following configuration to you `package.json`:
   },
   "lint-staged": {
     "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
-      "eslint --fix"
+      "eslint"
     ],
     "{src,tests}/**": [
-      "prettier --write"
+      "prettier --check"
     ]
   },
   ...
