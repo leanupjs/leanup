@@ -59,12 +59,12 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@babel/core": "^7.11.6",
+    "@babel/core": "^7.12.0",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-typescript": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-typescript": "^7.12.0",
     "@leanup/cli-core-e2e": "~1.1.0-webpack.1",
     "@leanup/cli-core-format": "~1.1.0-webpack.1",
     "@leanup/cli-core-lint": "~1.1.0-webpack.5",
