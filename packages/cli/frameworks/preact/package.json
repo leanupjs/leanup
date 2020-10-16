@@ -41,7 +41,7 @@
     "preact": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.10.4"
+    "@babel/plugin-transform-react-jsx": "^7.12.1"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.30",
