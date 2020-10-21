@@ -25,7 +25,7 @@
     "@babel/register": "^7.12.1",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
-    "@types/node": "^14.11.10",
+    "@types/node": "^14.14.0",
     "@types/sinon": "^9.0.8",
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
