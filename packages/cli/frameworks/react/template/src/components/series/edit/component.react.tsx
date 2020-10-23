@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { ReactComponent } from '@leanup/lib/components/react';
 
