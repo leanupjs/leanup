@@ -27,7 +27,9 @@ jobs:
         with:
           node-version: 12.x
       - name: Install and update dependencies
-        run: git log
+         run: |
+          git reset --hard 698f3d8b9553c405e27fc762dc98c14c7a28de14
+          npm run update
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
@@ -45,3 +47,4 @@ jobs:
         with:
           github_token: ${{ secrets.GIT_PUSH_TOKEN }}
           branch: ${{ env.branch }}
+          force: true
