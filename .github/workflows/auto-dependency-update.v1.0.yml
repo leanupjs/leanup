@@ -42,7 +42,7 @@ jobs:
           branch: ${{ env.branch }}
       - name: Increment version
         run: npx lerna version patch --no-push --yes
-      - name: Commit changed files
+      - name: Commit changed files 1
         run: |
 #          git config --local user.email "github@martinoppitz.com"
 #          git config --local user.name "Martin Oppitz"
