@@ -10,6 +10,7 @@ on:
 
 env:
   branch: release/1.0
+  level: patch
 
 jobs:
   build:
@@ -38,7 +39,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          npx lerna version patch --no-push --yes
+          npx lerna version ${{ env.level }} --no-push --yes
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
