@@ -41,4 +41,19 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.branch }}
       - name: Increment version
-        run: npx lerna version patch --yes
+        run: npx lerna version patch --no-push --yes
+      - name: Commit changed files
+        run: |
+#          git config --local user.email "github@martinoppitz.com"
+#          git config --local user.name "Martin Oppitz"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git status
+          git commit -m "Auto increment version"
+      - name: Push changes 2
+        uses: ad-m/github-push-action@master
+        with:
+#         github_token: ${{ secrets.GIT_PUSH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.branch }}
