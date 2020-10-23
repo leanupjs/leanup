@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 12.x
       - name: Install and update dependencies
-         run: |
+        run: |
           git reset --hard 698f3d8b9553c405e27fc762dc98c14c7a28de14
           npm run update
       - name: Commit changed files
