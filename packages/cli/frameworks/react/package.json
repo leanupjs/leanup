@@ -41,7 +41,8 @@
     "react": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.12.1"
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "@babel/preset-react": "^7.10.4"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.33",
@@ -50,8 +51,8 @@
   },
   "peerDependencies": {
     "@leanup/cli": "^1.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16 || ^17",
+    "react-dom": "^16 || ^17"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
