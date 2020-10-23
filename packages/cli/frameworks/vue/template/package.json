@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.1.0-webpack.8",
+  "version": "1.1.0-webpack.9",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,17 +29,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-webpack.8",
-    "@leanup/lib": "^1.1.0-webpack.8",
+    "@leanup/form": "^1.1.0-webpack.9",
+    "@leanup/lib": "^1.1.0-webpack.9",
     "@vue/composition-api": "^0.6.7",
     "navigo": "^7.1.2",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.8",
-    "@leanup/cli-addons": "^1.1.0-webpack.8",
-    "@leanup/cli-vue": "^1.1.0-webpack.8",
-    "@leanup/git-hooks": "^1.1.0-webpack.8",
+    "@leanup/cli": "^1.1.0-webpack.9",
+    "@leanup/cli-addons": "^1.1.0-webpack.9",
+    "@leanup/cli-vue": "^1.1.0-webpack.9",
+    "@leanup/git-hooks": "^1.1.0-webpack.9",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
