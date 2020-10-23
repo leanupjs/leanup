@@ -26,6 +26,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Install and update dependencies
+        run: npm run update
+      - name: Commit changed files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git status
+          git commit -m "Auto dependency update"
       - name: Increment version
         run: npx lerna version patch --no-push --yes
       - name: Commit changed files
