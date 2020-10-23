@@ -13,7 +13,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-lautet
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout specific branch
         uses: actions/checkout@v2
