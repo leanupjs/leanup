@@ -10,6 +10,7 @@ on:
 
 env:
   branch: release/1.1
+  level: prerelease
 
 jobs:
   build:
@@ -34,8 +35,13 @@ jobs:
           git add .
           git status
           git commit -m "Auto dependency update"
+      - name: Increment version
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          npx lerna version ${{ env.level }} --no-push --yes
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GIT_PUSH_TOKEN }}
           branch: ${{ env.branch }}
