@@ -42,10 +42,8 @@ jobs:
           branch: ${{ env.branch }}
       - name: Increment version
         run: npx lerna version patch --no-push --yes
-      - name: Commit changed files 1
+      - name: Commit changed files 2
         run: |
-#          git config --local user.email "github@martinoppitz.com"
-#          git config --local user.name "Martin Oppitz"
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
@@ -54,6 +52,5 @@ jobs:
       - name: Push changes 2
         uses: ad-m/github-push-action@master
         with:
-#         github_token: ${{ secrets.GIT_PUSH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.branch }}
