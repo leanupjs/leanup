@@ -26,22 +26,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Install and update dependencies
-        run: npm run update
-      - name: Commit changed files
+      - name: Read Lerna
+        id: lerna
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git status
-          git commit -m "Auto dependency update"
-      - name: Increment version
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          npx lerna version patch --no-push --yes
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+          content=`cat ./lerna.json | tr -d "\n"`
+          echo "::set-output name=lernaJson::$content"
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.branch }}
+          draft: true
+          prerelease: false
+          release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+          tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
