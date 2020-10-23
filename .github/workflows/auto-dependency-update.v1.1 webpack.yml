@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          npx lerna version patch --no-push --yes
+          npx lerna version prerelease --no-push --yes
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
