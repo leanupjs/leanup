@@ -27,3 +27,6 @@ jobs:
           node-version: 15.x
       - name: Install and update dependencies
         run: npm run update
+      - name: Test all framework variants
+        run: sh wake-up-all.sh ${{env.tag}}
+        working-directory: scripts
