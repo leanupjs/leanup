@@ -41,7 +41,7 @@
     "react": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.12.1"
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
     "@babel/preset-react": "^7.10.4"
   },
   "devDependencies": {
