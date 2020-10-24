@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-          // ref: ${{ env.branch }}
+          ref: ${{ env.branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
