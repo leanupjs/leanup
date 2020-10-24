@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.1"
+    "@babel/preset-react": "^7.10.4"
   },
   "devDependencies": {
     "@leanup/cli": "^1.1.0-webpack.10",
