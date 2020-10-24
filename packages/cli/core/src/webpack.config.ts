@@ -23,7 +23,7 @@ export function webpackConfig(env: any, argv: any): Object {
   const exclude = mapToExclude(argv.include);
 
   const BABEL_LOADER = {
-    test: /\.(j|t)sx?$/,
+    test: /\.m?(j|t)sx?$/,
     exclude: exclude,
     use: {
       loader: 'babel-loader',
