@@ -1,6 +1,6 @@
 {
   "name": "@template/aurelia",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,17 +29,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.34",
-    "@leanup/lib": "^1.0.34",
+    "@leanup/form": "^1.0.35",
+    "@leanup/lib": "^1.0.35",
     "aurelia-bootstrapper": "^2.0.0",
     "aurelia-framework": "^1.0.0",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.34",
-    "@leanup/cli-addons": "^1.0.34",
-    "@leanup/cli-aurelia": "^1.0.34",
-    "@leanup/git-hooks": "^1.0.34",
+    "@leanup/cli": "^1.0.35",
+    "@leanup/cli-addons": "^1.0.35",
+    "@leanup/cli-aurelia": "^1.0.35",
+    "@leanup/git-hooks": "^1.0.35",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
