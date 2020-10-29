@@ -103,7 +103,7 @@ export class CommonCLI extends AbstractCLI {
       'Building (https://webpack.js.org/)',
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
-        const spawnArgs = ['wp'];
+        const spawnArgs = ['webpack'];
         if (options.environment) {
           spawnArgs.push(`--env=${options.environment}`);
         }

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { InputControl } from '@leanup/form/controls/controls';
 import { ReactComponent } from '@leanup/lib/components/react';
 
