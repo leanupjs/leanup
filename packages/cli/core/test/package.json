@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-test",
-  "version": "1.1.0-webpack.8",
+  "version": "1.1.0-webpack.11",
   "description": "This module contains the test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -38,7 +38,7 @@
     "mocha": "^8.2.0",
     "mock-local-storage": "^1.1.15",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.0"
+    "sinon": "^9.2.1"
   },
   "peerDependencies": {
     "@leanup/cli": "~1.1.0-webpack.0"
