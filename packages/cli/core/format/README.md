@@ -17,7 +17,7 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-core-format
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-core-format
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core/format
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/core/format
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/format
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/core/format
 [peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/format&type=peer

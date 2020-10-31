@@ -11,7 +11,7 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-graphql
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-graphql
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/plugins/graphql
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/plugins/graphql
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/plugins/graphql
 [peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&type=peer

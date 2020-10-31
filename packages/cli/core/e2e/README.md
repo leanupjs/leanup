@@ -17,7 +17,7 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-core-e2e
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-core-e2e
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core/e2e
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/core/e2e
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/e2e
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/core/e2e
 [peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/e2e&type=peer
