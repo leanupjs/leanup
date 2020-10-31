@@ -11,12 +11,12 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-graphql
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-graphql
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/plugins/graphql
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2Fwebpack-v5/status.svg?path=packages/cli/plugins/graphql
+[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2Fwebpack-v5?path=packages/cli/plugins/graphql
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/plugins/graphql
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2Fwebpack-v5?path=packages/cli/plugins/graphql&type=peer
 [optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/plugins/graphql
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2Fwebpack-v5?path=packages/cli/plugins/graphql&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-graphql/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-graphql
 [downloads]: https://img.shields.io/npm/dm/@leanup/cli-graphql
