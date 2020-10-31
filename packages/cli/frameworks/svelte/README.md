@@ -10,7 +10,7 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-svelte
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-svelte
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/frameworks/svelte
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/frameworks/svelte
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/svelte
 [peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/svelte
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/svelte&type=peer

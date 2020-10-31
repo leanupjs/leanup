@@ -10,7 +10,7 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-angular
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-angular
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/frameworks/angular
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/frameworks/angular
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/angular
 [peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/angular
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/angular&type=peer

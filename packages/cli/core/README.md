@@ -34,7 +34,7 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/cli
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
-[dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/core
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core
 [devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/core
 [devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core&type=dev
