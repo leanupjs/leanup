@@ -22,10 +22,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           ref: ${{ env.branch }}
-      - name: Set up Node.js 12.x
+      - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 14.x
       - name: Install and update dependencies
         run: npm run update
       - name: Commit changed files
@@ -35,13 +35,8 @@ jobs:
           git add .
           git status
           git commit -m "Auto dependency update"
-      - name: Increment version
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          npx lerna version ${{ env.level }} --no-push --yes
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GIT_PUSH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.branch }}
