@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js 12.x
+      - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
       # - name: Dry install and pack
