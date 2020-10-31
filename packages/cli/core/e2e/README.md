@@ -18,13 +18,13 @@
 [npm]: https://img.shields.io/npm/v/@leanup/cli-core-e2e
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-core-e2e
 [dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core/e2e
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/e2e
+[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/e2e
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/core/e2e
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/e2e&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/e2e&type=peer
 [optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/core/e2e
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/e2e&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/e2e&type=optional
 [devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/core/e2e
-[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/e2e&type=dev
+[devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/e2e&type=dev
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-core-e2e/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-e2e
 [downloads]: https://img.shields.io/npm/dm/@leanup/cli-core-e2e

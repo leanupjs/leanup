@@ -18,13 +18,13 @@
 [npm]: https://img.shields.io/npm/v/@leanup/cli-core-test
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-core-test
 [dependencies]: https://img.shields.io/david/leanupjs/leanup?path=packages/cli/core/test
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/test
+[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/test
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/core/test
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/test&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/test&type=peer
 [optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/core/test
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/test&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/test&type=optional
 [devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/core/test
-[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/test&type=dev
+[devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/test&type=dev
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-core-test/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-test
 [downloads]: https://img.shields.io/npm/dm/@leanup/cli-core-test
