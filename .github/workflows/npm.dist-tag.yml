@@ -35,3 +35,4 @@ jobs:
       - name: Run npm dist-tag
         run: |
           npm dist-tag ${{ github.event.inputs.action }} ${{ github.event.inputs.vesion }} ${{ github.event.inputs.tag }}
+        working-directory: scripts
