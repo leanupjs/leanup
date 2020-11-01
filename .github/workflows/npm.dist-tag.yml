@@ -1,13 +1,23 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Increment version (Patch)
+name: NPM dist tag
 
 on:
   workflow_dispatch:
-
-env:
-  level: patch
+    inputs:
+      action:
+        description: 'Action'
+        required: false
+        default: 'add'
+      version:
+        description: 'Version'
+        required: true
+        default: '1.0.'
+      tag:
+        description: 'Tag'
+        required: false
+        default: 'latest'
 
 jobs:
   build:
@@ -22,13 +32,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - name: Increment version
+      - name: Run npm dist-tag
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          npx lerna version ${{ env.level }} --no-push --yes
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GIT_PUSH_TOKEN }}
-          branch: ${{ github.ref }}
+          npm dist-tag ${{ github.event.inputs.action }} ${{ github.event.inputs.vesion }} ${{ github.event.inputs.tag }}
