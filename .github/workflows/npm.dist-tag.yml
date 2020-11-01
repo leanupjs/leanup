@@ -33,5 +33,5 @@ jobs:
         with:
           node-version: 14.x
       - name: Run npm dist-tag
-        run: sh wake-up-all.sh ${{ github.event.inputs.version }} ${{ github.event.inputs.action }} ${{ github.event.inputs.tag }}
+        run: sh wake-up-all.sh ${{ github.event.inputs.action }} ${{ github.event.inputs.action }} ${{ github.event.inputs.tag }}
         working-directory: scripts
