@@ -1,6 +1,6 @@
 {
   "name": "@template/angularjs",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,10 +36,10 @@
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.38",
-    "@leanup/cli-addons": "^1.0.38",
-    "@leanup/cli-angularjs": "^1.0.38",
-    "@leanup/git-hooks": "^1.0.38",
+    "@leanup/cli": "^1.0.39",
+    "@leanup/cli-addons": "^1.0.39",
+    "@leanup/cli-angularjs": "^1.0.39",
+    "@leanup/git-hooks": "^1.0.39",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
