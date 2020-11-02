@@ -46,7 +46,7 @@
     "vue-loader": "^16.0.0-beta.9"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.13",
+    "@leanup/cli": "^1.1.0-webpack.14",
     "@types/node": "^14.14.6",
     "typescript": "^4.0.5"
   },
