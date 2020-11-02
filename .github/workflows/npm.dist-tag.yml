@@ -32,6 +32,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
+      - name: Run npm dist-tag one
+        run: sh wake-up.sh ${{ github.event.inputs.action }} cli ${{ github.event.inputs.version }} ${{ github.event.inputs.tag }}
+        working-directory: scripts
       - name: Run npm dist-tag
         run: sh wake-up-all.sh ${{ github.event.inputs.action }} ${{ github.event.inputs.version }} ${{ github.event.inputs.tag }}
         working-directory: scripts
