@@ -24,6 +24,10 @@ export function webpackConfig(env: any, argv: any): Object {
 
   const BABEL_LOADER = {
     test: /\.m?(j|t)sx?$/,
+    type: 'javascript/auto',
+    resolve: {
+      fullySpecified: false
+    },
     exclude: exclude,
     use: {
       loader: 'babel-loader',
