@@ -1,6 +1,7 @@
 const path = require('path');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
@@ -34,6 +35,24 @@ export function webpackConfig(env: any, argv: any): Object {
         },
         require(path.join(process.cwd(), './babel.config'))
       ),
+    },
+  };
+  const ESBUILD_LOADER_JS = {
+    test: /\.js$/,
+    loader: 'esbuild-loader',
+  };
+  const ESBUILD_LOADER_TS = {
+    test: /\.ts$/,
+    loader: 'esbuild-loader',
+    options: {
+      loader: 'ts',
+    },
+  };
+  const ESBUILD_LOADER_TSX = {
+    test: /\.tsx$/,
+    loader: 'esbuild-loader',
+    options: {
+      loader: 'tsx',
     },
   };
   const FILE_LOADER = {
@@ -142,7 +161,25 @@ export function webpackConfig(env: any, argv: any): Object {
       app: path.join(process.cwd(), `src`, `main.ts`),
     },
     module: {
-      rules: [STRING_REPLACE_LOADER, BABEL_LOADER, FILE_LOADER, LESS_LOADER, SASS_LOADER],
+      // rules: [STRING_REPLACE_LOADER, BABEL_LOADER, FILE_LOADER, LESS_LOADER, SASS_LOADER],
+      rules: [
+        STRING_REPLACE_LOADER,
+        ESBUILD_LOADER_JS,
+        ESBUILD_LOADER_TS,
+        ESBUILD_LOADER_TSX,
+        FILE_LOADER,
+        LESS_LOADER,
+        SASS_LOADER,
+      ],
+      // rules: [STRING_REPLACE_LOADER, BABEL_LOADER, ESBUILD_LOADER_JS, ESBUILD_LOADER_TS, ESBUILD_LOADER_TSX, FILE_LOADER, LESS_LOADER, SASS_LOADER],
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new ESBuildMinifyPlugin({
+          target: 'es2015',
+        }),
+      ],
     },
     output: {
       path: path.join(process.cwd(), 'dist'),
@@ -155,6 +192,7 @@ export function webpackConfig(env: any, argv: any): Object {
           },
         ],
       }),
+      new ESBuildPlugin(),
       new HtmlWebpackPlugin({
         cache: false,
         template: 'public/index.html',
