@@ -1,6 +1,6 @@
 {
   "name": "@template/inferno",
-  "version": "1.1.0-webpack.14",
+  "version": "1.1.0-webpack.15",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,16 +29,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-webpack.13",
-    "@leanup/lib": "^1.1.0-webpack.12",
+    "@leanup/form": "^1.1.0-webpack.15",
+    "@leanup/lib": "^1.1.0-webpack.15",
     "inferno": "^7.4.3",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.14",
-    "@leanup/cli-addons": "^1.1.0-webpack.14",
-    "@leanup/cli-inferno": "^1.1.0-webpack.14",
-    "@leanup/git-hooks": "^1.1.0-webpack.14",
+    "@leanup/cli": "^1.1.0-webpack.15",
+    "@leanup/cli-addons": "^1.1.0-webpack.15",
+    "@leanup/cli-inferno": "^1.1.0-webpack.15",
+    "@leanup/git-hooks": "^1.1.0-webpack.15",
     "chromedriver": "^85.0.1",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
