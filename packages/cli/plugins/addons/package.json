@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "comlink-loader": "^2.0.0",
-    "compression-webpack-plugin": "^6.0.4",
+    "compression-webpack-plugin": "^6.0.5",
     "webpack-bundle-analyzer": "^3.9.0"
   },
   "devDependencies": {

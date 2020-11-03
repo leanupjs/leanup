@@ -42,7 +42,7 @@
     "vue": "lib/cli.js"
   },
   "dependencies": {
-    "vue-loader": "^15.9.4"
+    "vue-loader": "^15.9.5"
   },
   "devDependencies": {
     "@leanup/cli": "^1.1.0-webpack.14",
