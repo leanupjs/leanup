@@ -1,4 +1,4 @@
-module.exports = (argv, config, babelLoader, exclude) => {
+module.exports = (argv, config, exclude) => {
   config.module.rules.push({
     test: /\.g(raph)?ql$/,
     exclude: exclude,

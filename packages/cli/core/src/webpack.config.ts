@@ -23,20 +23,6 @@ export function webpackConfig(env: any, argv: any): Object {
 
   const exclude = mapToExclude(argv.include);
 
-  const BABEL_LOADER = {
-    test: /\.(j|t)sx?$/,
-    exclude: exclude,
-    use: {
-      loader: 'babel-loader',
-      options: Object.assign(
-        {
-          cacheCompression: false,
-          cacheDirectory: true,
-        },
-        require(path.join(process.cwd(), './babel.config'))
-      ),
-    },
-  };
   const ESBUILD_LOADER_JS = {
     test: /\.js$/,
     loader: 'esbuild-loader',
@@ -178,6 +164,10 @@ export function webpackConfig(env: any, argv: any): Object {
       minimizer: [
         new ESBuildMinifyPlugin({
           target: 'es2015',
+          minify: true,
+          minifyWhitespace: true,
+          minifyIdentifiers: true,
+          minifySyntax: true,
         }),
       ],
     },
@@ -210,7 +200,7 @@ export function webpackConfig(env: any, argv: any): Object {
 
   function loadAddon(name: string) {
     try {
-      require(`@leanup/cli-${name}/webpack.config`)(argv, config, BABEL_LOADER, exclude);
+      require(`@leanup/cli-${name}/webpack.config`)(argv, config, exclude);
     } catch (error) {
       if (false === cannotFindCliModule.test(error)) {
         throw error;

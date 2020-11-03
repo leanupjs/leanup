@@ -1,4 +1,4 @@
-module.exports = (argv, config, babelLoader, exclude) => {
+module.exports = (argv, config, exclude) => {
   if (argv.analyzer) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
     config.plugins.push(
