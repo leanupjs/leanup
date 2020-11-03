@@ -18,7 +18,7 @@ export function mapToExclude(include: string) {
   return new RegExp(`node_modules(\\/|\\\\)(?!@leanup${alias}${include}).+`);
 }
 
-export function webpackConfig(env: any, argv: any): Object {
+export function webpackConfig(env: any, argv: any, jsxFactory: string = 'React.createElement'): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
   const exclude = mapToExclude(argv.include);
@@ -39,6 +39,7 @@ export function webpackConfig(env: any, argv: any): Object {
     loader: 'esbuild-loader',
     options: {
       loader: 'tsx',
+      jsxFactory,
     },
   };
   const FILE_LOADER = {
@@ -164,10 +165,6 @@ export function webpackConfig(env: any, argv: any): Object {
       minimizer: [
         new ESBuildMinifyPlugin({
           target: 'es2015',
-          minify: true,
-          minifyWhitespace: true,
-          minifyIdentifiers: true,
-          minifySyntax: true,
         }),
       ],
     },
