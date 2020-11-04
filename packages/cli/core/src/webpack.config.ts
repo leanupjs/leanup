@@ -18,17 +18,33 @@ export function mapToExclude(include: string) {
   return new RegExp(`node_modules(\\/|\\\\)(?!@leanup${alias}${include}).+`);
 }
 
-export function webpackConfig(env: any, argv: any, jsxFactory: string = 'React.createElement'): Object {
+export function webpackConfig(env: any, argv: any): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
   const exclude = mapToExclude(argv.include);
 
+  const BABEL_LOADER = {
+    test: /\.(j|t)sx$/,
+    exclude: exclude,
+    use: {
+      loader: 'babel-loader',
+      options: Object.assign(
+        {
+          cacheCompression: false,
+          cacheDirectory: true,
+        },
+        require(path.join(process.cwd(), './babel.config'))
+      ),
+    },
+  };
   const ESBUILD_LOADER_JS = {
     test: /\.js$/,
+    exclude: exclude,
     loader: 'esbuild-loader',
   };
   const ESBUILD_LOADER_TS = {
     test: /\.ts$/,
+    exclude: exclude,
     loader: 'esbuild-loader',
     options: {
       loader: 'ts',
@@ -36,10 +52,10 @@ export function webpackConfig(env: any, argv: any, jsxFactory: string = 'React.c
   };
   const ESBUILD_LOADER_TSX = {
     test: /\.tsx$/,
+    exclude: exclude,
     loader: 'esbuild-loader',
     options: {
       loader: 'tsx',
-      jsxFactory,
     },
   };
   const FILE_LOADER = {
@@ -148,17 +164,17 @@ export function webpackConfig(env: any, argv: any, jsxFactory: string = 'React.c
       app: path.join(process.cwd(), `src`, `main.ts`),
     },
     module: {
-      // rules: [STRING_REPLACE_LOADER, BABEL_LOADER, FILE_LOADER, LESS_LOADER, SASS_LOADER],
       rules: [
+        BABEL_LOADER,
         STRING_REPLACE_LOADER,
         ESBUILD_LOADER_JS,
         ESBUILD_LOADER_TS,
-        ESBUILD_LOADER_TSX,
+        BABEL_LOADER,
+        // ESBUILD_LOADER_TSX,
         FILE_LOADER,
         LESS_LOADER,
         SASS_LOADER,
       ],
-      // rules: [STRING_REPLACE_LOADER, BABEL_LOADER, ESBUILD_LOADER_JS, ESBUILD_LOADER_TS, ESBUILD_LOADER_TSX, FILE_LOADER, LESS_LOADER, SASS_LOADER],
     },
     optimization: {
       minimize: true,
