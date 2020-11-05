@@ -89,35 +89,36 @@ There are some working examples:
 
 ## Tools
 
-| Tool/Technology  |   Description    | Status | Note                       |
-| ---------------- | :--------------: | :----: | :------------------------- |
-| [Babel]          |    Transpiler    |   ✔️   | ready                      |
-| [Webpack]        |     Bundler      |   ✔️   | ready                      |
-| [TypeScript]     |     Language     |   ✔️   | ready                      |
-| [Mocha]          | Unit-Test-Runner |   ✔️   | ready                      |
-| [Chai]           |    Assertion     |   ✔️   | ready                      |
-| [Sinon]          |     Mocking      |   ✔️   | ready                      |
-| [NYC]            |  Code-Coverage   |   ✔️   | ready                      |
-| [ESLint]         |   Code-Checker   |   ✔️   | ready                      |
-| [Nightwatch.js]  | E2E-Test-Runner  |   ✔️   | ready                      |
-| [Allsure]        |      Report      |   ✔️   | ready                      |
-| [Cucumber]       |       BDD        |   ✔️   | ready                      |
-| [robotframework] |       BDD        |   ⌛   | will be evaluated          |
-| [Storybook]      |  Documentation   |   ⌛   | in progress                |
-| [GraphQL]        |       API        |   ✔️   | ready                      |
-| [Workbox]        |       PWA        |   ✔️   | ready                      |
-| [Lerna]          |    Mono-Repo     |   ✔️   | ready                      |
-| [Ant-Design]     |  Design-System   |   ✔️   | proved                     |
-| [Material]       |  Design-System   |   ✔️   | proved                     |
-| [Bootstrap]      |  Design-System   |   ✔️   | proved                     |
-| [Tailwindcss]    |  Design-System   |   ✔️   | proved                     |
-| [Less]           |       CSS        |   ✔️   | ready                      |
-| [Sass]           |       CSS        |   ✔️   | ready                      |
-| [PostCSS]        |       CSS        |   ✔️   | ready                      |
-| [Webhint]        |     Webhint      |   ✔️   | moved \*\*\*               |
-| [TestCafe]       | E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
-| [TSLint]         |   Code-Checker   |   ❌   | removed \*\*               |
-| [Cypress]        | E2E-Test-Runner  |   ❌   | excluded \*                |
+| Tool/Technology  |    Description    | Status | Note                       |
+| ---------------- | :---------------: | :----: | :------------------------- |
+| [Babel]          |    Transpiler     |   ✔️   | ready                      |
+| [Webpack]        |      Bundler      |   ✔️   | ready                      |
+| [TypeScript]     |     Language      |   ✔️   | ready                      |
+| [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      |
+| [Chai]           |     Assertion     |   ✔️   | ready                      |
+| [Sinon]          |      Mocking      |   ✔️   | ready                      |
+| [NYC]            |   Code-Coverage   |   ✔️   | ready                      |
+| [ESLint]         |   Code-Checker    |   ✔️   | ready                      |
+| [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️   | ready                      |
+| [Allsure]        |      Report       |   ✔️   | ready                      |
+| [Cucumber]       |        BDD        |   ✔️   | ready                      |
+| [robotframework] |        BDD        |   ⌛   | will be evaluated          |
+| [Storybook]      |   Documentation   |   ⌛   | in progress                |
+| [GraphQL]        |        API        |   ✔️   | ready                      |
+| [Workbox]        |        PWA        |   ✔️   | ready                      |
+| [Lerna]          |     Mono-Repo     |   ✔️   | ready                      |
+| [Ant-Design]     |   Design-System   |   ✔️   | proved                     |
+| [Material]       |   Design-System   |   ✔️   | proved                     |
+| [Bootstrap]      |   Design-System   |   ✔️   | proved                     |
+| [Tailwindcss]    |   Design-System   |   ✔️   | proved                     |
+| [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |
+| [Less]           |        CSS        |   ✔️   | ready                      |
+| [Sass]           |        CSS        |   ✔️   | ready                      |
+| [PostCSS]        |        CSS        |   ✔️   | ready                      |
+| [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               |
+| [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
+| [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               |
+| [Cypress]        |  E2E-Test-Runner  |   ❌   | excluded \*                |
 
 > \*
 > Arguments agains [Cypress]:
@@ -217,3 +218,4 @@ There a separate packages for important application features.
 [robotframework]: https://robotframework.org
 [tailwindcss]: https://tailwindcss.com
 [postcss]: https://postcss.org
+[nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
