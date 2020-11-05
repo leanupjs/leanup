@@ -148,6 +148,9 @@ export function webpackConfig(env: any, argv: any): Object {
       path: path.join(process.cwd(), 'dist'),
     },
     plugins: [
+      new CopyModulesPlugin({
+        destination: 'webpack-modules',
+      }),
       new CopyWebpackPlugin({
         patterns: [
           {
