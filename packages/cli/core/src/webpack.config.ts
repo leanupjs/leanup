@@ -1,5 +1,6 @@
 const path = require('path');
 
+const CopyModulesPlugin = require('copy-modules-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
