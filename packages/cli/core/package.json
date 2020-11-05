@@ -73,6 +73,7 @@
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
     "commander": "^6.2.0",
+    "copy-modules-webpack-plugin": "^2.1.1",
     "copy-webpack-plugin": "^6.3.0",
     "css-loader": "^5.0.0",
     "esbuild-loader": "^2.4.0",
