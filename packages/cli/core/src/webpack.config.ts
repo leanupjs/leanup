@@ -1,6 +1,6 @@
 const path = require('path');
 
-const CopyModulesPlugin = require('copy-modules-webpack-plugin');
+const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -189,8 +189,9 @@ export function webpackConfig(env: any, argv: any): Object {
       path: path.join(process.cwd(), 'dist'),
     },
     plugins: [
-      new CopyModulesPlugin({
-        destination: 'webpack-modules',
+      new CopyModulesWebpackPlugin({
+        destination: '.reports/nexus-iq',
+        includePackageJsons: true,
       }),
       new CopyWebpackPlugin({
         patterns: [
