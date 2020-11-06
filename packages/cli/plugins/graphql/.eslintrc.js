@@ -1,4 +1,4 @@
-const config = require('@leanup/cli-graphql/.eslintrc');
+const config = require('@leanup/cli-core-lint/.eslintrc');
 
 /**
  * - https://www.npmjs.com/package/eslint-plugin-graphql
