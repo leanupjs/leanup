@@ -1,6 +1,6 @@
 const path = require('path');
 
-const CopyModulesPlugin = require('copy-modules-webpack-plugin');
+const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -149,8 +149,9 @@ export function webpackConfig(env: any, argv: any): Object {
       path: path.join(process.cwd(), 'dist'),
     },
     plugins: [
-      new CopyModulesPlugin({
-        destination: 'webpack-modules',
+      new CopyModulesWebpackPlugin({
+        destination: '.reports/nexus-iq',
+        includePackageJsons: true,
       }),
       new CopyWebpackPlugin({
         patterns: [
