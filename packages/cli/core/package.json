@@ -82,7 +82,7 @@
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "mini-css-extract-plugin": "^1.2.1",
-    "postcss": "^8.1.4",
+    "postcss": "^8.1.6",
     "postcss-loader": "^4.0.4",
     "sass": "^1.29.0",
     "sass-loader": "^10.0.5",
