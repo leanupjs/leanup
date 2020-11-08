@@ -1,1 +1,1 @@
-module.exports = require('./git-hooks/commitlint.config');
+module.exports = require('./packages/git-hooks/commitlint.config');
