@@ -51,14 +51,14 @@ export function webpackConfig(env: any, argv: any): Object {
       loader: 'ts',
     },
   };
-  const ESBUILD_LOADER_TSX = {
-    test: /\.tsx$/,
-    exclude: exclude,
-    loader: 'esbuild-loader',
-    options: {
-      loader: 'tsx',
-    },
-  };
+  // const ESBUILD_LOADER_TSX = {
+  //   test: /\.tsx$/,
+  //   exclude: exclude,
+  //   loader: 'esbuild-loader',
+  //   options: {
+  //     loader: 'tsx',
+  //   },
+  // };
   const FILE_LOADER = {
     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
     exclude: exclude,
