@@ -16,7 +16,6 @@
     "webpack",
     "vue",
     "vue3",
-    "vuetify",
     "sinon",
     "nyc",
     "nightwatch",
@@ -54,9 +53,6 @@
     "@leanup/cli": "^1.1.0-rc.100",
     "@vue/compiler-sfc": "^3",
     "vue": "^3"
-  },
-  "optionalDependencies": {
-    "vuetify-loader": "^1.6"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

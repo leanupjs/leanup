@@ -15,7 +15,6 @@
     "babel",
     "webpack",
     "vue",
-    "vuetify",
     "sinon",
     "nyc",
     "nightwatch",
@@ -53,10 +52,6 @@
     "@leanup/cli": "^1.1.0-rc.100",
     "vue": "^2",
     "vue-template-compiler": "^2"
-  },
-  "optionalDependencies": {
-    "@vue/composition-api": "^0",
-    "vuetify-loader": "^1.6"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

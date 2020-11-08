@@ -9,13 +9,8 @@ export function webpackVueConfig(env: any, argv: any): Object {
   config.module.rules.push({
     test: /\.vue$/,
     exclude: mapToExclude(argv.include),
-    loader: 'vue-loader'
+    loader: 'vue-loader',
   });
-
-  if (argv.vuetify) {
-    const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
-    config.plugins.push(new VuetifyLoaderPlugin());
-  }
 
   return config;
 }

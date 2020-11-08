@@ -12,10 +12,5 @@ export function webpackVue3Config(env: any, argv: any): Object {
     loader: 'vue-loader',
   });
 
-  if (argv.vuetify) {
-    const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
-    config.plugins.push(new VuetifyLoaderPlugin());
-  }
-
   return config;
 }
