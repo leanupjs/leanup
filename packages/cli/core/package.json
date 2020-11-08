@@ -89,7 +89,8 @@
     "string-replace-loader": "^2.3.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.4.0",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.6",
