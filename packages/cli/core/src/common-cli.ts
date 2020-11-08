@@ -73,7 +73,7 @@ export class CommonCLI extends AbstractCLI {
       'Developing (https://webpack.js.org/)',
       serveOptions
         .concat([
-          { flags: '-o, --open <browser>', description: 'open the named browser (default: chrome)' },
+          { flags: '-o, --open [browser]', description: 'open the named browser (default: chrome)' },
           { flags: '--host <host>', description: 'dev server host' },
           { flags: '-p, --port <port>', description: 'port' },
         ])
