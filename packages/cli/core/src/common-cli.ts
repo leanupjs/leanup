@@ -79,7 +79,7 @@ export class CommonCLI extends AbstractCLI {
         ])
         .concat(commonOptions),
       (options: ServeOps): string[] => {
-        const spawnArgs = ['webpack', '--serve', '--devtool=source-map'];
+        const spawnArgs = ['webpack', 'serve', '--devtool=source-map'];
         if (options.environment) {
           spawnArgs.push(`--environment=${options.environment}`);
         }
@@ -90,7 +90,8 @@ export class CommonCLI extends AbstractCLI {
           spawnArgs.push(`--include=${options.include}`);
         }
         if (options.open) {
-          spawnArgs.push('--open');
+          console.log(`The '--open' option is temporarily disabled: https://github.com/leanupjs/leanup/issues/36`);
+          // spawnArgs.push('--open');
         }
         if (options.host) {
           spawnArgs.push(`--host=${options.host}`);
