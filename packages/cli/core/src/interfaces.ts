@@ -19,7 +19,7 @@ export interface BuildOps extends CommonOps {
 }
 
 export interface ServeOps extends BuildOps {
-  open: boolean;
+  open: string;
   host: string;
   port: number;
 }

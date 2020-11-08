@@ -73,7 +73,7 @@ export class CommonCLI extends AbstractCLI {
       'Developing (https://webpack.js.org/)',
       serveOptions
         .concat([
-          { flags: '-o, --open', description: 'open the default browser' },
+          { flags: '-o, --open <browser>', description: 'open the named browser (default: chrome)' },
           { flags: '--host <host>', description: 'dev server host' },
           { flags: '-p, --port <port>', description: 'port' },
         ])
@@ -90,8 +90,9 @@ export class CommonCLI extends AbstractCLI {
           spawnArgs.push(`--include=${options.include}`);
         }
         if (options.open) {
-          console.log(`The '--open' option is temporarily disabled: https://github.com/leanupjs/leanup/issues/36`);
-          // spawnArgs.push('--open');
+          spawnArgs.push(
+            `--open=${typeof options.open === 'string' && options.open.length > 0 ? options.open : 'chrome'}`
+          );
         }
         if (options.host) {
           spawnArgs.push(`--host=${options.host}`);
