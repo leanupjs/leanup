@@ -13,14 +13,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "lint-staged": {
-    "**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
-      "eslint"
-    ],
-    "**": [
-      "prettier --check"
-    ]
-  },
+  "lint-staged": {},
   "devDependencies": {
     "@leanup/cli": "file:packages/cli/core",
     "@leanup/git-hooks": "file:packages/git-hooks",
