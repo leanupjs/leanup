@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
-    "build": "angular build --gzip",
+    "build": "angular build",
     "coverage": "angular coverage",
     "e2e": "angular e2e",
     "reinstall": "npm run remove && npm run update",

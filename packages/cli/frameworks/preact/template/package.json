@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
-    "build": "preact build --gzip",
+    "build": "preact build",
     "coverage": "preact coverage",
     "e2e": "preact e2e",
     "reinstall": "npm run remove && npm run update",

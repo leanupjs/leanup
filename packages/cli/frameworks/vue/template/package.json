@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
-    "build": "vue build --gzip",
+    "build": "vue build",
     "coverage": "vue coverage",
     "e2e": "vue e2e",
     "reinstall": "npm run remove && npm run update",
