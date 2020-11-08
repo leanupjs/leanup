@@ -2,7 +2,14 @@ import * as path from 'path';
 
 import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
 import {
-    BuildOps, CommonOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
+  BuildOps,
+  CommonOps,
+  CreateOps,
+  E2eTestOps,
+  FixOps,
+  ServeOps,
+  UnitTestCoverageOps,
+  UnitTestOps,
 } from './interfaces';
 
 export const commonOptions: CommandOption[] = [
@@ -72,7 +79,7 @@ export class CommonCLI extends AbstractCLI {
         ])
         .concat(commonOptions),
       (options: ServeOps): string[] => {
-        const spawnArgs = ['webpack-dev-server', '--devtool=source-map'];
+        const spawnArgs = ['webpack', '--serve', '--devtool=source-map'];
         if (options.environment) {
           spawnArgs.push(`--environment=${options.environment}`);
         }
