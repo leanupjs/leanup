@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "prettier-plugin-svelte": "^1.4.1",
-    "svelte-loader": "github:smittyvb/svelte-loader#update-virtual-modules"
+    "svelte-loader": "github:martinoppitz/svelte-loader#help/update-virtual-modules"
   },
   "devDependencies": {
     "@leanup/cli": "^1.1.0-webpack.15",
