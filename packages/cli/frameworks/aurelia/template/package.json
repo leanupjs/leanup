@@ -40,10 +40,10 @@
     "@leanup/cli-addons": "^1.1.0-rc.151",
     "@leanup/cli-aurelia": "^1.1.0-rc.151",
     "@leanup/git-hooks": "^1.1.0-rc.141",
-    "chromedriver": "^85.0.1",
+    "chromedriver": "^86.0.0",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.5"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }
