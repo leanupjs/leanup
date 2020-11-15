@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.1.0-rc.154",
+  "version": "1.1.0-rc.155",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,7 +36,7 @@
     "@angular/forms": "next",
     "@angular/platform-browser": "next",
     "@angular/platform-browser-dynamic": "next",
-    "@leanup/form": "^1.1.0-rc.152",
+    "@leanup/form": "^1.1.0-rc.155",
     "@leanup/lib": "^1.1.0-rc.153",
     "core-js": "^3.6.5",
     "navigo": "^7.1.2",
@@ -44,10 +44,10 @@
     "zone.js": "^0.11.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.154",
-    "@leanup/cli-addons": "^1.1.0-rc.153",
-    "@leanup/cli-angular": "^1.1.0-rc.153",
-    "@leanup/git-hooks": "^1.1.0-rc.141",
+    "@leanup/cli": "^1.1.0-rc.155",
+    "@leanup/cli-addons": "^1.1.0-rc.155",
+    "@leanup/cli-angular": "^1.1.0-rc.155",
+    "@leanup/git-hooks": "^1.1.0-rc.155",
     "@ngtools/webpack": "next",
     "chromedriver": "^86.0.0",
     "geckodriver": "^1.20.0",
