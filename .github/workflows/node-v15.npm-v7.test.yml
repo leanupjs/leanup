@@ -1,31 +1,44 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Node v15 + NPM v7 Test
+name: Test up to Node.js v15 + NPM v7 Test
 
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: Branch
+        default: release/1.1
+        required: true
+      tag:
+        description: Tag
+        default: next
+        required: true
   schedule:
     - cron: '0 2 * * *'
 
-env:
-  branch: release/1.1
-  tag: next
-
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [10, 12, 14, 15]
+        # https://github.com/actions/virtual-environments#available-environments
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    name: Node.js v${{ matrix.node }} on OS (${{ matrix.os }})
     steps:
       - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
-          ref: ${{ env.branch }}
+          ref: ${{ github.event.inputs.branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 15.x
+          node-version: ${{ matrix.node }}
       - name: Install and update dependencies
         run: npm run update
       - name: Test all framework variants
-        run: sh wake-up-all.sh ${{env.tag}}
+        run: sh wake-up-all.sh ${{github.event.inputs.tag}}
         working-directory: scripts
