@@ -44,12 +44,12 @@
     "vue-loader": "^15.9.5"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-webpack.15",
+    "@leanup/cli": "next",
     "@types/node": "^14.14.7",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.1.0-rc.100",
+    "@leanup/cli": "next",
     "vue": "^2",
     "vue-template-compiler": "^2"
   },
