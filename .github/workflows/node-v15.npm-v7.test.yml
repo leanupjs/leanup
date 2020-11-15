@@ -9,7 +9,8 @@ on:
     - cron: '0 2 * * *'
 
 env:
-  branch: release/1.0
+  branch: release/1.1
+  tag: next
 
 jobs:
   build:
@@ -18,8 +19,6 @@ jobs:
       - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-          persist-credentials: false
           ref: ${{ env.branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v1
