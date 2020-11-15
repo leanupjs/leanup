@@ -16,7 +16,7 @@
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/inferno&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-inferno/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-inferno
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-inferno
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-inferno
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-inferno?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-inferno
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-inferno

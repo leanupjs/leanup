@@ -27,7 +27,7 @@
 [devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/core/e2e&type=dev
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-core-e2e/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-e2e
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-core-e2e
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-core-e2e
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-core-e2e?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-core-e2e
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-core-e2e
