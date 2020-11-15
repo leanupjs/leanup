@@ -19,7 +19,7 @@
 [optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/graphql&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-graphql/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-graphql
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-graphql
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-graphql
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-graphql?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-graphql
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-graphql

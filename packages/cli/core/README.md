@@ -28,7 +28,7 @@
 
 [leanup]: https://leanupjs.org/assets/logo.svg
 [leanup-url]: https://leanupjs.org
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli.svg
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli
 [npm]: https://img.shields.io/npm/v/@leanup/cli
 [npm-url]: https://www.npmjs.com/package/@leanup/cli

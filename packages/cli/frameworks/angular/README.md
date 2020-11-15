@@ -16,7 +16,7 @@
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/angular&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-angular/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-angular
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-angular
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-angular
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-angular?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-angular
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-angular

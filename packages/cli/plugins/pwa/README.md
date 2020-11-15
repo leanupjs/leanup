@@ -13,7 +13,7 @@
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/pwa
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-pwa/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-pwa
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-pwa
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-pwa
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-pwa?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-pwa
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-pwa
