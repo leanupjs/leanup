@@ -27,7 +27,7 @@
 [devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/core/format&type=dev
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-core-format/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-format
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-core-format
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-core-format
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-core-format?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-core-format
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-core-format

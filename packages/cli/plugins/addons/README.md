@@ -13,7 +13,7 @@
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/plugins/addons
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-addons/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-addons
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-addons
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-addons
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-addons?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-addons
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-addons

@@ -19,7 +19,7 @@
 [optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/plugins/webhint&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-webhint/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-webhint
-[downloads]: https://img.shields.io/npm/dm/@leanup/cli-webhint
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli-webhint
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-webhint?minimal=true
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-webhint
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-webhint
