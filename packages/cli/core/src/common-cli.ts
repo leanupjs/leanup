@@ -2,14 +2,7 @@ import * as path from 'path';
 
 import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
 import {
-  BuildOps,
-  CommonOps,
-  CreateOps,
-  E2eTestOps,
-  FixOps,
-  ServeOps,
-  UnitTestCoverageOps,
-  UnitTestOps,
+    BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
 } from './interfaces';
 
 export const commonOptions: CommandOption[] = [
@@ -22,7 +15,6 @@ export const commonOptions: CommandOption[] = [
 export const webpackOptions: CommandOption[] = [
   { flags: '-e, --environment <environment>', description: 'technical environment (CMS)' },
   { flags: '-t, --template <template>', description: 'corporate design (Style)' },
-  { flags: '-i, --include <include>', description: 'add node_modules to webpack loader' },
 ];
 
 export const buildOptions: CommandOption[] = webpackOptions.concat([
@@ -86,9 +78,6 @@ export class CommonCLI extends AbstractCLI {
         if (options.template) {
           spawnArgs.push(`--template=${options.template}`);
         }
-        if (options.include) {
-          spawnArgs.push(`--include=${options.include}`);
-        }
         if (options.open) {
           spawnArgs.push(
             `--open=${typeof options.open === 'string' && options.open.length > 0 ? options.open : 'chrome'}`
@@ -118,9 +107,6 @@ export class CommonCLI extends AbstractCLI {
         }
         if (options.template) {
           spawnArgs.push(`--template=${options.template}`);
-        }
-        if (options.include) {
-          spawnArgs.push(`--include=${options.include}`);
         }
         if (options.mode) {
           spawnArgs.push(`--mode=${options.mode}`);

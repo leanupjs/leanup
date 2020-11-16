@@ -1,4 +1,4 @@
-import { mapToExclude, webpackConfig } from '@leanup/cli/lib/webpack.config';
+import { webpackConfig } from '@leanup/cli/lib/webpack.config';
 
 export function webpackVueConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv);
@@ -8,7 +8,6 @@ export function webpackVueConfig(env: any, argv: any): Object {
 
   config.module.rules.push({
     test: /\.vue$/,
-    exclude: mapToExclude(argv.include),
     loader: 'vue-loader',
   });
 

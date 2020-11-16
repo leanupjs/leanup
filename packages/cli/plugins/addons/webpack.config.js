@@ -1,4 +1,4 @@
-module.exports = (argv, config, exclude) => {
+module.exports = (argv, config) => {
   if (argv.analyzer) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
     config.plugins.push(
@@ -21,7 +21,6 @@ module.exports = (argv, config, exclude) => {
   if (argv.worker) {
     config.module.rules.push({
       test: /\.worker\.(js|ts)$/i,
-      exclude: exclude,
       use: [
         {
           loader: 'comlink-loader',

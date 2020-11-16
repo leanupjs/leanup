@@ -1,4 +1,4 @@
-import { mapToExclude, webpackConfig } from '@leanup/cli/lib/webpack.config';
+import { webpackConfig } from '@leanup/cli/lib/webpack.config';
 
 export function webpackAngularConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv);
@@ -8,7 +8,6 @@ export function webpackAngularConfig(env: any, argv: any): Object {
 
   config.module.rules.push({
     test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
-    exclude: mapToExclude(argv.include),
     use: '@ngtools/webpack',
   });
   config.plugins.push(

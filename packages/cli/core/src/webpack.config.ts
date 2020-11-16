@@ -8,25 +8,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
-export function mapToExclude(include: string) {
-  include = typeof include === 'string' ? `|${include}` : '';
-
-  const aliasRegExp = /^(@[^/]+)\/.+/;
-  let alias = '';
-  if (aliasRegExp.test(packageJsonApp.name)) {
-    alias = `|${packageJsonApp.name.replace(/^(@[^/]+)\/.+/, '$1')}`;
-  }
-  return new RegExp(`node_modules(\\/|\\\\)(?!@leanup${alias}${include}).+`);
-}
-
 export function webpackConfig(env: any, argv: any): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
-  const exclude = mapToExclude(argv.include);
-
   const BABEL_LOADER = {
     test: /\.(j|t)sx$/,
-    exclude: exclude,
     use: {
       loader: 'babel-loader',
       options: Object.assign(
@@ -40,12 +26,10 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const ESBUILD_LOADER_JS = {
     test: /\.js$/,
-    exclude: exclude,
     loader: 'esbuild-loader',
   };
   const ESBUILD_LOADER_TS = {
     test: /\.ts$/,
-    exclude: exclude,
     loader: 'esbuild-loader',
     options: {
       loader: 'ts',
@@ -53,7 +37,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   // const ESBUILD_LOADER_TSX = {
   //   test: /\.tsx$/,
-  //   exclude: exclude,
   //   loader: 'esbuild-loader',
   //   options: {
   //     loader: 'tsx',
@@ -61,7 +44,6 @@ export function webpackConfig(env: any, argv: any): Object {
   // };
   const FILE_LOADER = {
     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-    exclude: exclude,
     use: [
       {
         loader: 'file-loader',
@@ -74,7 +56,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const LESS_LOADER = {
     test: /\.less$/,
-    exclude: exclude,
     use: [
       MiniCssExtractPlugin.loader,
       // 'style-loader',
@@ -93,7 +74,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const SASS_LOADER = {
     test: /\.(sa|s?c)ss$/,
-    exclude: exclude,
     use: [
       MiniCssExtractPlugin.loader,
       // 'style-loader',
@@ -148,7 +128,6 @@ export function webpackConfig(env: any, argv: any): Object {
   }
   const STRING_REPLACE_LOADER = {
     test: /\.(j|t)sx?$/,
-    exclude: exclude,
     loader: 'string-replace-loader',
     options: {
       multiple: MULTIPLE_REPLACEMENTS,
@@ -218,7 +197,7 @@ export function webpackConfig(env: any, argv: any): Object {
 
   function loadAddon(name: string) {
     try {
-      require(`@leanup/cli-${name}/webpack.config`)(argv, config, exclude);
+      require(`@leanup/cli-${name}/webpack.config`)(argv, config);
     } catch (error) {
       if (false === cannotFindCliModule.test(error)) {
         throw error;
