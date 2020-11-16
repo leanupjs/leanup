@@ -37,12 +37,12 @@
     "vanilla": "lib/cli.js"
   },
   "devDependencies": {
-    "@leanup/cli": "next",
+    "@leanup/cli": "1.1.0-rc.155",
     "@types/node": "^14.14.7",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "next"
+    "@leanup/cli": "1.1.0-rc.155"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

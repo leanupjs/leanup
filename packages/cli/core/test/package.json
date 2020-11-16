@@ -41,7 +41,7 @@
     "sinon": "^9.2.1"
   },
   "peerDependencies": {
-    "@leanup/cli": "next"
+    "@leanup/cli": "1.1.0-rc.155"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

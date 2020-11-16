@@ -13,7 +13,7 @@
     "url": "https://github.com/leanupjs/form/issues"
   },
   "dependencies": {
-    "@leanup/lib": "next"
+    "@leanup/lib": "1.1.0-rc.155"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
