@@ -175,15 +175,12 @@ export function webpackConfig(env: any, argv: any): Object {
       new CopyWebpackPlugin({
         patterns: [
           {
-            from: path.join(process.cwd(), 'public'),
+            from: '**/*',
+            context: path.resolve(process.cwd(), 'public'),
           },
         ],
       }),
       new ESBuildPlugin(),
-      new HtmlWebpackPlugin({
-        cache: false,
-        template: 'public/index.html',
-      }),
       new MiniCssExtractPlugin(),
     ],
     resolve: {
