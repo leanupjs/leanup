@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.1.0-rc.157",
+  "version": "1.1.0-rc.158",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -36,7 +36,7 @@
     "@angular/forms": "1.1.0-rc.155",
     "@angular/platform-browser": "1.1.0-rc.155",
     "@angular/platform-browser-dynamic": "1.1.0-rc.155",
-    "@leanup/form": "^1.1.0-rc.157",
+    "@leanup/form": "^1.1.0-rc.158",
     "@leanup/lib": "^1.1.0-rc.153",
     "core-js": "^3.6.5",
     "navigo": "^7.1.2",
