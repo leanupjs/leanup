@@ -1,7 +1,6 @@
 const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
@@ -136,8 +135,10 @@ export function webpackConfig(env: any, argv: any): Object {
   const config = {
     devServer: {
       compress: true,
+      contentBase: path.join(process.cwd(), `public`),
       host: argv.host,
       disableHostCheck: true,
+      publicPath: '/',
     },
     entry: {
       app: path.join(process.cwd(), `src`, `main.ts`),
@@ -170,14 +171,6 @@ export function webpackConfig(env: any, argv: any): Object {
       new CopyModulesWebpackPlugin({
         destination: '.reports/nexus-iq',
         includePackageJsons: true,
-      }),
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: '**/*',
-            context: path.resolve(process.cwd(), 'public'),
-          },
-        ],
       }),
       new ESBuildPlugin(),
       new MiniCssExtractPlugin(),
