@@ -24,12 +24,12 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "webpack-pwa-manifest": "^4.2.0",
+    "webpack-pwa-manifest": "^4.3.0",
     "workbox-webpack-plugin": "^5.1.4"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.46",
-    "@types/node": "^14.14.7",
+    "@types/node": "^14.14.8",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
