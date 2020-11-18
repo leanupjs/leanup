@@ -1,6 +1,6 @@
 {
   "name": "@template/preact",
-  "version": "1.1.0-rc.164",
+  "version": "1.1.0-rc.165",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,16 +29,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.164",
-    "@leanup/lib": "^1.1.0-rc.164",
+    "@leanup/form": "^1.1.0-rc.165",
+    "@leanup/lib": "^1.1.0-rc.165",
     "navigo": "^7.1.2",
     "preact": "^10.5.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.164",
-    "@leanup/cli-addons": "^1.1.0-rc.164",
-    "@leanup/cli-preact": "^1.1.0-rc.164",
-    "@leanup/git-hooks": "^1.1.0-rc.164",
+    "@leanup/cli": "^1.1.0-rc.165",
+    "@leanup/cli-addons": "^1.1.0-rc.165",
+    "@leanup/cli-preact": "^1.1.0-rc.165",
+    "@leanup/git-hooks": "^1.1.0-rc.165",
     "chromedriver": "^86.0.0",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
