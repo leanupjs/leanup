@@ -13,7 +13,7 @@
     }
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.163",
+    "@leanup/cli": "^1.1.0-rc.164",
     "@leanup/git-hooks": "1.1.0-rc.155",
     "lerna": "^3.22.1",
     "typescript": "^4.0.5"
