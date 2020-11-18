@@ -3,7 +3,7 @@ const path = require('path');
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
@@ -37,15 +37,26 @@ export function webpackConfig(env: any, argv: any): Object {
       ),
     },
   };
-  const FILE_LOADER = {
-    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+  const FONT_FILE_LOADER = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/,
     exclude: exclude,
     use: [
       {
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/',
+          outputPath: 'assets/fonts',
+        },
+      },
+    ],
+  };
+  const IMAGE_FILE_LOADER = {
+    test: /\.(png|svg|jpg|jpeg|gif)$/,
+    exclude: exclude,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/images',
         },
       },
     ],
@@ -54,8 +65,7 @@ export function webpackConfig(env: any, argv: any): Object {
     test: /\.less$/,
     exclude: exclude,
     use: [
-      MiniCssExtractPlugin.loader,
-      // 'style-loader',
+      'style-loader',
       'css-loader',
       'postcss-loader',
       {
@@ -73,8 +83,7 @@ export function webpackConfig(env: any, argv: any): Object {
     test: /\.(sa|s?c)ss$/,
     exclude: exclude,
     use: [
-      MiniCssExtractPlugin.loader,
-      // 'style-loader',
+      'style-loader',
       'css-loader',
       'postcss-loader',
       {
@@ -143,7 +152,7 @@ export function webpackConfig(env: any, argv: any): Object {
       app: path.join(process.cwd(), `src`, `main.ts`),
     },
     module: {
-      rules: [STRING_REPLACE_LOADER, BABEL_LOADER, FILE_LOADER, LESS_LOADER, SASS_LOADER],
+      rules: [STRING_REPLACE_LOADER, BABEL_LOADER, FONT_FILE_LOADER, IMAGE_FILE_LOADER, LESS_LOADER, SASS_LOADER],
     },
     output: {
       path: path.join(process.cwd(), 'dist'),
@@ -164,7 +173,6 @@ export function webpackConfig(env: any, argv: any): Object {
         cache: false,
         template: 'public/index.html',
       }),
-      new MiniCssExtractPlugin(),
     ],
     resolve: {
       alias: {},
