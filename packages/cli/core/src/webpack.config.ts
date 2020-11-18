@@ -2,7 +2,6 @@ const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
@@ -40,14 +39,24 @@ export function webpackConfig(env: any, argv: any): Object {
   //     loader: 'tsx',
   //   },
   // };
-  const FILE_LOADER = {
-    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+  const FONT_FILE_LOADER = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/,
     use: [
       {
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/',
+          outputPath: 'assets/fonts',
+        },
+      },
+    ],
+  };
+  const IMAGE_FILE_LOADER = {
+    test: /\.(png|svg|jpg|jpeg|gif)$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/images',
         },
       },
     ],
@@ -55,8 +64,7 @@ export function webpackConfig(env: any, argv: any): Object {
   const LESS_LOADER = {
     test: /\.less$/,
     use: [
-      MiniCssExtractPlugin.loader,
-      // 'style-loader',
+      'style-loader',
       'css-loader',
       'postcss-loader',
       {
@@ -73,8 +81,7 @@ export function webpackConfig(env: any, argv: any): Object {
   const SASS_LOADER = {
     test: /\.(sa|s?c)ss$/,
     use: [
-      MiniCssExtractPlugin.loader,
-      // 'style-loader',
+      'style-loader',
       'css-loader',
       'postcss-loader',
       {
@@ -151,7 +158,8 @@ export function webpackConfig(env: any, argv: any): Object {
         ESBUILD_LOADER_TS,
         BABEL_LOADER,
         // ESBUILD_LOADER_TSX,
-        FILE_LOADER,
+        FONT_FILE_LOADER,
+        IMAGE_FILE_LOADER,
         LESS_LOADER,
         SASS_LOADER,
       ],
@@ -173,7 +181,6 @@ export function webpackConfig(env: any, argv: any): Object {
         includePackageJsons: true,
       }),
       new ESBuildPlugin(),
-      new MiniCssExtractPlugin(),
     ],
     resolve: {
       alias: {},
