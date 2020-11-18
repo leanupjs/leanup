@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-test",
-  "version": "1.0.41",
+  "version": "1.0.46",
   "description": "This module contains the test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/register": "^7.12.1",
     "@types/chai": "^4.2.14",
-    "@types/mocha": "^8.0.3",
+    "@types/mocha": "^8.0.4",
     "@types/sinon": "^9.0.8",
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
