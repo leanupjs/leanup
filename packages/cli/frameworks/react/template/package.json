@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.1.0-rc.165",
+  "version": "1.1.0-rc.166",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.165",
+    "@leanup/form": "^1.1.0-rc.166",
     "@leanup/lib": "^1.1.0-rc.165",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
@@ -38,9 +38,9 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.165",
-    "@leanup/cli-addons": "^1.1.0-rc.165",
-    "@leanup/cli-react": "^1.1.0-rc.165",
+    "@leanup/cli": "^1.1.0-rc.166",
+    "@leanup/cli-addons": "^1.1.0-rc.166",
+    "@leanup/cli-react": "^1.1.0-rc.166",
     "@leanup/git-hooks": "^1.1.0-rc.165",
     "chromedriver": "^86.0.0",
     "geckodriver": "^1.20.0",
