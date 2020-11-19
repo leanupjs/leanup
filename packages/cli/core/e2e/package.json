@@ -27,7 +27,6 @@
     "nightwatch-allure": "^1.2.0"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.1.0-rc.156",
     "chromedriver": ">=70",
     "geckodriver": "^1",
     "selenium-server": "^3"
