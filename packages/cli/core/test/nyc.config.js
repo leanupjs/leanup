@@ -7,7 +7,6 @@ module.exports = {
   reporter: ['html', 'lcov', 'text'],
   'report-dir': path.resolve(process.cwd(), '.reports/coverage'),
   'temp-dir': path.resolve(process.cwd(), '.reports/nyc'),
-  require: [path.resolve(process.cwd(), 'babel.register.js')],
   watermarks: {
     lines: [50, 75],
     functions: [50, 75],
