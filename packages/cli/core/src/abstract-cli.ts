@@ -36,6 +36,7 @@ export function getProjectName(namespace: string = '') {
   return projectName;
 }
 
+const START = Date.now();
 const PROJECT_NAME_REG_EXP = new RegExp(`@template/[a-z0-9]+`, 'g');
 
 export abstract class AbstractCLI {
@@ -125,7 +126,8 @@ export abstract class AbstractCLI {
           `
 `,
           chalk.red.bold(`✘ ${chalk.underline(`@leanup/cli`)}`),
-          chalk.italic.gray('command execution ended with error')
+          chalk.italic.gray('command execution ended with error'),
+          chalk.white(`(in ${Date.now() - START} ms)`)
         );
         process.exit(code);
       }
@@ -133,7 +135,8 @@ export abstract class AbstractCLI {
         `
 `,
         chalk.green.bold(`✔ ${chalk.underline(`@leanup/cli`)}`),
-        chalk.italic.gray('command execution successfully completed')
+        chalk.italic.gray('command execution successfully completed'),
+        chalk.white(`(in ${Date.now() - START} ms)`)
       );
     });
   }
