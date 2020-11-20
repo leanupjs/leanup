@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.1.0-rc.167",
+  "version": "1.1.0-rc.168",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,16 +29,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.166",
-    "@leanup/lib": "^1.1.0-rc.165",
+    "@leanup/form": "^1.1.0-rc.168",
+    "@leanup/lib": "^1.1.0-rc.168",
     "@vue/composition-api": "^0.6.7",
     "navigo": "^7.1.2",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.167",
-    "@leanup/cli-addons": "^1.1.0-rc.167",
-    "@leanup/cli-vue": "^1.1.0-rc.167",
+    "@leanup/cli": "^1.1.0-rc.168",
+    "@leanup/cli-addons": "^1.1.0-rc.168",
+    "@leanup/cli-vue": "^1.1.0-rc.168",
     "@leanup/git-hooks": "^1.1.0-rc.165",
     "chromedriver": "^86.0.0",
     "geckodriver": "^1.20.0",
