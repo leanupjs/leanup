@@ -12,15 +12,7 @@ module.exports = {
   opts: false,
   // package: './package.json',
   reporter: 'spec',
-  require: [
-    'esbuild-register',
-    'ts-node/register',
-    path.resolve(process.cwd(), 'babel.register'), // babel.register.js statt @babel/register - https://babeljs.io/docs/en/babel-register
-    'jsdom-global/register',
-    'jsdom-global/register',
-    'esm',
-    'mock-local-storage',
-  ],
+  require: ['esbuild-register', 'jsdom-global/register', 'jsdom-global/register', 'esm', 'mock-local-storage'],
   slow: 75,
   spec: ['src/**/*.spec.*s*', 'src/**/*.test.*s*', 'tests/unit/**/*.spec.*s*', 'tests/unit/**/*.test.*s*'],
   timeout: 2000,
