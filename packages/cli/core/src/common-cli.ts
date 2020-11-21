@@ -13,8 +13,10 @@ export const commonOptions: CommandOption[] = [
 ];
 
 export const webpackOptions: CommandOption[] = [
-  { flags: '-e, --environment <environment>', description: 'technical environment (CMS)' },
-  { flags: '-t, --template <template>', description: 'corporate design (Style)' },
+  {
+    flags: '-a, --analyze',
+    description: 'Visualize size of webpack output files with an interactive zoomable treemap.',
+  },
 ];
 
 export const buildOptions: CommandOption[] = webpackOptions.concat([
@@ -72,11 +74,8 @@ export class CommonCLI extends AbstractCLI {
         .concat(commonOptions),
       (options: ServeOps): string[] => {
         const spawnArgs = ['webpack', 'serve', '--devtool=source-map'];
-        if (options.environment) {
-          spawnArgs.push(`--environment=${options.environment}`);
-        }
-        if (options.template) {
-          spawnArgs.push(`--template=${options.template}`);
+        if (options.analyze) {
+          spawnArgs.push(`--analyze`);
         }
         if (options.open) {
           spawnArgs.push(
@@ -102,11 +101,8 @@ export class CommonCLI extends AbstractCLI {
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
         const spawnArgs = ['webpack'];
-        if (options.environment) {
-          spawnArgs.push(`--env=${options.environment}`);
-        }
-        if (options.template) {
-          spawnArgs.push(`--template=${options.template}`);
+        if (options.analyze) {
+          spawnArgs.push(`--analyze`);
         }
         if (options.mode) {
           spawnArgs.push(`--mode=${options.mode}`);

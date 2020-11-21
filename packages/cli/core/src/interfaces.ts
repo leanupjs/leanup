@@ -12,9 +12,7 @@ export interface CreateOps extends CommonOps {
 }
 
 export interface BuildOps extends CommonOps {
-  environment: string;
-  template: string;
-  include: string;
+  analyze: boolean;
   mode: string;
 }
 
