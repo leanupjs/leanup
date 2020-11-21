@@ -5,18 +5,10 @@ import {
     BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
 } from './interfaces';
 
-export const commonOptions: CommandOption[] = [
-  {
-    flags: '-s, --silent',
-    description: 'minimal consoles spending',
-  },
-];
+export const commonOptions: CommandOption[] = [{ flags: '-s, --silent', description: 'minimal consoles spending' }];
 
 export const webpackOptions: CommandOption[] = [
-  {
-    flags: '-a, --analyze',
-    description: 'Visualize size of webpack output files with an interactive zoomable treemap.',
-  },
+  { flags: '-a, --analyze', description: 'Visualize size of webpack output files' },
 ];
 
 export const buildOptions: CommandOption[] = webpackOptions.concat([
@@ -24,6 +16,7 @@ export const buildOptions: CommandOption[] = webpackOptions.concat([
 ]);
 
 export const serveOptions: CommandOption[] = webpackOptions.concat([
+  { flags: '-h, --hot', description: 'Enables Hot Module Replacement' },
   { flags: '-m, --mode [development|producation]', description: 'webpack transformation mode', default: 'development' },
 ]);
 
@@ -76,6 +69,9 @@ export class CommonCLI extends AbstractCLI {
         const spawnArgs = ['webpack', 'serve', '--devtool=source-map'];
         if (options.analyze) {
           spawnArgs.push(`--analyze`);
+        }
+        if (options.hot) {
+          spawnArgs.push(`--hot`);
         }
         if (options.open) {
           spawnArgs.push(

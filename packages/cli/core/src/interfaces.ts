@@ -13,6 +13,7 @@ export interface CreateOps extends CommonOps {
 
 export interface BuildOps extends CommonOps {
   analyze: boolean;
+  hot: boolean;
   mode: string;
 }
 
