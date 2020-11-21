@@ -38,12 +38,13 @@
   "devDependencies": {
     "@leanup/cli": "^1.1.0-rc.170",
     "@leanup/cli-addons": "^1.1.0-rc.170",
+    "@leanup/cli-cucumber": "^1.1.0-rc.170",
     "@leanup/cli-vue": "^1.1.0-rc.170",
     "@leanup/git-hooks": "^1.1.0-rc.170",
-    "chromedriver": "^86.0.0",
-    "geckodriver": "^1.20.0",
+    "chromedriver": "^87.0.0",
+    "geckodriver": "^1.21.0",
     "selenium-server": "^3.141.59",
-    "typescript": "^4.0.5",
+    "typescript": "^4.1.2",
     "vue-template-compiler": "^2.6.12"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
