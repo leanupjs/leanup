@@ -58,12 +58,7 @@ module.exports = {
       files: ['tests/**/*', '**/*.spec.*', '**/*.test.*'],
     },
   ],
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  parser: '@typescript-eslint/parser',
   rules: {
     'no-empty': 'off',
     'no-prototype-builtins': 'off',
