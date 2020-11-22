@@ -102,6 +102,16 @@ export abstract class AbstractCLI {
     });
   }
 
+  public addFirstActionToCommand(name: string | string[], action: Function): void {
+    const names: string[] = Array.isArray(name) ? name : [name];
+    names.forEach((name) => {
+      const command: CommandItem = this.commands.get(name);
+      if (command) {
+        command.actions = [action].concat(command.actions);
+      }
+    });
+  }
+
   private spawnCommand(args: string[], silent = false) {
     console.log(
       `

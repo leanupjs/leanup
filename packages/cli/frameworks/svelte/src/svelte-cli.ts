@@ -7,7 +7,7 @@ export class SvelteCLI extends CommonCLI {
   constructor(name: string, version: string) {
     super(name, version);
 
-    this.addActionToCommand('create', (options: CreateOps) => {
+    this.addFirstActionToCommand('create', (options: CreateOps) => {
       this.copyAndPrint(path.join(__dirname, '../', 'template'), '', options);
     });
   }

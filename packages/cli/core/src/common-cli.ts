@@ -47,7 +47,10 @@ export class CommonCLI extends AbstractCLI {
         // Plugins
         ['cli-addons', 'cli-cucumber', 'cli-graphql', 'cli-pwa', 'cli-webhint', 'git-hooks'].forEach((plugin) => {
           try {
-            this.copyAndPrint(path.join(require(`@leanup/${plugin}`), 'template'), '', options);
+            this.copyAndPrint(path.join(require(`@leanup/${plugin}`), 'template'), '', {
+              ...options,
+              overwrite: true,
+            });
           } catch (error) {}
         });
 

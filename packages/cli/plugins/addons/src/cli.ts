@@ -2,7 +2,6 @@ import { AbstractCLI } from '@leanup/cli/lib/abstract-cli';
 import { BuildOps } from '@leanup/cli/lib/interfaces';
 
 interface AddonOps extends BuildOps {
-  analyzer: boolean;
   gzip: boolean;
   worker: boolean;
 }
@@ -10,8 +9,11 @@ interface AddonOps extends BuildOps {
 module.exports = (CLI: AbstractCLI) => {
   CLI.addActionToCommand(['build', 'serve'], (options: AddonOps) => {
     const spawnArgs = [];
-    if (options.analyzer) {
-      spawnArgs.push(`--analyzer`);
+    if (options.gzip) {
+      spawnArgs.push(`--gzip`);
+    }
+    if (options.worker) {
+      spawnArgs.push(`--worker`);
     }
     return spawnArgs;
   });

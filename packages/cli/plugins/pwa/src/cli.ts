@@ -8,15 +8,13 @@ interface PwaOps extends BuildOps {
 module.exports = (CLI: AbstractCLI) => {
   CLI.addOptionToCommand(
     ['build', 'serve'],
-    [
-      { flags: '--pwa [generateSW|injectManifest]', description: 'gernerate pwa manifest and service worker' },
-    ]
+    [{ flags: '--pwa [generateSW|injectManifest]', description: 'gernerate pwa manifest and service worker' }]
   );
   CLI.addActionToCommand(['build', 'serve'], (options: PwaOps) => {
     const spawnArgs = [];
     if (options.pwa) {
-          spawnArgs.push(`--pwa=${options.pwa}`);
-        }
+      spawnArgs.push(`--pwa=${options.pwa}`);
+    }
     return spawnArgs;
   });
 };
