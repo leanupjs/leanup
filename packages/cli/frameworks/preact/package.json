@@ -40,10 +40,6 @@
     "lean": "lib/cli.js",
     "preact": "lib/cli.js"
   },
-  "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.12.7",
-    "@leanup/cli-core-babel": "^1.1.0-rc.174"
-  },
   "devDependencies": {
     "@leanup/cli": "^1.1.0-rc.176",
     "@types/node": "^14.14.9",
