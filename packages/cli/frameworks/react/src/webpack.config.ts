@@ -8,6 +8,6 @@ const ESBUILD_LOADER_TSX = {
   },
 };
 
-export function webpackPreactConfig(env: any, argv: any): Object {
+export function webpackReactConfig(env: any, argv: any): Object {
   return webpackConfig(env, argv, [ESBUILD_LOADER_TSX]);
 }
