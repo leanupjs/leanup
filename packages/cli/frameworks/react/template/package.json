@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.1.0-rc.174",
+  "version": "1.1.0-rc.175",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -41,7 +41,7 @@
     "@leanup/cli": "^1.1.0-rc.174",
     "@leanup/cli-addons": "^1.1.0-rc.174",
     "@leanup/cli-cucumber": "^1.1.0-rc.174",
-    "@leanup/cli-react": "^1.1.0-rc.174",
+    "@leanup/cli-react": "^1.1.0-rc.175",
     "@leanup/git-hooks": "^1.1.0-rc.174",
     "chromedriver": "^87.0.0",
     "geckodriver": "^1.21.0",
