@@ -1,6 +1,5 @@
+import { BABEL_LOADER } from '@leanup/cli-core-babel/webpack.config';
 import { webpackConfig } from '@leanup/cli/lib/webpack.config';
-
-import { BABEL_LOADER } from '../../../core/babel/webpack.config';
 
 export function webpackAngularJSConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv, [BABEL_LOADER]);

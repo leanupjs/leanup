@@ -5,10 +5,12 @@
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
   "files": [
-    "babel.config.js"
+    "babel.config.js",
+    "webpack.config.js"
   ],
   "keywords": [
-    "babel"
+    "babel",
+    "webpack"
   ],
   "license": "Apache 2.0",
   "repository": {
