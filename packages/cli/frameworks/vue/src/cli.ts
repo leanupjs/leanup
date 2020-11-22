@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import { VueCLI } from './vue-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
+
+import { VueCLI } from './vue-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import { AureliaCLI } from './aurelia-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
+
+import { AureliaCLI } from './aurelia-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import { AngularJSCLI } from './angularjs-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
+
+import { AngularJSCLI } from './angularjs-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 

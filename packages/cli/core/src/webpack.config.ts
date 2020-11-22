@@ -5,22 +5,9 @@ const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
-export function webpackConfig(env: any, argv: any): Object {
+export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
-  const BABEL_LOADER = {
-    test: /\.(j|t)sx$/,
-    use: {
-      loader: 'babel-loader',
-      options: Object.assign(
-        {
-          cacheCompression: false,
-          cacheDirectory: true,
-        },
-        require(path.join(process.cwd(), './babel.config'))
-      ),
-    },
-  };
   const ESBUILD_LOADER_JS = {
     test: /\.js$/,
     loader: 'esbuild-loader',
@@ -32,13 +19,6 @@ export function webpackConfig(env: any, argv: any): Object {
       loader: 'ts',
     },
   };
-  // const ESBUILD_LOADER_TSX = {
-  //   test: /\.tsx$/,
-  //   loader: 'esbuild-loader',
-  //   options: {
-  //     loader: 'tsx',
-  //   },
-  // };
   const FONT_FILE_LOADER = {
     test: /\.(woff|woff2|eot|ttf|otf)$/,
     use: [
@@ -152,17 +132,14 @@ export function webpackConfig(env: any, argv: any): Object {
     },
     module: {
       rules: [
-        BABEL_LOADER,
         STRING_REPLACE_LOADER,
         ESBUILD_LOADER_JS,
         ESBUILD_LOADER_TS,
-        BABEL_LOADER,
-        // ESBUILD_LOADER_TSX,
         FONT_FILE_LOADER,
         IMAGE_FILE_LOADER,
         LESS_LOADER,
         SASS_LOADER,
-      ],
+      ].concat(loaders),
     },
     optimization: {
       minimize: true,
