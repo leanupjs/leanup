@@ -1,6 +1,6 @@
 {
   "name": "@template/inferno",
-  "version": "1.1.0-rc.173",
+  "version": "1.1.0-rc.174",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,17 +29,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.173",
-    "@leanup/lib": "^1.1.0-rc.173",
+    "@leanup/form": "^1.1.0-rc.174",
+    "@leanup/lib": "^1.1.0-rc.174",
     "inferno": "^7.4.6",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.173",
-    "@leanup/cli-addons": "^1.1.0-rc.173",
-    "@leanup/cli-cucumber": "^1.1.0-rc.173",
-    "@leanup/cli-inferno": "^1.1.0-rc.173",
-    "@leanup/git-hooks": "^1.1.0-rc.173",
+    "@leanup/cli": "^1.1.0-rc.174",
+    "@leanup/cli-addons": "^1.1.0-rc.174",
+    "@leanup/cli-cucumber": "^1.1.0-rc.174",
+    "@leanup/cli-inferno": "^1.1.0-rc.174",
+    "@leanup/git-hooks": "^1.1.0-rc.174",
     "chromedriver": "^87.0.0",
     "geckodriver": "^1.21.0",
     "selenium-server": "^3.141.59",

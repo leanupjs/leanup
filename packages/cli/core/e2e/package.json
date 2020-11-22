@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-e2e",
-  "version": "1.1.0-rc.173",
+  "version": "1.1.0-rc.174",
   "description": "This module contains the e2e test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
