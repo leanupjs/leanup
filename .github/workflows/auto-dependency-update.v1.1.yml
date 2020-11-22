@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Install and update dependencies
-        run: npm run update
+        run: npm run reinstall
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
