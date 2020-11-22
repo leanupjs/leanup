@@ -51,7 +51,7 @@ export class CommonCLI extends AbstractCLI {
           } catch (error) {}
         });
 
-        return ['npm', 'install'];
+        return ['npm', 'install', '--legacy-peer-deps'];
       }
     );
 
