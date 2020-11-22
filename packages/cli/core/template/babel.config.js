@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli/babel.config');
+module.exports = require('@leanup/cli-core-babel/babel.config');

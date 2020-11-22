@@ -41,6 +41,7 @@
     "angularjs": "lib/cli.js"
   },
   "dependencies": {
+    "@leanup/cli-core-babel": "^1.1.0-rc.171",
     "babel-plugin-angularjs-annotate": "^0.10.0"
   },
   "devDependencies": {
