@@ -12,6 +12,8 @@
     "types": ["mocha", "node", "react", "react-dom"],
     "typeRoots": ["node_modules/@types"],
     "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
     "noUnusedLocals": true,
     "noEmit": true,
     "skipLibCheck": true,
