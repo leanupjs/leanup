@@ -103,14 +103,10 @@ export abstract class AbstractCLI {
   }
 
   public addFirstActionToCommand(name: string | string[], action: Function): void {
-    this.addActionToCommand(name, action);
-    // const names: string[] = Array.isArray(name) ? name : [name];
-    // names.forEach((name) => {
-    //   const command: CommandItem = this.commands.get(name);
-    //   if (command) {
-    //     command.actions = [action].concat(command.actions);
-    //   }
-    // });
+    const names: string[] = Array.isArray(name) ? name : [name];
+    names.forEach((name) => {
+      this.commands.get(name)?.actions.unshift(action);
+    });
   }
 
   private spawnCommand(args: string[], silent = false) {
