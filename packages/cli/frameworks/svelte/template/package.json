@@ -1,6 +1,6 @@
 {
   "name": "@template/svelte",
-  "version": "1.1.0-rc.181",
+  "version": "1.1.0-rc.182",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -35,10 +35,10 @@
     "svelte": "^3.29.7"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.181",
-    "@leanup/cli-addons": "^1.1.0-rc.181",
-    "@leanup/cli-cucumber": "^1.1.0-rc.181",
-    "@leanup/cli-svelte": "^1.1.0-rc.181",
+    "@leanup/cli": "^1.1.0-rc.182",
+    "@leanup/cli-addons": "^1.1.0-rc.182",
+    "@leanup/cli-cucumber": "^1.1.0-rc.182",
+    "@leanup/cli-svelte": "^1.1.0-rc.182",
     "@leanup/git-hooks": "^1.1.0-rc.174",
     "@pyoner/svelte-types": "^3.4.4-2",
     "chromedriver": "^87.0.0",
