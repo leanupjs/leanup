@@ -11,7 +11,7 @@
     "module": "UMD",
     "removeComments": true,
     "target": "ES2015",
-    "types": ["chalk", "commander", "node"],
+    "types": ["chalk", "commander", "node", "prettier"],
     "typeRoots": ["node_modules/@types"]
   },
   "include": ["src/**/*.ts"],
