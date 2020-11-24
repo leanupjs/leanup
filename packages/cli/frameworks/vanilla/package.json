@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-vanilla",
-  "version": "1.1.0-rc.183",
+  "version": "1.1.0-rc.184",
   "description": "This package contains the VanillaJS extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -37,7 +37,7 @@
     "vanilla": "lib/cli.js"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.183",
+    "@leanup/cli": "^1.1.0-rc.184",
     "@types/node": "^14.14.9",
     "typescript": "^4.1.2"
   },
