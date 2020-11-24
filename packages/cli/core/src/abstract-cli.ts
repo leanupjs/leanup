@@ -4,6 +4,7 @@ import * as commander from 'commander';
 import * as deepmerge from 'deepmerge';
 import * as fs from 'fs';
 import * as path from 'path';
+import * as prettier from 'prettier';
 
 import { CommonOps, CreateOps } from './interfaces';
 
