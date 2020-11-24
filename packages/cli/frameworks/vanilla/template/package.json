@@ -1,6 +1,6 @@
 {
   "name": "@template/vanilla",
-  "version": "1.1.0-rc.184",
+  "version": "1.1.0-rc.185",
   "scripts": {
     "build": "lean build",
     "coverage": "lean coverage",
@@ -9,6 +9,6 @@
     "test": "lean test"
   },
   "devDependencies": {
-    "@leanup/cli-vanilla": "^1.1.0-rc.184"
+    "@leanup/cli-vanilla": "^1.1.0-rc.185"
   }
 }

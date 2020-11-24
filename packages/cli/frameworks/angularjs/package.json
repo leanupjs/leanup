@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-angularjs",
-  "version": "1.1.0-rc.184",
+  "version": "1.1.0-rc.185",
   "description": "This package contains the AngularJS framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -41,11 +41,11 @@
     "angularjs": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli-core-babel": "^1.1.0-rc.178",
+    "@leanup/cli-core-babel": "^1.1.0-rc.185",
     "babel-plugin-angularjs-annotate": "^0.10.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.184",
+    "@leanup/cli": "^1.1.0-rc.185",
     "@types/angular": "^1.8.0",
     "@types/node": "^14.14.9",
     "typescript": "^4.1.2"

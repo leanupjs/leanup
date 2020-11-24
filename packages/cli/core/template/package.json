@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.184",
+  "version": "1.1.0-rc.185",
   "description": "",
   "scripts": {
     "reinstall": "npm run remove && npm run update",
@@ -23,15 +23,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.174",
-    "@leanup/lib": "^1.1.0-rc.174",
+    "@leanup/form": "^1.1.0-rc.185",
+    "@leanup/lib": "^1.1.0-rc.185",
     "navigo": "^7.1.2"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.184",
-    "@leanup/cli-addons": "^1.1.0-rc.184",
-    "@leanup/cli-cucumber": "^1.1.0-rc.184",
-    "@leanup/git-hooks": "^1.1.0-rc.174",
+    "@leanup/cli": "^1.1.0-rc.185",
+    "@leanup/cli-addons": "^1.1.0-rc.185",
+    "@leanup/cli-cucumber": "^1.1.0-rc.185",
+    "@leanup/git-hooks": "^1.1.0-rc.185",
     "chromedriver": "^87.0.0",
     "geckodriver": "^1.21.0",
     "selenium-server": "^3.141.59",
