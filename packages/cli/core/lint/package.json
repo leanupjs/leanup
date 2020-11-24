@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-lint",
-  "version": "1.1.0-rc.185",
+  "version": "1.1.0-rc.186",
   "description": "This module contains the lint feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
