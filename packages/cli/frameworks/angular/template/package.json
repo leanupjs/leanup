@@ -1,32 +1,12 @@
 {
   "name": "@template/angular",
   "version": "1.1.0-rc.183",
-  "description": "",
   "scripts": {
-    "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
     "build": "angular build",
     "coverage": "angular coverage",
     "e2e": "angular e2e",
-    "reinstall": "npm run remove && npm run update",
-    "remove": "rm -rf node_modules package-lock.json",
     "serve": "angular serve",
-    "start": "npm run serve -- --open",
-    "test": "angular test",
-    "update": "npm install && npm update"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
-      "eslint"
-    ],
-    "{src,tests}/**": [
-      "prettier --check"
-    ]
+    "test": "angular test"
   },
   "dependencies": {
     "@angular/common": "next",
@@ -36,24 +16,12 @@
     "@angular/forms": "next",
     "@angular/platform-browser": "next",
     "@angular/platform-browser-dynamic": "next",
-    "@leanup/form": "^1.1.0-rc.174",
-    "@leanup/lib": "^1.1.0-rc.174",
     "core-js": "^3.7.0",
-    "navigo": "^7.1.2",
     "rxjs": "^6.6.3",
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.183",
-    "@leanup/cli-addons": "^1.1.0-rc.183",
     "@leanup/cli-angular": "^1.1.0-rc.183",
-    "@leanup/cli-cucumber": "^1.1.0-rc.183",
-    "@leanup/git-hooks": "^1.1.0-rc.174",
-    "@ngtools/webpack": "next",
-    "chromedriver": "^87.0.0",
-    "geckodriver": "^1.21.0",
-    "selenium-server": "^3.141.59",
-    "typescript": "~4.0.5"
-  },
-  "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
+    "@ngtools/webpack": "next"
+  }
 }
