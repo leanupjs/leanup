@@ -84,7 +84,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.9",
+    "@types/node": "^14.14.10",
     "@types/prettier": "^2.1.5",
     "tsc": "^1.20150623.0"
   },
