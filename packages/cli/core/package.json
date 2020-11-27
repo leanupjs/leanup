@@ -62,7 +62,7 @@
     "@leanup/cli-core-format": "^1.1.0-rc.188",
     "@leanup/cli-core-lint": "^1.1.0-rc.188",
     "@leanup/cli-core-test": "^1.1.0-rc.188",
-    "autoprefixer": "^10.0.2",
+    "autoprefixer": "^10.0.3",
     "chalk": "^4.1.0",
     "commander": "^6.2.0",
     "copy-modules-webpack-plugin": "^2.1.1",
@@ -79,7 +79,7 @@
     "string-replace-loader": "^3.0.0",
     "style-loader": "^2.0.0",
     "typescript": "^4.0.5",
-    "webpack": "^5.6.0",
+    "webpack": "^5.8.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },

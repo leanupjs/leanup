@@ -27,7 +27,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-typescript": "^7.12.7",
-    "babel-loader": "^8.2.1"
+    "babel-loader": "^8.2.2"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
