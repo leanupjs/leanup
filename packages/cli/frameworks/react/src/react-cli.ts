@@ -7,7 +7,7 @@ export class ReactCLI extends CommonCLI {
   constructor(name: string, version: string) {
     super(name, version);
 
-    this.addFirstActionToCommand('create', (options: CreateOps) => {
+    this.addActionToCommand('create', (options: CreateOps) => {
       this.copyAndPrint(path.join(__dirname, '../', 'template'), '', options);
     });
   }
