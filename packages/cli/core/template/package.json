@@ -6,7 +6,7 @@
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
     "start": "npm run serve -- --open",
-    "update": "npm install && npm update"
+    "update": "npm install --legacy-peer-deps && npm update --legacy-peer-deps"
   },
   "husky": {
     "hooks": {
