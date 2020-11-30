@@ -32,7 +32,8 @@
     "@leanup/form": "^1.0.51",
     "@leanup/lib": "^1.0.51",
     "inferno": "^7.0.0",
-    "navigo": "^7.1.2"
+    "navigo": "^7.1.2",
+    "rxjs": "^6.6.3"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.51",

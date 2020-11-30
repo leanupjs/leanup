@@ -33,6 +33,7 @@
     "@leanup/lib": "^1.0.51",
     "@vue/composition-api": "^0.6.7",
     "navigo": "^7.1.2",
+    "rxjs": "^6.6.3",
     "vue": "^2.0.0",
     "vue-template-compiler": "^2.0.0"
   },

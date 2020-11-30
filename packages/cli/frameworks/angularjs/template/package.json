@@ -33,7 +33,8 @@
     "@leanup/lib": "^1.0.51",
     "@types/angular": "1.6.45",
     "angular": "^1.5.0",
-    "navigo": "^7.1.2"
+    "navigo": "^7.1.2",
+    "rxjs": "^6.6.3"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.51",
