@@ -1,6 +1,6 @@
 {
   "name": "@template/vue3",
-  "version": "1.1.0-rc.189",
+  "version": "1.1.0-rc.190",
   "scripts": {
     "build": "vue3 build",
     "coverage": "vue3 coverage",
@@ -12,7 +12,7 @@
     "vue": "^3.0.2"
   },
   "devDependencies": {
-    "@leanup/cli-vue3": "^1.1.0-rc.189",
+    "@leanup/cli-vue3": "^1.1.0-rc.190",
     "@vue/compiler-sfc": "^3.0.2"
   }
 }
