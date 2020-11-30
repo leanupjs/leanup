@@ -1,7 +1,7 @@
 import { AbstractController } from '@leanup/lib/components/generic';
 import { DI } from '@leanup/lib/helpers/injector';
 
-import { VersionApi } from '../../../openapi/typescript-rxjs';
+import { IVersion, VersionApi } from '../../../openapi/typescript-rxjs';
 import { Framework } from '../../models/framework.interface';
 import { RouterService } from '../../services/router/service';
 import { CLI_DETAILS, STARTUP_TIMESTAMP } from '../../shares/constant';
@@ -35,7 +35,7 @@ export class AppController extends AbstractController {
     price: 123123123,
   };
   public readonly cli: Framework = CLI_DETAILS;
-  public version: string = '0.0.0';
+  public version: IVersion = { text: '1.0.0', major: 1, minor: 0, patch: 0 };
 
   public constructor() {
     super();
@@ -56,9 +56,17 @@ export class AppController extends AbstractController {
         `Node, that legacy framework support depends sometimes to use a older typescript version without optional chaining support.`
       );
     }
-    this.versionApi.versionGet().subscribe((version: { text: string }) => {
-      console.log('Version of OpenAPI:', version);
-      this.version = version.text;
-    });
+    this.versionApi.versionGet().subscribe(
+      (version: IVersion) => {
+        this.version = version;
+      },
+      () => {
+        console.info('Response catched and patched!');
+        this.version = { text: '1.0.1', major: 1, minor: 0, patch: 1 };
+      },
+      () => {
+        console.log('Version of OpenAPI:', this.version);
+      }
+    );
   }
 }

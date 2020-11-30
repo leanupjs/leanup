@@ -13,6 +13,7 @@
 
 import { Observable } from 'rxjs';
 
+import { IVersion } from '../models';
 import { BaseAPI } from '../runtime';
 
 /**
@@ -23,15 +24,10 @@ export class VersionApi extends BaseAPI {
    * Liefert die aktuelle Version des Webservices.
    * Versionsnummer
    */
-  versionGet = (): Observable<object> => {
-    return new Observable((subscriber) => {
-      const VERSION: object = { text: '1.0.0', major: 1, minor: 0, patch: 0 };
-      setTimeout(() => VERSION);
+  versionGet = (): Observable<IVersion> => {
+    return this.request<IVersion>({
+      path: '/version',
+      method: 'GET',
     });
-    // Hacked for Demo
-    // return this.request<object>({
-    //   path: '/version',
-    //   method: 'GET',
-    // });
   };
 }
