@@ -6,7 +6,7 @@
     <cite><b>Make things pure</b> ... to become lean.</cite>
   </h2>
 </p>
-<br>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 <hr>
 
 [![license][license]][license-url]
