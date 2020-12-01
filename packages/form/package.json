@@ -29,7 +29,7 @@
     "@types/sinon": "^9.0.8",
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "esm": "^3.2.25",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.2",
