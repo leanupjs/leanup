@@ -105,6 +105,7 @@ There are some working examples:
 | [Cucumber]       |        BDD        |   ✔️   | ready                      |
 | [robotframework] |        BDD        |   ⌛   | will be evaluated          |
 | [Storybook]      |   Documentation   |   ⌛   | in progress                |
+| [OpenAPI]        |        API        |   ✔️   | ready                      |
 | [GraphQL]        |        API        |   ✔️   | ready                      |
 | [Workbox]        |        PWA        |   ✔️   | ready                      |
 | [Lerna]          |     Mono-Repo     |   ✔️   | ready                      |
@@ -216,4 +217,5 @@ There a separate packages for important application features.
 [robotframework]: https://robotframework.org
 [tailwindcss]: https://tailwindcss.com
 [esbuild]: https://esbuild.github.io
+[openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
