@@ -8,6 +8,7 @@
     "lib/**",
     "template/**",
     "cli.js",
+    "package-lock.json",
     "postcss.config.js",
     "postinstall.js",
     "webpack.config.js"
@@ -68,6 +69,7 @@
     "copy-modules-webpack-plugin": "^2.1.1",
     "css-loader": "^5.0.1",
     "deepmerge": "^4.2.2",
+    "esbuild": "0.7.22",
     "esbuild-loader": "^2.5.0",
     "file-loader": "^6.2.0",
     "less": "^3.12.2",
