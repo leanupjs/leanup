@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.1.0-rc.195",
+  "version": "1.1.0-rc.196",
   "scripts": {
     "build": "react build",
     "coverage": "react coverage",
@@ -13,7 +13,7 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@leanup/cli-react": "^1.1.0-rc.195",
+    "@leanup/cli-react": "^1.1.0-rc.196",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0"
   }
