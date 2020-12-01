@@ -12,7 +12,7 @@ module.exports = {
   opts: false,
   // package: './package.json',
   reporter: 'spec',
-  require: ['esbuild-register', 'jsdom-global/register', 'jsdom-global/register', 'esm', 'mock-local-storage'],
+  require: ['esm', 'esbuild-register', 'jsdom-global/register', 'jsdom-global/register', 'mock-local-storage'],
   slow: 75,
   spec: ['src/**/*.spec.*s*', 'src/**/*.test.*s*', 'tests/unit/**/*.spec.*s*', 'tests/unit/**/*.test.*s*'],
   timeout: 2000,
