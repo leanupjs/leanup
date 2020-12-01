@@ -9,6 +9,7 @@
     "template/**",
     ".hintrc",
     "index.js",
+    "package-lock.json",
     "webpack.config.js"
   ],
   "keywords": [

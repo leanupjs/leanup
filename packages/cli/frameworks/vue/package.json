@@ -7,8 +7,7 @@
   "files": [
     "lib/**",
     "template/**",
-    "babel.config.js",
-    "postcss.config.js",
+    "package-lock.json",
     "webpack.config.js"
   ],
   "keywords": [

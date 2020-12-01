@@ -8,6 +8,7 @@
     "lib/**",
     "template/**",
     "index.js",
+    "package-lock.json",
     "webpack.config.js"
   ],
   "keywords": [

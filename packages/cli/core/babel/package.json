@@ -6,7 +6,8 @@
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
-    "babel.config.js"
+    "babel.config.js",
+    "package-lock.json"
   ],
   "keywords": [
     "babel",
