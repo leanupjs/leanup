@@ -1,4 +1,4 @@
-{
+
   "compilerOptions": {
     "experimentalDecorators": true,
     "pretty": true,
@@ -22,6 +22,6 @@
     "removeComments": true,
     "strict": true
   },
-  "include": ["src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
+  "include": ["openapi/**/*", "src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
   "exclude": ["node_modules/@leanup/**/template/**/*"]
 }

@@ -36,4 +36,22 @@ export interface IVersion {
      * @memberof IVersion
      */
     text: string;
+    /**
+     * @type {string}
+     * @memberof IVersion
+     */
+    label?: IVersionLabelEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum IVersionLabelEnum {
+    Latest = 'latest',
+    Next = 'next',
+    Rc = 'rc',
+    Beta = 'beta',
+    Alpha = 'alpha'
+}
+
