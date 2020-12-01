@@ -91,9 +91,10 @@ There are some working examples:
 
 | Tool/Technology  |    Description    | Status | Note                       |
 | ---------------- | :---------------: | :----: | :------------------------- |
-| [Babel]          |    Transpiler     |   ✔️   | ready                      |
-| [Webpack]        |      Bundler      |   ✔️   | ready                      |
 | [TypeScript]     |     Language      |   ✔️   | ready                      |
+| [Webpack]        |      Bundler      |   ✔️   | ready                      |
+| [ESBuild]        |    Transpiler     |   ✔️   | ready                      |
+| [Babel]          |    Transpiler     |   ✔️   | ready                      |
 | [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      |
 | [Chai]           |     Assertion     |   ✔️   | ready                      |
 | [Sinon]          |      Mocking      |   ✔️   | ready                      |
@@ -160,7 +161,7 @@ Currently the following framework extensions are available:
 
 - [`@leanup/cli-angular`](https://www.npmjs.com/package/@leanup/cli-angular) ✔️
 - [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️
-- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️
+- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ (will be removed in v1.1)
 - [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️
 - [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
 - [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
@@ -185,9 +186,7 @@ There a separate packages for important application features.
 - [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️
 - [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️
 - [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️
-- [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛
-- [`@leanup/material-vanilla`](https://www.npmjs.com/package/@leanup/material-vanilla) ⌛
-- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛
+- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛ (in progress)
 
 [babel]: https://babeljs.io
 [typescript]: https://typescriptlang.org
@@ -216,4 +215,5 @@ There a separate packages for important application features.
 [testcafe]: https://devexpress.github.io/testcafe/
 [robotframework]: https://robotframework.org
 [tailwindcss]: https://tailwindcss.com
+[esbuild]: https://esbuild.github.io
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack

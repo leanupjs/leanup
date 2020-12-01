@@ -98,7 +98,7 @@
   },
   "scripts": {
     "postinstall": "node postinstall.js",
-    "prepack": "rm -rf lib && tsc"
+    "prepack": "cp ../../../README.md template/ && rm -rf lib && tsc"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }
