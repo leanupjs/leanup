@@ -73,7 +73,7 @@
     "file-loader": "^6.2.0",
     "less": "^3.12.2",
     "less-loader": "^7.1.0",
-    "postcss": "^8.1.9",
+    "postcss": "^8.1.11",
     "postcss-loader": "^4.1.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
