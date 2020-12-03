@@ -1,4 +1,5 @@
 sh dist-tag.sh "$1" cli "$2" "$3"
+sh dist-tag.sh "$1" cli-core-babel "$2" "$3"
 sh dist-tag.sh "$1" cli-core-e2e "$2" "$3"
 sh dist-tag.sh "$1" cli-core-format "$2" "$3"
 sh dist-tag.sh "$1" cli-core-lint "$2" "$3"

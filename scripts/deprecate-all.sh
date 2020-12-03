@@ -1,4 +1,5 @@
 sh deprecate.sh cli "$1" "$2"
+sh deprecate.sh cli-core-babel "$1" "$2"
 sh deprecate.sh cli-core-e2e "$1" "$2"
 sh deprecate.sh cli-core-format "$1" "$2"
 sh deprecate.sh cli-core-lint "$1" "$2"
