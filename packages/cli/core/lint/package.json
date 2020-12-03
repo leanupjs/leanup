@@ -28,8 +28,9 @@
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-json": "^2.1.2"
   },
-  "peerDependencies": {
-    "@leanup/cli": "^1.0.0"
+  "engines": {
+    "node": ">=14 <15",
+    "npm": ">=6 <7"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

@@ -48,8 +48,11 @@
     "update": "npm install && npm update && npm outdated"
   },
   "files": [
-    "**/*.d.ts",
-    "**/*.js",
-    "**/*.js.map"
+    "controls/**/*.d.ts",
+    "controls/**/*.js",
+    "controls/**/*.js.map",
+    "handlers/**/*.d.ts",
+    "handlers/**/*.js",
+    "handlers/**/*.js.map"
   ]
 }
