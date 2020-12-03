@@ -52,8 +52,17 @@
     "update": "npm install && npm update && npm outdated"
   },
   "files": [
-    "**/*.d.ts",
-    "**/*.js",
-    "**/*.js.map"
+    "components/**/*.d.ts",
+    "components/**/*.js",
+    "components/**/*.js.map",
+    "helpers/**/*.d.ts",
+    "helpers/**/*.js",
+    "helpers/**/*.js.map",
+    "pattern/**/*.d.ts",
+    "pattern/**/*.js",
+    "pattern/**/*.js.map",
+    "shares/**/*.d.ts",
+    "shares/**/*.js",
+    "shares/**/*.js.map"
   ]
 }

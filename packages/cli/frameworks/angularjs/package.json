@@ -45,17 +45,18 @@
     "babel-plugin-angularjs-annotate": "^0.10.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.196",
-    "@types/angular": "^1.8.0",
     "@types/node": "^14.14.10",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.1.0-rc.156",
     "angular": "^1.5"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
+  },
+  "engines": {
+    "node": ">=14 <15",
+    "npm": ">=6 <7"
   },
   "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
 }
