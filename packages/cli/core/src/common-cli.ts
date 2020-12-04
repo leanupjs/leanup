@@ -79,9 +79,6 @@ export class CommonCLI extends AbstractCLI {
         if (options.template) {
           spawnArgs.push(`--template=${options.template}`);
         }
-        if (options.include) {
-          spawnArgs.push(`--include=${options.include}`);
-        }
         if (options.open) {
           spawnArgs.push('--open');
         }
@@ -109,9 +106,6 @@ export class CommonCLI extends AbstractCLI {
         }
         if (options.template) {
           spawnArgs.push(`--template=${options.template}`);
-        }
-        if (options.include) {
-          spawnArgs.push(`--include=${options.include}`);
         }
         if (options.mode) {
           spawnArgs.push(`--mode=${options.mode}`);

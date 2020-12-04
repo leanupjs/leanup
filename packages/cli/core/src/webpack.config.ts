@@ -7,25 +7,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
-export function mapToExclude(include: string) {
-  include = typeof include === 'string' ? `|${include}` : '';
-
-  const aliasRegExp = /^(@[^/]+)\/.+/;
-  let alias = '';
-  if (aliasRegExp.test(packageJsonApp.name)) {
-    alias = `|${packageJsonApp.name.replace(/^(@[^/]+)\/.+/, '$1')}`;
-  }
-  return new RegExp(`node_modules(\\/|\\\\)(?!@leanup${alias}${include}).+`);
-}
-
 export function webpackConfig(env: any, argv: any): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
-  const exclude = mapToExclude(argv.include);
-
   const BABEL_LOADER = {
     test: /\.(j|t)sx?$/,
-    exclude: exclude,
     use: {
       loader: 'babel-loader',
       options: Object.assign(
@@ -39,7 +25,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const FONT_FILE_LOADER = {
     test: /\.(woff|woff2|eot|ttf|otf)$/,
-    exclude: exclude,
     use: [
       {
         loader: 'file-loader',
@@ -51,7 +36,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const IMAGE_FILE_LOADER = {
     test: /\.(png|svg|jpg|jpeg|gif)$/,
-    exclude: exclude,
     use: [
       {
         loader: 'file-loader',
@@ -63,7 +47,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const LESS_LOADER = {
     test: /\.less$/,
-    exclude: exclude,
     use: [
       'style-loader',
       'css-loader',
@@ -81,7 +64,6 @@ export function webpackConfig(env: any, argv: any): Object {
   };
   const SASS_LOADER = {
     test: /\.(sa|s?c)ss$/,
-    exclude: exclude,
     use: [
       'style-loader',
       'css-loader',
@@ -135,7 +117,6 @@ export function webpackConfig(env: any, argv: any): Object {
   }
   const STRING_REPLACE_LOADER = {
     test: /\.(j|t)sx?$/,
-    exclude: exclude,
     loader: 'string-replace-loader',
     options: {
       multiple: MULTIPLE_REPLACEMENTS,
