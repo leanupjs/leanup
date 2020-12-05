@@ -12,6 +12,7 @@
 [![license][license]][license-url]
 [![lernajs][lernajs]][lernajs-url]
 [![prettier][prettier]][prettier-url]
+[![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
