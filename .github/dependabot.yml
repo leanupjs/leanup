@@ -1,26 +1,307 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  target-branch: release/1.1
-- package-ecosystem: npm
-  directory: "/packages/cli/core"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  target-branch: release/1.1
-- package-ecosystem: npm
-  directory: "/packages/cli/core"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  target-branch: release/1.0
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/core'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/babel'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/e2e'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/format'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/lint'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/test'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/angular'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/angularjs'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/aurelia'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/inferno'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/preact'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/react'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/svelte'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/vanilla'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/vue'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/vue3'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/addons'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/cucumber'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/graphql'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/pwa'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/webhint'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+
+  - package-ecosystem: npm
+    directory: '/packages/form'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/git-hooks'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/lib'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.1
+
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/core'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/babel'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/e2e'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/format'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/lint'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/core/test'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/angular'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/angularjs'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/aurelia'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/inferno'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/preact'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/react'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/svelte'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/vanilla'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/vue'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/vue3'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/addons'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/cucumber'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/graphql'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/pwa'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/cli/addons/webhint'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+
+  - package-ecosystem: npm
+    directory: '/packages/form'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/git-hooks'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
+  - package-ecosystem: npm
+    directory: '/packages/lib'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: release/1.0
