@@ -26,8 +26,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15.x
-      - name: Install and update dependencies
-        run: npm run update
+      - name: Install dependencies
+        run: |
+          npm i lerna --no-save
+          npx learn exec --parallel -- npm ci
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Update dependencies
+        run: npx learn exec --parallel -- npm update
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
