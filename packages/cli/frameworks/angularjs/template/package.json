@@ -1,6 +1,6 @@
 {
   "name": "@template/angularjs",
-  "version": "1.1.0-rc.197",
+  "version": "1.1.0-rc.198",
   "scripts": {
     "build": "angularjs build",
     "coverage": "angularjs coverage",
@@ -12,7 +12,7 @@
     "angular": "^1.8.2"
   },
   "devDependencies": {
-    "@leanup/cli-angularjs": "^1.1.0-rc.197",
+    "@leanup/cli-angularjs": "^1.1.0-rc.198",
     "@types/angular": "^1.8.0"
   }
 }
