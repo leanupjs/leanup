@@ -1,6 +1,6 @@
 {
   "name": "@template/vanilla",
-  "version": "1.0.55",
+  "version": "1.0.59",
   "description": "",
   "scripts": {
     "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
@@ -29,15 +29,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.55",
-    "@leanup/lib": "^1.0.55",
+    "@leanup/form": "^1.0.59",
+    "@leanup/lib": "^1.0.59",
     "navigo": "^7.1.2",
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.55",
-    "@leanup/cli-addons": "^1.0.55",
-    "@leanup/cli-vanilla": "^1.0.55",
+    "@leanup/cli": "^1.0.59",
+    "@leanup/cli-addons": "^1.0.59",
+    "@leanup/cli-vanilla": "^1.0.58",
     "chromedriver": "^86.0.0",
     "geckodriver": "^1.20.0",
     "selenium-server": "^3.141.59",
