@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-vue",
-  "version": "1.0.58",
+  "version": "1.0.60",
   "description": "This package contains the Vue framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
