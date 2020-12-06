@@ -37,7 +37,7 @@ jobs:
             **/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - name: Update dependencies
-        run: npx learn exec --parallel -- npm update
+        run: npx lerna exec --ignore=@template/* --parallel -- npm update
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
