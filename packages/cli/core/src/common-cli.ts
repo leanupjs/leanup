@@ -12,12 +12,12 @@ export const webpackOptions: CommandOption[] = [
 ];
 
 export const buildOptions: CommandOption[] = webpackOptions.concat([
-  { flags: '-m, --mode [development|producation]', description: 'webpack transformation mode', default: 'production' },
+  { flags: '-m, --mode [development|production]', description: 'webpack transformation mode', default: 'production' },
 ]);
 
 export const serveOptions: CommandOption[] = webpackOptions.concat([
   { flags: '-h, --hot', description: 'Enables Hot Module Replacement' },
-  { flags: '-m, --mode [development|producation]', description: 'webpack transformation mode', default: 'development' },
+  { flags: '-m, --mode [development|production]', description: 'webpack transformation mode', default: 'development' },
 ]);
 
 export class CommonCLI extends AbstractCLI {
@@ -69,7 +69,13 @@ export class CommonCLI extends AbstractCLI {
         ])
         .concat(commonOptions),
       (options: ServeOps): string[] => {
-        const spawnArgs = ['webpack', 'serve', '--devtool=source-map'];
+        const spawnArgs = ['cross-env'];
+        if (options.mode) {
+          spawnArgs.push(`NODE_ENV=${options.mode}`);
+        }
+        spawnArgs.push(`webpack`);
+        spawnArgs.push(`serve`);
+        spawnArgs.push(`--devtool=source-map`);
         if (options.analyze) {
           spawnArgs.push(`--analyze`);
         }
@@ -87,9 +93,6 @@ export class CommonCLI extends AbstractCLI {
         if (options.port) {
           spawnArgs.push(`--port=${options.port}`);
         }
-        if (options.mode) {
-          spawnArgs.push(`--mode=${options.mode}`);
-        }
         return spawnArgs;
       }
     );
@@ -99,12 +102,13 @@ export class CommonCLI extends AbstractCLI {
       'Building (https://webpack.js.org/)',
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
-        const spawnArgs = ['webpack'];
+        const spawnArgs = ['cross-env'];
+        if (options.mode) {
+          spawnArgs.push(`NODE_ENV=${options.mode}`);
+        }
+        spawnArgs.push(`webpack`);
         if (options.analyze) {
           spawnArgs.push(`--analyze`);
-        }
-        if (options.mode) {
-          spawnArgs.push(`--mode=${options.mode}`);
         }
         return spawnArgs;
       }
