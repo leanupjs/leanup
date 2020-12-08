@@ -16,7 +16,7 @@
     }
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.197",
+    "@leanup/cli": "^1.1.0-rc.199",
     "@leanup/git-hooks": "1.1.0-rc.155",
     "lerna": "^3.22.1",
     "npm-check-updates": "^10.2.2",
