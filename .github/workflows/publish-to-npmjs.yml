@@ -23,6 +23,13 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
+      - name: Install and publish only @leanup/lib
+        run: |
+          npm install
+          npm publish --access=public --tag=${{env.tag}} || true
+        working-directory: packages/lib
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
           ls -la
@@ -69,18 +76,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli
         run: |
-          sleep 60
           npm install
           npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/lib
-        run: |
-          sleep 60
-          npm install
-          npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib

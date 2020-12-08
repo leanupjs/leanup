@@ -8,9 +8,7 @@
     "lib/**",
     "template/**",
     "cli.js",
-    "postcss.config.js",
-    "postinstall.js",
-    "webpack.config.js"
+    "postinstall.js"
   ],
   "keywords": [
     "eslint",
