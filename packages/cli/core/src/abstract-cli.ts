@@ -189,7 +189,11 @@ export abstract class AbstractCLI {
                 return mergedArray.filter((item, index) => mergedArray.indexOf(item) === index);
               },
             });
-            data = prettier.format(JSON.stringify(data), { parser: 'json' });
+            data = prettier.format(JSON.stringify(data), {
+              parser: 'json',
+              printWidth: 120,
+              singleQuote: true,
+            });
           } else {
             data = fs.readFileSync(path.join(folder, subDirent), { encoding: 'utf8' });
           }
