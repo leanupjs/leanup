@@ -40,6 +40,8 @@
     "aurelia": "lib/cli.js"
   },
   "dependencies": {
+    "@leanup/cli": "1.1.0-rc.201",
+    "@leanup/stack-webpack": "1.1.0-rc.201",
     "aurelia-webpack-plugin": "^4.0.0"
   },
   "devDependencies": {

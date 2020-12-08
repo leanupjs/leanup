@@ -41,7 +41,9 @@
     "inferno": "lib/cli.js"
   },
   "dependencies": {
+    "@leanup/cli": "1.1.0-rc.201",
     "@leanup/cli-core-babel": "^1.1.0-rc.201",
+    "@leanup/stack-webpack": "1.1.0-rc.201",
     "babel-plugin-inferno": "^6.1.1"
   },
   "devDependencies": {

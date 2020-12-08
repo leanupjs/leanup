@@ -41,6 +41,8 @@
     "vue3": "lib/cli.js"
   },
   "dependencies": {
+    "@leanup/cli": "1.1.0-rc.201",
+    "@leanup/stack-webpack": "1.1.0-rc.201",
     "vue-loader": "^16.1.1"
   },
   "devDependencies": {
