@@ -1,0 +1,58 @@
+{
+  "name": "@leanup/stack",
+  "version": "1.1.0-rc.199",
+  "description": "This module contains all required tools to serve, test and build a framework neutral SPA.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "postcss.config.js"
+  ],
+  "keywords": [
+    "eslint",
+    "esbuild",
+    "webpack",
+    "mocha",
+    "nyc",
+    "cucumber",
+    "sinon",
+    "prettier",
+    "nightwatch",
+    "less",
+    "sass",
+    "scss",
+    "typescript",
+    "cli",
+    "spa",
+    "pwa",
+    "lean",
+    "compiler",
+    "transpiler",
+    "graphql",
+    "postcss",
+    "pwa",
+    "hint",
+    "workbox",
+    "mono-repo",
+    "lerna"
+  ],
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "@leanup/cli-core-e2e": "^1.1.0-rc.197",
+    "@leanup/cli-core-format": "^1.1.0-rc.197",
+    "@leanup/cli-core-lint": "^1.1.0-rc.198",
+    "@leanup/cli-core-test": "^1.1.0-rc.197",
+    "@leanup/stack-webpack": "^1.1.0-rc.197",
+    "autoprefixer": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=14 <15",
+    "npm": ">=6 <7"
+  }
+}

@@ -1,4 +1,4 @@
-import { webpackConfig } from '@leanup/cli/lib/webpack.config';
+import { webpackConfig } from '@leanup/stack-webpack/lib/webpack.config';
 
 export function webpackAureliaConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv);
