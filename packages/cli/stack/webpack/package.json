@@ -1,53 +1,26 @@
 {
-  "name": "@leanup/cli",
+  "name": "@leanup/stack-webpack",
   "version": "1.1.0-rc.199",
-  "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
+  "description": "This module contains all webpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
-    "template/**",
-    "cli.js",
-    "postcss.config.js",
-    "postinstall.js",
     "webpack.config.js"
   ],
   "keywords": [
-    "eslint",
     "esbuild",
     "webpack",
-    "angular",
-    "angularjs",
-    "aurelia",
-    "inferno",
-    "react",
-    "preact",
-    "svelte",
-    "vue",
-    "vue3",
-    "mocha",
-    "nyc",
-    "cucumber",
-    "sinon",
-    "prettier",
-    "nightwatch",
     "less",
     "sass",
     "scss",
     "typescript",
-    "cli",
     "spa",
     "pwa",
     "lean",
     "compiler",
     "transpiler",
-    "graphql",
-    "postcss",
-    "pwa",
-    "hint",
-    "workbox",
-    "mono-repo",
-    "lerna"
+    "postcss"
   ],
   "license": "Apache 2.0",
   "repository": {
@@ -58,9 +31,21 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^6.2.0",
-    "deepmerge": "^4.2.2"
+    "copy-modules-webpack-plugin": "^2.1.1",
+    "css-loader": "^5.0.1",
+    "esbuild-loader": "^2.6.1",
+    "file-loader": "^6.2.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0",
+    "postcss": "^8.1.14",
+    "postcss-loader": "^4.1.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "string-replace-loader": "^3.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
@@ -69,12 +54,10 @@
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
-    "@leanup/stack": "^1.1.0-rc.200",
     "typescript": "^3 || ^4"
   },
   "scripts": {
-    "postinstall": "node postinstall.js",
-    "prepack": "cp ../../../README.md template/ && rm -rf lib && tsc"
+    "prepack": "rm -rf lib && tsc"
   },
   "engines": {
     "node": ">=14 <15",

@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli/postcss.config');
+module.exports = require('@leanup/stack/postcss.config');
