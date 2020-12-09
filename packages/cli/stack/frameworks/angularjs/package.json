@@ -34,10 +34,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "bin": {
-    "lean": "lib/cli.js",
-    "angularjs": "lib/cli.js"
-  },
   "dependencies": {
     "@leanup/cli-core-babel": "^1.1.0-rc.201",
     "babel-plugin-angularjs-annotate": "^0.10.0"

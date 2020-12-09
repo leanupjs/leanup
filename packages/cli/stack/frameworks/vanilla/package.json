@@ -32,10 +32,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "bin": {
-    "lean": "lib/cli.js",
-    "vanilla": "lib/cli.js"
-  },
   "dependencies": {
     "@leanup/stack-webpack": "1.1.0-rc.201"
   },

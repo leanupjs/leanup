@@ -34,10 +34,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "bin": {
-    "lean": "lib/cli.js",
-    "svelte": "lib/cli.js"
-  },
   "dependencies": {
     "prettier-plugin-svelte": "^1.4.2",
     "svelte-loader": "github:martinoppitz/svelte-loader#help/update-virtual-modules"

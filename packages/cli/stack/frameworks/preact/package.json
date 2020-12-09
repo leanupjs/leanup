@@ -33,10 +33,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "bin": {
-    "lean": "lib/cli.js",
-    "preact": "lib/cli.js"
-  },
   "dependencies": {
     "@leanup/cli": "^1.1.0-rc.203"
   },

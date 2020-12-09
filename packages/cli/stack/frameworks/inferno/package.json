@@ -34,10 +34,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "bin": {
-    "lean": "lib/cli.js",
-    "inferno": "lib/cli.js"
-  },
   "dependencies": {
     "@leanup/cli-core-babel": "^1.1.0-rc.201",
     "babel-plugin-inferno": "^6.1.1"

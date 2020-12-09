@@ -34,10 +34,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "bin": {
-    "lean": "lib/cli.js",
-    "vue3": "lib/cli.js"
-  },
   "dependencies": {
     "vue-loader": "^16.1.1"
   },
