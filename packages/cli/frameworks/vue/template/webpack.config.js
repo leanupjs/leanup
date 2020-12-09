@@ -1,1 +1,1 @@
-module.exports = require('@leanup/stack-vue/webpack.config'\);
+module.exports = require('@leanup/stack-vue/webpack.config');

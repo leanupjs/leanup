@@ -1,1 +1,1 @@
-module.exports = require('@leanup/stack-svelte/webpack.config'\);
+module.exports = require('@leanup/stack-svelte/webpack.config');
