@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.203",
+  "version": "1.1.0-rc.206",
   "description": "",
   "scripts": {
     "reinstall": "npm run remove && npm run update",
@@ -29,7 +29,7 @@
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.203",
+    "@leanup/cli": "^1.1.0-rc.206",
     "@leanup/cli-addons": "^1.1.0-rc.203",
     "@leanup/cli-cucumber": "^1.1.0-rc.203",
     "@leanup/git-hooks": "^1.1.0-rc.200",
