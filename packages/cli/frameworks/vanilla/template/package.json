@@ -9,7 +9,7 @@
     "test": "lean test"
   },
   "devDependencies": {
-    "@leanup/cli-vanilla": "^1.1.0-rc.207",
-    "@leanup/stack-vanilla": "^1.1.0-rc.208"
+    "@leanup/cli-vanilla": "^1.1.0-rc.209",
+    "@leanup/stack-vanilla": "^1.1.0-rc.209"
   }
 }

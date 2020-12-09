@@ -21,8 +21,8 @@
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
-    "@leanup/cli-angular": "^1.1.0-rc.207",
-    "@leanup/stack-angular": "^1.1.0-rc.208",
+    "@leanup/cli-angular": "^1.1.0-rc.209",
+    "@leanup/stack-angular": "^1.1.0-rc.209",
     "@ngtools/webpack": "next",
     "typescript": "~4.0.5"
   }
