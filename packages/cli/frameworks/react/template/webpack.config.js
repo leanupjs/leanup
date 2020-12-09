@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-react/webpack.config');
+module.exports = require('@leanup/stack-react/webpack.config'\);

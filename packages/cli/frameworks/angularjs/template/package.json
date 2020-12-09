@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@leanup/cli-angularjs": "^1.1.0-rc.202",
+    "@leanup/stack-angularjs": "^1.1.0-rc.202",
     "@types/angular": "^1.8.0"
   }
 }

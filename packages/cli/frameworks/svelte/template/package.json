@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@leanup/cli-svelte": "^1.1.0-rc.202",
+    "@leanup/stack-svelte": "^1.1.0-rc.202",
     "@pyoner/svelte-types": "^3.4.4-2",
     "@tsconfig/svelte": "^1.0.10"
   }

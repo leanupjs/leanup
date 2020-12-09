@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@leanup/cli-vue3": "^1.1.0-rc.202",
+    "@leanup/stack-vue3": "^1.1.0-rc.202",
     "@vue/compiler-sfc": "^3.0.2"
   }
 }

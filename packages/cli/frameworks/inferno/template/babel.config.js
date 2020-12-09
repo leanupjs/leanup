@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-inferno/babel.config');
+module.exports = require('@leanup/stack-inferno/babel.config');

@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-angularjs/babel.config');
+module.exports = require('@leanup/stack-angularjs/babel.config');

@@ -12,6 +12,7 @@
     "inferno": "^7.4.6"
   },
   "devDependencies": {
-    "@leanup/cli-inferno": "^1.1.0-rc.202"
+    "@leanup/cli-inferno": "^1.1.0-rc.202",
+    "@leanup/stack-inferno": "^1.1.0-rc.202"
   }
 }

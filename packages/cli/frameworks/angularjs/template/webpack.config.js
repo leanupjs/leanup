@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-angularjs/webpack.config');
+module.exports = require('@leanup/stack-angularjs/webpack.config'\);
