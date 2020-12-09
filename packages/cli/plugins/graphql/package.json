@@ -9,7 +9,6 @@
     "template/**",
     ".eslintrc.js",
     "index.js",
-    "package-lock.json",
     "webpack.config.js"
   ],
   "keywords": [

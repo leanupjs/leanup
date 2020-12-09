@@ -6,9 +6,7 @@
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
-    "template/**",
-    "package-lock.json",
-    "webpack.config.js"
+    "template/**"
   ],
   "keywords": [
     "babel",
