@@ -41,10 +41,12 @@
     "@leanup/cli": "^1.1.0-rc.203"
   },
   "devDependencies": {
+    "@leanup/stack": "1.1.0-rc.202",
     "@types/node": "^14.14.11",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
+    "@leanup/stack": "1.1.0-rc.202",
     "preact": "^9 || ^10"
   },
   "scripts": {

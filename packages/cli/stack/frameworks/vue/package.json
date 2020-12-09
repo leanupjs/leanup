@@ -41,10 +41,12 @@
     "vue-loader": "^15.9.5"
   },
   "devDependencies": {
+    "@leanup/stack": "1.1.0-rc.202",
     "@types/node": "^14.14.11",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
+    "@leanup/stack": "1.1.0-rc.202",
     "vue": "^2",
     "vue-template-compiler": "^2"
   },
