@@ -39,18 +39,13 @@
     "lean": "lib/cli.js",
     "vue": "lib/cli.js"
   },
-  "dependencies": {
-    "@leanup/cli": "^1.1.0-rc.202",
-    "@leanup/stack-webpack": "1.1.0-rc.201",
-    "vue-loader": "^15.9.5"
-  },
   "devDependencies": {
+    "@leanup/cli": "^1.1.0-rc.202",
     "@types/node": "^14.14.11",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
-    "vue": "^2",
-    "vue-template-compiler": "^2"
+    "@leanup/cli": "^1.1.0-rc.202"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
