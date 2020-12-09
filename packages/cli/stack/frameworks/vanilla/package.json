@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-vanilla",
-  "version": "1.1.0-rc.205",
+  "version": "1.1.0-rc.207",
   "description": "This package contains the VanillaJS extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -33,10 +33,10 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-webpack": "1.1.0-rc.201"
+    "@leanup/stack-webpack": "^1.1.0-rc.207"
   },
   "devDependencies": {
-    "@leanup/stack": "1.1.0-rc.202",
+    "@leanup/stack": "^1.1.0-rc.207",
     "@types/node": "^14.14.11",
     "typescript": "^4.1.2"
   },
