@@ -3,9 +3,14 @@
   "version": "1.1.0-rc.209",
   "description": "",
   "scripts": {
+    "build": "lean build",
+    "coverage": "lean coverage",
+    "e2e": "lean e2e",
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
+    "serve": "lean serve",
     "start": "npm run serve -- --open",
+    "test": "lean test",
     "update": "npm install --legacy-peer-deps && npm update --legacy-peer-deps"
   },
   "husky": {
