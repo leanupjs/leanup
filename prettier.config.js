@@ -1,1 +1,1 @@
-module.exports = require('./packages/cli/core/format/prettier.config');
+module.exports = require('./packages/cli/stack/core/prettier.config');
