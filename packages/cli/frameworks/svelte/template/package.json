@@ -1,6 +1,6 @@
 {
   "name": "@template/svelte",
-  "version": "1.1.0-rc.204",
+  "version": "1.1.0-rc.205",
   "scripts": {
     "build": "svelte build",
     "coverage": "svelte coverage",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@leanup/cli-svelte": "^1.1.0-rc.204",
-    "@leanup/stack-svelte": "^1.1.0-rc.204",
+    "@leanup/stack-svelte": "^1.1.0-rc.205",
     "@pyoner/svelte-types": "^3.4.4-2",
     "@tsconfig/svelte": "^1.0.10"
   }
