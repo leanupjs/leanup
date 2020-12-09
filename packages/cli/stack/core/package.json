@@ -4,9 +4,6 @@
   "description": "This module contains all required tools to serve, test and build a framework neutral SPA.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
-  "files": [
-    "postcss.config.js"
-  ],
   "keywords": [
     "eslint",
     "esbuild",

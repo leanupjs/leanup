@@ -1,0 +1,1 @@
+npm unpublish @leanup/$1@$2 --force
