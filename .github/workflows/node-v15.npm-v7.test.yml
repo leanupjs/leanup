@@ -20,7 +20,7 @@ on:
 jobs:
   build:
     runs-on: ${{ matrix.os }}
-    continue-on-error: true
+    # continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
@@ -34,11 +34,13 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{ matrix.node }}
-      - name: Install and update dependencies
-        run: npm run update
+      - name: Install dependencies
+        run: |
+          npm i lerna --no-save
+          npx lerna exec --ignore=@template/* --parallel -- npm ci
       - name: Test all framework variants
         run: sh wake-up-all.sh ${{github.event.inputs.tag}}
         working-directory: scripts

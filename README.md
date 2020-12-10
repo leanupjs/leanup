@@ -12,6 +12,7 @@
 [![license][license]][license-url]
 [![lernajs][lernajs]][lernajs-url]
 [![prettier][prettier]][prettier-url]
+[![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
@@ -36,6 +37,7 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
   - [Frameworks](#frameworks)
   - [Extensions](#extensions)
   - [Thinks](#thinks)
+- [Alternatives](#alternatives)
 
 ## Motivation
 
@@ -89,38 +91,38 @@ There are some working examples:
 
 ## Tools
 
-| Tool/Technology  |    Description    | Status | Note                       |
-| ---------------- | :---------------: | :----: | :------------------------- |
-| [TypeScript]     |     Language      |   ✔️   | ready                      |
-| [Webpack]        |      Bundler      |   ✔️   | ready                      |
-| [ESBuild]        |    Transpiler     |   ✔️   | ready                      |
-| [Babel]          |    Transpiler     |   ✔️   | ready                      |
-| [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      |
-| [Chai]           |     Assertion     |   ✔️   | ready                      |
-| [Sinon]          |      Mocking      |   ✔️   | ready                      |
-| [NYC]            |   Code-Coverage   |   ✔️   | ready                      |
-| [ESLint]         |   Code-Checker    |   ✔️   | ready                      |
-| [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️   | ready                      |
+| Tool/Technology  |    Description    | Status | Note                       | Rating                                                                                                                                               |
+| ---------------- | :---------------: | :----: | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [TypeScript]     |     Language      |   ✔️   | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
+| [Webpack]        |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
+| [ESBuild]        |    Transpiler     |   ✔️   | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
+| [Babel]          |    Transpiler     |   ✔️   | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
+| [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
+| [Chai]           |     Assertion     |   ✔️   | ready                      | [![chai](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/chai)                                        |
+| [Sinon]          |      Mocking      |   ✔️   | ready                      | [![sinon](https://snyk.io/advisor/npm-package/sinon/badge.svg)](https://snyk.io/advisor/npm-package/sinon)                                           |
+| [NYC]            |   Code-Coverage   |   ✔️   | ready                      | [![nyc](https://snyk.io/advisor/npm-package/nyc/badge.svg)](https://snyk.io/advisor/npm-package/nyc)                                                 |
+| [ESLint]         |   Code-Checker    |   ✔️   | ready                      | [![eslint](https://snyk.io/advisor/npm-package/eslint/badge.svg)](https://snyk.io/advisor/npm-package/eslint)                                        |
+| [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️   | ready                      | [![nightwatch](https://snyk.io/advisor/npm-package/nightwatch/badge.svg)](https://snyk.io/advisor/npm-package/nightwatch)                            |
 | [Allsure]        |      Report       |   ✔️   | ready                      |
-| [Cucumber]       |        BDD        |   ✔️   | ready                      |
-| [robotframework] |        BDD        |   ⌛   | will be evaluated          |
-| [Storybook]      |   Documentation   |   ⌛   | in progress                |
-| [OpenAPI]        |        API        |   ✔️   | ready                      |
-| [GraphQL]        |        API        |   ✔️   | ready                      |
-| [Workbox]        |        PWA        |   ✔️   | ready                      |
-| [Lerna]          |     Mono-Repo     |   ✔️   | ready                      |
-| [Ant-Design]     |   Design-System   |   ✔️   | proved                     |
-| [Material]       |   Design-System   |   ✔️   | proved                     |
-| [Bootstrap]      |   Design-System   |   ✔️   | proved                     |
-| [Tailwindcss]    |   Design-System   |   ✔️   | proved                     |
-| [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |
-| [Less]           |        CSS        |   ✔️   | ready                      |
-| [Sass]           |        CSS        |   ✔️   | ready                      |
+| [Cucumber]       |        BDD        |   ✔️   | ready                      | [![cucumber](https://snyk.io/advisor/npm-package/cucumber/badge.svg)](https://snyk.io/advisor/npm-package/cucumber)                                  |
+| [robotframework] |        BDD        |   ⌛   | will be evaluated          |                                                                                                                                                      |
+| [Storybook]      |   Documentation   |   ⌛   | in progress                | [![storybook](https://snyk.io/advisor/npm-package/storybook/badge.svg)](https://snyk.io/advisor/npm-package/storybook)                               |
+| [OpenAPI]        |        API        |   ✔️   | ready                      |                                                                                                                                                      |
+| [GraphQL]        |        API        |   ✔️   | ready                      | [![graphql](https://snyk.io/advisor/npm-package/graphql/badge.svg)](https://snyk.io/advisor/npm-package/graphql)                                     |
+| [Workbox]        |        PWA        |   ✔️   | ready                      | [![workbox](https://snyk.io/advisor/npm-package/workbox/badge.svg)](https://snyk.io/advisor/npm-package/workbox)                                     |
+| [Lerna]          |     Mono-Repo     |   ✔️   | ready                      | [![lerna](https://snyk.io/advisor/npm-package/lerna/badge.svg)](https://snyk.io/advisor/npm-package/lerna)                                           |
+| [Ant-Design]     |   Design-System   |   ✔️   | proved                     | [![antd](https://snyk.io/advisor/npm-package/antd/badge.svg)](https://snyk.io/advisor/npm-package/antd)                                              |
+| [Material]       |   Design-System   |   ✔️   | proved                     | [![@material/textfield](https://snyk.io/advisor/npm-package/@material/textfield/badge.svg)](https://snyk.io/advisor/npm-package/@material/textfield) |
+| [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
+| [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
+| [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
+| [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
+| [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
 | [PostCSS]        |        CSS        |   ✔️   | ready                      |
-| [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               |
-| [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
-| [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               |
-| [Cypress]        |  E2E-Test-Runner  |   ❌   | excluded \*                |
+| [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
+| [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* | [![testcafe](https://snyk.io/advisor/npm-package/testcafe/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                                |
+| [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               | [![tslint](https://snyk.io/advisor/npm-package/tslint/badge.svg)](https://snyk.io/advisor/npm-package/tslint)                                        |
+| [Cypress]        |  E2E-Test-Runner  |   ❌   | excluded \*                | [![cypress](https://snyk.io/advisor/npm-package/cypress/badge.svg)](https://snyk.io/advisor/npm-package/cypress)                                     |
 
 > \*
 > Arguments agains [Cypress]:
@@ -189,6 +191,13 @@ There a separate packages for important application features.
 - [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️
 - [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️
 - [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛ (in progress)
+
+## Alternatives
+
+- Angular [![@angular/cli](https://snyk.io/advisor/npm-package/@angular/cli/badge.svg)](https://snyk.io/advisor/npm-package/@angular/cli)
+- Neutrino [![neutrino](https://snyk.io/advisor/npm-package/neutrino/badge.svg)](https://snyk.io/advisor/npm-package/neutrino)
+- Snowpack [![snowpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)
+<!-- - Leanup [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli) -->
 
 [babel]: https://babeljs.io
 [typescript]: https://typescriptlang.org
