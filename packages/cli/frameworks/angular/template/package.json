@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.1.0-rc.210",
+  "version": "1.1.0-rc.212",
   "scripts": {
     "build": "angular build",
     "coverage": "angular coverage",
@@ -21,8 +21,8 @@
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
-    "@leanup/cli-angular": "^1.1.0-rc.210",
-    "@leanup/stack-angular": "^1.1.0-rc.210",
+    "@leanup/cli-angular": "^1.1.0-rc.212",
+    "@leanup/stack-angular": "^1.1.0-rc.212",
     "@ngtools/webpack": "next",
     "typescript": "~4.0.5"
   }

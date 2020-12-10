@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.210",
+  "version": "1.1.0-rc.212",
   "description": "",
   "scripts": {
     "build": "lean build",
@@ -28,17 +28,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.209",
-    "@leanup/lib": "^1.1.0-rc.209",
+    "@leanup/form": "^1.1.0-rc.212",
+    "@leanup/lib": "^1.1.0-rc.212",
     "navigo": "^7.1.2",
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.210",
+    "@leanup/cli": "^1.1.0-rc.212",
     "@leanup/cli-addons": "^1.1.0-rc.209",
     "@leanup/cli-cucumber": "^1.1.0-rc.209",
     "@leanup/git-hooks": "^1.1.0-rc.209",
-    "@leanup/stack": "^1.1.0-rc.210",
+    "@leanup/stack": "^1.1.0-rc.212",
     "chromedriver": "^87.0.0",
     "geckodriver": "^1.21.0",
     "selenium-server": "^3.141.59",

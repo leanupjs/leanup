@@ -1,6 +1,6 @@
 {
   "name": "@template/preact",
-  "version": "1.1.0-rc.210",
+  "version": "1.1.0-rc.212",
   "scripts": {
     "build": "preact build",
     "coverage": "preact coverage",
@@ -12,7 +12,7 @@
     "preact": "^10.5.7"
   },
   "devDependencies": {
-    "@leanup/cli-preact": "^1.1.0-rc.210",
-    "@leanup/stack-preact": "^1.1.0-rc.210"
+    "@leanup/cli-preact": "^1.1.0-rc.212",
+    "@leanup/stack-preact": "^1.1.0-rc.212"
   }
 }
