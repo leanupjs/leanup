@@ -23,11 +23,21 @@ jobs:
           persist-credentials: false
           ref: ${{ env.branch }}
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.1.2
         with:
-          node-version: 15.x
-      - name: Install and update dependencies
-        run: npm run update
+          node-version: 14.x
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        run: |
+          npm i lerna --no-save
+          npx lerna exec --ignore=@template/* --parallel -- npm install
+      - name: Update dependencies
+        run: npx lerna exec --ignore=@template/* --parallel -- npm update
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
