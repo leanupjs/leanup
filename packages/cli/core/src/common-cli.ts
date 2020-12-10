@@ -53,8 +53,16 @@ export class CommonCLI extends AbstractCLI {
             });
           } catch (error) {}
         });
-        
-        return ['npm', 'install', '--loglevel=error', '--prefer-offline', '--no-audit', '--progress=false', '--legacy-peer-deps'];
+
+        return [
+          'npm',
+          'install',
+          '--loglevel=error',
+          '--prefer-offline',
+          '--no-audit',
+          '--progress=false',
+          '--legacy-peer-deps',
+        ];
       }
     );
 
@@ -102,10 +110,10 @@ export class CommonCLI extends AbstractCLI {
       'Building (https://webpack.js.org/)',
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
-<<<<<<< HEAD
         const spawnArgs = ['cross-env'];
-=======
-        if (options.environment) {
+        if (options.mode) {
+          spawnArgs.push(`NODE_ENV=${options.mode}`);
+        }
         spawnArgs.push(`webpack`);
         if (options.analyze) {
           spawnArgs.push(`--analyze`);
