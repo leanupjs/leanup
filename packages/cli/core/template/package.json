@@ -3,15 +3,16 @@
   "version": "1.1.0-rc.212",
   "description": "",
   "scripts": {
-    "build": "lean build",
-    "coverage": "lean coverage",
-    "e2e": "lean e2e",
-    "reinstall": "npm run remove && npm run update",
-    "remove": "rm -rf node_modules package-lock.json",
-    "serve": "lean serve",
-    "start": "npm run serve -- --open",
-    "test": "lean test",
-    "update": "npm install --legacy-peer-deps && npm update --legacy-peer-deps"
+      "build": "cross-env NODE_ENV=production webpack",
+      "coverage": "cross-env NODE_ENV=test nyc mocha",
+      "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
+      "e2e": "nightwatch",
+      "reinstall": "npm run remove && npm run update",
+      "remove": "rm -rf node_modules package-lock.json",
+      "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
+      "start": "npm run serve -- --open=chrome",
+      "test": "cross-env NODE_ENV=test mocha",
+      "update": "npm install --legacy-peer-deps && npm update --legacy-peer-deps"
   },
   "husky": {
     "hooks": {

@@ -16,8 +16,8 @@
     }
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.209",
     "@leanup/git-hooks": "1.1.0-rc.155",
+    "@leanup/stack": "^1.1.0-rc.212",
     "lerna": "^3.22.1"
   },
   "engines": {
