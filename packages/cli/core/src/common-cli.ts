@@ -57,7 +57,7 @@ export class CommonCLI extends AbstractCLI {
           } catch (error) {}
         });
 
-        return ['npm', 'install'];
+        return ['npm', 'install', '--loglevel=error', '--prefer-offline', '--no-audit', '--progress=false'];
       }
     );
 
