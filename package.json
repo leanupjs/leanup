@@ -8,7 +8,7 @@
     "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
     "remove": "lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
-    "update": "npm install --legacy-peer-deps && lerna exec --ignore=@template/* --stream -- npm install --legacy-peer-deps && npm update --legacy-peer-deps && lerna exec --ignore=@template/* --stream -- npm update --legacy-peer-deps"
+    "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update"
   },
   "husky": {
     "hooks": {
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@leanup/git-hooks": "1.1.0-rc.155",
-    "@leanup/stack": "^1.1.0-rc.212",
+    "@leanup/stack": "^1.1.0-rc.213",
     "lerna": "^3.22.1"
   },
   "engines": {

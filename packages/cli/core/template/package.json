@@ -12,7 +12,7 @@
     "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "start": "npm run serve -- --open=chrome",
     "test": "cross-env NODE_ENV=test mocha",
-    "update": "npm install --legacy-peer-deps && npm update --legacy-peer-deps"
+    "update": "npm install && npm update"
   },
   "husky": {
     "hooks": {

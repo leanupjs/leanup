@@ -37,7 +37,7 @@
     "mocha": "^8.2.1",
     "mock-local-storage": "^1.1.15",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.1"
+    "sinon": "^9.2.2"
   },
   "engines": {
     "node": ">=10 <16",
