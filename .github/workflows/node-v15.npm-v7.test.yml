@@ -42,5 +42,7 @@ jobs:
           npm i lerna --no-save
           npx lerna exec --ignore=@template/* --parallel -- npm ci
       - name: Test all framework variants
-        run: sh wake-up-all.sh ${{github.event.inputs.tag}}
+        run: |
+          rm ../.eslintrc.js
+          sh wake-up-all.sh ${{github.event.inputs.tag}}
         working-directory: scripts
