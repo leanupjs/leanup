@@ -3,7 +3,7 @@ import * as path from 'path';
 import { CommonCLI } from '@leanup/cli/lib/common-cli';
 import { CreateOps } from '@leanup/cli/lib/interfaces';
 
-export class VanillaCLI extends CommonCLI {
+export class LitElementCLI extends CommonCLI {
   constructor(name: string, version: string) {
     super(name, version);
 

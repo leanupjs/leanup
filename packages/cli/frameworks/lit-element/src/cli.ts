@@ -2,9 +2,9 @@
 
 import { PackageJson } from '@leanup/cli/lib/interfaces';
 
-import { VanillaCLI } from './vanilla-cli';
+import { LitElementCLI } from './lit-element-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 
-const cli = new VanillaCLI('vanilla', packageJson.version);
+const cli = new LitElementCLI('lit-element', packageJson.version);
 cli.parse();
