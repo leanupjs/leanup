@@ -35,8 +35,8 @@ The following framework adapter are available:
 | ---------- | ---------------------------- |
 | angular    | `@leanup/cli-angular@next`   |
 | angularjs  | `@leanup/cli-angularjs@next` |
-| inferno    | `@leanup/cli-inferno@next`   |
 | aurelia    | `@leanup/cli-aurelia@next`   |
+| inferno    | `@leanup/cli-inferno@next`   |
 | preact     | `@leanup/cli-preact@next`    |
 | react      | `@leanup/cli-react@next`     |
 | svelte     | `@leanup/cli-svelte@next`    |
