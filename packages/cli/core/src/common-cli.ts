@@ -1,9 +1,7 @@
 import * as path from 'path';
 
 import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
-import {
-    BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
-} from './interfaces';
+import { BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps } from './interfaces';
 
 export const commonOptions: CommandOption[] = [{ flags: '-s, --silent', description: 'minimal consoles spending' }];
 
@@ -54,15 +52,7 @@ export class CommonCLI extends AbstractCLI {
           } catch (error) {}
         });
 
-        return [
-          'npm',
-          'install',
-          '--loglevel=error',
-          '--prefer-offline',
-          '--no-audit',
-          '--progress=false',
-          '--legacy-peer-deps',
-        ];
+        return ['npm', 'install', '--loglevel=error', '--prefer-offline', '--no-audit', '--progress=false'];
       }
     );
 
