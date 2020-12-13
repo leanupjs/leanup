@@ -1,3 +1,5 @@
+import '../series/create/component.lit-element';
+import '../series/edit/component.lit-element';
 import '../series/list/component.lit-element';
 
 import { customElement, html, TemplateResult } from 'lit-element';
@@ -31,6 +33,10 @@ export class AppComponent extends LitElementComponent {
       <h4>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h4>
       <small>${this.ctrl.finishedRendering} ms upcomming time</small>
       ${this.resolvedRoute.url === 'series' ? html`<list-serie-component />` : ''}
+      ${this.resolvedRoute.url === 'series/create' ? html`<create-serie-component />` : ''}
+      ${this.resolvedRoute.url === 'series/:id/edit'
+        ? html`<edit-serie-component isTrue resolvedRoute="${JSON.stringify(this.resolvedRoute)}" />`
+        : ''}
       <br />
       <small> Build with: ${this.ctrl.cli.name} v${this.ctrl.cli.version} </small>
     </div>`;
