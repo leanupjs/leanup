@@ -1,0 +1,17 @@
+{
+  "name": "@template/lit-element",
+  "version": "1.1.0-rc.214",
+  "scripts": {
+    "build": "lit-element build",
+    "coverage": "lit-element coverage",
+    "e2e": "lit-element e2e",
+    "serve": "lit-element serve",
+    "test": "lit-element test"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "devDependencies": {
+    "@leanup/cli-lit-element": "^1.1.0-rc.214"
+  }
+}
