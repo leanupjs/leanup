@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.215",
+  "version": "1.1.0-rc.216",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -37,7 +37,7 @@
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.215",
+    "@leanup/cli": "^1.1.0-rc.216",
     "@leanup/cli-addons": "^1.1.0-rc.215",
     "@leanup/cli-cucumber": "^1.1.0-rc.215",
     "@leanup/git-hooks": "^1.1.0-rc.213",
