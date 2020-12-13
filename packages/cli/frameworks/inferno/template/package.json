@@ -1,6 +1,6 @@
 {
   "name": "@template/inferno",
-  "version": "1.1.0-rc.216",
+  "version": "1.1.0-rc.217",
   "scripts": {
     "build": "inferno build",
     "coverage": "inferno coverage",
@@ -12,7 +12,7 @@
     "inferno": "^7.4.6"
   },
   "devDependencies": {
-    "@leanup/cli-inferno": "^1.1.0-rc.216",
-    "@leanup/stack-inferno": "^1.1.0-rc.215"
+    "@leanup/cli-inferno": "^1.1.0-rc.217",
+    "@leanup/stack-inferno": "^1.1.0-rc.217"
   }
 }
