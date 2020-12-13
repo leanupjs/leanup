@@ -91,5 +91,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Test all framework variants
-        run: sh wake-up-all.sh ${{env.tag}}
+        run: |
+          rm ../.eslintrc.js
+          sh wake-up-all.sh ${{github.event.inputs.tag}}
         working-directory: scripts
