@@ -1,6 +1,6 @@
 {
   "name": "@template/lit-element",
-  "version": "1.1.0-rc.214",
+  "version": "1.1.0-rc.215",
   "scripts": {
     "build": "lit-element build",
     "coverage": "lit-element coverage",
@@ -12,6 +12,6 @@
     "lit-element": "^2.4.0"
   },
   "devDependencies": {
-    "@leanup/cli-lit-element": "^1.1.0-rc.214"
+    "@leanup/cli-lit-element": "^1.1.0-rc.215"
   }
 }
