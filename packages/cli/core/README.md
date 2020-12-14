@@ -9,8 +9,6 @@
 <br>
 <hr>
 
-![GitHub CI](https://github.com/leanupjs/leanup/workflows/GitHub%20CI%20-%20Publish%20to%20NPM/badge.svg)
-
 [![downloads][downloads]][downloads-url]
 [![npm][npm]][npm-url]
 [![license][license]][license-url]
