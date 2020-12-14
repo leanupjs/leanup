@@ -1,7 +1,6 @@
 import { ApplicationRef, Component } from '@angular/core';
 
 import { RouterService } from '../../services/router/service';
-import { Filters } from '../../shares/filters';
 import { AppController, ResolvedRoute } from './controller';
 
 @Component({
@@ -19,7 +18,6 @@ import { AppController, ResolvedRoute } from './controller';
   `,
 })
 export class AppComponent extends AppController {
-  public filters = Filters;
   public resolvedRoute: ResolvedRoute = {
     url: 'series',
   };
