@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.1.0-rc.217",
+  "version": "1.1.0-rc.219",
   "description": "",
   "scripts": {
     "build": "vue build",
@@ -14,8 +14,8 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli-vue": "^1.1.0-rc.217",
-    "@leanup/stack-vue": "^1.1.0-rc.217",
+    "@leanup/cli-vue": "^1.1.0-rc.219",
+    "@leanup/stack-vue": "^1.1.0-rc.219",
     "vue-template-compiler": "^2.6.12"
   }
 }
