@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^6.2.0",
+    "commander": "^6.2.1",
     "deepmerge": "^4.2.2",
     "prettier": "^2.2.1"
   },
