@@ -5,6 +5,7 @@ import '../series/list/component.lit-element';
 import { customElement, html, TemplateResult } from 'lit-element';
 
 import { RouterService } from '../../services/router/service';
+import { Filters } from '../../shares/filters';
 import { LitElementComponent } from '../component.lit-element';
 import { AppController, ResolvedRoute } from './controller';
 
@@ -29,13 +30,15 @@ export class AppComponent extends LitElementComponent {
 
   public render(): TemplateResult {
     return html`<div id="app">
-      <code>- is currently not full implemented -</code>
       <h4>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h4>
       <small>${this.ctrl.finishedRendering} ms upcomming time</small>
-      ${this.resolvedRoute.url === 'series' ? html`<list-serie-component />` : ''}
-      ${this.resolvedRoute.url === 'series/create' ? html`<create-serie-component />` : ''}
+      ${this.resolvedRoute.url === 'series' ? html`<list-serie-component></list-serie-component>` : ''}
+      ${this.resolvedRoute.url === 'series/create' ? html`<create-serie-component></create-serie-component>` : ''}
       ${this.resolvedRoute.url === 'series/:id/edit'
-        ? html`<edit-serie-component isTrue resolvedRoute="${JSON.stringify(this.resolvedRoute)}" />`
+        ? html`<edit-serie-component
+            isTrue
+            resolvedRoute="${JSON.stringify(this.resolvedRoute)}"
+          ></edit-serie-component>`
         : ''}
       <small>
         Used filters: ${Filters.date(this.ctrl.dummies.date)} | ${Filters.currency(this.ctrl.dummies.price)} €

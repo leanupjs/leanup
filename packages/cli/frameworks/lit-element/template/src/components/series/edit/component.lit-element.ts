@@ -13,17 +13,15 @@ export class EditSerieComponent extends LitElementComponent {
   @property({ attribute: true, type: Object })
   public resolvedRoute: ResolvedRoute;
 
-  public constructor() {
-    super();
-  }
-
   public connectedCallback(): void {
     super.connectedCallback();
     this.ctrl = new EditSerieController(this.resolvedRoute.params.id);
+    setTimeout(() => {
+      this.querySelector('editor-serie-component').editorForm = this.ctrl.editorForm;
+    }, 0);
   }
 
   public render(): TemplateResult {
-    // <editor-serie-component editorForm=${JSON.stringify(this.ctrl.editorForm)} />
     return html`
       <form
         @submit=${(event: Event) => {
@@ -33,6 +31,7 @@ export class EditSerieComponent extends LitElementComponent {
         }}
       >
         <h5>Edit a existing measuring serie</h5>
+        <editor-serie-component></editor-serie-component>
         <button class="btn btn-primary" type="submit" id="submit">Edit</button>
         <button
           class="btn btn-secondary"

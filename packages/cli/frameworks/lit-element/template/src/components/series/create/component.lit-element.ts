@@ -9,8 +9,14 @@ import { CreateSerieController } from './controller';
 export class CreateSerieComponent extends LitElementComponent {
   public ctrl: CreateSerieController = new CreateSerieController();
 
+  public connectedCallback(): void {
+    super.connectedCallback();
+    setTimeout(() => {
+      this.querySelector('editor-serie-component').editorForm = this.ctrl.editorForm;
+    }, 0);
+  }
+
   public render(): TemplateResult {
-    // <editor-serie-component editorForm=${JSON.stringify(this.ctrl.editorForm)} />
     return html`
       <form
         @submit=${(event: Event) => {
@@ -20,6 +26,7 @@ export class CreateSerieComponent extends LitElementComponent {
         }}
       >
         <h5>Create a new measuring serie</h5>
+        <editor-serie-component></editor-serie-component>
         <button class="btn btn-primary" type="submit" id="submit">Add</button>
         <button
           class="btn"

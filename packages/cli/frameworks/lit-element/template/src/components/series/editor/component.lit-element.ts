@@ -1,3 +1,5 @@
+import '../../input/component.lit-element';
+
 import { customElement, html, property, TemplateResult } from 'lit-element';
 
 import { LitElementComponent } from '../../component.lit-element';
@@ -11,11 +13,20 @@ export class EditorSerieComponent extends LitElementComponent {
   @property({ attribute: true, type: Object })
   public editorForm: EditorForm;
 
+  public connectedCallback(): void {
+    super.connectedCallback();
+    setTimeout(() => {
+      const inputs = this.querySelectorAll('input-component');
+      inputs[0].control = this.editorForm.getControl('title');
+      inputs[1].control = this.editorForm.getControl('unit');
+    }, 10);
+  }
+
   public render(): TemplateResult {
     return html`
       <div>
-        <InputComponent control=${JSON.stringify(this.editorForm.getControl('title') as InputControl)} />
-        <InputComponent control=${JSON.stringify(this.editorForm.getControl('unit') as InputControl)} />
+        <input-component></input-component>
+        <input-component></input-component>
       </div>
     `;
   }
