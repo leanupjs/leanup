@@ -79,7 +79,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
   const MULTIPLE_REPLACEMENTS = [
     // https://nodejs.org/dist/latest-v14.x/docs/api/process.html#process_process_env
     // https://github.com/webpack/webpack/issues/7074#issuecomment-663855534
-    { search: '$$NODE_ENV$$', replace: argv.mode },
+    { search: '$$NODE_ENV$$', replace: process.env.NODE_ENV },
   ];
 
   // https://docs.npmjs.com/files/package.json#people-fields-author-contributors
