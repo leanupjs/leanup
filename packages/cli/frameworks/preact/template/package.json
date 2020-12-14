@@ -1,13 +1,6 @@
 {
   "name": "@template/preact",
   "version": "1.1.0-rc.219",
-  "scripts": {
-    "build": "preact build",
-    "coverage": "preact coverage",
-    "e2e": "preact e2e",
-    "serve": "preact serve",
-    "test": "preact test"
-  },
   "dependencies": {
     "preact": "^10.5.7"
   },

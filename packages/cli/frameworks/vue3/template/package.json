@@ -1,13 +1,6 @@
 {
   "name": "@template/vue3",
   "version": "1.1.0-rc.219",
-  "scripts": {
-    "build": "vue3 build",
-    "coverage": "vue3 coverage",
-    "e2e": "vue3 e2e",
-    "serve": "vue3 serve",
-    "test": "vue3 test"
-  },
   "dependencies": {
     "vue": "^3.0.2"
   },

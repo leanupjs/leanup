@@ -1,13 +1,6 @@
 {
   "name": "@template/react",
   "version": "1.1.0-rc.219",
-  "scripts": {
-    "build": "react build",
-    "coverage": "react coverage",
-    "e2e": "react e2e",
-    "serve": "react serve",
-    "test": "react test"
-  },
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

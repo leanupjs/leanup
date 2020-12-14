@@ -1,13 +1,6 @@
 {
   "name": "@template/angularjs",
   "version": "1.1.0-rc.219",
-  "scripts": {
-    "build": "angularjs build",
-    "coverage": "angularjs coverage",
-    "e2e": "angularjs e2e",
-    "serve": "angularjs serve",
-    "test": "angularjs test"
-  },
   "dependencies": {
     "angular": "^1.8.2"
   },

@@ -1,14 +1,6 @@
 {
   "name": "@template/aurelia",
   "version": "1.1.0-rc.219",
-  "scripts": {
-    "build": "aurelia build",
-    "coverage": "aurelia coverage",
-    "e2e": "aurelia e2e",
-    "serve": "aurelia serve",
-    "test": "aurelia test",
-    "update": "npm install && npm upate"
-  },
   "dependencies": {
     "aurelia-bootstrapper": "^2.3.3",
     "aurelia-framework": "^1.3.1"
