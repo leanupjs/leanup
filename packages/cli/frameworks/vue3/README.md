@@ -37,9 +37,3 @@
 ## Installation
 
 `npm install @leanup/cli @leanup/cli-vue3 --save-dev`
-
-## Usage
-
-> see [@leanup/cli]
-
-[@leanup/cli]: https://www.npmjs.com/package/@leanup/cli

@@ -11,14 +11,6 @@
 [![peer-dependencies][peer-dependencies]][peer-dependencies-url]
 [![optional-dependencies][optional-dependencies]][optional-dependencies-url]
 
-# `@leanup/cli-vanilla`
-
-This package contains the [Vanilla](http://vanilla-js.com/) extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
-
-## Installation
-
-`npm install @leanup/cli @leanup/cli-vanilla --save-dev`
-
 [npm]: https://img.shields.io/npm/v/@leanup/cli-vanilla
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-vanilla
 [dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/frameworks/vanilla
@@ -38,3 +30,11 @@ This package contains the [Vanilla](http://vanilla-js.com/) extension for the [@
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 [@leanup/cli]: https://www.npmjs.com/package/@leanup/cli
+
+# `@leanup/cli-vanilla`
+
+This package contains the [Vanilla](http://vanilla-js.com/) extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+
+## Installation
+
+`npm install @leanup/cli @leanup/cli-vanilla --save-dev`

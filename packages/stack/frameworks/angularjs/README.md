@@ -23,73 +23,10 @@
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 
-# `@leanup/cli-angularjs`
+# `@leanup/stack-angularjs`
 
-> This package contains the [AngularJS](https://angularjs.org/) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+> This package contains the [AngularJS](https://angularjs.org/) framework extension for the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-angularjs --save-dev`
-
-## Usage
-
-## Usage
-
-### Developing
-
-> lean serve -f angularjs -h
-
-```bash
-Usage: lean serve [options]
-
-Developing
-
-Options:
-  -e, --environment <environment>  technical environment (CMS)
-  -t, --template <template>        corporate design (Style)
-  -o, --open                       open the default browser
-  -p, --port                       port
-  --vuetify                        add optional loader for vuetify (@leanup/cli-vue and vuetify-loader required)
-  -h, --help                       output usage information
-```
-
-### Building
-
-> lean build -f angularjs -h
-
-```bash
-Usage: lean build [options]
-
-Building
-
-Options:
-  -e, --environment <environment>  technical environment (CMS)
-  -t, --template <template>        corporate design (Style)
-  -a, --analyzer                   generate an addional analyzer report (@leanup/cli-addons required)
-  -g, --gzip                       addional file compression (@leanup/cli-addons required)
-  -w, --worker                     split application separate worker files (@leanup/cli-addons required)
-  --vuetify                        add optional loader for vuetify (@leanup/cli-vue and vuetify-loader required)
-  -h, --help                       output usage information
-```
-
-### Unit-Testing
-
-> see [@leanup/cli]
-
-### Test-Coverage
-
-> see [@leanup/cli]
-
-### E2E-Testing
-
-> see [@leanup/cli]
-
-### Formatter
-
-> see [@leanup/cli]
-
-### Linter
-
-> see [@leanup/cli]
-
-[@leanup/cli]: https://www.npmjs.com/package/@leanup/cli
+`npm install @leanup/stack @leanup/stack-angularjs --save-dev`

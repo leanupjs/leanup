@@ -26,9 +26,9 @@
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 
-# `@leanup/cli-vue3`
+# `@leanup/stack-vue3`
 
-> This package contains the [vue3](https://v3.vuejs.org) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+> This package contains the [vue3](https://v3.vuejs.org) framework extension for the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Vue 3 RC
 
@@ -36,10 +36,4 @@
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-vue3 --save-dev`
-
-## Usage
-
-> see [@leanup/cli]
-
-[@leanup/cli]: https://www.npmjs.com/package/@leanup/cli
+`npm install @leanup/stack @leanup/stack-vue3 --save-dev`

@@ -23,71 +23,10 @@
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 
-# `@leanup/cli-aurelia`
+# `@leanup/stack-aurelia`
 
-> This package contains the [Aurelia](https://aurelia.io) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+> This package contains the [Aurelia](https://aurelia.io) framework extension for the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-aurelia --save-dev`
-
-## Usage
-
-## Usage
-
-### Developing
-
-> lean serve -f aurelia -h
-
-```bash
-Usage: lean serve [options]
-
-Developing
-
-Options:
-  -e, --environment <environment>  technical environment (CMS)
-  -t, --template <template>        corporate design (Style)
-  -o, --open                       open the default browser
-  -p, --port                       port
-  -h, --help                       output usage information
-```
-
-### Building
-
-> lean build -f aurelia -h
-
-```bash
-Usage: lean build [options]
-
-Building
-
-Options:
-  -e, --environment <environment>  technical environment (CMS)
-  -t, --template <template>        corporate design (Style)
-  -a, --analyzer                   generate an addional analyzer report (@leanup/cli-addons required)
-  -g, --gzip                       addional file compression (@leanup/cli-addons required)
-  -w, --worker                     split application separate worker files (@leanup/cli-addons required)
-  -h, --help                       output usage information
-```
-
-### Unit-Testing
-
-> see [@leanup/cli]
-
-### Test-Coverage
-
-> see [@leanup/cli]
-
-### E2E-Testing
-
-> see [@leanup/cli]
-
-### Formatter
-
-> see [@leanup/cli]
-
-### Linter
-
-> see [@leanup/cli]
-
-[@leanup/cli]: https://www.npmjs.com/package/@leanup/cli
+`npm install @leanup/stack @leanup/stack-aurelia --save-dev`
