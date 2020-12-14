@@ -70,7 +70,7 @@ jobs:
         run: |
           npm install
           npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/stack/webpack
+        working-directory: packages/stack/webpack
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/stack
@@ -78,7 +78,7 @@ jobs:
           sleep 60
           npm install
           npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/stack/core
+        working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli
