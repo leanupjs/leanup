@@ -37,6 +37,9 @@ export class AppComponent extends LitElementComponent {
       ${this.resolvedRoute.url === 'series/:id/edit'
         ? html`<edit-serie-component isTrue resolvedRoute="${JSON.stringify(this.resolvedRoute)}" />`
         : ''}
+      <small>
+        Used filters: ${Filters.date(this.ctrl.dummies.date)} | ${Filters.currency(this.ctrl.dummies.price)} €
+      </small>
       <br />
       <small> Build with: ${this.ctrl.cli.name} v${this.ctrl.cli.version} </small>
     </div>`;
