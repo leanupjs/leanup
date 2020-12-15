@@ -3,7 +3,7 @@ const path = require('path');
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
-const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
+const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'stack', 'package.json'));
 
 export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
