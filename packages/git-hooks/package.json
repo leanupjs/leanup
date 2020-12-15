@@ -28,6 +28,6 @@
     "lint-staged": "^10.5.3"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.1.0-rc.156"
+    "@leanup/stack": "^1.1.0-rc.220"
   }
 }
