@@ -3,10 +3,6 @@ import { ApplicationRef, Component } from '@angular/core';
 import { RouterService } from '../../services/router/service';
 import { AppController, ResolvedRoute } from './controller';
 
-// Angular stuff / Why?
-// https://stackoverflow.com/questions/55262583/property-runstaticmethod-is-a-static-member-of-type-democlass
-// <small>Used filters: {{ filters.date(dummies.date) }} | {{ filters.currency(dummies.price) }} €</small><br />
-
 @Component({
   selector: 'app',
   template: `
@@ -16,7 +12,7 @@ import { AppController, ResolvedRoute } from './controller';
       <list-serie *ngIf="resolvedRoute.url === 'series'"></list-serie>
       <create-serie *ngIf="resolvedRoute.url === 'series/create'"></create-serie>
       <edit-serie *ngIf="resolvedRoute.url === 'series/:id/edit'" [resolvedRoute]="resolvedRoute"></edit-serie>
-      <small>Used filters: {{ Filters.date(dummies.date) }} | {{ Filters.currency(dummies.price) }} €</small><br />
+      <small>Used filters: {{ filters.date(dummies.date) }} | {{ filters.currency(dummies.price) }} €</small><br />
       <small>Build with: {{ cli.name }} v{{ cli.version }}</small>
     </div>
   `,
