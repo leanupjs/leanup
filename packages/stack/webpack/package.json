@@ -43,7 +43,7 @@
     "sass-loader": "^10.1.0",
     "string-replace-loader": "^3.0.0",
     "style-loader": "^2.0.0",
-    "webpack": "^4.44.2",
+    "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
