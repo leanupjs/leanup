@@ -40,7 +40,7 @@ export class AppComponent extends InvernoComponent<unknown, AppController> imple
         {this.resolvedRoute.url === 'series/create' && <CreateSerieComponent />}
         {this.resolvedRoute.url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={this.resolvedRoute} />}
         <small>
-          Used filters: {Filters.date(this.ctrl.dummies.date)} |{Filters.currency(this.ctrl.dummies.price)} €
+          Used filters: {Filters.date(this.ctrl.dummies.date)} | {Filters.currency(this.ctrl.dummies.price)} €
         </small>
         <br />
         <small>
