@@ -11,11 +11,11 @@ export class InputComponent extends LitElementComponent {
 
   public render(): TemplateResult {
     return html`
-      <div class="form-group">
+      <div class="p-2">
         ${this.control
-          ? html`<label htmlFor="${this.control.id}">${this.control.label}</label>
+          ? html`<label htmlFor="${this.control.id}" class="font-semibold w-full">${this.control.label}</label>
               <input
-                class="form-control"
+                class="border border-blue p-2 rounded-md"
                 id=${this.control.id}
                 name=${this.control.name}
                 value=${this.control.value as string}

@@ -32,9 +32,9 @@ export class EditSerieComponent extends LitElementComponent {
       >
         <h5>Edit a existing measuring serie</h5>
         <editor-serie-component></editor-serie-component>
-        <button class="btn btn-primary" type="submit" id="submit">Edit</button>
+        <button class="bg-green-700 hover:bg-green-500" type="submit" id="submit">Edit</button>
         <button
-          class="btn btn-secondary"
+          class="bg-blue-700 hover:bg-blue-500"
           type="reset"
           id="cancel"
           @click=${() => {
@@ -44,7 +44,7 @@ export class EditSerieComponent extends LitElementComponent {
           Abbrechen
         </button>
         <button
-          class="btn btn-danger"
+          class="bg-red-700 hover:bg-red-500"
           id="delete"
           type="button"
           @click=${() => {

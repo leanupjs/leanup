@@ -1,3 +1,26 @@
+@import tailwindcss/base
+
+// @import tailwindcss/components
+@import tailwindcss/utilities
+
+h1
+    @apply text-2xl mt-2 mb-1.5
+
+h2
+    @apply text-xl mt-2 mb-1.5
+
+h3
+    @apply text-lg mt-2 mb-1.5
+
+.nav-item
+    @apply border inline-block border-indigo-100 text-indigo-900 py-2 px-4
+
+    &:hover
+        @apply bg-indigo-900 underline text-white border-indigo-600
+
+button
+    @apply bg-gray-700 hover:bg-gray-500 text-white py-2 px-3 rounded-md
+    
 div
     #app
         border-width: 1px

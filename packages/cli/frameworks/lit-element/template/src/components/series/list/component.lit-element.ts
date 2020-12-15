@@ -18,26 +18,25 @@ export class ListSerieComponent extends LitElementComponent {
     for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
         html`
-          <table class="table" key="{i}">
+          <table class="table-auto" key="{i}">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">ID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Unit</th>
-                <th scope="col">Action</th>
+                <th class="w-1/8 border border-emerald-500">#</th>
+                <th class="w-1/8 border border-emerald-500">ID</th>
+                <th class="w-1/4 border border-emerald-500">Title</th>
+                <th class="w-1/5 border border-emerald-500">Unit</th>
+                <th class="w-1/5 border border-emerald-500">Action</th>
               </tr>
             </thead>
             <tbody>
               ${this.ctrl.measuredSeries.map((serie: MeasuredSerieModel, index: number) => {
                 return html` <tr key="{index}">
-                  <td>${index + 1}</td>
-                  <td>${serie.getId()}</td>
-                  <td>${serie.getTitle()}</td>
-                  <td>${serie.getUnit()}</td>
-                  <td>
+                  <td class="text-center border border-emerald-500">${index + 1}</td>
+                  <td class="text-center border border-emerald-500">${serie.getId()}</td>
+                  <td class="text-center border border-emerald-500">${serie.getTitle()}</td>
+                  <td class="text-center border border-emerald-500">${serie.getUnit()}</td>
+                  <td class="text-center border border-emerald-500">
                     <button
-                      class="btn btn-info"
                       id="edit-${index}"
                       type="button"
                       @click=${() => {
@@ -56,10 +55,10 @@ export class ListSerieComponent extends LitElementComponent {
     }
     return html`
       <div>
-        <h5>List</h5>
-        <div>
+        <h3>List</h3>
+        <p>
           <button
-            class="btn btn-success"
+            class="bg-green-700 hover:bg-green-500"
             id="add"
             type="button"
             @click=${() => {
@@ -70,7 +69,7 @@ export class ListSerieComponent extends LitElementComponent {
           </button>
           ${this.ctrl.showPerformanceButton
             ? html`<button
-                class="btn btn-info"
+                class="bg-blue-700 hover:bg-blue-500"
                 id="start"
                 type="button"
                 @click=${() => {
@@ -80,9 +79,13 @@ export class ListSerieComponent extends LitElementComponent {
                 Performance
               </button>`
             : ''}
-        </div>
+        </p>
+        <br />
         ${tables}
-        <small>Duration: ${this.ctrl.duration} ms</small>
+        <br />
+        <p>
+          <small>Duration: ${this.ctrl.duration} ms</small>
+        </p>
       </div>
     `;
   }

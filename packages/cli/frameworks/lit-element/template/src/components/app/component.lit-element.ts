@@ -29,9 +29,13 @@ export class AppComponent extends LitElementComponent {
   }
 
   public render(): TemplateResult {
-    return html`<div id="app">
-      <h4>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h4>
-      <small>${this.ctrl.finishedRendering} ms upcomming time</small>
+    return html`<div class="font-sans p-5">
+      <h1>Flexible web application architecture</h1>
+      <p>This project demonstrate a flexible based web application architecture.</p>
+      <h2>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h2>
+      <p>
+        <small>${this.ctrl.finishedRendering} ms upcomming time</small>
+      </p>
       ${this.resolvedRoute.url === 'series' ? html`<list-serie-component></list-serie-component>` : ''}
       ${this.resolvedRoute.url === 'series/create' ? html`<create-serie-component></create-serie-component>` : ''}
       ${this.resolvedRoute.url === 'series/:id/edit'
@@ -40,11 +44,13 @@ export class AppComponent extends LitElementComponent {
             resolvedRoute="${JSON.stringify(this.resolvedRoute)}"
           ></edit-serie-component>`
         : ''}
-      <small>
-        Used filters: ${Filters.date(this.ctrl.dummies.date)} | ${Filters.currency(this.ctrl.dummies.price)} €
-      </small>
-      <br />
-      <small> Build with: ${this.ctrl.cli.name} v${this.ctrl.cli.version} </small>
+      <p>
+        <small>
+          Used filters: ${Filters.date(this.ctrl.dummies.date)} | ${Filters.currency(this.ctrl.dummies.price)} €
+          <br />
+          Build with: ${this.ctrl.cli.name} v${this.ctrl.cli.version}
+        </small>
+      </p>
     </div>`;
   }
 }
