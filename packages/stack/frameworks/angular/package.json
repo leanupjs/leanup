@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-angular",
-  "version": "1.1.0-rc.222",
+  "version": "1.1.0-rc.224",
   "description": "This package contains the Angular framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -34,7 +34,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "devDependencies": {
-    "@leanup/stack": "^1.1.0-rc.222",
+    "@leanup/stack": "^1.1.0-rc.224",
     "@types/node": "^14.14.14",
     "typescript": "~4.0.5"
   },
