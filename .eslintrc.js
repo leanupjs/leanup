@@ -1,1 +1,1 @@
-module.exports = require('./packages/cli/stack/core/.eslintrc');
+module.exports = require('./packages/stack/core/.eslintrc');

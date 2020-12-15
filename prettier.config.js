@@ -1,1 +1,1 @@
-module.exports = require('./packages/cli/stack/core/prettier.config');
+module.exports = require('./packages/stack/core/prettier.config');
