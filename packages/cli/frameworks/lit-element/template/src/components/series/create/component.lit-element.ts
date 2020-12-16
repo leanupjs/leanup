@@ -27,9 +27,9 @@ export class CreateSerieComponent extends LitElementComponent {
       >
         <h5>Create a new measuring serie</h5>
         <editor-serie-component></editor-serie-component>
-        <button class="bg-green-700 hover:bg-green-500" type="submit" id="submit">Add</button>
+        <button class="primary" type="submit" id="submit">Add</button>
         <button
-          class="bg-blue-700 hover:bg-blue-500"
+          class="secondary"
           type="reset"
           id="cancel"
           @click=${() => {

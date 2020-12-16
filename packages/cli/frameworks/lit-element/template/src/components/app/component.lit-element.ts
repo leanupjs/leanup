@@ -29,7 +29,7 @@ export class AppComponent extends LitElementComponent {
   }
 
   public render(): TemplateResult {
-    return html`<div class="font-sans p-5">
+    return html`<div class="my-app">
       <h1>Flexible web application architecture</h1>
       <p>This project demonstrate a flexible based web application architecture.</p>
       <h2>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h2>
