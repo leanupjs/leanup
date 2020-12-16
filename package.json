@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "ci": "npm ci && lerna exec --ignore=@template/* --stream --no-bail -- npm ci",
-    "ncu": "ncu && lerna exec --stream --no-bail -- ncu",
+    "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
     "pack": "lerna exec --ignore=@template/* --stream --no-bail -- npm i && lerna exec --ignore=@template/* --stream --no-bail -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
     "remove": "lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
@@ -18,7 +18,9 @@
   "devDependencies": {
     "@leanup/git-hooks": "1.1.0-rc.155",
     "@leanup/stack": "^1.1.0-rc.213",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "prettier-plugin-svelte": "^1.4.2",
+    "svelte": "^3.31.0"
   },
   "engines": {
     "node": ">=10 <16",
