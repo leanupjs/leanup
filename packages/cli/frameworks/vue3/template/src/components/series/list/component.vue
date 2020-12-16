@@ -3,9 +3,7 @@
     <h2>List</h2>
     <div>
       <button class="primary" id="add" type="button" @click="onAdd()">Add</button>
-      <button id="start" type="button" v-if="showPerformanceButtonRef" @click="onStart()">
-        Performance
-      </button>
+      <button id="start" type="button" v-if="showPerformanceButtonRef" @click="onStart()">Performance</button>
     </div>
     <table class="table" v-for="(element, index) in elementsRef" :key="index">
       <thead>
