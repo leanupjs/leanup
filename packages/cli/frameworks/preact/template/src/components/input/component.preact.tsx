@@ -10,10 +10,9 @@ interface Props {
 export class InputComponent extends PreactComponent<Props, unknown> {
   public render(): JSX.Element {
     return (
-      <div className="form-group">
+      <div>
         <label htmlFor={this.props.control.id}>{this.props.control.label}</label>
         <input
-          className="form-control"
           id={this.props.control.id}
           name={this.props.control.name}
           value={this.props.control.value as string}

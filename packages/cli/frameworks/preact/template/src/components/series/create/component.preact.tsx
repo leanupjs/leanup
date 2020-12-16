@@ -22,13 +22,13 @@ export class CreateSerieComponent extends PreactComponent<unknown, unknown> impl
           this.ctrl.onSubmit();
         }}
       >
-        <h2>Create a new measuring serie</h2>
+        <h5>Create a new measuring serie</h5>
         <EditorSerieComponent editorForm={this.ctrl.editorForm} />
         <button className="primary" type="submit" id="submit">
           Add
         </button>
         <button
-          className="btn"
+          className="secondary"
           type="reset"
           id="cancel"
           onClick={() => {

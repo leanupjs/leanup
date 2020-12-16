@@ -34,11 +34,13 @@ input
     @apply border border-blue-50 p-2 rounded-md
 
 div
-    .my-app
-        @apply font-sans px-5 pb-5 border border-indigo-300 m-2 bg-gray-50 rounded-md
+    &.my-app
+        @apply font-sans p-5 border border-indigo-300 m-2 bg-gray-50 rounded-md
+
+        width: 400px
 
 table
-    @apply table-auto w-full rounded-md my-2 mx-1
+    @apply table-auto w-full rounded-md my-2 rounded-md
 
     th,
     td

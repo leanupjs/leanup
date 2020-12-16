@@ -18,7 +18,7 @@ export class ListSerieComponent extends PreactComponent<unknown, unknown> implem
     const tables: any[] = [];
     for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
-        <table className="table" key={i}>
+        <table key={i}>
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -71,6 +71,7 @@ export class ListSerieComponent extends PreactComponent<unknown, unknown> implem
           </button>
           {this.ctrl.showPerformanceButton && (
             <button
+              className="secondary"
               id="start"
               type="button"
               onClick={() => {
