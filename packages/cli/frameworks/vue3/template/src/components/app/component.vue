@@ -2,11 +2,11 @@
   <div class="my-app">
     <div class="grid grid-cols-3 items-center">
       <a href="https://v3.vuejs.org/" target="vuejs" class="text-center">
-        <img src="{{IMG_FRAMEWORK as string}}" alt="Vue Framework" class="m-auto w-24" />
+        <img src="{{IMG_FRAMEWORK as string}}" alt="Vue Framework" class="m-auto h-24" />
       </a>
       <div class="text-center text-5xl text-gray-400 font-extrabold">+</div>
       <a href="https://leanupjs.org" target="leanupjs" class="text-center">
-        <img src="{{IMG_LEANUP as string}}" alt="Leanup Stack" class="m-auto w-24" />
+        <img src="{{IMG_LEANUP as string}}" alt="Leanup Stack" class="m-auto h-24" />
       </a>
     </div>
     <h1>{{ framework.name }} v{{ framework.version }}</h1>

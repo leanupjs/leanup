@@ -35,11 +35,11 @@ export class AppComponent extends ReactComponent<unknown, AppController> impleme
       <div class="my-app">
         <div className="grid grid-cols-3 items-center">
           <a href="https://reactjs.org/" target="reactjs" className="text-center">
-            <img src={IMG_FRAMEWORK as string} alt="React Framework" class="m-auto w-24" />
+            <img src={IMG_FRAMEWORK as string} alt="React Framework" class="m-auto h-24" />
           </a>
           <div className="text-center text-5xl text-gray-400 font-extrabold">+</div>
           <a href="https://leanupjs.org" target="leanupjs" className="text-center">
-            <img src={IMG_LEANUP as string} alt="Leanup Stack" class="m-auto w-24" />
+            <img src={IMG_LEANUP as string} alt="Leanup Stack" class="m-auto h-24" />
           </a>
         </div>
         <h1>

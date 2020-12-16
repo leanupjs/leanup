@@ -29,11 +29,11 @@ ANGULARJS_MODULE.component('app', {
   <div class="my-app">
     <div class="grid grid-cols-3 items-center">
       <a href="https://angular.io" target="angular" class="text-center">
-        <img src="{{ IMG_FRAMEWORK }}" alt="Angular Framework" class="m-auto w-24" />
+        <img src="{{ IMG_FRAMEWORK }}" alt="Angular Framework" class="m-auto h-24" />
       </a>
       <div class="text-center text-5xl text-gray-400 font-extrabold">+</div>
       <a href="https://leanupjs.org" target="leanupjs" class="text-center">
-        <img src="{{ IMG_LEANUP }}" alt="Leanup Stack" class="m-auto w-24" />
+        <img src="{{ IMG_LEANUP }}" alt="Leanup Stack" class="m-auto h-24" />
       </a>
     </div>
     <h1>{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }}</h1>

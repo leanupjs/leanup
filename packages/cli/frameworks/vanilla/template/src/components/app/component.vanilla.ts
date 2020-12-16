@@ -13,11 +13,11 @@ function render(component: AppComponent) {
   <code>- is currently not full implemented -</code>
   <div class="grid grid-cols-3 items-center">
     <a href="https://developer.mozilla.org/de/docs/Web/Web_Components/Using_custom_elements" target="vanilla" class="text-center">
-      <img src="${IMG_FRAMEWORK as string}" alt="Vanilla Framework" class="m-auto w-24" />
+      <img src="${IMG_FRAMEWORK as string}" alt="Vanilla Framework" class="m-auto h-24" />
     </a>
     <div class="text-center text-5xl text-gray-400 font-extrabold">+</div>
     <a href="https://leanupjs.org" target="leanupjs" class="text-center">
-      <img src="${IMG_LEANUP as string}" alt="Leanup Stack" class="m-auto w-24" />
+      <img src="${IMG_LEANUP as string}" alt="Leanup Stack" class="m-auto h-24" />
     </a>
   </div>
   <h1>${component.$ctrl.framework.name}</h1>
