@@ -17,10 +17,10 @@
 </script>
 
 <div>
-  <h5>List</h5>
+  <h2>List</h2>
   <div>
     <button
-      class="btn btn-success"
+      class="primary"
       id="add"
       type="button"
       on:click={() => {
@@ -30,7 +30,6 @@
     </button>
     {#if showPerformanceButtonRef}
       <button
-        class="btn btn-info"
         id="start"
         type="button"
         on:click={() => {
@@ -60,7 +59,6 @@
             <td>{serie.getUnit()}</td>
             <td>
               <button
-                class="btn btn-info"
                 id="edit-{index}"
                 type="button"
                 on:click={() => {

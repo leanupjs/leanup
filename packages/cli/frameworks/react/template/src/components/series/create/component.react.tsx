@@ -21,9 +21,9 @@ export class CreateSerieComponent extends ReactComponent<unknown, unknown> imple
           this.ctrl.onSubmit();
         }}
       >
-        <h5>Create a new measuring serie</h5>
+        <h2>Create a new measuring serie</h2>
         <EditorSerieComponent editorForm={this.ctrl.editorForm} />
-        <button className="btn btn-primary" type="submit" id="submit">
+        <button className="primary" type="submit" id="submit">
           Add
         </button>
         <button

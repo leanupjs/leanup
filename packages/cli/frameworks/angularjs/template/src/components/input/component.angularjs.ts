@@ -24,10 +24,10 @@ ANGULARJS_MODULE.component('appInput', {
     },
   ],
   template: `
-  <div class="form-group">
+  <div>
     <label for="{{$ctrl.control.id}}">{{$ctrl.control.label}}</label>
     <input
-      class="form-control"
+     
       id="{{$ctrl.control.id}}"
       name="{{$ctrl.control.name}}"
       ng-model="$ctrl.control.value"

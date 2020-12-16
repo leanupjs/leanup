@@ -7,19 +7,19 @@
 </script>
 
 <form
-  on:submit={event => {
+  on:submit={(event) => {
     event.preventDefault();
     event.stopPropagation();
     ctrl.onSubmit();
     editorForm = ctrl.editorForm;
   }}>
-  <h5>Create a new measuring serie</h5>
+  <h2>Create a new measuring serie</h2>
   <EditorSerieComponent {editorForm} />
-  <button class="btn btn-primary" type="submit" id="submit">Add</button>
+  <button class="primary" type="submit" id="submit">Add</button>
   <button
-    class="btn secondary"
+    class="secondary"
     id="cancel"
-    on:click={event => {
+    on:click={(event) => {
       ctrl.onCancel();
     }}>
     Abbrechen

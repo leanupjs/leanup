@@ -1,11 +1,9 @@
 <template>
   <div>
-    <h5>List</h5>
+    <h2>List</h2>
     <div>
-      <button class="btn btn-success" id="add" type="button" click.delegate="add()">Add</button>
-      <button class="btn btn-info" id="start" type="button" if.bind="showPerformanceButton" click.delegate="onStart()">
-        Performance
-      </button>
+      <button class="primary" id="add" type="button" click.delegate="add()">Add</button>
+      <button id="start" type="button" if.bind="showPerformanceButton" click.delegate="onStart()">Performance</button>
     </div>
     <table class="table" repeat.for="element of elements">
       <thead>
@@ -24,7 +22,7 @@
           <td>${serie.getTitle()}</td>
           <td>${serie.getUnit()}</td>
           <td>
-            <button class="btn btn-info" id="edit-${$index}" type="button" click.delegate="edit(serie)">Edit</button>
+            <button id="edit-${$index}" type="button" click.delegate="edit(serie)">Edit</button>
           </td>
         </tr>
       </tbody>

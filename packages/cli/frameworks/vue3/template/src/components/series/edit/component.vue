@@ -1,10 +1,10 @@
 <template>
   <form @submit="onSubmit">
-    <h5>Edit a existing measuring serie</h5>
+    <h2>Edit a existing measuring serie</h2>
     <editor-serie v-if="editorFormRef !== null" :editor-form="editorFormRef"></editor-serie>
-    <button class="btn btn-primary" type="submit" id="submit">Edit</button>
-    <button class="btn btn-secondary" type="reset" id="cancel" @click="onCancel">Abbrechen</button>
-    <button class="btn btn-danger" type="button" id="delete" @click="onDelete">Delete</button>
+    <button class="primary" type="submit" id="submit">Edit</button>
+    <button class="secondary" type="reset" id="cancel" @click="onCancel">Abbrechen</button>
+    <button class="danger" type="button" id="delete" @click="onDelete">Delete</button>
   </form>
 </template>
 

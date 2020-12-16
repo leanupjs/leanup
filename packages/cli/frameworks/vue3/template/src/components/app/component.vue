@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <h4>{{ framework.name }} v{{ framework.version }}</h4>
+  <div class="my-app">
+    <h1>{{ framework.name }} v{{ framework.version }}</h1>
     <small>{{ finishedRendering }} ms upcomming time</small>
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>

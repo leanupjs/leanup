@@ -36,7 +36,6 @@ export class ListSerieComponent extends InvernoComponent<unknown, unknown> imple
                   <td>{serie.getUnit()}</td>
                   <td>
                     <button
-                      className="btn btn-info"
                       id={`edit-${index}`}
                       type="button"
                       onClick={() => {
@@ -56,10 +55,10 @@ export class ListSerieComponent extends InvernoComponent<unknown, unknown> imple
     }
     return (
       <div>
-        <h5>List</h5>
+        <h2>List</h2>
         <div>
           <button
-            className="btn btn-success"
+            className="primary"
             id="add"
             type="button"
             onClick={() => {
@@ -70,7 +69,6 @@ export class ListSerieComponent extends InvernoComponent<unknown, unknown> imple
           </button>
           {this.ctrl.showPerformanceButton && (
             <button
-              className="btn btn-info"
               id="start"
               type="button"
               onClick={() => {

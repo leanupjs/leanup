@@ -1,7 +1,7 @@
 <template>
-  <div class="form-group">
+  <div>
     <label :for="props.control.id">{{ props.control.label }}</label>
-    <input class="form-control" :id="props.control.id" :name="props.control.name" v-model="props.control.value" />
+    <input :id="props.control.id" :name="props.control.name" v-model="props.control.value" />
   </div>
 </template>
 

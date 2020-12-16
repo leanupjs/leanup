@@ -1,16 +1,16 @@
+import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { VanillaComponent } from '../../component.vanilla';
 import { ListSerieController } from './controller';
-import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
 function render($ctrl: ListSerieController): string {
   let html = `<div>
-  <h5>List</h5>
+  <h2>List</h2>
   <div>
-    <button class="btn btn-success" id="add" type="button">
+    <button class="primary" id="add" type="button">
       Add
     </button>`;
   if ($ctrl.showPerformanceButton) {
-    html += `<button class="btn btn-info" id="start" type="button" ng-if="$ctrl.showPerformanceButton">
+    html += `<button id="start" type="button" ng-if="$ctrl.showPerformanceButton">
       Performance
     </button>`;
   }
@@ -34,7 +34,7 @@ function render($ctrl: ListSerieController): string {
       <td>${serie.getTitle()}</td>
       <td>${serie.getUnit()}</td>
       <td>
-        <button class="btn btn-info" id="edit-{{$index}}" type="button">
+        <button id="edit-{{$index}}" type="button">
           Edit
         </button>
       </td>

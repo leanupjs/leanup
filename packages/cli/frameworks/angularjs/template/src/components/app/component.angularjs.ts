@@ -24,8 +24,8 @@ ANGULARJS_MODULE.component('app', {
     },
   ],
   template: `
-  <div id="app">
-    <h4>{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }}</h4>
+  <div class="my-app">
+    <h1>{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }}</h1>
     <small>{{ $ctrl.finishedRendering }} ms upcomming time</small>
     <list-serie ng-if="$ctrl.resolvedRoute.url === 'series'"></list-serie>
     <create-serie ng-if="$ctrl.resolvedRoute.url === 'series/create'"></create-serie>

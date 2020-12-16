@@ -2,8 +2,8 @@
   <require from="../series/create/component.aurelia"></require>
   <require from="../series/edit/component.aurelia"></require>
   <require from="../series/list/component.aurelia"></require>
-  <div id="app">
-    <h4>${framework.name} v${framework.version}</h4>
+  <div class="my-app">
+    <h1>${framework.name} v${framework.version}</h1>
     <small>${finishedRendering} ms upcomming time</small>
     <list-serie if.bind="resolvedRoute.url === 'series'"></list-serie>
     <create-serie if.bind="resolvedRoute.url === 'series/create'"></create-serie>

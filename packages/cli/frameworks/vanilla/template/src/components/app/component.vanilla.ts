@@ -7,9 +7,9 @@ import { VanillaComponent } from '../component.vanilla';
 import { AppController } from './controller';
 
 function render(component: AppComponent) {
-  let html = `<div id="app">
+  let html = `<div class="my-app">
   <code>- is currently not full implemented -</code>
-  <h4>${component.$ctrl.framework.name}</h4>
+  <h1>${component.$ctrl.framework.name}</h1>
   <small>${component.$ctrl.finishedRendering} ms upcomming time</small>`;
   if (component.resolvedRoute.url === 'series') {
     html += `<wc-list-serie></wc-list-serie>`;

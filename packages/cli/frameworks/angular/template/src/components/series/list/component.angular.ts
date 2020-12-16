@@ -6,12 +6,10 @@ import { ListSerieController } from './controller';
   selector: 'list-serie',
   template: `
     <div>
-      <h5>List</h5>
+      <h2>List</h2>
       <div>
-        <button class="btn btn-success" id="add" type="button" (click)="add()">Add</button>
-        <button class="btn btn-info" id="start" type="button" *ngIf="showPerformanceButton" (click)="onStart()">
-          Performance
-        </button>
+        <button class="primary" id="add" type="button" (click)="add()">Add</button>
+        <button id="start" type="button" *ngIf="showPerformanceButton" (click)="onStart()">Performance</button>
       </div>
       <table class="table" *ngFor="let element of elements; index as i">
         <thead>
@@ -30,7 +28,7 @@ import { ListSerieController } from './controller';
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
-              <button class="btn btn-info" id="edit-{{ i }}" type="button" (click)="edit(serie)">Edit</button>
+              <button id="edit-{{ i }}" type="button" (click)="edit(serie)">Edit</button>
             </td>
           </tr>
         </tbody>

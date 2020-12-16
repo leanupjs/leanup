@@ -6,8 +6,8 @@ import { AppController, ResolvedRoute } from './controller';
 @Component({
   selector: 'app',
   template: `
-    <div id="app">
-      <h4>{{ framework.name }} v{{ framework.version }}</h4>
+    <div class="my-app">
+      <h1>{{ framework.name }} v{{ framework.version }}</h1>
       <small>{{ finishedRendering }} ms upcomming time</small>
       <list-serie *ngIf="resolvedRoute.url === 'series'"></list-serie>
       <create-serie *ngIf="resolvedRoute.url === 'series/create'"></create-serie>

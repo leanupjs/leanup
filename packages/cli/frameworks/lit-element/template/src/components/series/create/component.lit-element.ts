@@ -25,7 +25,7 @@ export class CreateSerieComponent extends LitElementComponent {
           this.ctrl.onSubmit();
         }}
       >
-        <h5>Create a new measuring serie</h5>
+        <h2>Create a new measuring serie</h2>
         <editor-serie-component></editor-serie-component>
         <button class="primary" type="submit" id="submit">Add</button>
         <button

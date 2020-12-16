@@ -8,11 +8,11 @@ import { EditSerieController } from './controller';
   selector: 'edit-serie',
   template: `
     <form (ngSubmit)="ctrl.onSubmit()">
-      <h5>Edit a existing measuring serie</h5>
+      <h2>Edit a existing measuring serie</h2>
       <editor-serie [editorForm]="ctrl.editorForm"></editor-serie>
-      <button class="btn btn-primary" type="submit" id="submit">Edit</button>
-      <button class="btn btn-secondary" type="reset" id="cancel" (click)="ctrl.onCancel()">Abbrechen</button>
-      <button class="btn btn-danger" id="delete" type="button" (click)="ctrl.onDelete()">Delete</button>
+      <button class="primary" type="submit" id="submit">Edit</button>
+      <button class="secondary" type="reset" id="cancel" (click)="ctrl.onCancel()">Abbrechen</button>
+      <button class="danger" id="delete" type="button" (click)="ctrl.onDelete()">Delete</button>
     </form>
   `,
 })

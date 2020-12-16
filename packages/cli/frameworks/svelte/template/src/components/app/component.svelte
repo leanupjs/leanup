@@ -8,19 +8,19 @@
 
   const ctrl = new AppController();
   let resolvedRoute = {
-    url: 'series'
+    url: 'series',
   };
   RouterService.subscribe((route, params, query) => {
     resolvedRoute = {
       params,
       query,
-      url: route.url
+      url: route.url,
     };
   });
 </script>
 
-<div id="app">
-  <h4>{ctrl.framework.name} v{ctrl.framework.version}</h4>
+<div class="my-app">
+  <h1>{ctrl.framework.name} v{ctrl.framework.version}</h1>
   <small>{ctrl.finishedRendering} ms upcomming time</small>
   {#if resolvedRoute.url === 'series'}
     <ListSerieComponent />

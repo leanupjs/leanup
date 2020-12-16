@@ -4,9 +4,9 @@ import { InputControl } from '@leanup/form/controls/controls';
 @Component({
   selector: 'app-input',
   template: `
-    <div class="form-group">
+    <div>
       <label for="{{ control.id }}">{{ control.label }}</label>
-      <input class="form-control" id="{{ control.id }}" name="{{ control.name }}" [(ngModel)]="control.value" />
+      <input id="{{ control.id }}" name="{{ control.name }}" [(ngModel)]="control.value" />
     </div>
   `,
 })

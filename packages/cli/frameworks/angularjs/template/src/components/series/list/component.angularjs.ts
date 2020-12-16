@@ -17,12 +17,12 @@ ANGULARJS_MODULE.component('listSerie', {
   ],
   template: `
     <div>
-      <h5>List</h5>
+      <h2>List</h2>
       <div>
-        <button class="btn btn-success" id="add" type="button" ng-click="$ctrl.add()">
+        <button class="primary" id="add" type="button" ng-click="$ctrl.add()">
           Add
         </button>
-        <button class="btn btn-info" id="start" type="button" ng-if="$ctrl.showPerformanceButton" ng-click="$ctrl.onStart()">
+        <button id="start" type="button" ng-if="$ctrl.showPerformanceButton" ng-click="$ctrl.onStart()">
           Performance
         </button>
       </div>
@@ -43,7 +43,7 @@ ANGULARJS_MODULE.component('listSerie', {
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
-              <button class="btn btn-info" id="edit-{{$index}}" type="button" ng-click="$ctrl.edit(serie)">
+              <button id="edit-{{$index}}" type="button" ng-click="$ctrl.edit(serie)">
                 Edit
               </button>
             </td>

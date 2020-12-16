@@ -56,7 +56,7 @@ export class ListSerieComponent extends LitElementComponent {
     return html`
       <div>
         <h3>List</h3>
-        <p>
+        <div>
           <button
             class="primary"
             id="add"
@@ -69,7 +69,6 @@ export class ListSerieComponent extends LitElementComponent {
           </button>
           ${this.ctrl.showPerformanceButton
             ? html`<button
-                class="secondary"
                 id="start"
                 type="button"
                 @click=${() => {
@@ -79,13 +78,9 @@ export class ListSerieComponent extends LitElementComponent {
                 Performance
               </button>`
             : ''}
-        </p>
-        <br />
+        </div>
         ${tables}
-        <br />
-        <p>
-          <small>Duration: ${this.ctrl.duration} ms</small>
-        </p>
+        <small>Duration: ${this.ctrl.duration} ms</small>
       </div>
     `;
   }

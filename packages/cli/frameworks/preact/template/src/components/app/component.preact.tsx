@@ -31,10 +31,10 @@ export class AppComponent extends PreactComponent<unknown, AppController> implem
 
   public render(): JSX.Element {
     return (
-      <div id="app">
-        <h4>
+      <div class="my-app">
+        <h1>
           {this.ctrl.framework.name} v{this.ctrl.framework.version}
-        </h4>
+        </h1>
         <small>{this.ctrl.finishedRendering} ms upcomming time</small>
         {this.resolvedRoute.url === 'series' && <ListSerieComponent />}
         {this.resolvedRoute.url === 'series/create' && <CreateSerieComponent />}
