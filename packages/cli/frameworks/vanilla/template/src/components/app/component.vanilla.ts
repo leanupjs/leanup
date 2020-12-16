@@ -10,7 +10,6 @@ import { AppController } from './controller';
 
 function render(component: AppComponent) {
   let html = `<div class="my-app">
-  <code>- is currently not full implemented -</code>
   <div class="grid grid-cols-3 items-center">
     <a href="https://developer.mozilla.org/de/docs/Web/Web_Components/Using_custom_elements" target="vanilla" class="text-center">
       <img src="${IMG_FRAMEWORK as string}" alt="Vanilla Framework" class="m-auto h-24" />
@@ -34,7 +33,8 @@ function render(component: AppComponent) {
     component.$ctrl.dummies.price
   )} €</small><br />
   <small>Build with: ${component.$ctrl.cli.name} v${component.$ctrl.cli.version}}</small>
-  </div>`;
+  <code>- is currently not full implemented -</code>
+</div>`;
   return html;
 }
 
