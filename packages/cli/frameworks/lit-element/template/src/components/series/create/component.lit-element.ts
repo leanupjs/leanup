@@ -13,7 +13,7 @@ export class CreateSerieComponent extends LitElementComponent {
     super.connectedCallback();
     setTimeout(() => {
       this.querySelector('editor-serie-component').editorForm = this.ctrl.editorForm;
-    }, 0);
+    }, 50);
   }
 
   public render(): TemplateResult {

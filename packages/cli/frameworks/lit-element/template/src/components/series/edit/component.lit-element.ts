@@ -18,7 +18,7 @@ export class EditSerieComponent extends LitElementComponent {
     this.ctrl = new EditSerieController(this.resolvedRoute.params.id);
     setTimeout(() => {
       this.querySelector('editor-serie-component').editorForm = this.ctrl.editorForm;
-    }, 0);
+    }, 50);
   }
 
   public render(): TemplateResult {

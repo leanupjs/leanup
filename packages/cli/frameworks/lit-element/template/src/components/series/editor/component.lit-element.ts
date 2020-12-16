@@ -19,7 +19,7 @@ export class EditorSerieComponent extends LitElementComponent {
       const inputs = this.querySelectorAll('input-component');
       inputs[0].control = this.editorForm.getControl('title');
       inputs[1].control = this.editorForm.getControl('unit');
-    }, 10);
+    }, 50);
   }
 
   public render(): TemplateResult {
