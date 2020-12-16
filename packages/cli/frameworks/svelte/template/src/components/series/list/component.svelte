@@ -1,19 +1,19 @@
 <script>
-  import { ListSerieController } from './controller';
-  import CreateSerieComponent from '../create/component.svelte';
-  import EditSerieComponent from '../edit/component.svelte';
-  const ctrl = new ListSerieController();
-  let elementsRef = ctrl.elements;
-  let durationRef = ctrl.duration;
-  let measuredSeriesRef = ctrl.measuredSeries;
-  let measuredSerieRef = ctrl.measuredSerie;
-  let showPerformanceButtonRef = ctrl.showPerformanceButton;
-  ctrl.renderView = () => {
-    measuredSeriesRef = ctrl.measuredSeries;
-    elementsRef = ctrl.elements;
-    durationRef = ctrl.duration;
-    showPerformanceButtonRef = ctrl.showPerformanceButton;
-  };
+import { ListSerieController } from './controller';
+import CreateSerieComponent from '../create/component.svelte';
+import EditSerieComponent from '../edit/component.svelte';
+const ctrl = new ListSerieController();
+let elementsRef = ctrl.elements;
+let durationRef = ctrl.duration;
+let measuredSeriesRef = ctrl.measuredSeries;
+let measuredSerieRef = ctrl.measuredSerie;
+let showPerformanceButtonRef = ctrl.showPerformanceButton;
+ctrl.renderView = () => {
+  measuredSeriesRef = ctrl.measuredSeries;
+  elementsRef = ctrl.elements;
+  durationRef = ctrl.duration;
+  showPerformanceButtonRef = ctrl.showPerformanceButton;
+};
 </script>
 
 <div>
@@ -23,18 +23,20 @@
       class="primary"
       id="add"
       type="button"
-      on:click={() => {
+      on:click="{() => {
         ctrl.add();
-      }}>
+      }}"
+    >
       Add
     </button>
     {#if showPerformanceButtonRef}
       <button
         id="start"
         type="button"
-        on:click={() => {
+        on:click="{() => {
           ctrl.onStart();
-        }}>
+        }}"
+      >
         Performance
       </button>
     {/if}
@@ -61,10 +63,11 @@
               <button
                 id="edit-{index}"
                 type="button"
-                on:click={() => {
+                on:click="{() => {
                   ctrl.edit(serie);
                   measuredSerieRef = ctrl.measuredSerie;
-                }}>
+                }}"
+              >
                 Edit
               </button>
             </td>
