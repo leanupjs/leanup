@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.226",
+  "version": "1.1.0-rc.227",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.226",
+    "@leanup/form": "^1.1.0-rc.227",
     "@leanup/lib": "^1.1.0-rc.226",
     "navigo": "^7.1.2",
     "rxjs": "^6.6.3",
