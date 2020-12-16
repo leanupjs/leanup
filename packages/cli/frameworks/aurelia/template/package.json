@@ -1,6 +1,6 @@
 {
   "name": "@template/aurelia",
-  "version": "1.1.0-rc.231",
+  "version": "1.1.0-rc.233",
   "dependencies": {
     "aurelia-bootstrapper": "^2.3.3",
     "aurelia-framework": "^1.3.1"

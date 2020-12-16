@@ -1,6 +1,6 @@
 {
   "name": "@template/svelte",
-  "version": "1.1.0-rc.231",
+  "version": "1.1.0-rc.233",
   "dependencies": {
     "svelte": "^3.29.7"
   },

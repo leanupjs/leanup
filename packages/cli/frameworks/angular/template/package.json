@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.1.0-rc.231",
+  "version": "1.1.0-rc.233",
   "dependencies": {
     "@angular/common": "next",
     "@angular/compiler": "next",
