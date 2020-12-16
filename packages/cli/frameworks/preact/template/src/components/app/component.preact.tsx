@@ -4,7 +4,7 @@ import { GenericComponent } from '@leanup/lib/components/generic';
 import { PreactComponent } from '@leanup/lib/components/preact';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
-import IMG_PREACT from '../../assets/logo.preact.png';
+import IMG_FRAMEWORK from '../../assets/logo.preact.png';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
 import { CreateSerieComponent } from '../series/create/component.preact';
@@ -35,8 +35,8 @@ export class AppComponent extends PreactComponent<unknown, AppController> implem
     return (
       <div className="my-app">
         <div className="grid grid-cols-3 items-center">
-          <a href="https://preactjs.com" target="preact" className="text-center">
-            <img src={IMG_PREACT as string} alt="Preact Framework" class="m-auto w-24" />
+          <a href="https://preactjs.com" target="preactjs" className="text-center">
+            <img src={IMG_FRAMEWORK as string} alt="Preact Framework" class="m-auto w-24" />
           </a>
           <div className="text-center text-5xl text-gray-400 font-extrabold">+</div>
           <a href="https://leanupjs.org" target="leanupjs" className="text-center">

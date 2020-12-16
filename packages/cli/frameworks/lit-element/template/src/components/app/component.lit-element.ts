@@ -4,6 +4,8 @@ import '../series/list/component.lit-element';
 
 import { customElement, html, TemplateResult } from 'lit-element';
 
+import IMG_LEANUP from '../../assets/logo.leanupjs.png';
+import IMG_FRAMEWORK from '../../assets/logo.polymer.png';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
 import { LitElementComponent } from '../component.lit-element';
@@ -30,9 +32,16 @@ export class AppComponent extends LitElementComponent {
 
   public render(): TemplateResult {
     return html`<div class="my-app">
-      <h1>Flexible web application architecture</h1>
-      <p>This project demonstrate a flexible based web application architecture.</p>
-      <h2>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h2>
+      <div class="grid grid-cols-3 items-center">
+        <a href="https://lit-element.polymer-project.org/" target="polymer" class="text-center">
+          <img src="${IMG_FRAMEWORK}" alt="LitElement Framework" class="m-auto w-24" />
+        </a>
+        <div class="text-center text-5xl text-gray-400 font-extrabold">+</div>
+        <a href="https://leanupjs.org" target="leanupjs" class="text-center">
+          <img src="${IMG_LEANUP}" alt="Leanup Stack" class="m-auto w-24" />
+        </a>
+      </div>
+      <h1>${this.ctrl.framework.name} v${this.ctrl.framework.version}</h1>
       <small>${this.ctrl.finishedRendering} ms upcomming time</small>
       ${this.resolvedRoute.url === 'series' ? html`<list-serie-component></list-serie-component>` : ''}
       ${this.resolvedRoute.url === 'series/create' ? html`<create-serie-component></create-serie-component>` : ''}

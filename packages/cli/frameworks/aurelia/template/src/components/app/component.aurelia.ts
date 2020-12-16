@@ -1,3 +1,5 @@
+import IMG_FRAMEWORK from '../../assets/logo.aurelia.png';
+import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
 import { AppController, ResolvedRoute } from './controller';

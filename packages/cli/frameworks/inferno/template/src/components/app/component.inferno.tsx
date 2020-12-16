@@ -3,6 +3,8 @@ import { createRef } from 'inferno';
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { InvernoComponent } from '@leanup/lib/components/inferno';
 
+import IMG_FRAMEWORK from '../../assets/logo.inferno.png';
+import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
 import { CreateSerieComponent } from '../series/create/component.inferno';
@@ -32,6 +34,15 @@ export class AppComponent extends InvernoComponent<unknown, AppController> imple
   public render(): JSX.Element {
     return (
       <div class="my-app">
+        <div className="grid grid-cols-3 items-center">
+          <a href="https://infernojs.org/" target="infernojs" className="text-center">
+            <img src={IMG_FRAMEWORK as string} alt="Inferno Framework" class="m-auto w-24" />
+          </a>
+          <div className="text-center text-5xl text-gray-400 font-extrabold">+</div>
+          <a href="https://leanupjs.org" target="leanupjs" className="text-center">
+            <img src={IMG_LEANUP as string} alt="Leanup Stack" class="m-auto w-24" />
+          </a>
+        </div>
         <h1>
           {this.ctrl.framework.name} v{this.ctrl.framework.version}
         </h1>
