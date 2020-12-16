@@ -183,6 +183,7 @@ export abstract class AbstractCLI {
             case '.tsx':
             case '.ts':
             case '.js':
+            case '.json':
             case '.html':
             case '.jsx':
             case '.vue':
