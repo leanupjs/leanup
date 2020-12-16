@@ -6,7 +6,6 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli-vue": "^1.1.0-rc.230",
     "@leanup/stack-vue": "^1.1.0-rc.227",
     "vue-template-compiler": "^2.6.12"
   }

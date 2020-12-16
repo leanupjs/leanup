@@ -5,7 +5,6 @@
     "vue": "^3.0.2"
   },
   "devDependencies": {
-    "@leanup/cli-vue3": "^1.1.0-rc.230",
     "@leanup/stack-vue3": "^1.1.0-rc.227",
     "@vue/compiler-sfc": "^3.0.2"
   }

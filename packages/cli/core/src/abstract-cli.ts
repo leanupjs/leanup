@@ -179,29 +179,41 @@ export abstract class AbstractCLI {
           relPath === 'tsconfig.json' ||
           options.overwrite === true
         ) {
-          let data = '';
-          if (fs.existsSync(dirPath) === true && (relPath === 'package.json' || relPath === 'tsconfig.json')) {
-            const destJson = fs.readFileSync(dirPath, { encoding: 'utf8' });
-            const sourceJson = fs.readFileSync(path.join(folder, subDirent), { encoding: 'utf8' });
-            data = deepmerge(JSON.parse(destJson), JSON.parse(sourceJson), {
-              arrayMerge: (destArray, sourceArray, options) => {
-                const mergedArray = destArray.concat(sourceArray);
-                return mergedArray.filter((item, index) => mergedArray.indexOf(item) === index);
-              },
-            });
-            data = prettier.format(JSON.stringify(data), {
-              parser: 'json',
-              printWidth: 120,
-              singleQuote: true,
-            });
-          } else {
-            data = fs.readFileSync(path.join(folder, subDirent), { encoding: 'utf8' });
+          switch (path.extname(dirPath)) {
+            case '.tsx':
+            case '.ts':
+            case '.js':
+            case '.html':
+            case '.jsx':
+            case '.vue':
+            case '.svelte':
+              let data = '';
+              if (fs.existsSync(dirPath) === true && (relPath === 'package.json' || relPath === 'tsconfig.json')) {
+                const destJson = fs.readFileSync(dirPath, { encoding: 'utf8' });
+                const sourceJson = fs.readFileSync(path.join(folder, subDirent), { encoding: 'utf8' });
+                data = deepmerge(JSON.parse(destJson), JSON.parse(sourceJson), {
+                  arrayMerge: (destArray, sourceArray, options) => {
+                    const mergedArray = destArray.concat(sourceArray);
+                    return mergedArray.filter((item, index) => mergedArray.indexOf(item) === index);
+                  },
+                });
+                data = prettier.format(JSON.stringify(data), {
+                  parser: 'json',
+                  printWidth: 120,
+                  singleQuote: true,
+                });
+              } else {
+                data = fs.readFileSync(path.join(folder, subDirent), { encoding: 'utf8' });
+              }
+              data = data.replace(PROJECT_NAME_REG_EXP, projectName);
+              try {
+                fs.unlinkSync(dirPath);
+              } catch (error) {}
+              fs.writeFileSync(dirPath, data, { encoding: 'utf8' });
+              break;
+            default:
+              fs.copyFileSync(path.join(folder, subDirent), dirPath);
           }
-          data = data.replace(PROJECT_NAME_REG_EXP, projectName);
-          try {
-            fs.unlinkSync(dirPath);
-          } catch (error) {}
-          fs.writeFileSync(dirPath, data, { encoding: 'utf8' });
           this.consoleLog(`${chalk.green.bold(relPath)} file created`, options.silent);
         } else {
           this.consoleLog(`${chalk.blue.bold(relPath)} file already exists`, options.silent);
