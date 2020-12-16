@@ -1,7 +1,6 @@
 import { ApplicationRef, Component } from '@angular/core';
 
 import IMG_FRAMEWORK from '../../assets/logo.angular.png';
-import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import { RouterService } from '../../services/router/service';
 import { AppController, ResolvedRoute } from './controller';
 
@@ -11,11 +10,11 @@ import { AppController, ResolvedRoute } from './controller';
     <div class="my-app">
       <div class="grid grid-cols-3 items-center">
         <a href="https://angular.io" target="angular" class="text-center">
-          <img src="{{ IMG_FRAMEWORK }}" alt="Angular Framework" class="m-auto h-24" />
+          <img src="{{ frameworkImg }}" alt="Angular Framework" class="m-auto h-24" />
         </a>
         <div class="text-center text-5xl text-gray-400 font-extrabold">+</div>
         <a href="https://leanupjs.org" target="leanupjs" class="text-center">
-          <img src="{{ IMG_LEANUP }}" alt="Leanup Stack" class="m-auto h-24" />
+          <img src="{{ stackImg }}" alt="Leanup Stack" class="m-auto h-24" />
         </a>
       </div>
       <h1>{{ framework.name }} v{{ framework.version }}</h1>
@@ -29,6 +28,7 @@ import { AppController, ResolvedRoute } from './controller';
   `,
 })
 export class AppComponent extends AppController {
+  public readonly frameworkImg: string = IMG_FRAMEWORK as string;
   public resolvedRoute: ResolvedRoute = {
     url: 'series',
   };
