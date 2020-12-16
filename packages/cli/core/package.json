@@ -63,7 +63,7 @@
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-decorators": "^7.12.1",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
-    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@babel/preset-typescript": "^7.12.7",
     "@leanup/cli-core-e2e": "^1.0.61",
     "@leanup/cli-core-format": "^1.0.61",
@@ -90,7 +90,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.13",
+    "@types/node": "^14.14.14",
     "tsc": "^1.20150623.0",
     "typescript": "^4.1.3"
   },
