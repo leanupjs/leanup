@@ -10,7 +10,7 @@ function render($ctrl: ListSerieController): string {
       Add
     </button>`;
   if ($ctrl.showPerformanceButton) {
-    html += `<button id="start" type="button" ng-if="$ctrl.showPerformanceButton">
+    html += `<button class="secondary" id="start" type="button" ng-if="$ctrl.showPerformanceButton">
       Performance
     </button>`;
   }

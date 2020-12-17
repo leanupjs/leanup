@@ -10,6 +10,7 @@ import { AppController } from './controller';
 
 function render(component: AppComponent) {
   let html = `<div class="my-app">
+  <code>- is currently not full implemented -</code>
   <div class="grid grid-cols-3 items-center">
     <a href="https://developer.mozilla.org/de/docs/Web/Web_Components/Using_custom_elements" target="vanilla" class="text-center">
       <img src="${IMG_FRAMEWORK as string}" alt="Vanilla Framework" class="m-auto h-24" />
@@ -18,7 +19,7 @@ function render(component: AppComponent) {
     <a href="https://leanupjs.org" target="leanupjs" class="text-center">
       <img src="${IMG_LEANUP as string}" alt="Leanup Stack" class="m-auto h-24" />
     </a>
-  </div>
+  </div><br />
   <h1>${component.$ctrl.framework.name}</h1>
   <small>${component.$ctrl.finishedRendering} ms upcomming time</small>`;
   if (component.resolvedRoute.url === 'series') {
@@ -32,8 +33,7 @@ function render(component: AppComponent) {
   <small>Used filters: ${Filters.date(component.$ctrl.dummies.date)} | ${Filters.currency(
     component.$ctrl.dummies.price
   )} €</small><br />
-  <small>Build with: ${component.$ctrl.cli.name} v${component.$ctrl.cli.version}}</small><br />
-  <code>- is currently not full implemented -</code>
+  <small>Build with: ${component.$ctrl.cli.name} v${component.$ctrl.cli.version}}</small>
 </div>`;
   return html;
 }
