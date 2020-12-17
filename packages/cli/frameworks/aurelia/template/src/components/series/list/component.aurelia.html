@@ -3,7 +3,9 @@
     <h2>List</h2>
     <div>
       <button class="primary" id="add" type="button" click.delegate="add()">Add</button>
-      <button id="start" type="button" if.bind="showPerformanceButton" click.delegate="onStart()">Performance</button>
+      <button class="secondary" id="start" type="button" if.bind="showPerformanceButton" click.delegate="onStart()">
+        Performance
+      </button>
     </div>
     <table class="table" repeat.for="element of elements">
       <thead>

@@ -9,7 +9,9 @@ import { ListSerieController } from './controller';
       <h2>List</h2>
       <div>
         <button class="primary" id="add" type="button" (click)="add()">Add</button>
-        <button id="start" type="button" *ngIf="showPerformanceButton" (click)="onStart()">Performance</button>
+        <button class="secondary" id="start" type="button" *ngIf="showPerformanceButton" (click)="onStart()">
+          Performance
+        </button>
       </div>
       <table class="table" *ngFor="let element of elements; index as i">
         <thead>

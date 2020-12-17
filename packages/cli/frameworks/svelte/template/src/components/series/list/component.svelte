@@ -31,6 +31,7 @@ ctrl.renderView = () => {
     </button>
     {#if showPerformanceButtonRef}
       <button
+        class="secondary"
         id="start"
         type="button"
         on:click="{() => {

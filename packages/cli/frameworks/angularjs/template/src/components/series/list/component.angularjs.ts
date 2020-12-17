@@ -22,7 +22,7 @@ ANGULARJS_MODULE.component('listSerie', {
         <button class="primary" id="add" type="button" ng-click="$ctrl.add()">
           Add
         </button>
-        <button id="start" type="button" ng-if="$ctrl.showPerformanceButton" ng-click="$ctrl.onStart()">
+        <button class="secondary" id="start" type="button" ng-if="$ctrl.showPerformanceButton" ng-click="$ctrl.onStart()">
           Performance
         </button>
       </div>

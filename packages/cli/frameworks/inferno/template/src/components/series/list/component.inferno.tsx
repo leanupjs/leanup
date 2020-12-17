@@ -69,6 +69,7 @@ export class ListSerieComponent extends InvernoComponent<unknown, unknown> imple
           </button>
           {this.ctrl.showPerformanceButton && (
             <button
+              className="secondary"
               id="start"
               type="button"
               onClick={() => {

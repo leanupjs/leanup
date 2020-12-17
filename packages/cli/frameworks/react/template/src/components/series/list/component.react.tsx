@@ -71,6 +71,7 @@ export class ListSerieComponent extends ReactComponent<unknown, unknown> impleme
           </button>
           {this.ctrl.showPerformanceButton && (
             <button
+              className="secondary"
               id="start"
               type="button"
               onClick={() => {

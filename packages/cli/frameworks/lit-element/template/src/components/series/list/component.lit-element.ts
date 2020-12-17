@@ -69,6 +69,7 @@ export class ListSerieComponent extends LitElementComponent {
           </button>
           ${this.ctrl.showPerformanceButton
             ? html`<button
+                class="secondary"
                 id="start"
                 type="button"
                 @click=${() => {
