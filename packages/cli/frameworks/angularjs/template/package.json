@@ -1,6 +1,6 @@
 {
   "name": "@template/angularjs",
-  "version": "1.1.0-rc.233",
+  "version": "1.1.0-rc.236",
   "dependencies": {
     "angular": "^1.8.2"
   },

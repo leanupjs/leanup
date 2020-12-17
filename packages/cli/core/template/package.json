@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.235",
+  "version": "1.1.0-rc.236",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
