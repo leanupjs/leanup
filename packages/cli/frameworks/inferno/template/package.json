@@ -10,7 +10,7 @@
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
     "serve": "inferno serve",
-    "start": "npm run serve -- --open",
+    "start": "npm run serve -- --open=chrome",
     "test": "inferno test",
     "update": "npm install && npm update"
   },
