@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.0.65",
+  "version": "1.0.66",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@leanup/cli": "^1.0.65",
     "@leanup/cli-addons": "^1.0.64",
-    "@leanup/cli-angular": "^1.0.65",
+    "@leanup/cli-angular": "^1.0.66",
     "@leanup/git-hooks": "^1.0.65",
     "@ngtools/webpack": "11.0.5",
     "chromedriver": "87.0.4",
