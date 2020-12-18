@@ -40,9 +40,10 @@
     "@leanup/cli": "^1.0.65",
     "@leanup/cli-addons": "^1.0.64",
     "@leanup/cli-vanilla": "^1.0.64",
-    "chromedriver": "86.0.0",
-    "geckodriver": "1.20.0",
+    "@leanup/git-hooks": "^1.0.65",
+    "chromedriver": "87.0.4",
+    "geckodriver": "1.21.1",
     "selenium-server": "3.141.59",
-    "typescript": "4.0.5"
+    "typescript": "4.1.3"
   }
 }

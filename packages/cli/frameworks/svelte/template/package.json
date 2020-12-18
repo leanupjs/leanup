@@ -35,7 +35,7 @@
     "@leanup/lib": "^1.0.65",
     "navigo": "7.1.2",
     "rxjs": "6.6.3",
-    "svelte": "3.0.0"
+    "svelte": "3.31.0"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.65",
@@ -43,10 +43,10 @@
     "@leanup/cli-svelte": "^1.0.65",
     "@leanup/git-hooks": "^1.0.65",
     "@pyoner/svelte-types": "3.4.4-2",
-    "chromedriver": "85.0.1",
-    "geckodriver": "1.20.0",
+    "chromedriver": "87.0.4",
+    "geckodriver": "1.21.1",
     "selenium-server": "3.141.59",
-    "typescript": "4.0.5"
+    "typescript": "4.1.3"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }
