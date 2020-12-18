@@ -68,7 +68,7 @@
     "@leanup/cli-core-format": "^1.0.63",
     "@leanup/cli-core-lint": "^1.0.63",
     "@leanup/cli-core-test": "^1.0.63",
-    "autoprefixer": "9.8.5",
+    "autoprefixer": "9.8.6",
     "babel-loader": "8.2.2",
     "chalk": "4.1.0",
     "commander": "6.2.1",
