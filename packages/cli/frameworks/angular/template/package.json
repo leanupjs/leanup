@@ -9,12 +9,12 @@
     "@angular/forms": "next",
     "@angular/platform-browser": "next",
     "@angular/platform-browser-dynamic": "next",
-    "core-js": "^3.7.0",
-    "rxjs": "^6.6.3",
-    "zone.js": "^0.11.3"
+    "core-js": "3.7.0",
+    "rxjs": "6.6.3",
+    "zone.js": "0.11.3"
   },
   "devDependencies": {
-    "@leanup/stack-angular": "^1.1.0-rc.227",
+    "@leanup/stack-angular": "1.1.0-rc.227",
     "@ngtools/webpack": "next",
     "typescript": "~4.0.5"
   }

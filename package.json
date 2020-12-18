@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "@leanup/git-hooks": "1.1.0-rc.155",
-    "@leanup/stack": "^1.1.0-rc.213",
-    "lerna": "^3.22.1",
-    "prettier-plugin-svelte": "^1.4.2",
-    "svelte": "^3.31.0"
+    "@leanup/stack": "1.1.0-rc.213",
+    "lerna": "3.22.1",
+    "prettier-plugin-svelte": "1.4.2",
+    "svelte": "3.31.0"
   },
   "engines": {
     "node": ">=10 <16",

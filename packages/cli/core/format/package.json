@@ -18,7 +18,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "2.2.1"
   },
   "engines": {
     "node": ">=10 <16",
