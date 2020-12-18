@@ -9,7 +9,6 @@
     "template/**",
     "babel.config.js",
     "cli.js",
-    "package-lock.json",
     "postcss.config.js",
     "postinstall.js",
     "webpack.config.js"
