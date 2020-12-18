@@ -2,11 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "ci": "npm ci && lerna exec --ignore=@template/* --stream --no-bail -- npm ci",
-    "ncu": "ncu && lerna exec --stream --no-bail -- ncu",
-    "pack": "lerna exec --ignore=@template/* --stream --no-bail -- npm i && lerna exec --ignore=@template/* --stream --no-bail -- npm pack",
-    "outdated": "(npm outdated || true) && lerna exec --stream --no-bail -- npm outdated",
-    "remove": "lerna exec --stream --no-bail -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
+    "ci": "npm ci && lerna exec --ignore=@template/* --stream -- npm ci",
+    "pack": "lerna exec --ignore=@template/* --stream -- npm pack",
+    "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
+    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update"
   },
@@ -19,7 +18,6 @@
     "@leanup/cli": "file:packages/cli/core",
     "@leanup/git-hooks": "file:packages/git-hooks",
     "lerna": "3.22.1",
-    "npm-check-updates": "10.2.2",
     "typescript": "4.1.2"
   },
   "engines": {

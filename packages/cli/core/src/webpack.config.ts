@@ -166,7 +166,7 @@ export function webpackConfig(env: any, argv: any): Object {
 
   function loadAddon(name: string) {
     try {
-      require(`@leanup/cli-${name}/webpack.config`)(argv, config, BABEL_LOADER, exclude);
+      require(`@leanup/cli-${name}/webpack.config`)(argv, config, BABEL_LOADER);
     } catch (error) {
       if (false === cannotFindCliModule.test(error)) {
         throw error;
