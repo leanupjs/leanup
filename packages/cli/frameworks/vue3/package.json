@@ -42,7 +42,7 @@
     "vue3": "lib/cli.js"
   },
   "dependencies": {
-    "vue-loader": "^16.0.0-rc.2"
+    "vue-loader": "^16.1.2"
   },
   "devDependencies": {
     "@types/node": "^14.14.14",

@@ -41,7 +41,7 @@
     "vue": "lib/cli.js"
   },
   "dependencies": {
-    "vue-loader": "^15.9.5"
+    "vue-loader": "^15.9.6"
   },
   "devDependencies": {
     "@types/node": "^14.14.14",
