@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Test up to Node.js v15 + NPM v7 Test
+name: Test all Node.js and NPM variants
 
 on:
   workflow_dispatch:
@@ -34,13 +34,13 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
       - name: Set up Node.js
-        uses: actions/setup-node@v2.1.3
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
         run: |
           npm i lerna --no-save
-          npx lerna exec --ignore=@template/* --parallel -- npm ci
+          npx lerna exec --ignore=@template/* --no-bail --parallel -- npm install
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
