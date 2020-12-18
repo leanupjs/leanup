@@ -8,7 +8,7 @@ sh unpublish.sh cli-angular $1
 sh unpublish.sh cli-angularjs $1
 sh unpublish.sh cli-aurelia $1
 sh unpublish.sh cli-inferno $1
-sh unpublish.sh lit-element $1
+sh unpublish.sh cli-lit-element $1
 sh unpublish.sh cli-preact $1
 sh unpublish.sh cli-react $1
 sh unpublish.sh cli-svelte $1
