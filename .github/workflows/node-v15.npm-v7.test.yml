@@ -34,13 +34,13 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
       - name: Set up Node.js
-        uses: actions/setup-node@v2.1.3
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
         run: |
           npm i lerna --no-save
-          npx lerna exec --ignore=@template/* --no-bail --parallel -- npm ci
+          npx lerna exec --ignore=@template/* --no-bail --parallel -- npm install
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
