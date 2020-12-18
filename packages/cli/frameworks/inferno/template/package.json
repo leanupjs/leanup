@@ -3,15 +3,17 @@
   "version": "1.0.64",
   "description": "",
   "scripts": {
-    "e2e-test": "mkdirp .reports && cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber.json",
-    "build": "inferno build --gzip",
-    "coverage": "inferno coverage",
-    "e2e": "inferno e2e",
+    "build": "cross-env NODE_ENV=production webpack",
+    "coverage": "cross-env NODE_ENV=test nyc mocha",
+    "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
+    "e2e": "nightwatch",
+    "format": "prettier --check {src,tests}/**",
+    "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
-    "serve": "inferno serve",
+    "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "start": "npm run serve -- --open=chrome",
-    "test": "inferno test",
+    "test": "cross-env NODE_ENV=test mocha",
     "update": "npm install && npm update"
   },
   "husky": {
