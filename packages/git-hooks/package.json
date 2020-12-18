@@ -10,7 +10,9 @@
     "commitlint",
     "husky",
     "lint-staged",
-    "changelog"
+    "changelog",
+    "eslint",
+    "prettier"
   ],
   "license": "MIT",
   "repository": {
@@ -28,6 +30,7 @@
     "lint-staged": "10.5.3"
   },
   "peerDependencies": {
-    "@leanup/stack": "1.1.0-rc.220"
+    "eslint": "^2",
+    "prettier": "^7"
   }
 }
