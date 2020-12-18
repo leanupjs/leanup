@@ -29,22 +29,22 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.62",
-    "@leanup/lib": "^1.0.62",
-    "navigo": "^7.1.2",
-    "rxjs": "^6.6.3",
-    "svelte": "^3.0.0"
+    "@leanup/form": "1.0.62",
+    "@leanup/lib": "1.0.62",
+    "navigo": "7.1.2",
+    "rxjs": "6.6.3",
+    "svelte": "3.0.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.62",
-    "@leanup/cli-addons": "^1.0.62",
-    "@leanup/cli-svelte": "^1.0.62",
-    "@leanup/git-hooks": "^1.0.62",
-    "@pyoner/svelte-types": "^3.4.4-2",
-    "chromedriver": "^85.0.1",
-    "geckodriver": "^1.20.0",
-    "selenium-server": "^3.141.59",
-    "typescript": "^4.0.5"
+    "@leanup/cli": "1.0.62",
+    "@leanup/cli-addons": "1.0.62",
+    "@leanup/cli-svelte": "1.0.62",
+    "@leanup/git-hooks": "1.0.62",
+    "@pyoner/svelte-types": "3.4.4-2",
+    "chromedriver": "85.0.1",
+    "geckodriver": "1.20.0",
+    "selenium-server": "3.141.59",
+    "typescript": "4.0.5"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }

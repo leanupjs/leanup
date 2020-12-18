@@ -24,12 +24,12 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "eslint-plugin-graphql": "^4.0.0",
-    "graphql-tag": "^2.11.0"
+    "eslint-plugin-graphql": "4.0.0",
+    "graphql-tag": "2.11.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.14",
-    "typescript": "^4.1.3"
+    "@types/node": "14.14.14",
+    "typescript": "4.1.3"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

@@ -29,22 +29,22 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.62",
-    "@leanup/lib": "^1.0.62",
-    "aurelia-bootstrapper": "^2.0.0",
-    "aurelia-framework": "^1.0.0",
-    "navigo": "^7.1.2",
-    "rxjs": "^6.6.3"
+    "@leanup/form": "1.0.62",
+    "@leanup/lib": "1.0.62",
+    "aurelia-bootstrapper": "2.0.0",
+    "aurelia-framework": "1.0.0",
+    "navigo": "7.1.2",
+    "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.62",
-    "@leanup/cli-addons": "^1.0.62",
-    "@leanup/cli-aurelia": "^1.0.62",
-    "@leanup/git-hooks": "^1.0.62",
-    "chromedriver": "^86.0.0",
-    "geckodriver": "^1.20.0",
-    "selenium-server": "^3.141.59",
-    "typescript": "^4.0.5"
+    "@leanup/cli": "1.0.62",
+    "@leanup/cli-addons": "1.0.62",
+    "@leanup/cli-aurelia": "1.0.62",
+    "@leanup/git-hooks": "1.0.62",
+    "chromedriver": "86.0.0",
+    "geckodriver": "1.20.0",
+    "selenium-server": "3.141.59",
+    "typescript": "4.0.5"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }

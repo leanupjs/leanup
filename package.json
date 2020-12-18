@@ -18,9 +18,9 @@
   "devDependencies": {
     "@leanup/cli": "file:packages/cli/core",
     "@leanup/git-hooks": "file:packages/git-hooks",
-    "lerna": "^3.22.1",
-    "npm-check-updates": "^10.2.2",
-    "typescript": "^4.1.2"
+    "lerna": "3.22.1",
+    "npm-check-updates": "10.2.2",
+    "typescript": "4.1.2"
   },
   "engines": {
     "node": ">=10 <15",
