@@ -35,7 +35,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "vue-loader": "^16.1.1"
+    "vue-loader": "^16.1.2"
   },
   "devDependencies": {
     "@leanup/stack": "^1.1.0-rc.226",
