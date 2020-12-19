@@ -79,6 +79,7 @@
     "html-webpack-plugin": "4.5.0",
     "less": "3.13.0",
     "less-loader": "7.1.0",
+    "postcss": "8.1.8",
     "postcss-loader": "3.0.0",
     "sass": "1.30.0",
     "sass-loader": "10.1.0",
