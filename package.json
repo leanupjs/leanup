@@ -15,10 +15,10 @@
     }
   },
   "devDependencies": {
-    "@leanup/cli": "file:packages/cli/core",
-    "@leanup/git-hooks": "file:packages/git-hooks",
+    "@leanup/cli": "1.0.65",
+    "@leanup/git-hooks": "1.0.65",
     "lerna": "3.22.1",
-    "typescript": "4.1.2"
+    "typescript": "4.1.3"
   },
   "engines": {
     "node": ">=10 <15",
