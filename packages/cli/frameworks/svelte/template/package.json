@@ -1,6 +1,6 @@
 {
   "name": "@template/svelte",
-  "version": "1.0.71",
+  "version": "1.0.72",
   "description": "",
   "scripts": {
     "build": "cross-env webpack --mode=production",
@@ -38,9 +38,9 @@
     "svelte": "3.31.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.71",
+    "@leanup/cli": "^1.0.72",
     "@leanup/cli-addons": "^1.0.69",
-    "@leanup/cli-svelte": "^1.0.71",
+    "@leanup/cli-svelte": "^1.0.72",
     "@leanup/git-hooks": "^1.0.69",
     "@pyoner/svelte-types": "3.4.4-2",
     "chromedriver": "87.0.0",

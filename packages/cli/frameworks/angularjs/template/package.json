@@ -1,6 +1,6 @@
 {
   "name": "@template/angularjs",
-  "version": "1.0.71",
+  "version": "1.0.72",
   "description": "",
   "scripts": {
     "build": "cross-env webpack --mode=production",
@@ -39,7 +39,7 @@
     "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.71",
+    "@leanup/cli": "^1.0.72",
     "@leanup/cli-addons": "^1.0.69",
     "@leanup/cli-angularjs": "^1.0.71",
     "@leanup/git-hooks": "^1.0.69",
