@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-angularjs
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-angularjs
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angularjs&ref=release/1.0
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angularjs&ref=release/1.0
-[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angularjs&ref=release/1.0&type=peer
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angularjs&ref=release/1.0&type=peer
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angularjs&ref=release/1.1
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angularjs&ref=release/1.1
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angularjs&ref=release/1.1&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angularjs&ref=release/1.1&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-angularjs/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-angularjs
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-angularjs

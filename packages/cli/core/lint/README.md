@@ -17,14 +17,14 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-core-lint
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-core-lint
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.0
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.0
-[devdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.0&type=dev
-[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.0&type=dev
-[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.0&type=peer
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.0&type=peer
-[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.0&type=optional
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.0&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.1
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.1
+[devdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.1&type=dev
+[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.1&type=dev
+[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.1&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.1&type=peer
+[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core/lint&ref=release/1.1&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core/lint&ref=release/1.1&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-core-lint/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-lint
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-core-lint
