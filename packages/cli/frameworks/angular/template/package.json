@@ -3,7 +3,7 @@
   "version": "1.0.70",
   "description": "",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "cross-env webpack --mode=production",
     "coverage": "cross-env NODE_ENV=test nyc mocha",
     "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
     "e2e": "nightwatch",
@@ -11,7 +11,7 @@
     "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
-    "serve": "cross-env NODE_ENV=development webpack-dev-server --devtool=source-map",
+    "serve": "cross-env webpack-dev-server --devtool=source-map --mode=development",
     "start": "npm run serve -- --open=chrome",
     "test": "cross-env NODE_ENV=test mocha",
     "update": "npm install && npm update"
