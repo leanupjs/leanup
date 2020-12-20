@@ -1,4 +1,5 @@
 .reports/
+lib/
 node_modules/
 templates/
 *.log

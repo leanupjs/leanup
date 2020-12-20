@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-aurelia
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-aurelia
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/frameworks/aurelia
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/aurelia
-[peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/aurelia
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/aurelia&type=peer
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/aurelia&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/aurelia&ref=release/1.0
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/aurelia&ref=release/1.0&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/aurelia&ref=release/1.0&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-aurelia/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-aurelia
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-aurelia

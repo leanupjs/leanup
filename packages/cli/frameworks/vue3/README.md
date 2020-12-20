@@ -11,12 +11,12 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-vue3
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-vue3
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/frameworks/vue3
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/vue3
-[peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/vue3
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/vue3&type=peer
-[optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/frameworks/vue3
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/vue3&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vue3&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vue3&ref=release/1.0
+[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vue3&ref=release/1.0&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vue3&ref=release/1.0&type=peer
+[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vue3&ref=release/1.0&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vue3&ref=release/1.0&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-vue3/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vue3
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vue3
