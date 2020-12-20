@@ -11,12 +11,12 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-cucumber
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-cucumber
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/plugins/cucumber
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/cucumber
-[peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/plugins/cucumber
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/cucumber&type=peer
-[optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/plugins/cucumber
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/cucumber&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/cucumber&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/cucumber&ref=release/1.0
+[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/cucumber&ref=release/1.0&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/cucumber&ref=release/1.0&type=peer
+[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/cucumber&ref=release/1.0&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/cucumber&ref=release/1.0&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-cucumber/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-cucumber
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-cucumber

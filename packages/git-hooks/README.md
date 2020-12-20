@@ -9,8 +9,8 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/git-hooks
 [npm-url]: https://www.npmjs.com/package/@leanup/git-hooks
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/plugins/addons
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/addons
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/addons&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/addons&ref=release/1.0
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/git-hooks/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/git-hooks
 [downloads]: https://img.shields.io/npm/dm/@leanup/git-hooks
