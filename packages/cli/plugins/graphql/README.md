@@ -11,12 +11,12 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-graphql
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-graphql
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/plugins/graphql
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/graphql
-[peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/plugins/graphql
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/graphql&type=peer
-[optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/plugins/graphql
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/plugins/graphql&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/graphql&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&ref=release/1.0
+[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/graphql&ref=release/1.0&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&ref=release/1.0&type=peer
+[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/graphql&ref=release/1.0&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&ref=release/1.0&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-graphql/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-graphql
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-graphql

@@ -21,14 +21,14 @@ This package contains the [Vanilla](http://vanilla-js.com/) extension for the [@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-vanilla
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-vanilla
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/frameworks/vanilla
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/vanilla
-[dev-dependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/frameworks/vanilla
-[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/vanilla&type=dev
-[peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/vanilla
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/vanilla&type=peer
-[optional-dependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/cli/frameworks/vanilla
-[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/vanilla&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.0
+[dev-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.0&type=dev
+[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.0&type=dev
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.0&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.0&type=peer
+[optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.0&type=optional
+[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.0&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-vanilla/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vanilla
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vanilla

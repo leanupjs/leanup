@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-inferno
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-inferno
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/frameworks/inferno
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/inferno
-[peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/inferno
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/inferno&type=peer
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/inferno&ref=release/1.0
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/inferno&ref=release/1.0
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/inferno&ref=release/1.0&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/inferno&ref=release/1.0&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-inferno/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-inferno
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-inferno
