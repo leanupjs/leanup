@@ -3,7 +3,7 @@ const path = require('path');
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'cli', 'package.json'));
 
@@ -48,7 +48,8 @@ export function webpackConfig(env: any, argv: any): Object {
   const LESS_LOADER = {
     test: /\.less$/,
     use: [
-      'style-loader',
+      MiniCssExtractPlugin.loader,
+      // 'style-loader',
       'css-loader',
       'postcss-loader',
       {
@@ -65,7 +66,8 @@ export function webpackConfig(env: any, argv: any): Object {
   const SASS_LOADER = {
     test: /\.(sa|s?c)ss$/,
     use: [
-      'style-loader',
+      MiniCssExtractPlugin.loader,
+      // 'style-loader',
       'css-loader',
       'postcss-loader',
       {
@@ -154,6 +156,7 @@ export function webpackConfig(env: any, argv: any): Object {
         cache: false,
         template: 'public/index.html',
       }),
+      new MiniCssExtractPlugin(),
     ],
     resolve: {
       alias: {},
