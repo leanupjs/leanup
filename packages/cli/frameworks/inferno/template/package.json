@@ -1,6 +1,6 @@
 {
   "name": "@template/inferno",
-  "version": "1.0.69",
+  "version": "1.0.70",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -38,9 +38,9 @@
     "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.69",
+    "@leanup/cli": "^1.0.70",
     "@leanup/cli-addons": "^1.0.69",
-    "@leanup/cli-inferno": "^1.0.69",
+    "@leanup/cli-inferno": "^1.0.70",
     "@leanup/git-hooks": "^1.0.69",
     "chromedriver": "87.0.0",
     "cssnano": "4.1.10",

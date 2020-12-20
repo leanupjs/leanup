@@ -1,6 +1,6 @@
 {
   "name": "@template/vue3",
-  "version": "1.0.69",
+  "version": "1.0.70",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -38,7 +38,7 @@
     "vue": "3.0.4"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.69",
+    "@leanup/cli": "^1.0.70",
     "@leanup/cli-addons": "^1.0.69",
     "@leanup/cli-vue3": "^1.0.69",
     "@leanup/git-hooks": "^1.0.69",
