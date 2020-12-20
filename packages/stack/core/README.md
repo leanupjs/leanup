@@ -3,9 +3,9 @@
 [![license][license]][license-url]
 
 [![dependencies][dependencies]][dependencies-url]
-[![devDependencies][devdependencies]][devdependencies-url]
-[![peerDependencies][peerdependencies]][peerdependencies-url]
-[![optionalDependencies][optionaldependencies]][optionaldependencies-url]
+[![dev-dependencies][dev-dependencies]][peer-dependencies-url]
+[![peer-dependencies][peer-dependencies]][peer-dependencies-url]
+[![optional-dependencies][optional-dependencies]][peer-dependencies-url]
 
 [![vulnerabilities][vulnerabilities]][vulnerabilities-url]
 [![install-size][install-size]][install-size-url]
@@ -21,14 +21,14 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/stack
 [license]: https://img.shields.io/npm/l/@leanup/stack
 [license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/stack/core
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/stack/core
-[devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/stack/core
-[devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/stack/core&type=dev
-[peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/stack/core
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/stack/core&type=peer
-[optionaldependencies]: https://img.shields.io/david/optional/leanupjs/leanup?path=packages/stack/core
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/stack/core&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/core&ref=release/1.1
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/core&ref=release/1.1
+[dev-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/core&ref=release/1.1&type=dev
+[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/core&ref=release/1.1&type=dev
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/core&ref=release/1.1&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/core&ref=release/1.1&type=peer
+[optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/core&ref=release/1.1&type=optional
+[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/core&ref=release/1.1&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/stack/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/stack
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/stack
