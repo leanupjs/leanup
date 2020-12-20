@@ -33,9 +33,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "dependencies": {
-    "@leanup/stack-webpack": "^1.1.0-rc.239"
-  },
   "devDependencies": {
     "@leanup/stack": "^1.1.0-rc.239",
     "@types/node": "14.14.14",
