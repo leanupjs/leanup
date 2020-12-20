@@ -24,11 +24,11 @@ export class CreateSerieComponent extends PreactComponent<unknown, unknown> impl
       >
         <h5>Create a new measuring serie</h5>
         <EditorSerieComponent editorForm={this.ctrl.editorForm} />
-        <button className="btn btn-primary" type="submit" id="submit">
+        <button className="primary" type="submit" id="submit">
           Add
         </button>
         <button
-          className="btn"
+          className="secondary"
           type="reset"
           id="cancel"
           onClick={() => {

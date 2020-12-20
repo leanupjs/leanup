@@ -1,9 +1,9 @@
 <template>
   <form @submit="onSubmit">
-    <h5>Create a new measuring serie</h5>
+    <h2>Create a new measuring serie</h2>
     <editor-serie :editor-form="editorFormRef"></editor-serie>
-    <button class="btn btn-primary" type="submit" id="submit">Add</button>
-    <button class="btn secondary" type="reset" id="cancel" @click="onCancel">Abbrechen</button>
+    <button class="primary" type="submit" id="submit">Add</button>
+    <button class="secondary" type="reset" id="cancel" @click="onCancel">Abbrechen</button>
   </form>
 </template>
 

@@ -18,13 +18,13 @@ ANGULARJS_MODULE.component('editSerie', {
   ],
   template: `
     <form ng-submit="$ctrl.onSubmit()">
-      <h5>Edit a existing measuring serie</h5>
+      <h2>Edit a existing measuring serie</h2>
       <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
-      <button class="btn btn-primary" type="submit" id="submit">Edit</button>
-      <button class="btn btn-secondary" type="reset" id="cancel" ng-click="$ctrl.onCancel()">
+      <button class="primary" type="submit" id="submit">Edit</button>
+      <button class="secondary" type="reset" id="cancel" ng-click="$ctrl.onCancel()">
         Abbrechen
       </button>
-      <button class="btn btn-danger" id="delete" type="button" ng-click="$ctrl.onDelete()">
+      <button class="danger" id="delete" type="button" ng-click="$ctrl.onDelete()">
         Delete
       </button>
     </form>

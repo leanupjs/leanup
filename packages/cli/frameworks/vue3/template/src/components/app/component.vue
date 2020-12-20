@@ -1,6 +1,15 @@
 <template>
-  <div id="app">
-    <h4>{{ framework.name }} v{{ framework.version }}</h4>
+  <div class="my-app">
+    <div class="grid grid-cols-3 items-center">
+      <a href="https://v3.vuejs.org/" target="vuejs" class="text-center">
+        <img :src="frameworkImg" alt="Vue Framework" class="m-auto w-24" />
+      </a>
+      <div class="text-center text-5xl text-gray-400 font-extrabold">+</div>
+      <a href="https://leanupjs.org" target="leanupjs" class="text-center">
+        <img :src="stackImg" alt="Vue Framework" class="m-auto w-24" />
+      </a>
+    </div>
+    <h1>{{ framework.name }} v{{ framework.version }}</h1>
     <small>{{ finishedRendering }} ms upcomming time</small>
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
@@ -19,6 +28,8 @@ import CreateSerieComponent from '../series/create/component.vue';
 import EditSerieComponent from '../series/edit/component.vue';
 import { currency, date } from '@leanup/lib/shares/filters';
 import { ref } from 'vue';
+import IMG_LEANUP from '../../assets/logo.leanupjs.png';
+import IMG_FRAMEWORK from '../../assets/logo.vue.png';
 
 export default {
   components: {
@@ -40,6 +51,8 @@ export default {
       };
     });
     return {
+      frameworkImg: IMG_FRAMEWORK,
+      stackImg: IMG_LEANUP,
       finishedRendering: $ctrl.finishedRendering,
       dummies: $ctrl.dummies,
       currency,

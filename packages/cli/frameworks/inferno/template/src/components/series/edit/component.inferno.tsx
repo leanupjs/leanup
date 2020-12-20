@@ -26,13 +26,13 @@ export class EditSerieComponent extends InvernoComponent<Props, EditSerieControl
           this.ctrl.onSubmit();
         }}
       >
-        <h5>Edit a existing measuring serie</h5>
+        <h2>Edit a existing measuring serie</h2>
         <EditorSerieComponent editorForm={this.ctrl.editorForm} />
-        <button className="btn btn-primary" type="submit" id="submit">
+        <button className="primary" type="submit" id="submit">
           Edit
         </button>
         <button
-          className="btn btn-secondary"
+          className="secondary"
           type="reset"
           id="cancel"
           onClick={() => {
@@ -42,7 +42,7 @@ export class EditSerieComponent extends InvernoComponent<Props, EditSerieControl
           Abbrechen
         </button>
         <button
-          className="btn btn-danger"
+          className="danger"
           id="delete"
           type="button"
           onClick={() => {

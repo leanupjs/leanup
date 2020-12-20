@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { ReactComponent } from '@leanup/lib/components/react';
 
@@ -26,13 +28,13 @@ export class EditSerieComponent extends ReactComponent<Props, EditSerieControlle
           this.ctrl.onSubmit();
         }}
       >
-        <h5>Edit a existing measuring serie</h5>
+        <h2>Edit a existing measuring serie</h2>
         <EditorSerieComponent editorForm={this.ctrl.editorForm} />
-        <button className="btn btn-primary" type="submit" id="submit">
+        <button className="primary" type="submit" id="submit">
           Edit
         </button>
         <button
-          className="btn btn-secondary"
+          className="secondary"
           type="reset"
           id="cancel"
           onClick={() => {
@@ -42,7 +44,7 @@ export class EditSerieComponent extends ReactComponent<Props, EditSerieControlle
           Abbrechen
         </button>
         <button
-          className="btn btn-danger"
+          className="danger"
           id="delete"
           type="button"
           onClick={() => {

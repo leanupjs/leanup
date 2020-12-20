@@ -3,10 +3,10 @@ import { CreateSerieController } from './controller';
 
 function render(component: CreateSerieComponent): string {
   return `<form submit.delegate="onSubmit()">
-    <h5>Create a new measuring serie</h5>
+    <h2>Create a new measuring serie</h2>
     <editor-serie editor-form.bind="editorForm"></editor-serie>
-    <button class="btn btn-primary" type="submit" id="submit">Add</button>
-    <button class="btn secondary" type="reset" id="cancel" click.delegate="onCancel()">
+    <button class="primary" type="submit" id="submit">Add</button>
+    <button class="secondary" type="reset" id="cancel" click.delegate="onCancel()">
       Abbrechen
     </button>
   </form>`;

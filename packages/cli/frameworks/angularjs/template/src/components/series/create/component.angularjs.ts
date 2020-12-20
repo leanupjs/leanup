@@ -5,10 +5,10 @@ ANGULARJS_MODULE.component('createSerie', {
   controller: ['$scope', CreateSerieController],
   template: `
   <form ng-submit="$ctrl.onSubmit()">
-    <h5>Create a new measuring serie</h5>
+    <h2>Create a new measuring serie</h2>
     <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
-    <button class="btn btn-primary" type="submit" id="submit">Add</button>
-    <button class="btn secondary" type="reset" id="cancel" ng-click="$ctrl.onCancel()">
+    <button class="primary" type="submit" id="submit">Add</button>
+    <button class="secondary" type="reset" id="cancel" ng-click="$ctrl.onCancel()">
       Abbrechen
     </button>
   </form>
