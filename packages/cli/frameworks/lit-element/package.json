@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-lit-element",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "description": "This package contains the lit-element extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",

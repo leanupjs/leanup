@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -40,9 +40,9 @@
     "vue-template-compiler": "2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.72",
+    "@leanup/cli": "^1.0.73",
     "@leanup/cli-addons": "^1.0.69",
-    "@leanup/cli-vue": "^1.0.72",
+    "@leanup/cli-vue": "^1.0.73",
     "@leanup/git-hooks": "^1.0.69",
     "chromedriver": "87.0.0",
     "cssnano": "4.1.10",
