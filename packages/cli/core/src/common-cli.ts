@@ -72,7 +72,7 @@ export class CommonCLI extends AbstractCLI {
         ])
         .concat(commonOptions),
       (options: ServeOps): string[] => {
-        const spawnArgs = [];
+        const spawnArgs = ['cross-env'];
         if (options.mode) {
           spawnArgs.push(`NODE_ENV=${options.mode}`);
         }
@@ -105,7 +105,7 @@ export class CommonCLI extends AbstractCLI {
       'Building (https://webpack.js.org/)',
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
-        const spawnArgs = [];
+        const spawnArgs = ['cross-env'];
         if (options.mode) {
           spawnArgs.push(`NODE_ENV=${options.mode}`);
         }
