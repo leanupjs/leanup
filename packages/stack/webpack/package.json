@@ -33,7 +33,7 @@
   "dependencies": {
     "copy-modules-webpack-plugin": "2.1.1",
     "css-loader": "5.0.1",
-    "esbuild-loader": "2.6.3",
+    "esbuild-loader": "2.7.0",
     "file-loader": "6.2.0",
     "less": "3.13.0",
     "less-loader": "7.1.0",
