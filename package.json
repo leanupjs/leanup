@@ -6,7 +6,7 @@
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
     "pack": "lerna exec --ignore=@template/* --stream -- npm install && lerna exec --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
-    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.tgz && rm -rf node_modules package-lock.json  *.tgz",
+    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log  *.tgz",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update"
   },
@@ -16,8 +16,8 @@
     }
   },
   "devDependencies": {
-    "@leanup/git-hooks": "1.1.0-rc.155",
-    "@leanup/stack": "1.1.0-rc.213",
+    "@leanup/git-hooks": "next",
+    "@leanup/stack": "next",
     "lerna": "3.22.1",
     "prettier-plugin-svelte": "1.4.2",
     "svelte": "3.31.0",
