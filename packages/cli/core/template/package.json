@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.239",
+  "version": "1.1.0-rc.240",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.239",
+    "@leanup/form": "^1.1.0-rc.240",
     "@leanup/lib": "^1.1.0-rc.239",
     "navigo": "7.1.2",
     "rxjs": "6.6.3",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@leanup/git-hooks": "^1.1.0-rc.239",
-    "@leanup/stack": "^1.1.0-rc.239",
+    "@leanup/stack": "^1.1.0-rc.240",
     "chromedriver": "87.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.21.0",

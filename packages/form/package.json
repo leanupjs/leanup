@@ -1,6 +1,6 @@
 {
   "name": "@leanup/form",
-  "version": "1.1.0-rc.239",
+  "version": "1.1.0-rc.240",
   "description": "This module contains useful features for handling forms.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/form#readme",
