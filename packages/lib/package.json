@@ -13,7 +13,7 @@
     "url": "https://github.com/leanupjs/lib/issues"
   },
   "dependencies": {
-    "loglevel": "1.7.0"
+    "loglevel": "1.7.1"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
