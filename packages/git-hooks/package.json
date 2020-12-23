@@ -30,7 +30,7 @@
     "lint-staged": "10.5.3"
   },
   "peerDependencies": {
-    "eslint": "^2",
-    "prettier": "^7"
+    "eslint": "^7",
+    "prettier": "^2"
   }
 }
