@@ -8,23 +8,38 @@
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
     "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log  *.tgz",
     "reinstall": "npm run remove && npm run update",
-    "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install && npm update && lerna exec --ignore=@template/* --stream -- npm update"
+    "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leanupjs/leanup.git"
+  },
   "devDependencies": {
     "@leanup/git-hooks": "next",
     "@leanup/stack": "next",
+    "auto-changelog": "2.2.1",
     "lerna": "3.22.1",
+    "npm-check-updates": "10.2.5",
     "prettier-plugin-svelte": "1.4.2",
     "svelte": "3.31.0",
     "typescript": "4.1.3"
   },
+  "changelog": {
+    "labels": {
+      "feature": "New Feature",
+      "bug": "Bug Fix"
+    }
+  },
   "engines": {
     "node": ">=10 <16",
     "npm": ">=6 <8"
+  },
+  "dependencies": {
+    "auto-changelog": "^2.2.1"
   }
 }
