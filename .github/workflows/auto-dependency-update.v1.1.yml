@@ -26,20 +26,10 @@ jobs:
         uses: actions/setup-node@v2.1.4
         with:
           node-version: 14.x
-      - name: Install dependencies
+      - name: Install and update dependencies
         run: |
-          npm i lerna --no-save
-          npx lerna exec --ignore=@template/* --parallel -- npm install
-      - name: Cache multiple paths
-        uses: actions/cache@v2
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-      - name: Update dependencies
-        run: |
-          # npx lerna exec --ignore=@template/* --parallel -- npm update
-          npx lerna exec --ignore=@template/* --parallel -- npx ncu -u
+          npm run ci
+          npm run nuc
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"

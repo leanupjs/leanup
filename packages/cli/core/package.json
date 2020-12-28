@@ -67,9 +67,6 @@
     "tsc": "1.20150623.0",
     "typescript": "4.1.3"
   },
-  "peerDependencies": {
-    "typescript": "^4"
-  },
   "scripts": {
     "postinstall": "node postinstall.js",
     "prepack": "cp ../../../README.md template/ && rm -rf lib && tsc"

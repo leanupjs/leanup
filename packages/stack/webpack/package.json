@@ -36,14 +36,14 @@
     "esbuild-loader": "2.7.0",
     "file-loader": "6.2.0",
     "less": "4.0.0",
-    "less-loader": "7.2.0",
+    "less-loader": "7.2.1",
     "postcss": "8.2.1",
     "postcss-loader": "4.1.0",
     "sass": "1.30.0",
     "sass-loader": "10.1.0",
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
-    "webpack": "5.11.0",
+    "webpack": "4.44.2",
     "webpack-cli": "4.3.0",
     "webpack-dev-server": "3.11.0"
   },
@@ -54,7 +54,7 @@
     "typescript": "4.1.3"
   },
   "peerDependencies": {
-    "typescript": "^4"
+    "typescript": ">=4"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
