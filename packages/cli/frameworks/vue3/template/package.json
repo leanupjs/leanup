@@ -1,9 +1,9 @@
 {
   "name": "@template/vue3",
-  "version": "1.0.72",
+  "version": "1.0.75",
   "description": "",
   "scripts": {
-    "build": "cross-env webpack --mode=production",
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
     "coverage": "cross-env NODE_ENV=test nyc mocha",
     "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
     "e2e": "nightwatch",
@@ -11,7 +11,7 @@
     "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
-    "serve": "cross-env webpack-dev-server --devtool=source-map --mode=development",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server --devtool=source-map --mode=development",
     "start": "npm run serve -- --open=chrome",
     "test": "cross-env NODE_ENV=test mocha",
     "update": "npm install && npm update"
@@ -31,16 +31,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.67",
-    "@leanup/lib": "^1.0.65",
+    "@leanup/form": "^1.0.75",
+    "@leanup/lib": "^1.0.75",
     "navigo": "7.1.2",
     "rxjs": "6.6.3",
     "vue": "3.0.4"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.72",
-    "@leanup/cli-addons": "^1.0.69",
-    "@leanup/cli-vue3": "^1.0.72",
+    "@leanup/cli": "^1.0.75",
+    "@leanup/cli-addons": "^1.0.75",
+    "@leanup/cli-vue3": "^1.0.75",
     "@leanup/git-hooks": "^1.0.69",
     "@vue/compiler-sfc": "3.0.4",
     "chromedriver": "87.0.0",

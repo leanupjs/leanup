@@ -72,7 +72,12 @@ export class CommonCLI extends AbstractCLI {
         ])
         .concat(commonOptions),
       (options: ServeOps): string[] => {
-        const spawnArgs = ['webpack-dev-server', '--devtool=source-map'];
+        const spawnArgs = ['cross-env'];
+        if (options.mode) {
+          spawnArgs.push(`NODE_ENV=${options.mode}`);
+        }
+        spawnArgs.push('webpack-dev-server');
+        spawnArgs.push('--devtool=source-map');
         if (options.environment) {
           spawnArgs.push(`--environment=${options.environment}`);
         }
@@ -100,7 +105,11 @@ export class CommonCLI extends AbstractCLI {
       'Building (https://webpack.js.org/)',
       buildOptions.concat(commonOptions),
       (options: BuildOps): string[] => {
-        const spawnArgs = ['webpack'];
+        const spawnArgs = ['cross-env'];
+        if (options.mode) {
+          spawnArgs.push(`NODE_ENV=${options.mode}`);
+        }
+        spawnArgs.push('webpack');
         if (options.environment) {
           spawnArgs.push(`--env=${options.environment}`);
         }
