@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -73,7 +73,7 @@
     "chalk": "4.1.0",
     "commander": "6.2.1",
     "copy-modules-webpack-plugin": "2.1.1",
-    "copy-webpack-plugin": "7.0.0",
+    "copy-webpack-plugin": "6.4.1",
     "css-loader": "5.0.1",
     "deepmerge": "4.2.2",
     "file-loader": "6.2.0",
@@ -90,7 +90,7 @@
     "style-loader": "2.0.0",
     "webpack": "4.44.2",
     "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0"
+    "webpack-dev-server": "3.11.1"
   },
   "devDependencies": {
     "@types/node": "14.14.16",
