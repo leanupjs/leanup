@@ -39,6 +39,6 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
         run: npm run update
-      # - name: Test all framework variants
-      #   run: sh wake-up-all.sh ${{github.event.inputs.tag}}
-      #   working-directory: scripts
+      - name: Test all framework variants
+        run: sh wake-up-all.sh ${{github.event.inputs.tag}}
+        working-directory: scripts
