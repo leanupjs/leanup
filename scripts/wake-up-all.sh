@@ -1,3 +1,4 @@
+rm -rf ../.eslintrc.js
 sh wake-up.sh angular $1
 sh wake-up.sh angularjs $1
 sh wake-up.sh aurelia $1

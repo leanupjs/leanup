@@ -38,11 +38,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
-        run: |
-          npm i lerna --no-save
-          npx lerna exec --ignore=@template/* --no-bail --parallel -- npm install
-      - name: Test all framework variants
-        run: |
-          rm ../.eslintrc.js
-          sh wake-up-all.sh ${{github.event.inputs.tag}}
-        working-directory: scripts
+        run: npm run update
+      # - name: Test all framework variants
+      #   run: sh wake-up-all.sh ${{github.event.inputs.tag}}
+      #   working-directory: scripts
