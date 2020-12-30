@@ -6,7 +6,7 @@ name: GitHub CI - Create a Release
 on:
   push:
     branches:
-      - release/*
+      - release-/*
 
 jobs:
   build:
