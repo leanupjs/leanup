@@ -115,6 +115,7 @@ There are some working examples:
 | [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
 | [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
 | [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
+| [AuditJS]       | Vulnerabiliy-Gate |   ✔️   | ready                      | [![auditjs](https://snyk.io/advisor/npm-package/auditjs/badge.svg)]                                                                                                                                                     |
 | [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
 | [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
 | [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
@@ -155,6 +156,7 @@ Vanilla Java-/TypeScript are supported by default. That means for example custom
 
 The selection of the following frameworks depends in parts on the following references:
 
+- [report-2020](https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce)
 - [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential),
 - [benchmark](https://krausest.github.io/js-framework-benchmark/2020/table_chrome_80.html) and
 - [survey](https://2019.stateofjs.com/front-end-frameworks)
@@ -227,3 +229,4 @@ There a separate packages for important application features.
 [esbuild]: https://esbuild.github.io
 [openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
+[auditjs]: https://github.com/sonatype-nexus-community/auditjs#readme
