@@ -36,7 +36,7 @@
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1
 [devdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=dev
 [devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1&type=dev
-[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=peer&type=peer
+[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=peer
 [peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1&type=peer
 [optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=optional
 [optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1&type=optional
