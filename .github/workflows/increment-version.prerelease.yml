@@ -26,9 +26,23 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          npx lerna version ${{ env.level }} --no-push --yes
+          npx lerna version ${{ env.level }} --no-git-tag-version --no-push --yes
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GIT_PUSH_TOKEN }}
           branch: ${{ github.ref }}
+      - name: Read Lerna
+        id: lerna
+        run: |
+          content=`cat ./lerna.json | tr -d "\n"`
+          echo "::set-output name=lernaJson::$content"
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: true
+          prerelease: true
+          release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+          tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
