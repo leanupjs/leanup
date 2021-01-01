@@ -51,7 +51,7 @@
     "autoprefixer": "10.1.0",
     "chai": "4.2.0",
     "cross-env": "7.0.3",
-    "esbuild": "0.8.27",
+    "esbuild": "0.8.28",
     "esbuild-register": "1.1.1",
     "eslint": "7.16.0",
     "eslint-plugin-html": "6.1.1",
