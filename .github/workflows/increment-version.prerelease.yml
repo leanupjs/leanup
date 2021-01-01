@@ -26,12 +26,12 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          npx lerna version ${{ env.level }} --yes
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GIT_PUSH_TOKEN }}
-      #     branch: ${{ github.ref }}
+          npx lerna version ${{ env.level }} --no-push --yes
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GIT_PUSH_TOKEN }}
+          branch: ${{ github.ref }}
       - name: Read Lerna
         id: lerna
         run: |
