@@ -44,7 +44,7 @@
     "typescript": "4.1.3"
   },
   "peerDependencies": {
-    "@leanup/stack-webpack": "1.1.0-rc.243",
+    "@leanup/stack-webpack": "^1.1.0-rc.243",
     "svelte": "^3"
   },
   "scripts": {

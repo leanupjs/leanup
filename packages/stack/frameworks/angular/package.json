@@ -40,7 +40,7 @@
   },
   "peerDependencies": {
     "@angular/core": ">=8",
-    "@leanup/stack-webpack": "1.1.0-rc.243",
+    "@leanup/stack-webpack": "^1.1.0-rc.243",
     "@ngtools/webpack": ">=8"
   },
   "scripts": {
