@@ -1,6 +1,6 @@
 {
   "name": "@template/lit-element",
-  "version": "1.1.0-rc.237",
+  "version": "1.1.0-rc.246",
   "dependencies": {
     "lit-element": "2.4.0"
   }
