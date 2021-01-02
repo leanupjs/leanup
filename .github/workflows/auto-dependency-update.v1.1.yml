@@ -28,7 +28,7 @@ jobs:
           node-version: 14.x
       - name: Install and update dependencies
         run: |
-          npm run ci
+          npm run update
           npm run nuc
       - name: Commit changed files
         run: |
