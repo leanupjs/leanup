@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.249",
+  "version": "1.1.0-rc.251",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -38,7 +38,7 @@
     "tailwindcss": "2.0.2"
   },
   "devDependencies": {
-    "@leanup/cli": "1.1.0-rc.249",
+    "@leanup/cli": "^1.1.0-rc.251",
     "@leanup/git-hooks": "1.1.0-rc.249",
     "@leanup/stack": "1.1.0-rc.249",
     "chromedriver": "87.0.4",
