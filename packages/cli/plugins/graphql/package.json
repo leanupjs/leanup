@@ -24,7 +24,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli": "^1.1.0-rc.249",
+    "@leanup/cli": "1.1.0-rc.249",
     "eslint-plugin-graphql": "4.0.0",
     "graphql-tag": "2.11.0"
   },

@@ -24,7 +24,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli": "^1.1.0-rc.249",
+    "@leanup/cli": "1.1.0-rc.249",
     "webpack-pwa-manifest": "4.3.0",
     "workbox-webpack-plugin": "6.0.2"
   },
