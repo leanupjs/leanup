@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-vue3",
-  "version": "1.1.0-rc.247",
+  "version": "1.1.0-rc.248",
   "description": "This package contains the Vue3 framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -38,7 +38,7 @@
     "vue3": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli": "^1.1.0-rc.246"
+    "@leanup/cli": "^1.1.0-rc.248"
   },
   "devDependencies": {
     "@types/node": "14.14.19",
