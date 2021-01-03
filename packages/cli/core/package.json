@@ -57,6 +57,10 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
+  "bin": {
+    "lean": "lib/cli.js",
+    "leanup": "lib/cli.js"
+  },
   "dependencies": {
     "@babel/core": "7.12.10",
     "@babel/plugin-proposal-class-properties": "7.12.1",

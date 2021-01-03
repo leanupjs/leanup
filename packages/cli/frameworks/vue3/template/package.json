@@ -38,7 +38,6 @@
     "vue": "3.0.4"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.76",
     "@leanup/cli-addons": "^1.0.78",
     "@leanup/cli-vue3": "^1.0.78",
     "@leanup/git-hooks": "^1.0.76",

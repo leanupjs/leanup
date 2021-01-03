@@ -33,16 +33,14 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "bin": {
-    "lean": "lib/cli.js",
     "vanilla": "lib/cli.js"
   },
+  "dependencies": {
+    "@leanup/cli": "^1.0.76"
+  },
   "devDependencies": {
-    "@leanup/cli": "^1.0.76",
     "@types/node": "14.14.16",
     "typescript": "4.1.3"
-  },
-  "peerDependencies": {
-    "@leanup/cli": ">=1 && <2"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
