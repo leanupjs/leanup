@@ -31,18 +31,18 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.78",
-    "@leanup/lib": "^1.0.78",
+    "@leanup/form": "^1.0.76",
+    "@leanup/lib": "^1.0.75",
     "navigo": "7.1.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.78",
+    "@leanup/cli": "^1.0.76",
     "@leanup/cli-addons": "^1.0.78",
     "@leanup/cli-react": "^1.0.78",
-    "@leanup/git-hooks": "^1.0.78",
+    "@leanup/git-hooks": "^1.0.76",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "chromedriver": "87.0.0",
