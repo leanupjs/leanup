@@ -115,7 +115,7 @@ export abstract class AbstractCLI {
     console.log(
       `
 `,
-      `${chalk.magenta.bold(`☀ ${chalk.underline(`@leanup/cli`)}-${this.name}`)}`,
+      `${chalk.magenta.bold(`☀ ${chalk.underline(`@leanup/cli`)}${this.name != '' ? `-${this.name}` : ''}`)}`,
       `(v${this.version})`,
       chalk.italic.gray('execute the following pure command ...'),
       `
