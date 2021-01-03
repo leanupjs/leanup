@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-addons",
-  "version": "1.1.0-rc.248",
+  "version": "1.1.0-rc.249",
   "description": "This module contains some nice addons for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -40,7 +40,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli": "^1.1.0-rc.248",
+    "@leanup/cli": "^1.1.0-rc.249",
     "comlink-loader": "2.0.0",
     "compression-webpack-plugin": "7.1.1"
   },
