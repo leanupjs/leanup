@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-graphql",
-  "version": "1.0.79",
+  "version": "1.0.80",
   "description": "This module contains the graphql feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -24,7 +24,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli": "^1.0.79",
+    "@leanup/cli": "^1.0.80",
     "eslint-plugin-graphql": "4.0.0",
     "graphql-tag": "2.11.0"
   },
