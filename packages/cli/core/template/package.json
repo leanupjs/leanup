@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "@leanup/git-hooks": "^1.1.0-rc.247",
-    "@leanup/stack": "^1.1.0-rc.247",
     "chromedriver": "87.0.4",
     "cssnano": "4.1.10",
     "geckodriver": "1.21.1",
