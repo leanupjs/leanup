@@ -76,7 +76,7 @@
     "babel-loader": "8.2.2",
     "chalk": "4.1.0",
     "commander": "6.2.1",
-    "copy-modules-webpack-plugin": "2.1.1",
+    "copy-modules-webpack-plugin": "2.2.0",
     "copy-webpack-plugin": "6.4.1",
     "css-loader": "5.0.1",
     "deepmerge": "4.2.2",
