@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-svelte",
-  "version": "1.0.81",
+  "version": "1.0.82",
   "description": "This package contains the Svelte framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -41,7 +41,7 @@
     "svelte": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli": "^1.0.81",
+    "@leanup/cli": "^1.0.82",
     "prettier-plugin-svelte": "1.4.2",
     "svelte-loader": "2.13.6"
   },
