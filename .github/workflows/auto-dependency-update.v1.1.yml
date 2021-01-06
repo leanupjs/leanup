@@ -28,8 +28,8 @@ jobs:
           node-version: 14.x
       - name: Install and update dependencies
         run: |
-          npm run update
           npm run ncu
+          npm run update
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
