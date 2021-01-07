@@ -2,14 +2,14 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "ci": "npm ci && lerna exec --ignore=@template/* --stream -- npm ci",
+    "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
-    "ncu": "ncu --dep prod,dev -u && lerna exec --ignore=@template/* --stream -- ncu --dep prod,dev -u -x copy-webpack-plugin,webpack,webpack-cli",
-    "pack": "lerna exec --ignore=@template/* --stream -- npm install && lerna exec --ignore=@template/* --stream -- npm pack",
+    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --ignore=@template/* --stream -- ncu --dep prod,dev -t minor -u -x copy-webpack-plugin,webpack,webpack-cli",
+    "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
-    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log  *.tgz",
+    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz",
     "reinstall": "npm run remove && npm run update",
-    "update": "npm install && lerna exec --ignore=@template/* --stream -- npm install"
+    "update": "npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install"
   },
   "husky": {
     "hooks": {
