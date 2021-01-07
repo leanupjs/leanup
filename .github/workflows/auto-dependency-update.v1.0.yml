@@ -26,10 +26,12 @@ jobs:
         uses: actions/setup-node@v2.1.4
         with:
           node-version: 14.x
-      - name: Install and update dependencies
-        run: |
-          npm run ncu
-          npm run update
+      - name: Install tools
+        run: npm i lerna npm-check-updates --no-save
+      - name: Update dependencies
+        run: npm run ncu
+      - name: Install dependencies
+        run: npm run udpate
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
