@@ -1,7 +1,7 @@
 const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
-const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
+const { ESBuildPlugin /*, ESBuildMinifyPlugin */ } = require('esbuild-loader');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'stack', 'package.json'));
@@ -151,14 +151,14 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
         SASS_LOADER,
       ].concat(loaders),
     },
-    optimization: {
-      minimize: true,
-      minimizer: [
-        new ESBuildMinifyPlugin({
-          target: 'es2015',
-        }),
-      ],
-    },
+    // optimization: {
+    //   minimize: true,
+    //   minimizer: [
+    //     new ESBuildMinifyPlugin({
+    //       target: 'es2015',
+    //     }),
+    //   ],
+    // },
     output: {
       path: path.join(process.cwd(), 'dist'),
     },
