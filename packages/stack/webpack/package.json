@@ -31,7 +31,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "copy-modules-webpack-plugin": "2.1.1",
+    "copy-modules-webpack-plugin": "2.2.0",
     "css-loader": "5.0.1",
     "esbuild-loader": "2.7.0",
     "file-loader": "6.2.0",
@@ -39,7 +39,7 @@
     "less-loader": "7.2.1",
     "postcss": "8.2.2",
     "postcss-loader": "4.1.0",
-    "sass": "1.32.0",
+    "sass": "1.32.2",
     "sass-loader": "10.1.0",
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
