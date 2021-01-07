@@ -4,7 +4,7 @@
   "scripts": {
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
-    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x typescript,webpack",
+    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x copy-modules-webpack-plugin,typescript,webpack",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
     "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz",
@@ -26,7 +26,7 @@
     "auto-changelog": "2.2.1",
     "lerna": "^3.22.1",
     "npm-check-updates": "10.2.5",
-    "prettier-plugin-svelte": "2.0.0",
+    "prettier-plugin-svelte": "1.4.2",
     "svelte": "3.31.2",
     "typescript": "4.1.3"
   },
