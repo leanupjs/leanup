@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.0.79",
+  "version": "1.0.83",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,21 +31,21 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.79",
-    "@leanup/lib": "^1.0.79",
+    "@leanup/form": "^1.0.83",
+    "@leanup/lib": "^1.0.83",
     "@vue/composition-api": "0.6.7",
-    "navigo": "7.1.2",
+    "navigo": "7.1.3",
     "rxjs": "6.6.3",
     "vue": "2.6.12",
     "vue-template-compiler": "2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli-addons": "^1.0.79",
-    "@leanup/cli-vue": "^1.0.79",
-    "@leanup/git-hooks": "^1.0.79",
-    "chromedriver": "87.0.0",
+    "@leanup/cli-addons": "^1.0.83",
+    "@leanup/cli-vue": "^1.0.83",
+    "@leanup/git-hooks": "^1.0.83",
+    "chromedriver": "87.0.5",
     "cssnano": "4.1.10",
-    "geckodriver": "1.21.0",
+    "geckodriver": "1.21.1",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.2",
     "typescript": "4.1.3"
