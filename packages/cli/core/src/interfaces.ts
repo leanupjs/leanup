@@ -12,13 +12,13 @@ export interface CreateOps extends CommonOps {
 }
 
 export interface BuildOps extends CommonOps {
-  environment: string;
-  template: string;
+  analyze: boolean;
+  hot: boolean;
   mode: string;
 }
 
 export interface ServeOps extends BuildOps {
-  open: boolean;
+  open: string;
   host: string;
   port: number;
 }
