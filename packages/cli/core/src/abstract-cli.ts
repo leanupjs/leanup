@@ -104,11 +104,18 @@ export abstract class AbstractCLI {
     });
   }
 
+  public addFirstActionToCommand(name: string | string[], action: Function): void {
+    const names: string[] = Array.isArray(name) ? name : [name];
+    names.forEach((name) => {
+      this.commands.get(name)?.actions.unshift(action);
+    });
+  }
+
   private spawnCommand(args: string[], silent = false) {
     console.log(
       `
 `,
-      `${chalk.magenta.bold(`☀ ${chalk.underline(`@leanup/cli`)}-${this.name}`)}`,
+      `${chalk.magenta.bold(`☀ ${chalk.underline(`@leanup/cli`)}${this.name != '' ? `-${this.name}` : ''}`)}`,
       `(v${this.version})`,
       chalk.italic.gray('execute the following pure command ...'),
       `

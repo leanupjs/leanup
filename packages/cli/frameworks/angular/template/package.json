@@ -11,7 +11,7 @@
     "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
     "reinstall": "npm run remove && npm run update",
     "remove": "rm -rf node_modules package-lock.json",
-    "serve": "cross-env NODE_ENV=development webpack-dev-server --devtool=source-map --mode=development",
+    "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "start": "npm run serve -- --open=chrome",
     "test": "cross-env NODE_ENV=test mocha",
     "update": "npm install && npm update"
