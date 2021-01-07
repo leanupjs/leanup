@@ -31,7 +31,7 @@ jobs:
       - name: Update dependencies
         run: npm run ncu
       - name: Install dependencies
-        run: npm run udpate
+        run: npm run update
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
