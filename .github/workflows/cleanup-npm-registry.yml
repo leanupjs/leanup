@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Unpublish deprecated packages
-        run: sh "unpublish-all.sh" "1.0.22-webpack" "0" "4"
+        run: sh ./unpublish-all.sh 1.0.22-webpack 0 4
         working-directory: ./scripts/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
