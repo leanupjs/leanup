@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo
 echo npm access restricted @leanup/$1
 npm access restricted @leanup/$1

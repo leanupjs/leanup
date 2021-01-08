@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sh ./unpublish.sh "cli-angular" "$1" "$2" "$3"
 sh ./unpublish.sh "cli-angularjs" "$1" "$2" "$3"
 sh ./unpublish.sh "cli-aurelia" "$1" "$2" "$3"
