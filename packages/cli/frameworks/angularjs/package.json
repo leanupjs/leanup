@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-angularjs",
-  "version": "1.0.83",
+  "version": "1.0.84",
   "description": "This package contains the AngularJS framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -40,7 +40,7 @@
     "angularjs": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli": "^1.0.83",
+    "@leanup/cli": "^1.0.84",
     "babel-plugin-angularjs-annotate": "0.10.0"
   },
   "devDependencies": {

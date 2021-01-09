@@ -2,7 +2,7 @@ import * as path from 'path';
 
 import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
 import {
-    BuildOps, CommonOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
+    BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
 } from './interfaces';
 
 export const commonOptions: CommandOption[] = [
@@ -13,17 +13,19 @@ export const commonOptions: CommandOption[] = [
 ];
 
 export const webpackOptions: CommandOption[] = [
-  { flags: '-e, --environment <environment>', description: 'technical environment (CMS)' },
-  { flags: '-t, --template <template>', description: 'corporate design (Style)' },
-  { flags: '-i, --include <include>', description: 'add node_modules to webpack loader' },
+  { flags: '-a, --analyze', description: 'Visualize size of webpack output files' },
+  { flags: '-e, --environment <environment>', description: '[DEPRECATED] technical environment (CMS)' },
+  { flags: '-t, --template <template>', description: '[DEPRECATED] corporate design (Style)' },
+  { flags: '-i, --include <include>', description: '[DEPRECATED] add node_modules to webpack loader' },
 ];
 
 export const buildOptions: CommandOption[] = webpackOptions.concat([
-  { flags: '-m, --mode [development|producation]', description: 'webpack transformation mode', default: 'production' },
+  { flags: '-m, --mode [development|production]', description: 'webpack transformation mode', default: 'production' },
 ]);
 
 export const serveOptions: CommandOption[] = webpackOptions.concat([
-  { flags: '-m, --mode [development|producation]', description: 'webpack transformation mode', default: 'development' },
+  { flags: '-h, --hot', description: 'Enables Hot Module Replacement' },
+  { flags: '-m, --mode [development|production]', description: 'webpack transformation mode', default: 'development' },
 ]);
 
 export class CommonCLI extends AbstractCLI {
@@ -53,7 +55,10 @@ export class CommonCLI extends AbstractCLI {
         // Plugins
         ['cli-addons', 'cli-cucumber', 'cli-graphql', 'cli-pwa', 'cli-webhint', 'git-hooks'].forEach((plugin) => {
           try {
-            this.copyAndPrint(path.join(require(`@leanup/${plugin}`), 'template'), '', options);
+            this.copyAndPrint(path.join(require(`@leanup/${plugin}`), 'template'), '', {
+              ...options,
+              overwrite: true,
+            });
           } catch (error) {}
         });
 
@@ -66,7 +71,7 @@ export class CommonCLI extends AbstractCLI {
       'Developing (https://webpack.js.org/)',
       serveOptions
         .concat([
-          { flags: '-o, --open', description: 'open the default browser' },
+          { flags: '-o, --open [browser]', description: 'open the named browser (default: chrome)' },
           { flags: '--host <host>', description: 'dev server host' },
           { flags: '-p, --port <port>', description: 'port' },
         ])
@@ -76,25 +81,25 @@ export class CommonCLI extends AbstractCLI {
         if (options.mode) {
           spawnArgs.push(`NODE_ENV=${options.mode}`);
         }
-        spawnArgs.push('webpack-dev-server');
-        spawnArgs.push('--devtool=source-map');
-        if (options.environment) {
-          spawnArgs.push(`--environment=${options.environment}`);
+        spawnArgs.push(`webpack`);
+        spawnArgs.push(`serve`);
+        spawnArgs.push(`--devtool=source-map`);
+        if (options.analyze) {
+          spawnArgs.push(`--analyze`);
         }
-        if (options.template) {
-          spawnArgs.push(`--template=${options.template}`);
+        if (options.hot) {
+          spawnArgs.push(`--hot`);
         }
         if (options.open) {
-          spawnArgs.push('--open');
+          spawnArgs.push(
+            `--open=${typeof options.open === 'string' && options.open.length > 0 ? options.open : 'chrome'}`
+          );
         }
         if (options.host) {
           spawnArgs.push(`--host=${options.host}`);
         }
         if (options.port) {
           spawnArgs.push(`--port=${options.port}`);
-        }
-        if (options.mode) {
-          spawnArgs.push(`--mode=${options.mode}`);
         }
         return spawnArgs;
       }
@@ -109,15 +114,9 @@ export class CommonCLI extends AbstractCLI {
         if (options.mode) {
           spawnArgs.push(`NODE_ENV=${options.mode}`);
         }
-        spawnArgs.push('webpack');
-        if (options.environment) {
-          spawnArgs.push(`--env=${options.environment}`);
-        }
-        if (options.template) {
-          spawnArgs.push(`--template=${options.template}`);
-        }
-        if (options.mode) {
-          spawnArgs.push(`--mode=${options.mode}`);
+        spawnArgs.push(`webpack`);
+        if (options.analyze) {
+          spawnArgs.push(`--analyze`);
         }
         return spawnArgs;
       }
