@@ -1,5 +1,3 @@
-#!/bin/bash
-
 git tag -l | grep v1.
 git tag -l | grep alpha
 git tag -l | grep beta
