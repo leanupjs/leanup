@@ -1,13 +1,13 @@
 {
   "name": "@template/vue",
-  "version": "1.1.0-rc.258",
+  "version": "1.1.0-rc.259",
   "dependencies": {
     "@vue/composition-api": "0.6.7",
     "vue": "2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli-vue": "^1.1.0-rc.258",
-    "@leanup/stack-vue": "^1.1.0-rc.258",
+    "@leanup/cli-vue": "^1.1.0-rc.259",
+    "@leanup/stack-vue": "^1.1.0-rc.259",
     "vue-template-compiler": "2.6.12"
   }
 }
