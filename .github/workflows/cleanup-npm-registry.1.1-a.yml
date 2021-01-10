@@ -1,15 +1,15 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Cleanup npm registry (v1.0)
+name: Cleanup npm registry (v1.1a)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 0 * * *'
 
 env:
-  version: '1.0'
+  version: '1.1'
 
 jobs:
   build:
