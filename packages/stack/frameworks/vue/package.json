@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-vue",
-  "version": "1.1.0-rc.260",
+  "version": "1.1.0-rc.261",
   "description": "This package contains the Vue framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -34,7 +34,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-webpack": "^1.1.0-rc.260",
+    "@leanup/stack-webpack": "^1.1.0-rc.261",
     "vue-loader": "15.9.6"
   },
   "devDependencies": {
