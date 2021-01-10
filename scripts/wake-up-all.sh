@@ -1,3 +1,4 @@
+echo $1
 bash ./wake-up.sh angular $1
 bash ./wake-up.sh angularjs $1
 bash ./wake-up.sh aurelia $1
