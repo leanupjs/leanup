@@ -28,7 +28,7 @@ jobs:
           node-version: 14.x
       - name: Unpublish deprecated packages
         shell: bash
-        run: bash ./unpublish-${{ env.version }}.sh
+        run: bash ./unpublish-${{ env.version }}-b.sh
         working-directory: ./scripts/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
