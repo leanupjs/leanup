@@ -1,5 +1,6 @@
 import { expect } from 'chai';
-import { InputControl, FormControl } from './controls';
+
+import { FormControl, InputControl } from './controls';
 
 describe(`Test: Controls`, () => {
   const anschriftFormName = 'anschriftForm';
@@ -107,7 +108,7 @@ describe(`Test: Controls`, () => {
           expect(anschriftForm.getControl(anspracheFormName) === anspracheForm).be.true;
         });
         it(`Teste getId vor Remove ("anschriftForm anspracheForm")`, () => {
-          expect(anspracheForm.id).equal('anschriftForm.anspracheForm');
+          expect(anspracheForm.id).equal('anschriftForm_anspracheForm');
         });
         it(`AnspracheForm von AnschriftForm entfernen`, () => {
           anschriftForm.removeControl(anspracheForm);
