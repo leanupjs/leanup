@@ -4,8 +4,8 @@ echo mkdir workspace
 mkdir workspace
 echo cd workspace
 cd workspace
-echo "npm install --no-save @leanup/cli@latest @leanup/cli-$1@latest"
-npm install --no-save "@leanup/cli@latest" "@leanup/cli-$1@latest"
+echo "npm install --no-save @leanup/cli@latest @leanup/cli-angular@latest"
+npm install --no-save "@leanup/cli@latest" "@leanup/cli-angular@latest"
 # npx lean create -n template -o
 # npx $1 create -n template -o
 # npx lean lint
