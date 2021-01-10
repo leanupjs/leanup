@@ -1,4 +1,7 @@
 echo $1
+echo $1
+echo $1
+echo $1
 rm -rf workspace
 mkdir workspace
 cd workspace
