@@ -6,7 +6,7 @@ name: Cleanup npm registry (v1.2)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 22 * * *'
 
 env:
   version: '1.2'
