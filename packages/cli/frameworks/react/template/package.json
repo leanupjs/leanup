@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.87",
-    "@leanup/cli-addons": "^1.0.87",
     "@leanup/cli-react": "^1.0.87",
     "@leanup/git-hooks": "^1.0.87",
     "@types/react": "17.0.0",

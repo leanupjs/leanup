@@ -38,7 +38,7 @@
     "svelte": "3.31.2"
   },
   "devDependencies": {
-    "@leanup/cli-addons": "^1.0.87",
+    "@leanup/cli": "^1.0.87",
     "@leanup/cli-svelte": "^1.0.87",
     "@leanup/git-hooks": "^1.0.87",
     "@pyoner/svelte-types": "3.4.4",

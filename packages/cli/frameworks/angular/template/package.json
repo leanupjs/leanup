@@ -46,7 +46,7 @@
     "zone.js": "0.11.3"
   },
   "devDependencies": {
-    "@leanup/cli-addons": "^1.0.87",
+    "@leanup/cli": "^1.0.87",
     "@leanup/cli-angular": "^1.0.87",
     "@leanup/git-hooks": "^1.0.87",
     "@ngtools/webpack": "11.0.6",
