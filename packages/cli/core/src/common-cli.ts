@@ -1,12 +1,22 @@
 import * as path from 'path';
 
 import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
-import { BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps } from './interfaces';
+import {
+    BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
+} from './interfaces';
 
-export const commonOptions: CommandOption[] = [{ flags: '-s, --silent', description: 'minimal consoles spending' }];
+export const commonOptions: CommandOption[] = [
+  {
+    flags: '-s, --silent',
+    description: 'minimal consoles spending',
+  },
+];
 
 export const webpackOptions: CommandOption[] = [
   { flags: '-a, --analyze', description: 'Visualize size of webpack output files' },
+  { flags: '-e, --environment <environment>', description: '[DEPRECATED] technical environment (CMS)' },
+  { flags: '-t, --template <template>', description: '[DEPRECATED] corporate design (Style)' },
+  { flags: '-i, --include <include>', description: '[DEPRECATED] add node_modules to webpack loader' },
 ];
 
 export const buildOptions: CommandOption[] = webpackOptions.concat([
