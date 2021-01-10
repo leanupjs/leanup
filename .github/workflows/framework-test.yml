@@ -23,7 +23,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
       - name: Test all framework variants (${{github.event.inputs.version}})
+        shell: bash
         run: |
           rm ../.eslintrc.js
-          sh wake-up-all.sh ${{github.event.inputs.version}}
+          bash ./wake-up-all.sh ${{github.event.inputs.version}}
         working-directory: scripts
