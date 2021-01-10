@@ -37,7 +37,7 @@ abstract class AbstractControl {
   get id(): string {
     let id = this.name;
     if (this._parentForms.length > 0) {
-      id = `${this._parentForms[0].id}.${id}`;
+      id = `${this._parentForms[0].id}_${id}`;
     }
     return id;
   }
