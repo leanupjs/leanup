@@ -37,35 +37,6 @@ jobs:
         working-directory: packages/cli/core/babel
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-e2e
-        run: |
-          ls -la
-          npm install
-          npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/e2e
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-format
-        run: |
-          npm install
-          npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/format
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-lint
-        run: |
-          npm install
-          npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/lint
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-test
-        run: |
-          npm install
-          npm publish --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/test
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/stack-webpack
         run: |
           npm install
