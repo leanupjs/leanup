@@ -40,7 +40,7 @@
     "postcss": "8.2.4",
     "postcss-loader": "4.1.0",
     "sass": "1.32.2",
-    "sass-loader": "10.1.0",
+    "sass-loader": "10.1.1",
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
     "webpack": "4.44.2",
