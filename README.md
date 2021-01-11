@@ -13,6 +13,7 @@
 [![lernajs][lernajs]][lernajs-url]
 [![prettier][prettier]][prettier-url]
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
+[![DepShield Badge](https://depshield.sonatype.org/badges/leanupjs/leanup/depshield.svg)](https://depshield.github.io)
 
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
