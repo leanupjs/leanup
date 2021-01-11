@@ -42,7 +42,6 @@
     "@leanup/stack": "^1.1.0-rc.263",
     "chromedriver": "87.0.5",
     "cssnano": "4.1.10",
-    "geckodriver": "1.21.1",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.2",
     "typescript": "4.1.3"

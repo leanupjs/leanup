@@ -17,6 +17,28 @@ const FIREFOX = {
   browserName: 'firefox',
 };
 
+const DRIVERS = {
+  chromedriver: null,
+  geckodriver: null,
+  'selenium-server': null,
+};
+function loadDriver(drivers) {
+  drivers.forEach((driver) => {
+    try {
+      DRIVERS[driver] = require(driver);
+    } catch (error) {
+      throw new Error(`
+        > Please install ${driver} package before: npm i -D ${driver}
+`);
+    }
+  });
+}
+loadDriver([
+  'chromedriver',
+  // 'geckodriver',
+  'selenium-server',
+]);
+
 const reportDir = path.resolve(process.cwd(), '.reports/nightwatch');
 
 module.exports = {
@@ -34,27 +56,27 @@ module.exports = {
     chrome: {
       webdriver: {
         start_process: true,
-        server_path: require('chromedriver').path,
+        server_path: DRIVERS['chromedriver'].path,
         port: 9515,
       },
       desiredCapabilities: CHROME,
     },
-    firefox: {
-      webdriver: {
-        start_process: true,
-        server_path: require('geckodriver').path,
-        port: 4444,
-      },
-      desiredCapabilities: FIREFOX,
-    },
+    //   firefox: {
+    //     webdriver: {
+    //       start_process: true,
+    //       server_path: DRIVERS['geckodriver'].path,
+    //       port: 4444,
+    //     },
+    //     desiredCapabilities: FIREFOX,
+    //   },
     selenium: {
       selenium: {
         start_process: true,
         port: 4444,
-        server_path: require('selenium-server').path,
+        server_path: DRIVERS['selenium-server'].path,
         cli_args: {
-          'webdriver.gecko.driver': require('geckodriver').path,
-          'webdriver.chrome.driver': require('chromedriver').path,
+          // 'webdriver.gecko.driver': DRIVERS['geckodriver'].path,
+          'webdriver.chrome.driver': DRIVERS['chromedriver'].path,
         },
       },
     },
@@ -69,7 +91,7 @@ module.exports = {
     seleniumHub: {
       selenium: {
         port: 4444,
-        host: 'triton927.startdedicated.de',
+        host: 'selenium-hub.company.tld',
       },
     },
     seleniumHubChrome: {
