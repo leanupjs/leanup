@@ -25,10 +25,7 @@ ctrl.renderView = () => {
       type="button"
       on:click="{() => {
         ctrl.add();
-      }}"
-    >
-      Add
-    </button>
+      }}"> Add </button>
     {#if showPerformanceButtonRef}
       <button
         class="secondary"
@@ -36,10 +33,7 @@ ctrl.renderView = () => {
         type="button"
         on:click="{() => {
           ctrl.onStart();
-        }}"
-      >
-        Performance
-      </button>
+        }}"> Performance </button>
     {/if}
   </div>
   {#each elementsRef as serie, index (index)}
@@ -67,10 +61,7 @@ ctrl.renderView = () => {
                 on:click="{() => {
                   ctrl.edit(serie);
                   measuredSerieRef = ctrl.measuredSerie;
-                }}"
-              >
-                Edit
-              </button>
+                }}"> Edit </button>
             </td>
           </tr>
         {/each}

@@ -30,18 +30,12 @@ beforeUpdate(() => {
     id="cancel"
     on:click="{(event) => {
       ctrl.onCancel();
-    }}"
-  >
-    Abbrechen
-  </button>
+    }}"> Abbrechen </button>
   <button
     class="danger"
     id="delete"
     type="button"
     on:click="{() => {
       ctrl.onDelete();
-    }}"
-  >
-    Delete
-  </button>
+    }}"> Delete </button>
 </form>

@@ -1,6 +1,6 @@
 module.exports = {
   ...require('@leanup/stack/prettier.config'),
-  svelteSortOrder: 'styles-scripts-markup',
+  svelteSortOrder: 'options-styles-scripts-markup',
   svelteStrictMode: true,
   svelteBracketNewLine: true,
   svelteAllowShorthand: false,
