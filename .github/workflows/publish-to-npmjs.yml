@@ -23,6 +23,14 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
+      - name: Install and publish only @leanup/cli-core-babel
+        run: |
+          ls -la
+          npm install
+          npm publish --access=public --tag=${{env.tag}} || true
+        working-directory: packages/cli/core/babel
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
           ls -la
@@ -71,12 +79,12 @@ jobs:
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
         run: |
           sleep 60
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=public --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Test all framework variants
-        run: |
-          rm ../.eslintrc.js
-          sh wake-up-all.sh ${{env.tag}}
-        working-directory: scripts
+      # - name: Test all framework variants
+      #   run: |
+      #     rm ../.eslintrc.js
+      #     sh wake-up-all.sh ${{env.tag}}
+      #   working-directory: scripts

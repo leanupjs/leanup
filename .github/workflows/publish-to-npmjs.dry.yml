@@ -1,13 +1,13 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: GitHub CI - Publish to NPM (DRY)
+name: GitHub CI - Publish to NPM
 
 on:
   workflow_dispatch:
-  release:
-    types:
-      - published
+  # release:
+  #   types:
+  #     - published
 
 env:
   tag: canary
@@ -29,6 +29,14 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@leanupjs'
+      - name: Install and publish only @leanup/cli-core-babel
+        run: |
+          ls -la
+          npm install
+          npm publish --access=restricted --tag=${{env.tag}} || true
+        working-directory: packages/cli/core/babel
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli-core-e2e
         run: |
           ls -la
@@ -77,8 +85,8 @@ jobs:
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
         run: |
           sleep 60
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=restricted --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=restricted --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test all framework variants
