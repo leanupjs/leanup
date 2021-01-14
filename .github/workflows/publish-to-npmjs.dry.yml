@@ -5,12 +5,12 @@ name: GitHub CI - Publish to NPM (DRY)
 
 on:
   workflow_dispatch:
-  release:
-    types:
-      - published
+  # release:
+  #   types:
+  #     - published
 
 env:
-  tag: next
+  tag: canary
 
 jobs:
   build:
@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: 14.x
           registry-url: 'https://npm.pkg.github.com'
-          # registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
       - name: Install and publish only @leanup/lib
         run: |

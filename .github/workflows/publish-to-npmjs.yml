@@ -5,6 +5,9 @@ name: GitHub CI - Publish to NPM
 
 on:
   workflow_dispatch:
+  release:
+    types:
+      - published
 
 env:
   tag: canary
