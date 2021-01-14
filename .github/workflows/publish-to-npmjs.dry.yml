@@ -18,45 +18,54 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
-        uses: actions/setup-node@v2.1.3
+        uses: actions/setup-node@v2.1.4
         with:
-          node-version: 14.x
+          node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@leanup'
-      - name: Install and publish only @leanup/lib
+      - name: Install and publish only @leanup/cli-core-e2e
         run: |
+          ls -la
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
-        working-directory: packages/lib
+        working-directory: packages/cli/core/e2e
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-babel
+      - name: Install and publish only @leanup/cli-core-format
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/babel
+        working-directory: packages/cli/core/format
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/stack-webpack
+      - name: Install and publish only @leanup/cli-core-lint
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
-        working-directory: packages/stack/webpack
+        working-directory: packages/cli/core/lint
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish only @leanup/stack
+      - name: Install and publish only @leanup/cli-core-test
         run: |
-          sleep 60
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
-        working-directory: packages/stack/core
+        working-directory: packages/cli/core/test
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli
         run: |
+          sleep 60
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Install and publish only @leanup/lib
+        run: |
+          sleep 60
+          npm install
+          npm publish --access=restricted --tag=${{env.tag}} || true
+        working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
