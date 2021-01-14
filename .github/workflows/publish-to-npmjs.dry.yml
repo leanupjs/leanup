@@ -20,8 +20,8 @@ jobs:
       # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
-          find . -type f
           find .  -name "package.json" -type f
+          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//@leanupjs\//g' {} +
           git status
 #       - name: Set up Node.js
 #         uses: actions/setup-node@v2.1.4
