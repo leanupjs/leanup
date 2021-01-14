@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-test",
-  "version": "1.0.84",
+  "version": "1.0.88",
   "description": "This module contains the test feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",

@@ -1,6 +1,6 @@
 {
   "name": "@leanup/lib",
-  "version": "1.0.84",
+  "version": "1.0.88",
   "description": "This module is a collection of lightweight application features.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -32,7 +32,7 @@
     "chai": "4.2.0",
     "cross-env": "7.0.3",
     "esm": "3.2.25",
-    "inferno": "7.4.6",
+    "inferno": "7.4.7",
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "mocha": "8.2.1",
