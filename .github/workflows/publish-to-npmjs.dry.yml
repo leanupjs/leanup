@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   release:
     types:
-      - created
+      - published
 
 env:
   tag: canary
@@ -36,28 +36,28 @@ jobs:
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core/e2e
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli-core-format
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core/format
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli-core-lint
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core/lint
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli-core-test
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core/test
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli
         run: |
           sleep 60
@@ -65,7 +65,7 @@ jobs:
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/lib
         run: |
           sleep 60
@@ -73,14 +73,14 @@ jobs:
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
         run: |
           sleep 60
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=restricted --tag=${{env.tag}} || true
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
