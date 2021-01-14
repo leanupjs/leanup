@@ -1,7 +1,7 @@
 rm -rf workspace
 mkdir workspace
 cd workspace
-npm install --no-save "@leanup/cli@$2" "@leanup/cli-$1@$2" || { echo 'command failed' ; exit 1; }
+npm install --no-save "@leanupjs/cli@$2" "@leanupjs/cli-$1@$2" || { echo 'command failed' ; exit 1; }
 npx lean create -n template -o || { echo 'command failed' ; exit 1; }
 npx $1 create -n template -o || { echo 'command failed' ; exit 1; }
 npx lean lint || { echo 'command failed' ; exit 1; }
