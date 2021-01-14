@@ -5,9 +5,9 @@ name: GitHub CI - Publish to NPM (DRY)
 
 on:
   workflow_dispatch:
-  # release:
-  #   types:
-  #     - published
+  release:
+    types:
+      - published
 
 env:
   tag: next
@@ -17,33 +17,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
+      - name: Replace alias in all package.json's
+        run: |
+          find .  -name "package.json" -type f
+          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//@leanupjs\//g' {} +
+          git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@leanup'
+          scope: '@leanupjs'
       - name: Install and publish only @leanup/lib
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli-core-babel
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core/babel
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/stack-webpack
         run: |
           npm install
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/stack/webpack
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/stack
         run: |
           sleep 60
@@ -51,21 +57,21 @@ jobs:
           npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/stack/core
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and publish only @leanup/cli
         run: |
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
-      - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and publish non @leanup/cli, @leanup/cli-core-babel, @leanup/lib, @leanup/stack and @leanup/stack-webpack
         run: |
           sleep 60
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/stack --ignore @leanup/stack-webpack --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/stack --ignore @leanup/stack-webpack --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=restricted --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/lib --ignore @leanup/stack --ignore @leanup/stack-webpack --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/lib --ignore @leanup/stack --ignore @leanup/stack-webpack --no-bail --stream -- npm publish --access=public --tag=${{env.tag}} || true
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
