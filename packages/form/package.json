@@ -34,7 +34,7 @@
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "mocha": "8.2.1",
-    "mock-local-storage": "1.1.15",
+    "mock-local-storage": "1.1.16",
     "nyc": "15.1.0",
     "sinon": "9.2.3",
     "tsc": "1.20150623.0",
