@@ -21,7 +21,7 @@ jobs:
       - name: Replace alias in all package.json's
         run: |
           find .  -name "package.json" -type f
-          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//@leanupjs\//g' {} +
+          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//"@leanupjs\//g' {} +
           git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
