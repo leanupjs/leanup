@@ -1,6 +1,6 @@
 {
   "name": "@template/lit-element",
-  "version": "1.0.89",
+  "version": "1.0.90",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,16 +31,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.89",
-    "@leanup/lib": "^1.0.89",
+    "@leanup/form": "^1.0.90",
+    "@leanup/lib": "^1.0.90",
     "lit-element": "2.4.0",
     "navigo": "7.1.3",
     "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.89",
-    "@leanup/cli-lit-element": "^1.0.89",
-    "@leanup/git-hooks": "^1.0.89",
+    "@leanup/cli": "^1.0.90",
+    "@leanup/cli-lit-element": "^1.0.90",
+    "@leanup/git-hooks": "^1.0.90",
     "chromedriver": "87.0.5",
     "cssnano": "4.1.10",
     "geckodriver": "1.21.1",
