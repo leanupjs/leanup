@@ -14,7 +14,7 @@ env:
   alias: leanup
   registry: https://registry.npmjs.org
   tag: canary
-  token: ${{ secrets.GITHUB_TOKEN }}
+  token: ${{ secrets.NPMJS_AUTH_TOKEN }}
 
 jobs:
   build:
@@ -27,14 +27,6 @@ jobs:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
-      - name: Install and publish only @${{env.alias}}/cli-core-babel
-        run: |
-          ls -la
-          npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/babel
-        env:
-          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/cli-core-e2e
         run: |
           ls -la
@@ -78,10 +70,10 @@ jobs:
         working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/cli-core-e2e, @${{env.alias}}/cli-core-format, @${{env.alias}}/cli-core-lint, @${{env.alias}}/cli-core-test and @${{env.alias}}/lib
+      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-e2e, @${{env.alias}}/cli-core-format, @${{env.alias}}/cli-core-lint, @${{env.alias}}/cli-core-test and @${{env.alias}}/lib
         run: |
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Test all framework variants

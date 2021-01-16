@@ -1,4 +1,4 @@
-import { ListOf } from "@leanup/lib/pattern/list-of";
+import { ListOf } from '@leanup/lib/pattern/list-of';
 
 export class ValidationHandler {
   public readonly validators: ListOf<Function> = new ListOf(Function);
@@ -12,9 +12,7 @@ export class ValidationHandler {
         } catch (error) {
           errors.push(error);
           if (fast === true) {
-            throw new Error(
-              "Be quick and stop the execution of other validation functions. Only one error is enough."
-            );
+            throw new Error('Be quick and stop the execution of other validation functions. Only one error is enough.');
           }
         }
       });

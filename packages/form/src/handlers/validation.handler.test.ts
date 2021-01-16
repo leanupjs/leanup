@@ -1,5 +1,6 @@
-import { ValidationHandler } from "./validation.handler";
-import { assert, expect } from "chai";
+import { assert, expect } from 'chai';
+
+import { ValidationHandler } from './validation.handler';
 
 describe(`Test: ValidationHandler`, () => {
   let handler: ValidationHandler;
@@ -12,7 +13,7 @@ describe(`Test: ValidationHandler`, () => {
     assert.equal(handler.validators.length, 0);
   });
 
-  describe("Test: ListOf validators", () => {
+  describe('Test: ListOf validators', () => {
     function test(value: any) {
       it(`Validator accept only function (${value})`, () => {
         assert.equal(handler.validators.length, 0);
@@ -21,7 +22,7 @@ describe(`Test: ValidationHandler`, () => {
       });
     }
 
-    test("");
+    test('');
     test(1);
     test(null);
     test({});
@@ -34,7 +35,7 @@ describe(`Test: ValidationHandler`, () => {
     });
   });
 
-  describe("Test: Validate function", () => {
+  describe('Test: Validate function', () => {
     function validator(value: any) {
       if (value instanceof Error) {
         throw value;
@@ -42,10 +43,7 @@ describe(`Test: ValidationHandler`, () => {
     }
 
     beforeEach(() => {
-      handler.validators.add([
-        (value: any) => validator(value),
-        (value: any) => validator(value),
-      ]);
+      handler.validators.add([(value: any) => validator(value), (value: any) => validator(value)]);
     });
 
     it(`Validate no errors`, () => {
@@ -55,7 +53,7 @@ describe(`Test: ValidationHandler`, () => {
     });
 
     it(`Validate two errors`, () => {
-      const error = new Error("Fehlermeldung");
+      const error = new Error('Fehlermeldung');
       const errors = handler.validate(error, false);
       expect(Array.isArray(errors)).be.true;
       expect(errors.length).be.equal(2);
@@ -63,7 +61,7 @@ describe(`Test: ValidationHandler`, () => {
     });
 
     it(`Validate only one of two errors`, () => {
-      const error = new Error("Fehlermeldung");
+      const error = new Error('Fehlermeldung');
       const errors = handler.validate(error, true);
       expect(Array.isArray(errors)).be.true;
       expect(errors.length).be.equal(1);

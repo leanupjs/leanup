@@ -1,9 +1,9 @@
 rm -rf workspace
 mkdir workspace
 cd workspace
-npm install --no-save "@leanupjs/cli@$2" "@leanupjs/cli-$1@$2" || { echo 'command failed' ; exit 1; }
-npx lean create -n template -o || { echo 'command failed' ; exit 1; }
+npm install --no-save "@$2/cli@$3" "@$2/cli-$1@$3" || { echo 'command failed' ; exit 1; }
 npx $1 create -n template -o || { echo 'command failed' ; exit 1; }
+find -E . -regex ".*.(js,json,svelte,ts,tsx,vue)" -type f -exec sed -E "s/@leanup/@$2/g" {} +
 npx lean lint || { echo 'command failed' ; exit 1; }
 npx $1 lint || { echo 'command failed' ; exit 1; }
 npm run lint || { echo 'command failed' ; exit 1; }
@@ -24,6 +24,8 @@ npm run build || { echo 'command failed' ; exit 1; }
 # npx lean serve -- --port 8082 &
 # npx lean e2e -e chrome
 # npx $1 e2e -e chrome
+# npx lean cucumber
+# npx $1 cucumber
 npm outdated || true
 npm list --depth=0 || true
 cd ..
