@@ -14,7 +14,7 @@ env:
   alias: leanup
   registry: https://registry.npmjs.org
   tag: next
-  token: ${{ secrets.GITHUB_TOKEN }}
+  token: ${{ secrets.NPMJS_AUTH_TOKEN }}
 
 jobs:
   build:
@@ -44,7 +44,7 @@ jobs:
       - name: Install and publish only @${{env.alias}}/lib
         run: |
           npm install
-          npm publish --access=public --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
@@ -58,7 +58,7 @@ jobs:
       - name: Install and publish only @${{env.alias}}/cli
         run: |
           npm install
-          npm publish --access=public --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
@@ -66,5 +66,12 @@ jobs:
         run: |
           npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-webpack --stream -- npm install
           npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Test all framework variants
+        run: |
+          rm ../.eslintrc.js
+          sh wake-up-all.sh ${{env.alias}} ${{env.tag}}
+        working-directory: scripts
         env:
           NODE_AUTH_TOKEN: ${{env.token}}

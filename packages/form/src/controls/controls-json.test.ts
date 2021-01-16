@@ -1,5 +1,6 @@
 import { expect } from 'chai';
-import { FormFactory, FormControl } from './controls';
+
+import { FormControl, FormFactory } from './controls';
 
 const anschrift: Object = {
   anschrift: {
