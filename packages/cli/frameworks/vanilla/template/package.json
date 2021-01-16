@@ -1,8 +1,8 @@
 {
   "name": "@template/vanilla",
-  "version": "1.1.0-rc.266",
+  "version": "1.1.0-rc.267",
   "devDependencies": {
-    "@leanup/cli-vanilla": "^1.1.0-rc.266",
-    "@leanup/stack-webpack": "^1.1.0-rc.266"
+    "@leanup/cli-vanilla": "^1.1.0-rc.267",
+    "@leanup/stack-webpack": "^1.1.0-rc.267"
   }
 }
