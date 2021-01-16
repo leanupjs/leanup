@@ -23,13 +23,6 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@leanup'
-      - name: Install and publish only @leanup/cli-core-babel
-        run: |
-          npm install
-          npm publish --access=publish --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/babel
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/stack-webpack
         run: |
           npm install
@@ -39,10 +32,23 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/stack
         run: |
-          sleep 60
           npm install
           npm publish --access=publish --tag=${{env.tag}} || true
         working-directory: packages/stack/core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Install and publish only @leanup/lib
+        run: |
+          npm install
+          npm publish --access=public --tag=${{env.tag}} || true
+        working-directory: packages/lib
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
+      - name: Install and publish only @leanup/cli-core-babel
+        run: |
+          npm install
+          npm publish --access=publish --tag=${{env.tag}} || true
+        working-directory: packages/cli/core/babel
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish only @leanup/cli
@@ -54,7 +60,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
       - name: Install and publish non @leanup/cli, @leanup/cli-core-babel, @leanup/lib, @leanup/stack and @leanup/stack-webpack
         run: |
-          sleep 60
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/lib --ignore @leanup/stack --ignore @leanup/stack-webpack --stream -- npm install
           npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/lib --ignore @leanup/stack --ignore @leanup/stack-webpack --no-bail --stream -- npm publish --access=public --tag=${{env.tag}} || true
         env:
