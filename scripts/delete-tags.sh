@@ -2,6 +2,10 @@ git tag -l | grep v1.
 git tag -l | grep alpha
 git tag -l | grep beta
 git tag -l | grep webpack
+
+git tag --delete $1
+git push --delete origin $1
+
 # for i in {0..80}
 # do
 #    git tag --delete "v1.0.$i"
