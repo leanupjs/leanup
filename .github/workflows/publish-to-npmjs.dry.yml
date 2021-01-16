@@ -10,7 +10,11 @@ on:
       - published
 
 env:
+  access: public
+  alias: leanupjs
+  registry: https://npm.pkg.github.com
   tag: canary
+  token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -20,77 +24,70 @@ jobs:
       # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
-          find .  -name "package.json" -type f
-          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//"@leanupjs\//g' {} +
+          find . -name "package.json" -type f
+          find . -name "package.json" -type f -exec sed -i "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.ts" -type f -exec sed -i "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.ts" -type f -exec sed -i "s/'@leanup'/'@${{env.alias}}'/g" {} +
           git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
           node-version: '14.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@leanupjs'
-      - name: Install and publish only @leanup/cli-core-babel
+          registry-url: '${{env.registry}}'
+          scope: '@${{env.alias}}'
+      - name: Install and publish only @${{env.alias}}/cli-core-e2e
         run: |
           ls -la
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/babel
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-e2e
-        run: |
-          ls -la
-          npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core/e2e
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-format
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/cli-core-format
         run: |
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core/format
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-lint
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/cli-core-lint
         run: |
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core/lint
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish only @leanup/cli-core-test
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/cli-core-test
         run: |
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core/test
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish only @leanup/cli
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/cli
         run: |
-          sleep 60
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish only @leanup/lib
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/lib
         run: |
-          sleep 60
           npm install
-          npm publish --access=restricted --tag=${{env.tag}} || true
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and publish non @leanup/cli, @leanup/cli-core-e2e, @leanup/cli-core-format, @leanup/cli-core-lint, @leanup/cli-core-test and @leanup/lib
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-e2e, @${{env.alias}}/cli-core-format, @${{env.alias}}/cli-core-lint, @${{env.alias}}/cli-core-test and @${{env.alias}}/lib
         run: |
-          sleep 60
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @leanup/cli --ignore @leanup/cli-core-babel --ignore @leanup/cli-core-e2e --ignore @leanup/cli-core-format --ignore @leanup/cli-core-lint --ignore @leanup/cli-core-test --ignore @leanup/lib --no-bail --stream -- npm publish --access=restricted --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
-          sh wake-up-all.sh ${{env.tag}}
+          sh wake-up-all.sh ${{env.alias}} ${{env.tag}}
         working-directory: scripts
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
