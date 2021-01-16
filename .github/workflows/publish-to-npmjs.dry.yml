@@ -10,11 +10,7 @@ on:
       - published
 
 env:
-  access: public
-  alias: leanupjs
-  registry: https://npm.pkg.github.com
   tag: next
-  token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -25,55 +21,55 @@ jobs:
       - name: Replace alias in all package.json's
         run: |
           find .  -name "package.json" -type f
-          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//"@${{env.alias}}\//g' {} +
+          find .  -name "package.json" -type f -exec sed -i 's/"@leanup\//"@leanupjs\//g' {} +
           git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
           node-version: '14.x'
-          registry-url: '${{env.registry}}'
-          scope: '@${{env.alias}}'
-      - name: Install and publish only @${{env.alias}}/stack-webpack
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@leanupjs'
+      - name: Install and publish only @leanupjs/stack-webpack
         run: |
           npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/stack/webpack
         env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/stack
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and publish only @leanupjs/stack
         run: |
           npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/stack/core
         env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/lib
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and publish only @leanupjs/lib
         run: |
           npm install
-          npm publish --access=public --tag=${{env.tag}} || true
+          npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/cli-core-babel
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and publish only @leanupjs/cli-core-babel
         run: |
           npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npm publish --access=restricted --tag=${{env.tag}} || true
         working-directory: packages/cli/core/babel
         env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/cli
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and publish only @leanupjs/cli
         run: |
           npm install
-          npm publish --access=public --tag=${{env.tag}} || true
+          npm publish --access=restricted --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/lib, @${{env.alias}}/stack and @${{env.alias}}/stack-webpack
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and publish non @leanupjs/cli, @leanupjs/cli-core-babel, @leanupjs/lib, @leanupjs/stack and @leanupjs/stack-webpack
         run: |
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-webpack --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @leanupjs/cli --ignore @leanupjs/cli-core-babel --ignore @leanupjs/lib --ignore @leanupjs/stack --ignore @leanupjs/stack-webpack --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @leanupjs/cli --ignore @leanupjs/cli-core-babel --ignore @leanupjs/lib --ignore @leanupjs/stack --ignore @leanupjs/stack-webpack --no-bail --stream -- npm publish --access=restricted --tag=${{env.tag}} || true
         env:
-          NODE_AUTH_TOKEN: ${{env.token}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
