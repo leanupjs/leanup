@@ -24,8 +24,8 @@ jobs:
       # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
-          find . -name "package.json" -type f
           find . -name "package.json" -type f -exec sed -i "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "package.json" -type f -exec sed -i 's/"@leanup\//"@${{env.alias}}\//g' {} +
           find . -name "*.ts" -type f -exec sed -i "s/'@leanup\//'@${{env.alias}}\//g" {} +
           find . -name "*.ts" -type f -exec sed -i "s/'@leanup'/'@${{env.alias}}'/g" {} +
           git diff

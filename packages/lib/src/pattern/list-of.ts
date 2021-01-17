@@ -1,5 +1,5 @@
-import { Log } from "../helpers/log";
-import { Validator } from "../helpers/validator";
+import { Log } from '../helpers/log';
+import { Validator } from '../helpers/validator';
 
 function isInstanceOf(instancesOf: any[], item: any): boolean {
   if (Validator.isArray(instancesOf)) {
@@ -12,16 +12,8 @@ function isInstanceOf(instancesOf: any[], item: any): boolean {
   return false;
 }
 
-function normalizeListOfItems(
-  items: unknown | unknown[] | ListOf<unknown>
-): unknown[] {
-  return <unknown[]>(
-    (items instanceof ListOf
-      ? items.get()
-      : Array.isArray(items)
-      ? items
-      : [items])
-  );
+function normalizeListOfItems(items: unknown | unknown[] | ListOf<unknown>): unknown[] {
+  return <unknown[]>(items instanceof ListOf ? items.get() : Array.isArray(items) ? items : [items]);
 }
 
 export class ListOf<T> {
@@ -30,9 +22,7 @@ export class ListOf<T> {
   private _protectedItems: unknown[] = [];
 
   constructor(instancesOf: unknown | unknown[]) {
-    this._instancesOf = <unknown[]>(
-      (Array.isArray(instancesOf) ? instancesOf : [instancesOf])
-    );
+    this._instancesOf = <unknown[]>(Array.isArray(instancesOf) ? instancesOf : [instancesOf]);
   }
 
   get empty(): boolean {
@@ -121,9 +111,7 @@ export class ListOf<T> {
   }
 
   public get(length?: number): T[] {
-    return isNaN(length) === false && typeof length === "number"
-      ? this._items.slice(0, length)
-      : this._items;
+    return isNaN(length) === false && typeof length === 'number' ? this._items.slice(0, length) : this._items;
   }
 
   public clear(): boolean {

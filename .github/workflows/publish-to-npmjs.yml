@@ -14,7 +14,7 @@ env:
   alias: leanup
   registry: https://registry.npmjs.org
   tag: canary
-  token: ${{ secrets.GITHUB_TOKEN }}
+  token: ${{ secrets.NPMJS_AUTH_TOKEN }}
 
 jobs:
   build:
