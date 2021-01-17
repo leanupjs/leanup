@@ -1,0 +1,40 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Cleanup NPM-Registry
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 23 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        framework:
+          - cli-angular
+          - cli-angularjs
+          - cli-aurelia
+          - cli-inferno
+          - cli-lit-element
+          - cli-preact
+          - cli-react
+          - cli-svelte
+          - cli-vanilla
+          - cli-vue
+          - cli-vue3
+    name: Cleanup "@leanup/${{matrix.framework}}"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 14.x
+      - name: Cleanup
+        run: sh unpublish-one.sh ${{matrix.framework}}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTH_TOKEN }}
