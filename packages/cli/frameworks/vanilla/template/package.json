@@ -40,7 +40,7 @@
     "@leanup/cli": "^1.0.90",
     "@leanup/cli-vanilla": "^1.0.90",
     "@leanup/git-hooks": "^1.0.90",
-    "chromedriver": "87.0.5",
+    "chromedriver": "87.0.7",
     "cssnano": "4.1.10",
     "geckodriver": "1.21.1",
     "selenium-server": "3.141.59",
