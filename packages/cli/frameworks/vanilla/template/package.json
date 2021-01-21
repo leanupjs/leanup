@@ -9,12 +9,12 @@
     "e2e": "nightwatch",
     "format": "prettier --check {src,tests}/**",
     "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
-    "reinstall": "npm run remove && npm run update",
+    "reinstall": "npm run remove && npm install",
     "remove": "rm -rf node_modules package-lock.json",
     "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "start": "npm run serve -- --open=chrome",
     "test": "cross-env NODE_ENV=test mocha",
-    "update": "npm install && npm update"
+    "update": "ncu -t minor -u && npm install"
   },
   "husky": {
     "hooks": {
@@ -43,6 +43,7 @@
     "chromedriver": "87.0.7",
     "cssnano": "4.1.10",
     "geckodriver": "1.21.1",
+    "npm-check-updates": "11.0.0",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.2",
     "typescript": "4.1.3"

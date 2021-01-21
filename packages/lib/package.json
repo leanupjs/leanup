@@ -37,6 +37,7 @@
     "jsdom-global": "3.0.2",
     "mocha": "8.2.1",
     "mock-local-storage": "1.1.17",
+    "npm-check-updates": "11.0.0",
     "nyc": "15.1.0",
     "preact": "10.5.11",
     "react": "17.0.1",
@@ -48,8 +49,8 @@
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
     "prepack": "npm test && rm -rf index.* components helpers pattern shares && tsc",
     "remove": "rm -rf node_modules",
-    "reinstall": "npm run remove && npm run update",
-    "update": "npm install && npm update && npm outdated"
+    "reinstall": "npm run remove && npm install",
+    "update": "ncu -t minor -u && npm install"
   },
   "files": [
     "components/**/*.d.ts",
