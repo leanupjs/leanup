@@ -37,7 +37,7 @@
     "jsdom-global": "3.0.2",
     "mocha": "8.2.1",
     "mock-local-storage": "1.1.17",
-    "npm-check-updates": "11.0.0",
+    "npm-check-updates": "11.0.2",
     "nyc": "15.1.0",
     "preact": "10.5.11",
     "react": "17.0.1",
