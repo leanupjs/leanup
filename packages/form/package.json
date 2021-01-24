@@ -37,7 +37,7 @@
     "mock-local-storage": "1.1.17",
     "npm-check-updates": "11.0.2",
     "nyc": "15.1.0",
-    "sinon": "9.2.3",
+    "sinon": "9.2.4",
     "tsc": "1.20150623.0",
     "typescript": "4.1.3"
   },
