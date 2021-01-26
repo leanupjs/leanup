@@ -22,5 +22,8 @@ let editorForm = ctrl.editorForm;
     id="cancel"
     on:click="{(event) => {
       ctrl.onCancel();
-    }}"> Abbrechen </button>
+    }}"
+  >
+    Abbrechen
+  </button>
 </form>
