@@ -25,7 +25,7 @@
     "@leanup/git-hooks": "1.0.91",
     "auto-changelog": "2.2.1",
     "lerna": "3.22.1",
-    "npm-check-updates": "11.0.2",
+    "npm-check-updates": "11.1.0",
     "prettier-plugin-svelte": "2.1.1",
     "svelte": "3.31.2",
     "typescript": "4.1.3"
