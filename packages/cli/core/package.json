@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli",
-  "version": "1.0.92",
+  "version": "1.0.93",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -70,7 +70,7 @@
     "@babel/preset-typescript": "7.12.7",
     "@leanup/cli-core-e2e": "^1.0.92",
     "@leanup/cli-core-format": "^1.0.92",
-    "@leanup/cli-core-lint": "^1.0.92",
+    "@leanup/cli-core-lint": "^1.0.93",
     "@leanup/cli-core-test": "^1.0.92",
     "autoprefixer": "10.2.3",
     "babel-loader": "8.2.2",
