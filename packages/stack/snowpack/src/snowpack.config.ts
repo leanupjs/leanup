@@ -1,5 +1,4 @@
 const path = require('path');
-
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'stack', 'package.json'));
 let proxyConfig;
@@ -8,14 +7,7 @@ try {
 } catch (error) {
   proxyConfig = {};
 }
-
-const MULTIPLE_REPLACEMENTS = [
-  // https://nodejs.org/dist/latest-v14.x/docs/api/process.html#process_process_env
-  // https://github.com/webpack/webpack/issues/7074#issuecomment-663855534
-  { from: '$$NODE_ENV$$', to: process.env.NODE_ENV },
-];
-
-// https://docs.npmjs.com/files/package.json#people-fields-author-contributors
+const MULTIPLE_REPLACEMENTS = [{ from: '$$NODE_ENV$$', to: process.env.NODE_ENV }];
 if (typeof packageJsonApp.name === 'string') {
   MULTIPLE_REPLACEMENTS.push({ from: '$$APP_NAME$$', to: packageJsonApp.name });
 }
@@ -47,8 +39,8 @@ if (typeof packageJsonCli.version === 'string') {
 
 module.exports = {
   mount: {
-    public: path.resolve(process.cwd(), 'public'),
-    src: path.resolve(process.cwd(), 'dist'),
+    public: '/',
+    src: '/dist',
   },
   plugins: [
     [
@@ -59,6 +51,6 @@ module.exports = {
     ],
     'snowpack-plugin-less',
     '@snowpack/plugin-sass',
-    '@snowpack/plugin-sass',
+    '@snowpack/plugin-postcss',
   ],
 };

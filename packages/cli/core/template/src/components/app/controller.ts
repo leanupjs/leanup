@@ -1,8 +1,8 @@
 import { AbstractController } from '@leanup/lib/components/generic';
 import { DI } from '@leanup/lib/helpers/injector';
 
-import { IVersion, VersionApi } from '../../../openapi/typescript-rxjs';
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
+import { IVersion, VersionApi } from '../../assets/openapi/typescript-rxjs';
 import { Framework } from '../../models/framework.interface';
 import { RouterService } from '../../services/router/service';
 import { CLI_DETAILS, STARTUP_TIMESTAMP } from '../../shares/constant';

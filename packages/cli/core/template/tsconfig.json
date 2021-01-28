@@ -12,6 +12,7 @@
     "types": ["mocha", "node"],
     "typeRoots": ["node_modules/@types", "src/types"],
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
     "noEmit": true,
     "skipLibCheck": true,
     "noUnusedParameters": true,
@@ -22,6 +23,6 @@
     "removeComments": true,
     "strict": true
   },
-  "include": ["openapi/**/*", "src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
+  "include": ["src/assets/openapi/**/*", "src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
   "exclude": ["node_modules/@leanup/**/template/**/*"]
 }

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- add the PWA manifest -->
-<!-- <link rel="manifest" href="manifest.json" />
+    <!-- add the PWA manifest -->
+    <!-- <link rel="manifest" href="manifest.json" />
 
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,19 +17,22 @@
 <meta name="msapplication-starturl" content="https://github.modevel.de/poc/" />
 
 <link rel="icon" sizes="144x144" href="assets/pwa.icon.png" /> -->
+  </head>
+  <body>
+    <title>PoC - Flexible web application architecture</title>
+    <div id="angular"></div>
+    <div id="angularjs"></div>
+    <div id="aurelia"></div>
+    <div id="inferno"></div>
+    <div id="lit-element"></div>
+    <div id="preact"></div>
+    <div id="react"></div>
+    <div id="svelte"></div>
+    <div id="vanilla"></div>
+    <div id="vue"></div>
+    <div id="vue3"></div>
 
-<title>PoC - Flexible web application architecture</title>
-<div id="angular"></div>
-<div id="angularjs"></div>
-<div id="aurelia"></div>
-<div id="inferno"></div>
-<div id="lit-element"></div>
-<div id="preact"></div>
-<div id="react"></div>
-<div id="svelte"></div>
-<div id="vanilla"></div>
-<div id="vue"></div>
-<div id="vue3"></div>
-
-<!-- app -->
-<script src="app.js" type="text/javascript"></script>
+    <!-- app -->
+    <script type="module" src="/dist/main.js"></script>
+  </body>
+</html>
