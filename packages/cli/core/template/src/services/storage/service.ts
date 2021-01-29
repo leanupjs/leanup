@@ -1,3 +1,5 @@
+import * as MOCK from './mock.json';
+
 interface INameToValueMap {
   [key: string]: any;
 }
@@ -33,7 +35,7 @@ export class StorageService {
       }
       this.memoryStorage = <Object>JSON.parse(sessionStorage);
     } catch (error) {
-      this.memoryStorage = <Object>require('./mock.json');
+      this.memoryStorage = <Object>MOCK.default;
     }
   }
 
