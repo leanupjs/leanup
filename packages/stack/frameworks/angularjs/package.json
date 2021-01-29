@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@leanup/cli-core-babel": "^1.1.0-rc.271",
+    "@leanup/stack-webpack": "^1.1.0-rc.270",
     "babel-plugin-angularjs-annotate": "0.10.0"
   },
   "devDependencies": {

@@ -44,7 +44,6 @@
     "@leanup/git-hooks": "^1.1.0-rc.271",
     "@leanup/stack": "^1.1.0-rc.271",
     "@leanup/stack-snowpack": "^1.1.0-rc.271",
-    "@leanup/stack-webpack": "^1.1.0-rc.270",
     "chromedriver": "87.0.7",
     "cssnano": "4.1.10",
     "npm-check-updates": "10.3.1",

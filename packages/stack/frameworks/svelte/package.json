@@ -35,6 +35,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
+    "@leanup/stack-webpack": "^1.1.0-rc.270",
     "prettier-plugin-svelte": "2.1.1",
     "svelte-loader": "2.13.6"
   },
