@@ -5,18 +5,27 @@ import { DI } from '@leanup/lib/helpers/injector';
 import App from './components/app/component.vue';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-DI.register('Framework', {
-  ...require('vue/package.json'),
-  name: 'Vue',
-});
-require('./shares/register');
-require('./shares/routing');
+import('vue/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'Vue',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue3');
+            if (htmlDivElement instanceof HTMLDivElement) {
+              htmlDivElement.style.display = 'inline';
+              htmlDivElement.appendChild(APP_HTML_ELEMENT);
+              // tslint:disable-next-line: no-unused-expression
 
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue3');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  htmlDivElement.appendChild(APP_HTML_ELEMENT);
-  // tslint:disable-next-line: no-unused-expression
-
-  createApp(App).mount(APP_HTML_ELEMENT);
-}
+              createApp(App).mount(APP_HTML_ELEMENT);
+            }
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();

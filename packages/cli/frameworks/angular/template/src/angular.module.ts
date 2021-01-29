@@ -11,16 +11,25 @@ import { EditorSerieComponent } from './components/series/editor/component.angul
 import { ListSerieComponent } from './components/series/list/component.angular';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-DI.register('Framework', {
-  ...require('@angular/core/package.json'),
-  name: 'Angular',
-});
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
-htmlDivElement.style.display = 'inline';
-htmlDivElement.appendChild(APP_HTML_ELEMENT);
+import('@angular/core/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'Angular',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
+            htmlDivElement.style.display = 'inline';
+            htmlDivElement.appendChild(APP_HTML_ELEMENT);
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();
 
 @NgModule({
   bootstrap: [AppComponent],

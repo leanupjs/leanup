@@ -12,16 +12,25 @@ import { DI } from '@leanup/lib/helpers/injector';
 
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-DI.register('Framework', {
-  ...require('angular/package.json'),
-  name: 'AngularJS',
-});
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  htmlDivElement.appendChild(APP_HTML_ELEMENT);
-  angular.bootstrap(htmlDivElement, ['app']);
-}
+import('angular/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'AngularJS',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
+            if (htmlDivElement instanceof HTMLDivElement) {
+              htmlDivElement.style.display = 'inline';
+              htmlDivElement.appendChild(APP_HTML_ELEMENT);
+              angular.bootstrap(htmlDivElement, ['app']);
+            }
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();

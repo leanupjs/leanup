@@ -12,15 +12,24 @@ if (ENVs.NODE_ENV === 'development') {
   require('preact/debug');
 }
 
-DI.register('Framework', {
-  ...require('preact/package.json'),
-  name: 'Preact',
-});
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  render(<AppComponent />, htmlDivElement);
-}
+import('preact/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'Preact',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
+            if (htmlDivElement instanceof HTMLDivElement) {
+              htmlDivElement.style.display = 'inline';
+              render(<AppComponent />, htmlDivElement);
+            }
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();

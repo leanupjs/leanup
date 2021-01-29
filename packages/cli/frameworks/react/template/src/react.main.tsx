@@ -5,15 +5,24 @@ import { DI } from '@leanup/lib/helpers/injector';
 
 import { AppComponent } from './components/app/component.react';
 
-DI.register('Framework', {
-  ...require('react/package.json'),
-  name: 'React',
-});
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  ReactDOM.render(<AppComponent />, htmlDivElement);
-}
+import('react/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'React',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
+            if (htmlDivElement instanceof HTMLDivElement) {
+              htmlDivElement.style.display = 'inline';
+              ReactDOM.render(<AppComponent />, htmlDivElement);
+            }
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();

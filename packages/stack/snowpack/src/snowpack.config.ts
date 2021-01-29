@@ -53,4 +53,7 @@ module.exports = {
     '@snowpack/plugin-sass',
     '@snowpack/plugin-postcss',
   ],
+  buildOptions: {
+    out: 'dist',
+  },
 };

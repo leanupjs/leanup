@@ -13,22 +13,31 @@ const ENVs = {
 };
 Vue.config.devtools = ENVs.NODE_ENV === 'development';
 
-DI.register('Framework', {
-  ...require('vue/package.json'),
-  name: 'Vue',
-});
-require('./shares/register');
-require('./shares/routing');
+import('vue/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'Vue',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            Vue.use(VueCompositionApi);
 
-Vue.use(VueCompositionApi);
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  htmlDivElement.appendChild(APP_HTML_ELEMENT);
-  // tslint:disable-next-line: no-unused-expression
-  new Vue({
-    el: APP_HTML_ELEMENT,
-    render: (h: CreateElement): VNode => h(App),
-  });
-}
+            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue');
+            if (htmlDivElement instanceof HTMLDivElement) {
+              htmlDivElement.style.display = 'inline';
+              htmlDivElement.appendChild(APP_HTML_ELEMENT);
+              // tslint:disable-next-line: no-unused-expression
+              new Vue({
+                el: APP_HTML_ELEMENT,
+                render: (h: CreateElement): VNode => h(App),
+              });
+            }
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();

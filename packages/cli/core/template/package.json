@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
+    "build:snowpack": "cross-env NODE_ENV=production snowpack build",
     "coverage": "cross-env NODE_ENV=test nyc mocha",
     "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
     "e2e": "nightwatch",
@@ -12,7 +13,9 @@
     "reinstall": "npm run remove && npm install",
     "remove": "rm -rf node_modules package-lock.json",
     "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
+    "serve:snowpack": "npm run start:snowpack -- --open none",
     "start": "npm run serve -- --open=chrome",
+    "start:snowpack": "cross-env NODE_ENV=development snowpack dev",
     "test": "cross-env NODE_ENV=test mocha",
     "update": "ncu -t minor -u && npm install"
   },
@@ -40,6 +43,8 @@
     "@leanup/cli": "^1.1.0-rc.270",
     "@leanup/git-hooks": "^1.1.0-rc.270",
     "@leanup/stack": "^1.1.0-rc.270",
+    "@leanup/stack-snowpack": "^1.1.0-rc.270",
+    "@leanup/stack-webpack": "^1.1.0-rc.270",
     "chromedriver": "87.0.7",
     "cssnano": "4.1.10",
     "npm-check-updates": "10.3.1",

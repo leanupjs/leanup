@@ -4,13 +4,6 @@ import { PLATFORM } from 'aurelia-pal';
 
 import { DI } from '@leanup/lib/helpers/injector';
 
-DI.register('Framework', {
-  ...require('aurelia-framework/package.json'),
-  name: 'Aurelia',
-});
-require('./shares/register');
-require('./shares/routing');
-
 export function configure(aurelia: Aurelia): void {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
   if (htmlDivElement instanceof HTMLDivElement) {
@@ -30,7 +23,23 @@ export function configure(aurelia: Aurelia): void {
   }
 }
 
-bootstrap(configure)
-  .then(() => {})
-  .catch(() => {})
-  .finally(() => {});
+import('aurelia-framework/package.json')
+  .then((packageJson: any) => {
+    DI.register('Framework', {
+      ...packageJson.default,
+      name: 'Aurelia',
+    });
+    import('./shares/register')
+      .then(() => {
+        import('./shares/routing')
+          .then(() => {
+            bootstrap(configure)
+              .then(() => {})
+              .catch(() => {})
+              .finally(() => {});
+          })
+          .catch();
+      })
+      .catch();
+  })
+  .catch();
