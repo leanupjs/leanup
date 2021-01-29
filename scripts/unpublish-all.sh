@@ -22,6 +22,7 @@ bash ./unpublish.sh "stack-vanilla" "$1"
 bash ./unpublish.sh "stack-vue" "$1"
 bash ./unpublish.sh "stack-vue3" "$1"
 
+bash ./unpublish.sh "stack-snowpack" "$1"
 bash ./unpublish.sh "stack-webpack" "$1"
 
 bash ./unpublish.sh "stack" "$1"

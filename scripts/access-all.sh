@@ -20,6 +20,7 @@ sh access.sh "$1" "stack-svelte"
 sh access.sh "$1" "stack-vue"
 sh access.sh "$1" "stack-vue3"
 
+sh access.sh "$1" "stack-snowpack"
 sh access.sh "$1" "stack-webpack"
 sh access.sh "$1" "stack"
 

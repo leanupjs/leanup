@@ -31,6 +31,7 @@ sh unpublish.sh stack-react $1
 sh unpublish.sh stack-svelte $1
 sh unpublish.sh stack-vue $1
 sh unpublish.sh stack-vue3 $1
+sh unpublish.sh stack-snowpack $1
 sh unpublish.sh stack-webpack $1
 
 sh unpublish.sh form $1
