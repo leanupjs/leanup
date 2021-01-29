@@ -8,29 +8,18 @@ import './components/series/list/component.angularjs';
 
 import * as angular from 'angular';
 
-import { DI } from '@leanup/lib/helpers/injector';
-
+import { importCatch, run } from './app.run';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-import('angular/package.json')
-  .then((packageJson: any) => {
-    DI.register('Framework', {
-      ...packageJson.default,
-      name: 'AngularJS',
+import(`angular/package.json`)
+  .then((packageJson: { default: Object }) => {
+    run('AngularJS', packageJson, () => {
+      const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
+      if (htmlDivElement instanceof HTMLDivElement) {
+        htmlDivElement.style.display = 'inline';
+        htmlDivElement.appendChild(APP_HTML_ELEMENT);
+        angular.bootstrap(htmlDivElement, ['app']);
+      }
     });
-    import('./shares/register')
-      .then(() => {
-        import('./shares/routing')
-          .then(() => {
-            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
-            if (htmlDivElement instanceof HTMLDivElement) {
-              htmlDivElement.style.display = 'inline';
-              htmlDivElement.appendChild(APP_HTML_ELEMENT);
-              angular.bootstrap(htmlDivElement, ['app']);
-            }
-          })
-          .catch();
-      })
-      .catch();
   })
-  .catch();
+  .catch(importCatch);

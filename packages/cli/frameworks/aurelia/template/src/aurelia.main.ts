@@ -2,7 +2,7 @@ import { bootstrap } from 'aurelia-bootstrapper';
 import { Aurelia } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
 
-import { DI } from '@leanup/lib/helpers/injector';
+import { importCatch, run } from './app.run';
 
 export function configure(aurelia: Aurelia): void {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
@@ -23,23 +23,13 @@ export function configure(aurelia: Aurelia): void {
   }
 }
 
-import('aurelia-framework/package.json')
-  .then((packageJson: any) => {
-    DI.register('Framework', {
-      ...packageJson.default,
-      name: 'Aurelia',
+import(`aurelia-framework/package.json`)
+  .then((packageJson: { default: Object }) => {
+    run('Aurelia', packageJson, () => {
+      bootstrap(configure)
+        .then(() => {})
+        .catch(() => {})
+        .finally(() => {});
     });
-    import('./shares/register')
-      .then(() => {
-        import('./shares/routing')
-          .then(() => {
-            bootstrap(configure)
-              .then(() => {})
-              .catch(() => {})
-              .finally(() => {});
-          })
-          .catch();
-      })
-      .catch();
   })
-  .catch();
+  .catch(importCatch);

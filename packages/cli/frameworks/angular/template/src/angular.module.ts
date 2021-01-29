@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { DI } from '@leanup/lib/helpers/injector';
 
+import { importCatch, run } from './app.run';
 import { AppComponent } from './components/app/component.angular';
 import { InputComponent } from './components/input/component.angular';
 import { CreateSerieComponent } from './components/series/create/component.angular';
@@ -11,25 +11,15 @@ import { EditorSerieComponent } from './components/series/editor/component.angul
 import { ListSerieComponent } from './components/series/list/component.angular';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-import('@angular/core/package.json')
-  .then((packageJson: any) => {
-    DI.register('Framework', {
-      ...packageJson.default,
-      name: 'Angular',
+import(`@angular/core/package.json`)
+  .then((packageJson: { default: Object }) => {
+    run('Angular', packageJson, () => {
+      const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
+      htmlDivElement.style.display = 'inline';
+      htmlDivElement.appendChild(APP_HTML_ELEMENT);
     });
-    import('./shares/register')
-      .then(() => {
-        import('./shares/routing')
-          .then(() => {
-            const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
-            htmlDivElement.style.display = 'inline';
-            htmlDivElement.appendChild(APP_HTML_ELEMENT);
-          })
-          .catch();
-      })
-      .catch();
   })
-  .catch();
+  .catch(importCatch);
 
 @NgModule({
   bootstrap: [AppComponent],
