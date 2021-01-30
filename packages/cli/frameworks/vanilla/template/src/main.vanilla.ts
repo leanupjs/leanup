@@ -11,7 +11,6 @@ run(
   },
   () => {
     const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vanilla');
-    htmlDivElement.style.display = 'inline';
     const appElement: HTMLElement = document.createElement('wc-app');
     htmlDivElement.appendChild(appElement);
   }

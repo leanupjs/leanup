@@ -11,7 +11,6 @@ import(
     run('Svelte', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#svelte');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         app = new App({
           target: htmlDivElement,

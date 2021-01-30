@@ -12,7 +12,6 @@ import(
     run('Vue', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue3');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         htmlDivElement.appendChild(APP_HTML_ELEMENT);
         // tslint:disable-next-line: no-unused-expression
 
