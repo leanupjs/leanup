@@ -19,7 +19,6 @@ import(
     run('AngularJS', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         htmlDivElement.appendChild(APP_HTML_ELEMENT);
         angular.bootstrap(htmlDivElement, ['app']);
       }

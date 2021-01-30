@@ -11,7 +11,6 @@ import(
     run('Inferno', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#inferno');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         render(<AppComponent />, htmlDivElement);
       }
     });

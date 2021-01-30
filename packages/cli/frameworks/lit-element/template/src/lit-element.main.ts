@@ -11,7 +11,6 @@ import(
       // Render the template to the document
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#lit-element');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         htmlDivElement.innerHTML = '<app-component />';
       }
     });

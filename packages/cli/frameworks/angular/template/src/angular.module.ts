@@ -15,11 +15,12 @@ import(
   /* webpackChunkName: "angular.package.json" */
   `@angular/core/package.json`
 )
-  .then((packageJson: { default: Object }) => {
+  .then((packageJson: Object) => {
     run('Angular', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
-      htmlDivElement.style.display = 'inline';
-      htmlDivElement.appendChild(APP_HTML_ELEMENT);
+      if (htmlDivElement instanceof HTMLDivElement) {
+        htmlDivElement.appendChild(APP_HTML_ELEMENT);
+      }
     });
   })
   .catch(importCatch);

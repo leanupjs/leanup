@@ -12,7 +12,6 @@ import(
     run('React', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         ReactDOM.render(<AppComponent />, htmlDivElement);
       }
     });

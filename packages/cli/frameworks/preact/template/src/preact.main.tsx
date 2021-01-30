@@ -19,7 +19,6 @@ import(
     run('React', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
       if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.style.display = 'inline';
         render(<AppComponent />, htmlDivElement);
       }
     });

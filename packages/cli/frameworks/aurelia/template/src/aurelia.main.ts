@@ -7,7 +7,6 @@ import { importCatch, run } from './app.run';
 export function configure(aurelia: Aurelia): void {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
   if (htmlDivElement instanceof HTMLDivElement) {
-    htmlDivElement.style.display = 'inline';
     aurelia.use.standardConfiguration().developmentLogging();
     aurelia
       .start()
