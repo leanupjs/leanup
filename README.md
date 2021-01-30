@@ -33,6 +33,7 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
   - [Pro](#pro)
   - [Contra](#contra)
 - [Demo's](#demos)
+- [Snowpack approach](#snowpack-approach)
 - [Tools](#tools)
 - [Ecosystem structure](#ecosystem-structure)
   - [Frameworks](#frameworks)
@@ -89,6 +90,25 @@ There are some working examples:
 - [https://github.modevel.de/poc/](https://github.modevel.de/poc/)
 - [PoC - Flexible web application architecture](https://github.com/martinoppitz/poc-flexible-web-application-architecture#readme)
 - [Hello World - Comparison](https://github.com/martinoppitz/hello-world-comparison#readme)
+
+## Snowpack approach
+
+```bash
+> mkdir demo-snowpack
+> cd demo-snowpack
+
+> npm i --no-save @leanup/cli@next @leanup/cli-preact@next
+# > npm i --no-save @leanup/cli@next @leanup/cli-react@next
+
+# webpack
+> npm start
+> npm run build
+
+# snowpack
+# -> edit public/index.html before
+> npm start:snowpack
+> npm build:snowpack
+```
 
 ## Tools
 
