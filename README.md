@@ -106,8 +106,8 @@ There are some working examples:
 
 # snowpack
 # -> edit public/index.html before
-> npm start:snowpack
-> npm build:snowpack
+> npm run start:snowpack
+> npm run build:snowpack
 ```
 
 ## Tools
