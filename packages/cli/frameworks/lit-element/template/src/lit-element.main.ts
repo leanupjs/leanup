@@ -2,7 +2,10 @@ import './components/app/component.lit-element';
 
 import { importCatch, run } from './app.run';
 
-import(`lit-element/package.json`)
+import(
+  /* webpackChunkName: "lit-element.package.json" */
+  `lit-element/package.json`
+)
   .then((packageJson: { default: Object }) => {
     run('lit-element', packageJson, () => {
       // Render the template to the document

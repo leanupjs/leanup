@@ -11,7 +11,10 @@ import { EditorSerieComponent } from './components/series/editor/component.angul
 import { ListSerieComponent } from './components/series/list/component.angular';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-import(`@angular/core/package.json`)
+import(
+  /* webpackChunkName: "angular.package.json" */
+  `@angular/core/package.json`
+)
   .then((packageJson: { default: Object }) => {
     run('Angular', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');

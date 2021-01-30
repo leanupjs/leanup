@@ -13,7 +13,10 @@ const ENVs = {
 };
 Vue.config.devtools = ENVs.NODE_ENV === 'development';
 
-import(`vue/package.json`)
+import(
+  /* webpackChunkName: "vue.package.json" */
+  `vue/package.json`
+)
   .then((packageJson: { default: Object }) => {
     run('React', packageJson, () => {
       Vue.use(VueCompositionApi);

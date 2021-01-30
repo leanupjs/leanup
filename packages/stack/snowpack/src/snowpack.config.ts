@@ -40,7 +40,7 @@ if (typeof packageJsonCli.version === 'string') {
 module.exports = {
   mount: {
     public: '/',
-    src: '/dist',
+    src: '/',
   },
   plugins: [
     [

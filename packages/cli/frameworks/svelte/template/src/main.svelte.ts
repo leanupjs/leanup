@@ -3,7 +3,10 @@ import App from './components/app/component.svelte';
 
 let app: unknown;
 
-import(`svelte/package.json`)
+import(
+  /* webpackChunkName: "svelte.package.json" */
+  `svelte/package.json`
+)
   .then((packageJson: { default: Object }) => {
     run('Svelte', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#svelte');

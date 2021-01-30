@@ -11,7 +11,10 @@ if (ENVs.NODE_ENV === 'development') {
   require('preact/debug');
 }
 
-import(`preact/package.json`)
+import(
+  /* webpackChunkName: "preact.package.json" */
+  `preact/package.json`
+)
   .then((packageJson: { default: Object }) => {
     run('React', packageJson, () => {
       const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');

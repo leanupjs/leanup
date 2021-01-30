@@ -138,7 +138,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
       proxy: proxyConfig,
     },
     entry: {
-      app: path.join(process.cwd(), `src`, `main.ts`),
+      main: path.join(process.cwd(), `src`, `main.ts`),
     },
     module: {
       rules: [

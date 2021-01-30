@@ -9,9 +9,15 @@ export const run = (name: string, packageJson: { default: Object }, bootstrap: F
     ...packageJson.default,
     name: name,
   });
-  import('./shares/register')
+  import(
+    /* webpackChunkName: "shares.register" */
+    './shares/register'
+  )
     .then(() => {
-      import('./shares/routing')
+      import(
+        /* webpackChunkName: "shares.routing" */
+        './shares/routing'
+      )
         .then(() => {
           bootstrap();
         })

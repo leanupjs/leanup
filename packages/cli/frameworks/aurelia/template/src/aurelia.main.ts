@@ -23,7 +23,10 @@ export function configure(aurelia: Aurelia): void {
   }
 }
 
-import(`aurelia-framework/package.json`)
+import(
+  /* webpackChunkName: "aurelia.package.json" */
+  `aurelia-framework/package.json`
+)
   .then((packageJson: { default: Object }) => {
     run('Aurelia', packageJson, () => {
       bootstrap(configure)
