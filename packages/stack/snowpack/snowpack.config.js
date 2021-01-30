@@ -1,4 +1,1 @@
-module.exports = (env, argv) => {
-  const { snowpackConfig } = require('./lib/snowpack.config');
-  return snowpackConfig(env, argv);
-};
+module.exports = require('./lib/snowpack.config');
