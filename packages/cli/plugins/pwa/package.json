@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-pwa",
-  "version": "1.1.0-rc.273",
+  "version": "1.1.0-rc.274",
   "description": "This module contains pwa features for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -28,7 +28,7 @@
     "workbox-webpack-plugin": "6.1.0"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.273",
+    "@leanup/cli": "^1.1.0-rc.274",
     "@types/node": "14.14.22",
     "typescript": "4.1.3"
   },
