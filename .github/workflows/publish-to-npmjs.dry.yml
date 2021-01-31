@@ -25,8 +25,13 @@ jobs:
       - name: Replace alias in all package.json's
         run: |
           find . -name "package.json" -type f -exec sed -i -e 's/"@leanup\//"@${{env.alias}}\//g' {} +
+
           find . -name "*.js" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
           find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.tsx" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.svelte" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.vue" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+
           find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup'/'@${{env.alias}}'/g" {} +
           git diff
       - name: Set up Node.js
