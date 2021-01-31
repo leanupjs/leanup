@@ -105,7 +105,6 @@ There are some working examples:
 > npm run build
 
 # snowpack
-# -> edit public/index.html before
 > npm run start:snowpack
 > npm run build:snowpack
 ```
