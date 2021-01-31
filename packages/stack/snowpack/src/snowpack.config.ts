@@ -37,6 +37,7 @@ if (typeof packageJsonCli.version === 'string') {
   MULTIPLE_REPLACEMENTS.push({ from: '$$CLI_VERSION$$', to: packageJsonCli.version });
 }
 
+// https://www.snowpack.dev/reference/configuration
 module.exports = {
   mount: {
     public: '/',
@@ -55,5 +56,16 @@ module.exports = {
   ],
   buildOptions: {
     out: 'dist',
+  },
+  // https://www.snowpack.dev/guides/optimize-and-bundle#option-2%3A-optimize-plugins
+  optimize: {
+    // entrypoints: 'auto',
+    // preload: true,
+    // bundle: true, // https://github.com/snowpackjs/snowpack/discussions/2520
+    splitting: true,
+    treeshake: true,
+    manifest: true,
+    minify: true,
+    target: 'es2018',
   },
 };
