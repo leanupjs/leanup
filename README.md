@@ -13,7 +13,6 @@
 [![lernajs][lernajs]][lernajs-url]
 [![prettier][prettier]][prettier-url]
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
-[![DepShield Badge](https://depshield.sonatype.org/badges/leanupjs/leanup/depshield.svg)](https://depshield.github.io)
 
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
@@ -33,7 +32,6 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
   - [Pro](#pro)
   - [Contra](#contra)
 - [Demo's](#demos)
-- [Snowpack approach](#snowpack-approach)
 - [Tools](#tools)
 - [Ecosystem structure](#ecosystem-structure)
   - [Frameworks](#frameworks)
@@ -91,30 +89,13 @@ There are some working examples:
 - [PoC - Flexible web application architecture](https://github.com/martinoppitz/poc-flexible-web-application-architecture#readme)
 - [Hello World - Comparison](https://github.com/martinoppitz/hello-world-comparison#readme)
 
-## Snowpack approach
-
-```bash
-> mkdir demo-snowpack
-> cd demo-snowpack
-
-> npm i --no-save @leanup/cli@next @leanup/cli-preact@next
-# > npm i --no-save @leanup/cli@next @leanup/cli-react@next
-
-# webpack
-> npm start
-> npm run build
-
-# snowpack
-> npm run start:snowpack
-> npm run build:snowpack
-```
-
 ## Tools
 
 | Tool/Technology  |    Description    | Status | Note                       | Rating                                                                                                                                               |
 | ---------------- | :---------------: | :----: | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [TypeScript]     |     Language      |   ✔️   | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
 | [Webpack]        |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
+| [Snowpack]       |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
 | [ESBuild]        |    Transpiler     |   ✔️   | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
 | [Babel]          |    Transpiler     |   ✔️   | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
 | [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
@@ -136,7 +117,6 @@ There are some working examples:
 | [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
 | [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
 | [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
-| [AuditJS]        | Vulnerabiliy-Gate |   ✔️   | ready                      | [![auditjs](https://snyk.io/advisor/npm-package/auditjs/badge.svg)](https://snyk.io/advisor/npm-package/auditjs)                                     |
 | [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
 | [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
 | [PostCSS]        |        CSS        |   ✔️   | ready                      |
@@ -178,7 +158,6 @@ Vanilla Java-/TypeScript are supported by default. That means for example custom
 
 The selection of the following frameworks depends in parts on the following references:
 
-- [report-2020](https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce)
 - [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential),
 - [benchmark](https://krausest.github.io/js-framework-benchmark/2020/table_chrome_80.html) and
 - [survey](https://2019.stateofjs.com/front-end-frameworks)
@@ -250,6 +229,6 @@ There a separate packages for important application features.
 [tailwindcss]: https://tailwindcss.com
 [postcss]: https://postcss.org
 [esbuild]: https://esbuild.github.io
+[snowpack]: https://www.snowpack.dev/
 [openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
-[auditjs]: https://github.com/sonatype-nexus-community/auditjs#readme
