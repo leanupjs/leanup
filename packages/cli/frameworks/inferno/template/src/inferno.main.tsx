@@ -6,7 +6,7 @@ import { AppComponent } from './components/app/component.inferno';
 import(
   /* webpackMode: "eager" */
   /* webpackChunkName: "inferno.package.json" */
-  `inferno-shared/package.json`
+  `inferno/package.json`
 )
   .then((packageJson: { default: Object }) => {
     run('Inferno', packageJson, () => {
