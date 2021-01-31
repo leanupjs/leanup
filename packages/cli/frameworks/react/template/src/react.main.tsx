@@ -5,6 +5,7 @@ import { importCatch, run } from './app.run';
 import { AppComponent } from './components/app/component.react';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "react.package.json" */
   `react/package.json`
 )

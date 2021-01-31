@@ -23,6 +23,7 @@ export function configure(aurelia: Aurelia): void {
 }
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "aurelia.package.json" */
   `aurelia-framework/package.json`
 )

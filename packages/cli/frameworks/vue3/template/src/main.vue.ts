@@ -5,6 +5,7 @@ import App from './components/app/component.vue';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "vue3.package.json" */
   `vue/package.json`
 )

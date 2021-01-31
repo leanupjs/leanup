@@ -12,6 +12,7 @@ import { importCatch, run } from './app.run';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "angularjs.package.json" */
   `angular/package.json`
 )

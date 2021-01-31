@@ -4,6 +4,7 @@ import App from './components/app/component.svelte';
 let app: unknown;
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "svelte.package.json" */
   `svelte/package.json`
 )

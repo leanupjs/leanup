@@ -14,6 +14,7 @@ const ENVs = {
 Vue.config.devtools = ENVs.NODE_ENV === 'development';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "vue.package.json" */
   `vue/package.json`
 )

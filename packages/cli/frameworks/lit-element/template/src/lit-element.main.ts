@@ -3,6 +3,7 @@ import './components/app/component.lit-element';
 import { importCatch, run } from './app.run';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "lit-element.package.json" */
   `lit-element/package.json`
 )

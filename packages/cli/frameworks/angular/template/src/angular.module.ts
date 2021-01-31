@@ -12,6 +12,7 @@ import { ListSerieComponent } from './components/series/list/component.angular';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "angular.package.json" */
   `@angular/core/package.json`
 )

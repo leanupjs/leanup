@@ -12,6 +12,7 @@ if (ENVs.NODE_ENV === 'development') {
 }
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "preact.package.json" */
   `preact/package.json`
 )

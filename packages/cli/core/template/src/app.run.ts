@@ -10,11 +10,13 @@ export const run = (name: string, packageJson: { default: Object }, bootstrap: F
     name: name,
   });
   import(
+    /* webpackMode: "eager" */
     /* webpackChunkName: "shares.register" */
     './shares/register'
   )
     .then(() => {
       import(
+        /* webpackMode: "eager" */
         /* webpackChunkName: "shares.routing" */
         './shares/routing'
       )

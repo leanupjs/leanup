@@ -4,6 +4,7 @@ import { importCatch, run } from './app.run';
 import { AppComponent } from './components/app/component.inferno';
 
 import(
+  /* webpackMode: "eager" */
   /* webpackChunkName: "inferno.package.json" */
   `inferno-shared/package.json`
 )
