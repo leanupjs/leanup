@@ -6,13 +6,6 @@ import { run } from './app.run';
 import { AppComponent } from './components/app/component.react';
 
 run('React', PACKAGE_JSON.version, () => {
-  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
-  if (htmlDivElement instanceof HTMLDivElement) {
-    render(<AppComponent />, htmlDivElement);
-  }
-});
-
-run('React', PACKAGE_JSON.version, () => {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
   if (htmlDivElement instanceof HTMLDivElement) {
     ReactDOM.render(<AppComponent />, htmlDivElement);
