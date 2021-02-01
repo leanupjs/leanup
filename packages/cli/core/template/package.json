@@ -17,7 +17,7 @@
     "start": "npm run serve -- --open=chrome",
     "start:snowpack": "cross-env NODE_ENV=development snowpack dev",
     "test": "cross-env NODE_ENV=test mocha",
-    "update": "ncu -t minor -u && npm install"
+    "update": "ncu -t minor -u && npm install && ncu"
   },
   "husky": {
     "hooks": {
