@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-webhint",
-  "version": "1.1.0-rc.279",
+  "version": "1.1.0-rc.280",
   "description": "This module contains the webhint feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -34,7 +34,7 @@
     "hint": "6.1.1"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.279",
+    "@leanup/cli": "^1.1.0-rc.280",
     "@types/node": "14.14.22",
     "typescript": "4.1.3"
   },
