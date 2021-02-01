@@ -9,6 +9,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './angular.module';
 import { run } from './app.run';
 import { APP_HTML_ELEMENT } from './shares/constant';
+import { typeIt } from './shares/utils';
+
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
 
 const ENVs = {
   NODE_ENV: '$$NODE_ENV$$',
@@ -17,7 +20,7 @@ if (ENVs.NODE_ENV === 'production') {
   enableProdMode();
 }
 
-run('Angular', PACKAGE_JSON.version, () => {
+run('Angular', TYPED_PACKAGE_JSON.version, () => {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
   if (htmlDivElement instanceof HTMLDivElement) {
     htmlDivElement.appendChild(APP_HTML_ELEMENT);

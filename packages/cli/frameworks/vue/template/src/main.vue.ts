@@ -7,6 +7,9 @@ import VueCompositionApi from '@vue/composition-api';
 import { run } from './app.run';
 import App from './components/app/component.vue';
 import { APP_HTML_ELEMENT } from './shares/constant';
+import { typeIt } from './shares/utils';
+
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
 
 // https://github.com/vuejs/vue-devtools
 const ENVs = {
@@ -14,7 +17,7 @@ const ENVs = {
 };
 Vue.config.devtools = ENVs.NODE_ENV === 'development';
 
-run('Vue', PACKAGE_JSON.version, () => {
+run('Vue', TYPED_PACKAGE_JSON.version, () => {
   Vue.use(VueCompositionApi);
 
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue');

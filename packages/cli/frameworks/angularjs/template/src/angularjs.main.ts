@@ -11,8 +11,11 @@ import * as PACKAGE_JSON from 'angular/package.json';
 
 import { run } from './app.run';
 import { APP_HTML_ELEMENT } from './shares/constant';
+import { typeIt } from './shares/utils';
 
-run('AngularJS', PACKAGE_JSON.version, () => {
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
+
+run('AngularJS', TYPED_PACKAGE_JSON.version, () => {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
   if (htmlDivElement instanceof HTMLDivElement) {
     htmlDivElement.appendChild(APP_HTML_ELEMENT);

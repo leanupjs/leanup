@@ -4,6 +4,9 @@ import * as PACKAGE_JSON from 'aurelia-framework/package.json';
 import { PLATFORM } from 'aurelia-pal';
 
 import { run } from './app.run';
+import { typeIt } from './shares/utils';
+
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
 
 export function configure(aurelia: Aurelia): void {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
@@ -23,7 +26,7 @@ export function configure(aurelia: Aurelia): void {
   }
 }
 
-run('Aurelia', PACKAGE_JSON.version, () => {
+run('Aurelia', TYPED_PACKAGE_JSON.version, () => {
   bootstrap(configure)
     .then(() => {})
     .catch(() => {})
