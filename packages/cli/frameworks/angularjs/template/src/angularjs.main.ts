@@ -7,22 +7,15 @@ import './components/series/editor/component.angularjs';
 import './components/series/list/component.angularjs';
 
 import * as angular from 'angular';
+import * as PACKAGE_JSON from 'angular/package.json';
 
-import { importCatch, run } from './app.run';
+import { run } from './app.run';
 import { APP_HTML_ELEMENT } from './shares/constant';
 
-import(
-  /* webpackMode: "eager" */
-  /* webpackChunkName: "angularjs.package.json" */
-  `angular/package.json`
-)
-  .then((packageJson: { default: Object }) => {
-    run('AngularJS', packageJson, () => {
-      const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
-      if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.appendChild(APP_HTML_ELEMENT);
-        angular.bootstrap(htmlDivElement, ['app']);
-      }
-    });
-  })
-  .catch(importCatch);
+run('AngularJS', PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angularjs');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    htmlDivElement.appendChild(APP_HTML_ELEMENT);
+    angular.bootstrap(htmlDivElement, ['app']);
+  }
+});

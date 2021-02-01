@@ -35,7 +35,7 @@ export class StorageService {
       }
       this.memoryStorage = <Object>JSON.parse(sessionStorage);
     } catch (error) {
-      this.memoryStorage = <Object>MOCK.default;
+      this.memoryStorage.measuredSeries = MOCK.measuredSeries;
     }
   }
 

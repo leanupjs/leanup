@@ -1,8 +1,9 @@
 import { bootstrap } from 'aurelia-bootstrapper';
 import { Aurelia } from 'aurelia-framework';
+import * as PACKAGE_JSON from 'aurelia-framework/package.json';
 import { PLATFORM } from 'aurelia-pal';
 
-import { importCatch, run } from './app.run';
+import { run } from './app.run';
 
 export function configure(aurelia: Aurelia): void {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
@@ -22,17 +23,9 @@ export function configure(aurelia: Aurelia): void {
   }
 }
 
-import(
-  /* webpackMode: "eager" */
-  /* webpackChunkName: "aurelia.package.json" */
-  `aurelia-framework/package.json`
-)
-  .then((packageJson: { default: Object }) => {
-    run('Aurelia', packageJson, () => {
-      bootstrap(configure)
-        .then(() => {})
-        .catch(() => {})
-        .finally(() => {});
-    });
-  })
-  .catch(importCatch);
+run('Aurelia', PACKAGE_JSON.version, () => {
+  bootstrap(configure)
+    .then(() => {})
+    .catch(() => {})
+    .finally(() => {});
+});

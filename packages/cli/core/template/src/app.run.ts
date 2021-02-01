@@ -1,13 +1,13 @@
-import { DI } from '@leanup/lib/helpers/injector';
+import { DI } from '@leanupjs/lib/helpers/injector';
 
 export const importCatch = (error: unknown): void => {
   console.warn(error);
 };
 
-export const run = (name: string, packageJson: { default: Object }, bootstrap: Function): void => {
+export const run = (name: string, version: string, bootstrap: Function): void => {
   DI.register('Framework', {
-    ...packageJson.default,
-    name: name,
+    name,
+    version,
   });
   import(
     /* webpackMode: "eager" */

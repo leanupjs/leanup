@@ -1,19 +1,13 @@
 import './components/app/component.lit-element';
 
-import { importCatch, run } from './app.run';
+import * as PACKAGE_JSON from 'lit-element/package.json';
 
-import(
-  /* webpackMode: "eager" */
-  /* webpackChunkName: "lit-element.package.json" */
-  `lit-element/package.json`
-)
-  .then((packageJson: { default: Object }) => {
-    run('lit-element', packageJson, () => {
-      // Render the template to the document
-      const htmlDivElement: HTMLDivElement | null = document.querySelector('div#lit-element');
-      if (htmlDivElement instanceof HTMLDivElement) {
-        htmlDivElement.innerHTML = '<app-component />';
-      }
-    });
-  })
-  .catch(importCatch);
+import { run } from './app.run';
+
+run('lit-element', PACKAGE_JSON.version, () => {
+  // Render the template to the document
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#lit-element');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    htmlDivElement.innerHTML = '<app-component />';
+  }
+});

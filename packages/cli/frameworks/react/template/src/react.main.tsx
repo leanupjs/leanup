@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as PACKAGE_JSON from 'react/package.json';
 
-import { importCatch, run } from './app.run';
+import { run } from './app.run';
 import { AppComponent } from './components/app/component.react';
 
-import(
-  /* webpackMode: "eager" */
-  /* webpackChunkName: "react.package.json" */
-  `react/package.json`
-)
-  .then((packageJson: { default: Object }) => {
-    run('React', packageJson, () => {
-      const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
-      if (htmlDivElement instanceof HTMLDivElement) {
-        ReactDOM.render(<AppComponent />, htmlDivElement);
-      }
-    });
-  })
-  .catch(importCatch);
+run('React', PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    render(<AppComponent />, htmlDivElement);
+  }
+});
+
+run('React', PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    ReactDOM.render(<AppComponent />, htmlDivElement);
+  }
+});

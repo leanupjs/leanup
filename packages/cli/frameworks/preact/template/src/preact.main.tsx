@@ -1,6 +1,7 @@
 import { h, render } from 'preact';
+import * as PACKAGE_JSON from 'preact/package.json';
 
-import { importCatch, run } from './app.run';
+import { run } from './app.run';
 import { AppComponent } from './components/app/component.preact';
 
 // https://github.com/preactjs/preact/blob/master/README.md#debug-mode
@@ -11,17 +12,9 @@ if (ENVs.NODE_ENV === 'development') {
   require('preact/debug');
 }
 
-import(
-  /* webpackMode: "eager" */
-  /* webpackChunkName: "preact.package.json" */
-  `preact/package.json`
-)
-  .then((packageJson: { default: Object }) => {
-    run('React', packageJson, () => {
-      const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
-      if (htmlDivElement instanceof HTMLDivElement) {
-        render(<AppComponent />, htmlDivElement);
-      }
-    });
-  })
-  .catch(importCatch);
+run('Preact', PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    render(<AppComponent />, htmlDivElement);
+  }
+});
