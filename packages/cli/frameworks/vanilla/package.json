@@ -11,6 +11,7 @@
   ],
   "keywords": [
     "babel",
+    "snowpack",
     "webpack",
     "sinon",
     "nyc",

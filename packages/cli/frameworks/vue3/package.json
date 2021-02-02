@@ -10,6 +10,7 @@
   ],
   "keywords": [
     "babel",
+    "snowpack",
     "webpack",
     "vue",
     "vue3",

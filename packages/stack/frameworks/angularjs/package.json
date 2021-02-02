@@ -12,6 +12,7 @@
   ],
   "keywords": [
     "babel",
+    "snowpack",
     "webpack",
     "angularjs",
     "sinon",

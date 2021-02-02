@@ -10,6 +10,7 @@
   ],
   "keywords": [
     "babel",
+    "snowpack",
     "webpack",
     "react",
     "sinon",
