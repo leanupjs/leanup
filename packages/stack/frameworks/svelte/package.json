@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@leanup/stack-webpack": "^1.1.0-rc.280",
+    "@snowpack/plugin-svelte": "3.5.2",
     "prettier-plugin-svelte": "2.1.1",
     "svelte-loader": "3.0.0"
   },
