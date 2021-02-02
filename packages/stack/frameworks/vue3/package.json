@@ -6,6 +6,7 @@
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
+    "snowpack.config.js",
     "webpack.config.js"
   ],
   "keywords": [
