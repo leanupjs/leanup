@@ -1,1 +1,1 @@
-module.exports = require('@leanup/stack-snowpack/snowpack.config');
+module.exports = require('@leanup/stack-preact/snowpack.config');
