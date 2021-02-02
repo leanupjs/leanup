@@ -1,3 +1,1 @@
-module.exports = {
-  ...require('@leanup/stack-snowpack/snowpack.config'),
-};
+module.exports = require('@leanup/stack-angular/snowpack.config');

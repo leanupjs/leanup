@@ -7,5 +7,10 @@
   "devDependencies": {
     "@leanup/cli-lit-element": "^1.1.0-rc.280",
     "@leanup/stack-webpack": "^1.1.0-rc.280"
+  },
+  "scripts": {
+    "build:snowpack": "cross-env NODE_ENV=production snowpack build",
+    "serve:snowpack": "npm run start:snowpack -- --open none",
+    "start:snowpack": "cross-env NODE_ENV=development snowpack dev"
   }
 }

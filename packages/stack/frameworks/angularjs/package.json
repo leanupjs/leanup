@@ -7,6 +7,7 @@
   "files": [
     "lib/**",
     "babel.config.js",
+    "snowpack.config.js",
     "webpack.config.js"
   ],
   "keywords": [
@@ -36,7 +37,9 @@
   },
   "dependencies": {
     "@leanup/cli-core-babel": "^1.1.0-rc.280",
+    "@leanup/stack-snowpack": "^1.1.0-rc.280",
     "@leanup/stack-webpack": "^1.1.0-rc.280",
+    "@snowpack/plugin-babel": "2.1.6",
     "babel-plugin-angularjs-annotate": "0.10.0"
   },
   "devDependencies": {

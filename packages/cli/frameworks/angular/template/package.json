@@ -18,5 +18,10 @@
     "@leanup/stack-angular": "^1.1.0-rc.280",
     "@ngtools/webpack": "next",
     "typescript": "~4.1.3"
+  },
+  "scripts": {
+    "build:snowpack": "cross-env NODE_ENV=production snowpack build",
+    "serve:snowpack": "npm run start:snowpack -- --open none",
+    "start:snowpack": "cross-env NODE_ENV=development snowpack dev"
   }
 }

@@ -34,6 +34,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
+    "@leanup/stack-snowpack": "^1.1.0-rc.280",
     "@leanup/stack-webpack": "^1.1.0-rc.280"
   },
   "devDependencies": {

@@ -6,6 +6,7 @@
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
+    "snowpack.config.js",
     "webpack.config.js"
   ],
   "keywords": [
@@ -34,7 +35,9 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-webpack": "^1.1.0-rc.280"
+    "@leanup/stack-webpack": "^1.1.0-rc.280",
+    "angular-snowpack-plugin": "2.2.0",
+    "snowpack-plugin-angular": "1.2.0"
   },
   "devDependencies": {
     "@types/node": "14.14.22",
