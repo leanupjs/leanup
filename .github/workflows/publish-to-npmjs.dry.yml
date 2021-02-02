@@ -45,6 +45,8 @@ jobs:
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/snowpack
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-webpack
         run: |
           npm install
