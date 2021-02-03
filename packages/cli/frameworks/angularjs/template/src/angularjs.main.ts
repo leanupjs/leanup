@@ -1,4 +1,3 @@
-import './angularjs.module';
 import './components/app/component.angularjs';
 import './components/input/component.angularjs';
 import './components/series/create/component.angularjs';
