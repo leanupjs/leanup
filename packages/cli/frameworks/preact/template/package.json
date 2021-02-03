@@ -1,12 +1,12 @@
 {
   "name": "@template/preact",
-  "version": "1.1.0-rc.282",
+  "version": "1.1.0-rc.283",
   "dependencies": {
     "preact": "10.5.12"
   },
   "devDependencies": {
-    "@leanup/cli-preact": "^1.1.0-rc.282",
-    "@leanup/stack-preact": "^1.1.0-rc.282"
+    "@leanup/cli-preact": "^1.1.0-rc.283",
+    "@leanup/stack-preact": "^1.1.0-rc.283"
   },
   "scripts": {
     "build:snowpack": "cross-env NODE_ENV=production snowpack build",
