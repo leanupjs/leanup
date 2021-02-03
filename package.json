@@ -21,7 +21,7 @@
     "url": "https://github.com/leanupjs/leanup.git"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.92",
+    "@leanup/cli": "1.0.93",
     "@leanup/git-hooks": "1.0.92",
     "auto-changelog": "2.2.1",
     "lerna": "3.22.1",
