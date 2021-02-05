@@ -68,10 +68,8 @@
   },
   "peerDependencies": {
     "chromedriver": ">=87",
+    "geckodriver": "^1",
     "selenium-server": "^3"
-  },
-  "optionalDependencies": {
-    "geckodriver": "^1"
   },
   "engines": {
     "node": ">=10 <16",
