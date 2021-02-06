@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-preact",
-  "version": "1.1.0-rc.283",
+  "version": "1.1.0-rc.284",
   "description": "This package contains the Preact framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -36,8 +36,8 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-snowpack": "^1.1.0-rc.283",
-    "@leanup/stack-webpack": "^1.1.0-rc.283"
+    "@leanup/stack-snowpack": "^1.1.0-rc.284",
+    "@leanup/stack-webpack": "^1.1.0-rc.284"
   },
   "devDependencies": {
     "@types/node": "14.14.25",
