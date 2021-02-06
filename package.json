@@ -4,8 +4,8 @@
   "scripts": {
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
-    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x copy-modules-webpack-plugin,typescript,webpack",
-    "ncu:show": "ncu && lerna exec --concurrency 2 --stream -- ncu",
+    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x copy-modules-webpack-plugin,webpack && npm run ncu:preview",
+    "ncu:preview": "ncu --dep prod,dev && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
     "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz",
@@ -25,7 +25,7 @@
     "@leanup/git-hooks": "next",
     "@leanup/stack": "next",
     "auto-changelog": "2.2.1",
-    "lerna": "^3.22.1",
+    "lerna": "3.22.1",
     "npm-check-updates": "11.1.1",
     "prettier-plugin-svelte": "2.1.2",
     "svelte": "3.32.1",
@@ -34,8 +34,5 @@
   "engines": {
     "node": ">=10 <16",
     "npm": ">=6 <8"
-  },
-  "dependencies": {
-    "auto-changelog": "^2.2.1"
   }
 }
