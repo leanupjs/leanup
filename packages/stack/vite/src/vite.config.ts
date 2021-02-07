@@ -1,4 +1,3 @@
-import { cwd } from 'process';
 import { defineConfig } from 'vite';
 
 const path = require('path');

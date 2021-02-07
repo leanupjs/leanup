@@ -4,7 +4,7 @@ config.alias = config.alias || {};
 config.alias['react'] = 'preact/compat';
 config.alias['react-dom'] = 'preact/compat';
 
-config.alias = config.esbuild || {};
+config.esbuild = config.esbuild || {};
 config.esbuild['jsxFactory'] = 'h';
 config.esbuild['jsxFragment'] = 'Fragment';
 
