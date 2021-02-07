@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-angularjs",
-  "version": "1.1.0-rc.284",
+  "version": "1.1.0-rc.285",
   "description": "This package contains the AngularJS framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -37,9 +37,9 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli-core-babel": "^1.1.0-rc.284",
-    "@leanup/stack-snowpack": "^1.1.0-rc.284",
-    "@leanup/stack-webpack": "^1.1.0-rc.284",
+    "@leanup/cli-core-babel": "^1.1.0-rc.285",
+    "@leanup/stack-snowpack": "^1.1.0-rc.285",
+    "@leanup/stack-webpack": "^1.1.0-rc.285",
     "@snowpack/plugin-babel": "2.1.6",
     "babel-plugin-angularjs-annotate": "0.10.0"
   },
