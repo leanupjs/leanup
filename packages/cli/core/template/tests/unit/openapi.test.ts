@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { IVersion, IVersionLabelEnum } from '../../openapi/typescript-rxjs';
+import { IVersion, IVersionLabelEnum } from '../../src/assets/openapi/typescript-rxjs';
 
 describe(`Test: OpenAPI`, () => {
   const label: IVersionLabelEnum = IVersionLabelEnum.Latest;

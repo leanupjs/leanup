@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import { ReactCLI } from './react-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
+
+import { ReactCLI } from './react-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 

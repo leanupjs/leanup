@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanupjs
   registry: https://npm.pkg.github.com
-  tag: canary
+  tag: next
   token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -24,10 +24,15 @@ jobs:
       # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
-          find . -name "package.json" -type f -exec sed -i "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "package.json" -type f -exec sed -i 's/"@leanup\//"@${{env.alias}}\//g' {} +
-          find . -name "*.ts" -type f -exec sed -i "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.ts" -type f -exec sed -i "s/'@leanup'/'@${{env.alias}}'/g" {} +
+          find . -name "package.json" -type f -exec sed -i -e 's/"@leanup\//"@${{env.alias}}\//g' {} +
+
+          find . -name "*.js" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.tsx" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.svelte" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.vue" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+
+          find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup'/'@${{env.alias}}'/g" {} +
           git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
@@ -35,40 +40,32 @@ jobs:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
-      - name: Install and publish only @${{env.alias}}/cli-core-e2e
+      - name: Install and publish only @${{env.alias}}/stack-snowpack
         run: |
-          ls -la
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/e2e
+        working-directory: packages/stack/snowpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/cli-core-format
+      - name: Install and publish only @${{env.alias}}/stack-vite
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/format
+        working-directory: packages/stack/vite
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/cli-core-lint
+      - name: Install and publish only @${{env.alias}}/stack-webpack
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/lint
+        working-directory: packages/stack/webpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/cli-core-test
+      - name: Install and publish only @${{env.alias}}/stack
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/test
-        env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/cli
-        run: |
-          npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core
+        working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib
@@ -78,10 +75,24 @@ jobs:
         working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-e2e, @${{env.alias}}/cli-core-format, @${{env.alias}}/cli-core-lint, @${{env.alias}}/cli-core-test and @${{env.alias}}/lib
+      - name: Install and publish only @${{env.alias}}/cli-core-babel
         run: |
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-e2e --ignore @${{env.alias}}/cli-core-format --ignore @${{env.alias}}/cli-core-lint --ignore @${{env.alias}}/cli-core-test --ignore @${{env.alias}}/lib --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npm install
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+        working-directory: packages/cli/core/babel
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/cli
+        run: |
+          npm install
+          npm publish --access=${{env.access}} --access=public --tag=${{env.tag}} || true
+        working-directory: packages/cli/core
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-snowpack, @${{env.alias}}/stack-vite and @${{env.alias}}/stack-webpack
+        run: |
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Test all framework variants

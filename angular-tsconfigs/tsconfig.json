@@ -2,9 +2,8 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "pretty": true,
-    "target": "es2015",
+    "target": "esnext",
     "module": "esnext",
-    "allowSyntheticDefaultImports": true,
     "preserveConstEnums": true,
     "sourceMap": true,
     "moduleResolution": "node",
@@ -12,6 +11,7 @@
     "types": ["mocha", "node"],
     "typeRoots": ["node_modules/@types", "src/types"],
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
     "noEmit": true,
     "skipLibCheck": true,
     "noUnusedParameters": true,
@@ -20,8 +20,8 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "removeComments": true,
-    "strict": false
+    "strict": true
   },
-  "include": ["src/main.ts"],
+  "include": ["src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
   "exclude": ["node_modules/@leanup/**/template/**/*"]
 }

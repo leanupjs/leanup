@@ -13,7 +13,6 @@
 [![lernajs][lernajs]][lernajs-url]
 [![prettier][prettier]][prettier-url]
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
-[![DepShield Badge](https://depshield.sonatype.org/badges/leanupjs/leanup/depshield.svg)](https://depshield.github.io)
 
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
@@ -96,6 +95,7 @@ There are some working examples:
 | ---------------- | :---------------: | :----: | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [TypeScript]     |     Language      |   ✔️   | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
 | [Webpack]        |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
+| [Snowpack]       |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
 | [ESBuild]        |    Transpiler     |   ✔️   | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
 | [Babel]          |    Transpiler     |   ✔️   | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
 | [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
@@ -104,6 +104,7 @@ There are some working examples:
 | [NYC]            |   Code-Coverage   |   ✔️   | ready                      | [![nyc](https://snyk.io/advisor/npm-package/nyc/badge.svg)](https://snyk.io/advisor/npm-package/nyc)                                                 |
 | [ESLint]         |   Code-Checker    |   ✔️   | ready                      | [![eslint](https://snyk.io/advisor/npm-package/eslint/badge.svg)](https://snyk.io/advisor/npm-package/eslint)                                        |
 | [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️   | ready                      | [![nightwatch](https://snyk.io/advisor/npm-package/nightwatch/badge.svg)](https://snyk.io/advisor/npm-package/nightwatch)                            |
+| [Allsure]        |      Report       |   ✔️   | ready                      |
 | [Cucumber]       |        BDD        |   ✔️   | ready                      | [![cucumber](https://snyk.io/advisor/npm-package/cucumber/badge.svg)](https://snyk.io/advisor/npm-package/cucumber)                                  |
 | [robotframework] |        BDD        |   ⌛   | will be evaluated          |                                                                                                                                                      |
 | [Storybook]      |   Documentation   |   ⌛   | in progress                | [![storybook](https://snyk.io/advisor/npm-package/storybook/badge.svg)](https://snyk.io/advisor/npm-package/storybook)                               |
@@ -116,9 +117,9 @@ There are some working examples:
 | [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
 | [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
 | [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
-| [AuditJS]        | Vulnerabiliy-Gate |   ✔️   | ready                      | [![auditjs](https://snyk.io/advisor/npm-package/auditjs/badge.svg)](https://snyk.io/advisor/npm-package/auditjs)                                     |
 | [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
 | [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
+| [PostCSS]        |        CSS        |   ✔️   | ready                      |
 | [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
 | [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* | [![testcafe](https://snyk.io/advisor/npm-package/testcafe/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                                |
 | [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               | [![tslint](https://snyk.io/advisor/npm-package/tslint/badge.svg)](https://snyk.io/advisor/npm-package/tslint)                                        |
@@ -157,7 +158,6 @@ Vanilla Java-/TypeScript are supported by default. That means for example custom
 
 The selection of the following frameworks depends in parts on the following references:
 
-- [report-2020](https://medium.com/javascript-in-plain-english/javascript-frameworks-performance-comparison-2020-cd881ac21fce)
 - [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential),
 - [benchmark](https://krausest.github.io/js-framework-benchmark/2020/table_chrome_80.html) and
 - [survey](https://2019.stateofjs.com/front-end-frameworks)
@@ -227,7 +227,8 @@ There a separate packages for important application features.
 [testcafe]: https://devexpress.github.io/testcafe/
 [robotframework]: https://robotframework.org
 [tailwindcss]: https://tailwindcss.com
+[postcss]: https://postcss.org
 [esbuild]: https://esbuild.github.io
+[snowpack]: https://www.snowpack.dev/
 [openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
-[auditjs]: https://github.com/sonatype-nexus-community/auditjs#readme

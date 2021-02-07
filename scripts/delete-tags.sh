@@ -3,8 +3,8 @@ git tag -l | grep alpha
 git tag -l | grep beta
 git tag -l | grep webpack
 
-git tag --delete $1
-git push --delete origin $1
+git tag --delete "$1"
+git push --delete origin "$1"
 
 # for i in {0..80}
 # do

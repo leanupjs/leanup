@@ -1,21 +1,18 @@
 {
   "name": "@leanup/cli",
-  "version": "1.0.90",
+  "version": "1.1.0-rc.285",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
     "template/**",
-    "babel.config.js",
     "cli.js",
-    "postcss.config.js",
-    "postinstall.js",
-    "webpack.config.js"
+    "postinstall.js"
   ],
   "keywords": [
-    "babel",
     "eslint",
+    "esbuild",
     "webpack",
     "angular",
     "angularjs",
@@ -43,6 +40,7 @@
     "compiler",
     "transpiler",
     "graphql",
+    "postcss",
     "pwa",
     "hint",
     "workbox",
@@ -62,55 +60,24 @@
     "leanup": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/core": "7.12.10",
-    "@babel/plugin-proposal-class-properties": "7.12.1",
-    "@babel/plugin-proposal-decorators": "7.12.12",
-    "@babel/plugin-proposal-optional-chaining": "7.12.7",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-typescript": "7.12.7",
-    "@leanup/cli-core-e2e": "^1.0.90",
-    "@leanup/cli-core-format": "^1.0.90",
-    "@leanup/cli-core-lint": "^1.0.90",
-    "@leanup/cli-core-test": "^1.0.90",
-    "autoprefixer": "10.2.1",
-    "babel-loader": "8.2.2",
     "chalk": "4.1.0",
-    "commander": "6.2.1",
-    "copy-modules-webpack-plugin": "2.1.1",
-    "copy-webpack-plugin": "6.4.1",
-    "css-loader": "5.0.1",
+    "commander": "7.0.0",
     "deepmerge": "4.2.2",
-    "file-loader": "6.2.0",
-    "html-webpack-plugin": "4.5.1",
-    "less": "4.1.0",
-    "less-loader": "7.2.1",
-    "mini-css-extract-plugin": "1.3.4",
-    "postcss": "8.2.4",
-    "postcss-loader": "4.1.0",
-    "prettier": "2.2.1",
-    "sass": "1.32.4",
-    "sass-loader": "10.1.1",
-    "string-replace-loader": "3.0.1",
-    "style-loader": "2.0.0",
-    "webpack": "4.44.2",
-    "webpack-cli": "4.3.1",
-    "webpack-dev-server": "3.11.2"
+    "prettier": "2.2.1"
   },
   "devDependencies": {
-    "@types/node": "14.14.21",
+    "@types/node": "14.14.25",
+    "@types/prettier": "2.2.0",
     "tsc": "1.20150623.0",
     "typescript": "4.1.3"
-  },
-  "peerDependencies": {
-    "typescript": ">=3"
   },
   "scripts": {
     "postinstall": "node postinstall.js",
     "prepack": "cp ../../../README.md template/ && rm -rf lib && tsc"
   },
   "engines": {
-    "node": ">=10 <15",
-    "npm": ">=6 <7"
+    "node": ">=10 <16",
+    "npm": ">=6 <8"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

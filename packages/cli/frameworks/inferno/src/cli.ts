@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import { InfernoCLI } from './inferno-cli';
 import { PackageJson } from '@leanup/cli/lib/interfaces';
+
+import { InfernoCLI } from './inferno-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 

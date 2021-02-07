@@ -1,0 +1,78 @@
+{
+  "name": "@leanup/stack",
+  "version": "1.1.0-rc.285",
+  "description": "This module contains all required tools to serve, test and build a framework neutral SPA.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "keywords": [
+    "eslint",
+    "esbuild",
+    "webpack",
+    "mocha",
+    "nyc",
+    "cucumber",
+    "sinon",
+    "prettier",
+    "nightwatch",
+    "less",
+    "sass",
+    "scss",
+    "typescript",
+    "cli",
+    "spa",
+    "pwa",
+    "lean",
+    "compiler",
+    "transpiler",
+    "graphql",
+    "postcss",
+    "pwa",
+    "hint",
+    "workbox",
+    "mono-repo",
+    "lerna"
+  ],
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "@types/chai": "4.2.14",
+    "@types/mocha": "8.2.0",
+    "@types/nightwatch": "1.3.2",
+    "@types/sinon": "9.0.10",
+    "@typescript-eslint/eslint-plugin": "4.14.2",
+    "@typescript-eslint/parser": "4.14.2",
+    "autoprefixer": "10.2.4",
+    "chai": "4.3.0",
+    "cross-env": "7.0.3",
+    "esbuild": "0.8.42",
+    "esbuild-register": "2.0.0",
+    "eslint": "7.19.0",
+    "eslint-plugin-html": "6.1.1",
+    "eslint-plugin-json": "2.1.2",
+    "esm": "3.2.25",
+    "jsdom": "16.4.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "8.2.1",
+    "mock-local-storage": "1.1.17",
+    "nightwatch": "1.5.1",
+    "nightwatch-allure": "1.2.0",
+    "nyc": "15.1.0",
+    "prettier": "2.2.1",
+    "sinon": "9.2.4"
+  },
+  "peerDependencies": {
+    "chromedriver": ">=87",
+    "geckodriver": "^1",
+    "selenium-server": "^3"
+  },
+  "engines": {
+    "node": ">=10 <16",
+    "npm": ">=6 <8"
+  }
+}

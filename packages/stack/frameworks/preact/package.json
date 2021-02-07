@@ -1,0 +1,58 @@
+{
+  "name": "@leanup/stack-preact",
+  "version": "1.1.0-rc.285",
+  "description": "This package contains the Preact framework extension for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "lib/**",
+    "snowpack.config.js",
+    "webpack.config.js"
+  ],
+  "keywords": [
+    "babel",
+    "snowpack",
+    "webpack",
+    "preact",
+    "sinon",
+    "nyc",
+    "nightwatch",
+    "mocha",
+    "sass",
+    "typescript",
+    "cli",
+    "spa",
+    "pwa",
+    "lean",
+    "compiler",
+    "transpiler"
+  ],
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "@leanup/stack-snowpack": "^1.1.0-rc.285",
+    "@leanup/stack-vite": "^1.1.0-rc.285",
+    "@leanup/stack-webpack": "^1.1.0-rc.285"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.25",
+    "typescript": "4.1.3"
+  },
+  "peerDependencies": {
+    "preact": "^10"
+  },
+  "scripts": {
+    "prepack": "rm -rf lib && tsc"
+  },
+  "engines": {
+    "node": ">=10 <16",
+    "npm": ">=6 <8"
+  },
+  "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
+}

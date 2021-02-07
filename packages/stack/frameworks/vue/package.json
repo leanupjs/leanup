@@ -1,0 +1,56 @@
+{
+  "name": "@leanup/stack-vue",
+  "version": "1.1.0-rc.285",
+  "description": "This package contains the Vue framework extension for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "lib/**",
+    "webpack.config.js"
+  ],
+  "keywords": [
+    "babel",
+    "webpack",
+    "vue",
+    "sinon",
+    "nyc",
+    "nightwatch",
+    "mocha",
+    "sass",
+    "typescript",
+    "cli",
+    "spa",
+    "pwa",
+    "lean",
+    "compiler",
+    "transpiler"
+  ],
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "@leanup/stack-webpack": "^1.1.0-rc.285",
+    "vue-loader": "15.9.6"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.25",
+    "typescript": "4.1.3"
+  },
+  "peerDependencies": {
+    "vue": "^2",
+    "vue-template-compiler": "^2"
+  },
+  "scripts": {
+    "prepack": "rm -rf lib && tsc"
+  },
+  "engines": {
+    "node": ">=10 <16",
+    "npm": ">=6 <8"
+  },
+  "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
+}

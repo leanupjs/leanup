@@ -1,15 +1,9 @@
 import './components/app/component.vanilla';
 
-import { DI } from '@leanup/lib/helpers/injector';
+import { run } from './app.run';
 
-DI.register('Framework', {
-  name: 'Vanilla',
-  version: null,
+run('Vanilla', null, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vanilla');
+  const appElement: HTMLElement = document.createElement('wc-app');
+  htmlDivElement.appendChild(appElement);
 });
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vanilla');
-htmlDivElement.style.display = 'inline';
-const appElement: HTMLElement = document.createElement('wc-app');
-htmlDivElement.appendChild(appElement);

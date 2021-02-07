@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-angular
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-angular
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angular&ref=release/1.0
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angular&ref=release/1.0
-[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angular&ref=release/1.0&type=peer
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angular&ref=release/1.0&type=peer
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angular&ref=release/1.1
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angular&ref=release/1.1
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/angular&ref=release/1.1&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/angular&ref=release/1.1&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-angular/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-angular
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-angular
@@ -30,64 +30,3 @@ This package contains the [Angular](https://angular.io) framework extension for 
 ## Installation
 
 `npm install @leanup/cli @leanup/cli-angular --save-dev`
-
-## Usage
-
-### Developing
-
-> lean serve -f angular -h
-
-```bash
-Usage: lean serve [options]
-
-Developing
-
-Options:
-  -e, --environment <environment>  technical environment (CMS)
-  -t, --template <template>        corporate design (Style)
-  -o, --open                       open the default browser
-  -p, --port                       port
-  --vuetify                        add optional loader for vuetify (@leanup/cli-vue and vuetify-loader required)
-  -h, --help                       output usage information
-```
-
-### Building
-
-> lean build -f angular -h
-
-```bash
-Usage: lean build [options]
-
-Building
-
-Options:
-  -e, --environment <environment>  technical environment (CMS)
-  -t, --template <template>        corporate design (Style)
-  -a, --analyzer                   generate an addional analyzer report (@leanup/cli-addons required)
-  -g, --gzip                       addional file compression (@leanup/cli-addons required)
-  -w, --worker                     split application separate worker files (@leanup/cli-addons required)
-  --vuetify                        add optional loader for vuetify (@leanup/cli-vue and vuetify-loader required)
-  -h, --help                       output usage information
-```
-
-### Unit-Testing
-
-> see [@leanup/cli]
-
-### Test-Coverage
-
-> see [@leanup/cli]
-
-### E2E-Testing
-
-> see [@leanup/cli]
-
-### Formatter
-
-> see [@leanup/cli]
-
-### Linter
-
-> see [@leanup/cli]
-
-[@leanup/cli]: https://www.npmjs.com/package/@leanup/cli

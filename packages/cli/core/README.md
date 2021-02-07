@@ -32,14 +32,14 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/cli
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.0
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.0
-[devdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.0&type=dev
-[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.0&type=dev
-[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.0&type=peer
-[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.0&type=peer
-[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.0&type=optional
-[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.0&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1
+[devdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=dev
+[devdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1&type=dev
+[peerdependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=peer
+[peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1&type=peer
+[optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/core&ref=release/1.1&type=optional
+[optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/core&ref=release/1.1&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli
@@ -160,6 +160,7 @@ Install the peer dependencies `chromedriver`, `geckodriver` or `selenium-server`
 | [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |
 | [Less]           |        CSS        |   ✔️   | ready                      |
 | [Sass]           |        CSS        |   ✔️   | ready                      |
+| [PostCSS]        |        CSS        |   ✔️   | ready                      |
 | [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               |
 | [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* |
 | [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               |
@@ -337,12 +338,12 @@ console.log(APP_METADATA);
 |                                   chalk |                                                                                                        [![install size of chai](https://packagephobia.now.sh/badge?p=chalk)](https://packagephobia.now.sh/result?p=chalk) | [![vulnerabilities of chalk](https://snyk.io/test/npm/chalk/badge.svg)](https://snyk.io/test/npm/chalk)                                                                                                       |
 |                               commander |                                                                                           [![install size of commander](https://packagephobia.now.sh/badge?p=commander)](https://packagephobia.now.sh/result?p=commander) | [![vulnerabilities of commander](https://snyk.io/test/npm/commander/badge.svg)](https://snyk.io/test/npm/commander)                                                                                           |
 |             copy-modules-webpack-plugin |                                     [![install size of copy-modules-webpack-plugin](https://packagephobia.now.sh/badge?p=copy-modules-webpack-plugin)](https://packagephobia.now.sh/result?p=copy-modules-webpack-plugin) | [![vulnerabilities of copy-modules-webpack-plugin](https://snyk.io/test/npm/copy-modules-webpack-plugin/badge.svg)](https://snyk.io/test/npm/copy-modules-webpack-plugin)                                     |
-|                     copy-webpack-plugin |                                                             [![install size of copy-webpack-plugin](https://packagephobia.now.sh/badge?p=copy-webpack-plugin)](https://packagephobia.now.sh/result?p=copy-webpack-plugin) | [![vulnerabilities of copy-webpack-plugin](https://snyk.io/test/npm/copy-webpack-plugin/badge.svg)](https://snyk.io/test/npm/copy-webpack-plugin)                                                             |
 |                              css-loader |                                                                                        [![install size of css-loader](https://packagephobia.now.sh/badge?p=css-loader)](https://packagephobia.now.sh/result?p=css-loader) | [![vulnerabilities of css-loader](https://snyk.io/test/npm/css-loader/badge.svg)](https://snyk.io/test/npm/css-loader)                                                                                        |
+|                          esbuild-loader |                                                                            [![install size of esbuild-loader](https://packagephobia.now.sh/badge?p=esbuild-loader)](https://packagephobia.now.sh/result?p=esbuild-loader) | [![vulnerabilities of esbuild-loader](https://snyk.io/test/npm/esbuild-loader/badge.svg)](https://snyk.io/test/npm/esbuild-loader)                                                                            |
 |                             file-loader |                                                                                     [![install size of file-loader](https://packagephobia.now.sh/badge?p=file-loader)](https://packagephobia.now.sh/result?p=file-loader) | [![vulnerabilities of file-loader](https://snyk.io/test/npm/file-loader/badge.svg)](https://snyk.io/test/npm/file-loader)                                                                                     |
-|                     html-webpack-plugin |                                                             [![install size of html-webpack-plugin](https://packagephobia.now.sh/badge?p=html-webpack-plugin)](https://packagephobia.now.sh/result?p=html-webpack-plugin) | [![vulnerabilities of html-webpack-plugin](https://snyk.io/test/npm/html-webpack-plugin/badge.svg)](https://snyk.io/test/npm/html-webpack-plugin)                                                             |
 |                                    less |                                                                                                          [![install size of less](https://packagephobia.now.sh/badge?p=less)](https://packagephobia.now.sh/result?p=less) | [![vulnerabilities of less](https://snyk.io/test/npm/less/badge.svg)](https://snyk.io/test/npm/less)                                                                                                          |
 |                             less-loader |                                                                                     [![install size of less-loader](https://packagephobia.now.sh/badge?p=less-loader)](https://packagephobia.now.sh/result?p=less-loader) | [![vulnerabilities of less-loader](https://snyk.io/test/npm/less-loader/badge.svg)](https://snyk.io/test/npm/less-loader)                                                                                     |
+|                                 postcss |                                                                                                 [![install size of postcss](https://packagephobia.now.sh/badge?p=postcss)](https://packagephobia.now.sh/result?p=postcss) | [![vulnerabilities of postcss](https://snyk.io/test/npm/postcss/badge.svg)](https://snyk.io/test/npm/postcss)                                                                                                 |
 |                          postcss-loader |                                                                            [![install size of postcss-loader](https://packagephobia.now.sh/badge?p=postcss-loader)](https://packagephobia.now.sh/result?p=postcss-loader) | [![vulnerabilities of postcss-loader](https://snyk.io/test/npm/postcss-loader/badge.svg)](https://snyk.io/test/npm/postcss-loader)                                                                            |
 |                                    sass |                                                                                                          [![install size of sass](https://packagephobia.now.sh/badge?p=sass)](https://packagephobia.now.sh/result?p=sass) | [![vulnerabilities of sass](https://snyk.io/test/npm/sass/badge.svg)](https://snyk.io/test/npm/sass)                                                                                                          |
 |                             sass-loader |                                                                                     [![install size of sass-loader](https://packagephobia.now.sh/badge?p=sass-loader)](https://packagephobia.now.sh/result?p=sass-loader) | [![vulnerabilities of sass-loader](https://snyk.io/test/npm/sass-loader/badge.svg)](https://snyk.io/test/npm/sass-loader)                                                                                     |
@@ -398,4 +399,5 @@ console.log(APP_METADATA);
 [testcafe]: https://devexpress.github.io/testcafe/
 [robotframework]: https://robotframework.org
 [tailwindcss]: https://tailwindcss.com
+[postcss]: https://postcss.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack

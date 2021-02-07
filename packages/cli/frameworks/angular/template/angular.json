@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist",
             "index": "template.html",
-            "main": "src/angular.ts",
+            "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": ["src/assets"]

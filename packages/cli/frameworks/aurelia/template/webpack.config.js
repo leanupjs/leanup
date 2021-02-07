@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-aurelia/webpack.config');
+module.exports = require('@leanup/stack-aurelia/webpack.config');

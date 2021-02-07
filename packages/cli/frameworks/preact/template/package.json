@@ -1,52 +1,19 @@
 {
   "name": "@template/preact",
-  "version": "1.0.90",
-  "description": "",
-  "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode=production",
-    "coverage": "cross-env NODE_ENV=test nyc mocha",
-    "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
-    "e2e": "nightwatch",
-    "format": "prettier --check {src,tests}/**",
-    "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
-    "reinstall": "npm run remove && npm run update",
-    "remove": "rm -rf node_modules package-lock.json",
-    "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
-    "start": "npm run serve -- --open=chrome",
-    "test": "cross-env NODE_ENV=test mocha",
-    "update": "npm install && npm update"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
-      "eslint"
-    ],
-    "{src,tests}/**": [
-      "prettier --check"
-    ]
-  },
+  "version": "1.1.0-rc.285",
   "dependencies": {
-    "@leanup/form": "^1.0.90",
-    "@leanup/lib": "^1.0.90",
-    "navigo": "7.1.3",
-    "preact": "10.5.10",
-    "rxjs": "6.6.3"
+    "preact": "10.5.12"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.90",
-    "@leanup/cli-preact": "^1.0.90",
-    "@leanup/git-hooks": "^1.0.90",
-    "chromedriver": "87.0.5",
-    "cssnano": "4.1.10",
-    "geckodriver": "1.21.1",
-    "selenium-server": "3.141.59",
-    "tailwindcss": "2.0.2",
-    "typescript": "4.1.3"
+    "@leanup/cli-preact": "^1.1.0-rc.285",
+    "@leanup/stack-preact": "^1.1.0-rc.285"
   },
-  "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
+  "scripts": {
+    "build:snowpack": "snowpack build",
+    "serve:snowpack": "npm run start:snowpack -- --open none",
+    "start:snowpack": "snowpack dev",
+    "build:vite": "vite build",
+    "serve:vite": "vite preview",
+    "start:vite": "vite"
+  }
 }

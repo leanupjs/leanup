@@ -5,5 +5,5 @@ import { PackageJson } from './interfaces';
 
 const packageJson = <PackageJson>require('../package.json');
 
-const cli = new CommonCLI('leanup', packageJson.version);
+const cli = new CommonCLI('', packageJson.version);
 cli.parse();

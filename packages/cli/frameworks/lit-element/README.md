@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-lit-element
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-lit-element
-[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.0/status.svg?path=packages/cli/frameworks/lit-element
-[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/lit-element
+[dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/frameworks/lit-element
+[dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/lit-element
 [peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/lit-element
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.0?path=packages/cli/frameworks/lit-element&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/lit-element&type=peer
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-lit-element/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-lit-element
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-lit-element
