@@ -51,7 +51,7 @@ This module contains all [snowpack]-related functionalities for the [@leanup/sta
 
 ```json
   "scripts": {
-    "build": "cross-env NODE_ENV=production snowpack build",
-    "serve": "cross-env NODE_ENV=development snowpack dev",
+    "build": "snowpack build",
+    "serve": "snowpack dev",
   },
 ```
