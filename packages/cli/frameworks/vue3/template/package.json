@@ -10,8 +10,8 @@
     "@vue/compiler-sfc": "3.0.5"
   },
   "scripts": {
-    "build:snowpack": "cross-env NODE_ENV=production snowpack build",
+    "build:snowpack": "snowpack build",
     "serve:snowpack": "npm run start:snowpack -- --open none",
-    "start:snowpack": "cross-env NODE_ENV=development snowpack dev"
+    "start:snowpack": "snowpack dev"
   }
 }

@@ -1,30 +1,26 @@
 {
-  "name": "@leanup/stack-react",
+  "name": "@leanup/stack-vite",
   "version": "1.1.0-rc.284",
-  "description": "This package contains the React framework extension for the @leanup/cli.",
+  "description": "This module contains all vite-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
   "files": [
     "lib/**",
-    "webpack.config.js"
+    "vite.config.js"
   ],
   "keywords": [
-    "babel",
-    "snowpack",
-    "webpack",
-    "react",
-    "sinon",
-    "nyc",
-    "nightwatch",
-    "mocha",
+    "esbuild",
+    "vite",
+    "less",
     "sass",
+    "scss",
     "typescript",
-    "cli",
     "spa",
     "pwa",
     "lean",
     "compiler",
-    "transpiler"
+    "transpiler",
+    "postcss"
   ],
   "license": "Apache 2.0",
   "repository": {
@@ -35,17 +31,16 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-snowpack": "^1.1.0-rc.284",
-    "@leanup/stack-vite": "^1.1.0-rc.284",
-    "@leanup/stack-webpack": "^1.1.0-rc.284"
+    "vite": "2.0.0-beta.65"
   },
   "devDependencies": {
     "@types/node": "14.14.25",
+    "@types/prettier": "2.2.0",
+    "tsc": "1.20150623.0",
     "typescript": "4.1.3"
   },
   "peerDependencies": {
-    "react": "^16 || ^17",
-    "react-dom": "^16 || ^17"
+    "typescript": ">=4"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
@@ -54,5 +49,5 @@
     "node": ">=10 <16",
     "npm": ">=6 <8"
   },
-  "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
+  "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"
 }

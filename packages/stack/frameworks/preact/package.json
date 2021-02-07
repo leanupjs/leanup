@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@leanup/stack-snowpack": "^1.1.0-rc.284",
+    "@leanup/stack-vite": "^1.1.0-rc.284",
     "@leanup/stack-webpack": "^1.1.0-rc.284"
   },
   "devDependencies": {

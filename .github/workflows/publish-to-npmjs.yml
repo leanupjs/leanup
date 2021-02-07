@@ -34,6 +34,13 @@ jobs:
         working-directory: packages/stack/snowpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install and publish only @${{env.alias}}/stack-vite
+        run: |
+          npm install
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+        working-directory: packages/stack/vite
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-webpack
         run: |
           npm install
@@ -69,10 +76,10 @@ jobs:
         working-directory: packages/cli/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-snowpack and @${{env.alias}}/stack-webpack
+       - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-snowpack, @${{env.alias}}/stack-vite and @${{env.alias}}/stack-webpack
         run: |
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-webpack --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Test all framework variants
