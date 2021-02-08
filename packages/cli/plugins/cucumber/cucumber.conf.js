@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { setDefaultTimeout, After, AfterAll, BeforeAll } = require('cucumber');
 const { createSession, closeSession, startWebDriver, stopWebDriver, getNewScreenshots } = require('nightwatch-api');
-const reporter = require('cucumber-html-reporter');
+const reporter = require('@cucumber/html-formatter');
 
 setDefaultTimeout(60000);
 
