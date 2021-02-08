@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-vite",
-  "version": "1.1.0-rc.286",
+  "version": "1.1.0-rc.287",
   "description": "This module contains all vite-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
