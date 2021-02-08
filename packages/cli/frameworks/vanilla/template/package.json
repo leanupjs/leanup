@@ -1,9 +1,9 @@
 {
   "name": "@template/vanilla",
-  "version": "1.1.0-rc.285",
+  "version": "1.1.0-rc.286",
   "devDependencies": {
-    "@leanup/cli-vanilla": "^1.1.0-rc.285",
-    "@leanup/stack-webpack": "^1.1.0-rc.285"
+    "@leanup/cli-vanilla": "^1.1.0-rc.286",
+    "@leanup/stack-webpack": "^1.1.0-rc.286"
   },
   "scripts": {
     "build:snowpack": "snowpack build",
