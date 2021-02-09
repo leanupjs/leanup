@@ -6,16 +6,6 @@ updates:
       interval: daily
     target-branch: release/1.0
   - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: daily
-    target-branch: release/1.0
-  - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: daily
-    target-branch: release/1.0
-  - package-ecosystem: npm
     directory: '/packages/cli/core'
     schedule:
       interval: daily
@@ -189,248 +179,234 @@ updates:
     directory: '/'
     schedule:
       interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/core'
     schedule:
       interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/e2e'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/format'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/lint'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/core/template'
     schedule:
       interval: daily
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/test'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/angular'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/angular/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/angularjs'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/angularjs/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/aurelia'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/aurelia/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/inferno'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/inferno/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/lit-element'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/lit-element/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/preact'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/preact/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/react'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/react/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/svelte'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/svelte/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/vanilla'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/vanilla/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/vue'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/vue/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/vue3'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/frameworks/vue3/template'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/plugins/addons'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/plugins/cucumber'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/plugins/graphql'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/plugins/pwa'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/cli/plugins/webhint'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/form'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/git-hooks'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/lib'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/core'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/angular'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/angularjs'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/aurelia'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/inferno'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/preact'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/react'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/svelte'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/vue'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/vue3'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
+  - package-ecosystem: npm
+    directory: '/packages/stack/snowpack'
+    schedule:
+      interval: daily
+    target-branch: master
+  - package-ecosystem: npm
+    directory: '/packages/stack/vite'
+    schedule:
+      interval: daily
+    target-branch: master
   - package-ecosystem: npm
     directory: '/packages/stack/webpack'
     schedule:
       interval: daily
-    target-branch: release/1.1
+    target-branch: master
