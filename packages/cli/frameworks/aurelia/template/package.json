@@ -35,7 +35,7 @@
     "@leanup/lib": "^1.0.95",
     "aurelia-bootstrapper": "2.3.3",
     "aurelia-framework": "1.3.1",
-    "navigo": "7.1.3",
+    "navigo": "8.8.6",
     "rxjs": "6.6.3"
   },
   "devDependencies": {
