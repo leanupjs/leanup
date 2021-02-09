@@ -1,12 +1,12 @@
 <p style="text-align: center; background: white;">
   <a href="https://leanupjs.org">
-    <img src="https://leanupjs.org/assets/logo.svg" height="250">
+    <img src="https://leanupjs.org/assets/logo.svg" height="100">
   </a><br>
   <h2 style="text-align: center;">
     <cite><b>Make things pure</b> ... to become lean.</cite>
   </h2>
 </p>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe> -->
 <hr>
 
 [![license][license]][license-url]
@@ -95,7 +95,8 @@ There are some working examples:
 | ---------------- | :---------------: | :----: | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [TypeScript]     |     Language      |   ✔️   | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
 | [Webpack]        |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
-| [Snowpack]       |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
+| [Snowpack]       |      Bundler      |   ⌛   | in progress                | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
+| [Vite]           |      Bundler      |   ⌛   | in progress                | [![webpack](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)                                           |
 | [ESBuild]        |    Transpiler     |   ✔️   | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
 | [Babel]          |    Transpiler     |   ✔️   | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
 | [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
@@ -168,6 +169,7 @@ Currently the following framework extensions are available:
 - [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️
 - [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ (will be removed in v1.1)
 - [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️
+- [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️
 - [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
 - [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
 - [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️
@@ -198,6 +200,7 @@ There a separate packages for important application features.
 - Angular [![@angular/cli](https://snyk.io/advisor/npm-package/@angular/cli/badge.svg)](https://snyk.io/advisor/npm-package/@angular/cli)
 - Neutrino [![neutrino](https://snyk.io/advisor/npm-package/neutrino/badge.svg)](https://snyk.io/advisor/npm-package/neutrino)
 - Snowpack [![snowpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)
+- Vite [![vite](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)
 <!-- - Leanup [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli) -->
 
 [babel]: https://babeljs.io
@@ -230,5 +233,6 @@ There a separate packages for important application features.
 [postcss]: https://postcss.org
 [esbuild]: https://esbuild.github.io
 [snowpack]: https://www.snowpack.dev/
+[vite]: https://vitejs.dev/
 [openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack

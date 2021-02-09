@@ -1,12 +1,12 @@
 <p style="text-align: center; background: white;">
   <a href="https://leanupjs.org">
-    <img src="https://leanupjs.org/assets/logo.svg" height="250">
+    <img src="https://leanupjs.org/assets/logo.svg" height="100">
   </a><br>
   <h2 style="text-align: center;">
     <cite><b>Make things pure</b> ... to become lean.</cite>
   </h2>
 </p>
-<br>
+<!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe> -->
 <hr>
 
 [![downloads][downloads]][downloads-url]
@@ -121,6 +121,7 @@ Or with framework:
 `npm install @leanup/cli-angularjs --save-dev` or<br>
 `npm install @leanup/cli-aurelia --save-dev` or<br>
 `npm install @leanup/cli-inferno --save-dev` or<br>
+`npm install @leanup/cli-lit-element --save-dev` or<br>
 `npm install @leanup/cli-preact --save-dev` or<br>
 `npm install @leanup/cli-react --save-dev` or<br>
 `npm install @leanup/cli-svelte --save-dev` or<br>
@@ -139,6 +140,8 @@ Install the peer dependencies `chromedriver`, `geckodriver` or `selenium-server`
 | ---------------- | :---------------: | :----: | :------------------------- |
 | [Babel]          |    Transpiler     |   ✔️   | ready                      |
 | [Webpack]        |      Bundler      |   ✔️   | ready                      |
+| [Snowpack]       |      Bundler      |   ⌛   | in progress                |
+| [Vite]           |      Bundler      |   ⌛   | in progress                |
 | [TypeScript]     |     Language      |   ✔️   | ready                      |
 | [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      |
 | [Chai]           |     Assertion     |   ✔️   | ready                      |
@@ -209,6 +212,7 @@ Currently the following framework extensions are available:
 - [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️ [![vulnerabilities of @leanup/cli-angularjs](https://snyk.io/test/npm/@leanup/cli-angularjs/badge.svg)](https://snyk.io/test/npm/@leanup/cli-angularjs)
 - [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ [![vulnerabilities of @leanup/cli-aurelia](https://snyk.io/test/npm/@leanup/cli-aurelia/badge.svg)](https://snyk.io/test/npm/@leanup/cli-aurelia)
 - [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️ [![vulnerabilities of @leanup/cli-inferno](https://snyk.io/test/npm/@leanup/cli-inferno/badge.svg)](https://snyk.io/test/npm/@leanup/cli-inferno)
+- [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️ [![vulnerabilities of @leanup/cli-lit-element](https://snyk.io/test/npm/@leanup/cli-lit-element/badge.svg)](https://snyk.io/test/npm/@leanup/cli-lit-element)
 - [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️ [![vulnerabilities of @leanup/cli-preact](https://snyk.io/test/npm/@leanup/cli-preact/badge.svg)](https://snyk.io/test/npm/@leanup/cli-preact)
 - [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️ [![vulnerabilities of @leanup/cli-react](https://snyk.io/test/npm/@leanup/cli-react/badge.svg)](https://snyk.io/test/npm/@leanup/cli-react)
 - [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️ [![vulnerabilities of @leanup/cli-svelte](https://snyk.io/test/npm/@leanup/cli-svelte/badge.svg)](https://snyk.io/test/npm/@leanup/cli-svelte)
@@ -232,8 +236,6 @@ There a separate packages for important application features.
 - [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/git-hooks/badge.svg)](https://snyk.io/test/npm/@leanup/git-hooks)
 - [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/form/badge.svg)](https://snyk.io/test/npm/@leanup/form)
 - [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/lib/badge.svg)](https://snyk.io/test/npm/@leanup/lib)
-- [`@leanup/material-preact`](https://www.npmjs.com/package/@leanup/material-preact) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-preact/badge.svg)](https://snyk.io/test/npm/@leanup/material-preact)
-- [`@leanup/material-vanilla`](https://www.npmjs.com/package/@leanup/material-vanilla) ⌛ [![vulnerabilities of autoprefixer](https://snyk.io/test/npm/@leanup/material-vanilla/badge.svg)](https://snyk.io/test/npm/@leanup/material-vanilla)
 - @leanup/ul ⌛
 
 ## Usage
@@ -400,4 +402,8 @@ console.log(APP_METADATA);
 [robotframework]: https://robotframework.org
 [tailwindcss]: https://tailwindcss.com
 [postcss]: https://postcss.org
+[esbuild]: https://esbuild.github.io
+[snowpack]: https://www.snowpack.dev/
+[vite]: https://vitejs.dev/
+[openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
