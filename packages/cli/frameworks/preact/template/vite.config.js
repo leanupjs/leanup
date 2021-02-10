@@ -1,1 +1,1 @@
-module.exports = require('@leanup/stack-preact/vite.config');
+module.export = require('@leanup/stack-preact/vite.config');
