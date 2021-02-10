@@ -1,1 +1,1 @@
-module.export = require('@leanup/stack-vue3/vite.config');
+module.exports = require('@leanup/stack-vue3/vite.config');

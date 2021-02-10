@@ -1,1 +1,1 @@
-module.export = require('@leanup/stack-vite/vite.config');
+module.exports = require('@leanup/stack-vite/vite.config');
