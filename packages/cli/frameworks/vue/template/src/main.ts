@@ -1,1 +1,1 @@
-import './main.vue';
+import './vue.main';
