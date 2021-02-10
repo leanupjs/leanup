@@ -8,6 +8,7 @@
     "lib/**",
     "babel.config.js",
     "snowpack.config.js",
+    "vite.config.js",
     "webpack.config.js"
   ],
   "keywords": [
