@@ -17,7 +17,7 @@
     "@leanup/cli-angular": "^1.1.0-rc.287",
     "@leanup/stack-angular": "^1.1.0-rc.287",
     "@ngtools/webpack": "next",
-    "typescript": "~4.1.3"
+    "typescript": "~4.1.4"
   },
   "scripts": {
     "build:snowpack": "snowpack build",
