@@ -1,12 +1,12 @@
 {
   "name": "@template/inferno",
-  "version": "1.1.0-rc.287",
+  "version": "1.1.0-rc.288",
   "dependencies": {
     "inferno": "7.4.7"
   },
   "devDependencies": {
-    "@leanup/cli-inferno": "^1.1.0-rc.287",
-    "@leanup/stack-inferno": "^1.1.0-rc.287"
+    "@leanup/cli-inferno": "^1.1.0-rc.288",
+    "@leanup/stack-inferno": "^1.1.0-rc.288"
   },
   "scripts": {
     "build:snowpack": "snowpack build",
