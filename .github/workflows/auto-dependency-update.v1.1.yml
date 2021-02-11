@@ -27,8 +27,7 @@ jobs:
           git branch -D update/${{ env.update_branch }}
           git push --delete origin update/${{ env.update_branch }}
       - name: Initial update branch
-        run: |
-          git checkout -b update/${{ env.update_branch }}
+        run: git checkout -b update/${{ env.update_branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
