@@ -18,8 +18,12 @@ export class EditSerieController extends AbstractController {
   }
 
   public changeMeasuredSerie(measuredSerieId: number): void {
-    this.measuredSerie = this.measurementService.getSerie(measuredSerieId);
-    this.mapTo(this.measuredSerie);
+    try {
+      this.measuredSerie = this.measurementService.getSerie(measuredSerieId);
+    } catch (error) {
+      // TODO: error handling
+      console.warn(error);
+    }
   }
 
   public updateProps(measuredSerie: MeasuredSerieModel): void {
