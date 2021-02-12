@@ -67,7 +67,7 @@
     "@babel/plugin-proposal-decorators": "7.12.13",
     "@babel/plugin-proposal-optional-chaining": "7.12.13",
     "@babel/preset-env": "7.12.13",
-    "@babel/preset-typescript": "7.12.13",
+    "@babel/preset-typescript": "7.12.16",
     "@leanup/cli-core-e2e": "^1.0.96",
     "@leanup/cli-core-format": "^1.0.96",
     "@leanup/cli-core-lint": "^1.0.96",
