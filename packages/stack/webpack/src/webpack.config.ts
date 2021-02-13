@@ -177,7 +177,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
     },
   };
 
-  const cannotFindCliModule = /Cannot find module.+leanup\/cli/;
+  const cannotFindCliModule = /Cannot find module.+@leanup\/cli/;
 
   function loadAddon(name: string) {
     try {
