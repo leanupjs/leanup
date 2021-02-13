@@ -22,13 +22,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           ref: ${{ env.release_branch }}
-      - name: Remove latest update branch
-        continue-on-error: true
-        run: |
-          git branch -D ${{ env.update_branch }}
-          git push --delete origin ${{ env.update_branch }}
-      - name: Initial update branch
-        run: git checkout -b ${{ env.update_branch }}
+      # - name: Remove latest update branch
+      #   continue-on-error: true
+      #   run: |
+      #     git branch -D ${{ env.update_branch }}
+      #     git push --delete origin ${{ env.update_branch }}
+      # - name: Initial update branch
+      #   run: git checkout -b ${{ env.update_branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
@@ -50,5 +50,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.update_branch }}
+          # branch: ${{ env.update_branch }}
           force: true
