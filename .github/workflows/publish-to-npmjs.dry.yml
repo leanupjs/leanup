@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanupjs
   registry: https://npm.pkg.github.com
-  tag: canary
+  tag: next
   token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
