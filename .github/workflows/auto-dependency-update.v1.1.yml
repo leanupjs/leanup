@@ -51,4 +51,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # branch: ${{ env.update_branch }}
+          branch: ${{ env.release_branch }}
           force: true
