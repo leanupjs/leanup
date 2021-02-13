@@ -52,7 +52,7 @@
     "cross-env": "7.0.3",
     "esbuild": "0.8.44",
     "esbuild-register": "2.0.0",
-    "eslint": "7.19.0",
+    "eslint": "7.20.0",
     "eslint-plugin-html": "6.1.1",
     "eslint-plugin-json": "2.1.2",
     "esm": "3.2.25",
