@@ -24,19 +24,9 @@ jobs:
       # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
-          find . -name "package.json" -type f -exec sed -i -e 's/"@leanup\//"@${{env.alias}}\//g' {} +
-
-          find . -name "*.js" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.tsx" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.svelte" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.vue" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-
-          find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup'/'@${{env.alias}}'/g" {} +
-
-          find . -name "*.js" -type f -exec sed -i -e "s/leanup\/${{env.alias}}\/g" {} +
-          find . -name "*.json" -type f -exec sed -i -e "s/leanup\/${{env.alias}}\/g" {} +
-          find . -name "*.ts" -type f -exec sed -i -e "s/leanup\/${{env.alias}}\/g" {} +
+          find . -name "*.js" -type f -exec sed -i -e "s/leanup/${{env.alias}}/g" {} +
+          find . -name "*.json" -type f -exec sed -i -e "s/leanup/${{env.alias}}/g" {} +
+          find . -name "*.ts" -type f -exec sed -i -e "s/leanup/${{env.alias}}/g" {} +
           git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
