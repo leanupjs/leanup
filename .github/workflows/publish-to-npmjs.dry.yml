@@ -1,5 +1,5 @@
 # This workflow will build a Java project with Maven
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+# For more information see: https://help.github.com/action/language-and-framework-guide/building-and-testing-java-with-maven
 
 name: GitHub CI - Publish to NPM (DRY)
 
@@ -20,26 +20,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
+      - uses: action/checkout@v2
+      # https://unix.stackexchange.com/question/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
-          find . -name "*.js" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "package.json" -type f -exec sed -i -e "s/\"@leanup\//\"@${{env.alias}}\//g" {} +
+          find . -name "*.js" -type f -exec sed -i -e "/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "package.json" -type f -exec sed -i -e "/\"@leanup\//\"@${{env.alias}}\//g" {} +
 
-          find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.tsx" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.svelte" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
-          find . -name "*.vue" -type f -exec sed -i -e "s/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.ts" -type f -exec sed -i -e "/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.tsx" -type f -exec sed -i -e "/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.svelte" -type f -exec sed -i -e "/'@leanup\//'@${{env.alias}}\//g" {} +
+          find . -name "*.vue" -type f -exec sed -i -e "/'@leanup\//'@${{env.alias}}\//g" {} +
 
-          find . -name "*.ts" -type f -exec sed -i -e "s/'@leanup'/'@${{env.alias}}'/g" {} +
+          find . -name "*.ts" -type f -exec sed -i -e "/'@leanup'/'@${{env.alias}}'/g" {} +
 
-          find . -name "*.js" -type f -exec sed -i -e "s/leanup\\/${{env.alias}}\\/g" {} +
-          find . -name "*.json" -type f -exec sed -i -e "s/leanup\\/${{env.alias}}\\/g" {} +
-          find . -name "*.ts" -type f -exec sed -i -e "s/leanup\\/${{env.alias}}\\/g" {} +
+          find . -name "*.js" -type f -exec sed -i -e "/leanup\\/${{env.alias}}\\/g" {} +
+          find . -name "*.json" -type f -exec sed -i -e "/leanup\\/${{env.alias}}\\/g" {} +
+          find . -name "*.ts" -type f -exec sed -i -e "/leanup\\/${{env.alias}}\\/g" {} +
           git diff
       - name: Set up Node.js
-        uses: actions/setup-node@v2.1.4
+        uses: action/setup-node@v2.1.4
         with:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
@@ -48,49 +48,49 @@ jobs:
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/snowpack
+        working-directory: package/stack/snowpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-vite
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/vite
+        working-directory: package/stack/vite
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-webpack
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/webpack
+        working-directory: package/stack/webpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/core
+        working-directory: package/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/lib
+        working-directory: package/lib
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/cli-core-babel
         run: |
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/cli/core/babel
+        working-directory: package/cli/core/babel
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/cli
         run: |
           npm install
           npm publish --access=${{env.access}} --access=public --tag=${{env.tag}} || true
-        working-directory: packages/cli/core
+        working-directory: package/cli/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-snowpack, @${{env.alias}}/stack-vite and @${{env.alias}}/stack-webpack
