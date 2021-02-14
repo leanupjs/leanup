@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-svelte",
-  "version": "1.1.0-rc.291",
+  "version": "1.1.0-rc.292",
   "description": "This package contains the Svelte framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -38,8 +38,8 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-snowpack": "^1.1.0-rc.291",
-    "@leanup/stack-webpack": "^1.1.0-rc.291",
+    "@leanup/stack-snowpack": "^1.1.0-rc.292",
+    "@leanup/stack-webpack": "^1.1.0-rc.292",
     "@snowpack/plugin-svelte": "3.5.2",
     "prettier-plugin-svelte": "2.1.4",
     "svelte-loader": "3.0.0",
