@@ -1,8 +1,9 @@
 const config = require('@leanup/stack-vite/vite.config');
 
-config.alias = config.alias || {};
-config.alias['react'] = 'preact/compat';
-config.alias['react-dom'] = 'preact/compat';
+config.resolve = config.resolve || {};
+config.resolve.alias = config.resolve.alias || {};
+config.resolve.alias['react'] = 'preact/compat';
+config.resolve.alias['react-dom'] = 'preact/compat';
 
 config.esbuild = config.esbuild || {};
 config.esbuild['jsxFactory'] = 'h';
