@@ -28,6 +28,8 @@ jobs:
           find packages -name "*.json" -type f -exec sed -i -e "s/@leanup/@${{env.alias}}/g" {} +
           find packages -name "*.ts" -type f -exec sed -i -e "s/@leanup/@${{env.alias}}/g" {} +
           find packages -name "*.tsx" -type f -exec sed -i -e "s/@leanup/@${{env.alias}}/g" {} +
+          find packages -name "*.svelte" -type f -exec sed -i -e "s/@leanup/@${{env.alias}}/g" {} +
+          find packages -name "*.vue" -type f -exec sed -i -e "s/@leanup/@${{env.alias}}/g" {} +
           git diff
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
