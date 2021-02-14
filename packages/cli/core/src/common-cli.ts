@@ -1,7 +1,9 @@
 import * as path from 'path';
 
 import { AbstractCLI, CommandOption, getProjectName } from './abstract-cli';
-import { BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps } from './interfaces';
+import {
+    BuildOps, CreateOps, E2eTestOps, FixOps, ServeOps, UnitTestCoverageOps, UnitTestOps
+} from './interfaces';
 
 export const commonOptions: CommandOption[] = [
   {
@@ -36,6 +38,8 @@ export class CommonCLI extends AbstractCLI {
       [
         { flags: '-n, --namespace <namespace>', description: 'individual npm namespace (@.../)' },
         { flags: '-o, --overwrite', description: 'do overwrite existing files' },
+        { flags: '--no-install', description: 'do not install dependencies after creation' },
+        { flags: '--only-config', description: 'copy or update only config files' },
       ].concat(commonOptions),
       (options: CreateOps): string[] => {
         this.consoleLog(`Project name: ${getProjectName(options.namespace)}`, options.silent);
@@ -60,7 +64,11 @@ export class CommonCLI extends AbstractCLI {
           } catch (error) {}
         });
 
-        return ['npm', 'install', '--loglevel=error', '--prefer-offline', '--no-audit'];
+        if (options.install) {
+          return ['npm', 'install', '--loglevel=error', '--prefer-offline', '--no-audit'];
+        } else {
+          return ['npm', 'run'];
+        }
       }
     );
 

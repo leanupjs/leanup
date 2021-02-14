@@ -8,7 +8,7 @@ export interface CreateOps extends CommonOps {
   install: boolean;
   namespace: string;
   overwrite: boolean;
-  update: boolean;
+  onlyConfig: boolean;
 }
 
 export interface BuildOps extends CommonOps {
