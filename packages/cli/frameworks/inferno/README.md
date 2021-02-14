@@ -18,8 +18,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-inferno
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-inferno
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-inferno?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-inferno
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-inferno
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-inferno@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-inferno@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

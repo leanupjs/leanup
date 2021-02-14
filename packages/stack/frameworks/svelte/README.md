@@ -24,8 +24,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-svelte
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-svelte
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-svelte?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-svelte
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-svelte
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-svelte@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-svelte@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

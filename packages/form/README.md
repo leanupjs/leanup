@@ -16,8 +16,8 @@
 [downloads-url]: https://npmcharts.com/compare/@leanup/forms?minimal=true
 [travis-ci]: https://travis-ci.com/modevel/leanup.svg?branch=master
 [travis-ci-url]: https://travis-ci.com/modevel/leanup
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/forms
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/forms
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/forms@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/forms@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

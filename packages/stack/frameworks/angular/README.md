@@ -24,8 +24,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-angular
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-angular
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-angular?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-angular
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-angular
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-angular@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-angular@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

@@ -31,8 +31,8 @@
 [optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/vite&ref=release/1.1&type=optional
 [vulnerabilities]: https://snyk.io/test/npm/@leanup/stack-vite/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/stack-vite
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/stack-vite
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/stack-vite
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/stack-vite@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/stack-vite@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg

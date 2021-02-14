@@ -18,8 +18,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-react
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-react
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-react?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-react
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-react
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-react@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-react@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

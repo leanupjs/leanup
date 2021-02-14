@@ -24,8 +24,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vue3
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vue3
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-vue3?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-vue3
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-vue3
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-vue3@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-vue3@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

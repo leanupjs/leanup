@@ -15,8 +15,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/git-hooks
 [downloads]: https://img.shields.io/npm/dm/@leanup/git-hooks
 [downloads-url]: https://npmcharts.com/compare/@leanup/git-hooks?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/git-hooks
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/git-hooks
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/git-hooks@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/git-hooks@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

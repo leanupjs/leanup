@@ -21,8 +21,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-graphql
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-graphql
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-graphql?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-graphql
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-graphql
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-graphql@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-graphql@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

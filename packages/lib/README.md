@@ -16,8 +16,8 @@
 [downloads-url]: https://npmcharts.com/compare/@leanup/lib?minimal=true
 [travis-ci]: https://travis-ci.com/modevel/leanup.svg?branch=master
 [travis-ci-url]: https://travis-ci.com/modevel/leanup
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/lib
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/lib
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/lib@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/lib@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 

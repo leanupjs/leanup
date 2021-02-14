@@ -29,8 +29,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-babel
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-core-babel
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-core-babel?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-core-babel
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-core-babel
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-core-babel@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-core-babel@next
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet

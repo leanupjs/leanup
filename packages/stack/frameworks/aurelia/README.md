@@ -24,8 +24,8 @@
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-aurelia
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-aurelia
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-aurelia?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-aurelia
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-aurelia
+[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-aurelia@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-aurelia@next
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 
