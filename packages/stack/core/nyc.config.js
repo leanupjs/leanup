@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   include: ['src/**/*.js', 'src/**/*.jsx', 'src/**/*.ts', 'src/**/*.tsx'],
-  exclude: ['**/*.d.ts', '**/*.mock.ts', '**/*.spec.ts', '**/*.test.ts'],
+  exclude: ['**/assets/**', '**/*.d.ts', '**/*.mock.ts', '**/*.spec.ts', '**/*.test.ts'],
   all: true,
   cache: false,
   reporter: ['html', 'lcov', 'text'],
