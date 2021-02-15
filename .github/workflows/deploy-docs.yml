@@ -10,18 +10,13 @@ on:
       - release/*
 
 env:
-  version: '1.1.0'
+  VERSION: '1.1'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Read Lerna
-        id: lerna
-        run: |
-          content=`cat ./lerna.json | tr -d "\n"`
-          echo "::set-output name=lernaJson::$content"
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
@@ -40,7 +35,8 @@ jobs:
       - name: Prepare deploy
         run: |
           mkdir dist
-          mv docs/.vitepress/dist dist/${{fromJson(steps.lerna.outputs.json).version}}
+          mv docs/.vitepress/dist dist/${VERSION}
+          ls -la dist/${VERSION}
       - name: Deliver
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
