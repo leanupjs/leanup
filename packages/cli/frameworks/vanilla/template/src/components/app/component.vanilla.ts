@@ -33,7 +33,7 @@ function render(component: AppComponent) {
   <small>Used filters: ${Filters.date(component.$ctrl.dummies.date)} | ${Filters.currency(
     component.$ctrl.dummies.price
   )} €</small><br />
-  <small>Build with: ${component.$ctrl.cli.name} v${component.$ctrl.cli.version}}</small>
+  <small>Build with: ${component.$ctrl.cli.name} v${component.$ctrl.cli.version}</small>
 </div>`;
   return html;
 }
