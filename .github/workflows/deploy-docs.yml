@@ -1,0 +1,52 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Build and deploy Docs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - release/*
+
+env:
+  version: '1.1.0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Read Lerna
+        id: lerna
+        run: |
+          content=`cat ./lerna.json | tr -d "\n"`
+          echo "::set-output name=lernaJson::$content"
+      - name: Set up Node.js
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@leanup'
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run docs:build
+      - name: Prepare deploy
+        run: |
+          mkdir dist
+          mv docs/.vitepress/dist dist/${{fromJson(steps.lerna.outputs.json).version}}
+      - name: Deliver
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{ secrets.FTP_HOST }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          known-hosts: ${{ secrets.FTP_KNOWN_HOSTS }}
+          local-dir: dist/
+          git-ftp-args: --all
