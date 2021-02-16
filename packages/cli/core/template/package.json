@@ -33,7 +33,7 @@
   "dependencies": {
     "@leanup/form": "^1.1.0-rc.292",
     "@leanup/lib": "^1.1.0-rc.292",
-    "navigo": "7.1.3",
+    "navigo": "8.8.12",
     "rxjs": "6.6.3"
   },
   "devDependencies": {
