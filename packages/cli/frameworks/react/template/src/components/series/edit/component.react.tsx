@@ -12,13 +12,11 @@ interface Props {
 }
 
 export class EditSerieComponent extends ReactComponent<Props, EditSerieController> implements GenericComponent {
-  public ctrl: EditSerieController = new EditSerieController(-1);
+  public ctrl: EditSerieController = new EditSerieController();
 
   public constructor(props: Props) {
     super(props);
-    if (props.resolvedRoute.params?.id) {
-      this.ctrl.changeMeasuredSerie(props.resolvedRoute.params.id);
-    }
+    this.ctrl.changeMeasuredSerie(parseInt(props.resolvedRoute.data?.id || '0'));
   }
 
   public render(): JSX.Element {

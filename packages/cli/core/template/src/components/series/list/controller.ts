@@ -35,7 +35,6 @@ export class ListSerieController extends AbstractController {
 
   public update(): void {
     this.measuredSeries = this.measurementService.getSeries();
-    this.renderView();
   }
 
   public onStart(): void {

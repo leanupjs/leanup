@@ -37,7 +37,7 @@ export class MeasurementService {
       // tslint:disable-next-line: triple-equals
       return measuredSerie.getId() == id;
     });
-    if (measuredSerie instanceof MeasuredItemModel) {
+    if (measuredSerie instanceof MeasuredSerieModel) {
       return measuredSerie;
     } else {
       throw new Error(`No measured serie of id ${id} found.`);
