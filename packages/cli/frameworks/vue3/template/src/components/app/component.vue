@@ -43,13 +43,21 @@ export default {
     const resolvedRouteRef = ref({
       url: 'series',
     });
-    RouterService.subscribe((route, params, query) => {
-      resolvedRouteRef.value = {
-        params,
-        query,
-        url: route.url,
-      };
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string,
+        },
+        data: {
+          id: number,
+        }
+      ) => {
+        resolvedRouteRef.value = {
+          data,
+          url: route.url,
+        };
+      }
+    );
     return {
       frameworkImg: IMG_FRAMEWORK,
       stackImg: IMG_LEANUP,

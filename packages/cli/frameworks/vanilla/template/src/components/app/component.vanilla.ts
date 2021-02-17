@@ -6,7 +6,7 @@ import IMG_FRAMEWORK from '../../assets/logo.vanilla.png';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
 import { VanillaComponent } from '../component.vanilla';
-import { AppController } from './controller';
+import { AppController, ResolvedRoute } from './controller';
 
 function render(component: AppComponent) {
   let html = `<div class="my-app">
@@ -38,16 +38,10 @@ function render(component: AppComponent) {
   return html;
 }
 
-type ResolveRoute = {
-  params?: unknown;
-  query?: unknown;
-  url: string;
-};
-
 class AppComponent extends VanillaComponent {
   public readonly $ctrl: AppController = new AppController();
   public counter = 0;
-  public resolvedRoute: ResolveRoute = {
+  public resolvedRoute: ResolvedRoute = {
     url: 'series',
   };
 

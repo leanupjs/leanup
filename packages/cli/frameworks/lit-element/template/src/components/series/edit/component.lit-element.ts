@@ -8,14 +8,14 @@ import { EditSerieController } from './controller';
 
 @customElement('edit-serie-component')
 export class EditSerieComponent extends LitElementComponent {
-  public ctrl: EditSerieController = new EditSerieController(0);
+  public ctrl: EditSerieController = new EditSerieController();
 
   @property({ attribute: true, type: Object })
   public resolvedRoute: ResolvedRoute;
 
   public connectedCallback(): void {
     super.connectedCallback();
-    this.ctrl = new EditSerieController(this.resolvedRoute.params.id);
+    this.ctrl.changeMeasuredSerie(parseInt(this.resolvedRoute.data?.id || '0'));
     setTimeout(() => {
       this.querySelector('editor-serie-component').editorForm = this.ctrl.editorForm;
     }, 50);

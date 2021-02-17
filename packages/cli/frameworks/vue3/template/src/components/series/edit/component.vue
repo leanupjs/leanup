@@ -19,7 +19,8 @@ export default {
     'editor-serie': EditorSerieComponent,
   },
   setup(props) {
-    const $ctrl = new EditSerieController(props.resolvedRoute.params.id);
+    const $ctrl = new EditSerieController();
+    ctrl.changeMeasuredSerie(parseInt(props.resolvedRoute.data?.id || '0'));
     const editorFormRef = ref(null);
 
     watchEffect(() => {
