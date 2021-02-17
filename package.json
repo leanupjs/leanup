@@ -30,7 +30,7 @@
     "auto-changelog": "2.2.1",
     "lerna": "3.22.1",
     "npm-check-updates": "11.1.4",
-    "prettier-plugin-svelte": "2.1.5",
+    "prettier-plugin-svelte": "2.1.6",
     "svelte": "3.32.3",
     "typescript": "4.1.5",
     "vitepress": "0.12.2"

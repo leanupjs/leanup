@@ -41,7 +41,7 @@
     "@leanup/stack-snowpack": "^1.1.0-rc.292",
     "@leanup/stack-webpack": "^1.1.0-rc.292",
     "@snowpack/plugin-svelte": "3.5.2",
-    "prettier-plugin-svelte": "2.1.5",
+    "prettier-plugin-svelte": "2.1.6",
     "svelte-loader": "3.0.0",
     "vite-plugin-svelte": "3.0.1"
   },
