@@ -1,12 +1,12 @@
 {
   "name": "@template/lit-element",
-  "version": "1.1.0-rc.292",
+  "version": "1.1.0-rc.293",
   "dependencies": {
     "lit-element": "2.4.0"
   },
   "devDependencies": {
-    "@leanup/cli-lit-element": "^1.1.0-rc.292",
-    "@leanup/stack-webpack": "^1.1.0-rc.292"
+    "@leanup/cli-lit-element": "^1.1.0-rc.293",
+    "@leanup/stack-webpack": "^1.1.0-rc.293"
   },
   "scripts": {
     "build:snowpack": "snowpack build",
