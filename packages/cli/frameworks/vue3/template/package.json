@@ -8,10 +8,5 @@
     "@leanup/cli-vue3": "^1.1.0-rc.293",
     "@leanup/stack-vue3": "^1.1.0-rc.293",
     "@vue/compiler-sfc": "3.0.5"
-  },
-  "scripts": {
-    "build:snowpack": "snowpack build",
-    "serve:snowpack": "npm run start:snowpack -- --open none",
-    "start:snowpack": "snowpack dev"
   }
 }

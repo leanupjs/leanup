@@ -10,13 +10,5 @@
     "@leanup/stack-react": "^1.1.0-rc.293",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.1"
-  },
-  "scripts": {
-    "build:snowpack": "snowpack build",
-    "serve:snowpack": "npm run start:snowpack -- --open none",
-    "start:snowpack": "snowpack dev",
-    "build:vite": "vite build",
-    "serve:vite": "vite preview",
-    "start:vite": "vite"
   }
 }

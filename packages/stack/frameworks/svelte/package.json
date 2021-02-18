@@ -38,8 +38,6 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-snowpack": "^1.1.0-rc.292",
-    "@leanup/stack-webpack": "^1.1.0-rc.293",
     "@snowpack/plugin-svelte": "3.5.2",
     "prettier-plugin-svelte": "2.1.6",
     "svelte-loader": "3.0.0",

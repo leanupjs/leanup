@@ -38,8 +38,6 @@
   },
   "dependencies": {
     "@leanup/cli-core-babel": "^1.1.0-rc.293",
-    "@leanup/stack-snowpack": "^1.1.0-rc.292",
-    "@leanup/stack-webpack": "^1.1.0-rc.293",
     "@snowpack/plugin-babel": "2.1.6",
     "babel-plugin-angularjs-annotate": "0.10.0"
   },

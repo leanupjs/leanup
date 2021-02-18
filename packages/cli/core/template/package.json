@@ -14,7 +14,13 @@
     "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "start": "npm run serve -- --open=chrome",
     "test": "cross-env NODE_ENV=test mocha",
-    "update": "ncu -t minor -u && npm install && ncu"
+    "update": "ncu -t minor -u && npm install && ncu",
+    "build:snowpack": "snowpack build",
+    "serve:snowpack": "npm run start:snowpack -- --open none",
+    "start:snowpack": "snowpack dev",
+    "build:vite": "vite build",
+    "serve:vite": "vite preview",
+    "start:vite": "vite"
   },
   "husky": {
     "hooks": {
@@ -40,6 +46,9 @@
     "@leanup/cli": "^1.1.0-rc.293",
     "@leanup/git-hooks": "^1.1.0-rc.293",
     "@leanup/stack": "^1.1.0-rc.293",
+    "@leanup/stack-snowpack": "^1.1.0-rc.292",
+    "@leanup/stack-vite": "^1.1.0-rc.293",
+    "@leanup/stack-webpack": "^1.1.0-rc.293",
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
     "npm-check-updates": "11.1.4",

@@ -34,11 +34,6 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
-  "dependencies": {
-    "@leanup/stack-snowpack": "^1.1.0-rc.292",
-    "@leanup/stack-vite": "^1.1.0-rc.293",
-    "@leanup/stack-webpack": "^1.1.0-rc.293"
-  },
   "devDependencies": {
     "@types/node": "14.14.28",
     "typescript": "4.1.5"
