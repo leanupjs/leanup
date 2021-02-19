@@ -12,12 +12,12 @@ const ctrl = new AppController();
 let resolvedRoute = {
   url: 'series',
 };
-RouterService.subscribe((route, params, query) => {
-  resolvedRoute = {
-    params,
-    query,
+RouterService.subscribe((route, data) => {
+  resolvedRouteRef.value = {
+    data,
     url: route.url,
   };
+  // no explicit rerendering
 });
 </script>
 

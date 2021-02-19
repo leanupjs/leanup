@@ -11,5 +11,5 @@ import { InputControl } from '@leanup/form/controls/controls';
   `,
 })
 export class InputComponent {
-  @Input() public control: InputControl;
+  @Input() public control!: InputControl;
 }

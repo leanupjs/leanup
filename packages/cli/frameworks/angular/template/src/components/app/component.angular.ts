@@ -35,13 +35,21 @@ export class AppComponent extends AppController {
 
   public constructor(@Inject(ApplicationRef) appRef: ApplicationRef) {
     super();
-    RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url,
-      };
-      appRef.tick();
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string;
+        },
+        data: {
+          id: string;
+        }
+      ) => {
+        this.resolvedRoute = {
+          data,
+          url: route.url,
+        };
+        appRef.tick();
+      }
+    );
   }
 }

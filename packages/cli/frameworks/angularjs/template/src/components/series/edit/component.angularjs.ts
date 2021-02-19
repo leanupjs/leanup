@@ -9,10 +9,10 @@ ANGULARJS_MODULE.component('editSerie', {
   controller: [
     '$scope',
     class extends EditSerieController {
-      public resolvedRoute: ResolvedRoute;
+      public resolvedRoute!: ResolvedRoute;
 
       public $onChanges() {
-        this.changeMeasuredSerie(this.resolvedRoute.params.id);
+        this.changeMeasuredSerie(parseInt(this.resolvedRoute.data?.id || '0'));
       }
     },
   ],

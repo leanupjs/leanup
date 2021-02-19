@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "types": ["inferno"]
+    "types": ["inferno"],
+    "jsx": "preserve"
   },
   "include": ["node_modules/inferno/dist/index.d.ts"]
 }

@@ -7,7 +7,7 @@ import { LitElementComponent } from '../component.lit-element';
 @customElement('input-component')
 export class InputComponent extends LitElementComponent {
   @property({ attribute: true, type: Object })
-  public control: InputControl;
+  public control!: InputControl;
 
   public render(): TemplateResult {
     return html`
@@ -20,7 +20,7 @@ export class InputComponent extends LitElementComponent {
                 value=${typeof this.control.value === 'string' ? this.control.value : ''}
                 @change=${(event: Event) => {
                   this.control.value = event.target === null ? '' : event.target.value;
-                  this.update();
+                  this.update(new Map());
                 }}
               />`
           : ''}

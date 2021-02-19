@@ -26,7 +26,7 @@ export class AppComponent extends ReactComponent<unknown, AppController> impleme
           url: string;
         },
         data: {
-          id: number;
+          id: string;
         }
       ) => {
         this.resolvedRoute = {
