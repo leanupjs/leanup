@@ -14,14 +14,22 @@ ANGULARJS_MODULE.component('app', {
 
       public constructor($scope: { $apply: Function }) {
         super();
-        RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
-          this.resolvedRoute = {
-            params,
-            query,
-            url: route.url,
-          };
-          $scope.$apply();
-        });
+        RouterService.subscribe(
+          (
+            route: {
+              url: string;
+            },
+            data: {
+              id: string;
+            }
+          ) => {
+            this.resolvedRoute = {
+              data,
+              url: route.url,
+            };
+            $scope.$apply();
+          }
+        );
       }
     },
   ],

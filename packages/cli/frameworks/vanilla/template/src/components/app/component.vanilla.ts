@@ -47,14 +47,22 @@ class AppComponent extends VanillaComponent {
 
   public constructor() {
     super();
-    RouterService.subscribe((route: { url: string }, params: unknown, query: unknown) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url,
-      };
-      this.render();
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string;
+        },
+        data: {
+          id: string;
+        }
+      ) => {
+        this.resolvedRoute = {
+          data,
+          url: route.url,
+        };
+        this.render();
+      }
+    );
   }
 
   protected render() {

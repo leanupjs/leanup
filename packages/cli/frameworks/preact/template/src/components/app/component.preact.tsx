@@ -21,14 +21,22 @@ export class AppComponent extends PreactComponent<unknown, AppController> implem
 
   public constructor(props: unknown) {
     super(props, new AppController());
-    RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url,
-      };
-      this.forceUpdate();
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string;
+        },
+        data: {
+          id: string;
+        }
+      ) => {
+        this.resolvedRoute = {
+          data,
+          url: route.url,
+        };
+        this.forceUpdate();
+      }
+    );
   }
 
   public render(): JSX.Element {

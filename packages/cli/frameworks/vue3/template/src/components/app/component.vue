@@ -43,21 +43,13 @@ export default {
     const resolvedRouteRef = ref({
       url: 'series',
     });
-    RouterService.subscribe(
-      (
-        route: {
-          url: string,
-        },
-        data: {
-          id: number,
-        }
-      ) => {
-        resolvedRouteRef.value = {
-          data,
-          url: route.url,
-        };
-      }
-    );
+    RouterService.subscribe((route, data) => {
+      resolvedRouteRef.value = {
+        data,
+        url: route.url,
+      };
+      // no explicit rerendering
+    });
     return {
       frameworkImg: IMG_FRAMEWORK,
       stackImg: IMG_LEANUP,
