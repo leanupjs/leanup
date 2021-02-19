@@ -13,7 +13,7 @@ let resolvedRoute = {
   url: 'series',
 };
 RouterService.subscribe((route, data) => {
-  resolvedRouteRef.value = {
+  resolvedRoute = {
     data,
     url: route.url,
   };
