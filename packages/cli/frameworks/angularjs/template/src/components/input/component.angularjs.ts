@@ -2,6 +2,13 @@ import { InputControl } from '@leanup/form/controls/controls';
 
 import { ANGULARJS_MODULE } from '../../angularjs.module';
 
+interface Scope {
+  $apply: Function;
+  $ctrl: {
+    control: InputControl;
+  };
+}
+
 ANGULARJS_MODULE.component('appInput', {
   bindings: {
     control: '<',
@@ -9,8 +16,8 @@ ANGULARJS_MODULE.component('appInput', {
   controller: [
     '$scope',
     class {
-      private $scope: { $apply: Function; $ctrl?: { control: InputControl } };
-      public constructor($scope: { $apply: Function }) {
+      private $scope: Scope;
+      public constructor($scope: Scope) {
         this.$scope = $scope;
       }
 

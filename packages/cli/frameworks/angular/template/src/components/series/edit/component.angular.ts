@@ -18,7 +18,7 @@ import { EditSerieController } from './controller';
 })
 export class EditSerieComponent implements OnChanges, GenericComponent {
   public ctrl: EditSerieController = new EditSerieController();
-  @Input() public resolvedRoute: ResolvedRoute;
+  @Input() public resolvedRoute!: ResolvedRoute;
 
   public ngOnChanges(): void {
     this.ctrl.changeMeasuredSerie(parseInt(this.resolvedRoute.data?.id || '0'));
