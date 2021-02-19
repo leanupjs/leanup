@@ -6,11 +6,11 @@ import EditorSerieComponent from '../editor/component.svelte';
 export let resolvedRoute;
 
 const ctrl = new EditSerieController();
-ctrl.changeMeasuredSerie(parseInt(resolvedRoute.data?.id || '0'));
+ctrl.changeMeasuredSerie(parseInt(resolvedRoute.data.id || '0'));
 let editorForm = ctrl.editorForm;
 
 beforeUpdate(() => {
-  ctrl.changeMeasuredSerie(parseInt(resolvedRoute.data?.id || '0'));
+  ctrl.changeMeasuredSerie(parseInt(resolvedRoute.data.id || '0'));
   editorForm = ctrl.editorForm;
 });
 </script>

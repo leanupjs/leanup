@@ -11,7 +11,7 @@ export class EditSerieComponent extends LitElementComponent {
   public ctrl: EditSerieController = new EditSerieController();
 
   @property({ attribute: true, type: Object })
-  public resolvedRoute: ResolvedRoute;
+  public resolvedRoute!: ResolvedRoute;
 
   public connectedCallback(): void {
     super.connectedCallback();
