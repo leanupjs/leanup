@@ -34,7 +34,6 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/stack-webpack": "^1.1.0-rc.293",
     "aurelia-webpack-plugin": "4.0.0"
   },
   "devDependencies": {
