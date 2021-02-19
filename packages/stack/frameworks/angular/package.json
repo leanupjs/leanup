@@ -40,6 +40,7 @@
     "snowpack-plugin-angular": "1.3.0"
   },
   "devDependencies": {
+    "@leanup/stack-webpack": "^1.1.0-rc.293",
     "@types/node": "14.14.28",
     "typescript": "4.1.5"
   },
