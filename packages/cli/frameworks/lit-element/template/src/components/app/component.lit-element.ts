@@ -20,14 +20,22 @@ export class AppComponent extends LitElementComponent {
 
   public constructor() {
     super();
-    RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url,
-      };
-      this.update(new Map());
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string;
+        },
+        data: {
+          id: string;
+        }
+      ) => {
+        this.resolvedRoute = {
+          data,
+          url: route.url,
+        };
+        this.update(new Map());
+      }
+    );
   }
 
   public render(): TemplateResult {

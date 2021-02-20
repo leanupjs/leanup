@@ -11,7 +11,7 @@ export class EditorSerieComponent extends LitElementComponent {
   public ctrl: EditorSerieController = new EditorSerieController();
 
   @property({ attribute: true, type: Object })
-  public editorForm: EditorForm;
+  public editorForm!: EditorForm;
 
   public connectedCallback(): void {
     super.connectedCallback();
