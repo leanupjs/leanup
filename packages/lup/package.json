@@ -21,7 +21,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "bin": {
-    "lup": "index.js"
+    "lup": "lib/cli.js"
   },
   "dependencies": {
     "@leanup/cli": "^1.1.0-rc.298"
