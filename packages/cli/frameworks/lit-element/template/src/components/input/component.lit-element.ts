@@ -9,6 +9,13 @@ export class InputComponent extends LitElementComponent {
   @property({ attribute: true, type: Object })
   public control!: InputControl;
 
+  public connectedCallback(): void {
+    super.connectedCallback();
+    setTimeout(() => {
+      this.update(new Map());
+    }, 50);
+  }
+
   public render(): TemplateResult {
     return html`
       <div>
