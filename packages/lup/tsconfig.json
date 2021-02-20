@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strict": false,
+    "outDir": "./lib",
+    "skipLibCheck": true,
+    "module": "UMD",
+    "removeComments": true,
+    "target": "ES2015",
+    "types": ["chalk", "commander", "node"],
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/**/*"]
+}
