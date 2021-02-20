@@ -29,7 +29,6 @@ jobs:
           scope: '@${{env.alias}}'
       - name: Install and publish only @${{env.alias}}/cli-core-e2e
         run: |
-          ls -la
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core/e2e
