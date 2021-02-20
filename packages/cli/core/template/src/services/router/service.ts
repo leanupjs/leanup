@@ -1,6 +1,8 @@
 import Navigo from 'navigo';
 
-export const NAVIGO: Navigo = new Navigo(null, true);
+export const NAVIGO: Navigo = new Navigo('/', {
+  hash: true,
+});
 
 export interface Route {
   component?: Object;
@@ -13,29 +15,29 @@ export class RouterService {
 
   private constructor() {}
 
-  private static notify(route: Route, params: any, query: any): void {
+  private static notify(
+    route: Route,
+    data: {
+      [key: string]: string;
+    } | null
+  ): void {
     RouterService.subscribers.forEach((subscriber: Function) => {
-      subscriber(route, params, query);
+      subscriber(route, data);
     });
   }
 
   public static register(routes: Route[]): void {
     routes.forEach((route: Route) => {
-      NAVIGO.on(route.url, {
-        as: route.url,
-        uses: (params: any, query: any) => {
-          RouterService.notify(route, params, query);
-        },
-      }).resolve();
+      NAVIGO.on(route.url, ({ data }) => {
+        RouterService.notify(route, data);
+      });
     });
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    NAVIGO.resolve();
   }
 
-  public static navigate(route: string, absolute = false): void {
-    NAVIGO.navigate(route, absolute);
-  }
-
-  public static currect(): Object {
-    return NAVIGO.lastRouteResolved();
+  public static navigate(route: string): void {
+    NAVIGO.navigate(route);
   }
 
   public static subscribe(subscriber: Function): void {

@@ -13,8 +13,9 @@ export interface Props {
 }
 
 export interface ResolvedRoute {
-  params?: { id: number };
-  query?: any;
+  data?: {
+    id: string;
+  };
   url: string;
 }
 

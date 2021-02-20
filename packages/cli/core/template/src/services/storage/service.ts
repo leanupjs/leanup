@@ -1,6 +1,11 @@
+import { typeIt } from '../../shares/utils';
+import * as MOCK from './mock.json';
+
 interface INameToValueMap {
   [key: string]: any;
 }
+
+const TYPED_MOCK = typeIt<INameToValueMap>(MOCK);
 
 export class StorageService {
   private memoryStorage: INameToValueMap = {};
@@ -33,7 +38,7 @@ export class StorageService {
       }
       this.memoryStorage = <Object>JSON.parse(sessionStorage);
     } catch (error) {
-      this.memoryStorage = <Object>require('./mock.json');
+      this.memoryStorage = <Object>TYPED_MOCK;
     }
   }
 

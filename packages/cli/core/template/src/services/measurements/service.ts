@@ -32,11 +32,16 @@ export class MeasurementService {
     return this.measuredSeries;
   }
 
-  public getSerie(id: number): MeasuredSerieModel | undefined {
-    return this.measuredSeries.find((measuredSerie: MeasuredSerieModel) => {
+  public getSerie(id: number): MeasuredSerieModel {
+    const measuredSerie = this.measuredSeries.find((measuredSerie: MeasuredSerieModel) => {
       // tslint:disable-next-line: triple-equals
       return measuredSerie.getId() == id;
     });
+    if (measuredSerie instanceof MeasuredSerieModel) {
+      return measuredSerie;
+    } else {
+      throw new Error(`No measured serie of id ${id} found.`);
+    }
   }
 
   public addSerie(serie: MeasuredSerieModel): void {

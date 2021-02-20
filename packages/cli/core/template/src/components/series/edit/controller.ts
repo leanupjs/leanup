@@ -12,14 +12,13 @@ export class EditSerieController extends AbstractController {
   public editorForm: EditorForm = new EditorForm('edit');
   private measuredSerie: MeasuredSerieModel = new MeasuredSerieModel('', '');
 
-  public constructor(measuredSerieId: number) {
-    super();
-    this.changeMeasuredSerie(measuredSerieId);
-  }
-
   public changeMeasuredSerie(measuredSerieId: number): void {
-    this.measuredSerie = this.measurementService.getSerie(measuredSerieId);
-    this.mapTo(this.measuredSerie);
+    try {
+      this.measuredSerie = this.measurementService.getSerie(measuredSerieId);
+    } catch (error) {
+      this.measuredSerie = new MeasuredSerieModel('', '');
+    }
+    this.updateProps(this.measuredSerie);
   }
 
   public updateProps(measuredSerie: MeasuredSerieModel): void {
