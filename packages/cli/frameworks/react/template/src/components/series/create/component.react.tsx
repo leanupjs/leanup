@@ -15,7 +15,7 @@ export class CreateSerieComponent extends ReactComponent<unknown, unknown> imple
   public render(): JSX.Element {
     return (
       <form
-        onSubmit={(event: Event) => {
+        onSubmit={(event) => {
           event.preventDefault();
           event.stopPropagation();
           this.ctrl.onSubmit();

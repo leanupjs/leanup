@@ -1,19 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as PACKAGE_JSON from 'react/package.json';
 
-import { DI } from '@leanup/lib/helpers/injector';
-
+import { run } from './app.run';
 import { AppComponent } from './components/app/component.react';
+import { typeIt } from './shares/utils';
 
-DI.register('Framework', {
-  ...require('react/package.json'),
-  name: 'React',
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
+
+run('React', TYPED_PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    ReactDOM.render(<AppComponent />, htmlDivElement);
+  }
 });
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  ReactDOM.render(<AppComponent />, htmlDivElement);
-}

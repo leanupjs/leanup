@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { InputControl } from '@leanup/form/controls/controls';
+import { GenericComponent } from '@leanup/lib/components/generic';
 import { ReactComponent } from '@leanup/lib/components/react';
 
 import { InputComponent } from '../../input/component.react';
@@ -11,10 +12,8 @@ interface Props {
   editorForm: EditorForm;
 }
 
-export class EditorSerieComponent extends ReactComponent<Props, unknown> {
-  public constructor(props: Props) {
-    super(props, new EditorSerieController());
-  }
+export class EditorSerieComponent extends ReactComponent<Props, unknown> implements GenericComponent {
+  public ctrl: EditorSerieController = new EditorSerieController();
 
   public render(): JSX.Element {
     return (
