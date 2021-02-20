@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { InputControl } from '@leanup/form/controls/controls';
+import { InputControl } from '@leanupjs/form/controls/controls';
+import { GenericComponent } from '@leanupjs/lib/components/generic';
 
 import { EditorSerieController } from './controller';
 import { EditorForm } from './editor.form';
@@ -13,7 +14,9 @@ import { EditorForm } from './editor.form';
     </div>
   `,
 })
-export class EditorSerieComponent extends EditorSerieController implements OnChanges {
+export class EditorSerieComponent implements GenericComponent, OnChanges {
+  public readonly ctrl: EditorSerieController = new EditorSerieController();
+
   @Input() public editorForm!: EditorForm;
   public titleInput: InputControl = new InputControl('title');
   public unitInput: InputControl = new InputControl('title');
