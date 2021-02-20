@@ -12,11 +12,11 @@ interface Props {
 }
 
 export class EditSerieComponent extends PreactComponent<Props, EditSerieController> implements GenericComponent {
-  public ctrl: EditSerieController;
+  public ctrl: EditSerieController = new EditSerieController();
 
   public constructor(props: Props) {
     super(props);
-    this.ctrl = new EditSerieController(props.resolvedRoute.params.id);
+    this.ctrl.changeMeasuredSerie(parseInt(props.resolvedRoute.data?.id || '0'));
   }
 
   public render(): JSX.Element {

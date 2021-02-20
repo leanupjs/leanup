@@ -16,7 +16,7 @@ export class InputComponent extends PreactComponent<Props, unknown> {
           id={this.props.control.id}
           name={this.props.control.name}
           value={this.props.control.value as string}
-          onChange={(event: Event) => {
+          onChange={(event): void => {
             this.props.control.value = event.target === null ? '' : event.target.value;
             this.forceUpdate();
           }}

@@ -1,26 +1,17 @@
+import 'preact/debug';
+
 import { h, render } from 'preact';
+import * as PACKAGE_JSON from 'preact/package.json';
 
-import { DI } from '@leanup/lib/helpers/injector';
-
+import { run } from './app.run';
 import { AppComponent } from './components/app/component.preact';
+import { typeIt } from './shares/utils';
 
-// https://github.com/preactjs/preact/blob/master/README.md#debug-mode
-const ENVs = {
-  NODE_ENV: '$$NODE_ENV$$',
-};
-if (ENVs.NODE_ENV === 'development') {
-  require('preact/debug');
-}
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
 
-DI.register('Framework', {
-  ...require('preact/package.json'),
-  name: 'Preact',
+run('Preact', TYPED_PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    render(<AppComponent />, htmlDivElement);
+  }
 });
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  render(<AppComponent />, htmlDivElement);
-}
