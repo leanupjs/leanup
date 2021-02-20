@@ -1,5 +1,6 @@
 .reports/
 node_modules/
 templates/
+docs/.vitepress/dist
 *.log
 *.tgz
