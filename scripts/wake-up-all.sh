@@ -1,6 +1,6 @@
 sh wake-up.sh angular "$1" "$2"
 sh wake-up.sh angularjs "$1" "$2"
-sh wake-up.sh aurelia "$1" "$2"
+# sh wake-up.sh aurelia "$1" "$2"
 sh wake-up.sh inferno "$1" "$2"
 sh wake-up.sh lit-element "$1" "$2"
 sh wake-up.sh preact "$1" "$2"
