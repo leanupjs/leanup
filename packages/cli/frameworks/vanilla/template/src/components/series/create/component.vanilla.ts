@@ -1,7 +1,7 @@
 import { VanillaComponent } from '../../component.vanilla';
 import { CreateSerieController } from './controller';
 
-function render(component: CreateSerieComponent): string {
+function render(): string {
   return `<form submit.delegate="onSubmit()">
     <h2>Create a new measuring serie</h2>
     <editor-serie editor-form.bind="editorForm"></editor-serie>
@@ -16,7 +16,7 @@ class CreateSerieComponent extends VanillaComponent {
   public readonly $ctrl: CreateSerieController = new CreateSerieController();
 
   protected render() {
-    this.dom.innerHTML = render(this);
+    this.dom.innerHTML = render();
     this.dom.querySelector('form').addEventListener('submit', this.$ctrl.onSubmit.bind(this.$ctrl));
     this.dom.querySelector('form').addEventListener('reset', this.$ctrl.onCancel.bind(this.$ctrl));
   }
