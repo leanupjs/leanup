@@ -153,6 +153,8 @@ export abstract class AbstractCLI {
   protected copyAndPrint(folder: string, subfolder = '', options: CreateOps): void {
     const projectName = getProjectName(options.namespace);
 
+    options.onlyConfig = options.onlyConfig === true;
+
     const currentDir = path.join(folder, subfolder);
     let dirs: string[];
     try {
@@ -220,7 +222,7 @@ export abstract class AbstractCLI {
           this.consoleLog(`${chalk.blue.bold(relPath)} file already exists`, options.silent);
         }
       }
-      if (stat.isDirectory()) {
+      if (stat.isDirectory() && options.onlyConfig === false) {
         this.copyAndPrint(folder, subDirent, options);
       }
     });
