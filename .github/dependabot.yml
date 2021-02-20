@@ -6,16 +6,6 @@ updates:
       interval: daily
     target-branch: release/1.0
   - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: daily
-    target-branch: release/1.0
-  - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: daily
-    target-branch: release/1.0
-  - package-ecosystem: npm
     directory: '/packages/cli/core'
     schedule:
       interval: daily
@@ -191,36 +181,12 @@ updates:
       interval: daily
     target-branch: release/1.1
   - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
     directory: '/packages/cli/core'
     schedule:
       interval: daily
     target-branch: release/1.1
   - package-ecosystem: npm
-    directory: '/packages/cli/core/e2e'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/format'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/lint'
-    schedule:
-      interval: daily
-    target-branch: release/1.1
-  - package-ecosystem: npm
     directory: '/packages/cli/core/template'
-    schedule:
-      interval: daily
-  - package-ecosystem: npm
-    directory: '/packages/cli/core/test'
     schedule:
       interval: daily
     target-branch: release/1.1
@@ -426,6 +392,16 @@ updates:
     target-branch: release/1.1
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/vue3'
+    schedule:
+      interval: daily
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/stack/snowpack'
+    schedule:
+      interval: daily
+    target-branch: release/1.1
+  - package-ecosystem: npm
+    directory: '/packages/stack/vite'
     schedule:
       interval: daily
     target-branch: release/1.1

@@ -9,8 +9,8 @@ on:
     - cron: '0 2 * * *'
 
 env:
-  branch: release/1.1
-  level: prerelease
+  release_branch: 'release/1.1'
+  update_branch: 'update/1.1'
 
 jobs:
   build:
@@ -21,7 +21,14 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-          ref: ${{ env.branch }}
+          ref: ${{ env.release_branch }}
+      - name: Remove latest update branch
+        continue-on-error: true
+        run: |
+          git branch -D ${{ env.update_branch }}
+          git push --delete origin ${{ env.update_branch }}
+      - name: Initial update branch
+        run: git checkout -b ${{ env.update_branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.4
         with:
@@ -43,4 +50,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.branch }}
+          branch: ${{ env.update_branch }}
+          force: true
