@@ -10,12 +10,21 @@ export class App extends AppController {
 
   constructor() {
     super();
-    RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url,
-      };
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string;
+        },
+        data: {
+          id: string;
+        }
+      ) => {
+        this.resolvedRoute = {
+          data,
+          url: route.url,
+        };
+      }
+    );
+    // no explicit rerendering
   }
 }

@@ -1,20 +1,16 @@
 import { bootstrap } from 'aurelia-bootstrapper';
 import { Aurelia } from 'aurelia-framework';
+import * as PACKAGE_JSON from 'aurelia-framework/package.json';
 import { PLATFORM } from 'aurelia-pal';
 
-import { DI } from '@leanup/lib/helpers/injector';
+import { run } from './app.run';
+import { typeIt } from './shares/utils';
 
-DI.register('Framework', {
-  ...require('aurelia-framework/package.json'),
-  name: 'Aurelia',
-});
-require('./shares/register');
-require('./shares/routing');
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
 
 export function configure(aurelia: Aurelia): void {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
   if (htmlDivElement instanceof HTMLDivElement) {
-    htmlDivElement.style.display = 'inline';
     aurelia.use.standardConfiguration().developmentLogging();
     aurelia
       .start()
@@ -30,7 +26,9 @@ export function configure(aurelia: Aurelia): void {
   }
 }
 
-bootstrap(configure)
-  .then(() => {})
-  .catch(() => {})
-  .finally(() => {});
+run('Aurelia', TYPED_PACKAGE_JSON.version, () => {
+  bootstrap(configure)
+    .then(() => {})
+    .catch(() => {})
+    .finally(() => {});
+});
