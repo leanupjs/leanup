@@ -1,17 +1,16 @@
 import './components/app/component.lit-element';
 
-import { DI } from '@leanup/lib/helpers/injector';
+import * as PACKAGE_JSON from 'lit-element/package.json';
 
-DI.register('Framework', {
-  ...require('lit-element/package.json'),
-  name: 'lit-element',
+import { run } from './app.run';
+import { typeIt } from './shares/utils';
+
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
+
+run('lit-element', TYPED_PACKAGE_JSON.version, () => {
+  // Render the template to the document
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#lit-element');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    htmlDivElement.innerHTML = '<app-component />';
+  }
 });
-require('./shares/register');
-require('./shares/routing');
-
-// Render the template to the document
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#lit-element');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  htmlDivElement.innerHTML = '<app-component />';
-}

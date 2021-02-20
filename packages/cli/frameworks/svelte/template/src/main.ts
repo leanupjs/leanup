@@ -1,1 +1,1 @@
-import './main.svelte';
+import './svelte.main';

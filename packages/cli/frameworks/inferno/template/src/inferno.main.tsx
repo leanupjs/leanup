@@ -1,18 +1,15 @@
 import { render } from 'inferno';
+import * as PACKAGE_JSON from 'inferno-shared/package.json';
 
-import { DI } from '@leanup/lib/helpers/injector';
-
+import { run } from './app.run';
 import { AppComponent } from './components/app/component.inferno';
+import { typeIt } from './shares/utils';
 
-DI.register('Framework', {
-  ...require('inferno'),
-  name: 'Inferno',
+const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
+
+run('Inferno', TYPED_PACKAGE_JSON.version, () => {
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#inferno');
+  if (htmlDivElement instanceof HTMLDivElement) {
+    render(<AppComponent />, htmlDivElement);
+  }
 });
-require('./shares/register');
-require('./shares/routing');
-
-const htmlDivElement: HTMLDivElement | null = document.querySelector('div#inferno');
-if (htmlDivElement instanceof HTMLDivElement) {
-  htmlDivElement.style.display = 'inline';
-  render(<AppComponent />, htmlDivElement);
-}

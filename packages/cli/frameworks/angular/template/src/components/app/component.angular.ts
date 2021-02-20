@@ -1,4 +1,4 @@
-import { ApplicationRef, Component } from '@angular/core';
+import { ApplicationRef, Component, Inject } from '@angular/core';
 
 import IMG_FRAMEWORK from '../../assets/logo.angular.png';
 import { RouterService } from '../../services/router/service';
@@ -33,15 +33,23 @@ export class AppComponent extends AppController {
     url: 'series',
   };
 
-  public constructor(appRef: ApplicationRef) {
+  public constructor(@Inject(ApplicationRef) appRef: ApplicationRef) {
     super();
-    RouterService.subscribe((route: { url: string }, params: { id: number }, query: unknown) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url,
-      };
-      appRef.tick();
-    });
+    RouterService.subscribe(
+      (
+        route: {
+          url: string;
+        },
+        data: {
+          id: string;
+        }
+      ) => {
+        this.resolvedRoute = {
+          data,
+          url: route.url,
+        };
+        appRef.tick();
+      }
+    );
   }
 }
