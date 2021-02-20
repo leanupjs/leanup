@@ -27,13 +27,13 @@
   },
   "include": ["src/**/*.ts"],
   "exclude": [
-    "src/**/svelte.ts",
-    "src/**/vue.ts",
     "src/**/*angularjs*.ts",
     "src/**/*aurelia*.ts",
     "src/**/*inferno*.ts",
     "src/**/*preact*.ts",
     "src/**/*react*.ts",
-    "src/**/*vanilla*.ts"
+    "src/**/*svelte*.ts",
+    "src/**/*vanilla*.ts",
+    "src/**/*vue*.ts"
   ]
 }
