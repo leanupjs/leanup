@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.0.100",
+  "version": "1.0.101",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -39,8 +39,8 @@
     "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.100",
-    "@leanup/cli-react": "^1.0.100",
+    "@leanup/cli": "^1.0.101",
+    "@leanup/cli-react": "^1.0.101",
     "@leanup/git-hooks": "^1.0.100",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.1",
