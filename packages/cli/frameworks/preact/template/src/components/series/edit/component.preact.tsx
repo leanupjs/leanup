@@ -28,7 +28,7 @@ export class EditSerieComponent extends PreactComponent<Props, EditSerieControll
           this.ctrl.onSubmit();
         }}
       >
-        <h5>Edit a existing measuring serie</h5>
+        <h2>Edit a existing measuring serie</h2>
         <EditorSerieComponent editorForm={this.ctrl.editorForm} />
         <button className="primary" type="submit" id="submit">
           Edit
