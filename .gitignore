@@ -1,4 +1,4 @@
-.reports/
+git.reports/
 node_modules/
 templates/
 docs/.vitepress/dist
