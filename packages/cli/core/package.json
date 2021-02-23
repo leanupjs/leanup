@@ -62,12 +62,12 @@
     "leanup": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/core": "7.12.17",
-    "@babel/plugin-proposal-class-properties": "7.12.13",
-    "@babel/plugin-proposal-decorators": "7.12.13",
-    "@babel/plugin-proposal-optional-chaining": "7.12.17",
-    "@babel/preset-env": "7.12.17",
-    "@babel/preset-typescript": "7.12.17",
+    "@babel/core": "7.13.1",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/plugin-proposal-decorators": "7.13.0",
+    "@babel/plugin-proposal-optional-chaining": "7.13.0",
+    "@babel/preset-env": "7.13.0",
+    "@babel/preset-typescript": "7.13.0",
     "@leanup/cli-core-e2e": "^1.0.102",
     "@leanup/cli-core-format": "^1.0.102",
     "@leanup/cli-core-lint": "^1.0.102",
