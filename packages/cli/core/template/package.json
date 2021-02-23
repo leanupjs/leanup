@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.0-rc.300",
+  "version": "1.1.0-rc.301",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -37,18 +37,18 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.1.0-rc.300",
-    "@leanup/lib": "^1.1.0-rc.299",
+    "@leanup/form": "^1.1.0-rc.301",
+    "@leanup/lib": "^1.1.0-rc.301",
     "navigo": "8.8.12",
     "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.1.0-rc.299",
-    "@leanup/git-hooks": "^1.1.0-rc.299",
-    "@leanup/stack": "^1.1.0-rc.299",
-    "@leanup/stack-snowpack": "^1.1.0-rc.299",
-    "@leanup/stack-vite": "^1.1.0-rc.299",
-    "@leanup/stack-webpack": "^1.1.0-rc.299",
+    "@leanup/cli": "^1.1.0-rc.301",
+    "@leanup/git-hooks": "^1.1.0-rc.301",
+    "@leanup/stack": "^1.1.0-rc.301",
+    "@leanup/stack-snowpack": "^1.1.0-rc.301",
+    "@leanup/stack-vite": "^1.1.0-rc.301",
+    "@leanup/stack-webpack": "^1.1.0-rc.301",
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
     "npm-check-updates": "11.1.8",
