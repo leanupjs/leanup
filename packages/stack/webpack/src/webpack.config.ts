@@ -5,7 +5,9 @@ const { ESBuildPlugin /*, ESBuildMinifyPlugin */ } = require('esbuild-loader');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
 const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'stack', 'package.json'));
-let proxyConfig;
+
+// https://webpack.js.org/configuration/dev-server/#devserverproxy
+let proxyConfig: Object;
 try {
   proxyConfig = require(path.join(process.cwd(), `proxy.conf.json`));
 } catch (error) {

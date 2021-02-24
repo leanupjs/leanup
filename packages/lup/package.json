@@ -32,7 +32,7 @@
     "typescript": "4.1.5"
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc"
+    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
   },
   "engines": {
     "node": ">=10 <16",

@@ -5,7 +5,7 @@
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "strict": false,
+    "strict": true,
     "outDir": "./lib",
     "skipLibCheck": true,
     "module": "UMD",

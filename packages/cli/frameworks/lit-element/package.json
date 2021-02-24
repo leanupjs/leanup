@@ -32,7 +32,7 @@
     "@leanup/cli": "^1.1.0-rc.249"
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc"
+    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
   },
   "engines": {
     "node": ">=10 <16",
