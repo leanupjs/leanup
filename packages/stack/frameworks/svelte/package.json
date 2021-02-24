@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-svelte",
-  "version": "1.1.0-rc.301",
+  "version": "1.1.0-rc.302",
   "description": "This package contains the Svelte framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -44,7 +44,7 @@
     "vite-plugin-svelte": "3.0.1"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "^1.1.0-rc.301",
+    "@leanup/stack-webpack": "^1.1.0-rc.302",
     "@types/node": "14.14.31",
     "typescript": "4.2.2"
   },
