@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { CommonCLI } from './common-cli';
 import { PackageJson } from './interfaces';
+import { LeanupCLI } from './leanup-cli';
 
 const packageJson = <PackageJson>require('../package.json');
 
-const cli = new CommonCLI('', packageJson.version);
+const cli = new LeanupCLI('', packageJson.version);
 cli.parse();

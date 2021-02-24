@@ -44,26 +44,6 @@ export class CommonCLI extends AbstractCLI {
       (options: CreateOps): string[] => {
         this.consoleLog(`Project name: ${getProjectName(options.namespace)}`, options.silent);
 
-        // Core and Vanilla
-        this.copyAndPrint(path.join(__dirname, '../template'), '', options);
-
-        // Features
-        ['e2e', 'format', 'lint', 'test'].forEach((plugin) => {
-          try {
-            this.copyAndPrint(path.join(require(`@leanup/cli-core-${plugin}`), 'template'), '', options);
-          } catch (error) {}
-        });
-
-        // Plugins
-        ['cli-addons', 'cli-cucumber', 'cli-graphql', 'cli-pwa', 'cli-webhint', 'git-hooks'].forEach((plugin) => {
-          try {
-            this.copyAndPrint(path.join(require(`@leanup/${plugin}`), 'template'), '', {
-              ...options,
-              overwrite: true,
-            });
-          } catch (error) {}
-        });
-
         if (options.install) {
           return ['npm', 'install', '--loglevel=error', '--prefer-offline', '--no-audit'];
         } else {

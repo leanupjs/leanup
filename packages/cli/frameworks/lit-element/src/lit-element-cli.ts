@@ -1,9 +1,9 @@
 import * as path from 'path';
 
-import { CommonCLI } from '@leanup/cli/lib/common-cli';
+import { LeanupCLI } from '@leanup/cli/lib/common-cli';
 import { CreateOps } from '@leanup/cli/lib/interfaces';
 
-export class LitElementCLI extends CommonCLI {
+export class LitElementCLI extends LeanupCLI {
   constructor(name: string, version: string) {
     super(name, version);
 

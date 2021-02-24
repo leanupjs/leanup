@@ -1,5 +1,3 @@
-import { CommonCLI } from './common-cli';
-
 export interface CommonOps {
   silent: boolean;
 }
