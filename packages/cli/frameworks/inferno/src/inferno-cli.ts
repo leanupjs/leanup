@@ -1,7 +1,7 @@
 import * as path from 'path';
 
-import { LeanupCLI } from '@leanup/cli/lib/common-cli';
 import { CreateOps } from '@leanup/cli/lib/interfaces';
+import { LeanupCLI } from '@leanup/cli/lib/leanup-cli';
 
 export class InfernoCLI extends LeanupCLI {
   constructor(name: string, version: string) {
