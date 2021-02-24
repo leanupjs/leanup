@@ -4,7 +4,7 @@
   "scripts": {
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
-    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x webpack && npm run ncu:preview",
+    "ncu": "ncu --dep prod,dev -t minor -u && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x copy-modules-webpack-plugin,typescript && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t patch -u && npm run ncu:preview",
     "ncu:preview": "ncu --dep prod,dev && lerna exec --concurrency 2 --stream -- ncu --dep prod,dev",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
@@ -25,14 +25,14 @@
     "url": "https://github.com/leanupjs/leanup.git"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.102",
-    "@leanup/git-hooks": "1.0.102",
+    "@leanup/cli": "1.0.103",
+    "@leanup/git-hooks": "1.0.103",
     "auto-changelog": "2.2.1",
     "lerna": "3.22.1",
     "npm-check-updates": "11.1.8",
     "prettier-plugin-svelte": "2.1.6",
     "svelte": "3.32.3",
-    "typescript": "4.1.5",
+    "typescript": "4.2.2",
     "vitepress": "0.12.2"
   },
   "engines": {
