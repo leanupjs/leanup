@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-react",
-  "version": "1.1.0-rc.302",
+  "version": "1.1.0-rc.303",
   "description": "This package contains the React framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -35,7 +35,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "^1.1.0-rc.302",
+    "@leanup/stack-webpack": "^1.1.0-rc.303",
     "@types/node": "14.14.31",
     "typescript": "4.2.2"
   },
