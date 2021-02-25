@@ -58,12 +58,15 @@
     "esm": "3.2.25",
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
+    "less": "4.1.1",
     "mocha": "8.3.0",
     "mock-local-storage": "1.1.17",
     "nightwatch": "1.5.1",
     "nightwatch-allure": "1.2.0",
     "nyc": "15.1.0",
+    "postcss": "8.2.6",
     "prettier": "2.2.1",
+    "sass": "1.32.8",
     "sinon": "9.2.4"
   },
   "peerDependencies": {

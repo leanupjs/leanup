@@ -32,6 +32,10 @@
   "dependencies": {
     "vite": "2.0.2"
   },
+  "peerDependencies": {
+    "@leanup/stack": "^1.1.0-rc.299",
+    "typescript": ">=4"
+  },
   "engines": {
     "node": ">=10 <16",
     "npm": ">=6 <8"
