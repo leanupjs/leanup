@@ -34,18 +34,18 @@
     "@leanup/form": "^1.0.104",
     "@leanup/lib": "^1.0.104",
     "navigo": "8.8.12",
-    "rxjs": "6.6.3",
-    "vue": "3.0.5"
+    "rxjs": "6.6.6",
+    "vue": "3.0.6"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.104",
     "@leanup/cli-vue3": "^1.0.104",
     "@leanup/git-hooks": "^1.0.104",
-    "@vue/compiler-sfc": "3.0.5",
+    "@vue/compiler-sfc": "3.0.6",
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.22.1",
-    "npm-check-updates": "11.1.8",
+    "npm-check-updates": "11.1.9",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.3",
     "typescript": "4.2.2"

@@ -36,7 +36,7 @@
     "@types/angular": "1.8.1",
     "angular": "1.8.2",
     "navigo": "8.8.12",
-    "rxjs": "6.6.3"
+    "rxjs": "6.6.6"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.104",
@@ -45,7 +45,7 @@
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.22.1",
-    "npm-check-updates": "11.1.8",
+    "npm-check-updates": "11.1.9",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.3",
     "typescript": "4.2.2"

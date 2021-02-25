@@ -35,7 +35,7 @@
     "@leanup/lib": "^1.0.104",
     "@vue/composition-api": "0.6.7",
     "navigo": "8.8.12",
-    "rxjs": "6.6.3",
+    "rxjs": "6.6.6",
     "vue": "2.6.12",
     "vue-template-compiler": "2.6.12"
   },
@@ -46,7 +46,7 @@
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.22.1",
-    "npm-check-updates": "11.1.8",
+    "npm-check-updates": "11.1.9",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.3",
     "typescript": "4.2.2"
