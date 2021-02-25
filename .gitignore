@@ -1,6 +1,6 @@
 .reports/
-lib/
 node_modules/
+packages/stack/
 templates/
 docs/.vitepress/dist
 *.log
