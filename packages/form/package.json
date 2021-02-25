@@ -4,7 +4,7 @@
   "description": "This module contains useful features for handling forms.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/form#readme",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leanupjs/leanup.git"

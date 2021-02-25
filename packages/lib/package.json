@@ -4,7 +4,7 @@
   "description": "This module is a collection of lightweight application features.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leanupjs/leanup.git"
