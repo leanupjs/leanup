@@ -41,7 +41,7 @@
     "@leanup/form": "^1.0.105",
     "@leanup/lib": "^1.0.105",
     "core-js": "3.9.0",
-    "navigo": "8.8.12",
+    "navigo": "8.9.0",
     "rxjs": "6.6.6",
     "zone.js": "0.11.4"
   },
