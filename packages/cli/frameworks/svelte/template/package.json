@@ -35,7 +35,7 @@
     "@leanup/lib": "^1.0.106",
     "navigo": "8.9.0",
     "rxjs": "6.6.6",
-    "svelte": "3.34.0"
+    "svelte": "3.35.0"
   },
   "devDependencies": {
     "@leanup/cli": "^1.0.106",
@@ -45,7 +45,7 @@
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.22.1",
-    "npm-check-updates": "11.1.9",
+    "npm-check-updates": "11.1.10",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.3",
     "typescript": "4.2.2"
