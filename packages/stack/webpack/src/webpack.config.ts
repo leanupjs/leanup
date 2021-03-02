@@ -62,7 +62,6 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
         options: {
           lessOptions: {
             javascriptEnabled: true,
-            modifyVars: {},
           },
         },
       },
