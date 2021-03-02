@@ -50,8 +50,21 @@ module.exports = {
         list: MULTIPLE_REPLACEMENTS,
       },
     ],
-    'snowpack-plugin-less',
-    '@snowpack/plugin-sass',
+    [
+      'snowpack-plugin-less',
+      {
+        javascriptEnabled: true,
+      },
+    ],
+    [
+      'snowpack-plugin-sass',
+      {
+        implementation: require('sass'),
+        sassOptions: {
+          includePaths: ['node_modules'],
+        },
+      },
+    ],
     '@snowpack/plugin-postcss',
   ],
   buildOptions: {
