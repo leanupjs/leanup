@@ -175,8 +175,8 @@ export abstract class AbstractCLI {
           } else {
             this.consoleLog(`${chalk.blue.bold(relPath)} folder already exists`, options.silent);
           }
+          this.copyAndPrint(folder, subDirent, options);
         }
-        this.copyAndPrint(folder, subDirent, options);
       } else if (stat.isFile()) {
         if (
           fs.existsSync(dirPath) === false ||
