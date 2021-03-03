@@ -82,3 +82,20 @@ jobs:
         working-directory: scripts
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
+      - name: Install tools
+        run: npm i lerna npm-check-updates --no-save
+      - name: Update dependencies
+        run: npm run ncu
+      - name: Install dependencies
+        run: npm run update
+      - name: Commit changed files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git status
+          git commit -m "Subsequent update of the dependencies after the release of new packages"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
