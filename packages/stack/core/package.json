@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack",
-  "version": "1.1.0-rc.305",
+  "version": "1.1.0-rc.306",
   "description": "This module contains all required tools to serve, test and build a framework neutral SPA.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -59,7 +59,6 @@
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "less": "4.1.1",
-    "tslib": "2.1.0",
     "mocha": "8.3.0",
     "mock-local-storage": "1.1.17",
     "nightwatch": "1.5.1",
@@ -68,7 +67,8 @@
     "postcss": "8.2.6",
     "prettier": "2.2.1",
     "sass": "1.32.8",
-    "sinon": "9.2.4"
+    "sinon": "9.2.4",
+    "tslib": "2.1.0"
   },
   "peerDependencies": {
     "chromedriver": ">=87",
