@@ -168,11 +168,14 @@ export abstract class AbstractCLI {
       const relPath = `${subfolder}/${dirent.replace(/^_+/, '')}`.replace(/^\/+/, '');
       const dirPath = path.join(process.cwd(), relPath);
       if (stat.isDirectory()) {
-        if (fs.existsSync(dirPath) === false) {
-          fs.mkdirSync(dirPath);
-          this.consoleLog(`${chalk.yellow.bold(relPath)} folder created`, options.silent);
-        } else {
-          this.consoleLog(`${chalk.blue.bold(relPath)} folder already exists`, options.silent);
+        if (options.onlyConfig === false) {
+          if (fs.existsSync(dirPath) === false) {
+            fs.mkdirSync(dirPath);
+            this.consoleLog(`${chalk.yellow.bold(relPath)} folder created`, options.silent);
+          } else {
+            this.consoleLog(`${chalk.blue.bold(relPath)} folder already exists`, options.silent);
+          }
+          this.copyAndPrint(folder, subDirent, options);
         }
       } else if (stat.isFile()) {
         if (
@@ -221,9 +224,6 @@ export abstract class AbstractCLI {
         } else {
           this.consoleLog(`${chalk.blue.bold(relPath)} file already exists`, options.silent);
         }
-      }
-      if (stat.isDirectory() && options.onlyConfig === false) {
-        this.copyAndPrint(folder, subDirent, options);
       }
     });
   }
