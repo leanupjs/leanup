@@ -33,15 +33,13 @@
   "dependencies": {
     "@snowpack/plugin-postcss": "1.1.0",
     "@snowpack/plugin-sass": "1.3.0",
-    "postcss": "8.2.6",
     "postcss-cli": "8.3.1",
     "snowpack": "3.0.13",
     "snowpack-plugin-less": "1.0.7",
     "snowpack-plugin-replace": "1.0.4"
   },
   "peerDependencies": {
-    "@leanup/stack": "^1.1.0-rc.299",
-    "typescript": ">=4"
+    "@leanup/stack": "^1.1.0-rc.299"
   },
   "engines": {
     "node": ">=10 <16",
