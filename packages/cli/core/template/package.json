@@ -19,8 +19,8 @@
     "serve:snowpack": "npm run start:snowpack -- --open none",
     "start:snowpack": "snowpack dev",
     "build:vite": "vite build",
-    "serve:vite": "vite preview",
-    "start:vite": "vite"
+    "serve:vite": "vite",
+    "start:vite": "npm run serve:vite -- --open"
   },
   "husky": {
     "hooks": {

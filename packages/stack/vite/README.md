@@ -52,7 +52,7 @@ This module contains all [vite]-related functionalities for the [@leanup/stack].
 ```json
   "scripts": {
     "build": "vite build",
-    "serve": "vite preview",
-    "start": "vite",
+    "serve": "vite",
+    "start": "npm start -- --open",
   },
 ```
