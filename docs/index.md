@@ -14,8 +14,8 @@
 [![prettier][prettier]][prettier-url]
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
-[license]: https://img.shields.io/npm/l/@leanup/cli
-[license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
+[license]: https://img.shields.io/npm/l/@leanup/stack
+[license-url]: https://github.com/leanupjs/leanup/blob/release/1.1/LICENSE.md
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
@@ -28,16 +28,8 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 - [Motivation](#motivation)
 - [What makes the difference](#what-makes-the-difference)
 - [Principles](#principles)
-- [Arguments](#arguments)
-  - [Pro](#pro)
-  - [Contra](#contra)
 - [Demo's](#demos)
 - [Tools](#tools)
-- [Ecosystem structure](#ecosystem-structure)
-  - [Frameworks](#frameworks)
-  - [Extensions](#extensions)
-  - [Thinks](#thinks)
-- [Alternatives](#alternatives)
 
 ## Motivation
 
@@ -62,24 +54,6 @@ We use the minimal configuration and build no overhead stuff on top of the popul
 - don't repeat yourself
 - following the generic instead of the influenced way
 - keep the dependencies always up to date
-
-## Arguments
-
-The arguments for and against this concept are documented here:
-
-### Pro
-
-- select only one pure and popular tool for each use case (e.g. bundling, unit-test)
-- there are extensible configuration files for each tool
-- due to the flat dependencies we can always stay up to date
-- the CLI bundles all the necessary tools in a portable/scalable way
-- the risk to get vulnerabilites in dependencies is lower
-- leanup's own code is kept to a minimum
-
-### Contra
-
-> - please give feedback
-> - please show us your perspective
 
 ## Demo's
 
@@ -121,6 +95,7 @@ There are some working examples:
 | [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
 | [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
 | [PostCSS]        |        CSS        |   ✔️   | ready                      |
+| [TSArch]         |   Architecture    |   ⌛   | in progress                | [![hint](https://snyk.io/advisor/npm-package/tsarch/badge.svg)](https://snyk.io/advisor/npm-package/tsarch)                                          |
 | [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
 | [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* | [![testcafe](https://snyk.io/advisor/npm-package/testcafe/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                                |
 | [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               | [![tslint](https://snyk.io/advisor/npm-package/tslint/badge.svg)](https://snyk.io/advisor/npm-package/tslint)                                        |
@@ -145,63 +120,6 @@ There are some working examples:
 > \*\*\* Webhint is not practical for the development of components, since component tags often have no relation to standard HTML. In addition, the webhint package alone is over 100 MB in size. I have good by using a IDE webhint plugin, like [VSCode webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
 
 > \*\*\*\* [TestCafe] The idea that defined TestCafe architecture was that you don't really need an external driver to run end-to-end tests in the browser. That's interesting.
-
-## Ecosystem structure
-
-Vanilla Java-/TypeScript are supported by default. That means for example custom elements and any plain Java-/TypeScript code.
-
-- [`@leanup/cli`](https://www.npmjs.com/package/@leanup/cli) ✔️
-- [`@leanup/cli-vanilla`](https://www.npmjs.com/package/@leanup/cli-vanilla) (optional) ✔️
-
-### Frameworks
-
-Vanilla Java-/TypeScript are supported by default. That means for example custom elements and any plain Java-/TypeScript code.
-
-The selection of the following frameworks depends in parts on the following references:
-
-- [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential),
-- [benchmark](https://krausest.github.io/js-framework-benchmark/2020/table_chrome_80.html) and
-- [survey](https://2019.stateofjs.com/front-end-frameworks)
-
-Currently the following framework extensions are available:
-
-- [`@leanup/cli-angular`](https://www.npmjs.com/package/@leanup/cli-angular) ✔️
-- [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️
-- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ (will be removed in v1.1)
-- [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️
-- [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️
-- [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
-- [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
-- [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️
-- [`@leanup/cli-vue`](https://www.npmjs.com/package/@leanup/cli-vue) ✔️
-- [`@leanup/cli-vue3`](https://www.npmjs.com/package/@leanup/cli-vue3) ✔️
-
-### Extensions
-
-A separate package contains some nice but not required addons for webpack.
-
-- [`@leanup/cli-addons`](https://www.npmjs.com/package/@leanup/cli-addons) ✔️
-- [`@leanup/cli-cucumber`](https://www.npmjs.com/package/@leanup/cli-cucumber) ✔️
-- [`@leanup/cli-graphql`](https://www.npmjs.com/package/@leanup/cli-graphql) ✔️
-- [`@leanup/cli-pwa`](https://www.npmjs.com/package/@leanup/cli-pwa) ✔️
-- [`@leanup/cli-webhint`](https://www.npmjs.com/package/@leanup/cli-webhint) ✔️
-
-### Thinks
-
-There a separate packages for important application features.
-
-- [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️
-- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️
-- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️
-- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛ (in progress)
-
-## Alternatives
-
-- Angular [![@angular/cli](https://snyk.io/advisor/npm-package/@angular/cli/badge.svg)](https://snyk.io/advisor/npm-package/@angular/cli)
-- Neutrino [![neutrino](https://snyk.io/advisor/npm-package/neutrino/badge.svg)](https://snyk.io/advisor/npm-package/neutrino)
-- Snowpack [![snowpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)
-- Vite [![vite](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)
-<!-- - Leanup [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli) -->
 
 [babel]: https://babeljs.io
 [typescript]: https://typescriptlang.org
@@ -236,3 +154,4 @@ There a separate packages for important application features.
 [vite]: https://vitejs.dev/
 [openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
+[tsarch]: https://github.com/MaibornWolff/ts-arch

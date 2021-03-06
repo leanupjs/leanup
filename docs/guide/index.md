@@ -6,7 +6,11 @@ This means that all commands for developing, testing or building etc. the app re
 
 <h2>Table of contents</h2>
 
+- [Motivation](#motivation)
+- [Technical risks](#technical-risks)
 - [Installation](#installation)
+  - [Update](#update)
+  - [Reinstall](#reinstall)
 - [The tools](#the-tools)
   - [Bundler](#bundler)
   - [Transpiler](#transpiler)
@@ -17,9 +21,31 @@ This means that all commands for developing, testing or building etc. the app re
   - [E2E-Testing](#e2e-testing)
 - [NPM-Scripts](#npm-scripts)
 
+## Motivation
+
+- Learnability
+- Controllability
+- Universality
+- Flexibility
+- Scalability
+- Durability
+- Transparency
+
+## Technical risks
+
+The technical risks are minimal, because their is no own stuff inside. You can change each individual tool if you want.
+
 ## Installation
 
 Execute the command `npm ci` in your bash.
+
+### Update
+
+If you want to update all dependencies, execute the command `npm run update` in your bash.
+
+### Reinstall
+
+If you want a full reinstall, execute the command `npm run reinstall` in your bash.
 
 ## The tools
 
