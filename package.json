@@ -25,14 +25,14 @@
     "url": "https://github.com/leanupjs/leanup.git"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.107",
+    "@leanup/cli": "1.0.108",
     "@leanup/git-hooks": "1.0.107",
     "auto-changelog": "2.2.1",
     "lerna": "3.22.1",
     "npm-check-updates": "11.1.10",
     "prettier-plugin-svelte": "2.2.0",
     "svelte": "3.35.0",
-    "typescript": "4.2.2",
+    "typescript": "4.2.3",
     "vitepress": "0.12.2"
   },
   "engines": {

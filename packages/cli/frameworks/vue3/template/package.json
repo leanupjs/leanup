@@ -33,7 +33,7 @@
   "dependencies": {
     "@leanup/form": "^1.0.108",
     "@leanup/lib": "^1.0.108",
-    "navigo": "8.9.0",
+    "navigo": "8.9.1",
     "rxjs": "6.6.6",
     "vue": "3.0.7"
   },
@@ -44,11 +44,11 @@
     "@vue/compiler-sfc": "3.0.7",
     "chromedriver": "88.0.0",
     "cssnano": "4.1.10",
-    "geckodriver": "1.22.1",
+    "geckodriver": "1.22.2",
     "npm-check-updates": "11.1.10",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.0.3",
-    "typescript": "4.2.2"
+    "typescript": "4.2.3"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }
