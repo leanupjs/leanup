@@ -12,7 +12,7 @@ on:
         required: true
       tag:
         description: Tag
-        default: latest-1.1
+        default: next
         required: true
   schedule:
     - cron: '0 2 * * *'

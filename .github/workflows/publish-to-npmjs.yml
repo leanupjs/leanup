@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanup
   registry: https://registry.npmjs.org
-  tag: canary-1.1
+  tag: next
   token: ${{ secrets.NPMJS_AUTH_TOKEN }}
 
 jobs:
