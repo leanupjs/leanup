@@ -31,7 +31,7 @@
     "chai": "4.3.3",
     "cross-env": "7.0.3",
     "esm": "3.2.25",
-    "jsdom": "16.4.0",
+    "jsdom": "16.5.0",
     "jsdom-global": "3.0.2",
     "mocha": "8.3.1",
     "mock-local-storage": "1.1.17",
