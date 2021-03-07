@@ -31,7 +31,7 @@
     "@leanup/git-hooks": "next",
     "@leanup/stack": "next",
     "auto-changelog": "2.2.1",
-    "lerna": "3.22.1",
+    "lerna": "4.0.0",
     "npm-check-updates": "11.1.10",
     "prettier-plugin-svelte": "2.2.0",
     "svelte": "3.35.0",
