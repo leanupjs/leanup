@@ -1,6 +1,6 @@
 {
   "name": "@template/vue3",
-  "version": "1.0.110",
+  "version": "1.0.111",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -38,8 +38,8 @@
     "vue": "3.0.7"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.110",
-    "@leanup/cli-vue3": "^1.0.110",
+    "@leanup/cli": "^1.0.111",
+    "@leanup/cli-vue3": "^1.0.111",
     "@leanup/git-hooks": "^1.0.110",
     "@vue/compiler-sfc": "3.0.7",
     "chromedriver": "89.0.0",

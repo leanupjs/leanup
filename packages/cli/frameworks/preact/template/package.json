@@ -1,6 +1,6 @@
 {
   "name": "@template/preact",
-  "version": "1.0.110",
+  "version": "1.0.111",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -38,8 +38,8 @@
     "rxjs": "6.6.6"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.110",
-    "@leanup/cli-preact": "^1.0.110",
+    "@leanup/cli": "^1.0.111",
+    "@leanup/cli-preact": "^1.0.111",
     "@leanup/git-hooks": "^1.0.110",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.10",
