@@ -29,11 +29,12 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       rules: {
         '@typescript-eslint/ban-types': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
+        // '@typescript-eslint/explicit-function-return-type': 'off',
+        // '@typescript-eslint/no-empty-function': 'off',
+        // '@typescript-eslint/no-explicit-any': 'off',
+        // '@typescript-eslint/no-unused-vars': 'off',
+        // '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-member-accessibility': ['warn'],
       },
     },
     /**
@@ -67,5 +68,6 @@ module.exports = {
   rules: {
     'no-empty': 'off',
     'no-prototype-builtins': 'off',
+    'space-before-function-paren': 'off',
   },
 };
