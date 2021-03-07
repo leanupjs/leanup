@@ -59,7 +59,7 @@
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "less": "4.1.1",
-    "mocha": "8.3.0",
+    "mocha": "8.3.1",
     "mock-local-storage": "1.1.17",
     "nightwatch": "1.5.1",
     "nightwatch-allure": "1.2.0",
