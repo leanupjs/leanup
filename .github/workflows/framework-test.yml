@@ -8,7 +8,7 @@ on:
     inputs:
       version:
         description: Version
-        default: latest
+        default: latest-1.0
         required: true
 
 jobs:
