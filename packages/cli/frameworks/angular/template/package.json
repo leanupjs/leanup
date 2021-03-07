@@ -50,7 +50,7 @@
     "@leanup/cli-angular": "^1.0.108",
     "@leanup/git-hooks": "^1.0.107",
     "@ngtools/webpack": "11.2.3",
-    "chromedriver": "88.0.0",
+    "chromedriver": "89.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.22.2",
     "npm-check-updates": "11.1.10",
