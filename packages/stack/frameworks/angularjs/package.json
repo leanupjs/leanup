@@ -37,7 +37,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli-core-babel": "^1.2.0-rc.50",
+    "@leanup/cli-core-babel": "^1.2.0-rc.0",
     "@snowpack/plugin-babel": "2.1.6",
     "babel-plugin-angularjs-annotate": "0.10.0"
   },
