@@ -37,6 +37,6 @@ jobs:
         with:
           body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
           draft: true
-          prerelease: true
+          prerelease: false
           release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
