@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/1.1/',
+  base: '/1.2/',
   lang: 'en-US',
   title: 'LeanupJS',
   description: 'Vite & Vue powered static site generator.',
