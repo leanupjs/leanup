@@ -6,6 +6,7 @@ module.exports = {
     preprocessorOptions: {
       less: {
         javascriptEnabled: true,
+        paths: ['node_modules'],
       },
       sass: {
         implementation: require('sass'),
