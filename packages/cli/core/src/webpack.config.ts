@@ -57,7 +57,7 @@ export function webpackConfig(env: any, argv: any): Object {
         options: {
           lessOptions: {
             javascriptEnabled: true,
-            modifyVars: {},
+            paths: ['node_modules'],
           },
         },
       },
