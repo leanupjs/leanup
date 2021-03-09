@@ -9,6 +9,6 @@
     "@leanup/cli-react": "^1.2.0-rc.51",
     "@leanup/stack-react": "^1.2.0-rc.51",
     "@types/react": "17.0.3",
-    "@types/react-dom": "17.0.1"
+    "@types/react-dom": "17.0.2"
   }
 }
