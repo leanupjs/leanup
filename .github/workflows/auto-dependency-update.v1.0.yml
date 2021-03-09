@@ -59,10 +59,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Auto dependency update
           committer: GitHub Action <noreply@github.com>
-          title: 'Auto dependency update'
+          author: Martin Oppitz <github@martinoppitz.com>
+          title: Auto dependency update
           branch: ${{ env.update_branch }}
-          delete-branch: true
-          draft: true
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
