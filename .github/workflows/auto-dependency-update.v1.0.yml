@@ -27,8 +27,8 @@ jobs:
         run: |
           git branch -D ${{ env.update_branch }}
           git push --delete origin ${{ env.update_branch }}
-      - name: Initial update branch
-        run: git checkout -b ${{ env.update_branch }}
+      # - name: Initial update branch
+      #   run: git checkout -b ${{ env.update_branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.5
         with:
@@ -39,16 +39,31 @@ jobs:
         run: npm run ncu
       - name: Install dependencies
         run: npm run update
-      - name: Commit changed files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git status
-          git commit -m "Auto dependency update"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      # - name: Commit changed files
+      #   run: |
+      #     git config --local user.email "noreply@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git add .
+      #     git status
+      #     git commit -m "Auto dependency update"
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ env.update_branch }}
+      #     force: true
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Auto dependency update
+          committer: GitHub Action <noreply@github.com>
+          title: 'Auto dependency update'
           branch: ${{ env.update_branch }}
-          force: true
+          delete-branch: true
+          draft: true
+      - name: Check outputs
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
