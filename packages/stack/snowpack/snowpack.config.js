@@ -54,6 +54,7 @@ module.exports = {
       'snowpack-plugin-less',
       {
         javascriptEnabled: true,
+        paths: ['node_modules'],
       },
     ],
     '@snowpack/plugin-sass',
