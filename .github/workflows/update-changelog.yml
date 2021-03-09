@@ -8,19 +8,19 @@ on:
   schedule:
     - cron: '0 2 * * *'
 
-env:
-  branch: master
+# env:
+#   branch: master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout specific branch
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           persist-credentials: false
-          ref: ${{ env.branch }}
+          # ref: ${{ env.branch }}
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.5
         with:
@@ -40,4 +40,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.branch }}
+          # branch: ${{ env.branch }}
