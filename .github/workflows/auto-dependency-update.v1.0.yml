@@ -8,27 +8,29 @@ on:
   schedule:
     - cron: '0 2 * * *'
 
-env:
-  release_branch: 'release/1.0'
-  update_branch: 'update/1.0'
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    # continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['1.0', '1.1', '1.2']
+    name: Update dependencies "v${{matrix.version}}"
     steps:
       - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           persist-credentials: false
-          ref: ${{ env.release_branch }}
-      - name: Remove latest update branch
-        continue-on-error: true
-        run: |
-          git branch -D ${{ env.update_branch }}
-          git push --delete origin ${{ env.update_branch }}
-      - name: Initial update branch
-        run: git checkout -b ${{ env.update_branch }}
+          ref: 'release/${{matrix.version}}'
+      # - name: Remove latest update branch
+      #   continue-on-error: true
+      #   run: |
+      #     git branch -D 'update/${{matrix.version}}'
+      #     git push --delete origin 'update/${{matrix.version}}'
+      # - name: Initial update branch
+      #   run: git checkout -b 'update/${{matrix.version}}'
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.5
         with:
@@ -41,7 +43,7 @@ jobs:
         run: npm run update
       - name: Commit changed files
         run: |
-          git config --local user.email "noreply@github.com"
+          git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git status
@@ -50,19 +52,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.update_branch }}
-          force: true
-      # - name: Create Pull Request
-      #   id: cpr
-      #   uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     commit-message: Auto dependency update
-      #     committer: GitHub Action <noreply@github.com>
-      #     author: Martin Oppitz <github@martinoppitz.com>
-      #     title: Auto dependency update
-      #     branch: ${{ env.update_branch }}
-      # - name: Check outputs
-      #   run: |
-      #     echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-      #     echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+          # branch: 'update/${{matrix.version}}'
+          # force: true
