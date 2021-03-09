@@ -8,8 +8,8 @@ on:
   schedule:
     - cron: '0 2 * * *'
 
-# env:
-#   branch: master
+env:
+  branch: 'release/1.2'
 
 jobs:
   build:
@@ -40,5 +40,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # branch: ${{ env.branch }}
+          branch: ${{ env.branch }}
           force: true
