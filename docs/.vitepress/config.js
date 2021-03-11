@@ -65,6 +65,10 @@ function getGuideSidebar() {
       link: '/guide/',
       children: [
         {
+          text: 'Showcase',
+          link: '/guide/showcase/',
+        },
+        {
           text: 'Installation',
           link: '/guide/installation/',
         },

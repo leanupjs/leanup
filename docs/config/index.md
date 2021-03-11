@@ -53,7 +53,14 @@ The main legacy bundler is `webpack`. In addition to `webpack`, we have expanded
 
 ### Format
 
-We chose `prettier` for the code formatting.
+We chose `prettier` for the code formatting with the following configuration:
+
+```js
+module.exports = {
+  printWidth: 120,
+  singleQuote: true,
+};
+```
 
 ### Lint
 
