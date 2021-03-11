@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli",
-  "version": "1.2.0-rc.52",
+  "version": "1.2.0-rc.53",
   "description": "This CLI brings along all required tools to serve, test and build multi framework SPAs",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
