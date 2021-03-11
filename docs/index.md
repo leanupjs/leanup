@@ -43,9 +43,11 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 
 ## What makes the difference
 
-> <cite>Stop the transitive knowledge.</cite>
+> ⛔ <cite style="color: red"> Stop the proprietary and transitive knowledge.</cite>
 
-We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.
+> 📑 <cite style="color: black"> We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.</cite>
+
+> 🤸‍♂️ <cite style="color: blue">We are fast and flexible because we have chosen the minimally sensible tool composition and decoupled it in separately serviceable modules.</cite>
 
 ## Principles
 

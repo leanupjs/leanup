@@ -65,8 +65,16 @@ function getGuideSidebar() {
       link: '/guide/',
       children: [
         {
+          text: 'Installation',
+          link: '/guide/installation/',
+        },
+        {
           text: 'Migration',
           link: '/guide/migration/',
+        },
+        {
+          text: 'Usage',
+          link: '/guide/usage/',
         },
       ],
     },

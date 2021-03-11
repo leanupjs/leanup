@@ -6,15 +6,18 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 
 ### Changes
 
-1. ✨ ESBuild
-2. ✨ Webpack 5
-3. ✨ Vite 2
-4. ✨ Snowpack 3
-5. ⛔ Aurelia: We will no longer be supported as long as the ticket [#39](https://github.com/leanupjs/leanup/issues/39) is not resolved.
-6. ✨ Refactoring the @leanup module separation
+1. ✨ Refactoring the @leanup module separation
+2. ✨ Maximal Major-Upgrade from all dependencies
+3. ✨ Remove some not really important dependencies (e.g. `copy-webpack-plugin`, `html-webpack-plugin`, `copy-modules-webpack-plugin`)
+4. ✨ Global CLI installation
+5. ✨ Webpack 5
+6. ✨ ESBuild
 7. ✨ Much faster stack installation
 8. ✨ Much faster script execution (ESBuild)
-9. ✋ Builds does only contains the SourceCode-Artifacts (no frame stuff, like public-folder and their assets)
+9. ⚽ Vite 2 (experimental)
+10. ⚽ Snowpack 3 (experimental)
+11. ✋ Builds does only contains the SourceCode-Artifacts (no frame material, like public-folder and their assets)
+12. ⛔ We can not longer be supported [Aurelia](https://aurelia.io/) as long as the ticket [#39](https://github.com/leanupjs/leanup/issues/39) is not resolved.
 
 ### Migrate
 
@@ -28,27 +31,17 @@ Follow the steps below to update the stack.
 > npx <framework> create --only-config --no-install --overwrite
 ```
 
-> Available Frameworks
->
-> - angular
-> - angularjs
-> - ~~aurelia~~ (is not Webpack v5 compatible)
-> - inferno
-> - lit-element
-> - preact
-> - react
-> - svelte
-> - vanilla
-> - vue
-> - vue3
+Available Frameworks: `angular`, `angularjs`, ~~`aurelia`~~\*, `inferno`, `lit-element`, `preact`, `react`,`svelte`,`vanilla`,`vue` and `vue3`
+
+> <small style="color: #d00">\* Aurelia is not Webpack v5 compatible.</small>
 
 #### Clearing changes
 
 After the changes have been fetched, the changed files must be reviewed. Some changes can then be corrected again.
 
-#### Need frame stuff
+#### If you need the frame material
 
-If you need the frame stuff from the public folder in you dist-folder. You can configure that like this:
+If you need the frame material from the public folder in your dist folder. You can configure this as follows:
 
 1. Install `npm i -D copy-plugin-webpack`
 2. Extends the `webpack.config.js` like this<br>

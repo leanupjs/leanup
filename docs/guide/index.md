@@ -10,46 +10,12 @@ The technical risks are minimal, because their is no own stuff inside. You can c
 
 ## Installation
 
-Execute the command `npm ci` in your bash.
+Read more about the installation [here](/1.1/guide/installation/).
 
-### Update
+## Migration
 
-If you want to update all dependencies, execute the command `npm run update` in your bash.
+Read more about the migration [here](/1.1/guide/migration/).
 
-### Reinstall
+## Usage
 
-If you want a full reinstall, execute the command `npm run reinstall` in your bash.
-
-## NPM-Scripts
-
-The following table lists the `scripts tags` available for `npm scripts`:
-
-> `npm run <script tag>`
-
-| script tag       | command line execution                                                                                                                                                                                                                                              |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| coverage         | `cross-env NODE_ENV=test nyc mocha`                                                                                                                                                                                                                                 |
-| cucumber\*       | `cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json` |
-| e2e              | `nightwatch`                                                                                                                                                                                                                                                        |
-| format           | `prettier --check {src,tests}/**`                                                                                                                                                                                                                                   |
-| lint:eslint      | `eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}`                                                                                                                                                                                                     |
-| lint:tsc         | `tsc -p tsconfig.json`                                                                                                                                                                                                                                              |
-| lint             | `npm run lint:eslint && npm run lint:tsc`                                                                                                                                                                                                                           |
-| reinstall        | `npm run remove && npm install`                                                                                                                                                                                                                                     |
-| remove           | `rm -rf node_modules package-lock.json`                                                                                                                                                                                                                             |
-| test             | `cross-env NODE_ENV=test mocha`                                                                                                                                                                                                                                     |
-| update           | `ncu -t minor -u && npm install && ncu`                                                                                                                                                                                                                             |
-| snowpack:build\* | `snowpack build`                                                                                                                                                                                                                                                    |
-| snowpack:serve\* | `npm run snowpack:start -- --open none`                                                                                                                                                                                                                             |
-| snowpack:start\* | `snowpack dev`                                                                                                                                                                                                                                                      |
-| vite:build\*     | `vite build`                                                                                                                                                                                                                                                        |
-| vite:serve\*     | `vite`                                                                                                                                                                                                                                                              |
-| vite:start\*     | `npm run vite:serve -- --open`                                                                                                                                                                                                                                      |
-| webpack:build    | `cross-env NODE_ENV=production webpack`                                                                                                                                                                                                                             |
-| webpack:serve    | `cross-env NODE_ENV=development webpack serve --devtool=source-map`                                                                                                                                                                                                 |
-| webpack:start    | `npm run webpack:serve -- --open=chrome`                                                                                                                                                                                                                            |
-| build            | `npm run webpack:build`                                                                                                                                                                                                                                             |
-| serve            | `npm run vite:serve`                                                                                                                                                                                                                                                |
-| start            | `npm run vite:start`                                                                                                                                                                                                                                                |
-
-> <small>\* This script tags are experimental.</small>
+Read more about the usage [here](/1.1/guide/usage/).
