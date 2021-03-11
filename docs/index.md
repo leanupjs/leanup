@@ -1,6 +1,6 @@
 <p style="text-align: center; background: white;">
   <a href="https://leanupjs.org">
-    <img src="https://leanupjs.org/assets/logo.svg" height="100">
+    <img src="https://leanupjs.org/assets/logo.svg" height="200">
   </a><br>
   <h2 style="text-align: center;">
     <cite><b>Make things pure</b> ... to become lean.</cite>
@@ -9,9 +9,9 @@
 <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe> -->
 <hr>
 
-[![license][license]][license-url]
-[![lernajs][lernajs]][lernajs-url]
-[![prettier][prettier]][prettier-url]
+[![license][license]][license-url]&#160;
+[![lernajs][lernajs]][lernajs-url]&#160;
+[![prettier][prettier]][prettier-url]&#160;
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
 [license]: https://img.shields.io/npm/l/@leanup/stack
@@ -24,12 +24,6 @@
 <h1>leanup<sup style="color: grey; font-size: 75%"> js</sup></h1>
 
 The **`@leanup` ecosystem** stands for a lightweight and pure way for application development in JavaScript/TypeScript.
-
-- [Motivation](#motivation)
-- [What makes the difference](#what-makes-the-difference)
-- [Principles](#principles)
-- [Demo's](#demos)
-- [Tools](#tools)
 
 ## Motivation
 
