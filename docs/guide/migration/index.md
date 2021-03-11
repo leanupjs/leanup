@@ -43,7 +43,7 @@ After the changes have been fetched, the changed files must be reviewed. Some ch
 
 If you need the frame material from the public folder in your dist folder. You can configure this as follows:
 
-1. Install `npm i -D copy-plugin-webpack`
+1. Install `npm i -D copy-webpack-plugin`
 2. Extends the `webpack.config.js` like this<br>
 
 ```js
