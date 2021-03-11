@@ -10,6 +10,40 @@ The `@leanup stack` provides minimal default configurations for all included too
 
 For example, add an additional webpack plugin: [Copy Webpack Plugin](/1.1/guide/migration/#if-you-need-the-frame-material)
 
+### TypeScript
+
+The hole stack is focused on `TypeScript` with the following `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "pretty": true,
+    "target": "esnext",
+    "module": "esnext",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "types": ["mocha", "node"],
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "strict": true
+  },
+  "include": ["src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
+  "exclude": ["node_modules/@leanup/**/template/**/*"]
+}
+```
+
 ### Bundler
 
 The main legacy bundler is `webpack`. In addition to `webpack`, we have expanded the `@leanup stack` to include the alternatives `vite` and `snowpack`.
@@ -68,7 +102,80 @@ We chose primary `eslint` for the static code checking. In addition to `eslint`,
 
 #### ESLint
 
+```js
+/**
+ * https://www.npmjs.com/package/eslint
+ */
+module.exports = {
+  root: false,
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: ['eslint:recommended'],
+  overrides: [
+    /**
+     * - https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
+     * - https://www.npmjs.com/package/@typescript-eslint/parser
+     */
+    {
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      files: ['**/*.ts', '**/*.tsx'],
+      parserOptions: {
+        ecmaVersion: 2018,
+        project: './tsconfig.json',
+        extraFileExtensions: ['.vue'],
+        sourceType: 'module',
+      },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-member-accessibility': ['warn'],
+      },
+    },
+    /**
+     * - https://www.npmjs.com/package/eslint-plugin-html
+     */
+    {
+      files: ['**/*.html'],
+      plugins: ['html'],
+    },
+    /**
+     * - https://www.npmjs.com/package/eslint-plugin-json
+     */
+    {
+      extends: ['plugin:json/recommended'],
+      files: ['**/*.json'],
+      plugins: ['json'],
+    },
+    {
+      env: {
+        mocha: true,
+      },
+      files: ['tests/**/*', '**/*.spec.*', '**/*.test.*'],
+    },
+  ],
+  parser: '@typescript-eslint/parser',
+  rules: {
+    'no-empty': 'off',
+    'no-prototype-builtins': 'off',
+    'space-before-function-paren': 'off',
+  },
+};
+```
+
 #### TSC
+
+If you want you can execute a addition test with `tsc -p tsconfig.json`.
 
 ### Test
 
@@ -76,8 +183,8 @@ Our test strategy focuses on unit- and e2e-testing.
 
 #### Unit-Test
 
+The unit test framework is `moche` in addition with `chai` and `sinon`.
+
 #### E2E-Test
 
-##### Nightwatch.js
-
-##### Cucumber
+The unit test framework is `nightwatch.js` in addition with `cucumber`.
