@@ -45,3 +45,31 @@ Follow the steps below to update the stack.
 #### Clearing changes
 
 After the changes have been fetched, the changed files must be reviewed. Some changes can then be corrected again.
+
+#### Need frame stuff
+
+If you need the frame stuff from the public folder in you dist-folder. You can configure that like this:
+
+1. Install `npm i -D copy-plugin-webpack`
+2. Extends the `webpack.config.js` like this<br>
+
+```js
+module.exports = (...args) => {
+  // Here using the example for react
+  const config = require('@leanup/stack-react/webpack.config')(...args);
+
+  const CopyPlugin = require('copy-webpack-plugin');
+  if (args[0].WEBPACK_BUILD) {
+    config.plugins.push(
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+          },
+        ],
+      })
+    );
+  }
+  return config;
+};
+```
