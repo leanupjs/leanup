@@ -47,13 +47,13 @@ jobs:
           branch: 'release/${{matrix.version}}'
           force: true
       - name: Patch versioning
-        if: ${{matrix.version}} != 1.2'
+        if: ${{matrix.version}} != '1.2'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           npx lerna version patch --no-push --yes
       - name: Patch versioning
-        if: ${{matrix.version}} == 1.2'
+        if: ${{matrix.version}} == '1.2'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
