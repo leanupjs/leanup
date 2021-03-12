@@ -1,7 +1,7 @@
 module.exports = {
   base: '/1.0/',
   lang: 'en-US',
-  title: 'LeanupJS',
+  title: 'LeanupJS (v1.0)',
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
@@ -57,8 +57,6 @@ module.exports = {
 
     sidebar: {
       '/guide/': getGuideSidebar(),
-      // "/config/": getConfigSidebar(),
-      // "/": getGuideSidebar(),
     },
   },
 };
@@ -81,23 +79,6 @@ function getGuideSidebar() {
           text: 'Usage',
           link: '/guide/usage/',
         },
-      ],
-    },
-  ];
-}
-
-function getConfigSidebar() {
-  return [
-    {
-      text: 'App Config',
-      children: [{ text: 'Basics', link: '/config/basics' }],
-    },
-    {
-      text: 'Theme Config',
-      children: [
-        { text: 'Homepage', link: '/config/homepage' },
-        { text: 'Algolia Search', link: '/config/algolia-search' },
-        { text: 'Carbon Ads', link: '/config/carbon-ads' },
       ],
     },
   ];

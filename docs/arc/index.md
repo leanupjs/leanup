@@ -2,7 +2,7 @@
 
 This project demonstrates a scalable, flexible, and framework-neutral JavaScript web application architecture.
 
-# Frameworks
+## Frameworks
 
 The selection of the following frameworks depends on this [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential) and [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html).
 
