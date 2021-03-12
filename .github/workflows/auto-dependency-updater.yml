@@ -74,19 +74,7 @@ jobs:
         run: |
           content=`cat ./lerna.json | tr -d "\n"`
           echo "::set-output name=lernaJson::$content"
-      - name: Create Release
-        if: ${{matrix.version != '1.2'}}
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
-        with:
-          body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
-          draft: false
-          prerelease: false
-          release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
-          tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
       - name: Create PreRelease
-        if: ${{matrix.version == '1.2'}}
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
