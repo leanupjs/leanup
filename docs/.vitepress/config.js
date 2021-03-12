@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/1.2/',
+  base: '/1.1/',
   lang: 'en-US',
   title: 'LeanupJS',
   description: 'Vite & Vue powered static site generator.',
@@ -55,37 +55,35 @@ module.exports = {
       },
     ],
 
-    // sidebar: {
-    //   "/guide/": getGuideSidebar(),
-    //   "/config/": getConfigSidebar(),
-    //   "/": getGuideSidebar(),
-    // },
+    sidebar: {
+      '/guide/': getGuideSidebar(),
+      // "/config/": getConfigSidebar(),
+      // "/": getGuideSidebar(),
+    },
   },
 };
 
 function getGuideSidebar() {
   return [
     {
-      text: 'Introduction',
+      text: 'Guide',
+      link: '/guide/',
       children: [
-        { text: 'What is VitePress?', link: '/' },
-        { text: 'Getting Started', link: '/guide/getting-started' },
-        { text: 'Configuration', link: '/guide/configuration' },
-        { text: 'Asset Handling', link: '/guide/assets' },
-        { text: 'Markdown Extensions', link: '/guide/markdown' },
-        { text: 'Deploying', link: '/guide/deploy' },
-      ],
-    },
-    {
-      text: 'Advanced',
-      children: [
-        { text: 'Frontmatter', link: '/guide/frontmatter' },
-        { text: 'Global Computed', link: '/guide/global-computed' },
-        { text: 'Global Component', link: '/guide/global-component' },
-        { text: 'Customization', link: '/guide/customization' },
         {
-          text: 'Differences from Vuepress',
-          link: '/guide/differences-from-vuepress',
+          text: 'Showcase',
+          link: '/guide/showcase/',
+        },
+        {
+          text: 'Installation',
+          link: '/guide/installation/',
+        },
+        {
+          text: 'Migration',
+          link: '/guide/migration/',
+        },
+        {
+          text: 'Usage',
+          link: '/guide/usage/',
         },
       ],
     },

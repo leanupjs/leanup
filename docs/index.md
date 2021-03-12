@@ -1,21 +1,20 @@
 <p style="text-align: center; background: white;">
   <a href="https://leanupjs.org">
-    <img src="https://leanupjs.org/assets/logo.svg" height="100">
+    <img src="https://leanupjs.org/assets/logo.svg" height="200">
   </a><br>
   <h2 style="text-align: center;">
     <cite><b>Make things pure</b> ... to become lean.</cite>
   </h2>
 </p>
-<!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe> -->
 <hr>
 
-[![license][license]][license-url]
-[![lernajs][lernajs]][lernajs-url]
-[![prettier][prettier]][prettier-url]
+[![license][license]][license-url]&#160;
+[![lernajs][lernajs]][lernajs-url]&#160;
+[![prettier][prettier]][prettier-url]&#160;
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
 [license]: https://img.shields.io/npm/l/@leanup/stack
-[license-url]: https://github.com/leanupjs/leanup/blob/release/1.1/LICENSE.md
+[license-url]: https://github.com/leanupjs/leanup/blob/release/1.2/LICENSE.md
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
@@ -24,12 +23,6 @@
 <h1>leanup<sup style="color: grey; font-size: 75%"> js</sup></h1>
 
 The **`@leanup` ecosystem** stands for a lightweight and pure way for application development in JavaScript/TypeScript.
-
-- [Motivation](#motivation)
-- [What makes the difference](#what-makes-the-difference)
-- [Principles](#principles)
-- [Demo's](#demos)
-- [Tools](#tools)
 
 ## Motivation
 
@@ -43,9 +36,11 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 
 ## What makes the difference
 
-> <cite>Stop the transitive knowledge.</cite>
+> ⛔ <cite style="color: red"> Stop the proprietary and transitive knowledge.</cite>
 
-We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.
+> 📑 <cite style="color: black"> We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.</cite>
+
+> 🤸‍♂️ <cite style="color: blue">We are fast and flexible because we have chosen the minimally sensible tool composition and decoupled it in separately serviceable modules.</cite>
 
 ## Principles
 
