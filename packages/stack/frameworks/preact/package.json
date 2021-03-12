@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-preact",
-  "version": "1.2.0-rc.53",
+  "version": "1.2.0-rc.54",
   "description": "This package contains the Preact framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -37,7 +37,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "^1.2.0-rc.53",
+    "@leanup/stack-webpack": "^1.2.0-rc.54",
     "@types/node": "14.14.33",
     "typescript": "4.2.3"
   },

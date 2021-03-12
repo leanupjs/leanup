@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.2.0-rc.53",
+  "version": "1.2.0-rc.54",
   "dependencies": {
     "@angular/common": "next",
     "@angular/compiler": "next",
@@ -14,8 +14,8 @@
     "zone.js": "0.11.4"
   },
   "devDependencies": {
-    "@leanup/cli-angular": "^1.2.0-rc.53",
-    "@leanup/stack-angular": "^1.2.0-rc.53",
+    "@leanup/cli-angular": "^1.2.0-rc.54",
+    "@leanup/stack-angular": "^1.2.0-rc.54",
     "@ngtools/webpack": "next",
     "typescript": "~4.1.5"
   }
