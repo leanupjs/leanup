@@ -1,238 +1,183 @@
-<p style="text-align: center; background: white;">
-  <a href="https://leanupjs.org">
-    <img src="https://leanupjs.org/assets/logo.svg" height="100">
-  </a><br>
-  <h2 style="text-align: center;">
-    <cite><b>Make things pure</b> ... to become lean.</cite>
-  </h2>
-</p>
-<!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/du_BnIZzEKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe> -->
-<hr>
+# Configuration
 
-[![license][license]][license-url]
-[![lernajs][lernajs]][lernajs-url]
-[![prettier][prettier]][prettier-url]
-[![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
+The `@leanup stack` contains coordinated and preconfigured tools for developing, building, formatting, linting and testing Single-Web-Applications.
 
-[license]: https://img.shields.io/npm/l/@leanup/cli
-[license-url]: https://github.com/leanupjs/cli/blob/master/LICENSE
-[lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
-[lernajs-url]: https://lerna.js.org
-[prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
-[prettier-url]: https://prettier.io
+## General
 
-<h1>leanup<sup style="color: grey; font-size: 75%"> js</sup></h1>
+### Extends configurations
 
-The **`@leanup` ecosystem** stands for a lightweight and pure way for application development in JavaScript/TypeScript.
+The `@leanup stack` provides minimal default configurations for all included tools. And it enables the configuration files to be adapted or expanded to suit the specifics of the project.
 
-- [Motivation](#motivation)
-- [What makes the difference](#what-makes-the-difference)
-- [Principles](#principles)
-- [Arguments](#arguments)
-  - [Pro](#pro)
-  - [Contra](#contra)
-- [Demo's](#demos)
-- [Tools](#tools)
-- [Ecosystem structure](#ecosystem-structure)
-  - [Frameworks](#frameworks)
-  - [Extensions](#extensions)
-  - [Thinks](#thinks)
-- [Alternatives](#alternatives)
+### TypeScript
 
-## Motivation
+The hole stack is focused on `TypeScript` with the following `tsconfig.json`:
 
-- Learnability
-- Controllability
-- Universality
-- Flexibility
-- Scalability
-- Durability
-- Transparency
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "pretty": true,
+    "target": "esnext",
+    "module": "esnext",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "types": ["mocha", "node"],
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "strict": true
+  },
+  "include": ["src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
+  "exclude": ["node_modules/@leanup/**/template/**/*"]
+}
+```
 
-## What makes the difference
+### Bundler
 
-> <cite>Stop the transitive knowledge.</cite>
+The bundler is `webpack`.
 
-We use the minimal configuration and build no overhead stuff on top of the popular tools and make every native command transparent.
+**List:**
 
-## Principles
+- [Webpack](https://webpack.js.org/)
 
-- convention over configuration
-- pure commands under the hood
-- don't repeat yourself
-- following the generic instead of the influenced way
-- keep the dependencies always up to date
+### Transpiler
 
-## Arguments
+The transpiler is `babel`.
 
-The arguments for and against this concept are documented here:
+**List:**
 
-### Pro
+- [Babel](https://babeljs.io/)
 
-- select only one pure and popular tool for each use case (e.g. bundling, unit-test)
-- there are extensible configuration files for each tool
-- due to the flat dependencies we can always stay up to date
-- the CLI bundles all the necessary tools in a portable/scalable way
-- the risk to get vulnerabilites in dependencies is lower
-- leanup's own code is kept to a minimum
+## At work
 
-### Contra
+### Develop
 
-> - please give feedback
-> - please show us your perspective
+To develop an application, there must be an entry file `app.ts` in the `src` directory.
 
-## Demo's
+For example, if you develop a React application the content of the `app.ts` looks like:
 
-There are some working examples:
+```ts
+import 'react.tsx';
+```
 
-- [https://github.modevel.de/poc/](https://github.modevel.de/poc/)
-- [PoC - Flexible web application architecture](https://github.com/martinoppitz/poc-flexible-web-application-architecture#readme)
-- [Hello World - Comparison](https://github.com/martinoppitz/hello-world-comparison#readme)
+### Build
 
-## Tools
+The bundler is `webpack`.
 
-| Tool/Technology  |    Description    | Status | Note                       | Rating                                                                                                                                               |
-| ---------------- | :---------------: | :----: | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [TypeScript]     |     Language      |   ✔️   | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
-| [Webpack]        |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
-| [Snowpack]       |      Bundler      |   ⌛   | in progress                | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
-| [Vite]           |      Bundler      |   ⌛   | in progress                | [![webpack](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)                                           |
-| [ESBuild]        |    Transpiler     |   ✔️   | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
-| [Babel]          |    Transpiler     |   ✔️   | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
-| [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
-| [Chai]           |     Assertion     |   ✔️   | ready                      | [![chai](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/chai)                                        |
-| [Sinon]          |      Mocking      |   ✔️   | ready                      | [![sinon](https://snyk.io/advisor/npm-package/sinon/badge.svg)](https://snyk.io/advisor/npm-package/sinon)                                           |
-| [NYC]            |   Code-Coverage   |   ✔️   | ready                      | [![nyc](https://snyk.io/advisor/npm-package/nyc/badge.svg)](https://snyk.io/advisor/npm-package/nyc)                                                 |
-| [ESLint]         |   Code-Checker    |   ✔️   | ready                      | [![eslint](https://snyk.io/advisor/npm-package/eslint/badge.svg)](https://snyk.io/advisor/npm-package/eslint)                                        |
-| [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️   | ready                      | [![nightwatch](https://snyk.io/advisor/npm-package/nightwatch/badge.svg)](https://snyk.io/advisor/npm-package/nightwatch)                            |
-| [Allsure]        |      Report       |   ✔️   | ready                      |
-| [Cucumber]       |        BDD        |   ✔️   | ready                      | [![cucumber](https://snyk.io/advisor/npm-package/cucumber/badge.svg)](https://snyk.io/advisor/npm-package/cucumber)                                  |
-| [robotframework] |        BDD        |   ⌛   | will be evaluated          |                                                                                                                                                      |
-| [Storybook]      |   Documentation   |   ⌛   | in progress                | [![storybook](https://snyk.io/advisor/npm-package/storybook/badge.svg)](https://snyk.io/advisor/npm-package/storybook)                               |
-| [OpenAPI]        |        API        |   ✔️   | ready                      |                                                                                                                                                      |
-| [GraphQL]        |        API        |   ✔️   | ready                      | [![graphql](https://snyk.io/advisor/npm-package/graphql/badge.svg)](https://snyk.io/advisor/npm-package/graphql)                                     |
-| [Workbox]        |        PWA        |   ✔️   | ready                      | [![workbox](https://snyk.io/advisor/npm-package/workbox/badge.svg)](https://snyk.io/advisor/npm-package/workbox)                                     |
-| [Lerna]          |     Mono-Repo     |   ✔️   | ready                      | [![lerna](https://snyk.io/advisor/npm-package/lerna/badge.svg)](https://snyk.io/advisor/npm-package/lerna)                                           |
-| [Ant-Design]     |   Design-System   |   ✔️   | proved                     | [![antd](https://snyk.io/advisor/npm-package/antd/badge.svg)](https://snyk.io/advisor/npm-package/antd)                                              |
-| [Material]       |   Design-System   |   ✔️   | proved                     | [![@material/textfield](https://snyk.io/advisor/npm-package/@material/textfield/badge.svg)](https://snyk.io/advisor/npm-package/@material/textfield) |
-| [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
-| [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
-| [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
-| [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
-| [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
-| [PostCSS]        |        CSS        |   ✔️   | ready                      |
-| [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
-| [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* | [![testcafe](https://snyk.io/advisor/npm-package/testcafe/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                                |
-| [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               | [![tslint](https://snyk.io/advisor/npm-package/tslint/badge.svg)](https://snyk.io/advisor/npm-package/tslint)                                        |
-| [Cypress]        |  E2E-Test-Runner  |   ❌   | excluded \*                | [![cypress](https://snyk.io/advisor/npm-package/cypress/badge.svg)](https://snyk.io/advisor/npm-package/cypress)                                     |
+**List:**
 
-> \*
-> Arguments agains [Cypress]:
->
-> - reinvent wheel
->   - detect css selectors
->   - BDD test syntax
->   - principals
-> - large tooling
-> - a lot of binaries
-> - many dependencies
-> - ci integration vs selenium hub
->
-> It is difficult to keep focus with Cypress as it is more a nice tool than an effective tool. It is expected that a lot of time will be invested to justify the requirements of a project.
+- Webpack
 
-> \*\* TSLint is deprecated.
+### Format
 
-> \*\*\* Webhint is not practical for the development of components, since component tags often have no relation to standard HTML. In addition, the webhint package alone is over 100 MB in size. I have good by using a IDE webhint plugin, like [VSCode webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
+We chose `prettier` for the code formatting with the following configuration:
 
-> \*\*\*\* [TestCafe] The idea that defined TestCafe architecture was that you don't really need an external driver to run end-to-end tests in the browser. That's interesting.
+```js
+module.exports = {
+  printWidth: 120,
+  singleQuote: true,
+};
+```
 
-## Ecosystem structure
+### Lint
 
-Vanilla Java-/TypeScript are supported by default. That means for example custom elements and any plain Java-/TypeScript code.
+We chose primary `eslint` for the static code checking. In addition to `eslint`, we provide a `tsc` command.
 
-- [`@leanup/cli`](https://www.npmjs.com/package/@leanup/cli) ✔️
-- [`@leanup/cli-vanilla`](https://www.npmjs.com/package/@leanup/cli-vanilla) (optional) ✔️
+#### ESLint
 
-### Frameworks
+```js
+/**
+ * https://www.npmjs.com/package/eslint
+ */
+module.exports = {
+  root: false,
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: ['eslint:recommended'],
+  overrides: [
+    /**
+     * - https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
+     * - https://www.npmjs.com/package/@typescript-eslint/parser
+     */
+    {
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      files: ['**/*.ts', '**/*.tsx'],
+      parserOptions: {
+        ecmaVersion: 2018,
+        project: './tsconfig.json',
+        extraFileExtensions: ['.vue'],
+        sourceType: 'module',
+      },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-member-accessibility': ['warn'],
+      },
+    },
+    /**
+     * - https://www.npmjs.com/package/eslint-plugin-html
+     */
+    {
+      files: ['**/*.html'],
+      plugins: ['html'],
+    },
+    /**
+     * - https://www.npmjs.com/package/eslint-plugin-json
+     */
+    {
+      extends: ['plugin:json/recommended'],
+      files: ['**/*.json'],
+      plugins: ['json'],
+    },
+    {
+      env: {
+        mocha: true,
+      },
+      files: ['tests/**/*', '**/*.spec.*', '**/*.test.*'],
+    },
+  ],
+  parser: '@typescript-eslint/parser',
+  rules: {
+    'no-empty': 'off',
+    'no-prototype-builtins': 'off',
+    'space-before-function-paren': 'off',
+  },
+};
+```
 
-Vanilla Java-/TypeScript are supported by default. That means for example custom elements and any plain Java-/TypeScript code.
+#### TSC
 
-The selection of the following frameworks depends in parts on the following references:
+If you want you can execute a addition test with `tsc -p tsconfig.json`.
 
-- [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential),
-- [benchmark](https://krausest.github.io/js-framework-benchmark/2020/table_chrome_80.html) and
-- [survey](https://2019.stateofjs.com/front-end-frameworks)
+### Test
 
-Currently the following framework extensions are available:
+Our test strategy focuses on unit- and e2e-testing.
 
-- [`@leanup/cli-angular`](https://www.npmjs.com/package/@leanup/cli-angular) ✔️
-- [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️
-- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ (will be removed in v1.1)
-- [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️
-- [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️
-- [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
-- [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
-- [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️
-- [`@leanup/cli-vue`](https://www.npmjs.com/package/@leanup/cli-vue) ✔️
-- [`@leanup/cli-vue3`](https://www.npmjs.com/package/@leanup/cli-vue3) ✔️
+#### Unit-Test
 
-### Extensions
+The unit test framework is `moche` in addition with `chai` and `sinon`.
 
-A separate package contains some nice but not required addons for webpack.
+#### E2E-Test
 
-- [`@leanup/cli-addons`](https://www.npmjs.com/package/@leanup/cli-addons) ✔️
-- [`@leanup/cli-cucumber`](https://www.npmjs.com/package/@leanup/cli-cucumber) ✔️
-- [`@leanup/cli-graphql`](https://www.npmjs.com/package/@leanup/cli-graphql) ✔️
-- [`@leanup/cli-pwa`](https://www.npmjs.com/package/@leanup/cli-pwa) ✔️
-- [`@leanup/cli-webhint`](https://www.npmjs.com/package/@leanup/cli-webhint) ✔️
-
-### Thinks
-
-There a separate packages for important application features.
-
-- [`@leanup/git-hooks`](https://www.npmjs.com/package/@leanup/git-hooks) ✔️
-- [`@leanup/form`](https://www.npmjs.com/package/@leanup/form) ✔️
-- [`@leanup/lib`](https://www.npmjs.com/package/@leanup/lib) ✔️
-- [`@leanup/ui`](https://www.npmjs.com/package/@leanup/ui) ⌛ (in progress)
-
-## Alternatives
-
-- Angular [![@angular/cli](https://snyk.io/advisor/npm-package/@angular/cli/badge.svg)](https://snyk.io/advisor/npm-package/@angular/cli)
-- Neutrino [![neutrino](https://snyk.io/advisor/npm-package/neutrino/badge.svg)](https://snyk.io/advisor/npm-package/neutrino)
-- Snowpack [![snowpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)
-- Vite [![vite](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)
-<!-- - Leanup [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli) -->
-
-[babel]: https://babeljs.io
-[typescript]: https://typescriptlang.org
-[webpack]: https://webpack.js.org
-[mocha]: https://mochajs.org
-[chai]: https://www.chaijs.com
-[sinon]: https://sinonjs.org
-[nyc]: https://istanbul.js.org
-[storybook]: https://storybook.js.org
-[svelte devtools]: https://github.com/RedHatter/svelte-devtools
-[nightwatch.js]: https://nightwatchjs.org
-[tslint]: https://palantir.github.io/tslint
-[eslint]: https://eslint.org
-[graphql]: https://graphql.org
-[sass]: https://sass-lang.com
-[less]: http://lesscss.org
-[lerna]: https://lerna.js.org
-[workbox]: https://developers.google.com/web/tools/workbox
-[ant-design]: https://ant.design
-[allsure]: http://allure.qatools.ru
-[bootstrap]: https://getbootstrap.com
-[material]: https://material.io
-[cucumber]: https://cucumber.io
-[cypress]: https://www.cypress.io
-[webhint]: https://www.webhint.io
-[testcafe]: https://devexpress.github.io/testcafe/
-[robotframework]: https://robotframework.org
-[tailwindcss]: https://tailwindcss.com
-[postcss]: https://postcss.org
-[esbuild]: https://esbuild.github.io
-[snowpack]: https://www.snowpack.dev/
-[vite]: https://vitejs.dev/
-[openapi]: https://openapis.org
-[nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
+The unit test framework is `nightwatch.js` in addition with `cucumber`.
