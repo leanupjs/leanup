@@ -1577,13 +1577,21 @@ Master
 
 - fix dependency versions [`c492f6e`](https://github.com/leanupjs/leanup/commit/c492f6e4351fdd89617706bb521a1d2e6a29cba8)
 
-#### [1.1.0-rc.100](https://github.com/leanupjs/leanup/compare/1.0.113...1.1.0-rc.100)
+#### [1.1.0-rc.100](https://github.com/leanupjs/leanup/compare/1.0.114...1.1.0-rc.100)
 
 > 18 September 2020
 
 - upgrade and update deps [`870b33f`](https://github.com/leanupjs/leanup/commit/870b33ff7daa59fe691a7ea01d26b2459a9e2b5a)
 - set version number  1.1.0-rc.0 [`40e5ae2`](https://github.com/leanupjs/leanup/commit/40e5ae28c478145751995eb24d74bf541f9fda41)
 - setup tag to next instead of canary [`ae72d4b`](https://github.com/leanupjs/leanup/commit/ae72d4b74f53cd79a3c971a8dc98d81074dd020c)
+
+#### [1.0.114](https://github.com/leanupjs/leanup/compare/1.0.113...1.0.114)
+
+> 12 March 2021
+
+- docs: sync doc [`64fcd00`](https://github.com/leanupjs/leanup/commit/64fcd00b369d69e441218ac50278940c99f540a8)
+- Update changelogs [`0bd27ec`](https://github.com/leanupjs/leanup/commit/0bd27ecb2518a116e04cb587fd1207005db6eb7d)
+- Update changelogs [`bbc1165`](https://github.com/leanupjs/leanup/commit/bbc116568d2e7717f911657a03af4d3307ef5e16)
 
 #### [1.0.113](https://github.com/leanupjs/leanup/compare/1.0.112...1.0.113)
 
