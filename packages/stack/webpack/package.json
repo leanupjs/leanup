@@ -32,11 +32,11 @@
   },
   "dependencies": {
     "copy-modules-webpack-plugin": "2.2.1",
-    "css-loader": "5.1.1",
+    "css-loader": "5.1.2",
     "esbuild-loader": "2.9.2",
     "file-loader": "6.2.0",
     "less-loader": "8.0.0",
-    "postcss-loader": "5.1.0",
+    "postcss-loader": "5.2.0",
     "sass-loader": "11.0.1",
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
