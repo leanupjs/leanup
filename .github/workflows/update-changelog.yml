@@ -21,9 +21,9 @@ jobs:
       - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
+          fetch-depth: 0
+          persist-credentials: false
           ref: 'release/${{matrix.version}}'
-      - name: Git pull
-        run: git pull
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.5
         with:
