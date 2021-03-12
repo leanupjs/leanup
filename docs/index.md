@@ -34,7 +34,7 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 - Durability
 - Transparency
 
-## What makes the difference
+## Differences
 
 > ⛔ <cite style="color: red"> Stop the proprietary and transitive knowledge.</cite>
 
