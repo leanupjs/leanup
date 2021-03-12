@@ -42,6 +42,19 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 
 > 🤸‍♂️ <cite style="color: blue">We are fast and flexible because we have chosen the minimally sensible tool composition and decoupled it in separately serviceable modules.</cite>
 
+## Maintainment
+
+We have the following maintenance strategy:
+
+1. Everything is based on semantic versioning ([SemVer](https://semver.org/))
+2. We use as many dependencies as necessary and as few as possible.
+3. Weekly fully automatic updates of all dependencies (minor level)\*.
+4. We're only refectoring the next version.
+5. We use npm labels for version grouping (latest-1.0, canary-1.1).
+6. We are monitoring the security gaps in the latest major release.
+
+<small>\* We release every wednesday at 04:00 CET (https://www.mkwd.net/weekly-releases-when-is-the-best-time-to-deploy-code/).</small>
+
 ## Principles
 
 - convention over configuration
