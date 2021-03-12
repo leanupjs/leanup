@@ -69,11 +69,11 @@ jobs:
       #   continue-on-error: true
       #   run: |
       #     git push --delete origin v${{fromJson(steps.lerna.outputs.lernaJson).version}}
-      # - name: Read Lerna
-      #   id: lerna
-      #   run: |
-      #     content=`cat ./lerna.json | tr -d "\n"`
-      #     echo "::set-output name=lernaJson::$content"
+      - name: Read Lerna
+        id: lerna
+        run: |
+          content=`cat ./lerna.json | tr -d "\n"`
+          echo "::set-output name=lernaJson::$content"
       - name: Create PreRelease
         uses: actions/create-release@v1
         env:
