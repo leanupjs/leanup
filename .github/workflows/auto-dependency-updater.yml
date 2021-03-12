@@ -77,7 +77,7 @@ jobs:
       - name: Create PreRelease
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
           draft: false
@@ -99,6 +99,6 @@ jobs:
       - name: Push changelogs
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GIT_PUSH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: 'release/${{matrix.version}}'
           force: true
