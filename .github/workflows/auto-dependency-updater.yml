@@ -64,6 +64,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: 'release/${{matrix.version}}'
           force: true
+      - name: Delete tag
+        continue-on-error: true
+        run: |
+          git push --delete origin v${{fromJson(steps.lerna.outputs.lernaJson).version}}
       - name: Read Lerna
         id: lerna
         run: |
@@ -73,7 +77,7 @@ jobs:
         if: ${{matrix.version != '1.2'}}
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
         with:
           body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
           draft: true
@@ -84,10 +88,28 @@ jobs:
         if: ${{matrix.version == '1.2'}}
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
         with:
           body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
           draft: true
           prerelease: true
           release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+      - name: Generate changelogs
+        run: |
+          npm i auto-changelog --no-save
+          npx auto-changelog --release-summary --tag-pattern ^${{matrix.version}}.\d+ -o docs/changelog/index.md
+          npx auto-changelog --release-summary
+      - name: Commit changelogs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git status
+          git commit -m "Update changelogs"
+      - name: Push changelogs
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GIT_PUSH_TOKEN }}
+          branch: 'release/${{matrix.version}}'
+          force: true

@@ -8,7 +8,7 @@ module.exports = {
     repo: 'leanupjs/leanup',
     docsDir: 'docs',
 
-    editLinks: true,
+    editLinks: false,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
 
@@ -43,6 +43,11 @@ module.exports = {
         text: 'Configuration',
         link: '/config/',
         activeMatch: '^/config/',
+      },
+      {
+        text: 'Changelog',
+        link: '/changelog/',
+        activeMatch: '^/changelog/',
       },
       {
         text: 'Release Notes',

@@ -27,6 +27,11 @@
     "type": "git",
     "url": "https://github.com/leanupjs/leanup.git"
   },
+  "auto-changelog": {
+    "template": "keepachangelog",
+    "unreleased": false,
+    "commitLimit": false
+  },
   "devDependencies": {
     "@commitlint/cli": "12.1.0",
     "@commitlint/config-conventional": "12.1.0",
