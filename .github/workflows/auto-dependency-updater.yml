@@ -6,7 +6,7 @@ name: Auto dependency updater
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 4 * * 3'
 
 jobs:
   build:
