@@ -1612,13 +1612,249 @@ Master
 
 - fix dependency versions [`c492f6e`](https://github.com/leanupjs/leanup/commit/c492f6e4351fdd89617706bb521a1d2e6a29cba8)
 
-#### [1.1.0-rc.100](https://github.com/leanupjs/leanup/compare/1.0.89...1.1.0-rc.100)
+#### [1.1.0-rc.100](https://github.com/leanupjs/leanup/compare/1.0.114...1.1.0-rc.100)
 
 > 18 September 2020
 
 - upgrade and update deps [`870b33f`](https://github.com/leanupjs/leanup/commit/870b33ff7daa59fe691a7ea01d26b2459a9e2b5a)
 - set version number  1.1.0-rc.0 [`40e5ae2`](https://github.com/leanupjs/leanup/commit/40e5ae28c478145751995eb24d74bf541f9fda41)
 - setup tag to next instead of canary [`ae72d4b`](https://github.com/leanupjs/leanup/commit/ae72d4b74f53cd79a3c971a8dc98d81074dd020c)
+
+#### [1.0.114](https://github.com/leanupjs/leanup/compare/1.0.113...1.0.114)
+
+> 12 March 2021
+
+- docs: sync doc [`64fcd00`](https://github.com/leanupjs/leanup/commit/64fcd00b369d69e441218ac50278940c99f540a8)
+- Update changelogs [`0bd27ec`](https://github.com/leanupjs/leanup/commit/0bd27ecb2518a116e04cb587fd1207005db6eb7d)
+- Update changelogs [`bbc1165`](https://github.com/leanupjs/leanup/commit/bbc116568d2e7717f911657a03af4d3307ef5e16)
+
+#### [1.0.113](https://github.com/leanupjs/leanup/compare/1.0.112...1.0.113)
+
+> 10 March 2021
+
+- Auto dependency update [`#1139`](https://github.com/leanupjs/leanup/pull/1139)
+- chore: reorganize github workflows [`2e2eb7b`](https://github.com/leanupjs/leanup/commit/2e2eb7b38d90ef5a9622b6f96e4716f36b7d121b)
+- chore: reorganize github workflows [`14a4ce6`](https://github.com/leanupjs/leanup/commit/14a4ce6667a4bfe075c1adf643af6c2f293ae59d)
+
+#### [1.0.112](https://github.com/leanupjs/leanup/compare/1.0.111...1.0.112)
+
+> 9 March 2021
+
+- Auto dependency update [`#1137`](https://github.com/leanupjs/leanup/pull/1137)
+- Auto dependency update [`#1134`](https://github.com/leanupjs/leanup/pull/1134)
+- chore: fix @leanup deps on v1.0 [`1a9fc10`](https://github.com/leanupjs/leanup/commit/1a9fc107962e4c8a829abf4931002bf56b55aa8b)
+- fix: remove path option at less configuration for less-loader [`fe37978`](https://github.com/leanupjs/leanup/commit/fe379787f42a0a12c6bb8e42635c7b43cde18b95)
+- chore: optimize less configuration [`c480997`](https://github.com/leanupjs/leanup/commit/c480997a94e1bcf6e23b3cf9c45e89fac40861fe)
+
+#### [1.0.111](https://github.com/leanupjs/leanup/compare/1.0.110...1.0.111)
+
+> 8 March 2021
+
+- chore: reset all eslint settings - no breaking changes [`ba6d441`](https://github.com/leanupjs/leanup/commit/ba6d44132a0be7da176c6aad8f4d17d950e93238)
+- chore: reconfigure version 1.0 [`23223a7`](https://github.com/leanupjs/leanup/commit/23223a7545c4b4c43cad36413835b1bc0561033e)
+- chore: reconfigure version 1.0 [`e60423f`](https://github.com/leanupjs/leanup/commit/e60423f6d2a40c9bdf4b6f75c93c448a476fff8b)
+
+#### [1.0.110](https://github.com/leanupjs/leanup/compare/1.0.109...1.0.110)
+
+> 7 March 2021
+
+- Auto dependency update [`#1057`](https://github.com/leanupjs/leanup/pull/1057)
+- chore: decouple main package.json from leanup packages [`eacd6c4`](https://github.com/leanupjs/leanup/commit/eacd6c4ce0c596df8a611589472ce46939b11b41)
+- chore: reconfigure eslint [`6457095`](https://github.com/leanupjs/leanup/commit/64570953801029f801b8c110535c429fd9f162d9)
+
+#### [1.0.109](https://github.com/leanupjs/leanup/compare/1.0.108...1.0.109)
+
+> 7 March 2021
+
+- Auto dependency update [`#1055`](https://github.com/leanupjs/leanup/pull/1055)
+- Auto dependency update [`#1054`](https://github.com/leanupjs/leanup/pull/1054)
+- Auto dependency update [`#1052`](https://github.com/leanupjs/leanup/pull/1052)
+- Auto dependency update [`#1049`](https://github.com/leanupjs/leanup/pull/1049)
+- chore: update deps [`6d2a523`](https://github.com/leanupjs/leanup/commit/6d2a5231a780f116faf08e3fbbf791866a921db4)
+- chore: enable resolveJsonModule in tsconfig [`9bafecd`](https://github.com/leanupjs/leanup/commit/9bafecd53e2ac21dc82b8f75b1a1ef907d67f01b)
+
+#### [1.0.108](https://github.com/leanupjs/leanup/compare/1.0.107...1.0.108)
+
+> 4 March 2021
+
+- Auto dependency update [`#950`](https://github.com/leanupjs/leanup/pull/950)
+- Auto dependency update [`#948`](https://github.com/leanupjs/leanup/pull/948)
+
+#### [1.0.107](https://github.com/leanupjs/leanup/compare/1.0.106...1.0.107)
+
+> 3 March 2021
+
+- Auto dependency update [`#900`](https://github.com/leanupjs/leanup/pull/900)
+- chore(deps): bump husky from 5.1.2 to 5.1.3 in /packages/git-hooks [`#895`](https://github.com/leanupjs/leanup/pull/895)
+- Auto dependency update [`#893`](https://github.com/leanupjs/leanup/pull/893)
+- chore: subsequent update of the dependencies after the release of new packages [`2c0c814`](https://github.com/leanupjs/leanup/commit/2c0c814c00459e2b19103a07dee8dcdec0a6a42d)
+- chore: does not copy empty folder by using --only-config option [`ff6fa31`](https://github.com/leanupjs/leanup/commit/ff6fa3160d560295bea50e5c769b0ade4286929d)
+- chore: add tslib to cli stack [`3243e91`](https://github.com/leanupjs/leanup/commit/3243e91f4debf7135e639055145e1a5dc172040a)
+
+#### [1.0.106](https://github.com/leanupjs/leanup/compare/1.0.105...1.0.106)
+
+> 1 March 2021
+
+- Auto dependency update [`#839`](https://github.com/leanupjs/leanup/pull/839)
+- Auto dependency update [`#837`](https://github.com/leanupjs/leanup/pull/837)
+- chore(deps): bump @commitlint/format from 11.0.0 to 12.0.0 in /packages/git-hooks [`#714`](https://github.com/leanupjs/leanup/pull/714)
+- chore(deps): bump @commitlint/config-conventional from 11.0.0 to 12.0.0 in /packages/git-hooks [`#724`](https://github.com/leanupjs/leanup/pull/724)
+- chore(deps): bump @commitlint/cli from 11.0.0 to 12.0.0 in /packages/git-hooks [`#710`](https://github.com/leanupjs/leanup/pull/710)
+- Auto dependency update [`#835`](https://github.com/leanupjs/leanup/pull/835)
+- chore(deps): bump @commitlint/cli in /packages/git-hooks [`f065b20`](https://github.com/leanupjs/leanup/commit/f065b20fe1059c243db24eb9bf65d2c8a755a951)
+- chore(deps): bump @commitlint/format in /packages/git-hooks [`eb60eed`](https://github.com/leanupjs/leanup/commit/eb60eedb66f769accaa9c0be1f62a010cd3b2a6f)
+- chore(deps): bump @commitlint/config-conventional in /packages/git-hooks [`4d6b7f1`](https://github.com/leanupjs/leanup/commit/4d6b7f1f9aa4899a63b1a39ecac2adce9ebdb72f)
+
+#### [1.0.105](https://github.com/leanupjs/leanup/compare/1.0.104...1.0.105)
+
+> 25 February 2021
+
+- Auto dependency update [`#808`](https://github.com/leanupjs/leanup/pull/808)
+- chore: this commit fixed the SPDX expression - #108 [`02af470`](https://github.com/leanupjs/leanup/commit/02af47094147d390f0cc77db2081e55596352ae9)
+- chore: update gitignore [`e3aac3d`](https://github.com/leanupjs/leanup/commit/e3aac3d2006019de1f31644fdae6ab91697d9486)
+- chore: handle gitignore for package stack [`616dfc2`](https://github.com/leanupjs/leanup/commit/616dfc28cc106599cccc798785400ca003f72d2b)
+
+#### [1.0.104](https://github.com/leanupjs/leanup/compare/1.0.103...1.0.104)
+
+> 24 February 2021
+
+- Auto dependency update [`#767`](https://github.com/leanupjs/leanup/pull/767)
+- chore: revert "chore(deps): bump webpack and string-replace-loader" [`7828c98`](https://github.com/leanupjs/leanup/commit/7828c981024b7ae94177f169b454257117860e2a)
+- chore: remove outdated files [`79473f4`](https://github.com/leanupjs/leanup/commit/79473f4d9d466f484c4e194f7a74a913cf25f323)
+- chore: protect angular typescript requirements [`1d9c5e5`](https://github.com/leanupjs/leanup/commit/1d9c5e5232d4170c997910d18048d3a1ed4d920f)
+
+#### [1.0.103](https://github.com/leanupjs/leanup/compare/1.0.102...1.0.103)
+
+> 23 February 2021
+
+- chore(deps): bump webpack and string-replace-loader in /packages/cli/core [`#765`](https://github.com/leanupjs/leanup/pull/765)
+- chore(deps): bump actions/setup-node from v2.1.4 to v2.1.5 [`#726`](https://github.com/leanupjs/leanup/pull/726)
+- Auto dependency update [`#762`](https://github.com/leanupjs/leanup/pull/762)
+- chore(deps): bump nightwatch-api from 3.0.1 to 3.0.2 in /packages/cli/plugins/cucumber [`#678`](https://github.com/leanupjs/leanup/pull/678)
+- chore(deps): bump husky from 4.3.8 to 5.1.0 in /packages/git-hooks [`#690`](https://github.com/leanupjs/leanup/pull/690)
+- Auto dependency update [`#701`](https://github.com/leanupjs/leanup/pull/701)
+- chore(deps): bump webpack and string-replace-loader [`9b4460c`](https://github.com/leanupjs/leanup/commit/9b4460c2e0355dbcf66dc5898303c47ea4296148)
+- chore(deps): bump nightwatch-api in /packages/cli/plugins/cucumber [`3ab5b25`](https://github.com/leanupjs/leanup/commit/3ab5b2501f599b7bd642c3963c2a4c39502d31da)
+- chore: update babel eslint parser [`fceda04`](https://github.com/leanupjs/leanup/commit/fceda04b9df05d892d3cf29b7ef875250755a3c5)
+
+#### [1.0.102](https://github.com/leanupjs/leanup/compare/1.0.101...1.0.102)
+
+> 21 February 2021
+
+- Auto dependency update [`#671`](https://github.com/leanupjs/leanup/pull/671)
+- Auto dependency update [`#667`](https://github.com/leanupjs/leanup/pull/667)
+- feature: add tiny cli for leanupjs [`8725cbb`](https://github.com/leanupjs/leanup/commit/8725cbb25d23d4457d052ea76de18e6f0071f539)
+- chore: update index.html [`23383a0`](https://github.com/leanupjs/leanup/commit/23383a0f9385a4eecec930d1a93130d60971970b)
+- fix: input binding [`be1ce37`](https://github.com/leanupjs/leanup/commit/be1ce3784a17d911194f40f8c5de732e5e923a25)
+
+#### [1.0.101](https://github.com/leanupjs/leanup/compare/1.0.100...1.0.101)
+
+> 20 February 2021
+
+- fix: missing resources in all templates [`e4eb3a6`](https://github.com/leanupjs/leanup/commit/e4eb3a633fa2285f80ac5d009dd1ba1e88de40c7)
+- chore: solve dep blocker [`b333556`](https://github.com/leanupjs/leanup/commit/b33355650a3a2f40e2d7acb08aea861759b20be6)
+
+#### [1.0.100](https://github.com/leanupjs/leanup/compare/1.0.99...1.0.100)
+
+> 20 February 2021
+
+#### [1.0.99](https://github.com/leanupjs/leanup/compare/1.0.98...1.0.99)
+
+> 20 February 2021
+
+- Auto dependency update [`#664`](https://github.com/leanupjs/leanup/pull/664)
+- fix: missing core template for navigo upgrate to v8 [`6d94dfd`](https://github.com/leanupjs/leanup/commit/6d94dfd0ab2bbf3585e68dad17b43470beb261a5)
+- fix: remove outdated d.ts for navigo [`b76e042`](https://github.com/leanupjs/leanup/commit/b76e0425952007b720f2d5ca273de5dba2f0d1f8)
+- fix: wrong import in editor component in angular template [`2175836`](https://github.com/leanupjs/leanup/commit/2175836f6a98635e11b9a439d54d2fb4a4b559df)
+
+#### [1.0.98](https://github.com/leanupjs/leanup/compare/1.0.97...1.0.98)
+
+> 20 February 2021
+
+- Auto dependency update [`#662`](https://github.com/leanupjs/leanup/pull/662)
+- Chore/upgrade if possible [`#660`](https://github.com/leanupjs/leanup/pull/660)
+- chore(deps): bump webpack from 4.44.2 to 4.46.0 in /packages/cli/core [`#658`](https://github.com/leanupjs/leanup/pull/658)
+- chore: add new options to cli only-config and no-install [`#659`](https://github.com/leanupjs/leanup/pull/659)
+- Chore/upgrade if possible [`#657`](https://github.com/leanupjs/leanup/pull/657)
+- Auto dependency update [`#654`](https://github.com/leanupjs/leanup/pull/654)
+- Auto dependency update [`#587`](https://github.com/leanupjs/leanup/pull/587)
+- Auto dependency update [`#578`](https://github.com/leanupjs/leanup/pull/578)
+- chore(deps): bump commander from 7.0.0 to 7.1.0 in /packages/cli/core [`#543`](https://github.com/leanupjs/leanup/pull/543)
+- Auto dependency update [`#529`](https://github.com/leanupjs/leanup/pull/529)
+- chore: add vitepress doc [`581481f`](https://github.com/leanupjs/leanup/commit/581481f2c35a7f31bc6ee3d121c7e2862aa0984f)
+- chore: update all minor updates [`472753f`](https://github.com/leanupjs/leanup/commit/472753f03edd5401e042162550d57756cd2552e7)
+- chore: sync template to @leanup/cli-svelte@v1.1 [`2e0f388`](https://github.com/leanupjs/leanup/commit/2e0f388239c581c467dbe7d6be46e1df739759b5)
+
+#### [1.0.97](https://github.com/leanupjs/leanup/compare/1.0.96...1.0.97)
+
+> 14 February 2021
+
+- Auto dependency update [`#525`](https://github.com/leanupjs/leanup/pull/525)
+- chore: work on script [`#521`](https://github.com/leanupjs/leanup/pull/521)
+- chore: update publish  workflows [`f4a9cbd`](https://github.com/leanupjs/leanup/commit/f4a9cbd456a2c0fb12eb72c71ae0a4f878676edb)
+- fix: dry github workflow [`712f1ae`](https://github.com/leanupjs/leanup/commit/712f1aecbd72a8f0e5946166f6c75adaa359b337)
+- fix: dry github workflow [`b810128`](https://github.com/leanupjs/leanup/commit/b810128b41c609e984c57ff92653d8ef553e0d54)
+
+#### [1.0.96](https://github.com/leanupjs/leanup/compare/1.0.95...1.0.96)
+
+> 11 February 2021
+
+- Auto dependency update [`#389`](https://github.com/leanupjs/leanup/pull/389)
+- chore: update chromedriver in templates [`078cb3f`](https://github.com/leanupjs/leanup/commit/078cb3fe6d27090da151cbdae9d297f407cbddae)
+- chore: update minor versions [`0265549`](https://github.com/leanupjs/leanup/commit/026554951ec4ea2f5869234a87011655f278a3a1)
+- chore: upgrade svelte features [`9cc7008`](https://github.com/leanupjs/leanup/commit/9cc7008d03dbf33c467384f06cc381581744f135)
+
+#### [1.0.95](https://github.com/leanupjs/leanup/compare/1.0.94...1.0.95)
+
+> 6 February 2021
+
+- Auto dependency update [`79655f2`](https://github.com/leanupjs/leanup/commit/79655f2755a292243462a89140671f85db86eaba)
+
+#### [1.0.94](https://github.com/leanupjs/leanup/compare/1.0.93...1.0.94)
+
+> 3 February 2021
+
+- chore(deps-dev): bump svelte from 3.32.0 to 3.32.1 [`#277`](https://github.com/leanupjs/leanup/pull/277)
+- Auto dependency update [`9c60937`](https://github.com/leanupjs/leanup/commit/9c60937c80bc5e23f42344bbfa7f86f3250527bc)
+- chore: enable publish [`e49018c`](https://github.com/leanupjs/leanup/commit/e49018ca33ceb3aecee17b7fef2858a3350c99cd)
+
+#### [1.0.93](https://github.com/leanupjs/leanup/compare/1.0.92...1.0.93)
+
+> 27 January 2021
+
+- chore(deps-dev): bump npm-check-updates from 11.0.2 to 11.1.0 [`#273`](https://github.com/leanupjs/leanup/pull/273)
+- chore(deps-dev): bump svelte from 3.31.2 to 3.32.0 [`#274`](https://github.com/leanupjs/leanup/pull/274)
+- Auto dependency update [`fd1ad3c`](https://github.com/leanupjs/leanup/commit/fd1ad3c40262f43657723a230be4b716f0f6adb3)
+- chore: update svelte format [`96c4082`](https://github.com/leanupjs/leanup/commit/96c40825f088a687a77ee2d5ff0a577c9374a6f6)
+- chore: try replace in workflow [`31131c5`](https://github.com/leanupjs/leanup/commit/31131c56fb07da2820b141949fad286de278c290)
+
+#### [1.0.92](https://github.com/leanupjs/leanup/compare/1.0.91...1.0.92)
+
+> 25 January 2021
+
+- chore(deps-dev): bump npm-check-updates from 10.3.1 to 11.0.0 [`#265`](https://github.com/leanupjs/leanup/pull/265)
+- Auto dependency update [`928934d`](https://github.com/leanupjs/leanup/commit/928934ddca4f6a3f5239d916c5c919db8629bba4)
+- Auto dependency update [`300c607`](https://github.com/leanupjs/leanup/commit/300c6076e8eabee89658df823ff7d1409a2ab370)
+- Auto dependency update [`3570883`](https://github.com/leanupjs/leanup/commit/3570883b0677003274f28c7b189bf9d255d0e6f1)
+
+#### [1.0.91](https://github.com/leanupjs/leanup/compare/1.0.90...1.0.91)
+
+> 21 January 2021
+
+- chore(deps): bump sass from 1.32.4 to 1.32.5 [`#261`](https://github.com/leanupjs/leanup/pull/261)
+- chore(deps): bump webpack-cli from 4.3.1 to 4.4.0 [`#262`](https://github.com/leanupjs/leanup/pull/262)
+- chore(deps): bump commander from 6.2.1 to 7.0.0 [`#252`](https://github.com/leanupjs/leanup/pull/252)
+- Auto dependency update [`c1309c4`](https://github.com/leanupjs/leanup/commit/c1309c430620f74a61fd51dc7cb752fcc116776b)
+- Auto dependency update [`5579ff8`](https://github.com/leanupjs/leanup/commit/5579ff8ccbd688f407f9ab408e1f1a2b69dc144c)
+- fix: workflow [`e4f7a4a`](https://github.com/leanupjs/leanup/commit/e4f7a4a69526bf22dd7beb4a9063bd575df9530c)
+
+#### [1.0.90](https://github.com/leanupjs/leanup/compare/1.0.89...1.0.90)
+
+> 16 January 2021
+
+- Auto dependency update [`5f87f62`](https://github.com/leanupjs/leanup/commit/5f87f62fc150a67db09cb8ce7f9deb35895ee0b0)
+- chore: configure dry run [`a581619`](https://github.com/leanupjs/leanup/commit/a581619e888b63ad09e3afdc55b9ebab2dae6db3)
+- chore: update publish workflows [`83e61d7`](https://github.com/leanupjs/leanup/commit/83e61d74890525bec659035029d56f8718bae494)
 
 #### [1.0.89](https://github.com/leanupjs/leanup/compare/1.0.88...1.0.89)
 
@@ -2481,13 +2717,21 @@ Master
 - remove unused js file in src [`e7e38fa`](https://github.com/leanupjs/leanup/commit/e7e38fa7155e7740fd63f512b9410f9b5027da9f)
 - add node header [`188b1f9`](https://github.com/leanupjs/leanup/commit/188b1f97e57f9edd745d3c2031ea9b0d62892dc8)
 
-#### [1.0.0-rc.506](https://github.com/leanupjs/leanup/compare/1.0.0-rc.504...1.0.0-rc.506)
+#### [1.0.0-rc.506](https://github.com/leanupjs/leanup/compare/1.0.0-rc.505...1.0.0-rc.506)
+
+> 23 August 2020
+
+- fix build [`596d682`](https://github.com/leanupjs/leanup/commit/596d6821506ea4c27cc491c2c7fca6e10edd70e8)
+- remove unused types [`a2b215d`](https://github.com/leanupjs/leanup/commit/a2b215d3c4055985f416a3348e9c1b322ad6d6b2)
+- fix github workflow [`706c1e7`](https://github.com/leanupjs/leanup/commit/706c1e7012512f4e00ff7b3c7f6924d7a49223ed)
+
+#### [1.0.0-rc.505](https://github.com/leanupjs/leanup/compare/1.0.0-rc.504...1.0.0-rc.505)
 
 > 23 August 2020
 
 - remove package-lock's [`0ec69a3`](https://github.com/leanupjs/leanup/commit/0ec69a3a86b8efb3ce312a90da91437386b3eafb)
-- fix build [`596d682`](https://github.com/leanupjs/leanup/commit/596d6821506ea4c27cc491c2c7fca6e10edd70e8)
 - add package-lock's [`d161ecf`](https://github.com/leanupjs/leanup/commit/d161ecf5c1ee9447c512698afcefa4a6693c4dbd)
+- optimize build [`c287cc3`](https://github.com/leanupjs/leanup/commit/c287cc3e9a4960e26c614ec835f1751800a596b8)
 
 #### [1.0.0-rc.504](https://github.com/leanupjs/leanup/compare/1.0.0-rc.503...1.0.0-rc.504)
 
