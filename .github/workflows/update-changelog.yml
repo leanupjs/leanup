@@ -6,39 +6,47 @@ name: Update changelog
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 2 * * *'
-
-env:
-  branch: 'release/1.2'
+    # - cron: '0 4 * * 3'
+    - cron: '0 4 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['1.0', '1.1', '1.2']
+    name: Update dependencies "v${{matrix.version}}"
     steps:
-      - name: Checkout
+      - name: Checkout specific branch
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-          persist-credentials: false
-          # ref: ${{ env.branch }}
+          ref: 'release/${{matrix.version}}'
+      - name: Git pull
+        run: git pull
       - name: Set up Node.js
         uses: actions/setup-node@v2.1.5
         with:
           node-version: 14.x
-      - name: Update changelog
+      - name: Read Lerna
+        id: lerna
+        run: |
+          content=`cat ./lerna.json | tr -d "\n"`
+          echo "::set-output name=lernaJson::$content"
+      - name: Generate changelogs
         run: |
           npm i auto-changelog --no-save
-          npx auto-changelog
+          npx auto-changelog --release-summary --tag-pattern '^${{matrix.version}}.\d+' -o docs/changelog/index.md
+          npx auto-changelog --release-summary
       - name: Commit changed files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add CHANGELOG.md
+          git add CHANGELOG.md docs/changelog/index.md
           git status
-          git commit -m "ci: update CHANGELOG.md"
+          git commit -m "chore: update changelogs for v${{matrix.version}}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.branch }}
-          force: true
+          branch: 'release/${{matrix.version}}'
