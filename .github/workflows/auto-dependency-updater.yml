@@ -81,7 +81,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
         with:
           body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
-          draft: true
+          draft: false
           prerelease: false
           release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
@@ -92,7 +92,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
         with:
           body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
-          draft: true
+          draft: false
           prerelease: true
           release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
