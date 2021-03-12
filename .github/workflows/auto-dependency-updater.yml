@@ -59,31 +59,31 @@ jobs:
       #     git config --local user.email "action@github.com"
       #     git config --local user.name "GitHub Action"
       #     npx lerna version prerelease --no-push --yes
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'release/${{matrix.version}}'
-          force: true
-      - name: Delete tag
-        continue-on-error: true
-        run: |
-          git push --delete origin v${{fromJson(steps.lerna.outputs.lernaJson).version}}
-      - name: Read Lerna
-        id: lerna
-        run: |
-          content=`cat ./lerna.json | tr -d "\n"`
-          echo "::set-output name=lernaJson::$content"
-      - name: Create PreRelease
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
-        with:
-          body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
-          draft: false
-          prerelease: true
-          release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
-          tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: 'release/${{matrix.version}}'
+      #     force: true
+      # - name: Delete tag
+      #   continue-on-error: true
+      #   run: |
+      #     git push --delete origin v${{fromJson(steps.lerna.outputs.lernaJson).version}}
+      # - name: Read Lerna
+      #   id: lerna
+      #   run: |
+      #     content=`cat ./lerna.json | tr -d "\n"`
+      #     echo "::set-output name=lernaJson::$content"
+      # - name: Create PreRelease
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
+      #   with:
+      #     body: 'You can find more details about the changes here: https://github.com/leanupjs/leanup/blob/master/CHANGELOG.md#${{fromJson(steps.lerna.outputs.lernaJson).version}}'
+      #     draft: false
+      #     prerelease: true
+      #     release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
+      #     tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
       - name: Generate changelogs
         run: |
           npm i auto-changelog --no-save
