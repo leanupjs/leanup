@@ -47,13 +47,13 @@ jobs:
           branch: 'release/${{matrix.version}}'
           force: true
       - name: Patch versioning
-        if: ${{matrix.version}} != '1.2'
+        if: ${{matrix.version != '1.2'}}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           npx lerna version patch --no-push --yes
       - name: Patch versioning
-        if: ${{matrix.version}} == '1.2'
+        if: ${{matrix.version == '1.2'}}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -70,7 +70,7 @@ jobs:
           content=`cat ./lerna.json | tr -d "\n"`
           echo "::set-output name=lernaJson::$content"
       - name: Create Release
-        if: ${{matrix.version}} != '1.2'
+        if: ${{matrix.version != '1.2'}}
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -81,7 +81,7 @@ jobs:
           release_name: Release ${{fromJson(steps.lerna.outputs.lernaJson).version}}
           tag_name: ${{fromJson(steps.lerna.outputs.lernaJson).version}}
       - name: Create PreRelease
-        if: ${{matrix.version}} == '1.2'
+        if: ${{matrix.version == '1.2'}}
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
