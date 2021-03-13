@@ -17,7 +17,7 @@
 [peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&ref=release/1.1&type=peer
 [optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/graphql&ref=release/1.1&type=optional
 [optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/graphql&ref=release/1.1&type=optional
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-graphql/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-graphql
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-graphql
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-graphql
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-graphql?minimal=true
@@ -34,12 +34,12 @@
 
 ## dependencies
 
-|     Package |                                                                                                                                  Size |                                                      Vulnerabilities                                                      |
-| ----------: | ------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
-| graphql-tag | [![install size of graphql-tag](https://packagephobia.now.sh/badge?p=graphql-tag)](https://packagephobia.now.sh/result?p=graphql-tag) | [![vulnerabilities of graphql-tag](https://snyk.io/test/npm/graphql-tag/badge.svg)](https://snyk.io/test/npm/graphql-tag) |
+|     Package |                                                                                                                                  Size |                                                            Vulnerabilities                                                             |
+| ----------: | ------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------: |
+| graphql-tag | [![install size of graphql-tag](https://packagephobia.now.sh/badge?p=graphql-tag)](https://packagephobia.now.sh/result?p=graphql-tag) | [![vulnerabilities of graphql-tag](https://img.shields.io/snyk/vulnerabilities/npm/graphql-tag)](https://snyk.io/test/npm/graphql-tag) |
 
 ## peerDependencies
 
-| Package |                                                                                                                      Size |                                                Vulnerabilities                                                |
-| ------: | ------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-| graphql | [![install size of graphql](https://packagephobia.now.sh/badge?p=graphql)](https://packagephobia.now.sh/result?p=graphql) | [![vulnerabilities of graphql](https://snyk.io/test/npm/graphql/badge.svg)](https://snyk.io/test/npm/graphql) |
+| Package |                                                                                                                      Size |                                                      Vulnerabilities                                                       |
+| ------: | ------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+| graphql | [![install size of graphql](https://packagephobia.now.sh/badge?p=graphql)](https://packagephobia.now.sh/result?p=graphql) | [![vulnerabilities of graphql](https://img.shields.io/snyk/vulnerabilities/npm/graphql)](https://snyk.io/test/npm/graphql) |
