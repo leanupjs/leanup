@@ -36,6 +36,9 @@
   "bugs": {
     "url": "https://github.com/leanupjs/leanup/issues"
   },
+  "dependencies": {
+    "@preact/preset-vite": "1.0.0"
+  },
   "devDependencies": {
     "@leanup/stack-webpack": "^1.2.0-rc.54",
     "@types/node": "14.14.34",
