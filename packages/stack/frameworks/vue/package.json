@@ -37,13 +37,13 @@
     "vue-loader": "15.9.6"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "^1.2.0-rc.55",
+    "@leanup/stack-webpack": "1.2.0-rc.55",
     "@types/node": "14.14.34",
     "typescript": "4.2.3"
   },
   "peerDependencies": {
-    "vue": "^2",
-    "vue-template-compiler": "^2"
+    "vue": "2",
+    "vue-template-compiler": "2"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
