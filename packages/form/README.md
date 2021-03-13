@@ -10,7 +10,7 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/forms
 [dependencies]: https://img.shields.io/david/modevel/leanup?path=forms
 [dependencies-url]: https://david-dm.org/modevel/leanup?path=forms
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/forms/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/forms
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/forms
 [downloads]: https://img.shields.io/npm/dm/@leanup/forms
 [downloads-url]: https://npmcharts.com/compare/@leanup/forms?minimal=true

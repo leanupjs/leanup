@@ -10,7 +10,7 @@
 [npm-url]: https://www.npmjs.com/package/lup
 [dependencies]: https://img.shields.io/david/modevel/leanup?path=lup
 [dependencies-url]: https://david-dm.org/modevel/leanup?path=lup
-[vulnerabilities]: https://snyk.io/test/npm/lup/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/lup
 [vulnerabilities-url]: https://snyk.io/test/npm/lup
 [downloads]: https://img.shields.io/npm/dm/lup
 [downloads-url]: https://npmcharts.com/compare/lup?minimal=true

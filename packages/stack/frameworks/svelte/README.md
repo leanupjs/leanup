@@ -20,7 +20,7 @@
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/svelte&ref=release/1.1&type=peer
 [optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/svelte&ref=release/1.1&type=optional
 [optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/svelte&ref=release/1.1&type=optional
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-svelte/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-svelte
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-svelte
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-svelte
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-svelte?minimal=true
