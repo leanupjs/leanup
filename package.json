@@ -29,7 +29,7 @@
   },
   "auto-changelog": {
     "template": "keepachangelog",
-    "unreleased": false,
+    "unreleased": true,
     "commitLimit": false
   },
   "devDependencies": {
