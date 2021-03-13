@@ -35,7 +35,7 @@ jobs:
       - name: Generate changelogs
         run: |
           npm i auto-changelog --no-save
-          npx auto-changelog --release-summary --starting-version ${{matrix.version}}.0 --tag-pattern ${{matrix.version}}.\d -o docs/changelog/index.md
+          npx auto-changelog --release-summary --starting-version "${{matrix.version}}.0" --tag-pattern "^${{matrix.version}}.\d" -o docs/changelog/index.md
           npx auto-changelog --release-summary
       - name: Commit changed files
         run: |
