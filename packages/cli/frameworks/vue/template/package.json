@@ -31,8 +31,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.115",
-    "@leanup/lib": "^1.0.115",
+    "@leanup/form": "1.0.115",
+    "@leanup/lib": "1.0.115",
     "@vue/composition-api": "0.6.7",
     "navigo": "8.9.1",
     "rxjs": "6.6.6",
@@ -40,9 +40,9 @@
     "vue-template-compiler": "2.6.12"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.115",
-    "@leanup/cli-vue": "^1.0.115",
-    "@leanup/git-hooks": "^1.0.115",
+    "@leanup/cli": "1.0.115",
+    "@leanup/cli-vue": "1.0.115",
+    "@leanup/git-hooks": "1.0.115",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.10",
     "geckodriver": "1.22.2",
