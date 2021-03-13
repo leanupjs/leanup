@@ -49,7 +49,7 @@
     "typescript": "4.2.3"
   },
   "peerDependencies": {
-    "@leanup/cli": "^1.0.84",
+    "@leanup/cli": "^1.0.114",
     "react": "^16 || ^17",
     "react-dom": "^16 || ^17"
   },
