@@ -1,4 +1,4 @@
-module.exports = (env, argv) => {
+module.exports = (...args) => {
   const { webpackAngularJSConfig } = require('./lib/webpack.config');
-  return webpackAngularJSConfig(env, argv);
+  return webpackAngularJSConfig(...args);
 };
