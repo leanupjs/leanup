@@ -5,7 +5,7 @@
     "inferno": "7.4.8"
   },
   "devDependencies": {
-    "@leanup/cli-inferno": "^1.1.5",
-    "@leanup/stack-inferno": "^1.1.5"
+    "@leanup/cli-inferno": "1.1.5",
+    "@leanup/stack-inferno": "1.1.5"
   }
 }

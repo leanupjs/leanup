@@ -6,7 +6,7 @@
     "aurelia-framework": "1.3.1"
   },
   "devDependencies": {
-    "@leanup/cli-aurelia": "^1.1.5",
-    "@leanup/stack-aurelia": "^1.1.5"
+    "@leanup/cli-aurelia": "1.1.5",
+    "@leanup/stack-aurelia": "1.1.5"
   }
 }
