@@ -33,9 +33,6 @@ sh ./dist-tag.sh "$1" "cli-webhint" "$2" "$3"
 sh ./dist-tag.sh "$1" "form" "$2" "$3"
 sh ./dist-tag.sh "$1" "git-hooks" "$2" "$3"
 
-sh ./dist-tag.sh "$1" "material-core" "$2" "$3"
-sh ./dist-tag.sh "$1" "material-preact" "$2" "$3"
-
 sh ./dist-tag.sh "$1" "cli-core-babel" "$2" "$3"
 sh ./dist-tag.sh "$1" "cli" "$2" "$3"
 
