@@ -1,6 +1,6 @@
 {
   "name": "@template/react",
-  "version": "1.0.114",
+  "version": "1.0.115",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,17 +31,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.0.114",
-    "@leanup/lib": "^1.0.114",
+    "@leanup/form": "^1.0.115",
+    "@leanup/lib": "^1.0.115",
     "navigo": "8.9.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "rxjs": "6.6.6"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.0.114",
-    "@leanup/cli-react": "^1.0.114",
-    "@leanup/git-hooks": "^1.0.114",
+    "@leanup/cli": "^1.0.115",
+    "@leanup/cli-react": "^1.0.115",
+    "@leanup/git-hooks": "^1.0.115",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.2",
     "chromedriver": "89.0.0",
