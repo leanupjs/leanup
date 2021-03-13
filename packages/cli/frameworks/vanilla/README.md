@@ -21,7 +21,7 @@
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=peer
 [optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=optional
 [optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=optional
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-vanilla/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-vanilla
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vanilla
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vanilla
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-vanilla?minimal=true

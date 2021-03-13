@@ -11,7 +11,7 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/git-hooks
 [dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/addons&ref=release/1.1
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/addons&ref=release/1.1
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/git-hooks/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/git-hooks
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/git-hooks
 [downloads]: https://img.shields.io/npm/dm/@leanup/git-hooks
 [downloads-url]: https://npmcharts.com/compare/@leanup/git-hooks?minimal=true
