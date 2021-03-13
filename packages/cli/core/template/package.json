@@ -37,18 +37,18 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "^1.2.0-rc.55",
-    "@leanup/lib": "^1.2.0-rc.55",
+    "@leanup/form": "1.2.0-rc.55",
+    "@leanup/lib": "1.2.0-rc.55",
     "navigo": "8.9.1",
     "rxjs": "6.6.6"
   },
   "devDependencies": {
-    "@leanup/cli": "^1.2.0-rc.55",
-    "@leanup/git-hooks": "^1.2.0-rc.55",
-    "@leanup/stack": "^1.2.0-rc.55",
-    "@leanup/stack-snowpack": "^1.2.0-rc.55",
-    "@leanup/stack-vite": "^1.2.0-rc.55",
-    "@leanup/stack-webpack": "^1.2.0-rc.55",
+    "@leanup/cli": "1.2.0-rc.55",
+    "@leanup/git-hooks": "1.2.0-rc.55",
+    "@leanup/stack": "1.2.0-rc.55",
+    "@leanup/stack-snowpack": "1.2.0-rc.55",
+    "@leanup/stack-vite": "1.2.0-rc.55",
+    "@leanup/stack-webpack": "1.2.0-rc.55",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.10",
     "npm-check-updates": "11.3.0",
