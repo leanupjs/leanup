@@ -6,7 +6,6 @@
     <cite><b>Make things pure</b> ... to become lean.</cite>
   </h2>
 </p>
-<hr>
 
 [![license][license]][license-url]&#160;
 [![lernajs][lernajs]][lernajs-url]&#160;
