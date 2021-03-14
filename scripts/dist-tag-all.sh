@@ -21,6 +21,7 @@ sh ./dist-tag.sh "$1" "stack-vue" "$2" "$3"
 sh ./dist-tag.sh "$1" "stack-vue3" "$2" "$3"
 
 sh ./dist-tag.sh "$1" "stack-snowpack" "$2" "$3"
+sh ./dist-tag.sh "$1" "stack-vite" "$2" "$3"
 sh ./dist-tag.sh "$1" "stack-webpack" "$2" "$3"
 sh ./dist-tag.sh "$1" "stack" "$2" "$3"
 
@@ -32,9 +33,6 @@ sh ./dist-tag.sh "$1" "cli-webhint" "$2" "$3"
 
 sh ./dist-tag.sh "$1" "form" "$2" "$3"
 sh ./dist-tag.sh "$1" "git-hooks" "$2" "$3"
-
-sh ./dist-tag.sh "$1" "material-core" "$2" "$3"
-sh ./dist-tag.sh "$1" "material-preact" "$2" "$3"
 
 sh ./dist-tag.sh "$1" "cli-core-babel" "$2" "$3"
 sh ./dist-tag.sh "$1" "cli" "$2" "$3"
