@@ -52,7 +52,7 @@
   },
   "engines": {
     "node": ">=14 <15",
-    "npm": ">=6 <7"
+    "npm": ">=6 <8"
   },
   "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
 }
