@@ -4,6 +4,10 @@ module.exports = {
   title: 'LeanupJS (v1.2)',
   description: 'Vite & Vue powered static site generator.',
 
+  markdown: {
+    lineNumbers: true,
+  },
+
   themeConfig: {
     repo: 'leanupjs/leanup',
     docsDir: 'docs',
