@@ -32,9 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm run update
       - name: Test all framework variants
-        run: sh wake-up-all.sh latest
-        working-directory: scripts
-      - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
           sh wake-up-all.sh leanup latest
