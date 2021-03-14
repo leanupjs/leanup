@@ -14,7 +14,7 @@
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
 [license]: https://img.shields.io/npm/l/@leanup/stack
-[license-url]: https://github.com/leanupjs/leanup/blob/release/1.1/LICENSE.md
+[license-url]: https://github.com/leanupjs/leanup/blob/release/1.0/LICENSE.md
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
