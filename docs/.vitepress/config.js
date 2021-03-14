@@ -4,6 +4,10 @@ module.exports = {
   title: 'LeanupJS (v1.0)',
   description: 'Vite & Vue powered static site generator.',
 
+  markdown: {
+    lineNumbers: true,
+  },
+
   themeConfig: {
     repo: 'leanupjs/leanup',
     docsDir: 'docs',
@@ -74,6 +78,10 @@ function getGuideSidebar() {
         {
           text: 'Installation',
           link: '/guide/installation/',
+        },
+        {
+          text: 'Migration',
+          link: '/guide/migration/',
         },
         {
           text: 'Usage',
