@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [10, 12, 14, 15]
+        node: [12, 14, 15]
         # https://github.com/actions/virtual-environments#available-environments
         os: [ubuntu-latest, macos-latest, windows-latest]
     name: Node.js v${{ matrix.node }} on OS (${{ matrix.os }})
