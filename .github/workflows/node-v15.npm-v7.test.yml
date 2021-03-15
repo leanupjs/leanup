@@ -6,7 +6,7 @@ name: Test all Node.js and NPM variants
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 1 * * *'
 
 jobs:
   build:
