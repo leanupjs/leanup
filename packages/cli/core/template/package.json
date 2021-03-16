@@ -49,6 +49,7 @@
     "@leanup/stack-snowpack": "1.2.0-rc.56",
     "@leanup/stack-vite": "1.2.0-rc.56",
     "@leanup/stack-webpack": "1.2.0-rc.56",
+    "@tailwindcss/jit": "0.1.1",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.10",
     "npm-check-updates": "11.3.0",
