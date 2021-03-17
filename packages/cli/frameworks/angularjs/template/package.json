@@ -35,7 +35,7 @@
     "@leanup/lib": "1.0.116",
     "@types/angular": "1.8.1",
     "angular": "1.8.2",
-    "navigo": "8.9.1",
+    "navigo": "8.10.1",
     "rxjs": "6.6.6"
   },
   "devDependencies": {
