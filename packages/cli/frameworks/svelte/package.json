@@ -50,7 +50,7 @@
     "typescript": "4.2.3"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.115",
+    "@leanup/cli": "~1.0.116",
     "svelte": "^3"
   },
   "scripts": {
