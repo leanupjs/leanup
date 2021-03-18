@@ -15,7 +15,6 @@ module.exports = {
         },
       },
     },
-    postcss: require(resolve(process.cwd(), 'postcss.config')),
   },
   build: {
     rollupOptions: {
