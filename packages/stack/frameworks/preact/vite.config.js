@@ -1,12 +1,14 @@
-const config = require('@leanup/stack-vite/vite.config');
+const { mergeConfig } = require('vite');
+const preact = require('@preact/preset-vite');
+const { unsetConfigPlugin } = require('vite-plugin-unset');
 
-config.resolve = config.resolve || {};
-config.resolve.alias = config.resolve.alias || {};
-config.resolve.alias['react'] = 'preact/compat';
-config.resolve.alias['react-dom'] = 'preact/compat';
-
-config.esbuild = config.esbuild || {};
-config.esbuild['jsxFactory'] = 'h';
-config.esbuild['jsxFragment'] = 'Fragment';
-
-module.exports = config;
+module.exports = mergeConfig(require('@leanup/stack-vite/vite.config'), {
+  plugins: [
+    preact.default(),
+    unsetConfigPlugin({
+      esbuild: {
+        jsxInject: undefined,
+      },
+    }),
+  ],
+});
