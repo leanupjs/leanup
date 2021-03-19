@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.2.0-rc.56",
+  "version": "1.2.0-rc.58",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
@@ -37,23 +37,24 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.2.0-rc.56",
-    "@leanup/lib": "1.2.0-rc.56",
-    "navigo": "8.9.1",
+    "@leanup/form": "1.2.0-rc.58",
+    "@leanup/lib": "1.2.0-rc.58",
+    "navigo": "8.10.1",
     "rxjs": "6.6.6"
   },
   "devDependencies": {
-    "@leanup/cli": "1.2.0-rc.56",
-    "@leanup/git-hooks": "1.2.0-rc.56",
-    "@leanup/stack": "1.2.0-rc.56",
-    "@leanup/stack-snowpack": "1.2.0-rc.56",
-    "@leanup/stack-vite": "1.2.0-rc.56",
-    "@leanup/stack-webpack": "1.2.0-rc.56",
+    "@leanup/cli": "1.2.0-rc.58",
+    "@leanup/git-hooks": "1.2.0-rc.58",
+    "@leanup/stack": "1.2.0-rc.58",
+    "@leanup/stack-snowpack": "1.2.0-rc.58",
+    "@leanup/stack-vite": "1.2.0-rc.58",
+    "@leanup/stack-webpack": "1.2.0-rc.58",
+    "@tailwindcss/jit": "0.1.3",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.10",
     "npm-check-updates": "11.3.0",
     "selenium-server": "3.141.59",
-    "tailwindcss": "2.0.3",
+    "tailwindcss": "2.0.4",
     "typescript": "4.2.3"
   }
 }
