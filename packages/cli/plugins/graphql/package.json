@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "eslint-plugin-graphql": "4.0.0",
-    "graphql-tag": "2.12.2"
+    "graphql-tag": "2.12.3"
   },
   "devDependencies": {
     "@leanup/cli": "1.1.8",
