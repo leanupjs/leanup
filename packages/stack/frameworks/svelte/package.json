@@ -38,7 +38,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@snowpack/plugin-svelte": "3.5.2",
+    "@snowpack/plugin-svelte": "3.6.0",
     "prettier-plugin-svelte": "2.2.0",
     "svelte-loader": "3.0.0",
     "vite-plugin-svelte": "3.0.1"
