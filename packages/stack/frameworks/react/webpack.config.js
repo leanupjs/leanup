@@ -1,4 +1,4 @@
-module.exports = (env, argv) => {
+module.exports = (...args) => {
   const { webpackReactConfig } = require('./lib/webpack.config');
-  return webpackReactConfig(env, argv);
+  return webpackReactConfig(...args);
 };

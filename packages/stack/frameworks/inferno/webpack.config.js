@@ -1,4 +1,4 @@
-module.exports = (env, argv) => {
+module.exports = (...args) => {
   const { webpackInfernoConfig } = require('./lib/webpack.config');
-  return webpackInfernoConfig(env, argv);
+  return webpackInfernoConfig(...args);
 };

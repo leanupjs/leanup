@@ -1,4 +1,4 @@
-module.exports = (env, argv) => {
+module.exports = (...args) => {
   const { webpackPreactConfig } = require('./lib/webpack.config');
-  return webpackPreactConfig(env, argv);
+  return webpackPreactConfig(...args);
 };
