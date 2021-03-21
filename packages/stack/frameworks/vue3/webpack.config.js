@@ -1,4 +1,4 @@
-module.exports = (env, argv) => {
+module.exports = (...args) => {
   const { webpackVue3Config } = require('./lib/webpack.config');
-  return webpackVue3Config(env, argv);
+  return webpackVue3Config(...args);
 };

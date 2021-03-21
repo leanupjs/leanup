@@ -50,7 +50,6 @@
     "autoprefixer": "10.2.5",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
-    "esbuild": "0.9.6",
     "esbuild-register": "2.3.0",
     "eslint": "7.22.0",
     "eslint-plugin-html": "6.1.2",
@@ -72,6 +71,7 @@
   },
   "peerDependencies": {
     "chromedriver": ">=87",
+    "esbuild": "^0",
     "geckodriver": "^1",
     "selenium-server": "^3",
     "typescript": "^4"

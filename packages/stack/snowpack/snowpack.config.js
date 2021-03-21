@@ -57,16 +57,14 @@ module.exports = {
         paths: ['node_modules'],
       },
     ],
-    '@snowpack/plugin-sass',
-    // [
-    //   'snowpack-plugin-sass',
-    //   {
-    //     implementation: require('sass'),
-    //     sassOptions: {
-    //       includePaths: ['node_modules'],
-    //     },
-    //   },
-    // ],
+    [
+      '@snowpack/plugin-sass',
+      {
+        compilerOptions: {
+          loadPath: ['node_modules'],
+        },
+      }
+    ],
     '@snowpack/plugin-postcss',
   ],
   buildOptions: {
