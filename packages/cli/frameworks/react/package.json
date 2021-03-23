@@ -40,7 +40,7 @@
     "react": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "7.12.17",
+    "@babel/plugin-transform-react-jsx": "7.13.12",
     "@babel/preset-react": "7.12.13"
   },
   "devDependencies": {
