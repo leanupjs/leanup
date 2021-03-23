@@ -16,6 +16,13 @@ module.exports = {
       },
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(process.cwd(), 'index.html'),
+      },
+    },
+  },
   server: {
     port: 8080,
   },
