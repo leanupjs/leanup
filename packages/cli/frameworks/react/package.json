@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "7.13.12",
-    "@babel/preset-react": "7.12.13"
+    "@babel/preset-react": "7.13.13"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.119",
