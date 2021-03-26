@@ -45,8 +45,7 @@
     "typescript": "4.2.3"
   },
   "peerDependencies": {
-    "@angular/core": ">=8",
-    "@ngtools/webpack": ">=8"
+    "@ngtools/webpack": "12.0.0-next.6"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
