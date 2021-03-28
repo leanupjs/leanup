@@ -33,7 +33,7 @@
   "dependencies": {
     "copy-modules-webpack-plugin": "2.2.1",
     "css-loader": "5.2.0",
-    "esbuild-loader": "2.10.0",
+    "esbuild-loader": "2.11.0",
     "file-loader": "6.2.0",
     "less-loader": "8.0.0",
     "postcss-loader": "5.2.0",
@@ -41,7 +41,7 @@
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
     "webpack": "5.28.0",
-    "webpack-cli": "4.5.0",
+    "webpack-cli": "4.6.0",
     "webpack-dev-server": "3.11.2"
   },
   "devDependencies": {
