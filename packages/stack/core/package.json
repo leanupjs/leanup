@@ -70,7 +70,7 @@
     "tslib": "2.1.0"
   },
   "peerDependencies": {
-    "chromedriver": "^87",
+    "chromedriver": "^89",
     "esbuild": "^0",
     "geckodriver": "^1",
     "selenium-server": "^3",
