@@ -40,7 +40,7 @@
     "@angular/platform-browser-dynamic": "11.2.7",
     "@leanup/form": "1.0.120",
     "@leanup/lib": "1.0.120",
-    "core-js": "3.9.1",
+    "core-js": "3.10.0",
     "navigo": "8.11.0",
     "rxjs": "6.6.7",
     "zone.js": "0.11.4"
