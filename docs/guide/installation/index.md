@@ -26,6 +26,6 @@ Enter the following command to generate our boilerplate project:
 
 Enter the following command to reconfigure you existing project:
 
-`npx react create --only-config --no-config --overwrite`
+`npx react create --only-config --overwrite`
 
 After that, it is important to check the changes with regard to your project. It is possible that some changes can be undone.
