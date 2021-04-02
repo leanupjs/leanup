@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-webpack",
-  "version": "1.2.0-rc.64",
+  "version": "1.2.0-rc.65",
   "description": "This module contains all webpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
