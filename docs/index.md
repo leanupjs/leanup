@@ -19,9 +19,9 @@
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [prettier-url]: https://prettier.io
 
-::: danger Please note
+::: tip Please note
 Since the releases **1.0.116**, **1.1.6** and **1.2.0-rc.56** there are only exact versioning of the dependencies between the **@leanup** modules.<hr>
-⚠️ **If you are using version 1.0 - please update to the latest version 1.0.116.**
+✔️ **If you are using version 1.0 - please update to the latest version 1.0.116.**
 :::
 
 <h1>leanup<sup style="color: grey; font-size: 75%"> js</sup></h1>
