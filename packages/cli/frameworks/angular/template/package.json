@@ -16,7 +16,7 @@
   "devDependencies": {
     "@leanup/cli-angular": "1.1.10",
     "@leanup/stack-angular": "1.1.10",
-    "@ngtools/webpack": "11.2.6",
+    "@ngtools/webpack": "11.2.7",
     "typescript": "4.1.5"
   }
 }
