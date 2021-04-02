@@ -3,7 +3,6 @@
   "version": "1.2.0-rc.63",
   "description": "",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
     "coverage": "cross-env NODE_ENV=test nyc mocha",
     "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require @babel/register --require cucumber.conf.js --require tests/cucumber/step-definitions --format node_modules/cucumber-pretty --format json:.reports/cucumber/report.json",
     "e2e": "nightwatch",
@@ -11,16 +10,21 @@
     "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
     "reinstall": "npm run remove && npm install",
     "remove": "rm -rf node_modules package-lock.json",
-    "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
-    "start": "npm run serve -- --open=chrome",
-    "test": "cross-env NODE_ENV=test mocha",
     "update": "ncu -t minor -u && npm install && ncu",
-    "build:snowpack": "snowpack build",
-    "serve:snowpack": "npm run start:snowpack -- --open none",
-    "start:snowpack": "snowpack dev",
-    "build:vite": "vite build",
-    "serve:vite": "vite",
-    "start:vite": "npm run serve:vite -- --open"
+    "snowpack:build": "snowpack build",
+    "snowpack:serve": "npm run snowpack:start -- --open none",
+    "snowpack:start": "snowpack dev",
+    "vite:build": "vite build",
+    "vite:serve": "vite",
+    "vite:start": "npm run vite:serve -- --open",
+    "webpack:build": "cross-env NODE_ENV=production webpack",
+    "webpack:start": "npm run serve -- --open=chrome",
+    "webpack:serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
+    "build": "npm run webpack:build",
+    "preview": "vite preview",
+    "serve": "npm run webpack:serve",
+    "start": "npm run webpack:start",
+    "test": "cross-env NODE_ENV=test mocha"
   },
   "husky": {
     "hooks": {
