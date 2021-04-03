@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@preact/preset-vite": "2.0.1",
-    "vite-plugin-unset": "0.1.3"
+    "vite-plugin-unset": "0.1.4"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.10",
