@@ -117,6 +117,7 @@ There are some working examples:
 | [Material]       |   Design-System   |   ✔️   | proved                     | [![@material/textfield](https://snyk.io/advisor/npm-package/@material/textfield/badge.svg)](https://snyk.io/advisor/npm-package/@material/textfield) |
 | [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
 | [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
+| [WindiCSS]       |   Design-System   |   ✔️   | proved for v1.2            | [![tailwindcss](https://snyk.io/advisor/npm-package/windicss/badge.svg)](https://snyk.io/advisor/npm-package/windicss)                               |
 | [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
 | [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
 | [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
@@ -236,3 +237,4 @@ There a separate packages for important application features.
 [vite]: https://vitejs.dev/
 [openapi]: https://openapis.org
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
+[windicss]: https://windicss.org
