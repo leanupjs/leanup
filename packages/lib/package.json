@@ -1,6 +1,6 @@
 {
   "name": "@leanup/lib",
-  "version": "1.2.0-rc.63",
+  "version": "1.2.0-rc.64",
   "description": "This module is a collection of lightweight application features.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -23,7 +23,7 @@
     "@babel/preset-env": "7.13.12",
     "@babel/preset-typescript": "7.13.0",
     "@babel/register": "7.13.14",
-    "@types/chai": "4.2.15",
+    "@types/chai": "4.2.16",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "8.2.2",
     "@types/node": "14.14.37",

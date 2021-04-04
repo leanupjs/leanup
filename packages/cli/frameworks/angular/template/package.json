@@ -1,22 +1,22 @@
 {
   "name": "@template/angular",
-  "version": "1.2.0-rc.63",
+  "version": "1.2.0-rc.65",
   "dependencies": {
-    "@angular/common": "12.0.0-next.6",
-    "@angular/compiler": "12.0.0-next.6",
-    "@angular/compiler-cli": "12.0.0-next.6",
-    "@angular/core": "12.0.0-next.6",
-    "@angular/forms": "12.0.0-next.6",
-    "@angular/platform-browser": "12.0.0-next.6",
-    "@angular/platform-browser-dynamic": "12.0.0-next.6",
+    "@angular/common": "12.0.0-next.7",
+    "@angular/compiler": "12.0.0-next.7",
+    "@angular/compiler-cli": "12.0.0-next.7",
+    "@angular/core": "12.0.0-next.7",
+    "@angular/forms": "12.0.0-next.7",
+    "@angular/platform-browser": "12.0.0-next.7",
+    "@angular/platform-browser-dynamic": "12.0.0-next.7",
     "core-js": "3.10.0",
     "rxjs": "6.6.7",
     "zone.js": "0.11.4"
   },
   "devDependencies": {
-    "@leanup/cli-angular": "1.2.0-rc.63",
-    "@leanup/stack-angular": "1.2.0-rc.63",
-    "@ngtools/webpack": "12.0.0-next.6",
+    "@leanup/cli-angular": "1.2.0-rc.65",
+    "@leanup/stack-angular": "1.2.0-rc.65",
+    "@ngtools/webpack": "12.0.0-next.7",
     "typescript": "4.2.3"
   }
 }

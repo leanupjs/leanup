@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-snowpack",
-  "version": "1.2.0-rc.63",
+  "version": "1.2.0-rc.65",
   "description": "This module contains all snowpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -34,12 +34,12 @@
     "@snowpack/plugin-postcss": "1.2.2",
     "@snowpack/plugin-sass": "1.4.0",
     "postcss-cli": "8.3.1",
-    "snowpack": "3.2.1",
+    "snowpack": "3.2.2",
     "snowpack-plugin-less": "1.0.7",
     "snowpack-plugin-replace": "1.0.4"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.2.0-rc.63"
+    "@leanup/stack": "~1.2.0-rc.64"
   },
   "engines": {
     "node": ">=12 <16",
