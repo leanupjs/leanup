@@ -1,4 +1,6 @@
 const { resolve } = require('path');
+const { replaceCodePlugin } = require('vite-plugin-replace');
+const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
 
 // https://vitejs.dev/config/
 module.exports = {
@@ -23,6 +25,11 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    replaceCodePlugin({
+      replacements: REPLACEMENTS,
+    }),
+  ],
   server: {
     port: 8080,
   },
