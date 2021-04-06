@@ -46,7 +46,7 @@
     "geckodriver": "1.22.3",
     "npm-check-updates": "11.3.0",
     "selenium-server": "3.141.59",
-    "tailwindcss": "2.0.4",
+    "tailwindcss": "2.1.1",
     "typescript": "4.2.3"
   }
 }
