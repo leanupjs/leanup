@@ -59,7 +59,7 @@
     "less": "4.1.1",
     "mocha": "8.3.2",
     "mock-local-storage": "1.1.17",
-    "nightwatch": "1.6.1",
+    "nightwatch": "1.6.2",
     "nightwatch-allure": "1.2.0",
     "nyc": "15.1.0",
     "postcss": "8.2.9",
