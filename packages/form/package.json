@@ -1,6 +1,6 @@
 {
   "name": "@leanup/form",
-  "version": "1.2.0-rc.66",
+  "version": "1.2.0-rc.67",
   "description": "This module contains useful features for handling forms.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/form#readme",
@@ -13,7 +13,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/lib": "1.2.0-rc.66"
+    "@leanup/lib": "1.2.0-rc.67"
   },
   "devDependencies": {
     "@babel/core": "7.13.14",
