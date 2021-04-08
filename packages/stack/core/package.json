@@ -50,7 +50,7 @@
     "autoprefixer": "10.2.5",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
-    "esbuild-register": "2.3.0",
+    "esbuild-register": "2.4.0",
     "eslint": "7.23.0",
     "eslint-plugin-html": "6.1.2",
     "eslint-plugin-json": "2.1.2",
