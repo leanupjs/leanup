@@ -45,10 +45,10 @@
     "chromedriver": "89.0.0",
     "cssnano": "4.1.11",
     "geckodriver": "1.22.3",
-    "npm-check-updates": "11.3.0",
+    "npm-check-updates": "11.4.1",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.1.1",
-    "typescript": "4.2.3"
+    "typescript": "4.2.4"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }

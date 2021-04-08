@@ -40,11 +40,11 @@
     "husky": "5.2.0",
     "lerna": "4.0.0",
     "lint-staged": "10.5.4",
-    "npm-check-updates": "11.3.0",
+    "npm-check-updates": "11.4.1",
     "prettier": "2.2.1",
     "prettier-plugin-svelte": "2.2.0",
     "svelte": "3.37.0",
-    "typescript": "4.2.3",
+    "typescript": "4.2.4",
     "vitepress": "0.12.2"
   },
   "engines": {
