@@ -55,7 +55,7 @@
     "@leanup/stack-webpack": "1.2.0-rc.67",
     "chromedriver": "89.0.0",
     "npm-check-updates": "11.4.1",
-    "postcss-windicss": "0.0.4",
+    "postcss-windicss": "0.1.0",
     "selenium-server": "3.141.59",
     "typescript": "4.2.4"
   }
