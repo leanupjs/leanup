@@ -10,12 +10,12 @@ The technical risks are minimal, because their is no own stuff inside. You can c
 
 ## Installation
 
-Read more about the installation [here](/guide/installation/).
+Read more about the installation [here](installation/).
 
 ## Migration
 
-Read more about the migration [here](/guide/migration/).
+Read more about the migration [here](migration/).
 
 ## Usage
 
-Read more about the usage [here](/guide/usage/).
+Read more about the usage [here](usage/).
