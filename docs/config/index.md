@@ -8,7 +8,7 @@ The `@leanup stack` contains coordinated and preconfigured tools for developing,
 
 The `@leanup stack` provides minimal default configurations for all included tools. And it enables the configuration files to be adapted or expanded to suit the specifics of the project.
 
-For example, add an additional webpack plugin: [Copy Webpack Plugin](/1.1/guide/migration/#if-you-need-the-frame-material)
+For example, add an additional webpack plugin: [Copy Webpack Plugin](/guide/migration/#if-you-need-the-frame-material)
 
 ### TypeScript
 
