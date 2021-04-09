@@ -7,11 +7,17 @@
   </h2>
 </p>
 
+[![downloads][downloads]][downloads-url]&#160;
+[![npm][npm]][npm-url]&#160;
 [![license][license]][license-url]&#160;
 [![lernajs][lernajs]][lernajs-url]&#160;
 [![prettier][prettier]][prettier-url]&#160;
 [![@leanup/cli](https://snyk.io/advisor/npm-package/@leanup/cli/badge.svg)](https://snyk.io/advisor/npm-package/@leanup/cli)
 
+[downloads]: https://img.shields.io/npm/dt/@leanup/cli.svg
+[downloads-url]: https://npmcharts.com/compare/@leanup/cli
+[npm]: https://img.shields.io/npm/v/@leanup/cli
+[npm-url]: https://www.npmjs.com/package/@leanup/cli
 [license]: https://img.shields.io/npm/l/@leanup/stack
 [license-url]: https://github.com/leanupjs/leanup/blob/release/1.1/LICENSE.md
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
