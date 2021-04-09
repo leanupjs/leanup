@@ -50,7 +50,7 @@
     "prettier-plugin-svelte": "2.2.0",
     "svelte": "3.37.0",
     "typescript": "4.2.4",
-    "vitepress": "0.12.2"
+    "vitepress": "0.13.0"
   },
   "engines": {
     "node": ">=12 <16",
