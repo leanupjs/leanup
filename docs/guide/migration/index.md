@@ -53,7 +53,7 @@ Add the following script tag in you `index.html` body.
 ```html{2,3}
     ...
     <script nomodule src="main.js"></script>
-    <!-- <script type="module" src="main.js"></script> -->
+    <script type="module" src="main.js"></script>
   <body>
 </html>
 ```

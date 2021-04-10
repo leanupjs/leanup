@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1000 1000" width="512" xmlns="http://www.w3.org/2000/svg">
+    <!-- <circle cx="50" cy="50" r="30" stroke="gray" fill-opacity="0" /> -->
+    <!-- <rect x="100" y="100" width="800" height="800" stroke="gray" fill-opacity="0" /> -->
+    <svg x="125" viewBox="0 0 1000 1000" width="750">
+        <svg y="-150">
+            <circle cx="450" cy="415" r="35" fill="#200646" />
+            <circle cx="550" cy="415" r="35" fill="#200646" />
+            <circle cx="600" cy="500" r="35" fill="#200646" />
+            <circle cx="400" cy="500" r="35" fill="#200646" />
+            <circle cx="450" cy="585" r="35" fill="#200646" />
+            <circle cx="550" cy="585" r="35" fill="#200646" />
+        </svg>
+        <svg y="-150">
+            <circle cx="500" cy="280" r="60" fill-opacity="0" stroke="gray" stroke-width="35" />
+            <circle cx="500" cy="720" r="60" fill-opacity="0" stroke="gray" stroke-width="35" />
+            <circle cx="700" cy="600" r="60" fill-opacity="0" stroke="gray" stroke-width="35" />
+            <circle cx="300" cy="600" r="60" fill-opacity="0" stroke="gray" stroke-width="35" />
+            <circle cx="300" cy="400" r="60" fill-opacity="0" stroke="gray" stroke-width="35" />
+            <circle cx="700" cy="400" r="60" fill-opacity="0" stroke="gray" stroke-width="35" />
+        </svg>
+    </svg>
+    <svg x="20" y="-100" width="1000">
+        <text font-family="Calibri" text-anchor="middle" fill="#200646">
+            <tspan x="500" y="700" font-size="17.5em" dy="1em">leanup</tspan>
+            <tspan x="625" y="680" font-size="12.5em" dy="1em">^</tspan>
+        </text>
+    </svg>
+</svg>
