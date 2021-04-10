@@ -13,6 +13,7 @@
   "keywords": [
     "eslint",
     "esbuild",
+    "vite",
     "webpack",
     "angular",
     "angularjs",
@@ -36,7 +37,7 @@
     "cli",
     "spa",
     "pwa",
-    "lean",
+    "leanupjs",
     "compiler",
     "transpiler",
     "graphql",
