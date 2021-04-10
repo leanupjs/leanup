@@ -1,8 +1,42 @@
+const isProd = process.env.NODE_ENV === 'production';
+
+const title = 'leanûp (v1.1)';
+const description = 'Make things pure ... to become lean.';
+const site = isProd ? 'https://leanupjs.org' : 'http://localhost:3000';
+const image = `${site}/assets/logo.svg`;
+
+const head = [
+  ['style', {}, 'img { border-radius: 5px }' + 'h1.title { margin-top: 0 !important }'],
+  ['meta', { name: 'author', content: 'Windi CSS Team' }],
+  ['meta', { name: 'keywords', content: 'windi, tailwind, tailwindcss, vitejs, svelte, vue' }],
+
+  ['link', { rel: 'icon', type: 'image/svg+xml', href: '/assets/logo.svg' }],
+
+  ['meta', { name: 'HandheldFriendly', content: 'True' }],
+  ['meta', { name: 'MobileOptimized', content: '320' }],
+  ['meta', { name: 'theme-color', content: '#cc0000' }],
+
+  ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+  ['meta', { name: 'twitter:site', content: site }],
+  ['meta', { name: 'twitter:title', value: title }],
+  ['meta', { name: 'twitter:description', value: description }],
+  ['meta', { name: 'twitter:image', content: image }],
+
+  ['meta', { property: 'og:type', content: 'website' }],
+  ['meta', { property: 'og:locale', content: 'en_US' }],
+  ['meta', { property: 'og:site', content: site }],
+  ['meta', { property: 'og:site_name', content: title }],
+  ['meta', { property: 'og:title', content: title }],
+  ['meta', { property: 'og:image', content: image }],
+  ['meta', { property: 'og:description', content: description }],
+];
+
 module.exports = {
   base: '/1.1/',
   lang: 'en-US',
-  title: 'LeanupJS (v1.1)',
-  description: 'Vite & Vue powered static site generator.',
+  head,
+  title: 'leanûp (v1.1)',
+  description: 'Make things pure ... to become lean.',
 
   markdown: {
     lineNumbers: true,
@@ -30,8 +64,8 @@ module.exports = {
     nav: [
       {
         text: 'Motivation',
-        link: '/',
-        activeMatch: '^/$',
+        link: '/motivation/',
+        activeMatch: '^/motivation/',
       },
       {
         text: 'Guide',
