@@ -7,8 +7,14 @@ const image = `${site}/assets/logo.svg`;
 
 const head = [
   ['style', {}, 'img { border-radius: 5px }' + 'h1.title { margin-top: 0 !important }'],
-  ['meta', { name: 'author', content: 'Windi CSS Team' }],
-  ['meta', { name: 'keywords', content: 'windi, tailwind, tailwindcss, vitejs, svelte, vue' }],
+  ['meta', { name: 'author', content: 'leanûp Team' }],
+  [
+    'meta',
+    {
+      name: 'keywords',
+      content: `eslint, esbuild, babel, vite, snowpack, webpack, angular, angularjs, aurelia, inferno, react, preact, svelte, vue, mocha, cucumber, prettier, nightwatch, windicss, tailwindcss, less, sass, scss, typescript, spa, pwa, graphql, postcss, pwa, hint, workbox, mono-repo,  lerna`,
+    },
+  ],
 
   ['link', { rel: 'icon', type: 'image/svg+xml', href: '/assets/logo.svg' }],
 
@@ -51,14 +57,14 @@ module.exports = {
     lastUpdated: 'Last Updated',
 
     // algolia: {
-    //   apiKey: "c57105e511faa5558547599f120ceeba",
-    //   indexName: "vitepress",
+    //  apiKey: "c57105e511faa5558547599f120ceeba",
+    //  indexName: "vitepress",
     // },
 
     // carbonAds: {
-    //   carbon: "CEBDT27Y",
-    //   custom: "CKYD62QM",
-    //   placement: "vuejsorg",
+    //  carbon: "CEBDT27Y",
+    //  custom: "CKYD62QM",
+    //  placement: "vuejsorg",
     // },
 
     nav: [
