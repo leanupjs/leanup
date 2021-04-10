@@ -2,8 +2,6 @@ const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
-const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'stack', 'package.json'));
 
 const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
 REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: any }) => {
@@ -14,12 +12,7 @@ REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: a
 });
 
 // https://webpack.js.org/configuration/dev-server/#devserverproxy
-let proxyConfig: Object;
-try {
-  proxyConfig = require(path.join(process.cwd(), `proxy.conf.json`));
-} catch (error) {
-  proxyConfig = {};
-}
+const { PROXIES } = require('@leanup/stack/lib/proxies');
 
 export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
@@ -109,7 +102,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
       host: argv.host,
       disableHostCheck: true,
       publicPath: '/',
-      proxy: proxyConfig,
+      proxy: PROXIES,
     },
     entry: {
       main: path.join(process.cwd(), `src`, `main.ts`),
