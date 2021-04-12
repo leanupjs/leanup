@@ -33,7 +33,7 @@
     "cross-env": "7.0.3",
     "esm": "3.2.25",
     "inferno": "7.4.8",
-    "jsdom": "16.5.2",
+    "jsdom": "16.5.3",
     "jsdom-global": "3.0.2",
     "mocha": "8.3.2",
     "mock-local-storage": "1.1.17",
