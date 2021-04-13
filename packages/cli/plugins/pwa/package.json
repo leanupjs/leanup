@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "webpack-pwa-manifest": "4.3.0",
-    "workbox-webpack-plugin": "6.1.2"
+    "workbox-webpack-plugin": "6.1.5"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.121",
