@@ -16,7 +16,7 @@
   "devDependencies": {
     "@leanup/cli-angular": "1.2.0-rc.69",
     "@leanup/stack-angular": "1.2.0-rc.69",
-    "@ngtools/webpack": "12.0.0-next.8",
+    "@ngtools/webpack": "12.0.0-next.9",
     "typescript": "4.2.4"
   }
 }
