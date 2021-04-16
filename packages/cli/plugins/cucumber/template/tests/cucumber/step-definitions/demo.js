@@ -1,5 +1,5 @@
 const { client } = require('nightwatch-api');
-const { Given, When, Then } = require('cucumber');
+const { Given, When, Then } = require('@cucumber/cucumber');
 
 Given(/^Ich starte die App$/i, async () => {
   await client.url('http://localhost:8080');
@@ -19,8 +19,7 @@ Given(/^Ich warte (\d+) Sekunden$/i, async (duration) => {
 Given(/^Die Liste enthaelt keinen Eintrag "([^"]*)"$/i, async (value) => {
   await client.assert.not.containsText('table', value);
 });
-
-When(/^Ich gebe als Titel "([^"]*)" ein$/i, async (value) => {
+delete When(/^Ich gebe als Titel "([^"]*)" ein$/i, async (value) => {
   await client.waitForElementVisible('input[name="title"]');
   await client.click('input[name="title"]');
   await client.clearValue('input[name="title"]');
@@ -38,6 +37,16 @@ When(/^Ich klicke auf Speichern$/i, async () => {
   await client.waitForElementVisible('button[type="submit"]');
   await client.click('button[type="submit"]');
   await client.click('button[type="submit"]');
+});
+
+When(/^Ich bearbeite Eintrag (\d+)$/i, async (value) => {
+  await client.waitForElementVisible(`button[id="edit-${value}"]`);
+  await client.click(`button[id="edit-${value}"]`);
+});
+
+When(/^Ich klicke auf Löschen$/i, async () => {
+  await client.waitForElementVisible(`button[id="delete"]`);
+  await client.click(`button[id="delete"]`);
 });
 
 Then(/^Die Liste enthaelt einen Eintrag "([^"]*)"$/i, async (value) => {

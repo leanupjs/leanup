@@ -2,16 +2,17 @@ const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const packageJsonApp = require(path.join(process.cwd(), 'package.json'));
-const packageJsonCli = require(path.join(process.cwd(), 'node_modules', '@leanup', 'stack', 'package.json'));
+
+const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
+REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: any }) => {
+  replacement.search = replacement.from;
+  replacement.replace = replacement.to;
+  delete replacement.from;
+  delete replacement.to;
+});
 
 // https://webpack.js.org/configuration/dev-server/#devserverproxy
-let proxyConfig: Object;
-try {
-  proxyConfig = require(path.join(process.cwd(), `proxy.conf.json`));
-} catch (error) {
-  proxyConfig = {};
-}
+const { PROXIES } = require('@leanup/stack/lib/proxies');
 
 export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
@@ -86,46 +87,11 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
     ],
   };
 
-  const MULTIPLE_REPLACEMENTS = [
-    // https://nodejs.org/dist/latest-v14.x/docs/api/process.html#process_process_env
-    // https://github.com/webpack/webpack/issues/7074#issuecomment-663855534
-    { search: '$$NODE_ENV$$', replace: process.env.NODE_ENV },
-  ];
-
-  // https://docs.npmjs.com/files/package.json#people-fields-author-contributors
-  if (typeof packageJsonApp.name === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_NAME$$', replace: packageJsonApp.name });
-  }
-  if (typeof packageJsonApp.version === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_VERSION$$', replace: packageJsonApp.version });
-  }
-  if (typeof packageJsonApp.author === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR$$', replace: packageJsonApp.author });
-  } else if (typeof packageJsonApp.author === 'object' && packageJsonApp.author != null) {
-    if (typeof packageJsonApp.author.name === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_NAME$$', replace: packageJsonApp.author.name });
-    }
-    if (typeof packageJsonApp.author.mail === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_MAIL$$', replace: packageJsonApp.author.mail });
-    }
-    if (typeof packageJsonApp.author.url === 'string') {
-      MULTIPLE_REPLACEMENTS.push({ search: '$$APP_AUTHOR_URL$$', replace: packageJsonApp.author.url });
-    }
-  }
-  if (typeof packageJsonApp.homepage === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$APP_HOMEPAGE$$', replace: packageJsonApp.homepage });
-  }
-  if (typeof packageJsonCli.name === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$CLI_NAME$$', replace: packageJsonCli.name });
-  }
-  if (typeof packageJsonCli.version === 'string') {
-    MULTIPLE_REPLACEMENTS.push({ search: '$$CLI_VERSION$$', replace: packageJsonCli.version });
-  }
   const STRING_REPLACE_LOADER = {
     test: /\.(j|t)sx?$/,
     loader: 'string-replace-loader',
     options: {
-      multiple: MULTIPLE_REPLACEMENTS,
+      multiple: REPLACEMENTS,
     },
   };
 
@@ -136,7 +102,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
       host: argv.host,
       disableHostCheck: true,
       publicPath: '/',
-      proxy: proxyConfig,
+      proxy: PROXIES,
     },
     entry: {
       main: path.join(process.cwd(), `src`, `main.ts`),

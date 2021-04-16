@@ -57,14 +57,14 @@ module.exports = {
     lastUpdated: 'Last Updated',
 
     // algolia: {
-    //   apiKey: "c57105e511faa5558547599f120ceeba",
-    //   indexName: "vitepress",
+    //  apiKey: "c57105e511faa5558547599f120ceeba",
+    //  indexName: "vitepress",
     // },
 
     // carbonAds: {
-    //   carbon: "CEBDT27Y",
-    //   custom: "CKYD62QM",
-    //   placement: "vuejsorg",
+    //  carbon: "CEBDT27Y",
+    //  custom: "CKYD62QM",
+    //  placement: "vuejsorg",
     // },
 
     nav: [
