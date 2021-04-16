@@ -23,10 +23,9 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@types/cucumber": "6.0.1",
-    "cucumber": "6.0.5",
+    "@cucumber/cucumber": "7.1.0",
+    "@cucumber/pretty-formatter": "1.0.0-alpha.0",
     "cucumber-html-reporter": "5.4.0",
-    "cucumber-pretty": "6.0.0",
     "nightwatch-api": "3.0.2"
   },
   "devDependencies": {

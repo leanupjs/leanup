@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { setDefaultTimeout, After, AfterAll, BeforeAll } = require('cucumber');
+const { setDefaultTimeout, After, AfterAll, BeforeAll } = require('@cucumber/cucumber');
 const { createSession, closeSession, startWebDriver, stopWebDriver, getNewScreenshots } = require('nightwatch-api');
 const reporter = require('cucumber-html-reporter');
 
@@ -13,7 +13,7 @@ if (!fs.existsSync(reportDir)) {
   fs.mkdirSync(reportDir);
 }
 
-const reportCucumberDir = path.resolve(reportDir, '.cucumber');
+const reportCucumberDir = path.resolve(reportDir, 'cucumber');
 if (!fs.existsSync(reportCucumberDir)) {
   fs.mkdirSync(reportCucumberDir);
 }
