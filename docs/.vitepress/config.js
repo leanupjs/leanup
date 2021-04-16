@@ -56,15 +56,15 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
 
-    // algolia: {
-    //   apiKey: "c57105e511faa5558547599f120ceeba",
-    //   indexName: "vitepress",
-    // },
+    algolia: {
+      apiKey: '4c7336288ccbc89f063ce54a26e9dc95',
+      indexName: 'leanupjs',
+    },
 
     // carbonAds: {
-    //   carbon: "CEBDT27Y",
-    //   custom: "CKYD62QM",
-    //   placement: "vuejsorg",
+    //   carbon: 'CEBDT27Y',
+    //   custom: 'CKYD62QM',
+    //   placement: 'vuejsorg',
     // },
 
     nav: [
