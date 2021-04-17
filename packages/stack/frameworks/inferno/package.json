@@ -40,7 +40,7 @@
   "dependencies": {
     "@leanup/cli-core-babel": "1.1.12",
     "@snowpack/plugin-babel": "2.1.7",
-    "babel-plugin-inferno": "6.1.1"
+    "babel-plugin-inferno": "6.2.0"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.12",
