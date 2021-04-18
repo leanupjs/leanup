@@ -14,86 +14,96 @@ REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: a
 // https://webpack.js.org/configuration/dev-server/#devserverproxy
 const { PROXIES } = require('@leanup/stack/lib/proxies');
 
+const ESBUILD_LOADER_JS = {
+  test: /\.js$/,
+  loader: 'esbuild-loader',
+};
+const ESBUILD_LOADER_TS = {
+  test: /\.ts$/,
+  loader: 'esbuild-loader',
+  options: {
+    loader: 'ts',
+  },
+};
+const FONT_FILE_LOADER = {
+  test: /\.(woff|woff2|eot|ttf|otf)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        outputPath: 'assets/fonts',
+      },
+    },
+  ],
+};
+const IMAGE_FILE_LOADER = {
+  test: /\.(png|svg|jpg|jpeg|gif)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        outputPath: 'assets/images',
+      },
+    },
+  ],
+};
+const LESS_LOADER = {
+  test: /\.less$/,
+  use: [
+    // MiniCssExtractPlugin.loader,
+    'style-loader',
+    'css-loader',
+    'postcss-loader',
+    {
+      loader: 'less-loader',
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+          // paths: ['node_modules'],
+        },
+      },
+    },
+  ],
+};
+const SASS_LOADER = {
+  test: /\.(sa|s?c)ss$/,
+  use: [
+    // MiniCssExtractPlugin.loader,
+    'style-loader',
+    'css-loader',
+    'postcss-loader',
+    {
+      loader: 'sass-loader',
+      options: {
+        implementation: require('sass'),
+        sassOptions: {
+          includePaths: ['node_modules'],
+        },
+      },
+    },
+  ],
+};
+
+const STRING_REPLACE_LOADER = {
+  test: /\.(j|t)sx?$/,
+  loader: 'string-replace-loader',
+  options: {
+    multiple: REPLACEMENTS,
+  },
+};
+
+export const LEANUP_WEBPACK_RULES = {
+  STRING_REPLACE_LOADER,
+  ESBUILD_LOADER_JS,
+  ESBUILD_LOADER_TS,
+  FONT_FILE_LOADER,
+  IMAGE_FILE_LOADER,
+  LESS_LOADER,
+  SASS_LOADER,
+};
+
 export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
-
-  const ESBUILD_LOADER_JS = {
-    test: /\.js$/,
-    loader: 'esbuild-loader',
-  };
-  const ESBUILD_LOADER_TS = {
-    test: /\.ts$/,
-    loader: 'esbuild-loader',
-    options: {
-      loader: 'ts',
-    },
-  };
-  const FONT_FILE_LOADER = {
-    test: /\.(woff|woff2|eot|ttf|otf)$/,
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          outputPath: 'assets/fonts',
-        },
-      },
-    ],
-  };
-  const IMAGE_FILE_LOADER = {
-    test: /\.(png|svg|jpg|jpeg|gif)$/,
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          outputPath: 'assets/images',
-        },
-      },
-    ],
-  };
-  const LESS_LOADER = {
-    test: /\.less$/,
-    use: [
-      // MiniCssExtractPlugin.loader,
-      'style-loader',
-      'css-loader',
-      'postcss-loader',
-      {
-        loader: 'less-loader',
-        options: {
-          lessOptions: {
-            javascriptEnabled: true,
-            // paths: ['node_modules'],
-          },
-        },
-      },
-    ],
-  };
-  const SASS_LOADER = {
-    test: /\.(sa|s?c)ss$/,
-    use: [
-      // MiniCssExtractPlugin.loader,
-      'style-loader',
-      'css-loader',
-      'postcss-loader',
-      {
-        loader: 'sass-loader',
-        options: {
-          implementation: require('sass'),
-          sassOptions: {
-            includePaths: ['node_modules'],
-          },
-        },
-      },
-    ],
-  };
-
-  const STRING_REPLACE_LOADER = {
-    test: /\.(j|t)sx?$/,
-    loader: 'string-replace-loader',
-    options: {
-      multiple: REPLACEMENTS,
-    },
-  };
 
   const config = {
     devServer: {
