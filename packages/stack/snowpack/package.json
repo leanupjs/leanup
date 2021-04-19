@@ -39,7 +39,7 @@
     "snowpack-plugin-replace": "1.0.4"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.13"
+    "@leanup/stack": "~1.1.14"
   },
   "engines": {
     "node": ">=12 <16",
