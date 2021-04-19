@@ -1,12 +1,12 @@
 {
   "name": "@template/angularjs",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "dependencies": {
     "angular": "1.8.2"
   },
   "devDependencies": {
-    "@leanup/cli-angularjs": "1.1.13",
-    "@leanup/stack-angularjs": "1.1.13",
+    "@leanup/cli-angularjs": "1.1.14",
+    "@leanup/stack-angularjs": "1.1.14",
     "@types/angular": "1.8.1"
   }
 }
