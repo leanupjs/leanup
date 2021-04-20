@@ -49,7 +49,7 @@
     "typescript": "4.2.4"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.2.0-rc.71"
+    "@leanup/cli": "~1.2.0-rc.72"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
