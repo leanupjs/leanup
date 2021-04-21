@@ -53,7 +53,7 @@
     "@leanup/stack-snowpack": "1.2.0-rc.73",
     "@leanup/stack-vite": "1.2.0-rc.73",
     "@leanup/stack-webpack": "1.2.0-rc.73",
-    "chromedriver": "89.0.0",
+    "chromedriver": "90.0.0",
     "npm-check-updates": "11.5.0",
     "postcss-windicss": "0.1.0",
     "selenium-server": "3.141.59",
