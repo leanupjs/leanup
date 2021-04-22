@@ -74,7 +74,7 @@
     "@leanup/cli-core-test": "1.0.124",
     "autoprefixer": "10.2.5",
     "babel-loader": "8.2.2",
-    "chalk": "4.1.0",
+    "chalk": "4.1.1",
     "commander": "7.2.0",
     "copy-modules-webpack-plugin": "2.2.1",
     "copy-webpack-plugin": "6.4.1",
