@@ -43,7 +43,7 @@
   "dependencies": {
     "@leanup/form": "1.2.0-rc.73",
     "@leanup/lib": "1.2.0-rc.73",
-    "navigo": "8.11.0",
+    "navigo": "8.11.1",
     "rxjs": "6.6.7"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "@leanup/stack-vite": "1.2.0-rc.73",
     "@leanup/stack-webpack": "1.2.0-rc.73",
     "chromedriver": "90.0.0",
-    "npm-check-updates": "11.5.0",
+    "npm-check-updates": "11.5.1",
     "postcss-windicss": "0.1.0",
     "selenium-server": "3.141.59",
     "typescript": "4.2.4"
