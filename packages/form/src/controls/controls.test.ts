@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 
+import { ValidationHandler } from '../handlers/validation.handler';
 import { FormControl, InputControl } from './controls';
 
 describe(`Test: Controls`, () => {
@@ -145,6 +146,60 @@ describe(`Test: Controls`, () => {
       expect(() => {
         formControl2.addConrol(formControl);
       }).throw;
+    });
+  });
+
+  describe('Test ValidationHandler', () => {
+    let form: FormControl;
+    let input: InputControl;
+    let handler: ValidationHandler;
+
+    beforeEach(() => {
+      // given
+      form = new FormControl('form');
+      input = new InputControl('input');
+      handler = new ValidationHandler();
+      form.addConrol(input);
+
+      // then
+      expect(form.valid).to.eq(true);
+      expect(input.valid).to.eq(true);
+      expect(handler.validate(null)).to.eql([]);
+
+      // given
+      expect(handler.validators.length).to.eq(0);
+
+      // when
+      handler.validators.add(() => {
+        throw new Error();
+      });
+
+      // then
+      expect(handler.validators.length).to.eq(1);
+    });
+
+    describe('Test InputControl', () => {
+      it(`Add ValidationHandler to FormControl`, () => {
+        // given
+        expect(form.valid).to.eq(true);
+
+        // when
+        form.setValidationHandler(handler);
+
+        // then
+        expect(form.valid).to.eq(false);
+      });
+
+      it(`Add ValidationHandler to InputControl`, () => {
+        // given
+        expect(input.valid).to.eq(true);
+
+        // when
+        input.setValidationHandler(handler);
+
+        // then
+        expect(input.valid).to.eq(false);
+      });
     });
   });
 });

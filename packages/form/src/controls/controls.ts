@@ -10,6 +10,7 @@ abstract class AbstractControl {
   private readonly _parentForms: FormControl[] = [];
   private _name = 'unnamed';
   private _validationHandler: ValidationHandler = new ValidationHandler();
+  private _notifyTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
 
   constructor(name: string) {
     this.name = name;
@@ -84,15 +85,30 @@ abstract class AbstractControl {
     }
   }
 
-  public setValidationHandler(validationHandler: ValidationHandler = new ValidationHandler()) {
+  protected setValidationHandler(validationHandler: ValidationHandler, value: unknown = null) {
     this._validationHandler = validationHandler;
+    this.validate(value);
+    this.notify();
   }
 
   protected validate(value: unknown) {
-    this.errors.set(this._validationHandler.validate(value));
+    if (this.errors.set(this._validationHandler.validate(value))) {
+      this.notify();
+    }
     this._parentForms.forEach((formControl: FormControl) => {
       formControl.validate(value);
     });
+  }
+
+  protected notify() {
+    if (this._notifyTimeout) {
+      clearTimeout(this._notifyTimeout);
+    }
+    this._notifyTimeout = setTimeout(() => {
+      this.changeListeners.forEach((changeListener: Function) => {
+        changeListener();
+      });
+    }, 0);
   }
 }
 
@@ -128,8 +144,7 @@ export class InputControl extends AbstractControl implements InputControlProps {
   private _type = 'text';
   private _value: unknown = null;
   private _oldValue: unknown = null;
-  private _notifyTimeout: NodeJS.Timeout = setTimeout(() => {}, 1);
-  private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 1);
+  private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
@@ -244,30 +259,27 @@ export class InputControl extends AbstractControl implements InputControlProps {
     }
   }
 
+  get oldValue(): unknown {
+    return this._oldValue;
+  }
+
   get value(): unknown {
     return this._value;
   }
   set value(value: unknown) {
+    this._oldValue = this._value;
     this._value = value;
     if (this._valueTimeout) {
       clearTimeout(this._valueTimeout);
     }
     this._valueTimeout = setTimeout(() => {
       this.validate(value);
-      this.notify(this._oldValue);
-      this._oldValue = this._value;
-    }, 250);
+      this.notify();
+    }, 0);
   }
 
-  private notify(oldValue = undefined) {
-    if (this._notifyTimeout) {
-      clearTimeout(this._notifyTimeout);
-    }
-    this._notifyTimeout = setTimeout(() => {
-      this.changeListeners.forEach((changeListener: Function) => {
-        changeListener(this.value, oldValue);
-      });
-    }, 250);
+  public setValidationHandler(validationHandler: ValidationHandler) {
+    super.setValidationHandler(validationHandler, this.value);
   }
 }
 
@@ -314,7 +326,7 @@ export class FormControl extends AbstractControl {
   }
 
   public getData(): Object {
-    const data: Object = {};
+    const data: Record<string, any> = {};
     this.controls.forEach((control: AbstractControl) => {
       if (control instanceof FormControl) {
         data[control.name] = control.getData();
@@ -326,10 +338,14 @@ export class FormControl extends AbstractControl {
     });
     return data;
   }
+
+  public setValidationHandler(validationHandler: ValidationHandler) {
+    super.setValidationHandler(validationHandler);
+  }
 }
 
 export class FormFactory {
-  static createForm(name: string, json: Object): FormControl {
+  static createForm(name: string, json: Record<string, any>): FormControl {
     const form = new FormControl(name);
     for (const name in json) {
       if (json.hasOwnProperty(name)) {
