@@ -267,13 +267,13 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._value;
   }
   set value(value: unknown) {
-    this._oldValue = this._value;
-    this._value = value;
     if (this._valueTimeout) {
       clearTimeout(this._valueTimeout);
     }
     this._valueTimeout = setTimeout(() => {
-      this.validate(value);
+      this.validate(value); // execution?!
+      this._oldValue = this._value;
+      this._value = value;
       this.notify();
     }, 0);
   }
