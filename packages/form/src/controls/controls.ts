@@ -88,7 +88,7 @@ abstract class AbstractControl {
   protected setValidationHandler(validationHandler: ValidationHandler, value: unknown = null) {
     this._validationHandler = validationHandler;
     this.validate(value);
-    this.notify();
+    // this.notify(); redundant?!
   }
 
   protected validate(value: unknown) {
