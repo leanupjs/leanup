@@ -1,5 +1,4 @@
 .reports/
-docs - Kopie/
 node_modules/
 templates/
 docs/.vitepress/dist

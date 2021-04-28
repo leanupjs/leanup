@@ -1,6 +1,9 @@
 import { assert, expect } from 'chai';
 
 import { ValidationHandler } from './validation.handler';
+import { DEFAULT_DIGITS_VALIDATOR, DigitsValidator } from './validators/digits.validator';
+import { PatternValidator } from './validators/pattern.validator';
+import { DEFAULT_REQUIRED_VALIDATOR } from './validators/required.validator';
 
 describe(`Test: ValidationHandler`, () => {
   let handler: ValidationHandler;
@@ -28,44 +31,36 @@ describe(`Test: ValidationHandler`, () => {
     test({});
     test([1, 1]);
 
-    it(`Validator accept a function`, () => {
+    it(`Validator accept a AbstractValidator`, () => {
       assert.equal(handler.validators.length, 0);
-      handler.validators.add(() => {});
+      handler.validators.add(DEFAULT_REQUIRED_VALIDATOR);
       assert.equal(handler.validators.length, 1);
     });
   });
 
-  describe('Test: Validate function', () => {
-    function validator(value: any) {
-      if (value instanceof Error) {
-        throw value;
-      }
-    }
-
+  describe('Test: Validate with Validator', () => {
     beforeEach(() => {
-      handler.validators.add([(value: any) => validator(value), (value: any) => validator(value)]);
+      handler.validators.add([new DigitsValidator(), DEFAULT_DIGITS_VALIDATOR]);
     });
 
     it(`Validate no errors`, () => {
-      const errors = handler.validate(null);
+      const errors = handler.validate('a');
       expect(Array.isArray(errors)).be.true;
-      expect(errors.length).be.equal(0);
+      expect(errors.length).be.equal(2);
     });
 
     it(`Validate two errors`, () => {
-      const error = new Error('Fehlermeldung');
-      const errors = handler.validate(error, false);
+      const errors = handler.validate('a', false);
       expect(Array.isArray(errors)).be.true;
       expect(errors.length).be.equal(2);
-      expect(errors[0]).be.equal(error);
+      expect(errors[0]).be.equal('Der Wert ist keine Zahl.');
     });
 
     it(`Validate only one of two errors`, () => {
-      const error = new Error('Fehlermeldung');
-      const errors = handler.validate(error, true);
+      const errors = handler.validate('a', true);
       expect(Array.isArray(errors)).be.true;
       expect(errors.length).be.equal(1);
-      expect(errors[0]).be.equal(error);
+      expect(errors[0]).be.equal('Der Wert ist keine Zahl.');
     });
   });
 });

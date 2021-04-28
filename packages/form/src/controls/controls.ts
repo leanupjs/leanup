@@ -5,7 +5,7 @@ import { ValidationHandler } from '../handlers/validation.handler';
 abstract class AbstractControl {
   public readonly changeListeners: ListOf<Function> = new ListOf(Function);
 
-  protected readonly errors: ListOf<Error> = new ListOf(Error);
+  protected readonly errors: Set<string> = new Set<string>();
 
   private readonly _parentForms: FormControl[] = [];
   private _name = 'unnamed';
@@ -31,8 +31,12 @@ abstract class AbstractControl {
     }
   }
 
-  get error(): Error | null {
-    return this.errors.first;
+  get error(): string | null {
+    if (this.errors.size > 0) {
+      return this.errors.values().next().value;
+    } else {
+      return null;
+    }
   }
 
   get id(): string {
@@ -44,7 +48,7 @@ abstract class AbstractControl {
   }
 
   get valid(): boolean {
-    return this.errors.length === 0;
+    return this.errors.size === 0;
   }
 
   public findMeInParentForm(control: AbstractControl): boolean {
@@ -92,9 +96,11 @@ abstract class AbstractControl {
   }
 
   protected validate(value: unknown) {
-    if (this.errors.set(this._validationHandler.validate(value))) {
-      this.notify();
-    }
+    this.errors.clear();
+    const errors = this._validationHandler.validate(value);
+    errors.forEach((error: string) => {
+      this.errors.add(error);
+    });
     this._parentForms.forEach((formControl: FormControl) => {
       formControl.validate(value);
     });
@@ -288,7 +294,7 @@ export class FormControl extends AbstractControl {
 
   get valid(): boolean {
     return (
-      this.errors.length === 0 &&
+      this.errors.size === 0 &&
       this.controls.filter((control: AbstractControl) => {
         return control.valid === false;
       }).length === 0

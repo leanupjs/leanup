@@ -1,6 +1,8 @@
 import { expect } from 'chai';
 
 import { ValidationHandler } from '../handlers/validation.handler';
+import { DEFAULT_DIGITS_VALIDATOR } from '../handlers/validators/digits.validator';
+import { DEFAULT_REQUIRED_VALIDATOR } from '../handlers/validators/required.validator';
 import { FormControl, InputControl } from './controls';
 
 describe(`Test: Controls`, () => {
@@ -170,12 +172,11 @@ describe(`Test: Controls`, () => {
       expect(handler.validators.length).to.eq(0);
 
       // when
-      handler.validators.add(() => {
-        throw new Error();
-      });
+      handler.validators.add([DEFAULT_REQUIRED_VALIDATOR, DEFAULT_DIGITS_VALIDATOR]);
 
       // then
-      expect(handler.validators.length).to.eq(1);
+      expect(handler.validators.length).to.eq(2);
+      expect(handler.validate(null)).to.eql(['Bitte tragen Sie einen Wert ein.']);
     });
 
     describe('Test InputControl', () => {
@@ -187,6 +188,7 @@ describe(`Test: Controls`, () => {
         form.setValidationHandler(handler);
 
         // then
+        expect(form.error).to.eq('Bitte tragen Sie einen Wert ein.');
         expect(form.valid).to.eq(false);
       });
 
@@ -198,6 +200,7 @@ describe(`Test: Controls`, () => {
         input.setValidationHandler(handler);
 
         // then
+        expect(input.error).to.eq('Bitte tragen Sie einen Wert ein.');
         expect(input.valid).to.eq(false);
       });
     });
