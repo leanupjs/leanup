@@ -16,11 +16,11 @@
     "@leanup/lib": "1.1.17"
   },
   "devDependencies": {
-    "@babel/core": "7.13.16",
+    "@babel/core": "7.14.0",
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-decorators": "7.13.15",
     "@babel/plugin-proposal-optional-chaining": "7.13.12",
-    "@babel/preset-env": "7.13.15",
+    "@babel/preset-env": "7.14.0",
     "@babel/preset-typescript": "7.13.0",
     "@babel/register": "7.13.16",
     "@types/chai": "4.2.17",
