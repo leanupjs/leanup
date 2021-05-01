@@ -35,7 +35,7 @@
     "jsdom-global": "3.0.2",
     "mocha": "8.3.2",
     "mock-local-storage": "1.1.17",
-    "npm-check-updates": "11.5.7",
+    "npm-check-updates": "11.5.9",
     "nyc": "15.1.0",
     "sinon": "9.2.4",
     "tsc": "1.20150623.0",
