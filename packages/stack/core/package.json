@@ -84,7 +84,7 @@
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
   },
   "engines": {
-    "node": ">=12 <16",
+    "node": ">=12 <17",
     "npm": ">=6 <8"
   }
 }

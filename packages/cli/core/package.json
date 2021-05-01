@@ -76,7 +76,7 @@
     "prepack": "cp ../../../README.md template/ && rm -rf lib && tsc -p tsconfig.json && tsc"
   },
   "engines": {
-    "node": ">=12 <16",
+    "node": ">=12 <17",
     "npm": ">=6 <8"
   },
   "gitHead": "7ef6bd1b528bde36bdbb3bd5c93a558185f1ee26"

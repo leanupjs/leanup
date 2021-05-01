@@ -52,7 +52,7 @@
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
   },
   "engines": {
-    "node": ">=12 <16",
+    "node": ">=12 <17",
     "npm": ">=6 <8"
   },
   "gitHead": "3d1ecda1230cf255c7a72621be43cca43de09a46"
