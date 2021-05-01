@@ -74,9 +74,9 @@
     "typescript": "4.2.4"
   },
   "peerDependencies": {
-    "chromedriver": "^89",
+    "chromedriver": "*",
     "esbuild": "^0",
-    "geckodriver": "^1",
+    "geckodriver": "*",
     "selenium-server": "^3",
     "typescript": "^4"
   },
