@@ -43,7 +43,7 @@
     "npm-check-updates": "11.5.7",
     "prettier": "2.2.1",
     "prettier-plugin-svelte": "2.2.0",
-    "svelte": "3.37.0",
+    "svelte": "3.38.0",
     "typescript": "4.2.4",
     "vitepress": "0.13.2"
   },
