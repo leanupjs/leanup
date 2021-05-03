@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-core-babel",
-  "version": "1.2.0-rc.77",
+  "version": "1.2.0-rc.78",
   "description": "This module contains the babel stuff for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
