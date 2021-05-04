@@ -24,13 +24,10 @@
     "preview": "vite preview",
     "serve": "npm run webpack:serve",
     "start": "npm run webpack:start",
-    "test": "cross-env NODE_ENV=test mocha"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "test": "cross-env NODE_ENV=test mocha",
+    "prepare": "husky install",
+    "commit-msg": "commitlint",
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
