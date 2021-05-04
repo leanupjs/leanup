@@ -54,7 +54,7 @@
     "@leanup/stack-vite": "1.2.0-rc.78",
     "@leanup/stack-webpack": "1.2.0-rc.78",
     "chromedriver": "90.0.0",
-    "npm-check-updates": "11.5.9",
+    "npm-check-updates": "11.5.10",
     "postcss-windicss": "0.1.0",
     "selenium-server": "3.141.59",
     "typescript": "4.2.4"
