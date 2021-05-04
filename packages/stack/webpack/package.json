@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-webpack",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "This module contains all webpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -40,17 +40,17 @@
     "sass-loader": "11.0.1",
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
-    "webpack": "5.35.1",
+    "webpack": "5.36.2",
     "webpack-cli": "4.6.0",
     "webpack-dev-server": "3.11.2"
   },
   "devDependencies": {
-    "@types/node": "14.14.41",
+    "@types/node": "14.14.43",
     "tslib": "2.2.0",
     "typescript": "4.2.4"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.16"
+    "@leanup/stack": "~1.1.17"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"

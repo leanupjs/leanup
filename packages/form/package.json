@@ -1,6 +1,6 @@
 {
   "name": "@leanup/form",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "This module contains useful features for handling forms.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/form#readme",
@@ -13,19 +13,19 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/lib": "1.1.16"
+    "@leanup/lib": "1.1.17"
   },
   "devDependencies": {
-    "@babel/core": "7.13.16",
+    "@babel/core": "7.14.0",
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-decorators": "7.13.15",
     "@babel/plugin-proposal-optional-chaining": "7.13.12",
-    "@babel/preset-env": "7.13.15",
+    "@babel/preset-env": "7.14.1",
     "@babel/preset-typescript": "7.13.0",
     "@babel/register": "7.13.16",
-    "@types/chai": "4.2.16",
+    "@types/chai": "4.2.17",
     "@types/mocha": "8.2.2",
-    "@types/node": "14.14.41",
+    "@types/node": "14.14.43",
     "@types/sinon": "10.0.0",
     "babel-plugin-istanbul": "6.0.0",
     "chai": "4.3.4",
