@@ -66,7 +66,7 @@
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-decorators": "7.13.15",
     "@babel/plugin-proposal-optional-chaining": "7.13.12",
-    "@babel/preset-env": "7.14.0",
+    "@babel/preset-env": "7.14.1",
     "@babel/preset-typescript": "7.13.0",
     "@leanup/cli-core-e2e": "1.0.126",
     "@leanup/cli-core-format": "1.0.124",
