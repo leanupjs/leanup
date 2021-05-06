@@ -62,7 +62,7 @@
     "nightwatch": "1.6.3",
     "nightwatch-allure": "1.2.0",
     "nyc": "15.1.0",
-    "postcss": "8.2.13",
+    "postcss": "8.2.14",
     "prettier": "2.2.1",
     "sass": "1.32.12",
     "sinon": "10.0.0",
