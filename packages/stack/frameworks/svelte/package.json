@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@snowpack/plugin-svelte": "3.6.1",
-    "prettier-plugin-svelte": "2.2.0",
+    "prettier-plugin-svelte": "2.3.0",
     "svelte-loader": "3.1.1",
     "vite-plugin-svelte": "3.0.1"
   },
