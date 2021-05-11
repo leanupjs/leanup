@@ -43,11 +43,11 @@
     "@leanup/cli-react": "1.0.127",
     "@leanup/git-hooks": "1.0.127",
     "@types/react": "17.0.5",
-    "@types/react-dom": "17.0.3",
+    "@types/react-dom": "17.0.4",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.11",
     "geckodriver": "1.22.3",
-    "npm-check-updates": "11.5.10",
+    "npm-check-updates": "11.5.11",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.1.2",
     "typescript": "4.2.4"
