@@ -34,7 +34,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "vue-loader": "15.9.6"
+    "vue-loader": "15.9.7"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.18",
