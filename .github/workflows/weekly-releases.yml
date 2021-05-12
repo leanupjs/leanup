@@ -54,7 +54,7 @@ jobs:
           content=`cat ./lerna.json | tr -d "\n"`
           echo "::set-output name=lernaJson::$content"
       - name: Create PreRelease
-        uses: actions/create-release@v1
+        uses: actions/create-release@v1.1.4
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_PUSH_TOKEN }}
         with:
