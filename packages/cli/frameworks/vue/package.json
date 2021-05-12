@@ -40,7 +40,7 @@
     "vue": "lib/cli.js"
   },
   "dependencies": {
-    "vue-loader": "15.9.6"
+    "vue-loader": "15.9.7"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.127",
