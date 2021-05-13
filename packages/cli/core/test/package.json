@@ -28,7 +28,7 @@
     "@babel/register": "7.13.16",
     "@types/chai": "4.2.18",
     "@types/mocha": "8.2.2",
-    "@types/sinon": "9.0.11",
+    "@types/sinon": "10.0.0",
     "babel-plugin-istanbul": "6.0.0",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
