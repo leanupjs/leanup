@@ -38,7 +38,7 @@
     "@angular/forms": "11.2.14",
     "@angular/platform-browser": "11.2.14",
     "@angular/platform-browser-dynamic": "11.2.14",
-    "@leanup/form": "1.0.128",
+    "@leanup/form": "1.1.18",
     "@leanup/lib": "1.0.128",
     "core-js": "3.12.1",
     "navigo": "8.11.1",
