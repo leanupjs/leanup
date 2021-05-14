@@ -21,7 +21,7 @@ jobs:
     name: Node.js v${{ matrix.node }} on OS (${{ matrix.os }})
     steps:
       - name: Checkout specific branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0
           persist-credentials: false
