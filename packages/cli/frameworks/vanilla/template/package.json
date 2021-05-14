@@ -37,7 +37,7 @@
     "rxjs": "7.0.1"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.128",
+    "@leanup/cli": "1.1.18",
     "@leanup/cli-vanilla": "1.0.128",
     "@leanup/git-hooks": "1.0.128",
     "chromedriver": "89.0.0",
