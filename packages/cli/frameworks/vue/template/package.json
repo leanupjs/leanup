@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@leanup/form": "1.0.128",
-    "@leanup/lib": "1.0.128",
+    "@leanup/lib": "1.1.18",
     "@vue/composition-api": "0.6.7",
     "navigo": "8.11.1",
     "rxjs": "7.0.1",
