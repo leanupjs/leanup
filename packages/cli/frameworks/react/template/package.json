@@ -36,7 +36,7 @@
     "navigo": "8.11.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "rxjs": "6.6.7"
+    "rxjs": "7.0.1"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.128",
@@ -45,7 +45,7 @@
     "@types/react": "17.0.5",
     "@types/react-dom": "17.0.5",
     "chromedriver": "89.0.0",
-    "cssnano": "4.1.11",
+    "cssnano": "5.0.2",
     "geckodriver": "1.22.3",
     "npm-check-updates": "11.5.11",
     "selenium-server": "3.141.59",

@@ -41,7 +41,7 @@
     "@leanup/cli": "1.0.128",
     "@leanup/cli-preact": "1.0.128",
     "@leanup/git-hooks": "1.0.128",
-    "chromedriver": "89.0.0",
+    "chromedriver": "90.0.0",
     "cssnano": "4.1.11",
     "geckodriver": "1.22.3",
     "npm-check-updates": "11.5.11",
