@@ -34,7 +34,7 @@
     "@leanup/form": "1.0.128",
     "@leanup/lib": "1.0.128",
     "navigo": "8.11.1",
-    "rxjs": "6.6.7",
+    "rxjs": "7.0.1",
     "vue": "3.0.11"
   },
   "devDependencies": {
