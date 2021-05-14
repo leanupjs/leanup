@@ -40,7 +40,7 @@
   "devDependencies": {
     "@leanup/cli": "1.0.128",
     "@leanup/cli-vue3": "1.0.128",
-    "@leanup/git-hooks": "1.0.128",
+    "@leanup/git-hooks": "1.1.18",
     "@vue/compiler-sfc": "3.0.11",
     "chromedriver": "89.0.0",
     "cssnano": "4.1.11",
