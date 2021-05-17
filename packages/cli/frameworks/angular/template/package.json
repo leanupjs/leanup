@@ -52,7 +52,7 @@
     "@ngtools/webpack": "11.2.13",
     "chromedriver": "90.0.0",
     "cssnano": "4.1.11",
-    "geckodriver": "1.22.3",
+    "geckodriver": "2.0.0",
     "npm-check-updates": "11.5.13",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.1.2",
