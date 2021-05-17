@@ -44,7 +44,7 @@
     "@leanup/git-hooks": "1.0.128",
     "@types/react": "17.0.5",
     "@types/react-dom": "17.0.5",
-    "chromedriver": "89.0.0",
+    "chromedriver": "90.0.0",
     "cssnano": "5.0.2",
     "geckodriver": "1.22.3",
     "npm-check-updates": "11.5.13",
