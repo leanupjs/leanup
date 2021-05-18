@@ -21,9 +21,9 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@babel/eslint-parser": "7.14.2",
-    "@typescript-eslint/eslint-plugin": "4.23.0",
-    "@typescript-eslint/parser": "4.23.0",
+    "@babel/eslint-parser": "7.14.3",
+    "@typescript-eslint/eslint-plugin": "4.24.0",
+    "@typescript-eslint/parser": "4.24.0",
     "eslint": "7.26.0",
     "eslint-plugin-html": "6.1.2",
     "eslint-plugin-json": "3.0.0"
