@@ -40,7 +40,7 @@
     "sass-loader": "11.1.1",
     "string-replace-loader": "3.0.1",
     "style-loader": "2.0.0",
-    "webpack": "5.37.0",
+    "webpack": "5.37.1",
     "webpack-cli": "4.7.0",
     "webpack-dev-server": "3.11.2"
   },
