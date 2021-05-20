@@ -2,7 +2,7 @@
   "name": "@template/angular",
   "version": "1.2.0-rc.80",
   "dependencies": {
-    "@angular/common": "12.1.0-next.1",
+    "@angular/common": "12.1.0-next.2",
     "@angular/compiler": "12.1.0-next.1",
     "@angular/compiler-cli": "12.1.0-next.1",
     "@angular/core": "12.1.0-next.1",
