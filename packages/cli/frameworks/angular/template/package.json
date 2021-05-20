@@ -6,7 +6,7 @@
     "@angular/compiler": "12.1.0-next.1",
     "@angular/compiler-cli": "12.1.0-next.1",
     "@angular/core": "12.1.0-next.1",
-    "@angular/forms": "12.1.0-next.1",
+    "@angular/forms": "12.1.0-next.2",
     "@angular/platform-browser": "12.1.0-next.1",
     "@angular/platform-browser-dynamic": "12.1.0-next.1",
     "core-js": "3.12.1",
