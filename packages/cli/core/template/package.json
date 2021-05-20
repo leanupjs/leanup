@@ -52,7 +52,7 @@
     "@leanup/stack-webpack": "1.1.19",
     "@tailwindcss/jit": "0.1.18",
     "chromedriver": "89.0.0",
-    "cssnano": "5.0.2",
+    "cssnano": "5.0.3",
     "npm-check-updates": "11.5.12",
     "postcss-windicss": "0.1.0",
     "selenium-server": "3.141.59",
