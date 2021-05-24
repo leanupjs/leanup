@@ -41,7 +41,7 @@
     "@leanup/form": "1.2.0-rc.80",
     "@leanup/lib": "1.2.0-rc.80",
     "navigo": "8.11.1",
-    "rxjs": "7.0.1"
+    "rxjs": "7.1.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.0-rc.80",
