@@ -40,7 +40,7 @@
     "@leanup/stack-webpack": "1.2.0-rc.81",
     "@types/node": "15.6.1",
     "tslib": "2.2.0",
-    "typescript": "4.2.4"
+    "typescript": "4.3.2"
   },
   "peerDependencies": {
     "aurelia-bootstrapper": "^2",
