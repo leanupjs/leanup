@@ -54,7 +54,7 @@
     "chromedriver": "89.0.0",
     "cssnano": "5.0.4",
     "npm-check-updates": "11.5.13",
-    "postcss-windicss": "0.1.0",
+    "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
     "typescript": "4.2.4"
   }
