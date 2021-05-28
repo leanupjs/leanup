@@ -54,6 +54,6 @@
     "npm-check-updates": "11.5.13",
     "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
-    "typescript": "4.2.4"
+    "typescript": "4.3.2"
   }
 }
