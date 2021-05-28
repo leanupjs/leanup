@@ -15,7 +15,7 @@ import { CreateSerieController } from './controller';
 })
 export class CreateSerieComponent extends CreateSerieController {
   // Den Overhead braucht nur Angular?!
-  constructor() {
+  public constructor() {
     super();
   }
 }

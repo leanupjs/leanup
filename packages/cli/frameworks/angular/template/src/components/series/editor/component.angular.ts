@@ -21,7 +21,7 @@ export class EditorSerieComponent implements GenericComponent, OnChanges {
   public titleInput: InputControl = new InputControl('title');
   public unitInput: InputControl = new InputControl('title');
 
-  ngOnChanges(): void {
+  public ngOnChanges(): void {
     this.titleInput = <InputControl>this.editorForm.getControl('title');
     this.unitInput = <InputControl>this.editorForm.getControl('unit');
   }
