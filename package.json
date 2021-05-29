@@ -4,10 +4,10 @@
   "scripts": {
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/*",
-    "ncu": "ncu --dep prod,dev -t minor -u && npm run ncu:minor && npm run ncu:patch && npm run ncu:preview",
-    "ncu:minor": "lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t minor -u -x @leanup/*,typescript",
-    "ncu:patch": "lerna exec --concurrency 2 --stream -- ncu --dep prod,dev -t patch -u",
-    "ncu:preview": "lerna exec --concurrency 2 --stream -- ncu --dep prod,dev",
+    "ncu": "npm run ncu:minor && npm run ncu:patch && npm run ncu:preview",
+    "ncu:minor": "ncu -t minor -u && lerna exec --concurrency 2 --stream -- ncu -t minor -u -x @leanup/*,typescript",
+    "ncu:patch": "ncu -t patch -u && lerna exec --concurrency 2 --stream -- ncu -t patch -u",
+    "ncu:preview": "ncu && lerna exec --concurrency 2 --stream -- ncu",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
     "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz",
@@ -16,7 +16,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "pack:all": "lerna exec --concurrency 1 --ignore=@template/* --ignore=@leanup/cli-* --stream -- npm pack",
+    "pack:all": "lerna exec --concurrency 2 --ignore=@template/* --ignore=@leanup/cli-* --stream -- npm pack",
     "prepare": "husky install",
     "commit-msg": "commitlint",
     "pre-commit": "lint-staged"
@@ -29,6 +29,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/leanupjs/leanup.git"
+  },
+  "auto-changelog": {
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
