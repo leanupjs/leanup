@@ -44,7 +44,7 @@
     "@leanup/cli-vue": "1.0.129",
     "@leanup/git-hooks": "1.0.129",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.4",
+    "cssnano": "5.0.5",
     "geckodriver": "2.0.0",
     "npm-check-updates": "11.5.13",
     "selenium-server": "3.141.59",
