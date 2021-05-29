@@ -6,7 +6,9 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 
 ### Changes
 
-1. ✨ ...
+1. ⛔ `autoprefixer` dependency was removed from stack, it is to handle in project scope
+2. ⛔ `cssnano` dependency was removed from default template, it is to handle in project scope
+3. ⛔ `postcss.config.js` file was removed from stack, it is to handle in project scope
 
 ### Migrate
 
