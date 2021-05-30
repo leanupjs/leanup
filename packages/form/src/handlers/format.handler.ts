@@ -2,19 +2,19 @@ import { ListOf } from '@leanup/lib/pattern/list-of';
 
 import { AbstractFormatter } from './formatters/abstract.formatter';
 
-export class FormatHandler<ModelValue, ViewValue> {
-  public readonly formatters: ListOf<AbstractFormatter<ModelValue, ViewValue>> = new ListOf(AbstractFormatter);
+export class FormatHandler {
+  public readonly formatters: ListOf<AbstractFormatter> = new ListOf(AbstractFormatter);
 
-  public format(value: any): ViewValue {
-    this.formatters.forEach((formatter: AbstractFormatter<ModelValue, ViewValue>) => {
+  public format(value: unknown): unknown {
+    this.formatters.forEach((formatter: AbstractFormatter) => {
       value = formatter.format(value);
     });
-    return value as ViewValue;
+    return value;
   }
-  public parse(value: any): ModelValue {
-    this.formatters.forEach((formatter: AbstractFormatter<ModelValue, ViewValue>) => {
+  public parse(value: unknown): unknown {
+    this.formatters.forEach((formatter: AbstractFormatter) => {
       value = formatter.parse(value);
     });
-    return value as ModelValue;
+    return value;
   }
 }

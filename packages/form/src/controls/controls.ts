@@ -6,10 +6,7 @@ import { ValidationHandler } from '../handlers/validation.handler';
 abstract class AbstractControl {
   public readonly changeListeners: ListOf<Function> = new ListOf(Function);
 
-  protected readonly errors: Set<string> = new Set<string>();
-  protected _disabled = false;
-  protected _readonly = false;
-
+  private readonly _errors: Set<string> = new Set<string>();
   private readonly _parentForms: FormControl[] = [];
   private _name = 'unnamed';
   private _validationHandler: ValidationHandler = new ValidationHandler();
@@ -35,11 +32,15 @@ abstract class AbstractControl {
   }
 
   get error(): string | null {
-    if (this.errors.size > 0) {
-      return this.errors.values().next().value;
+    if (this._errors.size > 0) {
+      return this._errors.values().next().value;
     } else {
       return null;
     }
+  }
+
+  protected getErrors() {
+    return this._errors;
   }
 
   get id(): string {
@@ -51,7 +52,7 @@ abstract class AbstractControl {
   }
 
   get valid(): boolean {
-    return this.errors.size === 0;
+    return this._errors.size === 0;
   }
 
   public findMeInParentForm(control: AbstractControl): boolean {
@@ -99,10 +100,10 @@ abstract class AbstractControl {
   }
 
   protected validate(value: unknown) {
-    this.errors.clear();
+    this._errors.clear();
     const errors = this._validationHandler.validate(value);
     errors.forEach((error: string) => {
-      this.errors.add(error);
+      this._errors.add(error);
     });
     this._parentForms.forEach((formControl: FormControl) => {
       formControl.validate(value);
@@ -144,15 +145,17 @@ export interface InputControlProps {
 }
 
 export class InputControl extends AbstractControl implements InputControlProps {
+  private _disabled = false;
   private _info = '';
   private _label = '';
   private _mandatory = false;
   private _placeholder = '';
+  private _readonly = false;
   private _type = 'text';
   private _value: unknown = null;
   private _oldValue: unknown = null;
   private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
-  private _formatHandler: FormatHandler<any, any> = new FormatHandler<any, any>();
+  private _formatHandler: FormatHandler = new FormatHandler();
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
@@ -304,7 +307,7 @@ export class InputControl extends AbstractControl implements InputControlProps {
     super.setValidationHandler(validationHandler, this.value);
   }
 
-  public setFormatHandler<ModelValue, ViewValue>(formatHandler: FormatHandler<ModelValue, ViewValue>) {
+  public setFormatHandler(formatHandler: FormatHandler) {
     this._formatHandler = formatHandler;
   }
 }
@@ -312,22 +315,36 @@ export class InputControl extends AbstractControl implements InputControlProps {
 export class FormControl extends AbstractControl {
   private readonly controls: ListOf<FormControl | InputControl> = new ListOf([FormControl, InputControl]);
 
+  get disabled(): boolean {
+    return (
+      this.controls.filter((control: FormControl | InputControl) => {
+        return control.disabled === false;
+      }).length === 0
+    );
+  }
   set disabled(value: boolean) {
     this.controls.forEach((control: FormControl | InputControl) => {
       control.disabled = value;
     });
   }
 
+  get readonly(): boolean {
+    return (
+      this.controls.filter((control: FormControl | InputControl) => {
+        return control.readonly === false;
+      }).length === 0
+    );
+  }
   set readonly(value: boolean) {
     this.controls.forEach((control: FormControl | InputControl) => {
-      control.disabled = value;
+      control.readonly = value;
     });
   }
 
   get valid(): boolean {
     return (
-      this.errors.size === 0 &&
-      this.controls.filter((control: AbstractControl) => {
+      super.valid &&
+      this.controls.filter((control: FormControl | InputControl) => {
         return control.valid === false;
       }).length === 0
     );
@@ -363,9 +380,13 @@ export class FormControl extends AbstractControl {
     });
   }
 
+  public setData(_data: Object) {
+    console.log('FormControl.setData is currently not implemented.');
+  }
+
   public getData(): Object {
     const data: Record<string, any> = {};
-    this.controls.forEach((control: AbstractControl) => {
+    this.controls.forEach((control: FormControl | InputControl) => {
       if (control instanceof FormControl) {
         data[control.name] = control.getData();
       } else if (control instanceof InputControl) {

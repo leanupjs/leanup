@@ -1,5 +1,7 @@
 import { expect } from 'chai';
 
+import { FormatHandler } from '../handlers/format.handler';
+import { DEFAULT_IBAN_FORMATTER } from '../handlers/formatters/iban.formatter';
 import { ValidationHandler } from '../handlers/validation.handler';
 import { DEFAULT_DIGITS_VALIDATOR } from '../handlers/validators/digits.validator';
 import { DEFAULT_REQUIRED_VALIDATOR } from '../handlers/validators/required.validator';
@@ -203,6 +205,96 @@ describe(`Test: Controls`, () => {
         expect(input.error).to.eq('Bitte tragen Sie einen Wert ein.');
         expect(input.valid).to.eq(false);
       });
+    });
+  });
+
+  describe('Test FormatHandler', () => {
+    let input: InputControl;
+    let handler: FormatHandler;
+
+    beforeEach(() => {
+      // given
+      input = new InputControl('input');
+      handler = new FormatHandler();
+      handler.formatters.add(DEFAULT_IBAN_FORMATTER);
+    });
+
+    it(`Add FormatHandler to InputControl`, (done) => {
+      // given
+      input.value = 'DE74251205100009444966';
+      setTimeout(() => {
+        expect(input.value).equal('DE74251205100009444966');
+        expect(input.modelValue).equal('DE74251205100009444966');
+        expect(input.viewValue).equal('DE74251205100009444966');
+
+        // when
+        input.setFormatHandler(handler);
+
+        // then
+        expect(input.value).equal('DE74251205100009444966');
+        expect(input.modelValue).equal('DE74251205100009444966');
+        expect(input.viewValue).equal('DE74 2512 0510 0009 4449 66');
+
+        done();
+      }, 250);
+    });
+  });
+
+  describe('Test Form disabled', () => {
+    let form: FormControl;
+    let input: InputControl;
+
+    beforeEach(() => {
+      // given
+      form = new FormControl('form');
+      input = new InputControl('input');
+      form.addConrol(input);
+      form.disabled = false;
+      input.disabled = false;
+      expect(form.disabled).to.be.false;
+      expect(input.disabled).to.be.false;
+    });
+
+    it(`Disable Form and all contained Controls`, () => {
+      // given
+      expect(form.disabled).to.be.false;
+      expect(input.disabled).to.be.false;
+
+      // when
+      form.disabled = true;
+
+      // then
+      expect(form.disabled).to.be.true;
+      expect(input.disabled).to.be.true;
+    });
+  });
+
+  describe('Test Form readonly', () => {
+    let form: FormControl;
+    let input: InputControl;
+
+    beforeEach(() => {
+      // given
+      form = new FormControl('form');
+      input = new InputControl('input');
+      form.addConrol(input);
+      form.readonly = false;
+      input.readonly = false;
+      expect(form.readonly).to.be.false;
+      expect(input.readonly).to.be.false;
+    });
+
+    it(`Readonly Form and all contained Controls`, () => {
+      // given
+      expect(form.readonly).to.be.false;
+      expect(input.readonly).to.be.false;
+
+      // when
+      form.readonly = true;
+
+      // then
+      expect(form.readonly).to.be.true;
+      expect(input.readonly).to.be.true;
     });
   });
 });

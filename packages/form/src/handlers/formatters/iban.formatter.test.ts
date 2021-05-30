@@ -12,7 +12,15 @@ describe('Teste IbanFormatter', () => {
     expect(formatter.parse('DE74 2512 0510 0009 4449 66')).equal('DE74251205100009444966');
   });
 
+  it('Format no string', () => {
+    expect(formatter.parse(1)).equal(1);
+  });
+
   it('Format "DE74251205100009444966"', () => {
     expect(formatter.format('DE74251205100009444966')).equal('DE74 2512 0510 0009 4449 66');
+  });
+
+  it('Format no string', () => {
+    expect(formatter.format(1)).equal(1);
   });
 });
