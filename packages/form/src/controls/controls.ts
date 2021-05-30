@@ -1,11 +1,14 @@
 import { ListOf } from '@leanup/lib/pattern/list-of';
 
+import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';
 
 abstract class AbstractControl {
   public readonly changeListeners: ListOf<Function> = new ListOf(Function);
 
   protected readonly errors: Set<string> = new Set<string>();
+  protected _disabled = false;
+  protected _readonly = false;
 
   private readonly _parentForms: FormControl[] = [];
   private _name = 'unnamed';
@@ -143,14 +146,13 @@ export interface InputControlProps {
 export class InputControl extends AbstractControl implements InputControlProps {
   private _info = '';
   private _label = '';
-  private _disabled = false;
   private _mandatory = false;
-  private _readonly = false;
   private _placeholder = '';
   private _type = 'text';
   private _value: unknown = null;
   private _oldValue: unknown = null;
   private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
+  private _formatHandler: FormatHandler<any, any> = new FormatHandler<any, any>();
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
@@ -284,13 +286,43 @@ export class InputControl extends AbstractControl implements InputControlProps {
     }, 0);
   }
 
+  get modelValue(): unknown {
+    return this.value;
+  }
+  set modelValue(value: unknown) {
+    this.value = value;
+  }
+
+  get viewValue(): unknown {
+    return this._formatHandler.format(this.modelValue);
+  }
+  set viewValue(value: unknown) {
+    this.modelValue = this._formatHandler.parse(value);
+  }
+
   public setValidationHandler(validationHandler: ValidationHandler) {
     super.setValidationHandler(validationHandler, this.value);
+  }
+
+  public setFormatHandler<ModelValue, ViewValue>(formatHandler: FormatHandler<ModelValue, ViewValue>) {
+    this._formatHandler = formatHandler;
   }
 }
 
 export class FormControl extends AbstractControl {
   private readonly controls: ListOf<FormControl | InputControl> = new ListOf([FormControl, InputControl]);
+
+  set disabled(value: boolean) {
+    this.controls.forEach((control: FormControl | InputControl) => {
+      control.disabled = value;
+    });
+  }
+
+  set readonly(value: boolean) {
+    this.controls.forEach((control: FormControl | InputControl) => {
+      control.disabled = value;
+    });
+  }
 
   get valid(): boolean {
     return (

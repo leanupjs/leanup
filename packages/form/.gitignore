@@ -1,4 +1,4 @@
-controls/
-handlers/
-node_modules/
+./controls/
+./handlers/
+./node_modules/
 *.tgz
