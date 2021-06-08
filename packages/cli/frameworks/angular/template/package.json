@@ -40,7 +40,7 @@
     "@angular/platform-browser-dynamic": "11.2.14",
     "@leanup/form": "1.0.131",
     "@leanup/lib": "1.0.131",
-    "core-js": "3.13.1",
+    "core-js": "3.14.0",
     "navigo": "8.11.1",
     "rxjs": "6.6.7",
     "zone.js": "0.11.4"
@@ -49,13 +49,13 @@
     "@leanup/cli": "1.0.131",
     "@leanup/cli-angular": "1.0.131",
     "@leanup/git-hooks": "1.0.131",
-    "@ngtools/webpack": "11.2.13",
+    "@ngtools/webpack": "11.2.14",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.5",
     "geckodriver": "2.0.0",
     "npm-check-updates": "11.6.0",
     "selenium-server": "3.141.59",
-    "tailwindcss": "2.1.3",
+    "tailwindcss": "2.1.4",
     "typescript": "4.1.5"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
