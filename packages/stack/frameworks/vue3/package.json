@@ -38,13 +38,13 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@snowpack/plugin-vue": "2.6.0",
+    "@snowpack/plugin-vue": "2.6.1",
     "@vitejs/plugin-vue": "1.2.3",
     "vue-loader": "16.2.0"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.2.0-rc.85",
-    "@types/node": "15.6.1",
+    "@types/node": "15.12.2",
     "typescript": "4.3.2"
   },
   "peerDependencies": {
