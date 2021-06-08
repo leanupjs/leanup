@@ -41,12 +41,12 @@
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.22",
-    "@types/node": "15.6.1",
+    "@types/node": "15.12.2",
     "tslib": "2.2.0",
     "typescript": "4.3.2"
   },
   "peerDependencies": {
-    "@ngtools/webpack": "^11.2.13"
+    "@ngtools/webpack": "^11.2.14"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
