@@ -1,6 +1,6 @@
 {
   "name": "@template/inferno",
-  "version": "1.0.131",
+  "version": "1.0.132",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,16 +31,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.131",
-    "@leanup/lib": "1.0.131",
+    "@leanup/form": "1.0.132",
+    "@leanup/lib": "1.0.132",
     "inferno": "7.4.8",
     "navigo": "8.11.1",
     "rxjs": "7.1.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.131",
-    "@leanup/cli-inferno": "1.0.131",
-    "@leanup/git-hooks": "1.0.131",
+    "@leanup/cli": "1.0.132",
+    "@leanup/cli-inferno": "1.0.132",
+    "@leanup/git-hooks": "1.0.132",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.5",
     "geckodriver": "2.0.0",
