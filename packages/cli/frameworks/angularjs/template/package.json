@@ -43,7 +43,7 @@
     "@leanup/cli-angularjs": "1.0.132",
     "@leanup/git-hooks": "1.0.132",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.5",
+    "cssnano": "5.0.6",
     "geckodriver": "2.0.0",
     "npm-check-updates": "11.6.0",
     "selenium-server": "3.141.59",
