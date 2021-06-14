@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-vue3",
-  "version": "1.2.0-rc.83",
+  "version": "1.2.0-rc.86",
   "description": "This package contains the Vue3 framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -38,13 +38,13 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@snowpack/plugin-vue": "2.6.0",
-    "@vitejs/plugin-vue": "1.2.2",
+    "@snowpack/plugin-vue": "2.6.1",
+    "@vitejs/plugin-vue": "1.2.3",
     "vue-loader": "16.2.0"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.0-rc.83",
-    "@types/node": "15.6.1",
+    "@leanup/stack-webpack": "1.2.0-rc.86",
+    "@types/node": "15.12.2",
     "typescript": "4.3.2"
   },
   "peerDependencies": {

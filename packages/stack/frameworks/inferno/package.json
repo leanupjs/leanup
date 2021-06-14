@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-inferno",
-  "version": "1.2.0-rc.83",
+  "version": "1.2.0-rc.86",
   "description": "This package contains the Inferno framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -38,13 +38,13 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli-core-babel": "1.2.0-rc.83",
+    "@leanup/cli-core-babel": "1.2.0-rc.86",
     "@snowpack/plugin-babel": "2.1.7",
-    "babel-plugin-inferno": "6.2.0"
+    "babel-plugin-inferno": "6.3.0"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.0-rc.83",
-    "@types/node": "15.6.1",
+    "@leanup/stack-webpack": "1.2.0-rc.86",
+    "@types/node": "15.12.2",
     "typescript": "4.3.2"
   },
   "peerDependencies": {
