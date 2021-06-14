@@ -55,6 +55,11 @@ abstract class AbstractControl {
     return this._errors.size === 0;
   }
 
+  // ES5
+  protected es5isValid(): boolean {
+    return this._errors.size === 0;
+  }
+
   public findMeInParentForm(control: AbstractControl): boolean {
     if (this === control) {
       return true;
@@ -343,7 +348,7 @@ export class FormControl extends AbstractControl {
 
   get valid(): boolean {
     return (
-      super.valid &&
+      this.es5isValid() && // ES5
       this.controls.filter((control: FormControl | InputControl) => {
         return control.valid === false;
       }).length === 0

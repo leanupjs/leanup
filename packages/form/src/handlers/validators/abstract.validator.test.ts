@@ -18,6 +18,6 @@ describe('Teste AbstractValidator', () => {
   });
 
   it('Standard-Meldung ist', () => {
-    expect(validator.message).to.equal(`Es ist ein unbekannter Fehler aufgetreten.`);
+    expect(validator.message).to.equal(`Ein unbekannter Fehler ist aufgetreten.`);
   });
 });
