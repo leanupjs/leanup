@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "prettier-plugin-svelte": "2.3.0",
-    "svelte-loader": "3.1.1"
+    "svelte-loader": "3.1.2"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.132",
