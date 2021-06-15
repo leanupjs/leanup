@@ -39,7 +39,7 @@
     "inferno": "7.4.8",
     "jsdom": "16.6.0",
     "jsdom-global": "3.0.2",
-    "mocha": "9.0.0",
+    "mocha": "8.4.0",
     "mock-local-storage": "1.1.17",
     "nyc": "15.1.0",
     "preact": "10.5.13",
