@@ -3,4 +3,5 @@ helpers/
 node_modules/
 pattern/
 shares/
+umd/
 *.tgz

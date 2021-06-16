@@ -41,7 +41,7 @@
   },
   "scripts": {
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
-    "prepack": "npm test && rm -rf index.* controls handlers && tsc",
+    "prepack": "npm test && rm -rf index.* controls handlers umd && tsc",
     "remove": "rm -rf node_modules",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && npm update && npm outdated"
@@ -52,6 +52,8 @@
     "controls/**/*.js.map",
     "handlers/**/*.d.ts",
     "handlers/**/*.js",
-    "handlers/**/*.js.map"
+    "handlers/**/*.js.map",
+    "umd/**/*.js",
+    "umd/**/*.js.map"
   ]
 }

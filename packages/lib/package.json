@@ -45,7 +45,7 @@
   },
   "scripts": {
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
-    "prepack": "npm test && rm -rf index.* components helpers pattern shares && tsc",
+    "prepack": "npm test && rm -rf index.* components helpers pattern shares umd && tsc",
     "remove": "rm -rf node_modules",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && npm update && npm outdated"
@@ -62,6 +62,8 @@
     "pattern/**/*.js.map",
     "shares/**/*.d.ts",
     "shares/**/*.js",
-    "shares/**/*.js.map"
+    "shares/**/*.js.map",
+    "umd/**/*.js",
+    "umd/**/*.js.map"
   ]
 }
