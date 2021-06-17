@@ -43,7 +43,7 @@
     "@leanup/stack-webpack": "1.1.24",
     "@types/node": "15.12.2",
     "tslib": "2.3.0",
-    "typescript": "4.3.2"
+    "typescript": "4.3.3"
   },
   "peerDependencies": {
     "@ngtools/webpack": "^11.2.14"
