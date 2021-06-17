@@ -1,6 +1,6 @@
 {
   "name": "@leanup/form",
-  "version": "1.2.0-rc.86",
+  "version": "1.2.0-rc.87",
   "description": "This module contains useful features for handling forms.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/form#readme",
@@ -13,7 +13,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/lib": "1.2.0-rc.86"
+    "@leanup/lib": "1.2.0-rc.87"
   },
   "devDependencies": {
     "@babel/core": "7.14.6",
@@ -37,7 +37,7 @@
     "mock-local-storage": "1.1.17",
     "nyc": "15.1.0",
     "sinon": "11.1.1",
-    "typescript": "4.3.2"
+    "typescript": "4.3.3"
   },
   "scripts": {
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
