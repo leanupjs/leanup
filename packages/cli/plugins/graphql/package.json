@@ -25,12 +25,12 @@
   },
   "dependencies": {
     "eslint-plugin-graphql": "4.0.0",
-    "graphql-tag": "2.12.4"
+    "graphql-tag": "2.12.5"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.0-rc.87",
-    "@types/node": "15.12.2",
-    "typescript": "4.3.3"
+    "@types/node": "15.14.2",
+    "typescript": "4.3.5"
   },
   "peerDependencies": {
     "@leanup/cli": "~1.2.0-rc.87"
