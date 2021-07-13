@@ -1,7 +1,7 @@
 const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
 REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: any }) => {
@@ -50,8 +50,8 @@ const IMAGE_FILE_LOADER = {
 const LESS_LOADER = {
   test: /\.less$/,
   use: [
-    // MiniCssExtractPlugin.loader,
-    'style-loader',
+    MiniCssExtractPlugin.loader,
+    // 'style-loader',
     'css-loader',
     'postcss-loader',
     {
@@ -68,8 +68,8 @@ const LESS_LOADER = {
 const SASS_LOADER = {
   test: /\.(sa|s?c)ss$/,
   use: [
-    // MiniCssExtractPlugin.loader,
-    'style-loader',
+    MiniCssExtractPlugin.loader,
+    // 'style-loader',
     'css-loader',
     'postcss-loader',
     {
@@ -144,7 +144,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
         destination: '.reports/nexus-iq',
         includePackageJsons: true,
       }),
-      // new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin(),
     ],
     resolve: {
       alias: {},

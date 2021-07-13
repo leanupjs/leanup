@@ -3,6 +3,7 @@
 The `@leanup stack` is maximally decoupled, so we can proceed quickly and with only tiny changes.
 
 ## Migrate from 1.1 to 1.2
+1. ✋ The inline css inside the `main.js` will extract in seperate artifact file (`main.css`). (CSP)
 
 ### Changes
 
