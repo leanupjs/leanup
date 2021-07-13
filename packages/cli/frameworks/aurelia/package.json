@@ -44,11 +44,11 @@
   },
   "devDependencies": {
     "@leanup/cli": "1.0.134",
-    "@types/node": "15.12.4",
-    "typescript": "4.3.4"
+    "@types/node": "15.14.2",
+    "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.133",
+    "@leanup/cli": "~1.0.134",
     "aurelia-bootstrapper": "^2",
     "aurelia-framework": "^1"
   },

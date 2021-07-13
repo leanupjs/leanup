@@ -34,7 +34,7 @@
     "@leanup/form": "1.0.134",
     "@leanup/lib": "1.0.134",
     "navigo": "8.11.1",
-    "rxjs": "7.1.0",
+    "rxjs": "7.2.0",
     "svelte": "3.38.3"
   },
   "devDependencies": {
@@ -44,11 +44,11 @@
     "@pyoner/svelte-types": "3.4.4",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.6",
-    "geckodriver": "2.0.0",
-    "npm-check-updates": "11.7.1",
+    "geckodriver": "2.0.1",
+    "npm-check-updates": "11.8.2",
     "selenium-server": "3.141.59",
-    "tailwindcss": "2.2.2",
-    "typescript": "4.3.4"
+    "tailwindcss": "2.2.4",
+    "typescript": "4.3.5"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
 }

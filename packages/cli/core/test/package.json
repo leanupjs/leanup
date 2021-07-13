@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@babel/register": "7.14.5",
-    "@types/chai": "4.2.19",
-    "@types/mocha": "8.2.2",
+    "@types/chai": "4.2.21",
+    "@types/mocha": "8.2.3",
     "@types/sinon": "10.0.2",
     "babel-plugin-istanbul": "6.0.0",
     "chai": "4.3.4",
