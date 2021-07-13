@@ -1,7 +1,7 @@
 import { NonRequiredValidator } from './non-required.validator';
 
 export class IsTrueValidator extends NonRequiredValidator {
-  constructor(message: string = 'Bitte bestätigen Sie.') {
+  constructor(message: string = 'Please confirm the note.') {
     super(message);
   }
 

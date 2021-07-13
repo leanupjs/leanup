@@ -6,7 +6,7 @@ export class MaxLengthValidator extends NonRequiredValidator {
   // --- Properties ---
   public maxLength: number;
 
-  constructor(maxLength: number, message: string = `Die Eingabe darf nicht länger als ${maxLength} Zeichen sein.`) {
+  constructor(maxLength: number, message: string = `The entry must not be longer than ${maxLength} characters.`) {
     super(message);
     this.maxLength = maxLength;
   }

@@ -5,7 +5,7 @@ import { NonRequiredValidator } from './non-required.validator';
 export class PatternValidator extends NonRequiredValidator {
   public _regExp: RegExp = /^/g;
 
-  constructor(regExp: RegExp, message: string = 'Bitte tragen Sie einen gültigen Wert ein.') {
+  constructor(regExp: RegExp, message: string = 'Please enter a valid value.') {
     super(message);
     this.regExp = regExp;
   }

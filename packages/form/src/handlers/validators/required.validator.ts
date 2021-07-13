@@ -1,11 +1,11 @@
 import { AbstractValidator } from './abstract.validator';
 
 export class RequiredValidator extends AbstractValidator {
-  constructor(message: string = 'Bitte tragen Sie einen Wert ein.') {
+  constructor(message: string = 'Please enter a value.') {
     super(message);
   }
 
-  public isValid(value: any): boolean {
+  public valid(value: any): boolean {
     return value !== undefined && value !== null && value.toString().length > 0;
   }
 }

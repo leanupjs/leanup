@@ -9,7 +9,7 @@ export class ValidationHandler {
     const errors: string[] = [];
     try {
       this.validators.forEach((validator: AbstractValidator) => {
-        if (validator.isValid(value) === false) {
+        if (validator.valid(value) === false) {
           errors.push(validator.message);
           if (fast === true) {
             throw new Error(`Only one error is enough. Be quick and stop the execution of other validation functions.`);

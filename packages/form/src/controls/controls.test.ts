@@ -178,7 +178,6 @@ describe(`Test: Controls`, () => {
 
       // then
       expect(handler.validators.length).to.eq(2);
-      expect(handler.validate(null)).to.eql(['Bitte tragen Sie einen Wert ein.']);
     });
 
     describe('Test InputControl', () => {
@@ -190,7 +189,6 @@ describe(`Test: Controls`, () => {
         form.setValidationHandler(handler);
 
         // then
-        expect(form.error).to.eq('Bitte tragen Sie einen Wert ein.');
         expect(form.valid).to.eq(false);
       });
 
@@ -202,7 +200,6 @@ describe(`Test: Controls`, () => {
         input.setValidationHandler(handler);
 
         // then
-        expect(input.error).to.eq('Bitte tragen Sie einen Wert ein.');
         expect(input.valid).to.eq(false);
       });
     });
@@ -221,19 +218,19 @@ describe(`Test: Controls`, () => {
 
     it(`Add FormatHandler to InputControl`, (done) => {
       // given
-      input.value = 'DE74251205100009444966';
+      input.value = 'DE53734514500036064418';
       setTimeout(() => {
-        expect(input.value).equal('DE74251205100009444966');
-        expect(input.modelValue).equal('DE74251205100009444966');
-        expect(input.viewValue).equal('DE74251205100009444966');
+        expect(input.value).equal('DE53734514500036064418');
+        expect(input.modelValue).equal('DE53734514500036064418');
+        expect(input.viewValue).equal('DE53734514500036064418');
 
         // when
         input.setFormatHandler(handler);
 
         // then
-        expect(input.value).equal('DE74251205100009444966');
-        expect(input.modelValue).equal('DE74251205100009444966');
-        expect(input.viewValue).equal('DE74 2512 0510 0009 4449 66');
+        expect(input.value).equal('DE53734514500036064418');
+        expect(input.modelValue).equal('DE53734514500036064418');
+        expect(input.viewValue).equal('DE53 7345 1450 0036 0644 18');
 
         done();
       }, 250);

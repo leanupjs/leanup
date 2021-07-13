@@ -53,14 +53,12 @@ describe(`Test: ValidationHandler`, () => {
       const errors = handler.validate('a', false);
       expect(Array.isArray(errors)).be.true;
       expect(errors.length).be.equal(2);
-      expect(errors[0]).be.equal('Der Wert ist keine Zahl.');
     });
 
     it(`Validate only one of two errors`, () => {
       const errors = handler.validate('a', true);
       expect(Array.isArray(errors)).be.true;
       expect(errors.length).be.equal(1);
-      expect(errors[0]).be.equal('Der Wert ist keine Zahl.');
     });
   });
 });

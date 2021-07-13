@@ -11,6 +11,6 @@ export class NotValidator extends NonRequiredValidator {
   }
 
   public validate(value: any): boolean {
-    return this.validator.isValid(value) === false;
+    return this.validator.valid(value) === false;
   }
 }

@@ -5,7 +5,7 @@ import { Log } from '@leanup/lib/helpers/log';
 
 import { AbstractValidator } from './abstract.validator';
 
-describe('Teste AbstractValidator', () => {
+describe('AbstractValidator', () => {
   const validator: AbstractValidator = new AbstractValidator(undefined);
   let spyElement;
 
@@ -18,6 +18,6 @@ describe('Teste AbstractValidator', () => {
   });
 
   it('Standard-Meldung ist', () => {
-    expect(validator.message).to.equal(`Es ist ein unbekannter Fehler aufgetreten.`);
+    expect(validator.message).to.equal(`An unknown validation error occurred.`);
   });
 });

@@ -2,22 +2,22 @@ import { expect } from 'chai';
 
 import { IbanFormatter } from './iban.formatter';
 
-describe('Teste IbanFormatter', () => {
+describe('IbanFormatter', () => {
   let formatter: IbanFormatter;
   beforeEach(() => {
     formatter = new IbanFormatter();
   });
 
-  it('Parse "DE74 2512 0510 0009 4449 66"', () => {
-    expect(formatter.parse('DE74 2512 0510 0009 4449 66')).equal('DE74251205100009444966');
+  it('Parse "DE53 7345 1450 0036 0644 18"', () => {
+    expect(formatter.parse('DE53 7345 1450 0036 0644 18')).equal('DE53734514500036064418');
   });
 
   it('Format no string', () => {
     expect(formatter.parse(1)).equal(1);
   });
 
-  it('Format "DE74251205100009444966"', () => {
-    expect(formatter.format('DE74251205100009444966')).equal('DE74 2512 0510 0009 4449 66');
+  it('Format "DE53734514500036064418"', () => {
+    expect(formatter.format('DE53734514500036064418')).equal('DE53 7345 1450 0036 0644 18');
   });
 
   it('Format no string', () => {

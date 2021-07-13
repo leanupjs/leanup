@@ -3,7 +3,7 @@ import { Validator } from '@leanup/lib/helpers/validator';
 
 export abstract class AbstractValidator {
   private readonly state = {
-    message: `Es ist ein unbekannter Fehler aufgetreten.`,
+    message: `An unknown validation error occurred.`,
   };
 
   constructor(message: string) {
@@ -14,12 +14,12 @@ export abstract class AbstractValidator {
     if (Validator.isString(message, 1)) {
       this.state.message = message;
     } else {
-      Log.debug(`The message of the validator should be type of string with a min-length of 1.`);
+      Log.error(`The message of the validator should be type of string with a min-length of 1.`);
     }
   }
   get message(): string {
     return this.state.message;
   }
 
-  abstract isValid(value: any): boolean;
+  abstract valid(value: any): boolean;
 }
