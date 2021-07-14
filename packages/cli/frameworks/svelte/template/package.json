@@ -8,6 +8,6 @@
     "@leanup/cli-svelte": "1.2.0-rc.89",
     "@leanup/stack-svelte": "1.2.0-rc.89",
     "@pyoner/svelte-types": "3.4.4",
-    "@tsconfig/svelte": "1.0.13"
+    "@tsconfig/svelte": "2.0.1"
   }
 }
