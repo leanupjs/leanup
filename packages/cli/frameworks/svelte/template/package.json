@@ -45,7 +45,7 @@
     "chromedriver": "90.0.1",
     "cssnano": "5.0.6",
     "geckodriver": "2.0.1",
-    "npm-check-updates": "11.8.2",
+    "npm-check-updates": "11.8.3",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.2.4",
     "typescript": "4.3.5"
