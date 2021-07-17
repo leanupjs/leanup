@@ -15,8 +15,8 @@ export function webpackAureliaConfig(env: any, argv: any): Object {
     },
   });
 
-  config.resolve.alias['aurelia-binding'] = path.join(process.cwd(), 'node_modules/aurelia-binding');
-  config.resolve.modules.push('src');
+  config.resolve.modules.push(path.resolve(process.cwd(), 'src'));
+  config.resolve.modules.push(path.resolve(process.cwd(), 'node_modules'));
 
   return config;
 }
