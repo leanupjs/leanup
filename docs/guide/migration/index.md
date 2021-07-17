@@ -101,16 +101,12 @@ module.exports = (...args) => {
   // Here using the example for react
   const config = require('@leanup/stack-react/webpack.config')(...args);
 
-  config.module.rules.shift({
-    test: /regenerator-runtime\/.+?\.(j|t)sx?$/,
+  config.module.rules.unshift({
+    test: /runtime.js$/,
     loader: 'string-replace-loader',
     options: {
-      multiple: [
-        {
-          from: 'Function(',
-          to: '// Function(',
-        },
-      ],
+      search: /[^\w]Function\(/,
+      replace: '// Function(',
     },
   });
 
