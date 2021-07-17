@@ -4,6 +4,7 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 
 ## Migrate from 1.1 to 1.2
 1. ✋ The inline css inside the `main.js` will extract in seperate artifact file (`main.css`). (CSP)
+2. ✋ Add copy public folder to dist (`copy-webpack-plugin`)
 
 ### Changes
 
@@ -39,7 +40,7 @@ Now execute `npm install`.
 
 1. ✨ Refactoring the @leanup module separation
 2. ✨ Maximal Major-Upgrade from all dependencies
-3. ✨ Remove some not really important dependencies (e.g. `copy-webpack-plugin`, `html-webpack-plugin`, `copy-modules-webpack-plugin`)
+3. ✨ Remove some not really important dependencies (e.g. `copy-webpack-plugin`, `html-webpack-plugin`)
 4. ✨ Global CLI installation
 5. ✨ Webpack 5
 6. ✨ ESBuild
@@ -89,6 +90,34 @@ Add the following script tag in you `index.html` body.
 </html>
 ```
 
+#### If you have unsafe-eval with @babel/runtime
+
+If you have CSP problems with `unsafe-eval` by using @babel/runtime. You can configure this as follows:
+
+1. Extends the `webpack.config.js` like this<br>
+
+```js
+module.exports = (...args) => {
+  // Here using the example for react
+  const config = require('@leanup/stack-react/webpack.config')(...args);
+
+  config.module.rules.shift({
+    test: /regenerator-runtime\/.+?\.(j|t)sx?$/,
+    loader: 'string-replace-loader',
+    options: {
+      multiple: [
+        {
+          from: 'Function(',
+          to: '// Function(',
+        },
+      ],
+    },
+  });
+
+  return config;
+};
+```
+
 #### If you need the frame material
 
 If you need the frame material from the public folder in your dist folder. You can configure this as follows:
@@ -113,6 +142,7 @@ module.exports = (...args) => {
       })
     );
   }
+
   return config;
 };
 ```
