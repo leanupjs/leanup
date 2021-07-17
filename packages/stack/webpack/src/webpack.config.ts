@@ -52,7 +52,6 @@ const LESS_LOADER = {
   test: /\.less$/,
   use: [
     MiniCssExtractPlugin.loader,
-    // 'style-loader',
     'css-loader',
     'postcss-loader',
     {
@@ -60,7 +59,6 @@ const LESS_LOADER = {
       options: {
         lessOptions: {
           javascriptEnabled: true,
-          // paths: ['node_modules'],
         },
       },
     },
@@ -70,7 +68,6 @@ const SASS_LOADER = {
   test: /\.(sa|s?c)ss$/,
   use: [
     MiniCssExtractPlugin.loader,
-    // 'style-loader',
     'css-loader',
     'postcss-loader',
     {
