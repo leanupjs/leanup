@@ -1,6 +1,7 @@
 const path = require('path');
 
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
@@ -143,6 +144,13 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
       new CopyModulesWebpackPlugin({
         destination: '.reports/nexus-iq',
         includePackageJsons: true,
+      }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+          },
+        ],
       }),
       new MiniCssExtractPlugin(),
     ],
