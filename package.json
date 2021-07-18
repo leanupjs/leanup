@@ -42,7 +42,7 @@
     "@typescript-eslint/eslint-plugin": "4.28.3",
     "@typescript-eslint/parser": "4.28.3",
     "auto-changelog": "2.3.0",
-    "eslint": "7.30.0",
+    "eslint": "7.31.0",
     "eslint-plugin-html": "6.1.2",
     "eslint-plugin-json": "3.0.0",
     "husky": "7.0.1",
