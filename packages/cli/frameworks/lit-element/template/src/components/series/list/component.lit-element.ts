@@ -8,7 +8,7 @@ import { ListSerieController } from './controller';
 export class ListSerieComponent extends LitElementComponent {
   public ctrl: ListSerieController = new ListSerieController();
 
-  constructor() {
+  public constructor() {
     super();
     this.ctrl.renderView = this.update.bind(this);
   }
