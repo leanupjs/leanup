@@ -156,6 +156,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
       modules: ['node_modules'],
       extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue', '.gql', '.graphql'],
     },
+    target: 'web', // https://webpack.js.org/configuration/target/
   };
 
   const cannotFindCliModule = /Cannot find module.+@leanup\/cli/;
