@@ -17,6 +17,6 @@
     "@leanup/cli-angular": "1.1.26",
     "@leanup/stack-angular": "1.1.26",
     "@ngtools/webpack": "11.2.14",
-    "typescript": "4.1.6"
+    "typescript": "4.3.5"
   }
 }
