@@ -18,7 +18,7 @@ export class ListSerieComponent extends PreactComponent<unknown, unknown> implem
     const tables: any[] = [];
     for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
-        <table key={i}>
+        <table className="table" key={i}>
           <thead>
             <tr>
               <th scope="col">#</th>

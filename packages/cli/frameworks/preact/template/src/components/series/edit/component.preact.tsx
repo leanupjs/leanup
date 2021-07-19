@@ -22,7 +22,7 @@ export class EditSerieComponent extends PreactComponent<Props, EditSerieControll
   public render(): JSX.Element {
     return (
       <form
-        onSubmit={(event: Event) => {
+        onSubmit={(event: FormEvent<HTMLFormElement>) => {
           event.preventDefault();
           event.stopPropagation();
           this.ctrl.onSubmit();
