@@ -34,7 +34,7 @@
     "vite-plugin-replace": "0.1.1"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.2.0-rc.90"
+    "@leanup/stack": "~1.2.0-rc.92"
   },
   "engines": {
     "node": ">=12 <17",
