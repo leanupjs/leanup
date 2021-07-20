@@ -4,8 +4,6 @@
 // If you need conditional logic, you might want to use this type of config.
 // Otherwise, JSON or YAML is recommended.
 
-const path = require('path');
-
 module.exports = {
   extension: ['js', 'jsx', 'ts', 'tsx'],
   package: './package.json',
