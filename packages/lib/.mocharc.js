@@ -6,11 +6,9 @@
 
 module.exports = {
   extension: ['js', 'jsx', 'ts', 'tsx'],
-  package: './package.json',
   reporter: 'spec',
   require: ['esbuild-register', 'jsdom-global/register', 'mock-local-storage'],
   spec: ['src/**/*.spec.*s*', 'src/**/*.test.*s*', 'tests/unit/**/*.spec.*s*', 'tests/unit/**/*.test.*s*'],
-  ui: 'bdd',
 };
 
 // Source: https://github.com/mochajs/mocha/tree/master/example/config
