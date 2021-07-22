@@ -35,8 +35,8 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.0-rc.92",
-    "@types/node": "16.3.3",
+    "@leanup/stack-webpack": "1.2.0-rc.93",
+    "@types/node": "16.4.0",
     "typescript": "4.3.5"
   },
   "peerDependencies": {

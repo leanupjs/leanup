@@ -40,13 +40,13 @@
     "snowpack-plugin-angular": "2.2.0"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.0-rc.92",
-    "@types/node": "16.3.3",
+    "@leanup/stack-webpack": "1.2.0-rc.93",
+    "@types/node": "16.4.0",
     "tslib": "2.3.0",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@ngtools/webpack": "^12.1.2"
+    "@ngtools/webpack": "^12.1.3"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"

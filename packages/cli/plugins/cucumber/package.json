@@ -22,18 +22,18 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@cucumber/cucumber": "7.3.0",
+    "@cucumber/cucumber": "7.3.1",
     "@cucumber/pretty-formatter": "1.0.0-alpha.1",
     "cucumber-html-reporter": "5.4.0",
     "nightwatch-api": "3.0.2"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.0-rc.92",
-    "@types/node": "16.3.3",
+    "@types/node": "16.4.0",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.2.0-rc.92"
+    "@leanup/cli": "~1.2.0-rc.93"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"

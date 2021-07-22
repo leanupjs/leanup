@@ -24,10 +24,10 @@
     "lup": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli": "1.2.0-rc.92"
+    "@leanup/cli": "1.2.0-rc.93"
   },
   "devDependencies": {
-    "@types/node": "16.3.3",
+    "@types/node": "16.4.0",
     "typescript": "4.3.5"
   },
   "scripts": {
