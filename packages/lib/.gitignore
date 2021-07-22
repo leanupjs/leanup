@@ -4,4 +4,7 @@ node_modules/
 pattern/
 shares/
 umd/
+index.d.ts
+index.js
+index.js.map
 *.tgz
