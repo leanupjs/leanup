@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.2.0-rc.92",
+  "version": "1.2.0-rc.93",
   "description": "",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha",
@@ -38,14 +38,14 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.2.0-rc.92",
-    "@leanup/lib": "1.2.0-rc.91",
+    "@leanup/form": "1.2.0-rc.93",
+    "@leanup/lib": "1.2.0-rc.93",
     "navigo": "8.11.1",
     "rxjs": "7.2.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.0-rc.93",
-    "@leanup/git-hooks": "1.2.0-rc.90",
+    "@leanup/git-hooks": "1.2.0-rc.93",
     "@leanup/stack": "1.2.0-rc.93",
     "@leanup/stack-snowpack": "1.2.0-rc.93",
     "@leanup/stack-vite": "1.2.0-rc.93",

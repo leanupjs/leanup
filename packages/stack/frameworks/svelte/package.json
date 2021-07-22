@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-svelte",
-  "version": "1.2.0-rc.92",
+  "version": "1.2.0-rc.93",
   "description": "This package contains the Svelte framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
