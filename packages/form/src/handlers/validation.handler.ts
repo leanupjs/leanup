@@ -1,4 +1,4 @@
-import { ListOf } from '@leanup/lib/pattern/list-of';
+import { ListOf } from '@leanup/lib';
 
 import { AbstractValidator } from './validators/abstract.validator';
 

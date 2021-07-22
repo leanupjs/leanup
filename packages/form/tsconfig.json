@@ -1,17 +1,16 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
     "importHelpers": true,
-    "declaration": true,
     "sourceMap": true,
-    "strict": true,
-    "outDir": "./",
+    "strict": false,
+    "outDir": "dist",
     "skipLibCheck": true,
     "module": "ESNext",
     "removeComments": true,
-    "target": "ES2015",
-    "types": ["chai", "mocha", "node"],
+    "target": "ESNext",
+    "types": ["chai", "loglevel", "node"],
     "typeRoots": ["node_modules/@types"]
   },
   "include": ["src/**/*.ts"],

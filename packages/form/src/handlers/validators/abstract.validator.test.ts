@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sonon, { spy } from 'sinon';
 
-import { Log } from '@leanup/lib/helpers/log';
+import { Log } from '@leanup/lib';
 
 import { AbstractValidator } from './abstract.validator';
 

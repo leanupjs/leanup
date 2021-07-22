@@ -1,4 +1,4 @@
-import { Validator } from '@leanup/lib/helpers/validator';
+import { Validator } from '@leanup/lib';
 
 import { NonRequiredValidator } from './non-required.validator';
 

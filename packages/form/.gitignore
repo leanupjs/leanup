@@ -1,5 +1,3 @@
-controls/
-handlers/
+dist/
 node_modules/
-umd/
 *.tgz
