@@ -43,11 +43,11 @@
     "@leanup/cli-aurelia": "1.0.136",
     "@leanup/git-hooks": "1.0.136",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.6",
+    "cssnano": "5.0.7",
     "geckodriver": "2.0.1",
     "npm-check-updates": "11.8.3",
     "selenium-server": "3.141.59",
-    "tailwindcss": "2.2.4",
+    "tailwindcss": "2.2.6",
     "typescript": "4.3.5"
   },
   "gitHead": "d77d4ffcfdbaddda7b135c14a94a809981d488a6"
