@@ -7,7 +7,7 @@ module.exports = {
   reporter: ['html', 'lcov', 'text'],
   'report-dir': path.resolve(process.cwd(), '.reports/coverage'),
   'temp-dir': path.resolve(process.cwd(), '.reports/nyc'),
-  require: ['esm', 'esbuild-register'],
+  require: ['esbuild-register'],
   watermarks: {
     lines: [50, 75],
     functions: [50, 75],
