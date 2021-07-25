@@ -10,7 +10,7 @@
     "module": "ESNext",
     "removeComments": true,
     "target": "ES2015",
-    "types": ["chai", "node"],
+    "types": ["chai", "mocha", "node"],
     "typeRoots": ["node_modules/@types"]
   },
   "include": ["src/**/*.ts"],
