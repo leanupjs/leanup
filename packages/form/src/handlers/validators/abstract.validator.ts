@@ -1,4 +1,5 @@
-import { Log, Validator } from '@leanup/lib';
+import { Log } from '@leanup/lib/helpers/log';
+import { Validator } from '@leanup/lib/helpers/validator';
 
 export abstract class AbstractValidator {
   private readonly state = {

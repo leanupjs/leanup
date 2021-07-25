@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "sourceMap": true,
     "strict": false,
@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "removeComments": true,
-    "target": "ESNext",
+    "target": "ES2015",
     "types": ["chai", "loglevel", "node"],
     "typeRoots": ["node_modules/@types"]
   },

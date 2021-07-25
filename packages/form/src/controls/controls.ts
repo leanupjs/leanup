@@ -1,4 +1,4 @@
-import { ListOf } from '@leanup/lib';
+import { ListOf } from '@leanup/lib/pattern/list-of';
 
 import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';
