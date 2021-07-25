@@ -41,17 +41,17 @@
     "postcss-loader": "6.1.1",
     "sass-loader": "12.1.0",
     "string-replace-loader": "3.0.3",
-    "webpack": "5.45.1",
+    "webpack": "5.46.0",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2"
   },
   "devDependencies": {
-    "@types/node": "16.3.3",
+    "@types/node": "16.4.2",
     "tslib": "2.3.0",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.2.0-rc.92"
+    "@leanup/stack": "~1.2.0-rc.93"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"

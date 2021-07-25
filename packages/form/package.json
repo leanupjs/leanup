@@ -13,12 +13,12 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/lib": "1.2.0-rc.91",
-    "tslib": "2.3.0"
+    "@leanup/lib": "1.2.0-rc.93"
   },
   "devDependencies": {
     "@types/chai": "4.2.21",
-    "@types/node": "16.3.3",
+    "@types/mocha": "8.2.3",
+    "@types/node": "16.4.2",
     "@types/sinon": "10.0.2",
     "chai": "4.3.4",
     "cross-env": "7.0.3",

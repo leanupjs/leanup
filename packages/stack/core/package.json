@@ -59,14 +59,14 @@
     "nightwatch": "1.7.7",
     "nightwatch-allure": "1.2.0",
     "nyc": "15.1.0",
-    "postcss": "8.3.5",
+    "postcss": "8.3.6",
     "prettier": "2.3.2",
-    "sass": "1.35.2",
+    "sass": "1.36.0",
     "sinon": "11.1.1",
     "tslib": "2.3.0"
   },
   "devDependencies": {
-    "@types/node": "16.3.3",
+    "@types/node": "16.4.2",
     "tsc": "2.0.3",
     "typescript": "4.3.5"
   },
