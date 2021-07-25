@@ -1,5 +1,4 @@
-controls/
-handlers/
-node_modules/
-umd/
-*.tgz
+/controls
+/dist
+/handlers
+/index.*

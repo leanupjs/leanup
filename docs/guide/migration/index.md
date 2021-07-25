@@ -5,6 +5,7 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 ## Migrate from 1.1 to 1.2
 1. ✋ The inline css inside the `main.js` will extract in seperate artifact file (`main.css`). (CSP)
 2. ✋ Add copy public folder to dist (`copy-webpack-plugin`)
+3. ✋ add `"type": "module"` in the `package.json` of your own npm modules (required by `mocha` v9)
 
 ### Changes
 

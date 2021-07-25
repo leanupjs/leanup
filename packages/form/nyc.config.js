@@ -16,8 +16,8 @@ module.exports = {
   },
   sourceMap: false,
   instrument: true,
-  statements: 60,
-  branches: 43,
-  functions: 58,
-  lines: 62,
+  statements: 58,
+  branches: 42,
+  functions: 57,
+  lines: 60,
 };

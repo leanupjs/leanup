@@ -1,7 +1,6 @@
-components/
-helpers/
-node_modules/
-pattern/
-shares/
-umd/
-*.tgz
+/components
+/dist
+/helpers
+/pattern
+/shares
+/index.*
