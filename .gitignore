@@ -1,8 +1,9 @@
+/.husky
+/docs/.vitepress/dist
+
 .reports/
-docs - Kopie/
 node_modules/
 packages/stack/
 templates/
-docs/.vitepress/dist
 *.log
 *.tgz
