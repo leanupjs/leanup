@@ -62,12 +62,12 @@
   },
   "dependencies": {
     "chalk": "4.1.1",
-    "commander": "8.0.0",
+    "commander": "8.1.0",
     "deepmerge": "4.2.2",
     "prettier": "2.3.2"
   },
   "devDependencies": {
-    "@types/node": "16.4.3",
+    "@types/node": "16.4.4",
     "@types/prettier": "2.3.2",
     "typescript": "4.3.5"
   },
