@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@leanup/cli": "1.1.28",
-    "@types/node": "16.4.5"
+    "@types/node": "16.4.6"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
