@@ -46,7 +46,7 @@
     "@types/react-dom": "17.0.9",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.7",
-    "geckodriver": "2.0.1",
+    "geckodriver": "2.0.2",
     "npm-check-updates": "11.8.3",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.2.7",
