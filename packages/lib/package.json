@@ -40,7 +40,7 @@
     "typescript": "4.3.5"
   },
   "scripts": {
-    "build:mjs": "tsc -d && renamer --find /js/ --replace mjs dist/**",
+    "build:mjs": "tsc -d && renamer --find /js/ --replace mjs \"dist/**\"",
     "build:cjs": "tsc -m commonjs",
     "build:cleanup": "rm -rf components dist helpers pattern shares index.*",
     "build": "npm run build:cleanup && npm run build:mjs && npm run build:cjs && mv dist/** ./",
