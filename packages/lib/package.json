@@ -2,11 +2,16 @@
   "name": "@leanup/lib",
   "version": "1.2.0-rc.98",
   "description": "This module is a collection of lightweight application features.",
-  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "author": "Martin Oppitz <npesm@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
   "license": "Apache-2.0",
-  "main": "index",
-  "types": "index.d.ts",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    "require": "./cjs/index.js",
+    "import": "./esm/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leanupjs/leanup.git"
@@ -35,15 +40,16 @@
     "nyc": "15.1.0",
     "preact": "10.5.14",
     "react": "17.0.2",
-    "renamer": "3.2.1",
     "sinon": "11.1.2",
     "typescript": "4.3.5"
   },
   "scripts": {
-    "build:mjs": "tsc -d && renamer --find /js/ --replace mjs \"dist/**\"",
-    "build:cjs": "tsc -m commonjs",
-    "build:cleanup": "rm -rf components dist helpers pattern shares index.*",
-    "build": "npm run build:cleanup && npm run build:mjs && npm run build:cjs && mv dist/** ./",
+    "build:cjs": "tsc -m commonjs --outDir cjs",
+    "build:esm": "tsc -m esnext --outDir esm",
+    "build:types": "tsc -d --outDir types && rm -rf types/*.js types/*.map types/**/*.js types/**/*.map",
+    "build:umd": "tsc -m umd --outDir umd",
+    "build:cleanup": "rm -rf cjs esm types umd",
+    "build": "npm run build:cleanup && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:umd",
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
     "prepack": "npm test && npm run build",
     "remove": "rm -rf node_modules",
@@ -51,10 +57,9 @@
     "update": "npm install && npm update && npm outdated"
   },
   "files": [
-    "components",
-    "helpers",
-    "pattern",
-    "shares",
-    "index.*"
+    "cjs",
+    "esm",
+    "types",
+    "umd"
   ]
 }

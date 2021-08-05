@@ -1,6 +1,4 @@
-/components
-/dist
-/helpers
-/pattern
-/shares
-/index.*
+/cjs
+/esm
+/umd
+/types

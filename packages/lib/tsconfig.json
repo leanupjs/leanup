@@ -5,11 +5,9 @@
     "importHelpers": true,
     "sourceMap": true,
     "strict": false,
-    "outDir": "dist",
     "skipLibCheck": true,
-    "module": "ESNext",
     "removeComments": true,
-    "target": "ES2015",
+    "target": "ESNext",
     "types": ["chai", "loglevel", "mocha", "node"],
     "typeRoots": ["node_modules/@types"]
   },
