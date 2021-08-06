@@ -6,12 +6,18 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 1. ✋ The inline css inside the `main.js` will extract in seperate artifact file (`main.css`). (CSP)
 2. ✋ Add copy public folder to dist (`copy-webpack-plugin`)
 3. ✋ add `"type": "module"` in the `package.json` of your own npm modules (required by `mocha` v9)
+4. ✋ add `cjs`, `esm` and `umd` variants in `@leanup/lib` and `@leanup/form`
 
 ### Changes
 
 1. ⛔ `autoprefixer` dependency was removed from stack, it is to handle in project scope
 2. ⛔ `cssnano` dependency was removed from default template, it is to handle in project scope
 3. ⛔ `postcss.config.js` file was removed from stack, it is to handle in project scope
+4. ⛔ `InfernoComponent`, `PreactComponent` and `ReactComponent` are removed from `@leanup/lib`. use the default `Component` classes from `Inferno`, `Preact` or `React`
+5. ⛔ you should replace all import path like `from '@leanup/lib/...';` to `from '@leanup/lib';` and  `from '@leanup/form/...';` to `from '@leanup/form';`<br><br>
+Regular expression: `/(from ('|")@leanup\/(lib|form))[^'|"]+/g`<br>
+Replacement: $1<br><br>
+![An image](../../assets/leanup-migrate-1.2-module.png)
 
 ### Migrate
 
