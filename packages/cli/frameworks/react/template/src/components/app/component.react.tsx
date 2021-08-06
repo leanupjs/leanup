@@ -12,13 +12,19 @@ import { ListSerieComponent } from '../series/list/component.react';
 import { AppController, ResolvedRoute } from './controller';
 
 export class AppComponent extends Component<unknown, AppController> implements GenericComponent {
-  public ctrl: AppController = new AppController();
   private resolvedRoute: ResolvedRoute = {
     url: 'series',
   };
 
+  public readonly ctrl: AppController;
+
   public constructor(props: unknown) {
-    super(props, new AppController());
+    super(props);
+    this.ctrl = new AppController({
+      hooks: {
+        doRender: this.forceUpdate.bind(this),
+      },
+    });
     RouterService.subscribe(
       (
         route: {

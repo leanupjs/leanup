@@ -12,7 +12,16 @@ interface Props {
 }
 
 export class EditorSerieComponent extends Component<Props, unknown> implements GenericComponent {
-  public ctrl: EditorSerieController = new EditorSerieController();
+  public readonly ctrl: EditorSerieController;
+
+  public constructor(props: Props) {
+    super(props);
+    this.ctrl = new EditorSerieController({
+      hooks: {
+        doRender: this.forceUpdate.bind(this),
+      },
+    });
+  }
 
   public render(): JSX.Element {
     return (
