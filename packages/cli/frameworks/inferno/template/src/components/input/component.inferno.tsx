@@ -1,7 +1,6 @@
 import { Component } from 'inferno';
 
 import { InputControl } from '@leanup/form';
-import { Component } from '@leanup/lib';
 
 interface Props {
   control: InputControl;

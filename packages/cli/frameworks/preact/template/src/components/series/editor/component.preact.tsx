@@ -11,7 +11,7 @@ interface Props {
   editorForm: EditorForm;
 }
 
-export class EditorSerieComponent extends Component<Props, unknown> implements GenericComponent { {
+export class EditorSerieComponent extends Component<Props, unknown> implements GenericComponent {
   public ctrl: EditorSerieController = new EditorSerieController();
 
   public render(): JSX.Element {

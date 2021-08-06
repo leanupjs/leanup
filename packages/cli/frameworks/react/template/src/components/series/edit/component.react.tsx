@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React, { Component, FormEvent } from 'react';
 
 import { GenericComponent } from '@leanup/lib';
 
