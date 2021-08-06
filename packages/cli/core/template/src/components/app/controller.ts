@@ -1,4 +1,4 @@
-import { AbstractController, DI } from '@leanup/lib';
+import { AbstractController, DI, ViewControllerCouple } from '@leanup/lib';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import { IVersion, VersionApi } from '../../assets/openapi/typescript-rxjs';
@@ -41,8 +41,8 @@ export class AppController extends AbstractController {
   public version: IVersion = { text: '1.0.0', major: 1, minor: 0, patch: 0 };
   public readonly stackImg: string = IMG_LEANUP as string;
 
-  public constructor() {
-    super();
+  public constructor(couple: ViewControllerCouple) {
+    super(couple);
     this.finishedRendering = Date.now() - STARTUP_TIMESTAMP;
     RouterService.navigate('series');
     const APP_METADATE = {

@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { ApplicationRef, Component, Inject, Input, OnChanges } from '@angular/core';
 import { GenericComponent } from '@leanup/lib';
 
 import { ResolvedRoute } from '../../app/controller';
@@ -17,8 +17,17 @@ import { EditSerieController } from './controller';
   `,
 })
 export class EditSerieComponent implements OnChanges, GenericComponent {
-  public ctrl: EditSerieController = new EditSerieController();
+  public readonly ctrl: EditSerieController;
+
   @Input() public resolvedRoute!: ResolvedRoute;
+
+  public constructor(@Inject(ApplicationRef) appRef: ApplicationRef) {
+    this.ctrl = new EditSerieController({
+      hooks: {
+        doRender: appRef.tick.bind(this),
+      },
+    });
+  }
 
   public ngOnChanges(): void {
     this.ctrl.changeMeasuredSerie(parseInt(this.resolvedRoute.data?.id || '0'));

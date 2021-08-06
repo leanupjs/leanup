@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { ApplicationRef, Component, Inject, Input, OnChanges } from '@angular/core';
 import { InputControl } from '@leanup/form';
 import { GenericComponent } from '@leanup/lib';
 
@@ -15,11 +15,19 @@ import { EditorForm } from './editor.form';
   `,
 })
 export class EditorSerieComponent implements GenericComponent, OnChanges {
-  public readonly ctrl: EditorSerieController = new EditorSerieController();
+  public readonly ctrl: EditorSerieController;
 
   @Input() public editorForm!: EditorForm;
   public titleInput: InputControl = new InputControl('title');
   public unitInput: InputControl = new InputControl('title');
+
+  public constructor(@Inject(ApplicationRef) appRef: ApplicationRef) {
+    this.ctrl = new EditorSerieController({
+      hooks: {
+        doRender: appRef.tick.bind(this),
+      },
+    });
+  }
 
   public ngOnChanges(): void {
     this.titleInput = <InputControl>this.editorForm.getControl('title');

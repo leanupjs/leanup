@@ -1,4 +1,4 @@
-import { AbstractController, DI } from '@leanup/lib';
+import { AbstractController, DI, ViewControllerCouple } from '@leanup/lib';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { MeasurementService } from '../../../services/measurements/service';
@@ -16,8 +16,8 @@ export class ListSerieController extends AbstractController {
   public duration = 0;
   public showPerformanceButton = true;
 
-  public constructor() {
-    super();
+  public constructor(couple: ViewControllerCouple) {
+    super(couple);
     this.measurementService.observe.subscribe(() => {
       this.update();
     });
