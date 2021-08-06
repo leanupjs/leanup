@@ -6,10 +6,15 @@ import { EditorSerieComponent } from '../editor/component.preact';
 import { CreateSerieController } from './controller';
 
 export class CreateSerieComponent extends Component<unknown, unknown> implements GenericComponent {
-  public ctrl: CreateSerieController = new CreateSerieController();
+  public readonly ctrl: CreateSerieController;
 
   public constructor(props: unknown) {
-    super(props, new CreateSerieController());
+    super(props);
+    this.ctrl = new CreateSerieController({
+      hooks: {
+        doRender: this.forceUpdate.bind(this),
+      },
+    });
   }
 
   public render(): JSX.Element {
