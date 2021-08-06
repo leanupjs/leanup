@@ -1,4 +1,4 @@
-/controls
-/dist
-/handlers
-/index.*
+/cjs
+/esm
+/umd
+/types

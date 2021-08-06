@@ -5,6 +5,13 @@
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://github.com/leanupjs/form#readme",
   "license": "Apache-2.0",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    "require": "./cjs/index.js",
+    "import": "./esm/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leanupjs/leanup.git"
@@ -28,15 +35,16 @@
     "mocha": "9.0.3",
     "mock-local-storage": "1.1.17",
     "nyc": "15.1.0",
-    "renamer": "3.2.1",
     "sinon": "11.1.2",
     "typescript": "4.3.5"
   },
   "scripts": {
-    "build:mjs": "tsc -d && renamer --find /js/ --replace mjs \"dist/**\"",
-    "build:cjs": "tsc -m commonjs",
-    "build:cleanup": "rm -rf controls dist handlers index.*",
-    "build": "npm run build:cleanup && npm run build:mjs && npm run build:cjs && mv dist/** ./",
+    "build:cjs": "tsc -m commonjs --outDir cjs",
+    "build:esm": "tsc -m esnext --outDir esm",
+    "build:types": "tsc -d --outDir types && rm -rf types/*.js types/*.map types/**/*.js types/**/*.map",
+    "build:umd": "tsc -m umd --outDir umd",
+    "build:cleanup": "rm -rf cjs esm types umd",
+    "build": "npm run build:cleanup && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:umd",
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
     "prepack": "npm test && npm run build",
     "remove": "rm -rf node_modules",
@@ -44,13 +52,9 @@
     "update": "npm install && npm update && npm outdated"
   },
   "files": [
-    "controls/**/*.d.ts",
-    "controls/**/*.js",
-    "controls/**/*.js.map",
-    "handlers/**/*.d.ts",
-    "handlers/**/*.js",
-    "handlers/**/*.js.map",
-    "umd/**/*.js",
-    "umd/**/*.js.map"
+    "cjs",
+    "esm",
+    "types",
+    "umd"
   ]
 }
