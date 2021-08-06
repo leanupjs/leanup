@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { InputControl } from '@leanup/form/controls/controls';
-import { GenericComponent } from '@leanup/lib/components/generic';
+import { InputControl } from '@leanup/form';
+import { GenericComponent } from '@leanup/lib';
 
 import { EditorSerieController } from './controller';
 import { EditorForm } from './editor.form';

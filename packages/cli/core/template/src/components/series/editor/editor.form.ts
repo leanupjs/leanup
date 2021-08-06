@@ -1,4 +1,4 @@
-import { FormControl, InputControl } from '@leanup/form/controls/controls';
+import { FormControl, InputControl } from '@leanup/form';
 
 export class EditorForm extends FormControl {
   public constructor(name: string) {

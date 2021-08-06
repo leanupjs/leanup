@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { InputControl } from '@leanup/form/controls/controls';
+import { InputControl } from '@leanup/form';
 
 @Component({
   selector: 'app-input',

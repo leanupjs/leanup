@@ -4,7 +4,7 @@ import { RouterService } from '../../services/router/service';
 import ListSerieComponent from '../series/list/component.svelte';
 import CreateSerieComponent from '../series/create/component.svelte';
 import EditSerieComponent from '../series/edit/component.svelte';
-import { currency, date } from '@leanup/lib/shares/filters';
+import { currency, date } from '@leanup/lib';
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.svelte.png';
 

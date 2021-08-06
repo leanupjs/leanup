@@ -1,4 +1,4 @@
-import { DI } from '@leanup/lib/helpers/injector';
+import { DI } from '@leanup/lib';
 
 import { VersionApi } from '../assets/openapi/typescript-rxjs';
 import { MeasurementService } from '../services/measurements/service';

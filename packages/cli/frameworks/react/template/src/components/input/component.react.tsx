@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { InputControl } from '@leanup/form/controls/controls';
-import { ReactComponent } from '@leanup/lib/components/react';
+import { InputControl } from '@leanup/form';
+import { ReactComponent } from '@leanup/lib';
 
 interface Props {
   control: InputControl;

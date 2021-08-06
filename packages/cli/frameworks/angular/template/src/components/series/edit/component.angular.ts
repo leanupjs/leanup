@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { GenericComponent } from '@leanup/lib/components/generic';
+import { GenericComponent } from '@leanup/lib';
 
 import { ResolvedRoute } from '../../app/controller';
 import { EditSerieController } from './controller';

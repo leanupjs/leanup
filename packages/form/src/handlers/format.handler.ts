@@ -1,4 +1,4 @@
-import { ListOf } from '@leanup/lib/pattern/list-of';
+import { ListOf } from '@leanup/lib';
 
 import { AbstractFormatter } from './formatters/abstract.formatter';
 

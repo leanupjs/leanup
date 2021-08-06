@@ -1,4 +1,4 @@
-import { InputControl } from '@leanup/form/controls/controls';
+import { InputControl } from '@leanup/form';
 
 import { ANGULARJS_MODULE } from '../../angularjs.module';
 

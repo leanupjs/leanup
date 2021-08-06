@@ -1,4 +1,4 @@
-import { Log } from '@leanup/lib/helpers/log';
+import { Log } from '@leanup/lib';
 
 import { NonRequiredValidator } from './non-required.validator';
 

@@ -1,5 +1,4 @@
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { InvernoComponent } from '@leanup/lib/components/inferno';
+import { GenericComponent, InvernoComponent } from '@leanup/lib';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';

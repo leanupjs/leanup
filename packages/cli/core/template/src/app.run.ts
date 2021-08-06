@@ -1,4 +1,5 @@
-import { DI } from '@leanup/lib/helpers/injector';
+import { DI } from '@leanup/lib';
+
 export const importCatch = (error: unknown): void => {
   console.warn(error);
 };

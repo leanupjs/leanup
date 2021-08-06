@@ -1,8 +1,7 @@
 import { h, JSX } from 'preact';
 
-import { InputControl } from '@leanup/form/controls/controls';
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { PreactComponent } from '@leanup/lib/components/preact';
+import { InputControl } from '@leanup/form';
+import { GenericComponent, PreactComponent } from '@leanup/lib';
 
 import { InputComponent } from '../../input/component.preact';
 import { EditorSerieController } from './controller';

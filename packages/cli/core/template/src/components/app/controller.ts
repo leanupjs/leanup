@@ -1,5 +1,4 @@
-import { AbstractController } from '@leanup/lib/components/generic';
-import { DI } from '@leanup/lib/helpers/injector';
+import { AbstractController, DI } from '@leanup/lib';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import { IVersion, VersionApi } from '../../assets/openapi/typescript-rxjs';

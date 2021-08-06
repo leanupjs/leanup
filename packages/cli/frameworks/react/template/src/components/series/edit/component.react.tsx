@@ -1,7 +1,6 @@
 import React, { FormEvent } from 'react';
 
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { ReactComponent } from '@leanup/lib/components/react';
+import { GenericComponent, ReactComponent } from '@leanup/lib';
 
 import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.react';

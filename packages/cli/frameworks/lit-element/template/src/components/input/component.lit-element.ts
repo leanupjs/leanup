@@ -1,6 +1,6 @@
 import { customElement, html, property, TemplateResult } from 'lit-element';
 
-import { InputControl } from '@leanup/form/controls/controls';
+import { InputControl } from '@leanup/form';
 
 import { LitElementComponent } from '../component.lit-element';
 

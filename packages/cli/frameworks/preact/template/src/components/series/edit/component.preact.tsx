@@ -1,7 +1,6 @@
 import { h, JSX } from 'preact';
 
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { PreactComponent } from '@leanup/lib/components/preact';
+import { GenericComponent, PreactComponent } from '@leanup/lib';
 
 import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.preact';

@@ -1,5 +1,5 @@
-import { InputControl } from '@leanup/form/controls/controls';
-import { InvernoComponent } from '@leanup/lib/components/inferno';
+import { InputControl } from '@leanup/form';
+import { InvernoComponent } from '@leanup/lib';
 
 interface Props {
   control: InputControl;

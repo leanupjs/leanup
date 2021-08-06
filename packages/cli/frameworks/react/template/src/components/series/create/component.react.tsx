@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { ReactComponent } from '@leanup/lib/components/react';
+import { GenericComponent, ReactComponent } from '@leanup/lib';
 
 import { EditorSerieComponent } from '../editor/component.react';
 import { CreateSerieController } from './controller';

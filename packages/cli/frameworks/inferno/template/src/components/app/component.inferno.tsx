@@ -1,7 +1,6 @@
 import { createRef } from 'inferno';
 
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { InvernoComponent } from '@leanup/lib/components/inferno';
+import { GenericComponent, InvernoComponent } from '@leanup/lib';
 
 import IMG_FRAMEWORK from '../../assets/logo.inferno.png';
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';

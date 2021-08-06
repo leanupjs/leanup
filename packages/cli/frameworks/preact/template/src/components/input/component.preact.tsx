@@ -1,7 +1,7 @@
 import { h, JSX } from 'preact';
 
-import { InputControl } from '@leanup/form/controls/controls';
-import { PreactComponent } from '@leanup/lib/components/preact';
+import { InputControl } from '@leanup/form';
+import { PreactComponent } from '@leanup/lib';
 
 interface Props {
   control: InputControl;

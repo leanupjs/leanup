@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { InputControl } from '@leanup/form/controls/controls';
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { ReactComponent } from '@leanup/lib/components/react';
+import { InputControl } from '@leanup/form';
+import { GenericComponent, ReactComponent } from '@leanup/lib';
 
 import { InputComponent } from '../../input/component.react';
 import { EditorSerieController } from './controller';

@@ -27,7 +27,7 @@ import { ref } from '@vue/composition-api';
 import ListSerieComponent from '../series/list/component.vue';
 import CreateSerieComponent from '../series/create/component.vue';
 import EditSerieComponent from '../series/edit/component.vue';
-import { currency, date } from '@leanup/lib/shares/filters';
+import { currency, date } from '@leanup/lib';
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.vue.png';
 

@@ -1,7 +1,6 @@
 import { createRef, h, JSX } from 'preact';
 
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { PreactComponent } from '@leanup/lib/components/preact';
+import { GenericComponent, PreactComponent } from '@leanup/lib';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.preact.png';
