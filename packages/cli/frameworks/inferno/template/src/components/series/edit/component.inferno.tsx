@@ -11,10 +11,15 @@ interface Props {
 }
 
 export class EditSerieComponent extends Component<Props, EditSerieController> implements GenericComponent {
-  public ctrl: EditSerieController = new EditSerieController();
+  public ctrl: EditSerieController;
 
   public constructor(props: Props) {
     super(props);
+    this.ctrl = new EditSerieController({
+      hooks: {
+        doRender: this.forceUpdate.bind(this),
+      },
+    });
     this.ctrl.changeMeasuredSerie(parseInt(props.resolvedRoute.data?.id || '0'));
   }
 

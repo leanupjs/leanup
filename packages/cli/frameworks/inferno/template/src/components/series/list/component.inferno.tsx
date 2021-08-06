@@ -6,10 +6,15 @@ import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends Component<unknown, unknown> implements GenericComponent {
-  public ctrl: ListSerieController = new ListSerieController();
+  public ctrl: ListSerieController;
 
-  constructor(props: unknown) {
+  public constructor(props: unknown) {
     super(props);
+    this.ctrl = new ListSerieController({
+      hooks: {
+        doRender: this.forceUpdate.bind(this),
+      },
+    });
     this.ctrl.renderView = this.forceUpdate.bind(this);
   }
 

@@ -1,6 +1,7 @@
 import { Component } from 'inferno';
 
 import { InputControl } from '@leanup/form';
+import { GenericComponent } from '@leanup/lib';
 
 import { InputComponent } from '../../input/component.inferno';
 import { EditorSerieController } from './controller';
@@ -10,9 +11,16 @@ interface Props {
   editorForm: EditorForm;
 }
 
-export class EditorSerieComponent extends Component<Props, unknown> {
+export class EditorSerieComponent extends Component<Props, unknown> implements GenericComponent {
+  public ctrl: EditorSerieController;
+
   public constructor(props: Props) {
-    super(props, new EditorSerieController());
+    super(props);
+    this.ctrl = new EditorSerieController({
+      hooks: {
+        doRender: this.forceUpdate.bind(this),
+      },
+    });
   }
 
   public render(): JSX.Element {
