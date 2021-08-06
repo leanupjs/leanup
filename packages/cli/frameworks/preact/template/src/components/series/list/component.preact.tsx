@@ -1,11 +1,11 @@
-import { h, JSX } from 'preact';
+import { Component, h, JSX } from 'preact';
 
-import { GenericComponent, PreactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
-export class ListSerieComponent extends PreactComponent<unknown, unknown> implements GenericComponent {
+export class ListSerieComponent extends Component<unknown, unknown> implements GenericComponent {
   public ctrl: ListSerieController = new ListSerieController();
 
   constructor(props: unknown) {

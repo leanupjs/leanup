@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { InputControl } from '@leanup/form';
-import { ReactComponent } from '@leanup/lib';
+import { Component } from '@leanup/lib';
 
 interface Props {
   control: InputControl;
 }
 
-export class InputComponent extends ReactComponent<Props, unknown> {
+export class InputComponent extends Component<Props, unknown> {
   public render(): JSX.Element {
     return (
       <div className="form-group">

@@ -1,9 +1,11 @@
-import { GenericComponent, InvernoComponent } from '@leanup/lib';
+import { Component } from 'inferno';
+
+import { GenericComponent } from '@leanup/lib';
 
 import { EditorSerieComponent } from '../editor/component.inferno';
 import { CreateSerieController } from './controller';
 
-export class CreateSerieComponent extends InvernoComponent<unknown, unknown> implements GenericComponent {
+export class CreateSerieComponent extends Component<unknown, unknown> implements GenericComponent {
   public ctrl: CreateSerieController = new CreateSerieController();
 
   public constructor(props: unknown) {

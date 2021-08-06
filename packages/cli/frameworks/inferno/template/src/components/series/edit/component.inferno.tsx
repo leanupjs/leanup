@@ -1,4 +1,6 @@
-import { GenericComponent, InvernoComponent } from '@leanup/lib';
+import { Component } from 'inferno';
+
+import { GenericComponent } from '@leanup/lib';
 
 import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.inferno';
@@ -8,7 +10,7 @@ interface Props {
   resolvedRoute: ResolvedRoute;
 }
 
-export class EditSerieComponent extends InvernoComponent<Props, EditSerieController> implements GenericComponent {
+export class EditSerieComponent extends Component<Props, EditSerieController> implements GenericComponent {
   public ctrl: EditSerieController = new EditSerieController();
 
   public constructor(props: Props) {

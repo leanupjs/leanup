@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { GenericComponent, ReactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.react.png';
@@ -11,7 +11,7 @@ import { EditSerieComponent } from '../series/edit/component.react';
 import { ListSerieComponent } from '../series/list/component.react';
 import { AppController, ResolvedRoute } from './controller';
 
-export class AppComponent extends ReactComponent<unknown, AppController> implements GenericComponent {
+export class AppComponent extends Component<unknown, AppController> implements GenericComponent {
   public ctrl: AppController = new AppController();
   private resolvedRoute: ResolvedRoute = {
     url: 'series',

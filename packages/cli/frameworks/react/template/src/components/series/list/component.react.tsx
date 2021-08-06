@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { GenericComponent, ReactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
-export class ListSerieComponent extends ReactComponent<unknown, unknown> implements GenericComponent {
+export class ListSerieComponent extends Component<unknown, unknown> implements GenericComponent {
   public ctrl: ListSerieController = new ListSerieController();
 
   constructor(props: unknown) {

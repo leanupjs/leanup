@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { GenericComponent, ReactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import { EditorSerieComponent } from '../editor/component.react';
 import { CreateSerieController } from './controller';
 
-export class CreateSerieComponent extends ReactComponent<unknown, unknown> implements GenericComponent {
+export class CreateSerieComponent extends Component<unknown, unknown> implements GenericComponent {
   public ctrl: CreateSerieController = new CreateSerieController();
   public constructor(props: unknown) {
     super(props, new CreateSerieController());

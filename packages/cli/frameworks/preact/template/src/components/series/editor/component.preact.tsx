@@ -1,7 +1,7 @@
-import { h, JSX } from 'preact';
+import { Component, h, JSX } from 'preact';
 
 import { InputControl } from '@leanup/form';
-import { GenericComponent, PreactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import { InputComponent } from '../../input/component.preact';
 import { EditorSerieController } from './controller';
@@ -11,7 +11,7 @@ interface Props {
   editorForm: EditorForm;
 }
 
-export class EditorSerieComponent extends PreactComponent<Props, unknown> implements GenericComponent { {
+export class EditorSerieComponent extends Component<Props, unknown> implements GenericComponent { {
   public ctrl: EditorSerieController = new EditorSerieController();
 
   public render(): JSX.Element {

@@ -1,6 +1,6 @@
-import { h, JSX } from 'preact';
+import { Component, h, JSX } from 'preact';
 
-import { GenericComponent, PreactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.preact';
@@ -10,7 +10,7 @@ interface Props {
   resolvedRoute: ResolvedRoute;
 }
 
-export class EditSerieComponent extends PreactComponent<Props, EditSerieController> implements GenericComponent {
+export class EditSerieComponent extends Component<Props, EditSerieController> implements GenericComponent {
   public ctrl: EditSerieController = new EditSerieController();
 
   public constructor(props: Props) {

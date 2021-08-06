@@ -1,6 +1,6 @@
-import { createRef } from 'inferno';
+import { Component, createRef } from 'inferno';
 
-import { GenericComponent, InvernoComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import IMG_FRAMEWORK from '../../assets/logo.inferno.png';
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
@@ -11,7 +11,7 @@ import { EditSerieComponent } from '../series/edit/component.inferno';
 import { ListSerieComponent } from '../series/list/component.inferno';
 import { AppController, ResolvedRoute } from './controller';
 
-export class AppComponent extends InvernoComponent<unknown, AppController> implements GenericComponent {
+export class AppComponent extends Component<unknown, AppController> implements GenericComponent {
   public ctrl: AppController = new AppController();
   private resolvedRoute: ResolvedRoute = {
     url: 'series',

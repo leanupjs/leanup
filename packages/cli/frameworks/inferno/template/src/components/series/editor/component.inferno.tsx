@@ -1,5 +1,6 @@
+import { Component } from 'inferno';
+
 import { InputControl } from '@leanup/form';
-import { InvernoComponent } from '@leanup/lib';
 
 import { InputComponent } from '../../input/component.inferno';
 import { EditorSerieController } from './controller';
@@ -9,7 +10,7 @@ interface Props {
   editorForm: EditorForm;
 }
 
-export class EditorSerieComponent extends InvernoComponent<Props, unknown> {
+export class EditorSerieComponent extends Component<Props, unknown> {
   public constructor(props: Props) {
     super(props, new EditorSerieController());
   }

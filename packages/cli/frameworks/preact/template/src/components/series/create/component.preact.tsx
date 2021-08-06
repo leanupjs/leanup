@@ -1,11 +1,11 @@
-import { h, JSX } from 'preact';
+import { Component, h, JSX } from 'preact';
 
-import { GenericComponent, PreactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import { EditorSerieComponent } from '../editor/component.preact';
 import { CreateSerieController } from './controller';
 
-export class CreateSerieComponent extends PreactComponent<unknown, unknown> implements GenericComponent {
+export class CreateSerieComponent extends Component<unknown, unknown> implements GenericComponent {
   public ctrl: CreateSerieController = new CreateSerieController();
 
   public constructor(props: unknown) {

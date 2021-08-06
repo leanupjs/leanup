@@ -1,9 +1,11 @@
-import { GenericComponent, InvernoComponent } from '@leanup/lib';
+import { Component } from 'inferno';
+
+import { GenericComponent } from '@leanup/lib';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
-export class ListSerieComponent extends InvernoComponent<unknown, unknown> implements GenericComponent {
+export class ListSerieComponent extends Component<unknown, unknown> implements GenericComponent {
   public ctrl: ListSerieController = new ListSerieController();
 
   constructor(props: unknown) {

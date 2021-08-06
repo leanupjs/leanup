@@ -1,6 +1,6 @@
-import { createRef, h, JSX } from 'preact';
+import { Component, createRef, h, JSX } from 'preact';
 
-import { GenericComponent, PreactComponent } from '@leanup/lib';
+import { GenericComponent } from '@leanup/lib';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.preact.png';
@@ -11,7 +11,7 @@ import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';
 import { AppController, ResolvedRoute } from './controller';
 
-export class AppComponent extends PreactComponent<unknown, AppController> implements GenericComponent {
+export class AppComponent extends Component<unknown, AppController> implements GenericComponent {
   public ctrl: AppController = new AppController();
   private resolvedRoute: ResolvedRoute = {
     url: 'series',

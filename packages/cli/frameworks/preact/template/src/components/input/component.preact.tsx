@@ -1,13 +1,12 @@
-import { h, JSX } from 'preact';
+import { Component, h, JSX } from 'preact';
 
 import { InputControl } from '@leanup/form';
-import { PreactComponent } from '@leanup/lib';
 
 interface Props {
   control: InputControl;
 }
 
-export class InputComponent extends PreactComponent<Props, unknown> {
+export class InputComponent extends Component<Props, unknown> {
   public render(): JSX.Element {
     return (
       <div className="form-group">
