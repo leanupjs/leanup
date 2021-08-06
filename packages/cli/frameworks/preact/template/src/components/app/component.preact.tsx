@@ -21,10 +21,10 @@ export class AppComponent extends Component<unknown, AppController> implements G
 
   public constructor(props: unknown) {
     super(props);
-    this.ctrl= new AppController({
+    this.ctrl = new AppController({
       hooks: {
-        doRender: this.forceUpdate.bind(this)
-      }
+        doRender: this.forceUpdate.bind(this),
+      },
     });
     RouterService.subscribe(
       (

@@ -1,4 +1,4 @@
-import { Component, h, JSX } from 'preact';
+import { Component, FormEvent, h, JSX } from 'preact';
 
 import { GenericComponent } from '@leanup/lib';
 
@@ -26,7 +26,7 @@ export class EditSerieComponent extends Component<Props, EditSerieController> im
   public render(): JSX.Element {
     return (
       <form
-        onSubmit={(event: FormEvent<HTMLFormElement>) => {
+        onSubmit={(event) => {
           event.preventDefault();
           event.stopPropagation();
           this.ctrl.onSubmit();
