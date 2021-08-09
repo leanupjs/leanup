@@ -1,15 +1,17 @@
-export interface ViewControllerCouple {
-  hooks: {
-    doRender: Function;
-  };
-}
+import { ViewControllerCouple } from './interfaces';
 
 export abstract class AbstractController {
-  protected readonly couple: ViewControllerCouple;
   private doRenderTimeout: NodeJS.Timeout;
+  protected readonly couple: ViewControllerCouple;
 
   public constructor(couple: ViewControllerCouple) {
     this.couple = couple;
+  }
+
+  protected doDistroy(): void {
+    if (typeof this.couple?.hooks?.doDistroy === 'function') {
+      this.couple?.hooks?.doDistroy();
+    }
   }
 
   protected doRender(): void {
@@ -20,8 +22,4 @@ export abstract class AbstractController {
       }, 50);
     }
   }
-}
-
-export interface GenericComponent {
-  ctrl: AbstractController;
 }

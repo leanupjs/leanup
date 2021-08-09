@@ -1,4 +1,4 @@
-import { Log, Validator } from '@leanup/lib';
+import { Log } from '@leanup/lib';
 
 export abstract class AbstractValidator {
   private readonly state = {
@@ -10,7 +10,7 @@ export abstract class AbstractValidator {
   }
 
   set message(message: string) {
-    if (Validator.isString(message, 1)) {
+    if (typeof message === 'string' && message.length > 0) {
       this.state.message = message;
     } else {
       Log.error(`The message of the validator should be type of string with a min-length of 1.`);

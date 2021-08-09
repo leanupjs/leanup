@@ -1,5 +1,3 @@
-import { Validator } from '@leanup/lib';
-
 import { NonRequiredValidator } from './non-required.validator';
 
 export class MinLengthValidator extends NonRequiredValidator {
@@ -12,6 +10,6 @@ export class MinLengthValidator extends NonRequiredValidator {
   }
 
   public validate(value: any): boolean {
-    return Validator.isString(value) && value.length >= this.minLength;
+    return typeof value === 'string' && value.length >= this.minLength;
   }
 }

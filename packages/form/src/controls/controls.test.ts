@@ -171,13 +171,14 @@ describe(`Test: Controls`, () => {
       expect(handler.validate(null)).to.eql([]);
 
       // given
-      expect(handler.validators.length).to.eq(0);
+      expect(handler.validators.size).to.eq(0);
 
       // when
-      handler.validators.add([DEFAULT_REQUIRED_VALIDATOR, DEFAULT_DIGITS_VALIDATOR]);
+      handler.validators.add(DEFAULT_REQUIRED_VALIDATOR);
+      handler.validators.add(DEFAULT_DIGITS_VALIDATOR);
 
       // then
-      expect(handler.validators.length).to.eq(2);
+      expect(handler.validators.size).to.eq(2);
     });
 
     describe('Test InputControl', () => {

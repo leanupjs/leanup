@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import * as loglevel from 'loglevel';
 
-import { Validator } from './validator';
-
 const LOG_CACHE: Object[] = [];
 
 function getEnvironment(): string {
@@ -30,14 +28,14 @@ export class Logger {
   private constructor(identifier: string, options: LoggerOptions = {}) {
     this.shield = [
       `%c${identifier}`,
-      Validator.isString(options.shieldStyle, 1)
+      typeof options.shieldStyle === 'string' && options.shieldStyle.length > 0
         ? options.shieldStyle
         : `color: white; background: #666; font-weight: bold; font-size: 10px; padding: 2px 6px; border-radius: 3px; border: 1px solid #000`,
     ];
   }
 
   public static getInstance(identifier: string, options: LoggerOptions = {}) {
-    if (Validator.isString(identifier, 1)) {
+    if (typeof identifier === 'string' && identifier.length > 0) {
       if (Logger.instances.has(identifier) === false) {
         Logger.instances.set(identifier, new Logger(identifier));
       }
@@ -49,9 +47,10 @@ export class Logger {
 
   private log(level: string, message: LogMessage): void {
     if (
-      Validator.isObject(message.refObject) &&
+      typeof message.refObject === 'object' &&
+      message.refObject !== null &&
       typeof message.refObject.constructor === 'function' &&
-      Validator.isString(message.refObject.constructor.name)
+      typeof message.refObject.constructor.name === 'string'
     ) {
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       message.className = `[${message.refObject.constructor.name}]:`;

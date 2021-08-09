@@ -1,9 +1,14 @@
-import { ListOf } from '@leanup/lib';
+import { SetOf } from '@leanup/lib';
 
 import { AbstractFormatter } from './formatters/abstract.formatter';
 
-export class FormatHandler {
-  public readonly formatters: ListOf<AbstractFormatter> = new ListOf(AbstractFormatter);
+export class FormatHandler extends SetOf<AbstractFormatter> {
+  public readonly formatters: SetOf<AbstractFormatter>;
+
+  public constructor() {
+    super(AbstractFormatter);
+    this.formatters = this;
+  }
 
   public format(value: unknown): unknown {
     this.formatters.forEach((formatter: AbstractFormatter) => {

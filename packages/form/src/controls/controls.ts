@@ -1,10 +1,8 @@
-import { ListOf } from '@leanup/lib';
-
 import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';
 
 abstract class AbstractControl {
-  public readonly changeListeners: ListOf<Function> = new ListOf(Function);
+  public readonly changeListeners: Set<Function> = new Set();
 
   private readonly _errors: Set<string> = new Set<string>();
   private readonly _parentForms: FormControl[] = [];
@@ -313,11 +311,11 @@ export class InputControl extends AbstractControl implements InputControlProps {
 }
 
 export class FormControl extends AbstractControl {
-  private readonly controls: ListOf<FormControl | InputControl> = new ListOf([FormControl, InputControl]);
+  private readonly controls: Set<FormControl | InputControl> = new Set();
 
   get disabled(): boolean {
     return (
-      this.controls.filter((control: FormControl | InputControl) => {
+      Array.from(this.controls).filter((control: FormControl | InputControl) => {
         return control.disabled === false;
       }).length === 0
     );
@@ -330,7 +328,7 @@ export class FormControl extends AbstractControl {
 
   get readonly(): boolean {
     return (
-      this.controls.filter((control: FormControl | InputControl) => {
+      Array.from(this.controls).filter((control: FormControl | InputControl) => {
         return control.readonly === false;
       }).length === 0
     );
@@ -344,14 +342,14 @@ export class FormControl extends AbstractControl {
   get valid(): boolean {
     return (
       super.valid &&
-      this.controls.filter((control: FormControl | InputControl) => {
+      Array.from(this.controls).filter((control: FormControl | InputControl) => {
         return control.valid === false;
       }).length === 0
     );
   }
 
   public addConrol(control: FormControl | InputControl): void {
-    if (this.controls.contains(control) === false) {
+    if (this.controls.has(control) === false) {
       control.addParentForm(this);
       this.controls.add(control);
     } else {
@@ -360,10 +358,10 @@ export class FormControl extends AbstractControl {
   }
 
   public removeControl(control: FormControl | InputControl): void {
-    if (this.controls.contains(control) === true) {
+    if (this.controls.has(control) === true) {
       if (control instanceof AbstractControl) {
         control.removeParentForm(this);
-        this.controls.remove(control);
+        this.controls.delete(control);
       }
     } else {
       throw new Error(`A control with the name '${control.name}' does not exists.`);
@@ -371,11 +369,11 @@ export class FormControl extends AbstractControl {
   }
 
   public getControls(): Array<FormControl | InputControl> {
-    return <Array<FormControl | InputControl>>this.controls.get();
+    return Array.from(this.controls);
   }
 
-  public getControl(name: string): FormControl | InputControl {
-    return this.controls.find((control: FormControl | InputControl) => {
+  public getControl(name: string): FormControl | InputControl | undefined {
+    return Array.from(this.controls).find((control: FormControl | InputControl) => {
       return control.name === name;
     });
   }

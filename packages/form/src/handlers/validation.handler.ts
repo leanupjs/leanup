@@ -1,9 +1,14 @@
-import { ListOf } from '@leanup/lib';
+import { SetOf } from '@leanup/lib';
 
 import { AbstractValidator } from './validators/abstract.validator';
 
-export class ValidationHandler {
-  public readonly validators: ListOf<AbstractValidator> = new ListOf(AbstractValidator);
+export class ValidationHandler extends SetOf<AbstractValidator> {
+  public readonly validators: SetOf<AbstractValidator> = this;
+
+  public constructor() {
+    super(AbstractValidator);
+    this.validators = this;
+  }
 
   public validate(value: unknown, fast = false): string[] {
     const errors: string[] = [];

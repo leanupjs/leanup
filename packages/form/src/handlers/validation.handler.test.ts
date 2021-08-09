@@ -13,15 +13,15 @@ describe(`Test: ValidationHandler`, () => {
   });
 
   it(`Initial validators size 0`, () => {
-    assert.equal(handler.validators.length, 0);
+    assert.equal(handler.validators.size, 0);
   });
 
-  describe('Test: ListOf validators', () => {
+  describe('Test: Set (ListOf) validators', () => {
     function test(value: any) {
       it(`Validator accept only function (${value})`, () => {
-        assert.equal(handler.validators.length, 0);
+        assert.equal(handler.validators.size, 0);
         handler.validators.add(value);
-        assert.equal(handler.validators.length, 0);
+        assert.equal(handler.validators.size, 0);
       });
     }
 
@@ -32,15 +32,16 @@ describe(`Test: ValidationHandler`, () => {
     test([1, 1]);
 
     it(`Validator accept a AbstractValidator`, () => {
-      assert.equal(handler.validators.length, 0);
+      assert.equal(handler.validators.size, 0);
       handler.validators.add(DEFAULT_REQUIRED_VALIDATOR);
-      assert.equal(handler.validators.length, 1);
+      assert.equal(handler.validators.size, 1);
     });
   });
 
   describe('Test: Validate with Validator', () => {
     beforeEach(() => {
-      handler.validators.add([new DigitsValidator(), DEFAULT_DIGITS_VALIDATOR]);
+      handler.validators.add(new DigitsValidator());
+      handler.validators.add(DEFAULT_DIGITS_VALIDATOR);
     });
 
     it(`Validate no errors`, () => {

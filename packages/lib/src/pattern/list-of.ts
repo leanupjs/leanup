@@ -1,8 +1,7 @@
 import { Log } from '../helpers/log';
-import { Validator } from '../helpers/validator';
 
 function isInstanceOf(instancesOf: any[], item: any): boolean {
-  if (Validator.isArray(instancesOf)) {
+  if (Array.isArray(instancesOf)) {
     return (
       instancesOf.find((instanceOf: any): boolean => {
         return item instanceof instanceOf;
@@ -12,65 +11,70 @@ function isInstanceOf(instancesOf: any[], item: any): boolean {
   return false;
 }
 
-function normalizeListOfItems(items: unknown | unknown[] | ListOf<unknown>): unknown[] {
-  return <unknown[]>(items instanceof ListOf ? items.get() : Array.isArray(items) ? items : [items]);
+function normalizeSetOfItems(items: unknown | unknown[] | SetOf<unknown>): unknown[] {
+  return <unknown[]>(items instanceof SetOf ? items.get() : Array.isArray(items) ? items : [items]);
 }
 
-export class ListOf<T> {
-  private _instancesOf: unknown[] = [];
-  private _items: T[] = [];
-  private _protectedItems: unknown[] = [];
+export class SetOf<T> {
+  private instancesOf: Array<T | Function | Object>;
+  private items: Set<T> = new Set();
+  private protectedItems: Set<T> = new Set();
 
-  constructor(instancesOf: unknown | unknown[]) {
-    this._instancesOf = <unknown[]>(Array.isArray(instancesOf) ? instancesOf : [instancesOf]);
+  constructor(instancesOf: T | Function | Object | Array<T | Function | Object>) {
+    this.instancesOf = <Array<T | Function | Object>>(Array.isArray(instancesOf) ? instancesOf : [instancesOf]);
   }
 
   get empty(): boolean {
-    return this._items.length === 0;
+    return this.items.size === 0;
   }
 
   get first(): T | null {
-    if (this._items.length > 0) {
-      return this._items[0];
+    if (this.items.size > 0) {
+      return Array.from(this.items)[0];
     } else {
       return null;
     }
   }
 
   public forEach(action: Function | any): void {
-    this._items.forEach(action);
+    this.items.forEach(action);
   }
 
   public filter(action: Function | any): T[] {
-    return this._items.filter(action);
+    return Array.from(this.items).filter(action);
   }
 
   public find(action: Function | any): T {
-    return this._items.find(action);
+    return Array.from(this.items).find(action);
   }
 
   get last(): any {
-    if (this._items.length > 0) {
-      return this._items[this._items.length - 1];
+    if (this.items.size > 0) {
+      return Array.from(this.items)[this.items.size - 1];
     } else {
       return null;
     }
   }
 
   get length(): number {
-    return this._items.length;
+    Log.debug(`The attribute ListOf.length is deprecated - please use ListOf.size instead.`);
+    return this.size;
   }
 
-  public add(items: T | T[] | ListOf<T>, protect = false): boolean {
+  get size(): number {
+    return this.items.size;
+  }
+
+  public add(items: T | T[] | SetOf<T>, protect = false): boolean {
     return (
-      normalizeListOfItems(items).filter((item: T): boolean => {
+      normalizeSetOfItems(items).filter((item: T): boolean => {
         let changed = false;
         if (this.contains(item) === false) {
-          if (isInstanceOf(this._instancesOf, item)) {
+          if (isInstanceOf(this.instancesOf, item)) {
             if (protect) {
-              this._protectedItems.push(item);
+              this.protectedItems.add(item);
             }
-            this._items.push(item);
+            this.items.add(item);
             changed = true;
           } else {
             Log.debug(`The item does not have a valid instance type.`, this);
@@ -83,15 +87,18 @@ export class ListOf<T> {
     );
   }
 
-  public remove(items: T | T[] | ListOf<T>): boolean {
+  public remove(items: T | T[] | SetOf<T>): boolean {
+    Log.debug(`The method ListOf.remove() is deprecated - please use ListOf.delete() instead.`);
+    return this.delete(items);
+  }
+
+  public delete(items: T | T[] | SetOf<T>): boolean {
     return (
-      normalizeListOfItems(items).filter((item: any): boolean => {
+      normalizeSetOfItems(items).filter((item: any): boolean => {
         let changed = false;
-        let index: number = this._protectedItems.indexOf(item);
-        if (index === -1) {
-          index = this._items.indexOf(item);
-          if (index >= 0) {
-            this._items.splice(index, 1);
+        if (this.protectedItems.has(item) === false) {
+          if (this.items.has(item)) {
+            this.items.delete(item);
             changed = true;
           } else {
             Log.debug(`The item is not in the list.`, this);
@@ -104,25 +111,34 @@ export class ListOf<T> {
     );
   }
 
-  public set(items: T | T[] | ListOf<T>, protect = false): any | boolean {
+  public set(items: T | T[] | SetOf<T>, protect = false): any | boolean {
     const cleared: boolean = this.clear();
     const added: boolean = this.add(items, protect);
     return cleared || added;
   }
 
   public get(length?: number): T[] {
-    return isNaN(length) === false && typeof length === 'number' ? this._items.slice(0, length) : this._items;
+    return isNaN(length) === false && typeof length === 'number'
+      ? Array.from(this.items).slice(0, length)
+      : Array.from(this.items);
   }
 
   public clear(): boolean {
-    const length: number = this._items.length;
-    this._items = this._items.filter((item: T): boolean => {
-      return this._protectedItems.indexOf(item) >= 0;
+    const size: number = this.items.size;
+    this.items.forEach((item: T) => {
+      if (this.protectedItems.has(item) === false) {
+        this.items.delete(item);
+      }
     });
-    return length !== this._items.length;
+    return size !== this.items.size;
   }
 
   public contains(item: T): boolean {
-    return this._items.indexOf(item) > -1;
+    Log.debug(`The method ListOf.contains() is deprecated - please use ListOf.has() instead.`);
+    return this.items.has(item);
+  }
+
+  public has(item: T): boolean {
+    return this.items.has(item);
   }
 }
