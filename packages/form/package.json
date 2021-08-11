@@ -40,8 +40,8 @@
     "typescript": "4.3.5"
   },
   "scripts": {
-    "build:cjs": "tsc -m commonjs --outDir cjs && renamer --find /\\.js$/ --replace \".cjs\"  \"cjs/**\"",
-    "build:esm": "tsc -m esnext --outDir esm && renamer --find /\\.js$/ --replace \".mjs\"  \"esm/**\"",
+    "build:cjs": "tsc -m commonjs --outDir cjs && renamer --find \"/\\.js$/\" --replace \".cjs\"  \"cjs/**\"",
+    "build:esm": "tsc -m esnext --outDir esm && renamer --find \"/\\.js$/\" --replace \".mjs\"  \"esm/**\"",
     "build:types": "tsc -d --outDir types && rm -rf types/*.js types/*.map types/**/*.js types/**/*.map",
     "build:umd": "tsc -m umd --outDir umd",
     "build:cleanup": "rm -rf cjs esm types umd",
