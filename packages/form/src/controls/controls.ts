@@ -1,11 +1,13 @@
+import { SetOf } from '@leanup/lib';
+
 import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';
 
 abstract class AbstractControl {
-  public readonly changeListeners: Set<Function> = new Set();
+  public readonly changeListeners: SetOf<Function> = new SetOf(Function);
 
   private readonly _errors: Set<string> = new Set<string>();
-  private readonly _parentForms: FormControl[] = [];
+  private readonly _parentForms: Set<FormControl> = new Set<FormControl>();
   private _name = 'unnamed';
   private _validationHandler: ValidationHandler = new ValidationHandler();
   private _notifyTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
@@ -43,8 +45,8 @@ abstract class AbstractControl {
 
   get id(): string {
     let id = this.name;
-    if (this._parentForms.length > 0) {
-      id = `${this._parentForms[0].id}_${id}`;
+    if (this._parentForms.size > 0) {
+      id = `${this._parentForms.values().next().value.id}_${id}`;
     }
     return id;
   }
@@ -71,9 +73,9 @@ abstract class AbstractControl {
   }
 
   public addParentForm(form: FormControl) {
-    if (this._parentForms.includes(form) === false) {
+    if (this._parentForms.has(form) === false) {
       if (form.findMeInParentForm(this) === false) {
-        this._parentForms.push(form);
+        this._parentForms.add(form);
       } else {
         throw new Error(`The same form control (${form.name}) leads to a form control loop.`);
       }
@@ -83,9 +85,8 @@ abstract class AbstractControl {
   }
 
   public removeParentForm(form: FormControl) {
-    const index = this._parentForms.indexOf(form);
-    if (index >= 0) {
-      this._parentForms.splice(index, 1);
+    if (this._parentForms.has(form) === true) {
+      this._parentForms.delete(form);
     } else {
       throw new Error(`An form control with the name '${form.name}' does not exists.`);
     }
@@ -348,7 +349,7 @@ export class FormControl extends AbstractControl {
     );
   }
 
-  public addConrol(control: FormControl | InputControl): void {
+  public addControl(control: FormControl | InputControl): void {
     if (this.controls.has(control) === false) {
       control.addParentForm(this);
       this.controls.add(control);
@@ -407,11 +408,11 @@ export class FormFactory {
     for (const name in json) {
       if (json.hasOwnProperty(name)) {
         if (typeof json[name] === 'object' && json[name] !== null) {
-          form.addConrol(FormFactory.createForm(name, json[name]));
+          form.addControl(FormFactory.createForm(name, json[name]));
         } else {
           const input = new InputControl(name);
           input.value = <unknown>json[name];
-          form.addConrol(input);
+          form.addControl(input);
         }
       }
     }

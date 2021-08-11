@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import { SinonSpy, spy } from 'sinon';
 
 import { FormatHandler } from '../handlers/format.handler';
 import { DEFAULT_IBAN_FORMATTER } from '../handlers/formatters/iban.formatter';
@@ -65,11 +66,11 @@ describe(`Test: Controls`, () => {
           }).throw;
         });
         it(`VornameInput zu AnschriftForm hinzufügen`, () => {
-          anschriftForm.addConrol(vornameInput);
+          anschriftForm.addControl(vornameInput);
         });
         it(`VornameInput zu AnschriftForm hinzufügen obwohl es schon vorhanden ist`, () => {
           expect(() => {
-            anschriftForm.addConrol(vornameInput);
+            anschriftForm.addControl(vornameInput);
           }).throw;
         });
         it(`VornameInput in AnschriftForm.getControls`, () => {
@@ -99,11 +100,11 @@ describe(`Test: Controls`, () => {
           }).throw;
         });
         it(`AnspracheForm zu AnschriftForm hinzufügen`, () => {
-          anschriftForm.addConrol(anspracheForm);
+          anschriftForm.addControl(anspracheForm);
         });
         it(`AnspracheForm zu AnschriftForm hinzufügen obwohl es schon vorhanden ist`, () => {
           expect(() => {
-            anschriftForm.addConrol(anschriftForm);
+            anschriftForm.addControl(anschriftForm);
           }).throw;
         });
         it(`AnspracheForm in AnschriftForm.getControls`, () => {
@@ -123,7 +124,7 @@ describe(`Test: Controls`, () => {
         });
         it(`Add Control Loop-Detection`, () => {
           expect(() => {
-            anschriftForm.addConrol(anschriftForm);
+            anschriftForm.addControl(anschriftForm);
           }).throw;
         });
       });
@@ -136,19 +137,19 @@ describe(`Test: Controls`, () => {
 
     it(`Loop detected`, () => {
       expect(() => {
-        formControl2.addConrol(formControl);
+        formControl2.addControl(formControl);
       }).throw;
     });
 
     it(`No loop detected`, () => {
       expect(() => {
-        formControl.addConrol(formControl2);
+        formControl.addControl(formControl2);
       }).not.throw;
     });
 
     it(`Loop detected in parentForms`, () => {
       expect(() => {
-        formControl2.addConrol(formControl);
+        formControl2.addControl(formControl);
       }).throw;
     });
   });
@@ -163,7 +164,7 @@ describe(`Test: Controls`, () => {
       form = new FormControl('form');
       input = new InputControl('input');
       handler = new ValidationHandler();
-      form.addConrol(input);
+      form.addControl(input);
 
       // then
       expect(form.valid).to.eq(true);
@@ -220,7 +221,9 @@ describe(`Test: Controls`, () => {
     it(`Add FormatHandler to InputControl`, (done) => {
       // given
       input.value = 'DE53734514500036064418';
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
+        clearTimeout(timeout);
+
         expect(input.value).equal('DE53734514500036064418');
         expect(input.modelValue).equal('DE53734514500036064418');
         expect(input.viewValue).equal('DE53734514500036064418');
@@ -234,7 +237,7 @@ describe(`Test: Controls`, () => {
         expect(input.viewValue).equal('DE53 7345 1450 0036 0644 18');
 
         done();
-      }, 250);
+      }, 10);
     });
   });
 
@@ -246,7 +249,7 @@ describe(`Test: Controls`, () => {
       // given
       form = new FormControl('form');
       input = new InputControl('input');
-      form.addConrol(input);
+      form.addControl(input);
       form.disabled = false;
       input.disabled = false;
       expect(form.disabled).to.be.false;
@@ -275,7 +278,7 @@ describe(`Test: Controls`, () => {
       // given
       form = new FormControl('form');
       input = new InputControl('input');
-      form.addConrol(input);
+      form.addControl(input);
       form.readonly = false;
       input.readonly = false;
       expect(form.readonly).to.be.false;
@@ -293,6 +296,84 @@ describe(`Test: Controls`, () => {
       // then
       expect(form.readonly).to.be.true;
       expect(input.readonly).to.be.true;
+    });
+  });
+
+  describe('Test Change Listener', () => {
+    let form: FormControl;
+    let input: InputControl;
+    let spies: {
+      form: SinonSpy<[], void> | null;
+      input: SinonSpy<[], void> | null;
+    } = { form: null, input: null };
+
+    const changeListeners = {
+      form: () => {},
+      input: () => {},
+    };
+
+    before(() => {
+      // given
+      form = new FormControl('form');
+      input = new InputControl('input');
+      form.addControl(input);
+      spies.form = spy(changeListeners, 'form');
+      spies.input = spy(changeListeners, 'input');
+    });
+
+    afterEach(() => {
+      spies.form?.resetHistory();
+      spies.input?.resetHistory();
+    });
+
+    it(`Add Change Listener`, () => {
+      // given
+      expect(form.changeListeners.size).equal(0);
+      expect(input.changeListeners.size).equal(0);
+
+      // when
+      form.changeListeners.add(changeListeners.form);
+      input.changeListeners.add(changeListeners.input);
+
+      // then
+      expect(form.changeListeners.size).equal(1);
+      expect(input.changeListeners.size).equal(1);
+    });
+
+    it(`Test Change Listener called`, (done) => {
+      // given
+      expect(form.changeListeners.size).equal(1);
+      expect(input.changeListeners.size).equal(1);
+      expect(input.value).equal(null);
+      expect(spies.form?.called).to.be.false;
+      expect(spies.input?.called).to.be.false;
+
+      // when
+      input.value = 'change';
+
+      // then
+      const timeout = setTimeout(() => {
+        clearTimeout(timeout);
+
+        // TODO expect(spies.form?.called).to.be.true;
+        expect(spies.input?.called).to.be.true;
+
+        done();
+      }, 25);
+    });
+
+    it(`Remove Change Listener`, () => {
+      // given
+      expect(form.changeListeners.size).equal(1);
+      expect(input.changeListeners.size).equal(1);
+
+      // when
+      form.changeListeners.remove(changeListeners.form);
+      input.changeListeners.remove(changeListeners.input);
+
+      // then
+      expect(form.changeListeners.size).equal(0);
+      expect(input.changeListeners.size).equal(0);
     });
   });
 });

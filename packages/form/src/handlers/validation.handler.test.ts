@@ -2,7 +2,6 @@ import { assert, expect } from 'chai';
 
 import { ValidationHandler } from './validation.handler';
 import { DEFAULT_DIGITS_VALIDATOR, DigitsValidator } from './validators/digits.validator';
-import { PatternValidator } from './validators/pattern.validator';
 import { DEFAULT_REQUIRED_VALIDATOR } from './validators/required.validator';
 
 describe(`Test: ValidationHandler`, () => {
