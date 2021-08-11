@@ -33,14 +33,14 @@
   "dependencies": {
     "copy-modules-webpack-plugin": "2.2.1",
     "css-loader": "5.2.7",
-    "esbuild-loader": "2.14.0",
+    "esbuild-loader": "2.15.0",
     "file-loader": "6.2.0",
     "less-loader": "8.1.1",
     "postcss-loader": "5.3.0",
     "sass-loader": "11.1.1",
     "string-replace-loader": "3.0.3",
     "style-loader": "2.0.0",
-    "webpack": "5.49.0",
+    "webpack": "5.50.0",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2"
   },
