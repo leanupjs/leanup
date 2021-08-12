@@ -21,13 +21,13 @@
   },
   "dependencies": {
     "loglevel": "1.7.1",
-    "tslib": "2.3.0"
+    "tslib": "2.3.1"
   },
   "devDependencies": {
     "@types/chai": "4.2.21",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "9.0.0",
-    "@types/node": "16.4.13",
+    "@types/node": "16.6.0",
     "@types/sinon": "10.0.2",
     "chai": "4.3.4",
     "cross-env": "7.0.3",

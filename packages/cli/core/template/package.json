@@ -44,7 +44,7 @@
     "rxjs": "7.3.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.2.0-rc.104",
+    "@leanup/cli": "1.2.0-rc.106",
     "@leanup/git-hooks": "1.2.0-rc.106",
     "@leanup/stack": "1.2.0-rc.106",
     "@leanup/stack-snowpack": "1.2.0-rc.106",
