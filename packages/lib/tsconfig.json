@@ -11,6 +11,5 @@
     "types": ["chai", "loglevel", "mocha", "node"],
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.test.ts"]
+  "include": ["src"]
 }
