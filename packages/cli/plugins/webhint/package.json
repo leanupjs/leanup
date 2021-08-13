@@ -34,8 +34,8 @@
     "hint": "6.1.4"
   },
   "devDependencies": {
-    "@leanup/cli": "1.2.0-rc.104",
-    "@types/node": "16.6.0",
+    "@leanup/cli": "1.2.0-rc.107",
+    "@types/node": "16.6.1",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
