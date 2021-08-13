@@ -379,11 +379,19 @@ export class FormControl extends AbstractControl {
     });
   }
 
-  public setData(_data: Object) {
-    console.log('FormControl.setData is currently not implemented.');
+  public setData(data: Record<string, any>) {
+    this.controls.forEach((control: FormControl | InputControl) => {
+      if (control instanceof FormControl) {
+        control.setData(data[control.name]);
+      } else if (control instanceof InputControl) {
+        control.value = data[control.name];
+      } else {
+        throw new Error(`The control is neither an instance of FormControl or InputControl.`);
+      }
+    });
   }
 
-  public getData(): Object {
+  public getData<T extends Record<string, any>>(): T {
     const data: Record<string, any> = {};
     this.controls.forEach((control: FormControl | InputControl) => {
       if (control instanceof FormControl) {
@@ -394,7 +402,7 @@ export class FormControl extends AbstractControl {
         throw new Error(`The control is neither an instance of FormControl or InputControl.`);
       }
     });
-    return data;
+    return data as T;
   }
 
   public setValidationHandler(validationHandler: ValidationHandler) {
