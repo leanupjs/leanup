@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-angular",
-  "version": "1.2.0-rc.107",
+  "version": "1.2.0-rc.108",
   "description": "This package contains the Angular framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -40,7 +40,7 @@
     "snowpack-plugin-angular": "2.2.0"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.0-rc.107",
+    "@leanup/stack-webpack": "1.2.0-rc.108",
     "@types/node": "16.6.1",
     "tslib": "2.3.1",
     "typescript": "4.3.5"
