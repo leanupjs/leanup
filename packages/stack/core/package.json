@@ -54,7 +54,7 @@
     "eslint-plugin-html": "6.1.2",
     "eslint-plugin-json": "3.1.0",
     "esm": "3.2.25",
-    "jsdom": "16.7.0",
+    "jsdom": "17.0.0",
     "jsdom-global": "3.0.2",
     "less": "4.1.1",
     "mocha": "8.4.0",
