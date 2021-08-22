@@ -11,6 +11,7 @@ sh unpublish.sh cli-inferno $1
 sh unpublish.sh cli-lit-element $1
 sh unpublish.sh cli-preact $1
 sh unpublish.sh cli-react $1
+sh unpublish.sh cli-solid $1
 sh unpublish.sh cli-svelte $1
 sh unpublish.sh cli-vanilla $1
 sh unpublish.sh cli-vue $1
@@ -28,6 +29,7 @@ sh unpublish.sh stack-aurelia $1
 sh unpublish.sh stack-inferno $1
 sh unpublish.sh stack-preact $1
 sh unpublish.sh stack-react $1
+sh unpublish.sh stack-solid $1
 sh unpublish.sh stack-svelte $1
 sh unpublish.sh stack-vue $1
 sh unpublish.sh stack-vue3 $1
