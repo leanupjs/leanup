@@ -105,12 +105,16 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
 
   const config = {
     devServer: {
+      allowedHosts: 'all',
       compress: true,
-      contentBase: path.join(process.cwd(), `public`),
+      devMiddleware: {
+        publicPath: '/',
+      },
       host: argv.host,
-      disableHostCheck: true,
-      publicPath: '/',
       proxy: PROXIES,
+      static: {
+        directory: path.join(process.cwd(), `public`),
+      },
     },
     entry: {
       main: path.join(process.cwd(), `src`, `main.ts`),
