@@ -48,9 +48,9 @@ export default {
           elementsRef.value = $ctrl.elements;
           durationRef.value = $ctrl.duration;
           showPerformanceButtonRef.value = $ctrl.showPerformanceButton;
-        }
-      }
-    );
+        },
+      },
+    });
     const elementsRef = ref($ctrl.elements);
     const durationRef = ref($ctrl.duration);
     const measuredSerieRef = ref($ctrl.measuredSerie);
