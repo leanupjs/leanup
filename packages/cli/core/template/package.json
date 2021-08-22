@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.2.0-rc.111",
+  "version": "1.2.0-rc.113",
   "description": "",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha",
@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.2.0-rc.111",
+    "@leanup/form": "1.2.0-rc.113",
     "@leanup/lib": "1.2.0-rc.111",
     "navigo": "8.11.1",
     "rxjs": "7.3.0"
