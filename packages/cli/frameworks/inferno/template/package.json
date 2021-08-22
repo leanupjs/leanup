@@ -33,7 +33,7 @@
   "dependencies": {
     "@leanup/form": "1.0.140",
     "@leanup/lib": "1.0.140",
-    "inferno": "7.4.8",
+    "inferno": "7.4.9",
     "navigo": "8.11.1",
     "rxjs": "7.3.0"
   },
@@ -42,7 +42,7 @@
     "@leanup/cli-inferno": "1.0.140",
     "@leanup/git-hooks": "1.0.140",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.7",
+    "cssnano": "5.0.8",
     "geckodriver": "2.0.3",
     "npm-check-updates": "11.8.3",
     "selenium-server": "3.141.59",

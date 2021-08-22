@@ -72,7 +72,7 @@
     "@leanup/cli-core-format": "1.0.140",
     "@leanup/cli-core-lint": "1.0.140",
     "@leanup/cli-core-test": "1.0.140",
-    "autoprefixer": "10.3.1",
+    "autoprefixer": "10.3.2",
     "babel-loader": "8.2.2",
     "chalk": "4.1.2",
     "commander": "7.2.0",
@@ -98,7 +98,7 @@
     "webpack-dev-server": "3.11.2"
   },
   "devDependencies": {
-    "@types/node": "15.14.7",
+    "@types/node": "15.14.9",
     "tsc": "2.0.3",
     "typescript": "4.3.2"
   },

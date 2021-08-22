@@ -46,11 +46,11 @@
   },
   "devDependencies": {
     "@leanup/cli": "1.0.140",
-    "@types/node": "15.14.7",
+    "@types/node": "15.14.9",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.139",
+    "@leanup/cli": "~1.0.140",
     "svelte": "^3"
   },
   "scripts": {
