@@ -1,19 +1,20 @@
 <script>
 import { ListSerieController } from './controller';
-import CreateSerieComponent from '../create/component.svelte';
-import EditSerieComponent from '../edit/component.svelte';
-const ctrl = new ListSerieController();
+const ctrl = new ListSerieController({
+    hooks: {
+      doRender: () => {
+        measuredSeriesRef = ctrl.measuredSeries;
+        elementsRef = ctrl.elements;
+        durationRef = ctrl.duration;
+        showPerformanceButtonRef = ctrl.showPerformanceButton;
+      },
+    },
+  });
 let elementsRef = ctrl.elements;
 let durationRef = ctrl.duration;
 let measuredSeriesRef = ctrl.measuredSeries;
 let measuredSerieRef = ctrl.measuredSerie;
 let showPerformanceButtonRef = ctrl.showPerformanceButton;
-ctrl.renderView = () => {
-  measuredSeriesRef = ctrl.measuredSeries;
-  elementsRef = ctrl.elements;
-  durationRef = ctrl.duration;
-  showPerformanceButtonRef = ctrl.showPerformanceButton;
-};
 </script>
 
 <div>

@@ -15,7 +15,6 @@ export class ListSerieComponent extends Component<unknown, unknown> implements G
         doRender: this.forceUpdate.bind(this),
       },
     });
-    this.ctrl.renderView = this.forceUpdate.bind(this);
   }
 
   public render(): JSX.Element {

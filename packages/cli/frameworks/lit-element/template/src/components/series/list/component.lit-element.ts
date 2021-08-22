@@ -6,11 +6,15 @@ import { ListSerieController } from './controller';
 
 @customElement('list-serie-component')
 export class ListSerieComponent extends LitElementComponent {
-  public ctrl: ListSerieController = new ListSerieController();
+  public ctrl: ListSerieController;
 
   public constructor() {
     super();
-    this.ctrl.renderView = this.update.bind(this);
+    this.ctrl =  new ListSerieController({
+      hooks: {
+        doRender: this.update.bind(this)
+      }
+    })
   }
 
   public render(): TemplateResult {

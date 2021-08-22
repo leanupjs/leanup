@@ -42,7 +42,15 @@ import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
 export default {
   setup() {
-    const $ctrl = new ListSerieController();
+    const $ctrl = new ListSerieController({
+      hooks: {
+        doRender: () => {
+          elementsRef.value = $ctrl.elements;
+          durationRef.value = $ctrl.duration;
+          showPerformanceButtonRef.value = $ctrl.showPerformanceButton;
+        }
+      }
+    );
     const elementsRef = ref($ctrl.elements);
     const durationRef = ref($ctrl.duration);
     const measuredSerieRef = ref($ctrl.measuredSerie);
@@ -57,12 +65,6 @@ export default {
     };
     const onStart = () => {
       $ctrl.onStart();
-    };
-
-    $ctrl.renderView = () => {
-      elementsRef.value = $ctrl.elements;
-      durationRef.value = $ctrl.duration;
-      showPerformanceButtonRef.value = $ctrl.showPerformanceButton;
     };
 
     return {

@@ -6,12 +6,13 @@ ANGULARJS_MODULE.component('listSerie', {
     '$scope',
     class extends ListSerieController {
       public constructor($scope: { $apply: Function }) {
-        super();
-        this.renderView = () => {
-          setTimeout(() => {
-            $scope.$apply();
-          }, 0);
-        };
+        super({
+          hooks: {
+            doRender: () => {
+              $scope.$apply();
+            },
+          },
+        });
       }
     },
   ],

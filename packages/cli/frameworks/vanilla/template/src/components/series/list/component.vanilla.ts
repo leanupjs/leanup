@@ -50,14 +50,15 @@ function render($ctrl: ListSerieController): string {
 }
 
 class ListSerieComponent extends VanillaComponent {
-  private readonly $ctrl: ListSerieController = new ListSerieController();
+  private readonly $ctrl: ListSerieController;
 
   public constructor() {
     super();
-    this.$ctrl.renderView = this.render.bind(this);
-    // setInterval(() => {
-    //   this.hackMe(this);
-    // }, 10000);
+    this.$ctrl =   new ListSerieController({
+      hooks: {
+        doRender: this.render.bind(this)
+      }
+    })
   }
 
   public hackMe(component: ListSerieComponent): void {
