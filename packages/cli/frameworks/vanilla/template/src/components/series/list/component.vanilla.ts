@@ -54,11 +54,11 @@ class ListSerieComponent extends VanillaComponent {
 
   public constructor() {
     super();
-    this.$ctrl =   new ListSerieController({
+    this.$ctrl = new ListSerieController({
       hooks: {
-        doRender: this.render.bind(this)
-      }
-    })
+        doRender: this.render.bind(this),
+      },
+    });
   }
 
   public hackMe(component: ListSerieComponent): void {

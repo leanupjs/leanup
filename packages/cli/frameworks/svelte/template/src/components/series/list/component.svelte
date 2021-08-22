@@ -1,15 +1,15 @@
 <script>
 import { ListSerieController } from './controller';
 const ctrl = new ListSerieController({
-    hooks: {
-      doRender: () => {
-        measuredSeriesRef = ctrl.measuredSeries;
-        elementsRef = ctrl.elements;
-        durationRef = ctrl.duration;
-        showPerformanceButtonRef = ctrl.showPerformanceButton;
-      },
+  hooks: {
+    doRender: () => {
+      measuredSeriesRef = ctrl.measuredSeries;
+      elementsRef = ctrl.elements;
+      durationRef = ctrl.duration;
+      showPerformanceButtonRef = ctrl.showPerformanceButton;
     },
-  });
+  },
+});
 let elementsRef = ctrl.elements;
 let durationRef = ctrl.duration;
 let measuredSeriesRef = ctrl.measuredSeries;

@@ -10,11 +10,11 @@ export class ListSerieComponent extends LitElementComponent {
 
   public constructor() {
     super();
-    this.ctrl =  new ListSerieController({
+    this.ctrl = new ListSerieController({
       hooks: {
-        doRender: this.update.bind(this)
-      }
-    })
+        doRender: this.update.bind(this),
+      },
+    });
   }
 
   public render(): TemplateResult {
