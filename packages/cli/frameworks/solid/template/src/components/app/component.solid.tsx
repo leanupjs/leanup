@@ -1,10 +1,12 @@
-import { Component, onCleanup } from 'solid-js';
+import { Component, createSignal, onCleanup } from 'solid-js';
 import { createStore } from 'solid-js/store';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.solid.png';
 import { RouterService } from '../../services/router/service';
 import { Filters } from '../../shares/filters';
+import { CreateSerieComponent } from '../series/create/component.solid';
+import { EditSerieComponent } from '../series/edit/component.solid';
 import { ListSerieComponent } from '../series/list/component.solid';
 import { AppController, ResolvedRoute } from './controller';
 
@@ -14,17 +16,11 @@ export const AppComponent: Component = () => {
       hooks: {
         doRender: () => setStore({}),
       },
-    }),
-    {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      equals: false,
-    }
+    })
   );
-
-  let resolvedRoute: ResolvedRoute = {
+  const [resolvedRoute, setResolvedRoute] = createSignal<ResolvedRoute>({
     url: 'series',
-  };
+  });
 
   const routerListener = (
     route: {
@@ -34,11 +30,10 @@ export const AppComponent: Component = () => {
       id: string;
     }
   ) => {
-    resolvedRoute = {
+    setResolvedRoute({
       data,
       url: route.url,
-    };
-    setStore({});
+    });
   };
 
   RouterService.subscribe(routerListener);
@@ -48,6 +43,7 @@ export const AppComponent: Component = () => {
 
   return (
     <div className="my-app">
+      <code>- is currently not full implemented -</code>
       <div className="grid grid-cols-3 items-center">
         <a href="https://www.solidjs.com" target="solidjs" className="text-center">
           <img src={IMG_FRAMEWORK as string} alt="{store.framework.name} Framework" className="m-auto h-24" />
@@ -62,9 +58,9 @@ export const AppComponent: Component = () => {
       </h1>
       <small>{store.finishedRendering} ms upcomming time</small>
       <br />
-      {resolvedRoute.url === 'series' && <ListSerieComponent />}
-      {/* {resolvedRoute.url === 'series/create' && <CreateSerieComponent />} */}
-      {/* {resolvedRoute.url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={resolvedRoute} />} */}
+      {resolvedRoute().url === 'series' && <ListSerieComponent />}
+      {resolvedRoute().url === 'series/create' && <CreateSerieComponent />}
+      {resolvedRoute().url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={resolvedRoute()} />}
       <small>
         Used filters: {Filters.date(store.dummies.date)} | {Filters.currency(store.dummies.price)} €
       </small>
