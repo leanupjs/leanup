@@ -1,0 +1,55 @@
+{
+  "name": "@leanup/cli-solid",
+  "version": "1.2.0-rc.110",
+  "description": "This package contains the Solid framework extension for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "lib/**",
+    "template/**"
+  ],
+  "keywords": [
+    "babel",
+    "snowpack",
+    "webpack",
+    "solid",
+    "sinon",
+    "nyc",
+    "nightwatch",
+    "mocha",
+    "sass",
+    "typescript",
+    "cli",
+    "spa",
+    "pwa",
+    "lean",
+    "compiler",
+    "transpiler"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "bin": {
+    "solid": "lib/cli.js"
+  },
+  "devDependencies": {
+    "@leanup/cli": "1.2.0-rc.110",
+    "@types/node": "16.7.1",
+    "typescript": "4.3.5"
+  },
+  "peerDependencies": {
+    "@leanup/cli": "~1.2.0-rc.109"
+  },
+  "scripts": {
+    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
+  },
+  "engines": {
+    "node": ">=12 <17",
+    "npm": ">=6 <8"
+  }
+}
