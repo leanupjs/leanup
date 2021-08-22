@@ -1,7 +1,7 @@
 {
-  "name": "@leanup/stack-inferno",
+  "name": "@leanup/stack-solid",
   "version": "1.2.0-rc.110",
-  "description": "This package contains the Inferno framework extension for the @leanup/cli.",
+  "description": "This package contains the Solid framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
   "files": [
@@ -15,7 +15,7 @@
     "babel",
     "snowpack",
     "webpack",
-    "inferno",
+    "solid",
     "sinon",
     "nyc",
     "nightwatch",
