@@ -33,7 +33,7 @@ Follow the steps below to update the stack.
 > npx <framework> create --only-config --no-install --overwrite
 ```
 
-Available Frameworks: `angular`, `angularjs`, `inferno`, `lit-element`, `preact`, `react`,`svelte`,`vanilla`,`vue` and `vue3`
+Available for 12 Frameworks: `angular`, `angularjs`, `aurelia`, `inferno`, `lit-element`, `preact`, `react`, `solid`, `svelte`, `vanilla`, `vue` and `vue3`
 
 #### Clearing changes
 
@@ -75,7 +75,7 @@ Follow the steps below to update the stack.
 > npx <framework> create --only-config --overwrite --no-install
 ```
 
-Available Frameworks: `angular`, `angularjs`, ~~`aurelia`~~\*, `inferno`, `lit-element`, `preact`, `react`,`svelte`,`vanilla`,`vue` and `vue3`
+Available for 10 Frameworks: `angular`, `angularjs`, ~~`aurelia`~~\*, `inferno`, `lit-element`, `preact`, `react`, `svelte`, `vanilla`, `vue` and `vue3`
 
 > <small style="color: #d00">\* Aurelia is not Webpack v5 compatible.</small>
 
