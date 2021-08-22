@@ -7,7 +7,8 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 2. ✋ Add copy public folder to dist (`copy-webpack-plugin`)
 3. ✋ add `"type": "module"` in the `package.json` of your own npm modules (required by `mocha` v9)
 4. ✋ add `cjs`, `esm` and `umd` variants in `@leanup/lib` and `@leanup/form`
-5. ✋ add a new framework [SolidJS](https://solidjs.com) option (`@leanup/cli-solid` and `@leanup/stack-solid`)
+5. ✨ add a new framework [SolidJS](https://solidjs.com) option (`@leanup/cli-solid` and `@leanup/stack-solid`)
+6. ✨ [Aurelia](https://aurelia.io/) support is back (`@leanup/cli-aurelia` and `@leanup/stack-aurelia`)
 
 ### Changes
 
