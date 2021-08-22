@@ -174,6 +174,7 @@ Currently the following framework extensions are available:
 - [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️
 - [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
 - [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
+- [`@leanup/cli-solid`](https://www.npmjs.com/package/@leanup/cli-solid) ✔️
 - [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️
 - [`@leanup/cli-vue`](https://www.npmjs.com/package/@leanup/cli-vue) ✔️
 - [`@leanup/cli-vue3`](https://www.npmjs.com/package/@leanup/cli-vue3) ✔️
