@@ -5,6 +5,11 @@ import { MeasurementService } from '../../../services/measurements/service';
 import { RouterService } from '../../../services/router/service';
 
 const PERFORMANCE_ANZAHL = 2500;
+const ONE_ARRAY: null[] = [null];
+const FULL_ARRAY: null[] = [];
+for (let i = 0; i < PERFORMANCE_ANZAHL; i++) {
+  FULL_ARRAY.push(null);
+}
 
 export class ListSerieController extends AbstractController {
   private readonly measurementService: MeasurementService = DI.get<MeasurementService>('MeasurementService');
@@ -12,7 +17,7 @@ export class ListSerieController extends AbstractController {
   public measuredSerie: MeasuredSerieModel | null = null;
   // tslint:disable-next-line: no-empty
   public renderView: Function = () => {};
-  public elements: any[] = [null];
+  public elements: null[] = ONE_ARRAY;
   public duration = 0;
   public showPerformanceButton = true;
 
@@ -40,17 +45,17 @@ export class ListSerieController extends AbstractController {
     this.showPerformanceButton = false;
     setTimeout(() => {
       const start: number = Date.now();
-      this.elements = new Array(PERFORMANCE_ANZAHL);
+      this.elements = FULL_ARRAY;
       setTimeout(() => {
         this.duration = (Date.now() - start) / 1000;
         setTimeout(() => {
-          this.elements = [null];
-          this.renderView();
-        }, 0);
-        this.renderView();
-      }, 0);
-      this.renderView();
-    }, 0);
-    this.renderView();
+          this.elements = ONE_ARRAY;
+          this.doRender();
+        }, 51);
+        this.doRender();
+      }, 51);
+      this.doRender();
+    }, 51);
+    this.doRender();
   }
 }
