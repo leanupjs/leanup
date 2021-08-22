@@ -132,6 +132,20 @@ updates:
     ignore:
       - dependency-name: "@leanup*"
   - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/solid'
+    schedule:
+      interval: daily
+    target-branch: release/1.2
+    ignore:
+      - dependency-name: "@leanup*"
+  - package-ecosystem: npm
+    directory: '/packages/cli/frameworks/solid/template'
+    schedule:
+      interval: daily
+    target-branch: release/1.2
+    ignore:
+      - dependency-name: "@leanup*"
+  - package-ecosystem: npm
     directory: '/packages/cli/frameworks/svelte'
     schedule:
       interval: daily
@@ -294,6 +308,13 @@ updates:
       - dependency-name: "@leanup*"
   - package-ecosystem: npm
     directory: '/packages/stack/frameworks/react'
+    schedule:
+      interval: daily
+    target-branch: release/1.2
+    ignore:
+      - dependency-name: "@leanup*"
+  - package-ecosystem: npm
+    directory: '/packages/stack/frameworks/solid'
     schedule:
       interval: daily
     target-branch: release/1.2
