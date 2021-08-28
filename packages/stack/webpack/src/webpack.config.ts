@@ -100,7 +100,7 @@ export const LEANUP_WEBPACK_RULES = {
   SASS_LOADER,
 };
 
-export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object {
+export function webpackConfig(_env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
   const config = {
@@ -169,7 +169,7 @@ export function webpackConfig(env: any, argv: any, loaders: any[] = []): Object 
     try {
       require(`@leanup/cli-${name}/webpack.config`)(argv, config);
     } catch (error) {
-      if (false === cannotFindCliModule.test(error)) {
+      if (false === cannotFindCliModule.test(error as string)) {
         throw error;
       }
     }
