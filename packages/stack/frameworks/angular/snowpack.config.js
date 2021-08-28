@@ -1,3 +1,6 @@
+// https://www.npmjs.com/package/snowpack-plugin-angular (deprecated)
+// https://www.npmjs.com/package/angular-snowpack-plugin (not maintained)
+
 const config = require('@leanup/stack-snowpack/snowpack.config');
 
 // config.plugins.push([
