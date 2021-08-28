@@ -1,8 +1,6 @@
 import { AbstractController } from '@leanup/lib';
 
 import { ValidationHandler } from '../handlers';
-import { AbstractControl } from './abstract.control';
-import { InputControl } from './input.control';
 
 export enum InputControlTypes {
   checkbox = 'checkbox',
