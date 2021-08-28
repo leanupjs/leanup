@@ -34,5 +34,5 @@ jobs:
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
-          sh wake-up-all.sh leanup latest
+          sh wake-up-all.sh leanup next
         working-directory: scripts
