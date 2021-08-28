@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Test all Node.js and NPM variants
+name: Test Node 14, 15, 16 and NPM 6, 7
 
 on:
   workflow_dispatch:
@@ -15,10 +15,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [12, 13, 14, 15, 16]
+        framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
+        leanup: [next]
+        node: [14, 15, 16]
         # https://github.com/actions/virtual-environments#available-environments
         os: [ubuntu-latest, macos-latest, windows-latest]
-    name: Node.js v${{ matrix.node }} on OS (${{ matrix.os }})
+    name: (${{matrix.framework}}) / ${{matrix.leanup}} / Node ${{ matrix.node }} / ${{ matrix.os }}
     steps:
       - name: Checkout specific branch
         uses: actions/checkout@v2.3.4
@@ -34,5 +36,5 @@ jobs:
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
-          sh wake-up-all.sh leanup next
+          sh wake-up.sh ${{matrix.framework}} leanup next
         working-directory: scripts
