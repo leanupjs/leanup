@@ -34,9 +34,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2.4.0
         with:
-          node-version: 16.x
+          node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
+      - name: Install and publish only @${{env.alias}}/stack
+        run: |
+          npm install
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+        working-directory: packages/stack/core
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-snowpack
         run: |
           npm install
@@ -56,13 +63,6 @@ jobs:
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/webpack
-        env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/stack
-        run: |
-          npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib
