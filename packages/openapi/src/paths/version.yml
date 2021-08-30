@@ -1,0 +1,9 @@
+get:
+  summery: Version
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../models/version.yml#/IVersion'

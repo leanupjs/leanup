@@ -1,0 +1,34 @@
+{
+  "name": "@leanup/openapi-demo",
+  "version": "1.2.0-rc.116",
+  "description": "This module is a collection of lightweight application features.",
+  "author": "Martin Oppitz <npesm@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "license": "Apache-2.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "scripts": {
+    "build": "rm -rf dist typescript-rxjs && npm run generate:typescript-rxjs && npm run add:bearer-handling",
+    "generate:typescript-rxjs": "openapi-generator-cli generate -g typescript-rxjs -o typescript-rxjs -i src/openapi.yml",
+    "create:package-json": "node scripts/create-package-json.js dipa-projekt dipa-openapi 0.0.0 dipa-projekt/dipa-hub",
+    "add:bearer-handling": "node scripts/add-bearer-handling.js",
+    "prepack": "npm run build && tsc -p typescript-rxjs && mv typescript-rxjs/dist dist"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "2.3.10",
+    "typescript": "4.4.2"
+  },
+  "peerDependencies": {
+    "rxjs": ">=6"
+  }
+}
