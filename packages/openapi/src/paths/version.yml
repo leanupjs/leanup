@@ -1,4 +1,6 @@
 get:
+  tags:
+    - Version
   summery: Version
   responses:
     200:
