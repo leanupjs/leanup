@@ -1,6 +1,6 @@
 {
   "name": "@leanup/openapi-demo",
-  "version": "1.2.0-rc.118",
+  "version": "1.2.0-rc.119",
   "description": "This module is a collection of lightweight application features.",
   "author": "Martin Oppitz <npesm@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -24,11 +24,14 @@
     "add:bearer-handling": "node scripts/add-bearer-handling.js",
     "prepack": "npm run build && tsc -p typescript-rxjs && mv typescript-rxjs/dist dist"
   },
+  "dependencies": {
+    "rxjs": "6.6.3"
+  },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "2.3.10",
     "typescript": "4.4.2"
   },
   "peerDependencies": {
-    "rxjs": ">=6"
+    "rxjs": "^6"
   }
 }
