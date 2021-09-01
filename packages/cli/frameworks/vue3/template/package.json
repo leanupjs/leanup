@@ -1,12 +1,12 @@
 {
   "name": "@template/vue3",
-  "version": "1.2.0-rc.118",
+  "version": "1.2.0-rc.119",
   "dependencies": {
     "vue": "3.2.6"
   },
   "devDependencies": {
-    "@leanup/cli-vue3": "1.2.0-rc.118",
-    "@leanup/stack-vue3": "1.2.0-rc.118",
+    "@leanup/cli-vue3": "1.2.0-rc.119",
+    "@leanup/stack-vue3": "1.2.0-rc.119",
     "@vue/compiler-sfc": "3.2.6"
   }
 }
