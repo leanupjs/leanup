@@ -12,7 +12,7 @@
     "remove": "rm -rf node_modules package-lock.json",
     "update": "ncu -t minor -u && npm install && ncu",
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "npm run webpack:serve -- --open",
+    "start": "npm run serve -- --open",
     "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "preview": "vite preview",
     "test": "cross-env NODE_ENV=test mocha",
