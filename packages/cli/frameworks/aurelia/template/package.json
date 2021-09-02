@@ -44,7 +44,7 @@
     "@leanup/git-hooks": "1.0.142",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.8",
-    "geckodriver": "2.0.3",
+    "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.3",
     "selenium-server": "3.141.59",
     "tailwindcss": "2.2.9",
