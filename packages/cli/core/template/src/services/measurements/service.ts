@@ -99,6 +99,6 @@ export class MeasurementService {
       });
     });
     this.storageStorage.setItem('measuredSeries', series);
-    this.observe.next();
+    this.observe.next([]);
   }
 }

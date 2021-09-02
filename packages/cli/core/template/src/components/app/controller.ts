@@ -1,5 +1,6 @@
 import { AbstractController, DI, ViewControllerCouple } from '@leanup/lib';
-import IMG_LEANUP, { IVersion, VersionApi } from '@leanup/openapi-demo';
+import { IVersion, VersionApi } from '@leanup/openapi-demo';
+import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 
 import { Framework } from '../../models/framework.interface';
 import { RouterService } from '../../services/router/service';
