@@ -9,7 +9,7 @@
     "@angular/forms": "12.2.4",
     "@angular/platform-browser": "12.2.4",
     "@angular/platform-browser-dynamic": "12.2.4",
-    "core-js": "3.17.1",
+    "core-js": "3.17.2",
     "rxjs": "7.3.0",
     "zone.js": "0.11.4"
   },
