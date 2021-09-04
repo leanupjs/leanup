@@ -4,7 +4,7 @@ import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
 export const ListSerieComponent: Component = () => {
-  const [store, setStore] = createSignal<ListSerieController>({} as ListSerieController);
+  const [store, setStore] = createSignal<ListSerieController>(new ListSerieController({}), { equals: false });
   const ctrl = new ListSerieController({
     hooks: {
       doRender: () => {
@@ -13,6 +13,7 @@ export const ListSerieComponent: Component = () => {
     },
   });
   setStore(ctrl);
+
   return (
     <div>
       <h2>List</h2>
@@ -53,7 +54,7 @@ export const ListSerieComponent: Component = () => {
               </tr>
             </thead>
             <tbody>
-              {store().measuredSeries.map((serie: MeasuredSerieModel, index: number) => {
+              {ctrl.measuredSeries.map((serie: MeasuredSerieModel, index: number) => {
                 return (
                   <tr>
                     <td>{index + 1}</td>
@@ -66,7 +67,7 @@ export const ListSerieComponent: Component = () => {
                         type="button"
                         onClick={() => {
                           ctrl.edit(serie);
-                          setStore({ ...ctrl } as ListSerieController);
+                          setStore(ctrl);
                         }}
                       >
                         Edit

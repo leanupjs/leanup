@@ -1,28 +1,29 @@
-import { Component } from 'solid-js';
-import { createStore } from 'solid-js/store';
+import { Component, createSignal } from 'solid-js';
 
 import { EditorSerieComponent } from '../editor/component.solid';
 import { CreateSerieController } from './controller';
 
 export const CreateSerieComponent: Component = () => {
-  const [store, setStore] = createStore<CreateSerieController>(
-    new CreateSerieController({
-      hooks: {
-        doRender: () => setStore({}),
+  const [_store, setStore] = createSignal<CreateSerieController>({} as CreateSerieController, { equals: false });
+  const ctrl = new CreateSerieController({
+    hooks: {
+      doRender: () => {
+        setStore({ ...ctrl } as CreateSerieController);
       },
-    })
-  );
+    },
+  });
+  setStore(ctrl);
 
   return (
     <form
       onSubmit={(event: Event) => {
         event.preventDefault();
         event.stopPropagation();
-        store.onSubmit();
+        ctrl.onSubmit();
       }}
     >
       <h2>Create a new measuring serie</h2>
-      <EditorSerieComponent editorForm={store.editorForm} />
+      <EditorSerieComponent editorForm={ctrl.editorForm} />
       <button className="primary" type="submit" id="submit">
         Add
       </button>
@@ -31,7 +32,7 @@ export const CreateSerieComponent: Component = () => {
         type="reset"
         id="cancel"
         onClick={() => {
-          store.onCancel();
+          ctrl.onCancel();
         }}
       >
         Abbrechen

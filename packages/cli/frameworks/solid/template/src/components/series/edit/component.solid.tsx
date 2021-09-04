@@ -1,5 +1,4 @@
-import { Component } from 'solid-js';
-import { createStore } from 'solid-js/store';
+import { Component, createSignal } from 'solid-js';
 
 import { ResolvedRoute } from '../../app/controller';
 import { EditorSerieComponent } from '../editor/component.solid';
@@ -10,26 +9,28 @@ interface Props {
 }
 
 export const EditSerieComponent: Component<Props> = (props: Props) => {
-  const [store, setStore] = createStore<EditSerieController>(
-    new EditSerieController({
-      hooks: {
-        doRender: () => setStore({}),
+  const [_store, setStore] = createSignal<EditSerieController>({} as EditSerieController, { equals: false });
+  const ctrl = new EditSerieController({
+    hooks: {
+      doRender: () => {
+        setStore({ ...ctrl } as EditSerieController);
       },
-    })
-  );
+    },
+  });
+  setStore(ctrl);
 
-  store.changeMeasuredSerie(parseInt(props.resolvedRoute.data?.id || '0'));
+  ctrl.changeMeasuredSerie(parseInt(props.resolvedRoute.data?.id || '0'));
 
   return (
     <form
       onSubmit={(event: Event) => {
         event.preventDefault();
         event.stopPropagation();
-        store.onSubmit();
+        ctrl.onSubmit();
       }}
     >
       <h2>Edit a existing measuring serie</h2>
-      <EditorSerieComponent editorForm={store.editorForm} />
+      <EditorSerieComponent editorForm={ctrl.editorForm} />
       <button className="primary" type="submit" id="submit">
         Edit
       </button>
@@ -38,7 +39,7 @@ export const EditSerieComponent: Component<Props> = (props: Props) => {
         type="reset"
         id="cancel"
         onClick={() => {
-          store.onCancel();
+          ctrl.onCancel();
         }}
       >
         Abbrechen
@@ -48,7 +49,7 @@ export const EditSerieComponent: Component<Props> = (props: Props) => {
         id="delete"
         type="button"
         onClick={() => {
-          store.onDelete();
+          ctrl.onDelete();
         }}
       >
         Delete

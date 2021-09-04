@@ -1,5 +1,4 @@
 import { Component, createSignal, onCleanup } from 'solid-js';
-import { createStore } from 'solid-js/store';
 
 import IMG_LEANUP from '../../assets/logo.leanupjs.png';
 import IMG_FRAMEWORK from '../../assets/logo.solid.png';
@@ -11,13 +10,12 @@ import { ListSerieComponent } from '../series/list/component.solid';
 import { AppController, ResolvedRoute } from './controller';
 
 export const AppComponent: Component = () => {
-  const [store, setStore] = createStore<AppController>(
-    new AppController({
-      hooks: {
-        doRender: () => setStore({}),
-      },
-    })
-  );
+  const ctrl = new AppController({
+    hooks: {
+      doRender: () => {},
+    },
+  });
+
   const [resolvedRoute, setResolvedRoute] = createSignal<ResolvedRoute>({
     url: 'series',
   });
@@ -43,7 +41,6 @@ export const AppComponent: Component = () => {
 
   return (
     <div className="my-app">
-      <code>- is currently not full implemented -</code>
       <div className="grid grid-cols-3 items-center">
         <a href="https://www.solidjs.com" target="solidjs" className="text-center">
           <img src={IMG_FRAMEWORK as string} alt="{store.framework.name} Framework" className="m-auto h-24" />
@@ -54,19 +51,19 @@ export const AppComponent: Component = () => {
         </a>
       </div>
       <h1>
-        {store.framework.name} v{store.framework.version}
+        {ctrl.framework.name} v{ctrl.framework.version}
       </h1>
-      <small>{store.finishedRendering} ms upcomming time</small>
+      <small>{ctrl.finishedRendering} ms upcomming time</small>
       <br />
       {resolvedRoute().url === 'series' && <ListSerieComponent />}
       {resolvedRoute().url === 'series/create' && <CreateSerieComponent />}
       {resolvedRoute().url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={resolvedRoute()} />}
       <small>
-        Used filters: {Filters.date(store.dummies.date)} | {Filters.currency(store.dummies.price)} €
+        Used filters: {Filters.date(ctrl.dummies.date)} | {Filters.currency(ctrl.dummies.price)} €
       </small>
       <br />
       <small>
-        Build with: {store.cli.name} v{store.cli.version}
+        Build with: {ctrl.cli.name} v{ctrl.cli.version}
       </small>
     </div>
   );
