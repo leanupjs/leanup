@@ -26,7 +26,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2.4.0
         with:
-          node-version: 16.x
+          node-version: 14.x
       - name: Install tools
         run: npm i lerna npm-check-updates --no-save
       - name: Update dependencies
