@@ -12,14 +12,14 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-vue
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-vue
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.1
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.1
-[dev-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.1&type=dev
-[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.1&type=dev
-[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.1&type=peer
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.1&type=peer
-[optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.1&type=optional
-[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.1&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.2
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.2
+[dev-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.2&type=dev
+[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.2&type=dev
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.2&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.2&type=peer
+[optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue&ref=release/1.2&type=optional
+[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue&ref=release/1.2&type=optional
 [vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-vue
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vue
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vue
