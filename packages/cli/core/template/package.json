@@ -6,7 +6,7 @@
     "coverage": "cross-env NODE_ENV=test nyc mocha",
     "cucumber": "cross-env NIGHTWATCH_ENV=chrome cucumber-js tests/cucumber/features/**/*.feature --require cucumber.conf.js --require tests/cucumber/step-definitions --format @cucumber/pretty-formatter --format json:.reports/cucumber/report.json",
     "e2e": "nightwatch",
-    "format": "prettier --check {src,tests}/** --ignore-unknown",
+    "format": "prettier --check \"{src,tests}/**\" --ignore-unknown",
     "lint": "eslint \"{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}\"",
     "reinstall": "npm run remove && npm install",
     "remove": "rm -rf node_modules package-lock.json",
