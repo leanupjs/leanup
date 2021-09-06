@@ -117,7 +117,7 @@ There are some working examples:
 | [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
 | [Material]       |   Design-System   |   ✔️   | proved                     | [![@material/textfield](https://snyk.io/advisor/npm-package/@material/textfield/badge.svg)](https://snyk.io/advisor/npm-package/@material/textfield) |
 | [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
-| [WindiCSS]       |   Design-System   |   ✔️   | proved for v1.2            | [![tailwindcss](https://snyk.io/advisor/npm-package/windicss/badge.svg)](https://snyk.io/advisor/npm-package/windicss)                               |
+| [WindiCSS]       |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/windicss/badge.svg)](https://snyk.io/advisor/npm-package/windicss)                               |
 | [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
 | [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
 | [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
@@ -174,6 +174,7 @@ Currently the following framework extensions are available:
 - [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️
 - [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
 - [`@leanup/cli-react`](https://www.npmjs.com/package/@leanup/cli-react) ✔️
+- [`@leanup/cli-solid`](https://www.npmjs.com/package/@leanup/cli-solid) ✔️
 - [`@leanup/cli-svelte`](https://www.npmjs.com/package/@leanup/cli-svelte) ✔️
 - [`@leanup/cli-vue`](https://www.npmjs.com/package/@leanup/cli-vue) ✔️
 - [`@leanup/cli-vue3`](https://www.npmjs.com/package/@leanup/cli-vue3) ✔️

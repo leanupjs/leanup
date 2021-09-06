@@ -20,7 +20,7 @@
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue3&ref=release/1.1&type=peer
 [optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/frameworks/vue3&ref=release/1.1&type=optional
 [optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/frameworks/vue3&ref=release/1.1&type=optional
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-vue3/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-vue3
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vue3
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vue3
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-vue3?minimal=true

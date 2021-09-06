@@ -2,7 +2,7 @@
  * https://www.npmjs.com/package/eslint
  */
 module.exports = {
-  root: false,
+  root: true,
   env: {
     browser: true,
     es6: true,

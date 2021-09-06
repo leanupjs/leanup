@@ -14,7 +14,7 @@
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/lit-element
 [peer-dependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/frameworks/lit-element
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/frameworks/lit-element&type=peer
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-lit-element/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-lit-element
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-lit-element
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-lit-element
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-lit-element?minimal=true

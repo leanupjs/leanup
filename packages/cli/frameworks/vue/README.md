@@ -17,7 +17,7 @@
 [peerdependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vue&ref=release/1.1&type=peer
 [optionaldependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vue&ref=release/1.1&type=optional
 [optionaldependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vue&ref=release/1.1&type=optional
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-vue/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-vue
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vue
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vue
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-vue?minimal=true
@@ -28,12 +28,32 @@
 
 # `@leanup/cli-vue`
 
-> This package contains the [vue](https://vuejs.org) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
-
-## Vue 3 Alpha
-
-> https://medium.com/@mario.brendel1990/vue-3-alpha-has-started-d1b3b49869a4
+> This package contains the [vue](https://vuejs.org) CLI adapter. You can create a new or switch a existing project to the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-vue --save-dev`
+You can create a new project folder or go in a existing folder.
+
+Create a new project folder:
+
+1. `mkdir new-vue-app`
+2. `cd new-vue-app`
+3. `npm install -D @leanup/cli @leanup/cli-vue`
+4. `npx vue create`
+
+Go in a existing folder
+
+1. `cd my-vue-app`
+2. `npm install -D @leanup/cli @leanup/cli-vue`
+3. `npx vue create --only-config --overwrite`
+4. Proof the configuration changes and adopt it for your.
+
+## Usage
+
+Execute `npm run` in your terminal. It lists all preconfigured tools commands of the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
+
+For example: `npm start` 😉
+
+## Feedback
+
+Please give us feedback of you experience, so that we can continuously improve `@leanup`.

@@ -10,7 +10,7 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/lib
 [dependencies]: https://img.shields.io/david/modevel/leanup?path=lib
 [dependencies-url]: https://david-dm.org/modevel/leanup?path=lib
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/lib/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/lib
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/lib
 [downloads]: https://img.shields.io/npm/dm/@leanup/lib
 [downloads-url]: https://npmcharts.com/compare/@leanup/lib?minimal=true

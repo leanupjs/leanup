@@ -146,6 +146,7 @@ export class CommonCLI extends AbstractCLI {
           spawnArgs.push('--check');
         }
         spawnArgs.push(`"{src,tests}/**"`);
+        spawnArgs.push('--ignore-unknown');
         return spawnArgs;
       }
     );

@@ -11,7 +11,7 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-addons
 [dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/addons&ref=release/1.1
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/addons&ref=release/1.1
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-addons/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-addons
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-addons
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-addons
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-addons?minimal=true

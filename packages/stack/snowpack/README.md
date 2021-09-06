@@ -29,7 +29,7 @@
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/snowpack&ref=release/1.1&type=peer
 [optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/stack/snowpack&ref=release/1.1&type=optional
 [optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/stack/snowpack&ref=release/1.1&type=optional
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/stack-snowpack/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/stack-snowpack
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/stack-snowpack
 [install-size]: https://packagephobia.now.sh/badge?p=@leanup/stack-snowpack@next
 [install-size-url]: https://packagephobia.now.sh/result?p=@leanup/stack-snowpack@next

@@ -1,5 +1,6 @@
-.reports/
-dist/
-hint-report/
-node_modules/
+/.husky
+/.reports
+/dist
+/hint-report
+/node_modules
 *.log

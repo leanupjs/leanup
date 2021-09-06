@@ -11,7 +11,7 @@
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-pwa
 [dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/plugins/pwa&ref=release/1.1
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/plugins/pwa&ref=release/1.1
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-pwa/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-pwa
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-pwa
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-pwa
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-pwa?minimal=true

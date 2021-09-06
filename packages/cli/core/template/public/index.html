@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
   <head>
     <title>PoC - Flexible web application architecture (Snowpack, Webpack)</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'" />
+    <meta http-equiv="X-WebKit-CSP" content="default-src 'self'" />
+    <link rel="stylesheet" href="main.css" />
 
     <!-- add the PWA manifest -->
     <!-- <link rel="manifest" href="manifest.json" /> -->
 
     <!-- <meta name="mobile-web-app-capable" content="yes" /> -->
+
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
     <!-- <meta name="application-name" content="PoC" /> -->
     <!-- <meta name="apple-mobile-web-app-title" content="PoC" /> -->

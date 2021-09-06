@@ -14,7 +14,7 @@
 [dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/inferno&ref=release/1.1
 [peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/inferno&ref=release/1.1&type=peer
 [peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/inferno&ref=release/1.1&type=peer
-[vulnerabilities]: https://snyk.io/test/npm/@leanup/cli-inferno/badge.svg
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-inferno
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-inferno
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-inferno
 [downloads-url]: https://npmcharts.com/compare/@leanup/cli-inferno?minimal=true
@@ -25,8 +25,32 @@
 
 # `@leanup/cli-inferno`
 
-> This package contains the [Inferno](https://infernojs.org) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+> This package contains the [Inferno](https://infernojs.org) CLI adapter. You can create a new or switch a existing project to the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-inferno --save-dev`
+You can create a new project folder or go in a existing folder.
+
+Create a new project folder:
+
+1. `mkdir new-inferno-app`
+2. `cd new-inferno-app`
+3. `npm install -D @leanup/cli @leanup/cli-inferno`
+4. `npx inferno create`
+
+Go in a existing folder
+
+1. `cd my-inferno-app`
+2. `npm install -D @leanup/cli @leanup/cli-inferno`
+3. `npx inferno create --only-config --overwrite`
+4. Proof the configuration changes and adopt it for your.
+
+## Usage
+
+Execute `npm run` in your terminal. It lists all preconfigured tools commands of the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
+
+For example: `npm start` 😉
+
+## Feedback
+
+Please give us feedback of you experience, so that we can continuously improve `@leanup`.

@@ -8,7 +8,7 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 
 1. ✨ Refactoring the @leanup module separation
 2. ✨ Maximal Major-Upgrade from all dependencies
-3. ✨ Remove some not really important dependencies (e.g. `copy-webpack-plugin`, `html-webpack-plugin`, `copy-modules-webpack-plugin`)
+3. ✨ Remove some not really important dependencies (e.g. `copy-webpack-plugin`, `html-webpack-plugin`)
 4. ✨ Global CLI installation
 5. ✨ Webpack 5
 6. ✨ ESBuild
@@ -34,7 +34,7 @@ Follow the steps below to update the stack.
 > npx <framework> create --only-config --overwrite --no-install
 ```
 
-Available Frameworks: `angular`, `angularjs`, ~~`aurelia`~~\*, `inferno`, `lit-element`, `preact`, `react`,`svelte`,`vanilla`,`vue` and `vue3`
+Available for 10 Frameworks: `angular`, `angularjs`, ~~`aurelia`~~\*, `inferno`, `lit-element`, `preact`, `react`, `svelte`, `vanilla`, `vue` and `vue3`
 
 > <small style="color: #d00">\* Aurelia is not Webpack v5 compatible.</small>
 
@@ -56,6 +56,30 @@ Add the following script tag in you `index.html` body.
     <script type="module" src="main.js"></script>
   <body>
 </html>
+```
+
+#### If you have unsafe-eval with @babel/runtime
+
+If you have CSP problems with `unsafe-eval` by using @babel/runtime. You can configure this as follows:
+
+1. Extends the `webpack.config.js` like this<br>
+
+```js
+module.exports = (...args) => {
+  // Here using the example for react
+  const config = require('@leanup/stack-react/webpack.config')(...args);
+
+  config.module.rules.unshift({
+    test: /runtime.js$/,
+    loader: 'string-replace-loader',
+    options: {
+      search: /[^\w]Function\(/,
+      replace: '// Function(',
+    },
+  });
+
+  return config;
+};
 ```
 
 #### If you need the frame material
@@ -82,6 +106,7 @@ module.exports = (...args) => {
       })
     );
   }
+
   return config;
 };
 ```

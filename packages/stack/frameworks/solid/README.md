@@ -29,10 +29,10 @@
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
 [lernajs-url]: https://lerna.js.org
 
-# `@leanup/stack-inferno`
+# `@leanup/stack-solid`
 
-> This package contains the [Inferno](https://infernojs.org) framework extension for the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
+> This package contains the [Solid](https://www.solidjs.com/) framework extension for the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/stack @leanup/stack-inferno --save-dev`
+`npm install @leanup/stack @leanup/stack-solid --save-dev`

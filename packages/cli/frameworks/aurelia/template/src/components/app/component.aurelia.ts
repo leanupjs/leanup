@@ -8,7 +8,7 @@ export class App extends AppController {
     url: 'series',
   };
 
-  constructor() {
+  public constructor() {
     super();
     RouterService.subscribe(
       (

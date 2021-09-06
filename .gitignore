@@ -1,6 +1,7 @@
 /.husky
 /docs/.vitepress/dist
 
+.DS_Store
 .reports/
 node_modules/
 templates/
