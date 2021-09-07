@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@leanup/cli": "1.1.33",
-    "@types/node": "16.7.11",
+    "@types/node": "16.7.13",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
