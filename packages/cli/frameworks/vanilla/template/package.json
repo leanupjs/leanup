@@ -1,6 +1,6 @@
 {
   "name": "@template/vanilla",
-  "version": "1.0.142",
+  "version": "1.0.143",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,15 +31,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.142",
-    "@leanup/lib": "1.0.142",
+    "@leanup/form": "1.0.143",
+    "@leanup/lib": "1.0.143",
     "navigo": "8.11.1",
     "rxjs": "7.3.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.142",
-    "@leanup/cli-vanilla": "1.0.142",
-    "@leanup/git-hooks": "1.0.142",
+    "@leanup/cli": "1.0.143",
+    "@leanup/cli-vanilla": "1.0.143",
+    "@leanup/git-hooks": "1.0.143",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.8",
     "geckodriver": "2.0.4",
