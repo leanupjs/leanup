@@ -1,11 +1,11 @@
 {
   "name": "@template/inferno",
-  "version": "1.1.33",
+  "version": "1.1.34",
   "dependencies": {
     "inferno": "7.4.9"
   },
   "devDependencies": {
-    "@leanup/cli-inferno": "1.1.33",
-    "@leanup/stack-inferno": "1.1.33"
+    "@leanup/cli-inferno": "1.1.34",
+    "@leanup/stack-inferno": "1.1.34"
   }
 }
