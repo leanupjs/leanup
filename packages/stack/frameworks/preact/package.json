@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.34",
-    "@types/node": "16.7.13",
+    "@types/node": "16.9.0",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
