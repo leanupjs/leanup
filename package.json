@@ -49,11 +49,11 @@
     "lerna": "4.0.0",
     "lint-staged": "11.1.2",
     "npm-check-updates": "11.8.5",
-    "prettier": "2.3.2",
+    "prettier": "2.4.0",
     "prettier-plugin-svelte": "2.4.0",
     "svelte": "3.42.4",
     "typescript": "4.4.2",
-    "vitepress": "0.17.2"
+    "vitepress": "0.17.3"
   },
   "engines": {
     "node": ">=12 <16",
