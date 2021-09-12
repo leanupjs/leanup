@@ -2,7 +2,7 @@
   "name": "@template/inferno",
   "version": "1.2.0-rc.123",
   "dependencies": {
-    "inferno": "7.4.9"
+    "inferno": "7.4.10"
   },
   "devDependencies": {
     "@leanup/cli-inferno": "1.2.0-rc.123",

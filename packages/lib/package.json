@@ -33,7 +33,7 @@
     "cross-env": "7.0.3",
     "esbuild": "0.12.26",
     "esbuild-register": "3.0.0",
-    "inferno": "7.4.9",
+    "inferno": "7.4.10",
     "jsdom": "17.0.0",
     "jsdom-global": "3.0.2",
     "mocha": "9.1.1",
