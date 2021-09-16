@@ -35,7 +35,7 @@
     "@leanup/lib": "1.0.144",
     "navigo": "8.11.1",
     "rxjs": "7.3.0",
-    "svelte": "3.42.5"
+    "svelte": "3.42.6"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.144",
