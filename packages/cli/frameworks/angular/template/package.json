@@ -2,13 +2,13 @@
   "name": "@template/angular",
   "version": "1.2.0-rc.123",
   "dependencies": {
-    "@angular/common": "12.2.5",
-    "@angular/compiler": "12.2.5",
-    "@angular/compiler-cli": "12.2.5",
-    "@angular/core": "12.2.5",
-    "@angular/forms": "12.2.5",
-    "@angular/platform-browser": "12.2.5",
-    "@angular/platform-browser-dynamic": "12.2.5",
+    "@angular/common": "12.2.6",
+    "@angular/compiler": "12.2.6",
+    "@angular/compiler-cli": "12.2.6",
+    "@angular/core": "12.2.6",
+    "@angular/forms": "12.2.6",
+    "@angular/platform-browser": "12.2.6",
+    "@angular/platform-browser-dynamic": "12.2.6",
     "core-js": "3.17.3",
     "rxjs": "7.3.0",
     "zone.js": "0.11.4"
@@ -16,7 +16,7 @@
   "devDependencies": {
     "@leanup/cli-angular": "1.2.0-rc.123",
     "@leanup/stack-angular": "1.2.0-rc.123",
-    "@ngtools/webpack": "12.2.5",
+    "@ngtools/webpack": "12.2.6",
     "typescript": "4.3.5"
   }
 }
