@@ -5,7 +5,7 @@
     "preact": "10.5.14"
   },
   "devDependencies": {
-    "@leanup/cli-preact": "1.2.0-rc.123",
-    "@leanup/stack-preact": "1.2.0-rc.123"
+    "@leanup/cli-preact": "1.2.0-rc.124",
+    "@leanup/stack-preact": "1.2.0-rc.124"
   }
 }

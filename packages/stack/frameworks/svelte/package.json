@@ -44,7 +44,7 @@
     "vite-plugin-svelte": "3.0.1"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.0-rc.123",
+    "@leanup/stack-webpack": "1.2.0-rc.124",
     "@types/node": "16.9.2",
     "typescript": "4.4.3"
   },

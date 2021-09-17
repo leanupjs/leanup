@@ -24,7 +24,7 @@
     "lup": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli": "1.2.0-rc.123"
+    "@leanup/cli": "1.2.0-rc.124"
   },
   "devDependencies": {
     "@types/node": "16.9.2",
