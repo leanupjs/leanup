@@ -28,7 +28,7 @@
     "nightwatch-api": "3.0.2"
   },
   "devDependencies": {
-    "@leanup/cli": "1.2.0-rc.123",
+    "@leanup/cli": "1.2.0-rc.124",
     "@types/node": "16.9.2",
     "typescript": "4.4.3"
   },
