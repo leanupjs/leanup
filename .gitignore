@@ -7,3 +7,4 @@ packages/stack/
 templates/
 *.log
 *.tgz
+.DS_Store
