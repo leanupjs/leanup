@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanup
   registry: https://registry.npmjs.org
-  tag: latest
+  tag: next
   token: ${{ secrets.NPMJS_AUTH_TOKEN }}
 
 jobs:

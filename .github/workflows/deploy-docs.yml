@@ -10,7 +10,7 @@ on:
       - release/*
 
 env:
-  VERSION: '1.2'
+  VERSION: '2.0'
 
 jobs:
   build:
