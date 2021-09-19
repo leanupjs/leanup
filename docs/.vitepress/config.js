@@ -1,6 +1,6 @@
 const isProd = process.env.NODE_ENV === 'production';
 
-const title = 'leanûp (v1.2)';
+const title = 'leanûp (v2.0)';
 const description = 'Make things pure ... to become lean.';
 const site = isProd ? 'https://leanupjs.org' : 'http://localhost:3000';
 const image = `${site}/assets/logo.svg`;
@@ -38,10 +38,10 @@ const head = [
 ];
 
 module.exports = {
-  base: '/1.2/',
+  base: '/2.0/',
   lang: 'en-US',
   head,
-  title: 'leanûp (v1.2)',
+  title: 'leanûp (v2.0)',
   description: 'Make things pure ... to become lean.',
 
   markdown: {
