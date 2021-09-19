@@ -1,6 +1,5 @@
-// @flow
-
 import { expect } from 'chai';
+import { LazyLoader } from '.';
 
 import { DI, Injector } from './injector';
 
@@ -50,5 +49,87 @@ describe(`Test: Injector-Service (DI)`, () => {
       });
     }
     test(`undefined`, undefined);
+  });
+
+  describe('Test Lazy Feature', () => {
+    let injector: Injector;
+    let called: number;
+    let lazyLoader: LazyLoader<unknown>;
+
+    beforeEach(() => {
+      injector = new Injector();
+      called = 0;
+      lazyLoader = (): void => {
+        called++;
+      };
+    });
+
+    it('Register (default no lazy)', () => {
+      // given
+      expect(() => {
+        injector.get('service');
+      }).throw(`The service 'service' is not registered!`);
+
+      // when
+      injector.register<unknown>('service', lazyLoader);
+
+      // then
+      expect(() => {
+        injector.get('service');
+      }).not.throw();
+      expect(called).equal(0);
+    });
+
+    it('Register (explizit no lazy)', () => {
+      // given
+      expect(() => {
+        injector.get('service');
+      }).throw(`The service 'service' is not registered!`);
+
+      // when
+      injector.register<unknown>('service', lazyLoader, {
+        lazy: false,
+      });
+
+      // then
+      expect(() => {
+        injector.get('service');
+      }).not.throw();
+      expect(called).equal(0);
+    });
+
+    it('Register (lazy null)', () => {
+      // given
+      expect(() => {
+        injector.get('service');
+      }).throw(`The service 'service' is not registered!`);
+
+      // when
+      injector.register<unknown>('service', lazyLoader, {});
+
+      // then
+      expect(() => {
+        injector.get('service');
+      }).not.throw();
+      expect(called).equal(0);
+    });
+
+    it('Register (lazy)', () => {
+      // given
+      expect(() => {
+        injector.get('service');
+      }).throw(`The service 'service' is not registered!`);
+
+      // when
+      injector.register<unknown>('service', lazyLoader, {
+        lazy: true,
+      });
+
+      // then
+      expect(() => {
+        injector.get('service');
+      }).not.throw();
+      expect(called).equal(1);
+    });
   });
 });
