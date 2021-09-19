@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: ['1.0', '1.1', '1.2']
+        version: ['1.0', '1.1', '1.2', '2.0']
     name: Weekly release "v${{matrix.version}}"
     steps:
       - name: Checkout specific branch
@@ -28,13 +28,13 @@ jobs:
         with:
           node-version: 16.x
       - name: Semantic Versioning
-        if: ${{matrix.version != '1.2'}}
+        if: ${{matrix.version != '2.0'}}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           npx lerna version patch --exact --no-push --yes
       - name: Semantic Versioning
-        if: ${{matrix.version == '1.2'}}
+        if: ${{matrix.version == '2.0'}}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
