@@ -23,10 +23,10 @@
     "@leanup/lib": "2.0.0-rc.0"
   },
   "devDependencies": {
-    "@types/chai": "4.2.21",
+    "@types/chai": "4.2.22",
     "@types/mocha": "9.0.0",
     "@types/node": "16.9.4",
-    "@types/sinon": "10.0.2",
+    "@types/sinon": "10.0.3",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
     "esbuild": "0.12.28",
