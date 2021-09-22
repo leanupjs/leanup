@@ -41,7 +41,7 @@
     "vue3": "lib/cli.js"
   },
   "dependencies": {
-    "vue-loader": "16.6.0"
+    "vue-loader": "16.7.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.144",
