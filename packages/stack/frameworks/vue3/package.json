@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@snowpack/plugin-vue": "2.6.2",
-    "@vitejs/plugin-vue": "1.9.0",
+    "@vitejs/plugin-vue": "1.9.1",
     "vue-loader": "16.8.1"
   },
   "devDependencies": {
