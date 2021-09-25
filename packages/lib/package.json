@@ -27,7 +27,7 @@
     "@types/loglevel": "1.6.3",
     "@types/mocha": "8.2.3",
     "@types/node": "16.9.6",
-    "@types/sinon": "10.0.3",
+    "@types/sinon": "10.0.4",
     "babel-plugin-istanbul": "6.0.0",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
