@@ -27,7 +27,7 @@
     "@types/chai": "4.2.22",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "9.0.0",
-    "@types/node": "16.10.1",
+    "@types/node": "16.10.2",
     "@types/sinon": "10.0.4",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
