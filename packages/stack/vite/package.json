@@ -30,10 +30,10 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "vite": "2.5.10"
+    "vite": "2.6.1"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.36"
+    "@leanup/stack": "~1.1.37"
   },
   "engines": {
     "node": ">=12 <16",
