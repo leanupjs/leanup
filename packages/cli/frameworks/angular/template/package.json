@@ -10,13 +10,13 @@
     "@angular/platform-browser": "12.2.8",
     "@angular/platform-browser-dynamic": "12.2.8",
     "core-js": "3.18.1",
-    "rxjs": "7.3.0",
+    "rxjs": "7.3.1",
     "zone.js": "0.11.4"
   },
   "devDependencies": {
     "@leanup/cli-angular": "1.2.2",
     "@leanup/stack-angular": "1.2.2",
-    "@ngtools/webpack": "12.2.7",
+    "@ngtools/webpack": "12.2.8",
     "typescript": "4.3.5"
   }
 }
