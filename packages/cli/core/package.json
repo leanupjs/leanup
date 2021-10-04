@@ -82,7 +82,7 @@
     "deepmerge": "4.2.2",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "4.5.2",
-    "less": "4.1.1",
+    "less": "4.1.2",
     "less-loader": "7.3.0",
     "mini-css-extract-plugin": "1.6.2",
     "postcss": "8.3.8",
