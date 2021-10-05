@@ -25,7 +25,7 @@
     "prepack": "npm run build && tsc -p typescript-rxjs && mv typescript-rxjs/dist dist"
   },
   "dependencies": {
-    "rxjs": "6.6.7"
+    "rxjs": "7.3.1"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "2.4.10",
