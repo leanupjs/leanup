@@ -28,7 +28,7 @@
     "rxjs": "6.6.7"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "2.4.10",
+    "@openapitools/openapi-generator-cli": "2.4.11",
     "typescript": "4.4.3"
   },
   "peerDependencies": {
