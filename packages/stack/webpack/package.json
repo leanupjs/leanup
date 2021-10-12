@@ -33,24 +33,24 @@
   "dependencies": {
     "copy-modules-webpack-plugin": "2.2.1",
     "css-loader": "5.2.7",
-    "esbuild-loader": "2.15.1",
+    "esbuild-loader": "2.16.0",
     "file-loader": "6.2.0",
     "less-loader": "8.1.1",
     "postcss-loader": "5.3.0",
     "sass-loader": "11.1.1",
     "string-replace-loader": "3.0.3",
     "style-loader": "2.0.0",
-    "webpack": "5.57.1",
-    "webpack-cli": "4.8.0",
+    "webpack": "5.58.1",
+    "webpack-cli": "4.9.0",
     "webpack-dev-server": "3.11.2"
   },
   "devDependencies": {
-    "@types/node": "16.10.3",
+    "@types/node": "16.10.4",
     "tslib": "2.3.1",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.37"
+    "@leanup/stack": "~1.1.39"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"

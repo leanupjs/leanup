@@ -32,7 +32,7 @@
     "@leanup/form": "1.1.39",
     "@leanup/lib": "1.1.39",
     "navigo": "8.11.1",
-    "rxjs": "7.3.1"
+    "rxjs": "7.4.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.1.39",

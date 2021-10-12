@@ -47,13 +47,13 @@
     "eslint-plugin-json": "2.1.2",
     "husky": "6.0.0",
     "lerna": "4.0.0",
-    "lint-staged": "11.2.0",
+    "lint-staged": "11.2.3",
     "npm-check-updates": "11.8.5",
     "prettier": "2.4.1",
     "prettier-plugin-svelte": "2.4.0",
     "svelte": "3.43.1",
-    "typescript": "4.4.3",
-    "vitepress": "0.19.2"
+    "typescript": "4.4.4",
+    "vitepress": "0.20.0"
   },
   "engines": {
     "node": ">=12 <16",
