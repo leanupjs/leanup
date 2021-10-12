@@ -52,7 +52,7 @@
     "prettier": "2.4.1",
     "prettier-plugin-svelte": "2.4.0",
     "svelte": "3.43.1",
-    "typescript": "4.4.3",
+    "typescript": "4.4.4",
     "vitepress": "0.20.0"
   },
   "engines": {
