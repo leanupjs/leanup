@@ -36,13 +36,13 @@
     "navigo": "8.11.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "rxjs": "7.3.1"
+    "rxjs": "7.4.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.148",
     "@leanup/cli-react": "1.0.148",
     "@leanup/git-hooks": "1.0.148",
-    "@types/react": "17.0.27",
+    "@types/react": "17.0.29",
     "@types/react-dom": "17.0.9",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.8",

@@ -16,11 +16,11 @@
     "loglevel": "1.7.1"
   },
   "devDependencies": {
-    "@babel/core": "7.15.5",
+    "@babel/core": "7.15.8",
     "@babel/plugin-proposal-class-properties": "7.14.5",
-    "@babel/plugin-proposal-decorators": "7.15.4",
+    "@babel/plugin-proposal-decorators": "7.15.8",
     "@babel/plugin-proposal-optional-chaining": "7.14.5",
-    "@babel/preset-env": "7.15.6",
+    "@babel/preset-env": "7.15.8",
     "@babel/preset-typescript": "7.15.0",
     "@babel/register": "7.15.3",
     "@types/chai": "4.2.22",
@@ -39,7 +39,7 @@
     "mock-local-storage": "1.1.17",
     "npm-check-updates": "11.8.5",
     "nyc": "15.1.0",
-    "preact": "10.5.14",
+    "preact": "10.5.15",
     "react": "17.0.2",
     "sinon": "11.1.2",
     "tsc": "2.0.3",

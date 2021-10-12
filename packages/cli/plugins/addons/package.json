@@ -42,7 +42,7 @@
   "dependencies": {
     "comlink-loader": "2.0.0",
     "compression-webpack-plugin": "7.1.2",
-    "webpack-bundle-analyzer": "4.4.2"
+    "webpack-bundle-analyzer": "4.5.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.148",
@@ -50,7 +50,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.146"
+    "@leanup/cli": "~1.0.148"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"
