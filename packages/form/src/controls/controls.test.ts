@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import { SinonSpy, spy } from 'sinon';
+import { FormFactory } from '.';
 
 import { FormatHandler } from '../handlers/format.handler';
 import { DEFAULT_IBAN_FORMATTER } from '../handlers/formatters/iban.formatter';
@@ -374,6 +375,42 @@ describe(`Test: Controls`, () => {
       // then
       expect(form.changeListeners.size).equal(0);
       expect(input.changeListeners.size).equal(0);
+    });
+  });
+
+  describe(`Test getForm and getInput`, () => {
+    const form = FormFactory.createForm('test', {
+      ansprache: {
+        anrede: 'Herr',
+        vorname: 'Elke',
+        nachname: 'Mustermann',
+      },
+      anschrift: {},
+      alter: 0,
+    });
+
+    describe(`Test getForm`, () => {
+      it('getForm valid', () => {
+        expect(form.getForm('ansprache') instanceof FormControl).be.true;
+      });
+
+      it('getForm empty', () => {
+        expect(form.getInput('alter') instanceof InputControl).be.true;
+        expect(form.getForm('alter') instanceof FormControl).be.false;
+        expect(form.getForm('alter') === undefined).be.true;
+      });
+    });
+
+    describe(`Test getInput`, () => {
+      it('getInput valid', () => {
+        expect(form.getInput('alter') instanceof InputControl).be.true;
+      });
+
+      it('getInput empty', () => {
+        expect(form.getForm('ansprache') instanceof FormControl).be.true;
+        expect(form.getInput('ansprache') instanceof InputControl).be.false;
+        expect(form.getInput('ansprache') === undefined).be.true;
+      });
     });
   });
 });

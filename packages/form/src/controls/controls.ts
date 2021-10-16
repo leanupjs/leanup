@@ -1,4 +1,4 @@
-import { SetOf } from '@leanup/lib';
+import { Log, SetOf } from '@leanup/lib';
 
 import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';
@@ -373,8 +373,32 @@ export class FormControl extends AbstractControl {
     return Array.from(this.controls);
   }
 
-  public getControl(name: string): FormControl | InputControl | undefined {
-    return Array.from(this.controls).find((control: FormControl | InputControl) => {
+  public getControl<T extends AbstractControl>(name: string): T | undefined {
+    return Array.from(this.controls).find((control) => {
+      return control.name === name;
+    }) as T | undefined;
+  }
+
+  private getForms(): FormControl[] {
+    return Array.from(this.controls).filter((control: FormControl | InputControl) => {
+      return control instanceof FormControl;
+    }) as FormControl[];
+  }
+
+  public getForm(name: string): FormControl | undefined {
+    return Array.from(this.getForms()).find((control: FormControl) => {
+      return control.name === name;
+    });
+  }
+
+  private getInputs(): InputControl[] {
+    return Array.from(this.controls).filter((control: FormControl | InputControl) => {
+      return control instanceof InputControl;
+    }) as InputControl[];
+  }
+
+  public getInput(name: string): InputControl | undefined {
+    return Array.from(this.getInputs()).find((control: InputControl) => {
       return control.name === name;
     });
   }
