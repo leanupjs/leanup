@@ -1,12 +1,12 @@
 {
   "name": "@template/svelte",
-  "version": "2.0.0-rc.4",
+  "version": "2.0.0-rc.5",
   "dependencies": {
     "svelte": "3.44.0"
   },
   "devDependencies": {
-    "@leanup/cli-svelte": "2.0.0-rc.4",
-    "@leanup/stack-svelte": "2.0.0-rc.4",
+    "@leanup/cli-svelte": "2.0.0-rc.5",
+    "@leanup/stack-svelte": "2.0.0-rc.5",
     "@pyoner/svelte-types": "3.4.4",
     "@tsconfig/svelte": "2.0.1"
   }
