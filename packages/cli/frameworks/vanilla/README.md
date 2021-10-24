@@ -13,14 +13,14 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-vanilla
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-vanilla
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.1
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.1
-[dev-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=dev
-[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=dev
-[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=peer
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=peer
-[optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=optional
-[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.1&type=optional
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.2
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.2
+[dev-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.2&type=dev
+[dev-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.2&type=dev
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.2&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.2&type=peer
+[optional-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/vanilla&ref=release/1.2&type=optional
+[optional-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/vanilla&ref=release/1.2&type=optional
 [vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-vanilla
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-vanilla
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-vanilla
@@ -33,8 +33,32 @@
 
 # `@leanup/cli-vanilla`
 
-This package contains the [Vanilla](http://vanilla-js.com/) extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+This package contains the [Vanilla](http://vanilla-js.com/) CLI adapter. You can create a new or switch a existing project to the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-vanilla --save-dev`
+You can create a new project folder or go in a existing folder.
+
+Create a new project folder:
+
+1. `mkdir new-vanilla-app`
+2. `cd new-vanilla-app`
+3. `npm install -D @leanup/cli @leanup/cli-vanilla`
+4. `npx vanilla create`
+
+Go in a existing folder
+
+1. `cd my-vanilla-app`
+2. `npm install -D @leanup/cli @leanup/cli-vanilla`
+3. `npx vanilla create --only-config --overwrite`
+4. Proof the configuration changes and adopt it for your.
+
+## Usage
+
+Execute `npm run` in your terminal. It lists all preconfigured tools commands of the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
+
+For example: `npm start` 😉
+
+## Feedback
+
+Please give us feedback of you experience, so that we can continuously improve `@leanup`.

@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-vite",
-  "version": "1.2.0-rc.114",
+  "version": "1.2.5",
   "description": "This module contains all vite-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -30,11 +30,11 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "vite": "2.5.0",
+    "vite": "2.6.10",
     "vite-plugin-replace": "0.1.1"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.2.0-rc.111"
+    "@leanup/stack": "~1.2.4"
   },
   "engines": {
     "node": ">=12 <17",

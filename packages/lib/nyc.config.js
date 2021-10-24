@@ -18,6 +18,6 @@ module.exports = {
   instrument: true,
   statements: 28,
   branches: 25,
-  functions: 25,
+  functions: 22,
   lines: 29,
 };

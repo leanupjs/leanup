@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanup
   registry: https://registry.npmjs.org
-  tag: next
+  tag: latest
   token: ${{ secrets.NPMJS_AUTH_TOKEN }}
 
 jobs:
@@ -22,11 +22,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Set up Node.js
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v2.4.1
         with:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
+      - name: Install and publish only @${{env.alias}}/stack
+        run: |
+          npm install
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+        working-directory: packages/stack/core
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-snowpack
         run: |
           npm install
@@ -46,13 +53,6 @@ jobs:
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/webpack
-        env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/stack
-        run: |
-          npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib

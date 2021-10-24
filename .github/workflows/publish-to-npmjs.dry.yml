@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanupjs
   registry: https://npm.pkg.github.com
-  tag: next
+  tag: latest
   token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -32,11 +32,18 @@ jobs:
           find packages -name "*.vue" -type f -exec sed -i -e "s/@leanup/@${{env.alias}}/g" {} +
           git diff
       - name: Set up Node.js
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v2.4.1
         with:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
+      - name: Install and publish only @${{env.alias}}/stack
+        run: |
+          npm install
+          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+        working-directory: packages/stack/core
+        env:
+          NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-snowpack
         run: |
           npm install
@@ -56,13 +63,6 @@ jobs:
           npm install
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/webpack
-        env:
-          NODE_AUTH_TOKEN: ${{env.token}}
-      - name: Install and publish only @${{env.alias}}/stack
-        run: |
-          npm install
-          npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib

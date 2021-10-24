@@ -10,10 +10,10 @@
 
 [npm]: https://img.shields.io/npm/v/@leanup/cli-preact
 [npm-url]: https://www.npmjs.com/package/@leanup/cli-preact
-[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/preact&ref=release/1.1
-[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/preact&ref=release/1.1
-[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/preact&ref=release/1.1&type=peer
-[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/preact&ref=release/1.1&type=peer
+[dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/preact&ref=release/1.2
+[dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/preact&ref=release/1.2
+[peer-dependencies]: https://status.david-dm.org/gh/leanupjs/leanup.svg?path=packages/cli/frameworks/preact&ref=release/1.2&type=peer
+[peer-dependencies-url]: https://david-dm.org/leanupjs/leanup?path=packages/cli/frameworks/preact&ref=release/1.2&type=peer
 [vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-preact
 [vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-preact
 [downloads]: https://img.shields.io/npm/dt/@leanup/cli-preact
@@ -25,8 +25,32 @@
 
 # `@leanup/cli-preact`
 
-> This package contains the [Preact](https://preactjs.com) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+> This package contains the [Preact](https://preactjs.com) CLI adapter. You can create a new or switch a existing project to the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
 
 ## Installation
 
-`npm install @leanup/cli @leanup/cli-preact --save-dev`
+You can create a new project folder or go in a existing folder.
+
+Create a new project folder:
+
+1. `mkdir new-preact-app`
+2. `cd new-preact-app`
+3. `npm install -D @leanup/cli @leanup/cli-preact`
+4. `npx preact create`
+
+Go in a existing folder
+
+1. `cd my-preact-app`
+2. `npm install -D @leanup/cli @leanup/cli-preact`
+3. `npx preact create --only-config --overwrite`
+4. Proof the configuration changes and adopt it for your.
+
+## Usage
+
+Execute `npm run` in your terminal. It lists all preconfigured tools commands of the [@leanup/stack](https://www.npmjs.com/package/@leanup/stack).
+
+For example: `npm start` 😉
+
+## Feedback
+
+Please give us feedback of you experience, so that we can continuously improve `@leanup`.
