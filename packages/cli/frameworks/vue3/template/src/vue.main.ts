@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, Component } from 'vue';
 import * as PACKAGE_JSON from 'vue/package.json';
 
 import { run } from './app.run';
@@ -14,6 +14,6 @@ run('Vue', TYPED_PACKAGE_JSON.version, () => {
     htmlDivElement.appendChild(APP_HTML_ELEMENT);
     // tslint:disable-next-line: no-unused-expression
 
-    createApp(App).mount(APP_HTML_ELEMENT);
+    createApp(App as Component).mount(APP_HTML_ELEMENT);
   }
 });

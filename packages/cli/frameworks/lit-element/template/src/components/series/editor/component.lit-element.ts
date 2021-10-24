@@ -5,10 +5,11 @@ import { customElement, html, property, TemplateResult } from 'lit-element';
 import { LitElementComponent } from '../../component.lit-element';
 import { EditorSerieController } from './controller';
 import { EditorForm } from './editor.form';
+import { InputControl } from '@leanup/form';
 
 @customElement('editor-serie-component')
 export class EditorSerieComponent extends LitElementComponent {
-  public ctrl: EditorSerieController = new EditorSerieController();
+  public ctrl: EditorSerieController = new EditorSerieController({});
 
   @property({ attribute: true, type: Object })
   public editorForm!: EditorForm;
@@ -16,9 +17,9 @@ export class EditorSerieComponent extends LitElementComponent {
   public connectedCallback(): void {
     super.connectedCallback();
     setTimeout(() => {
-      const inputs = this.querySelectorAll('input-component');
-      inputs[0].control = this.editorForm.getControl('title');
-      inputs[1].control = this.editorForm.getControl('unit');
+      const inputs = this.querySelectorAll<Element & { control: InputControl }>('input-component');
+      inputs[0].control = this.editorForm.getControl<InputControl>('title') as InputControl;
+      inputs[1].control = this.editorForm.getControl<InputControl>('unit') as InputControl;
     }, 50);
   }
 

@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue, { Component } from 'vue';
 import * as PACKAGE_JSON from 'vue/package.json';
 import { CreateElement, VNode } from 'vue/types/umd';
 
@@ -26,7 +26,7 @@ run('Vue', TYPED_PACKAGE_JSON.version, () => {
     // tslint:disable-next-line: no-unused-expression
     new Vue({
       el: APP_HTML_ELEMENT,
-      render: (h: CreateElement): VNode => h(App),
+      render: (h: CreateElement): VNode => h(App as Component),
     });
   }
 });

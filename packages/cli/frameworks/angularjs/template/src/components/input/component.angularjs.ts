@@ -22,11 +22,11 @@ ANGULARJS_MODULE.component('appInput', {
       }
 
       public $onInit() {
-        this.$scope.$ctrl.control.changeListeners.add(this.$scope.$apply.bind(this));
+        this.$scope.$ctrl.control.changeListeners.add(this.$scope.$apply.bind(this) as Function);
       }
 
       public $onDestroy() {
-        this.$scope.$ctrl.control.changeListeners.remove(this.$scope.$apply.bind(this));
+        this.$scope.$ctrl.control.changeListeners.remove(this.$scope.$apply.bind(this) as Function);
       }
     },
   ],
@@ -34,7 +34,7 @@ ANGULARJS_MODULE.component('appInput', {
   <div>
     <label for="{{$ctrl.control.id}}">{{$ctrl.control.label}}</label>
     <input
-     
+
       id="{{$ctrl.control.id}}"
       name="{{$ctrl.control.name}}"
       ng-model="$ctrl.control.value"
