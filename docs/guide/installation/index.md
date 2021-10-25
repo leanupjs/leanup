@@ -8,9 +8,7 @@ The easiest way to get started is to generate our boilerplate project. Alternati
 
 `npm i -D @leanup/cli @leanup/cli-<framework>`
 
-Available Frameworks: `angular`, `angularjs`, ~~`aurelia`~~\*, `inferno`, `lit-element`, `preact`, `react`,`svelte`,`vanilla`,`vue` and `vue3`
-
-> <small style="color: #d00">\* Aurelia is not Webpack v5 compatible.</small>
+Available Frameworks: `angular`, `angularjs`, `aurelia`, `inferno`, `lit-element`, `preact`, `react`,`svelte`,`vanilla`,`vue` and `vue3`
 
 For react:
 

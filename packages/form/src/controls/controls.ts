@@ -1,4 +1,4 @@
-import { Log, SetOf } from '@leanup/lib';
+import { SetOf } from '@leanup/lib';
 
 import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';

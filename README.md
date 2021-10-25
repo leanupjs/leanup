@@ -93,40 +93,40 @@ There are some working examples:
 
 | Tool/Technology  |    Description    | Status | Note                       | Rating                                                                                                                                               |
 | ---------------- | :---------------: | :----: | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [TypeScript]     |     Language      |   ✔️   | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
-| [Webpack]        |      Bundler      |   ✔️   | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
-| [Snowpack]       |      Bundler      |   ⌛   | in progress                | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
-| [Vite]           |      Bundler      |   ⌛   | in progress                | [![webpack](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)                                           |
-| [ESBuild]        |    Transpiler     |   ✔️   | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
-| [Babel]          |    Transpiler     |   ✔️   | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
-| [Mocha]          | Unit-Test-Runner  |   ✔️   | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
-| [Chai]           |     Assertion     |   ✔️   | ready                      | [![chai](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/chai)                                        |
-| [Sinon]          |      Mocking      |   ✔️   | ready                      | [![sinon](https://snyk.io/advisor/npm-package/sinon/badge.svg)](https://snyk.io/advisor/npm-package/sinon)                                           |
-| [NYC]            |   Code-Coverage   |   ✔️   | ready                      | [![nyc](https://snyk.io/advisor/npm-package/nyc/badge.svg)](https://snyk.io/advisor/npm-package/nyc)                                                 |
-| [ESLint]         |   Code-Checker    |   ✔️   | ready                      | [![eslint](https://snyk.io/advisor/npm-package/eslint/badge.svg)](https://snyk.io/advisor/npm-package/eslint)                                        |
-| [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️   | ready                      | [![nightwatch](https://snyk.io/advisor/npm-package/nightwatch/badge.svg)](https://snyk.io/advisor/npm-package/nightwatch)                            |
-| [Allsure]        |      Report       |   ✔️   | ready                      |
-| [Cucumber]       |        BDD        |   ✔️   | ready                      | [![cucumber](https://snyk.io/advisor/npm-package/cucumber/badge.svg)](https://snyk.io/advisor/npm-package/cucumber)                                  |
-| [robotframework] |        BDD        |   ⌛   | will be evaluated          |                                                                                                                                                      |
-| [Storybook]      |   Documentation   |   ⌛   | in progress                | [![storybook](https://snyk.io/advisor/npm-package/storybook/badge.svg)](https://snyk.io/advisor/npm-package/storybook)                               |
-| [OpenAPI]        |        API        |   ✔️   | ready                      |                                                                                                                                                      |
-| [GraphQL]        |        API        |   ✔️   | ready                      | [![graphql](https://snyk.io/advisor/npm-package/graphql/badge.svg)](https://snyk.io/advisor/npm-package/graphql)                                     |
-| [Workbox]        |        PWA        |   ✔️   | ready                      | [![workbox](https://snyk.io/advisor/npm-package/workbox/badge.svg)](https://snyk.io/advisor/npm-package/workbox)                                     |
-| [Lerna]          |     Mono-Repo     |   ✔️   | ready                      | [![lerna](https://snyk.io/advisor/npm-package/lerna/badge.svg)](https://snyk.io/advisor/npm-package/lerna)                                           |
-| [Ant-Design]     |   Design-System   |   ✔️   | proved                     | [![antd](https://snyk.io/advisor/npm-package/antd/badge.svg)](https://snyk.io/advisor/npm-package/antd)                                              |
-| [Bootstrap]      |   Design-System   |   ✔️   | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
-| [Material]       |   Design-System   |   ✔️   | proved                     | [![@material/textfield](https://snyk.io/advisor/npm-package/@material/textfield/badge.svg)](https://snyk.io/advisor/npm-package/@material/textfield) |
-| [Tailwindcss]    |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
-| [WindiCSS]       |   Design-System   |   ✔️   | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/windicss/badge.svg)](https://snyk.io/advisor/npm-package/windicss)                               |
-| [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️   | ready                      |                                                                                                                                                      |
-| [Less]           |        CSS        |   ✔️   | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
-| [Sass]           |        CSS        |   ✔️   | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
-| [PostCSS]        |        CSS        |   ✔️   | ready                      | [![postcss](https://snyk.io/advisor/npm-package/postcss/badge.svg)](https://snyk.io/advisor/npm-package/postcss)                                     |
-| [TSArch]         |   Architecture    |   ⌛   | in progress                | [![hint](https://snyk.io/advisor/npm-package/tsarch/badge.svg)](https://snyk.io/advisor/npm-package/tsarch)                                          |
-| [Webhint]        |      Webhint      |   ✔️   | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
-| [TestCafe]       |  E2E-Test-Runner  |   ⌛   | will be evaluated \*\*\*\* | [![testcafe](https://snyk.io/advisor/npm-package/testcafe/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                                |
-| [TSLint]         |   Code-Checker    |   ❌   | removed \*\*               | [![tslint](https://snyk.io/advisor/npm-package/tslint/badge.svg)](https://snyk.io/advisor/npm-package/tslint)                                        |
-| [Cypress]        |  E2E-Test-Runner  |   ❌   | excluded \*                | [![cypress](https://snyk.io/advisor/npm-package/cypress/badge.svg)](https://snyk.io/advisor/npm-package/cypress)                                     |
+| [TypeScript]     |     Language      |   ✔️    | ready                      | [![typescript](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                            |
+| [Webpack]        |      Bundler      |   ✔️    | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
+| [Snowpack]       |      Bundler      |   ⌛    | in progress                | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
+| [Vite]           |      Bundler      |   ⌛    | in progress                | [![webpack](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)                                           |
+| [ESBuild]        |    Transpiler     |   ✔️    | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
+| [Babel]          |    Transpiler     |   ✔️    | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
+| [Mocha]          | Unit-Test-Runner  |   ✔️    | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
+| [Chai]           |     Assertion     |   ✔️    | ready                      | [![chai](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/chai)                                        |
+| [Sinon]          |      Mocking      |   ✔️    | ready                      | [![sinon](https://snyk.io/advisor/npm-package/sinon/badge.svg)](https://snyk.io/advisor/npm-package/sinon)                                           |
+| [NYC]            |   Code-Coverage   |   ✔️    | ready                      | [![nyc](https://snyk.io/advisor/npm-package/nyc/badge.svg)](https://snyk.io/advisor/npm-package/nyc)                                                 |
+| [ESLint]         |   Code-Checker    |   ✔️    | ready                      | [![eslint](https://snyk.io/advisor/npm-package/eslint/badge.svg)](https://snyk.io/advisor/npm-package/eslint)                                        |
+| [Nightwatch.js]  |  E2E-Test-Runner  |   ✔️    | ready                      | [![nightwatch](https://snyk.io/advisor/npm-package/nightwatch/badge.svg)](https://snyk.io/advisor/npm-package/nightwatch)                            |
+| [Allsure]        |      Report       |   ✔️    | ready                      |
+| [Cucumber]       |        BDD        |   ✔️    | ready                      | [![cucumber](https://snyk.io/advisor/npm-package/cucumber/badge.svg)](https://snyk.io/advisor/npm-package/cucumber)                                  |
+| [robotframework] |        BDD        |   ⌛    | will be evaluated          |                                                                                                                                                      |
+| [Storybook]      |   Documentation   |   ⌛    | in progress                | [![storybook](https://snyk.io/advisor/npm-package/storybook/badge.svg)](https://snyk.io/advisor/npm-package/storybook)                               |
+| [OpenAPI]        |        API        |   ✔️    | ready                      |                                                                                                                                                      |
+| [GraphQL]        |        API        |   ✔️    | ready                      | [![graphql](https://snyk.io/advisor/npm-package/graphql/badge.svg)](https://snyk.io/advisor/npm-package/graphql)                                     |
+| [Workbox]        |        PWA        |   ✔️    | ready                      | [![workbox](https://snyk.io/advisor/npm-package/workbox/badge.svg)](https://snyk.io/advisor/npm-package/workbox)                                     |
+| [Lerna]          |     Mono-Repo     |   ✔️    | ready                      | [![lerna](https://snyk.io/advisor/npm-package/lerna/badge.svg)](https://snyk.io/advisor/npm-package/lerna)                                           |
+| [Ant-Design]     |   Design-System   |   ✔️    | proved                     | [![antd](https://snyk.io/advisor/npm-package/antd/badge.svg)](https://snyk.io/advisor/npm-package/antd)                                              |
+| [Bootstrap]      |   Design-System   |   ✔️    | proved                     | [![bootstrap](https://snyk.io/advisor/npm-package/bootstrap/badge.svg)](https://snyk.io/advisor/npm-package/bootstrap)                               |
+| [Material]       |   Design-System   |   ✔️    | proved                     | [![@material/textfield](https://snyk.io/advisor/npm-package/@material/textfield/badge.svg)](https://snyk.io/advisor/npm-package/@material/textfield) |
+| [Tailwindcss]    |   Design-System   |   ✔️    | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/tailwindcss/badge.svg)](https://snyk.io/advisor/npm-package/tailwindcss)                         |
+| [WindiCSS]       |   Design-System   |   ✔️    | proved                     | [![tailwindcss](https://snyk.io/advisor/npm-package/windicss/badge.svg)](https://snyk.io/advisor/npm-package/windicss)                               |
+| [Nexus IQ]       | Vulnerabiliy-Gate |   ✔️    | ready                      |                                                                                                                                                      |
+| [Less]           |        CSS        |   ✔️    | ready                      | [![less](https://snyk.io/advisor/npm-package/less/badge.svg)](https://snyk.io/advisor/npm-package/less)                                              |
+| [Sass]           |        CSS        |   ✔️    | ready                      | [![sass](https://snyk.io/advisor/npm-package/sass/badge.svg)](https://snyk.io/advisor/npm-package/sass)                                              |
+| [PostCSS]        |        CSS        |   ✔️    | ready                      | [![postcss](https://snyk.io/advisor/npm-package/postcss/badge.svg)](https://snyk.io/advisor/npm-package/postcss)                                     |
+| [TSArch]         |   Architecture    |   ⌛    | in progress                | [![hint](https://snyk.io/advisor/npm-package/tsarch/badge.svg)](https://snyk.io/advisor/npm-package/tsarch)                                          |
+| [Webhint]        |      Webhint      |   ✔️    | moved \*\*\*               | [![hint](https://snyk.io/advisor/npm-package/hint/badge.svg)](https://snyk.io/advisor/npm-package/hint)                                              |
+| [TestCafe]       |  E2E-Test-Runner  |   ⌛    | will be evaluated \*\*\*\* | [![testcafe](https://snyk.io/advisor/npm-package/testcafe/badge.svg)](https://snyk.io/advisor/npm-package/typescript)                                |
+| [TSLint]         |   Code-Checker    |   ❌    | removed \*\*               | [![tslint](https://snyk.io/advisor/npm-package/tslint/badge.svg)](https://snyk.io/advisor/npm-package/tslint)                                        |
+| [Cypress]        |  E2E-Test-Runner  |   ❌    | excluded \*                | [![cypress](https://snyk.io/advisor/npm-package/cypress/badge.svg)](https://snyk.io/advisor/npm-package/cypress)                                     |
 
 > \*
 > Arguments agains [Cypress]:
@@ -169,7 +169,7 @@ Currently the following framework extensions are available:
 
 - [`@leanup/cli-angular`](https://www.npmjs.com/package/@leanup/cli-angular) ✔️
 - [`@leanup/cli-angularjs`](https://www.npmjs.com/package/@leanup/cli-angularjs) ✔️
-- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️ (will be removed in v1.1)
+- [`@leanup/cli-aurelia`](https://www.npmjs.com/package/@leanup/cli-aurelia) ✔️
 - [`@leanup/cli-inferno`](https://www.npmjs.com/package/@leanup/cli-inferno) ✔️
 - [`@leanup/cli-lit-element`](https://www.npmjs.com/package/@leanup/cli-lit-element) ✔️
 - [`@leanup/cli-preact`](https://www.npmjs.com/package/@leanup/cli-preact) ✔️
