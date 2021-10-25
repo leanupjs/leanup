@@ -10,7 +10,7 @@
     "ncu:preview": "ncu && lerna exec --concurrency 2 --stream -- ncu",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
-    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz",
+    "remove": "lerna exec --stream -- rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz && git clean -f -d -X",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install",
     "docs:dev": "vitepress dev docs",
