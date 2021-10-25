@@ -40,7 +40,7 @@
     "@leanup/git-hooks": "1.2.5",
     "@leanup/stack": "1.2.5",
     "@leanup/stack-webpack": "1.2.5",
-    "chromedriver": "93.0.1",
+    "chromedriver": "94.0.0",
     "npm-check-updates": "11.8.5",
     "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
