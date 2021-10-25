@@ -1,4 +1,4 @@
-import Navigo from 'navigo';
+import Navigo, { Handler } from 'navigo';
 
 export const NAVIGO: Navigo = new Navigo('/', {
   hash: true,
@@ -28,8 +28,10 @@ export class RouterService {
 
   public static register(routes: Route[]): void {
     routes.forEach((route: Route) => {
-      NAVIGO.on(route.url, ({ data }) => {
-        RouterService.notify(route, data);
+      NAVIGO.on(route.url, (match) => {
+        if (typeof match === 'object' && match !== null) {
+          RouterService.notify(route, match.data);
+        }
       });
     });
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
