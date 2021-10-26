@@ -72,11 +72,13 @@
     "tsc": "2.0.3",
     "typescript": "4.4.4"
   },
-  "peerDependencies": {
+  "optionalDependencies": {
     "chromedriver": "*",
-    "esbuild": "^0",
     "geckodriver": "*",
-    "selenium-server": "^3",
+    "selenium-server": "^3"
+  },
+  "peerDependencies": {
+    "esbuild": "^0",
     "typescript": "^4"
   },
   "scripts": {
