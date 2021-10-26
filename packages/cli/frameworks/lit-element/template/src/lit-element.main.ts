@@ -1,6 +1,6 @@
 import './components/app/component.lit-element';
 
-import * as PACKAGE_JSON from 'lit-element/package.json';
+import * as PACKAGE_JSON from '../node_modules/lit-element/package.json';
 
 import { run } from './app.run';
 import { typeIt } from './shares/utils';
