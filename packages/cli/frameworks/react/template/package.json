@@ -8,7 +8,7 @@
   "devDependencies": {
     "@leanup/cli-react": "1.1.41",
     "@leanup/stack-react": "1.1.41",
-    "@types/react": "17.0.32",
+    "@types/react": "17.0.33",
     "@types/react-dom": "17.0.10"
   }
 }
