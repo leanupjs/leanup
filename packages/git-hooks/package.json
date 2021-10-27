@@ -27,7 +27,7 @@
     "@commitlint/config-conventional": "13.2.0",
     "@commitlint/format": "13.2.0",
     "husky": "7.0.4",
-    "lint-staged": "11.2.4"
+    "lint-staged": "11.2.6"
   },
   "peerDependencies": {
     "eslint": "^8",
