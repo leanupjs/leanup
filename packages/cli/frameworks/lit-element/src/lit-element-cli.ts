@@ -1,16 +1,14 @@
-import './components/app/component.lit-element';
+import * as path from 'path';
 
-import * as PACKAGE_JSON from '../node_modules/lit-element/package.json';
+import { CreateOps } from '@leanup/cli/lib/interfaces';
+import { LeanupCLI } from '@leanup/cli/lib/leanup-cli';
 
-import { run } from './app.run';
-import { typeIt } from './shares/utils';
+export class LitElementCLI extends LeanupCLI {
+  constructor(name: string, version: string) {
+    super(name, version);
 
-const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
-
-run('lit-element', TYPED_PACKAGE_JSON.version, () => {
-  // Render the template to the document
-  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#lit-element');
-  if (htmlDivElement instanceof HTMLDivElement) {
-    htmlDivElement.innerHTML = '<app-component />';
+    this.addActionToCommand('create', (options: CreateOps) => {
+      this.copyAndPrint(path.join(__dirname, '../', 'template'), '', options);
+    });
   }
-});
+}
