@@ -153,7 +153,12 @@ export function webpackConfig(_env: any, argv: any, loaders: any[] = []): Object
           },
         ],
       }),
-      new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin({
+        // - https://webpack.js.org/plugins/mini-css-extract-plugin/#experimentaluseimportmodule
+        // - https://github.com/aurelia/webpack-plugin/issues/196
+        // - https://github.com/webpack-contrib/mini-css-extract-plugin/issues/863
+        experimentalUseImportModule: false,
+      }),
     ],
     resolve: {
       alias: {},
