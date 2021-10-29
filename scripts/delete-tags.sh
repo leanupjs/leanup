@@ -1,4 +1,5 @@
 git tag -l | grep v1.
+git tag -l | grep v2.
 git tag -l | grep alpha
 git tag -l | grep beta
 git tag -l | grep webpack
