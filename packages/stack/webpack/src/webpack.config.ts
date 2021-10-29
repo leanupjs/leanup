@@ -17,14 +17,45 @@ const { PROXIES } = require('@leanup/stack/lib/proxies');
 
 const ESBUILD_LOADER_JS = {
   test: /\.js$/,
-  loader: 'esbuild-loader',
+  use: [
+    {
+      loader: 'esbuild-loader',
+    },
+  ],
 };
 const ESBUILD_LOADER_TS = {
   test: /\.ts$/,
-  loader: 'esbuild-loader',
-  options: {
-    loader: 'ts',
-  },
+  use: [
+    {
+      loader: 'esbuild-loader',
+      options: {
+        loader: 'ts',
+      },
+    },
+  ],
+};
+const SWC_LOADER_JS = {
+  test: /\.js$/,
+  use: [
+    {
+      loader: 'swc-loader',
+    },
+  ],
+};
+const SWC_LOADER_TS = {
+  test: /\.ts$/,
+  use: [
+    {
+      loader: 'swc-loader',
+      options: {
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+          },
+        },
+      },
+    },
+  ],
 };
 const FONT_FILE_LOADER = {
   test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -81,19 +112,23 @@ const SASS_LOADER = {
     },
   ],
 };
-
 const STRING_REPLACE_LOADER = {
   test: /\.(j|t)sx?$/,
-  loader: 'string-replace-loader',
-  options: {
-    multiple: REPLACEMENTS,
-  },
+  use: [
+    {
+      loader: 'string-replace-loader',
+      options: {
+        multiple: REPLACEMENTS,
+      },
+    },
+  ],
 };
-
-export const LEANUP_WEBPACK_RULES = {
+exports.LEANUP_WEBPACK_RULES = {
   STRING_REPLACE_LOADER,
   ESBUILD_LOADER_JS,
   ESBUILD_LOADER_TS,
+  SWC_LOADER_JS,
+  SWC_LOADER_TS,
   FONT_FILE_LOADER,
   IMAGE_FILE_LOADER,
   LESS_LOADER,
@@ -122,8 +157,10 @@ export function webpackConfig(_env: any, argv: any, loaders: any[] = []): Object
     module: {
       rules: [
         STRING_REPLACE_LOADER,
-        ESBUILD_LOADER_JS,
-        ESBUILD_LOADER_TS,
+        // ESBUILD_LOADER_JS,
+        // ESBUILD_LOADER_TS,
+        SWC_LOADER_JS,
+        SWC_LOADER_TS,
         FONT_FILE_LOADER,
         IMAGE_FILE_LOADER,
         LESS_LOADER,
