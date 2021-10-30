@@ -267,5 +267,6 @@ There a separate packages for important application features.
 [swc]: https://swc.rs
 [Lit]: https://lit.dev
 [Angular]: https://angular.io
+[Vue]: https://v3.vuejs.org
 [Solid]: https://www.solidjs.com
 [Bootstrap]: https://getbootstrap.com

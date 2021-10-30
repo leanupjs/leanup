@@ -77,3 +77,4 @@ Use a uniform and flat stack, no matter which framework you prefer.<hr>
 [vite]: https://vitejs.dev/
 [windicss]: https://windicss.org
 [Bootstrap]: https://getbootstrap.com
+[Vue]: https://v3.vuejs.org
