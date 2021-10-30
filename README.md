@@ -59,7 +59,7 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 ### In 2021
 #### Transpilers
 
-We switch from [Babel] to [esbuild] and from esbuild to [swc] for all frameworks (without [Angular] and [Vue] with proprietary template notation). And we can switch again if we want.
+We switched from [Babel] to [esbuild] and from esbuild to [swc] (without [Angular] and [Vue] with proprietary template notation). And we can switch again if we want.
 
 The performance of [esbuild] and [swc] are almost twice as fast as with the classic configuration. But there is currently no noticeable difference in performance between [esbuild] and [swc].
 
