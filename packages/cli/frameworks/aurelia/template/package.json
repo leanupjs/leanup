@@ -1,12 +1,12 @@
 {
   "name": "@template/aurelia",
-  "version": "2.0.0-rc.14",
+  "version": "2.0.0-rc.15",
   "dependencies": {
     "aurelia-bootstrapper": "2.3.3",
     "aurelia-framework": "1.3.1"
   },
   "devDependencies": {
     "@leanup/cli-aurelia": "2.0.0-rc.14",
-    "@leanup/stack-aurelia": "2.0.0-rc.14"
+    "@leanup/stack-aurelia": "2.0.0-rc.15"
   }
 }
