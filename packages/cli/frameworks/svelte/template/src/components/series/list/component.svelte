@@ -44,7 +44,7 @@ let showPerformanceButtonRef = ctrl.showPerformanceButton;
     {/if}
   </div>
   {#each elementsRef as serie, index (index)}
-    <table class="table">
+    <table>
       <thead>
         <tr>
           <th scope="col">#</th>

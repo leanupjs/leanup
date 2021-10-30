@@ -43,7 +43,7 @@ export const ListSerieComponent: Component = () => {
       </div>
       {store().elements.map(() => {
         return (
-          <table className="table">
+          <table>
             <thead>
               <tr>
                 <th scope="col">#</th>
