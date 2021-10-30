@@ -26,6 +26,11 @@
 The **`@leanup` ecosystem** stands for a lightweight and pure way for application development in JavaScript/TypeScript.
 
 - [Motivation](#motivation)
+- [Our home stories](#our-home-stories)
+  - [In 2021](#in-2021)
+    - [Transpilers](#transpilers)
+    - [Frameworks](#frameworks)
+    - [Bundlers](#bundlers)
 - [What makes the difference](#what-makes-the-difference)
 - [Principles](#principles)
 - [Arguments](#arguments)
@@ -34,7 +39,7 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 - [Demo's](#demos)
 - [Tools](#tools)
 - [Ecosystem structure](#ecosystem-structure)
-  - [Frameworks](#frameworks)
+  - [Frameworks](#frameworks-1)
   - [Extensions](#extensions)
   - [Thinks](#thinks)
 - [Alternatives](#alternatives)
@@ -48,6 +53,23 @@ The **`@leanup` ecosystem** stands for a lightweight and pure way for applicatio
 - Scalability
 - Durability
 - Transparency
+
+## Our home stories
+
+### In 2021
+#### Transpilers
+
+We switch from [Babel] to [esbuild] and from esbuild to [swc] for all frameworks (without [Angular]). And we can switch again if we want.
+
+#### Frameworks
+
+We added two more frameworks ([Lit] and [Solid]) without any problems, without having to change the basic stack.
+
+We have switched our Demo-Template from [Bootstrap] to [Tailwindcss] and from Tailwindcss to [WindiCSS] and now use the automatic application-specific CSS generation.
+
+#### Bundlers
+
+We tried two new bundlers ([Vite] and [Snowpack]) and integrated them for most frameworks. Alternatively, they can be installed alongside or instead of [webpack].
 
 ## What makes the difference
 
@@ -97,7 +119,8 @@ There are some working examples:
 | [Webpack]        |      Bundler      |   ✔️    | ready                      | [![webpack](https://snyk.io/advisor/npm-package/webpack/badge.svg)](https://snyk.io/advisor/npm-package/webpack)                                     |
 | [Snowpack]       |      Bundler      |   ⌛    | in progress                | [![webpack](https://snyk.io/advisor/npm-package/snowpack/badge.svg)](https://snyk.io/advisor/npm-package/snowpack)                                   |
 | [Vite]           |      Bundler      |   ⌛    | in progress                | [![webpack](https://snyk.io/advisor/npm-package/vite/badge.svg)](https://snyk.io/advisor/npm-package/vite)                                           |
-| [ESBuild]        |    Transpiler     |   ✔️    | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
+| [esbuild]        |    Transpiler     |   ✔️    | ready                      | [![esbuild](https://snyk.io/advisor/npm-package/esbuild/badge.svg)](https://snyk.io/advisor/npm-package/esbuild)                                     |
+| [swc]            |    Transpiler     |   ✔️    | ready                      | [![swc](https://snyk.io/advisor/npm-package/@swc/core/badge.svg)](https://snyk.io/advisor/npm-package/@swc/core)                                     |
 | [Babel]          |    Transpiler     |   ✔️    | ready                      | [![@babel/core](https://snyk.io/advisor/npm-package/@babel/core/badge.svg)](https://snyk.io/advisor/npm-package/@babel/core)                         |
 | [Mocha]          | Unit-Test-Runner  |   ✔️    | ready                      | [![mocha](https://snyk.io/advisor/npm-package/mocha/badge.svg)](https://snyk.io/advisor/npm-package/mocha)                                           |
 | [Chai]           |     Assertion     |   ✔️    | ready                      | [![chai](https://snyk.io/advisor/npm-package/typescript/badge.svg)](https://snyk.io/advisor/npm-package/chai)                                        |
@@ -239,3 +262,8 @@ There a separate packages for important application features.
 [nexus iq]: https://blog.sonatype.com/using-nexus-iq-server-with-webpack
 [tsarch]: https://github.com/MaibornWolff/ts-arch
 [windicss]: https://windicss.org
+[swc]: https://swc.rs
+[Lit]: https://lit.dev
+[Angular]: https://angular.io
+[Solid]: https://www.solidjs.com
+[Bootstrap]: https://getbootstrap.com

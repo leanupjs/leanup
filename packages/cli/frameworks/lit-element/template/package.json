@@ -5,6 +5,7 @@
     "lit-element": "3.0.1"
   },
   "devDependencies": {
-    "@leanup/cli-lit-element": "2.0.0-rc.11"
+    "@leanup/cli-lit-element": "2.0.0-rc.11",
+    "@leanup/stack-lit-element": "2.0.0-rc.11"
   }
 }

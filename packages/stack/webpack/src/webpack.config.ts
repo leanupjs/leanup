@@ -51,6 +51,7 @@ const SWC_LOADER_TS = {
         jsc: {
           parser: {
             syntax: 'typescript',
+            decorators: true,
           },
         },
       },

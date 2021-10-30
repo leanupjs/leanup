@@ -1,15 +1,20 @@
 import { LEANUP_WEBPACK_RULES, webpackConfig } from '@leanup/stack-webpack/lib/webpack.config';
 
+function removeLoader(config: any, loader: any) {
+  const index = config.module.rules.indexOf(loader);
+  if (index >= 0) {
+    config.module.rules.splice(index, 1);
+  }
+}
+
 export function webpackAngularConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv);
   const path = require('path');
 
   const { AngularWebpackPlugin } = require('@ngtools/webpack');
 
-  const index = config.module.rules.indexOf(LEANUP_WEBPACK_RULES.ESBUILD_LOADER_TS);
-  if (index >= 0) {
-    config.module.rules.splice(index, 1);
-  }
+  removeLoader(config,  LEANUP_WEBPACK_RULES.ESBUILD_LOADER_TS);
+  removeLoader(config,  LEANUP_WEBPACK_RULES.SWC_LOADER_TS);
 
   config.module.rules.push({
     test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
