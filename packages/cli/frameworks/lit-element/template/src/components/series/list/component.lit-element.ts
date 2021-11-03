@@ -18,7 +18,7 @@ export class ListSerieComponent extends LitElementComponent {
     for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
         html`
-          <table key="{i}">
+          <table>
             <thead>
               <tr>
                 <th class="w-1/8">#</th>
@@ -30,7 +30,7 @@ export class ListSerieComponent extends LitElementComponent {
             </thead>
             <tbody>
               ${this.ctrl.measuredSeries.map((serie: MeasuredSerieModel, index: number) => {
-                return html` <tr key="{index}">
+                return html` <tr>
                   <td class="text-center">${index + 1}</td>
                   <td class="text-center">${serie.getId()}</td>
                   <td class="text-center">${serie.getTitle()}</td>
