@@ -2,11 +2,11 @@
   "name": "@template/vue3",
   "version": "2.0.0-rc.15",
   "dependencies": {
-    "vue": "3.2.20"
+    "vue": "3.2.21"
   },
   "devDependencies": {
     "@leanup/cli-vue3": "2.0.0-rc.14",
     "@leanup/stack-vue3": "2.0.0-rc.15",
-    "@vue/compiler-sfc": "3.2.20"
+    "@vue/compiler-sfc": "3.2.21"
   }
 }
