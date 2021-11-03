@@ -40,7 +40,7 @@
     "@angular/platform-browser-dynamic": "11.2.14",
     "@leanup/form": "1.0.151",
     "@leanup/lib": "1.0.151",
-    "core-js": "3.19.0",
+    "core-js": "3.19.1",
     "navigo": "8.11.1",
     "rxjs": "6.6.7",
     "zone.js": "0.11.4"
@@ -51,7 +51,7 @@
     "@leanup/git-hooks": "1.0.151",
     "@ngtools/webpack": "11.2.15",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.8",
+    "cssnano": "5.0.9",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",
