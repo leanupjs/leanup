@@ -18,7 +18,7 @@ export class ListSerieComponent extends ReactComponent<unknown, unknown> impleme
     const tables: any[] = [];
     for (let i = 0; i < this.ctrl.elements.length; i++) {
       tables.push(
-        <table className="table" key={i}>
+        <table  key={i}>
           <thead>
             <tr>
               <th scope="col">#</th>

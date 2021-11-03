@@ -7,7 +7,7 @@
         Performance
       </button>
     </div>
-    <table class="table" v-for="(element, index) in elementsRef" :key="index">
+    <table  v-for="(element, index) in elementsRef" :key="index">
       <thead>
         <tr>
           <th scope="col">#</th>

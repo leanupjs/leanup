@@ -26,7 +26,7 @@ ANGULARJS_MODULE.component('listSerie', {
           Performance
         </button>
       </div>
-      <table class="table" ng-repeat="element in $ctrl.elements track by $index" key="{index}">
+      <table  ng-repeat="element in $ctrl.elements track by $index" key="{index}">
         <thead>
           <tr>
             <th scope="col">#</th>
