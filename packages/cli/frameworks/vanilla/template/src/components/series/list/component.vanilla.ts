@@ -16,7 +16,7 @@ function render($ctrl: ListSerieController): string {
   }
   html += `</div>`;
   for (let i = 0; i < $ctrl.elements.length; i++) {
-    html += `<table class="table" key="${i}">
+    html += `<table  key="${i}">
      <thead>
        <tr>
          <th scope="col">#</th>
