@@ -40,7 +40,7 @@
   "dependencies": {
     "@leanup/cli-core-babel": "2.0.0-rc.17",
     "@snowpack/plugin-babel": "2.1.7",
-    "babel-preset-solid": "1.2.1"
+    "babel-preset-solid": "1.2.2"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "2.0.0-rc.17",
