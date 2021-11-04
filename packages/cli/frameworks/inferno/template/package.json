@@ -33,7 +33,7 @@
   "dependencies": {
     "@leanup/form": "1.0.153",
     "@leanup/lib": "1.0.153",
-    "inferno": "7.4.10",
+    "inferno": "7.4.11",
     "navigo": "8.11.1",
     "rxjs": "7.4.0"
   },
