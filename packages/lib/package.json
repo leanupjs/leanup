@@ -32,7 +32,7 @@
     "chai": "4.3.4",
     "cross-env": "7.0.3",
     "esm": "3.2.25",
-    "inferno": "7.4.10",
+    "inferno": "7.4.11",
     "jsdom": "16.7.0",
     "jsdom-global": "3.0.2",
     "mocha": "8.4.0",
