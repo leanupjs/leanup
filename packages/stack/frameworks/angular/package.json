@@ -56,8 +56,8 @@
     "@ngtools/webpack": "^12.2.13"
   },
   "scripts": {
-    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && echo {\"type\": \"commonjs\"} > dist/cjs/package.json && npx prettier -w --ignore-unknown dist/cjs/**.{js,json} && cat dist/cjs/package.json",
-    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && echo {\"type\": \"module\"} > dist/mjs/package.json && npx prettier -w --ignore-unknown dist/mjs/**.{js,json} && cat dist/mjs/package.json",
+    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json",
+    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json",
     "build:rm": "rm -rf dist",
     "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
     "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
