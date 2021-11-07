@@ -38,6 +38,9 @@
     "snowpack-plugin-less": "1.0.7",
     "snowpack-plugin-replace": "1.0.4"
   },
+  "devDependencies": {
+    "@leanup/stack": "2.0.0-rc.17"
+  },
   "peerDependencies": {
     "@leanup/stack": "~2.0.0-rc.17"
   },

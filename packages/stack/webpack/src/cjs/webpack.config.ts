@@ -3,8 +3,9 @@ const path = require('path');
 const CopyModulesWebpackPlugin = require('copy-modules-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Sass = require('sass');
 
-const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
+const { REPLACEMENTS } = require('@leanup/stack');
 REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: any }) => {
   replacement.search = replacement.from;
   replacement.replace = replacement.to;
@@ -13,7 +14,7 @@ REPLACEMENTS.forEach((replacement: { from: any; search: any; to: any; replace: a
 });
 
 // https://webpack.js.org/configuration/dev-server/#devserverproxy
-const { PROXIES } = require('@leanup/stack/lib/proxies');
+const { PROXIES } = require('@leanup/stack');
 
 const ESBUILD_LOADER_JS = {
   test: /\.js$/,
@@ -105,7 +106,7 @@ const SASS_LOADER = {
     {
       loader: 'sass-loader',
       options: {
-        implementation: require('sass'),
+        implementation: Sass,
         sassOptions: {
           includePaths: ['node_modules'],
         },

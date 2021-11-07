@@ -4,14 +4,18 @@
   "description": "This package contains the Angular framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
+  "main": "dist/cjs/webpack.config.js",
+  "module": "dist/mjs/webpack.config.js",
+  "types": "dist/types/webpack.config.d.ts",
+  "exports": {
+    "require": "./dist/cjs/webpack.config.js",
+    "import": "./dist/mjs/webpack.config.js"
+  },
   "files": [
-    "lib/**",
-    "snowpack.config.js",
-    "webpack.config.js"
+    "dist"
   ],
   "keywords": [
     "babel",
-    "snowpack",
     "webpack",
     "angular",
     "sinon",
@@ -48,10 +52,16 @@
   "peerDependencies": {
     "@angular/compiler-cli": "13.0.0",
     "@angular/core": "^12.2.13",
+    "@leanup/stack-webpack": "~2.0.0-rc.17",
     "@ngtools/webpack": "^12.2.13"
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
+    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && echo {\"type\": \"commonjs\"} > dist/cjs/package.json",
+    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && echo {\"type\": \"module\"} > dist/mjs/package.json",
+    "build:rm": "rm -rf dist",
+    "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
+    "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
+    "prepack": "npm run build"
   },
   "engines": {
     "node": ">=12 <17",
