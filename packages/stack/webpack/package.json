@@ -64,8 +64,8 @@
     "@leanup/stack": "~2.0.0-rc.17"
   },
   "scripts": {
-    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json",
-    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json",
+    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && node ../../../scripts/package.js dist/cjs commonjs",
+    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && node ../../../scripts/package.js dist/mjs module",
     "build:rm": "rm -rf dist",
     "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
     "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
