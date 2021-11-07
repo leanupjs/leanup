@@ -13,7 +13,7 @@ import { ListSerieController } from './controller';
           Performance
         </button>
       </div>
-      <table  *ngFor="let element of elements; index as i">
+      <table *ngFor="let element of elements; index as i">
         <thead>
           <tr>
             <th scope="col">#</th>
