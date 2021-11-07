@@ -1,4 +1,4 @@
-import { webpackConfig } from '@leanup/stack-webpack/lib/webpack.config';
+import webpackConfig from '@leanup/stack-webpack';
 
 const ESBUILD_LOADER_TSX = {
   test: /\.tsx$/,

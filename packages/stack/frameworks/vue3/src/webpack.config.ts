@@ -1,4 +1,4 @@
-import { LEANUP_WEBPACK_RULES, webpackConfig } from '@leanup/stack-webpack/lib/webpack.config';
+import webpackConfig, { LEANUP_WEBPACK_RULES } from '@leanup/stack-webpack';
 
 function removeLoader(config: any, loader: any) {
   const index = config.module.rules.indexOf(loader);
