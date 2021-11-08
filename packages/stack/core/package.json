@@ -8,8 +8,25 @@
   "module": "dist/mjs/index.js",
   "types": "dist/types/index.d.ts",
   "exports": {
-    "require": "./dist/cjs/index.js",
-    "import": "./dist/mjs/index.js"
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/mjs/index.js"
+    },
+    "./.eslintrc": {
+      "require": "./.eslintrc.js"
+    },
+    "./.mocharc": {
+      "require": "./.mocharc.js"
+    },
+    "./nightwatch.conf": {
+      "require": "./nightwatch.conf.js"
+    },
+    "./nightwatch.global": {
+      "require": "./nightwatch.global.js"
+    },
+    "./prettier.config": {
+      "require": "./prettier.config.js"
+    }
   },
   "files": [
     "dist",

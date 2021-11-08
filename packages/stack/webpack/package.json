@@ -8,8 +8,10 @@
   "module": "dist/mjs/webpack.config.js",
   "types": "dist/types/webpack.config.d.ts",
   "exports": {
-    "require": "./dist/cjs/webpack.config.js",
-    "import": "./dist/mjs/webpack.config.js"
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/mjs/index.js"
+    }
   },
   "files": [
     "dist"
