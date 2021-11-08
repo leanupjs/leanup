@@ -37,6 +37,8 @@ jobs:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
+      - name: Clear npm cache
+        run: npm cache clean -f
       - name: Install and publish only @${{env.alias}}/stack
         run: |
           npm install
