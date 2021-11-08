@@ -32,7 +32,7 @@ const SWC_LOADER_TSX = {
   ],
 };
 
-export function webpackPreactConfig(env: any, argv: any): Object {
+export default function webpackPreactConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv, [SWC_LOADER_TSX]);
 
   config.resolve.alias['react'] = 'preact/compat';

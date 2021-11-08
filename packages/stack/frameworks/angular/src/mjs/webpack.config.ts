@@ -22,7 +22,7 @@ function removeLoader(config: any, loader: any) {
   }
 }
 
-export default (env: any, argv: any): Object => {
+export default function webpackAngularConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv, [LINKER_PLUGIN]);
 
   removeLoader(config, LEANUP_WEBPACK_RULES.ESBUILD_LOADER_TS);
@@ -39,4 +39,4 @@ export default (env: any, argv: any): Object => {
   );
 
   return config;
-};
+}

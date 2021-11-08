@@ -7,7 +7,7 @@ function removeLoader(config: any, loader: any) {
   }
 }
 
-export function webpackVue3Config(env: any, argv: any): Object {
+export default function webpackVue3Config(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv, [
     LEANUP_WEBPACK_RULES.ESBUILD_LOADER_JS,
     LEANUP_WEBPACK_RULES.ESBUILD_LOADER_TS,

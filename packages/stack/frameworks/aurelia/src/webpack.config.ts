@@ -1,6 +1,6 @@
 import webpackConfig from '@leanup/stack-webpack';
 
-export function webpackAureliaConfig(env: any, argv: any): Object {
+export default function webpackAureliaConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv);
   const path = require('path');
 

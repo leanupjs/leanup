@@ -5,7 +5,7 @@ function removeLoader(config: any, loader: any) {
   }
 }
 
-export default (env: any, argv: any): Object => {
+export default function webpackAngularConfig(env: any, argv: any): Object {
   const { LEANUP_WEBPACK_RULES, webpackConfig } = require('@leanup/stack-webpack');
   const config: any = webpackConfig(env, argv);
   const path = require('path');
@@ -26,4 +26,4 @@ export default (env: any, argv: any): Object => {
   );
 
   return config;
-};
+}

@@ -28,6 +28,6 @@ const SWC_LOADER_TSX = {
   ],
 };
 
-export function webpackReactConfig(env: any, argv: any): Object {
+export default function webpackReactConfig(env: any, argv: any): Object {
   return webpackConfig(env, argv, [SWC_LOADER_TSX]);
 }

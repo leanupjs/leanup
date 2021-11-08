@@ -141,7 +141,7 @@ export const LEANUP_WEBPACK_RULES = {
   SASS_LOADER,
 };
 
-export default (_env: any, argv: any, loaders: any[] = []): Object => {
+export default function webpackConfig(_env: any, argv: any, loaders: any[] = []): Object {
   argv.host = typeof argv.host === 'string' ? argv.host : 'localhost';
 
   const config = {
@@ -225,4 +225,4 @@ export default (_env: any, argv: any, loaders: any[] = []): Object => {
   ['addons', 'cucumber', 'graphql', 'pwa', 'webhint'].forEach(loadAddon);
 
   return config;
-};
+}
