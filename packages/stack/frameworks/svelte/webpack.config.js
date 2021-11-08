@@ -1,4 +1,1 @@
-module.exports = (...args) => {
-  const { webpackSvelteConfig } = require('./lib/webpack.config');
-  return webpackSvelteConfig(...args);
-};
+module.exports = require('./lib/webpack.config');
