@@ -73,7 +73,7 @@
     "chai": "4.3.4",
     "cross-env": "7.0.3",
     "esbuild": "0.13.12",
-    "esbuild-register": "3.1.0",
+    "esbuild-register": "3.1.2",
     "eslint": "8.2.0",
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-json": "3.1.0",

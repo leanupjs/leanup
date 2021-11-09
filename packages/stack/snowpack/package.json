@@ -42,7 +42,7 @@
     "@leanup/stack": "2.0.0-rc.20"
   },
   "peerDependencies": {
-    "@leanup/stack": "~2.0.0-rc.17"
+    "@leanup/stack": "~2.0.0-rc.20"
   },
   "engines": {
     "node": ">=12 <17",
