@@ -1,4 +1,1 @@
-module.exports = (...args) => {
-  const { webpackAureliaConfig } = require('./lib/webpack.config');
-  return webpackAureliaConfig(...args);
-};
+module.exports = require('./lib/webpack.config');

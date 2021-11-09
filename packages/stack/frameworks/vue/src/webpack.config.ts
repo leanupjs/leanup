@@ -1,6 +1,6 @@
-import { webpackConfig } from '@leanup/stack-webpack/lib/webpack.config';
+import webpackConfig from '@leanup/stack-webpack';
 
-export function webpackVueConfig(env: any, argv: any): Object {
+export default function webpackVueConfig(env: any, argv: any): Object {
   const config: any = webpackConfig(env, argv);
 
   const VueLoaderPlugin = require('vue-loader/lib/plugin');

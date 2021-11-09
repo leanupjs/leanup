@@ -1,0 +1,36 @@
+{
+  "name": "@leanup/stack-lit-element",
+  "version": "1.2.8",
+  "description": "This package contains the Lit-Element framework extension for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [],
+  "keywords": [
+    "babel",
+    "esbuild",
+    "lit",
+    "swc",
+    "typescript",
+    "webpack"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "regenerator-runtime": "0.13.9"
+  },
+  "peerDependencies": {
+    "@swc/core": "^1",
+    "lit-element": "^3"
+  },
+  "scripts": {},
+  "engines": {
+    "node": ">=12 <17",
+    "npm": ">=6 <8"
+  }
+}

@@ -4,12 +4,21 @@
   "description": "This module contains all webpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
+  "main": "dist/cjs/webpack.config.js",
+  "module": "dist/mjs/webpack.config.js",
+  "types": "dist/types/webpack.config.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/webpack.config.js",
+      "import": "./dist/mjs/webpack.config.js"
+    }
+  },
   "files": [
-    "lib/**",
-    "webpack.config.js"
+    "dist"
   ],
   "keywords": [
     "esbuild",
+    "swc",
     "webpack",
     "less",
     "sass",
@@ -31,6 +40,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
+    "@swc/core": "1.2.107",
     "copy-modules-webpack-plugin": "2.2.1",
     "copy-webpack-plugin": "9.0.1",
     "css-loader": "6.5.1",
@@ -41,11 +51,13 @@
     "postcss-loader": "6.2.0",
     "sass-loader": "12.3.0",
     "string-replace-loader": "3.0.3",
+    "swc-loader": "0.1.15",
     "webpack": "5.63.0",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.4.0"
   },
   "devDependencies": {
+    "@leanup/stack": "1.2.8",
     "@types/node": "16.11.7",
     "tslib": "2.3.1",
     "typescript": "4.4.4"
@@ -54,7 +66,12 @@
     "@leanup/stack": "~1.2.8"
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
+    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && node ../../../scripts/package.js dist/cjs commonjs",
+    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && node ../../../scripts/package.js dist/mjs module",
+    "build:rm": "rm -rf dist",
+    "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
+    "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
+    "prepack": "npm run build"
   },
   "engines": {
     "node": ">=12 <17",

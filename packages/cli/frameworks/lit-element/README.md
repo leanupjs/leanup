@@ -25,7 +25,7 @@
 
 # `@leanup/cli-lit-element`
 
-> This package contains the [Inferno](https://lit-elementjs.org) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
+> This package contains the [Lit-Element](https://lit.dev) framework extension for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
 
 ## Installation
 

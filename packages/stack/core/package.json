@@ -4,8 +4,32 @@
   "description": "This module contains all required tools to serve, test and build a framework neutral SPA.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/mjs/index.js"
+    },
+    "./.eslintrc": {
+      "require": "./.eslintrc.js"
+    },
+    "./.mocharc": {
+      "require": "./.mocharc.js"
+    },
+    "./nightwatch.conf": {
+      "require": "./nightwatch.conf.js"
+    },
+    "./nightwatch.global": {
+      "require": "./nightwatch.global.js"
+    },
+    "./prettier.config": {
+      "require": "./prettier.config.js"
+    }
+  },
   "files": [
-    "lib/**",
+    "dist",
     "*.js"
   ],
   "keywords": [
@@ -44,13 +68,13 @@
     "@types/mocha": "9.0.0",
     "@types/nightwatch": "1.3.4",
     "@types/sinon": "10.0.6",
-    "@typescript-eslint/eslint-plugin": "4.33.0",
-    "@typescript-eslint/parser": "4.33.0",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
-    "esbuild": "0.13.7",
+    "esbuild": "0.13.13",
     "esbuild-register": "3.1.2",
-    "eslint": "7.32.0",
+    "eslint": "8.2.0",
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-json": "3.1.0",
     "jsdom": "18.0.1",
@@ -64,7 +88,7 @@
     "postcss": "8.3.11",
     "prettier": "2.4.1",
     "sass": "1.43.4",
-    "sinon": "11.1.2",
+    "sinon": "12.0.1",
     "tslib": "2.3.1"
   },
   "devDependencies": {
@@ -72,15 +96,22 @@
     "tsc": "2.0.3",
     "typescript": "4.4.4"
   },
-  "peerDependencies": {
+  "optionalDependencies": {
     "chromedriver": "*",
-    "esbuild": "^0",
     "geckodriver": "*",
-    "selenium-server": "^3",
+    "selenium-server": "^3"
+  },
+  "peerDependencies": {
+    "esbuild": "^0",
     "typescript": "^4"
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
+    "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && node ../../../scripts/package.js dist/cjs commonjs",
+    "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && node ../../../scripts/package.js dist/mjs module",
+    "build:rm": "rm -rf dist",
+    "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
+    "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
+    "prepack": "npm run build"
   },
   "engines": {
     "node": ">=12 <17",

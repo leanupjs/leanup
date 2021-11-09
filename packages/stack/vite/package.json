@@ -33,6 +33,9 @@
     "vite": "2.6.14",
     "vite-plugin-replace": "0.1.1"
   },
+  "devDependencies": {
+    "@leanup/stack": "1.2.8"
+  },
   "peerDependencies": {
     "@leanup/stack": "~1.2.8"
   },
