@@ -24,6 +24,9 @@
     "./nightwatch.global": {
       "require": "./nightwatch.global.js"
     },
+    "./nyc.config": {
+      "require": "./nyc.config.js"
+    },
     "./prettier.config": {
       "require": "./prettier.config.js"
     }
