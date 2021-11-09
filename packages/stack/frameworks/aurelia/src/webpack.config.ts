@@ -10,9 +10,6 @@ export default function webpackAureliaConfig(env: any, argv: any): Object {
   config.module.rules.push({
     test: /\.html$/,
     loader: 'html-loader',
-    options: {
-      attrs: false,
-    },
   });
 
   config.resolve.modules.push(path.resolve(process.cwd(), 'src'));
