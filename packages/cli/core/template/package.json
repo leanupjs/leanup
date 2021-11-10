@@ -31,7 +31,7 @@
   "dependencies": {
     "@leanup/form": "1.2.9",
     "@leanup/lib": "1.2.9",
-    "@leanup/openapi-demo": "1.2.7",
+    "@leanup/openapi-demo": "1.2.9",
     "navigo": "8.11.1",
     "rxjs": "7.4.0"
   },
