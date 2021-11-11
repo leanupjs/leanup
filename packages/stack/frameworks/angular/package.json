@@ -65,8 +65,11 @@
     "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
     "prepack": "npm run build"
   },
+  "cpu": [
+    "x64"
+  ],
   "engines": {
-    "node": ">=12 <17",
-    "npm": ">=6 <8"
+    "node": ">=14 <18",
+    "npm": ">=6 <9"
   }
 }

@@ -33,8 +33,11 @@
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
   },
+  "cpu": [
+    "x64"
+  ],
   "engines": {
-    "node": ">=12 <17",
-    "npm": ">=6 <8"
+    "node": ">=14 <18",
+    "npm": ">=6 <9"
   }
 }
