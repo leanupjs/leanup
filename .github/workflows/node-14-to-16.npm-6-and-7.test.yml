@@ -32,8 +32,6 @@ jobs:
         uses: actions/setup-node@v2.4.1
         with:
           node-version: ${{ matrix.node }}
-      - name: Install dependencies
-        run: npm run update
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
