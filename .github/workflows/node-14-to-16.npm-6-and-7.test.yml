@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Test Node 14, 15, 16 and NPM 6, 7
+name: Test Node 12, ..., 17 and NPM 6, ..., 8
 
 on:
   workflow_dispatch:
@@ -15,9 +15,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
+        # framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
+        framework: [react]
         leanup: [next]
-        node: [14, 15, 16]
+        node: [12, 14, 15, 16, 17]
         # https://github.com/actions/virtual-environments#available-environments
         os: [ubuntu-latest, macos-latest, windows-latest]
     name: (${{matrix.framework}}) / ${{matrix.leanup}} / Node ${{ matrix.node }} / ${{ matrix.os }}
