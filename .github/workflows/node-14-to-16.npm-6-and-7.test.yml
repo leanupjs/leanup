@@ -18,7 +18,7 @@ jobs:
         # framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
         framework: [react]
         leanup: [next]
-        node: [12, 14, 15, 16, 17]
+        node: [12, 14, 16, 17]
         # https://github.com/actions/virtual-environments#available-environments
         os: [ubuntu-latest, macos-latest, windows-latest]
     name: (${{matrix.framework}}) / ${{matrix.leanup}} / Node ${{ matrix.node }} / ${{ matrix.os }}
