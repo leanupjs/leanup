@@ -17,11 +17,11 @@ jobs:
       matrix:
         # framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
         framework: [react]
-        leanup: [next]
-        node: [12, 14, 16, 17]
+        tag: [latest, next]
+        node: [14, 16, 17]
         # https://github.com/actions/virtual-environments#available-environments
         os: [ubuntu-latest, macos-latest, windows-latest]
-    name: (${{matrix.framework}}) / ${{matrix.leanup}} / Node ${{ matrix.node }} / ${{ matrix.os }}
+    name: (${{matrix.framework}}) / ${{matrix.tag}} / Node ${{ matrix.node }} / ${{ matrix.os }}
     steps:
       - name: Checkout specific branch
         uses: actions/checkout@v2.4.0
@@ -35,5 +35,5 @@ jobs:
       - name: Test all framework variants
         run: |
           rm ../.eslintrc.js
-          sh wake-up.sh ${{matrix.framework}} leanup next
+          sh wake-up.sh ${{matrix.framework}} leanup ${{matrix.tag}}
         working-directory: scripts
