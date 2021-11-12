@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [angular, angularjs, inferno, lit-element, preact, react, svelte, vanilla, vue, vue3]
+        # framework: [angular, angularjs, inferno, lit-element, preact, react, svelte, vanilla, vue, vue3]
         framework: [react]
         tag: [latest]
         node: [12, 13, 14, 15, 16, 17]
