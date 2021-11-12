@@ -17,7 +17,7 @@ jobs:
       matrix:
         # framework: [angular, angularjs, inferno, lit-element, preact, react, svelte, vanilla, vue, vue3]
         framework: [react]
-        tag: [latest]
+        tag: [latest-1.0, latest-1.1]
         node: [12, 13, 14, 15, 16, 17]
         # https://github.com/actions/virtual-environments#available-environments
         os: [ubuntu-latest, macos-latest, windows-latest]
