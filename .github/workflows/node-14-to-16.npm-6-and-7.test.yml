@@ -36,4 +36,5 @@ jobs:
         run: |
           rm ../.eslintrc.js
           sh wake-up.sh ${{matrix.framework}} leanup ${{matrix.tag}}
+        timeout-minutes: 10
         working-directory: scripts
