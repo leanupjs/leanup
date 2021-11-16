@@ -31,7 +31,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "hint": "6.1.8"
+    "hint": "6.1.9"
   },
   "devDependencies": {
     "@leanup/cli": "2.0.0-rc.24",
