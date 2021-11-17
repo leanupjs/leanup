@@ -53,9 +53,9 @@
   },
   "peerDependencies": {
     "@angular/compiler-cli": "13.0.1",
-    "@angular/core": "^12.2.13",
+    "@angular/core": "13.0.1",
     "@leanup/stack-webpack": "~2.0.0-rc.20",
-    "@ngtools/webpack": "^12.2.13"
+    "@ngtools/webpack": "13.0.2"
   },
   "scripts": {
     "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && node ../../../../scripts/package.js dist/cjs commonjs",
