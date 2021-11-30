@@ -27,7 +27,7 @@
     "@leanup/cli": "1.1.49"
   },
   "devDependencies": {
-    "@types/node": "16.11.10",
+    "@types/node": "16.11.11",
     "typescript": "4.3.5"
   },
   "scripts": {
