@@ -27,7 +27,7 @@
     "@types/chai": "4.2.22",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "9.0.0",
-    "@types/node": "16.11.10",
+    "@types/node": "16.11.11",
     "@types/sinon": "10.0.6",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
@@ -39,7 +39,7 @@
     "mocha": "9.1.3",
     "mock-local-storage": "1.1.18",
     "nyc": "15.1.0",
-    "preact": "10.6.1",
+    "preact": "10.6.2",
     "react": "17.0.2",
     "sinon": "12.0.1",
     "typescript": "4.4.4"
