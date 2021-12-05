@@ -117,6 +117,9 @@ abstract class AbstractControl {
       this.changeListeners.forEach((changeListener: Function) => {
         changeListener();
       });
+      this._parentForms.forEach((form: FormControl) => {
+        form.notify();
+      });
     }, 0);
   }
 }
