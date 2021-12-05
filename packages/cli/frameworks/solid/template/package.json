@@ -1,11 +1,11 @@
 {
   "name": "@template/solid",
-  "version": "1.2.16",
+  "version": "1.2.17",
   "dependencies": {
     "solid-js": "1.2.5"
   },
   "devDependencies": {
-    "@leanup/cli-solid": "1.2.16",
-    "@leanup/stack-solid": "1.2.16"
+    "@leanup/cli-solid": "1.2.17",
+    "@leanup/stack-solid": "1.2.17"
   }
 }
