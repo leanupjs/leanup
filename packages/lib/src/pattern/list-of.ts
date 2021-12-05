@@ -69,7 +69,7 @@ export class SetOf<T> {
     return (
       normalizeSetOfItems(items).filter((item: T): boolean => {
         let changed = false;
-        if (this.contains(item) === false) {
+        if (this.has(item) === false) {
           if (isInstanceOf(this.instancesOf, item)) {
             if (protect) {
               this.protectedItems.add(item);
