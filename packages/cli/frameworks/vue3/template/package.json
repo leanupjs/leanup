@@ -1,6 +1,6 @@
 {
   "name": "@template/vue3",
-  "version": "1.0.157",
+  "version": "1.0.158",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,15 +31,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.157",
-    "@leanup/lib": "1.0.157",
+    "@leanup/form": "1.0.158",
+    "@leanup/lib": "1.0.158",
     "navigo": "8.11.1",
     "rxjs": "7.4.0",
     "vue": "3.2.24"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.157",
-    "@leanup/cli-vue3": "1.0.157",
+    "@leanup/cli": "1.0.158",
+    "@leanup/cli-vue3": "1.0.158",
     "@leanup/git-hooks": "1.0.157",
     "@vue/compiler-sfc": "3.2.24",
     "chromedriver": "90.0.1",
