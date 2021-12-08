@@ -47,7 +47,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "13.0.3",
     "@leanup/stack-webpack": "1.2.17",
-    "@types/node": "16.11.11",
+    "@types/node": "16.11.12",
     "tslib": "2.3.1",
     "typescript": "4.4.4"
   },
