@@ -8,7 +8,7 @@
     "@angular/core": "13.0.3",
     "@angular/forms": "13.0.3",
     "@angular/platform-browser": "13.0.3",
-    "@angular/platform-browser-dynamic": "13.0.3",
+    "@angular/platform-browser-dynamic": "13.1.0",
     "core-js": "3.19.3",
     "rxjs": "7.4.0",
     "zone.js": "0.11.4"
