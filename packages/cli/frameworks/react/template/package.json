@@ -39,7 +39,7 @@
     "rxjs": "7.4.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.157",
+    "@leanup/cli": "1.0.158",
     "@leanup/cli-react": "1.0.157",
     "@leanup/git-hooks": "1.0.157",
     "@types/react": "17.0.37",

@@ -39,7 +39,7 @@
     "rxjs": "7.4.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.157",
+    "@leanup/cli": "1.0.158",
     "@leanup/cli-aurelia": "1.0.157",
     "@leanup/git-hooks": "1.0.157",
     "chromedriver": "90.0.1",

@@ -26,7 +26,7 @@
     "@types/cucumber": "7.0.0",
     "cucumber": "6.0.5",
     "cucumber-html-reporter": "5.5.0",
-    "cucumber-pretty": "6.0.0",
+    "cucumber-pretty": "6.0.1",
     "nightwatch-api": "3.0.2"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.156"
+    "@leanup/cli": "~1.0.158"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc"

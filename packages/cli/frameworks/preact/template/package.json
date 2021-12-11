@@ -34,11 +34,11 @@
     "@leanup/form": "1.0.157",
     "@leanup/lib": "1.0.157",
     "navigo": "8.11.1",
-    "preact": "10.6.2",
+    "preact": "10.6.4",
     "rxjs": "7.4.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.157",
+    "@leanup/cli": "1.0.158",
     "@leanup/cli-preact": "1.0.157",
     "@leanup/git-hooks": "1.0.157",
     "chromedriver": "90.0.1",

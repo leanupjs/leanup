@@ -40,13 +40,13 @@
     "@angular/platform-browser-dynamic": "11.2.14",
     "@leanup/form": "1.0.157",
     "@leanup/lib": "1.0.157",
-    "core-js": "3.19.2",
+    "core-js": "3.19.3",
     "navigo": "8.11.1",
     "rxjs": "6.6.7",
     "zone.js": "0.11.4"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.157",
+    "@leanup/cli": "1.0.158",
     "@leanup/cli-angular": "1.0.157",
     "@leanup/git-hooks": "1.0.157",
     "@ngtools/webpack": "11.2.15",
