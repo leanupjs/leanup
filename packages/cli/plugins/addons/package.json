@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "comlink-loader": "2.0.0",
-    "compression-webpack-plugin": "9.0.1"
+    "compression-webpack-plugin": "9.1.1"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.18",
