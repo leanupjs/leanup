@@ -40,17 +40,17 @@
     "sass-loader": "11.1.1",
     "string-replace-loader": "3.1.0",
     "style-loader": "2.0.0",
-    "webpack": "5.64.4",
+    "webpack": "5.65.0",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "3.11.3"
   },
   "devDependencies": {
-    "@types/node": "16.11.11",
+    "@types/node": "16.11.12",
     "tslib": "2.3.1",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.49"
+    "@leanup/stack": "~1.1.50"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"

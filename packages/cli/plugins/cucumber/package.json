@@ -29,11 +29,11 @@
   },
   "devDependencies": {
     "@leanup/cli": "1.1.50",
-    "@types/node": "16.11.11",
+    "@types/node": "16.11.12",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.1.49"
+    "@leanup/cli": "~1.1.50"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
