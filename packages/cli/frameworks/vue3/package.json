@@ -44,7 +44,7 @@
     "vue-loader": "16.8.3"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.157",
+    "@leanup/cli": "1.0.158",
     "@types/node": "15.14.9",
     "typescript": "4.3.5"
   },
