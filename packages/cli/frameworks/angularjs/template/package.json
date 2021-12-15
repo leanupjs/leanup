@@ -1,12 +1,12 @@
 {
   "name": "@template/angularjs",
-  "version": "2.0.0-rc.28",
+  "version": "2.0.0-rc.29",
   "dependencies": {
     "angular": "1.8.2"
   },
   "devDependencies": {
-    "@leanup/cli-angularjs": "2.0.0-rc.28",
-    "@leanup/stack-angularjs": "2.0.0-rc.28",
+    "@leanup/cli-angularjs": "2.0.0-rc.29",
+    "@leanup/stack-angularjs": "2.0.0-rc.29",
     "@types/angular": "1.8.3"
   }
 }
