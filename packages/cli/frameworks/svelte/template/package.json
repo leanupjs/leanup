@@ -1,6 +1,6 @@
 {
   "name": "@template/svelte",
-  "version": "1.0.158",
+  "version": "1.0.159",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,15 +31,15 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.158",
-    "@leanup/lib": "1.0.158",
+    "@leanup/form": "1.0.159",
+    "@leanup/lib": "1.0.159",
     "navigo": "8.11.1",
     "rxjs": "7.4.0",
     "svelte": "3.44.3"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.158",
-    "@leanup/cli-svelte": "1.0.158",
+    "@leanup/cli": "1.0.159",
+    "@leanup/cli-svelte": "1.0.159",
     "@leanup/git-hooks": "1.0.157",
     "@pyoner/svelte-types": "3.4.4",
     "chromedriver": "90.0.1",
