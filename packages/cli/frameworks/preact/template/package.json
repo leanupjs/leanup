@@ -1,11 +1,11 @@
 {
   "name": "@template/preact",
-  "version": "1.2.18",
+  "version": "1.2.19",
   "dependencies": {
     "preact": "10.6.4"
   },
   "devDependencies": {
-    "@leanup/cli-preact": "1.2.18",
-    "@leanup/stack-preact": "1.2.18"
+    "@leanup/cli-preact": "1.2.19",
+    "@leanup/stack-preact": "1.2.19"
   }
 }
