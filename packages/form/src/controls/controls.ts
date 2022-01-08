@@ -288,7 +288,7 @@ export class InputControl extends AbstractControl implements InputControlProps {
     this._valueTimeout = setTimeout(() => {
       this.validate(value); // execution?!
       this.notify();
-    }, 0);
+    }, 250);
   }
 
   get modelValue(): unknown {
