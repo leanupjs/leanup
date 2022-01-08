@@ -120,7 +120,7 @@ abstract class AbstractControl {
       this._parentForms.forEach((form: FormControl) => {
         form.notify();
       });
-    }, 0);
+    }, 250);
   }
 }
 

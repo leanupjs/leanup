@@ -360,7 +360,7 @@ describe(`Test: Controls`, () => {
         expect(spies.input?.called).to.be.true;
 
         done();
-      }, 25);
+      }, 500);
     });
 
     it(`Remove Change Listener`, () => {
