@@ -13,17 +13,17 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/lib": "1.1.50"
+    "@leanup/lib": "1.1.52"
   },
   "devDependencies": {
     "@types/chai": "4.3.0",
     "@types/mocha": "9.0.0",
-    "@types/node": "16.11.13",
+    "@types/node": "16.11.19",
     "@types/sinon": "10.0.6",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
-    "esbuild": "0.14.5",
-    "esbuild-register": "3.2.1",
+    "esbuild": "0.14.11",
+    "esbuild-register": "3.3.1",
     "esm": "3.2.25",
     "jsdom": "18.1.1",
     "jsdom-global": "3.0.2",

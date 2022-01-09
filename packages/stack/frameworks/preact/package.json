@@ -37,12 +37,12 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@preact/preset-vite": "2.1.5",
+    "@preact/preset-vite": "2.1.7",
     "vite-plugin-unset": "0.1.4"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.52",
-    "@types/node": "16.11.13",
+    "@types/node": "16.11.19",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
