@@ -35,14 +35,14 @@
     "@leanup/lib": "1.0.159",
     "inferno": "7.4.11",
     "navigo": "8.11.1",
-    "rxjs": "7.4.0"
+    "rxjs": "7.5.1"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.159",
     "@leanup/cli-inferno": "1.0.159",
     "@leanup/git-hooks": "1.0.157",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.12",
+    "cssnano": "5.0.15",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",

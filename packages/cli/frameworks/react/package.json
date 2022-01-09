@@ -40,8 +40,8 @@
     "react": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "7.16.5",
-    "@babel/preset-react": "7.16.5"
+    "@babel/plugin-transform-react-jsx": "7.16.7",
+    "@babel/preset-react": "7.16.7"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.159",
@@ -49,7 +49,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.158",
+    "@leanup/cli": "~1.0.159",
     "react": "^16 || ^17",
     "react-dom": "^16 || ^17"
   },
