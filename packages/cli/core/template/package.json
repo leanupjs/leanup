@@ -33,7 +33,7 @@
     "@leanup/lib": "1.2.20",
     "@leanup/openapi-demo": "1.2.20",
     "navigo": "8.11.1",
-    "rxjs": "7.4.0"
+    "rxjs": "7.5.1"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.20",
@@ -41,7 +41,7 @@
     "@leanup/stack": "1.2.20",
     "@leanup/stack-webpack": "1.2.20",
     "chromedriver": "95.0.0",
-    "npm-check-updates": "12.0.3",
+    "npm-check-updates": "12.1.0",
     "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
     "typescript": "4.4.4"
