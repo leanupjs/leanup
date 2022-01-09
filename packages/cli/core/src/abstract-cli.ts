@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import { spawn } from 'child_process';
 import * as commander from 'commander';
 import * as deepmerge from 'deepmerge';
