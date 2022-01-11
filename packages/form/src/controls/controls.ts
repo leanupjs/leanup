@@ -10,7 +10,6 @@ abstract class AbstractControl {
   private readonly _parentForms: Set<FormControl> = new Set<FormControl>();
   private _name = 'unnamed';
   private _validationHandler: ValidationHandler = new ValidationHandler();
-  private _notifyTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
 
   constructor(name: string) {
     this.name = name;
@@ -95,7 +94,7 @@ abstract class AbstractControl {
   protected setValidationHandler(validationHandler: ValidationHandler, value: unknown = null) {
     this._validationHandler = validationHandler;
     this.validate(value);
-    // this.notify(); redundant?!
+    this.notify();
   }
 
   protected validate(value: unknown) {
@@ -109,18 +108,13 @@ abstract class AbstractControl {
     });
   }
 
-  protected notify() {
-    if (this._notifyTimeout) {
-      clearTimeout(this._notifyTimeout);
-    }
-    this._notifyTimeout = setTimeout(() => {
-      this.changeListeners.forEach((changeListener: Function) => {
-        changeListener();
-      });
-      this._parentForms.forEach((form: FormControl) => {
-        form.notify();
-      });
-    }, 0);
+  protected notify(...args: unknown[]) {
+    this.changeListeners.forEach((changeListener: Function) => {
+      changeListener(...args);
+    });
+    this._parentForms.forEach((form: FormControl) => {
+      form.notify();
+    });
   }
 }
 
@@ -156,7 +150,6 @@ export class InputControl extends AbstractControl implements InputControlProps {
   private _type = 'text';
   private _value: unknown = null;
   private _oldValue: unknown = null;
-  private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
   private _formatHandler: FormatHandler = new FormatHandler();
 
   constructor(name: string, properties?: InputControlProps) {
@@ -282,13 +275,8 @@ export class InputControl extends AbstractControl implements InputControlProps {
   set value(value: unknown) {
     this._oldValue = this._value;
     this._value = value;
-    if (this._valueTimeout) {
-      clearTimeout(this._valueTimeout);
-    }
-    this._valueTimeout = setTimeout(() => {
-      this.validate(value); // execution?!
-      this.notify();
-    }, 250);
+    this.validate(value);
+    this.notify();
   }
 
   get modelValue(): unknown {
@@ -303,6 +291,10 @@ export class InputControl extends AbstractControl implements InputControlProps {
   }
   set viewValue(value: unknown) {
     this.modelValue = this._formatHandler.parse(value);
+  }
+
+  public notify() {
+    super.notify(this._value, this._oldValue);
   }
 
   public setValidationHandler(validationHandler: ValidationHandler) {
