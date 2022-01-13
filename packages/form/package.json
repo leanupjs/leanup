@@ -23,7 +23,7 @@
     "chai": "4.3.4",
     "cross-env": "7.0.3",
     "esbuild": "0.14.11",
-    "esbuild-register": "3.3.1",
+    "esbuild-register": "3.3.2",
     "esm": "3.2.25",
     "jsdom": "18.1.1",
     "jsdom-global": "3.0.2",
