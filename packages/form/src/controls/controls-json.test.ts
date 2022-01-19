@@ -72,7 +72,7 @@ describe(`Test: Controls (JSON)`, () => {
         expect(form.getData()).to.not.eql(anschrift);
         expect(form.getData()).to.eql(overwrite);
         done();
-      }, 25);
+      }, 500);
     });
   });
 });

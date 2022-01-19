@@ -113,7 +113,11 @@ abstract class AbstractControl {
       changeListener(...args);
     });
     this._parentForms.forEach((form: FormControl) => {
-      form.notify();
+      /**
+       * ATTENTION: That is a super class of FormControl,
+       *            this implementation is not so good.
+       */
+      form.notify(form.getData());
     });
   }
 }
@@ -130,19 +134,19 @@ export enum InputControlTypes {
   text = 'text',
 }
 export interface InputControlProps {
-  info?: string;
-  label?: string;
+  debounce?: number;
   disabled?: boolean;
+  label?: string;
   mandatory?: boolean;
-  readonly?: boolean;
   placeholder?: string;
+  readonly?: boolean;
   type?: string;
   value?: unknown;
 }
 
 export class InputControl extends AbstractControl implements InputControlProps {
+  private _debounce = 250;
   private _disabled = false;
-  private _info = '';
   private _label = '';
   private _mandatory = false;
   private _placeholder = '';
@@ -151,30 +155,31 @@ export class InputControl extends AbstractControl implements InputControlProps {
   private _value: unknown = null;
   private _oldValue: unknown = null;
   private _formatHandler: FormatHandler = new FormatHandler();
+  private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
     if (properties) {
-      this.info = properties.info ? properties.info : '';
-      this.label = properties.label ? properties.label : '';
+      this.debounce = properties.debounce ? properties.debounce : 250;
       this.disabled = properties.disabled ? properties.disabled : false;
+      this.label = properties.label ? properties.label : '';
       this.mandatory = properties.mandatory ? properties.mandatory : false;
-      this.readonly = properties.readonly ? properties.readonly : false;
       this.placeholder = properties.placeholder ? properties.placeholder : '';
+      this.readonly = properties.readonly ? properties.readonly : false;
       this.type = properties.type ? properties.type : 'text';
-      this.value = properties.value ? properties.value : null;
+      this.setValueSync(properties.value ? properties.value : null);
     }
   }
 
-  get info(): string {
-    return this._info;
+  get debounce(): number {
+    return this._debounce;
   }
-  set info(value: string) {
-    if (typeof value === 'string') {
-      this._info = value;
+  set debounce(value: number) {
+    if (typeof value === 'number' && isNaN(value) === false && value > 0) {
+      this._debounce = value;
       this.notify();
     } else {
-      throw new Error('The info of a input control must be a string.');
+      throw new Error('The debounce of a input control must be a number greater than 0.');
     }
   }
 
@@ -273,10 +278,18 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._value;
   }
   set value(value: unknown) {
+    clearTimeout(this._valueTimeout);
+    this._valueTimeout = setTimeout(() => {
+      clearTimeout(this._valueTimeout);
+      this.setValueSync(value);
+      this.notify();
+    }, this.debounce);
+  }
+
+  public setValueSync(value: unknown) {
     this._oldValue = this._value;
     this._value = value;
     this.validate(value);
-    this.notify();
   }
 
   get modelValue(): unknown {
@@ -403,7 +416,7 @@ export class FormControl extends AbstractControl {
       if (control instanceof FormControl) {
         control.setData(data[control.name]);
       } else if (control instanceof InputControl) {
-        control.value = data[control.name];
+        control.setValueSync(data[control.name]);
       } else {
         throw new Error(`The control is neither an instance of FormControl or InputControl.`);
       }
@@ -437,8 +450,10 @@ export class FormFactory {
         if (typeof json[name] === 'object' && json[name] !== null) {
           form.addControl(FormFactory.createForm(name, json[name]));
         } else {
-          const input = new InputControl(name);
-          input.value = <unknown>json[name];
+          const input = new InputControl(name, {
+            value: <unknown>json[name], // does not work?!
+          });
+          input.setValueSync(<unknown>json[name]);
           form.addControl(input);
         }
       }

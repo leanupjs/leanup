@@ -238,7 +238,7 @@ describe(`Test: Controls`, () => {
         expect(input.viewValue).equal('DE53 7345 1450 0036 0644 18');
 
         done();
-      }, 25);
+      }, 500);
     });
   });
 
@@ -360,7 +360,7 @@ describe(`Test: Controls`, () => {
         expect(spies.input?.called).to.be.true;
 
         done();
-      }, 25);
+      }, 500);
     });
 
     it(`Remove Change Listener`, () => {
