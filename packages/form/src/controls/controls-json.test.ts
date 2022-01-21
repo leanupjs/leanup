@@ -59,7 +59,7 @@ describe(`Test: Controls (JSON)`, () => {
       },
     };
 
-    it(`Test: setData and getData`, (done) => {
+    it(`Test: setData and getData`, () => {
       // given
       expect(form.getData()).to.eql(anschrift);
 
@@ -67,12 +67,8 @@ describe(`Test: Controls (JSON)`, () => {
       form.setData(overwrite);
 
       // then
-      const timeout = setTimeout(() => {
-        clearTimeout(timeout);
-        expect(form.getData()).to.not.eql(anschrift);
-        expect(form.getData()).to.eql(overwrite);
-        done();
-      }, 500);
+      expect(form.getData()).to.not.eql(anschrift);
+      expect(form.getData()).to.eql(overwrite);
     });
   });
 });

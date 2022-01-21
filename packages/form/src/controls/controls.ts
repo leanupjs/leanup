@@ -145,7 +145,6 @@ export interface InputControlProps {
 }
 
 export class InputControl extends AbstractControl implements InputControlProps {
-  private _debounce = 250;
   private _disabled = false;
   private _label = '';
   private _mandatory = false;
@@ -155,31 +154,17 @@ export class InputControl extends AbstractControl implements InputControlProps {
   private _value: unknown = null;
   private _oldValue: unknown = null;
   private _formatHandler: FormatHandler = new FormatHandler();
-  private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
-    if (properties) {
-      this.debounce = properties.debounce ? properties.debounce : 250;
-      this.disabled = properties.disabled ? properties.disabled : false;
-      this.label = properties.label ? properties.label : '';
-      this.mandatory = properties.mandatory ? properties.mandatory : false;
-      this.placeholder = properties.placeholder ? properties.placeholder : '';
-      this.readonly = properties.readonly ? properties.readonly : false;
-      this.type = properties.type ? properties.type : 'text';
-      this.setValueSync(properties.value ? properties.value : null);
-    }
-  }
-
-  get debounce(): number {
-    return this._debounce;
-  }
-  set debounce(value: number) {
-    if (typeof value === 'number' && isNaN(value) === false && value > 0) {
-      this._debounce = value;
-      this.notify();
-    } else {
-      throw new Error('The debounce of a input control must be a number greater than 0.');
+    if (typeof properties === 'object' && properties !== null) {
+      this.disabled = properties.disabled === true;
+      this.label = typeof properties.label === 'string' ? properties.label : '';
+      this.mandatory = properties.disabled === true;
+      this.placeholder = typeof properties.placeholder === 'string' ? properties.placeholder : '';
+      this.readonly = properties.disabled === true;
+      this.type = typeof properties.type === 'string' ? properties.type : 'text';
+      this.value = properties.value !== undefined ? properties.value : null;
     }
   }
 
@@ -278,18 +263,10 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._value;
   }
   set value(value: unknown) {
-    clearTimeout(this._valueTimeout);
-    this._valueTimeout = setTimeout(() => {
-      clearTimeout(this._valueTimeout);
-      this.setValueSync(value);
-      this.notify();
-    }, this.debounce);
-  }
-
-  public setValueSync(value: unknown) {
     this._oldValue = this._value;
     this._value = value;
     this.validate(value);
+    this.notify();
   }
 
   get modelValue(): unknown {
@@ -416,7 +393,7 @@ export class FormControl extends AbstractControl {
       if (control instanceof FormControl) {
         control.setData(data[control.name]);
       } else if (control instanceof InputControl) {
-        control.setValueSync(data[control.name]);
+        control.value = data[control.name];
       } else {
         throw new Error(`The control is neither an instance of FormControl or InputControl.`);
       }
@@ -451,9 +428,8 @@ export class FormFactory {
           form.addControl(FormFactory.createForm(name, json[name]));
         } else {
           const input = new InputControl(name, {
-            value: <unknown>json[name], // does not work?!
+            value: <unknown>json[name],
           });
-          input.setValueSync(<unknown>json[name]);
           form.addControl(input);
         }
       }

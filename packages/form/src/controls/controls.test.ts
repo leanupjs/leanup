@@ -219,26 +219,21 @@ describe(`Test: Controls`, () => {
       handler.formatters.add(DEFAULT_IBAN_FORMATTER);
     });
 
-    it(`Add FormatHandler to InputControl`, (done) => {
+    it(`Add FormatHandler to InputControl`, () => {
       // given
       input.value = 'DE53734514500036064418';
-      const timeout = setTimeout(() => {
-        clearTimeout(timeout);
 
-        expect(input.value).equal('DE53734514500036064418');
-        expect(input.modelValue).equal('DE53734514500036064418');
-        expect(input.viewValue).equal('DE53734514500036064418');
+      expect(input.value).equal('DE53734514500036064418');
+      expect(input.modelValue).equal('DE53734514500036064418');
+      expect(input.viewValue).equal('DE53734514500036064418');
 
-        // when
-        input.setFormatHandler(handler);
+      // when
+      input.setFormatHandler(handler);
 
-        // then
-        expect(input.value).equal('DE53734514500036064418');
-        expect(input.modelValue).equal('DE53734514500036064418');
-        expect(input.viewValue).equal('DE53 7345 1450 0036 0644 18');
-
-        done();
-      }, 500);
+      // then
+      expect(input.value).equal('DE53734514500036064418');
+      expect(input.modelValue).equal('DE53734514500036064418');
+      expect(input.viewValue).equal('DE53 7345 1450 0036 0644 18');
     });
   });
 
@@ -341,7 +336,7 @@ describe(`Test: Controls`, () => {
       expect(input.changeListeners.size).equal(1);
     });
 
-    it(`Test Change Listener called`, (done) => {
+    it(`Test Change Listener called`, () => {
       // given
       expect(form.changeListeners.size).equal(1);
       expect(input.changeListeners.size).equal(1);
@@ -353,14 +348,8 @@ describe(`Test: Controls`, () => {
       input.value = 'change';
 
       // then
-      const timeout = setTimeout(() => {
-        clearTimeout(timeout);
-
-        // TODO expect(spies.form?.called).to.be.true;
-        expect(spies.input?.called).to.be.true;
-
-        done();
-      }, 500);
+      // TODO expect(spies.form?.called).to.be.true;
+      expect(spies.input?.called).to.be.true;
     });
 
     it(`Remove Change Listener`, () => {
