@@ -388,14 +388,19 @@ export class FormControl extends AbstractControl {
     });
   }
 
-  public setData(data: Record<string, any>) {
+  /**
+   * Generics auf T anwenden, so dass alle Property-Typen auch optional null sein dürfen.
+   */
+  public setData<T extends Record<string, any>>(data: T) {
     this.controls.forEach((control: FormControl | InputControl) => {
-      if (control instanceof FormControl) {
-        control.setData(data[control.name]);
-      } else if (control instanceof InputControl) {
-        control.value = data[control.name];
-      } else {
-        throw new Error(`The control is neither an instance of FormControl or InputControl.`);
+      if (data[control.name] !== undefined) {
+        if (control instanceof FormControl) {
+          control.setData(data[control.name]);
+        } else if (control instanceof InputControl) {
+          control.value = data[control.name];
+        } else {
+          throw new Error(`The control is neither an instance of FormControl or InputControl.`);
+        }
       }
     });
   }
