@@ -24,7 +24,7 @@
     "@types/sinon": "10.0.8",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
-    "esbuild": "0.14.11",
+    "esbuild": "0.14.12",
     "esbuild-register": "3.3.2",
     "inferno": "7.4.11",
     "jsdom": "18.1.1",
