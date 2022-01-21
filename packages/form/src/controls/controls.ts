@@ -104,7 +104,7 @@ abstract class AbstractControl {
       this._errors.add(error);
     });
     this._parentForms.forEach((formControl: FormControl) => {
-      formControl.validate(value);
+      formControl.validate(formControl.getData());
     });
   }
 
