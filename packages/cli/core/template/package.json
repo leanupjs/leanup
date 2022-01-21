@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.2.23",
+  "version": "1.2.24",
   "description": "",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha",
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.2.23",
+    "@leanup/form": "1.2.24",
     "@leanup/lib": "1.2.23",
     "@leanup/openapi-demo": "1.2.22",
     "navigo": "8.11.1",
