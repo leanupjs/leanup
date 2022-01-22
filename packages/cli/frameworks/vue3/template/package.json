@@ -35,13 +35,13 @@
     "@leanup/lib": "1.0.161",
     "navigo": "8.11.1",
     "rxjs": "7.5.2",
-    "vue": "3.2.27"
+    "vue": "3.2.28"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.161",
     "@leanup/cli-vue3": "1.0.161",
     "@leanup/git-hooks": "1.0.160",
-    "@vue/compiler-sfc": "3.2.27",
+    "@vue/compiler-sfc": "3.2.28",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.15",
     "geckodriver": "2.0.4",
