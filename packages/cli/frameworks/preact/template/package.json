@@ -1,6 +1,6 @@
 {
   "name": "@template/preact",
-  "version": "1.0.161",
+  "version": "1.0.162",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,16 +31,16 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.161",
-    "@leanup/lib": "1.0.161",
+    "@leanup/form": "1.0.162",
+    "@leanup/lib": "1.0.162",
     "navigo": "8.11.1",
     "preact": "10.6.4",
     "rxjs": "7.5.2"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.161",
-    "@leanup/cli-preact": "1.0.161",
-    "@leanup/git-hooks": "1.0.160",
+    "@leanup/cli": "1.0.162",
+    "@leanup/cli-preact": "1.0.162",
+    "@leanup/git-hooks": "1.0.162",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.16",
     "geckodriver": "2.0.4",
