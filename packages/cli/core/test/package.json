@@ -30,7 +30,7 @@
     "@types/mocha": "8.2.3",
     "@types/sinon": "10.0.8",
     "babel-plugin-istanbul": "6.1.1",
-    "chai": "4.3.5",
+    "chai": "4.3.6",
     "cross-env": "7.0.3",
     "esm": "3.2.25",
     "jsdom": "16.7.0",
