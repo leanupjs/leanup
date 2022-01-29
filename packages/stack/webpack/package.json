@@ -42,7 +42,7 @@
   "dependencies": {
     "@swc/core": "1.2.135",
     "copy-modules-webpack-plugin": "2.2.1",
-    "copy-webpack-plugin": "10.2.2",
+    "copy-webpack-plugin": "10.2.3",
     "css-loader": "6.5.1",
     "esbuild-loader": "2.18.0",
     "file-loader": "6.2.0",
