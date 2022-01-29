@@ -44,7 +44,6 @@ const reportDir = path.resolve(process.cwd(), '.reports/nightwatch');
 module.exports = {
   src_folders: ['tests/e2e'],
   output_folder: reportDir,
-  globals_path: path.resolve(process.cwd(), 'nightwatch.global.js'),
   test_settings: {
     default: {
       screenshots: {
