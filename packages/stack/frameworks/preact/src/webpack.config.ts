@@ -33,7 +33,7 @@ const SWC_LOADER_TSX = {
 };
 
 export default function webpackPreactConfig(env: any, argv: any): Object {
-  const config: any = webpackConfig(env, argv, [SWC_LOADER_TSX]);
+  const config: any = webpackConfig(env, argv, [ESBUILD_LOADER_TSX]);
 
   config.resolve.alias['react'] = 'preact/compat';
   config.resolve.alias['react-dom'] = 'preact/compat';

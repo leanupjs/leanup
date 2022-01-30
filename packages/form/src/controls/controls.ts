@@ -10,7 +10,6 @@ abstract class AbstractControl {
   private readonly _parentForms: Set<FormControl> = new Set<FormControl>();
   private _name = 'unnamed';
   private _validationHandler: ValidationHandler = new ValidationHandler();
-  private _notifyTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
 
   constructor(name: string) {
     this.name = name;
@@ -95,7 +94,7 @@ abstract class AbstractControl {
   protected setValidationHandler(validationHandler: ValidationHandler, value: unknown = null) {
     this._validationHandler = validationHandler;
     this.validate(value);
-    // this.notify(); redundant?!
+    this.notify();
   }
 
   protected validate(value: unknown) {
@@ -105,22 +104,21 @@ abstract class AbstractControl {
       this._errors.add(error);
     });
     this._parentForms.forEach((formControl: FormControl) => {
-      formControl.validate(value);
+      formControl.validate(formControl.getData());
     });
   }
 
-  protected notify() {
-    if (this._notifyTimeout) {
-      clearTimeout(this._notifyTimeout);
-    }
-    this._notifyTimeout = setTimeout(() => {
-      this.changeListeners.forEach((changeListener: Function) => {
-        changeListener();
-      });
-      this._parentForms.forEach((form: FormControl) => {
-        form.notify();
-      });
-    }, 250);
+  protected notify(...args: unknown[]) {
+    this.changeListeners.forEach((changeListener: Function) => {
+      changeListener(...args);
+    });
+    this._parentForms.forEach((form: FormControl) => {
+      /**
+       * ATTENTION: That is a super class of FormControl,
+       *            this implementation is not so good.
+       */
+      form.notify(form.getData());
+    });
   }
 }
 
@@ -136,19 +134,18 @@ export enum InputControlTypes {
   text = 'text',
 }
 export interface InputControlProps {
-  info?: string;
-  label?: string;
+  debounce?: number;
   disabled?: boolean;
+  label?: string;
   mandatory?: boolean;
-  readonly?: boolean;
   placeholder?: string;
+  readonly?: boolean;
   type?: string;
   value?: unknown;
 }
 
 export class InputControl extends AbstractControl implements InputControlProps {
   private _disabled = false;
-  private _info = '';
   private _label = '';
   private _mandatory = false;
   private _placeholder = '';
@@ -156,32 +153,18 @@ export class InputControl extends AbstractControl implements InputControlProps {
   private _type = 'text';
   private _value: unknown = null;
   private _oldValue: unknown = null;
-  private _valueTimeout: NodeJS.Timeout = setTimeout(() => {}, 0);
   private _formatHandler: FormatHandler = new FormatHandler();
 
   constructor(name: string, properties?: InputControlProps) {
     super(name);
-    if (properties) {
-      this.info = properties.info ? properties.info : '';
-      this.label = properties.label ? properties.label : '';
-      this.disabled = properties.disabled ? properties.disabled : false;
-      this.mandatory = properties.mandatory ? properties.mandatory : false;
-      this.readonly = properties.readonly ? properties.readonly : false;
-      this.placeholder = properties.placeholder ? properties.placeholder : '';
-      this.type = properties.type ? properties.type : 'text';
-      this.value = properties.value ? properties.value : null;
-    }
-  }
-
-  get info(): string {
-    return this._info;
-  }
-  set info(value: string) {
-    if (typeof value === 'string') {
-      this._info = value;
-      this.notify();
-    } else {
-      throw new Error('The info of a input control must be a string.');
+    if (typeof properties === 'object' && properties !== null) {
+      this.disabled = properties.disabled === true;
+      this.label = typeof properties.label === 'string' ? properties.label : '';
+      this.mandatory = properties.disabled === true;
+      this.placeholder = typeof properties.placeholder === 'string' ? properties.placeholder : '';
+      this.readonly = properties.disabled === true;
+      this.type = typeof properties.type === 'string' ? properties.type : 'text';
+      this.value = properties.value !== undefined ? properties.value : null;
     }
   }
 
@@ -282,13 +265,8 @@ export class InputControl extends AbstractControl implements InputControlProps {
   set value(value: unknown) {
     this._oldValue = this._value;
     this._value = value;
-    if (this._valueTimeout) {
-      clearTimeout(this._valueTimeout);
-    }
-    this._valueTimeout = setTimeout(() => {
-      this.validate(value); // execution?!
-      this.notify();
-    }, 0);
+    this.validate(value);
+    this.notify();
   }
 
   get modelValue(): unknown {
@@ -303,6 +281,10 @@ export class InputControl extends AbstractControl implements InputControlProps {
   }
   set viewValue(value: unknown) {
     this.modelValue = this._formatHandler.parse(value);
+  }
+
+  public notify() {
+    super.notify(this._value, this._oldValue);
   }
 
   public setValidationHandler(validationHandler: ValidationHandler) {
@@ -406,14 +388,19 @@ export class FormControl extends AbstractControl {
     });
   }
 
-  public setData(data: Record<string, any>) {
+  /**
+   * Generics auf T anwenden, so dass alle Property-Typen auch optional null sein dürfen.
+   */
+  public setData<T extends Record<string, any>>(data: T) {
     this.controls.forEach((control: FormControl | InputControl) => {
-      if (control instanceof FormControl) {
-        control.setData(data[control.name]);
-      } else if (control instanceof InputControl) {
-        control.value = data[control.name];
-      } else {
-        throw new Error(`The control is neither an instance of FormControl or InputControl.`);
+      if (data[control.name] !== undefined) {
+        if (control instanceof FormControl) {
+          control.setData(data[control.name]);
+        } else if (control instanceof InputControl) {
+          control.value = data[control.name];
+        } else {
+          throw new Error(`The control is neither an instance of FormControl or InputControl.`);
+        }
       }
     });
   }
@@ -445,8 +432,9 @@ export class FormFactory {
         if (typeof json[name] === 'object' && json[name] !== null) {
           form.addControl(FormFactory.createForm(name, json[name]));
         } else {
-          const input = new InputControl(name);
-          input.value = <unknown>json[name];
+          const input = new InputControl(name, {
+            value: <unknown>json[name],
+          });
           form.addControl(input);
         }
       }

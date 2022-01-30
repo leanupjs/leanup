@@ -29,5 +29,5 @@ const SWC_LOADER_TSX = {
 };
 
 export default function webpackReactConfig(env: any, argv: any): Object {
-  return webpackConfig(env, argv, [SWC_LOADER_TSX]);
+  return webpackConfig(env, argv, [ESBUILD_LOADER_TSX]);
 }

@@ -163,10 +163,10 @@ export default function webpackConfig(_env: any, argv: any, loaders: any[] = [])
     module: {
       rules: [
         STRING_REPLACE_LOADER,
-        // ESBUILD_LOADER_JS,
-        // ESBUILD_LOADER_TS,
-        SWC_LOADER_JS,
-        SWC_LOADER_TS,
+        ESBUILD_LOADER_JS,
+        ESBUILD_LOADER_TS,
+        // SWC_LOADER_JS,
+        // SWC_LOADER_TS,
         FONT_FILE_LOADER,
         IMAGE_FILE_LOADER,
         LESS_LOADER,
