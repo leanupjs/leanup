@@ -174,15 +174,16 @@ export class InputControl extends AbstractControl implements InputControlProps {
   }
   
   valueChangeObservable() {
-    const obs =new Observable(() => {
-      next() {},
-      error() {},
-      complete() {
-        this.changeListener.remove(obs.next);
+    const observable = new Observable((subscriber) => {
+      const internalCallbackOnValueChange = (value) => {
+        subscriber.next(value);
       }
-    }).pipe(debounce(() => timer(1000));
-    this.changeListener.add(obs.next(value));
-    return obs;
+      this.changeListener.add(internalCallbackOnValueChange);
+      return function unsubscribe() {
+        this.changeListener.remove(internalCallbackOnValueChange);
+      };
+    });
+    return observable;
   }
 
   get info(): string {
