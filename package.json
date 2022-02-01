@@ -5,7 +5,7 @@
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/* --ignore-unknown",
     "ncu": "npm run ncu:minor && npm run ncu:patch && npm run ncu:preview",
-    "ncu:minor": "ncu -t minor -u && lerna exec --concurrency 2 --stream -- ncu -t minor -u -x @leanup/*",
+    "ncu:minor": "ncu -t minor -u && lerna exec --concurrency 2 --stream -- ncu -t minor -u -x @leanup/*,typescript",
     "ncu:patch": "ncu -t patch -u && lerna exec --concurrency 2 --stream -- ncu -t patch -u",
     "ncu:preview": "ncu && lerna exec --concurrency 2 --stream -- ncu",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",
@@ -36,24 +36,24 @@
     "commitLimit": false
   },
   "devDependencies": {
-    "@commitlint/cli": "16.0.2",
+    "@commitlint/cli": "14.1.0",
     "@commitlint/config-conventional": "16.0.0",
     "@commitlint/format": "16.0.0",
-    "@typescript-eslint/eslint-plugin": "5.9.1",
-    "@typescript-eslint/parser": "5.9.1",
+    "@typescript-eslint/eslint-plugin": "5.10.1",
+    "@typescript-eslint/parser": "5.10.1",
     "auto-changelog": "2.3.0",
-    "eslint": "8.6.0",
+    "eslint": "8.8.0",
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-json": "3.1.0",
     "husky": "7.0.4",
     "lerna": "4.0.0",
-    "lint-staged": "12.1.7",
-    "npm-check-updates": "12.1.0",
+    "lint-staged": "12.3.2",
+    "npm-check-updates": "12.2.1",
     "prettier": "2.5.1",
     "prettier-plugin-svelte": "2.6.0",
-    "svelte": "3.46.1",
-    "typescript": "4.5.4",
-    "vitepress": "0.21.4"
+    "svelte": "3.46.3",
+    "typescript": "4.5.5",
+    "vitepress": "0.21.6"
   },
   "cpu": [
     "x64"

@@ -1,6 +1,6 @@
 {
   "name": "@leanup/git-hooks",
-  "version": "2.0.0-rc.32",
+  "version": "2.0.0-rc.35",
   "description": "This module contains some nice tools to organize git hooks for NodeJs projects.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -23,11 +23,11 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@commitlint/cli": "16.0.2",
+    "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.0.0",
     "@commitlint/format": "16.0.0",
     "husky": "7.0.4",
-    "lint-staged": "12.1.7"
+    "lint-staged": "12.3.2"
   },
   "peerDependencies": {
     "eslint": "^8",
