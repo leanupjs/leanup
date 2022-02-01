@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import { SinonSpy, spy } from 'sinon';
+import { Observable } from 'rxjs';
 import { FormFactory } from '.';
 
 import { FormatHandler } from '../handlers/format.handler';
@@ -364,6 +365,28 @@ describe(`Test: Controls`, () => {
       // then
       expect(form.changeListeners.size).equal(0);
       expect(input.changeListeners.size).equal(0);
+    });
+  });
+
+  describe.only('Test Observable', () => {
+    let form: FormControl;
+    let input: InputControl;
+    let value$: Observable<unknown> | null;
+
+    before(() => {
+      // given
+      form = new FormControl('form');
+      input = new InputControl('input');
+      form.addControl(input);
+      input.getValueChangeObservable().subscribe({
+        next: console.log,
+      });
+    });
+
+    it(`Value changed`, () => {
+      // given
+      input.value = 'A';
+      input.value = 'B';
     });
   });
 
