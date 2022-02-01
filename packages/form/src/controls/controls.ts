@@ -3,6 +3,8 @@ import { SetOf } from '@leanup/lib';
 import { FormatHandler } from '../handlers/format.handler';
 import { ValidationHandler } from '../handlers/validation.handler';
 
+import { Observable } from 'rxjs';
+
 abstract class AbstractControl {
   public readonly changeListeners: SetOf<Function> = new SetOf(Function);
 
@@ -259,6 +261,19 @@ export class InputControl extends AbstractControl implements InputControlProps {
     return this._oldValue;
   }
 
+  getValueChangeObservable(): Observable<unknown> {
+    const observable = new Observable((subscriber) => {
+      const internalCallbackOnValueChange = (value: unknown) => {
+        subscriber.next(value);
+      };
+      const unsubscribe = () => {
+        this.changeListeners.remove(internalCallbackOnValueChange);
+      };
+      this.changeListeners.add(internalCallbackOnValueChange);
+      return unsubscribe;
+    });
+    return observable;
+  }
   get value(): unknown {
     return this._value;
   }
