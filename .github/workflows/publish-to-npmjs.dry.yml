@@ -13,7 +13,7 @@ env:
   access: public
   alias: leanupjs
   registry: https://npm.pkg.github.com
-  tag: latest
+  tag: latest-1.2
   token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
