@@ -13,14 +13,14 @@ env:
   access: public
   alias: leanupjs
   registry: https://npm.pkg.github.com
-  tag: next
+  tag: latest
   token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v2.3.4
       # https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
       - name: Replace alias in all package.json's
         run: |
@@ -34,11 +34,9 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2.5.1
         with:
-          node-version: '16.x'
+          node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
-      - name: Clear npm cache
-        run: npm cache clean -f
       - name: Install and publish only @${{env.alias}}/stack
         run: |
           npm install
