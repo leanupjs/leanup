@@ -1,9 +1,9 @@
 const { resolve } = require('path');
 const { replaceCodePlugin } = require('vite-plugin-replace');
-const { REPLACEMENTS } = require('@leanup/stack/lib/replacements');
+const { REPLACEMENTS } = require('@leanup/stack');
 
 // https://vitejs.dev/config/#server-proxy
-const { PROXIES } = require('@leanup/stack/lib/proxies');
+const { PROXIES } = require('@leanup/stack');
 
 // https://vitejs.dev/config/
 module.exports = {
