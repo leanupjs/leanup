@@ -51,7 +51,7 @@
     "@leanup/git-hooks": "1.0.162",
     "@ngtools/webpack": "11.2.18",
     "chromedriver": "90.0.1",
-    "cssnano": "5.0.16",
+    "cssnano": "5.0.17",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",
