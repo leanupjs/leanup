@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-addons",
-  "version": "1.2.26",
+  "version": "1.2.27",
   "description": "This module contains some nice addons for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -44,7 +44,7 @@
     "compression-webpack-plugin": "9.2.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.2.26",
+    "@leanup/cli": "1.2.27",
     "@types/node": "16.11.22",
     "typescript": "4.4.4"
   },
