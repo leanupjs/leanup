@@ -35,7 +35,7 @@
     "@leanup/lib": "1.0.163",
     "@vue/composition-api": "0.6.7",
     "navigo": "8.11.1",
-    "rxjs": "7.5.2",
+    "rxjs": "7.5.3",
     "vue": "2.6.14",
     "vue-template-compiler": "2.6.14"
   },
