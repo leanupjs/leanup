@@ -1,6 +1,6 @@
 {
   "name": "@template/angularjs",
-  "version": "1.0.164",
+  "version": "1.0.165",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,17 +31,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.164",
-    "@leanup/lib": "1.0.164",
+    "@leanup/form": "1.0.165",
+    "@leanup/lib": "1.0.165",
     "@types/angular": "1.8.4",
     "angular": "1.8.2",
     "navigo": "8.11.1",
     "rxjs": "7.5.4"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.164",
-    "@leanup/cli-angularjs": "1.0.164",
-    "@leanup/git-hooks": "1.0.164",
+    "@leanup/cli": "1.0.165",
+    "@leanup/cli-angularjs": "1.0.165",
+    "@leanup/git-hooks": "1.0.165",
     "chromedriver": "90.0.1",
     "cssnano": "5.0.17",
     "geckodriver": "2.0.4",
