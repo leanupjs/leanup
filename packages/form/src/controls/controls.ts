@@ -160,7 +160,7 @@ export class InputControl extends AbstractControl implements InputControlProps {
     if (typeof properties === 'object' && properties !== null) {
       this.disabled = properties.disabled === true;
       this.label = typeof properties.label === 'string' ? properties.label : '';
-      this.mandatory = properties.disabled === true;
+      this.mandatory = properties.mandatory === true;
       this.placeholder = typeof properties.placeholder === 'string' ? properties.placeholder : '';
       this.readonly = properties.disabled === true;
       this.type = typeof properties.type === 'string' ? properties.type : 'text';
