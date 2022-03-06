@@ -5,7 +5,7 @@
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/* --ignore-unknown",
     "ncu": "npm run ncu:minor && npm run ncu:patch && npm run ncu:preview",
-    "ncu:minor": "ncu -t minor -u && lerna exec --concurrency 2 --stream -- ncu -t minor -u -x @leanup/*,typescript",
+    "ncu:minor": "ncu -t minor -u && lerna exec --concurrency 2 --stream -- ncu -t minor -u -x @leanup/*",
     "ncu:patch": "ncu -t patch -u && lerna exec --concurrency 2 --stream -- ncu -t patch -u",
     "ncu:preview": "ncu && lerna exec --concurrency 2 --stream -- ncu",
     "pack": "lerna exec --concurrency 2 --ignore=@template/* --stream -- npm install && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm pack",

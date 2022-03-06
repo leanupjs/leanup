@@ -69,7 +69,7 @@
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/prettier": "2.4.4",
-    "typescript": "4.5.5"
+    "typescript": "4.6.2"
   },
   "scripts": {
     "postinstall": "node postinstall.js",
