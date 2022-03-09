@@ -43,7 +43,7 @@
     "@swc/core": "1.2.151",
     "copy-modules-webpack-plugin": "2.2.1",
     "copy-webpack-plugin": "10.2.4",
-    "css-loader": "6.7.0",
+    "css-loader": "6.7.1",
     "esbuild-loader": "2.18.0",
     "file-loader": "6.2.0",
     "less-loader": "10.2.0",
