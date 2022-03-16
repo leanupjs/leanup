@@ -88,7 +88,7 @@
     "nightwatch": "2.0.10",
     "nyc": "15.1.0",
     "postcss": "8.4.11",
-    "prettier": "2.5.1",
+    "prettier": "2.6.0",
     "sass": "1.49.9",
     "sinon": "13.0.1",
     "tslib": "2.3.1"
