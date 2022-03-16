@@ -87,7 +87,7 @@
     "mock-local-storage": "1.1.20",
     "nightwatch": "2.0.10",
     "nyc": "15.1.0",
-    "postcss": "8.4.11",
+    "postcss": "8.4.12",
     "prettier": "2.5.1",
     "sass": "1.49.9",
     "sinon": "13.0.1",
