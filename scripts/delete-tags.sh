@@ -1,11 +1,37 @@
+git tag -l | grep v1. | while read -r line ; do
+  git tag --delete "$line"
+  git push --delete origin "$line"
+done
+
+git tag -l | grep v2. | while read -r line ; do
+  git tag --delete "$line"
+  git push --delete origin "$line"
+done
+
+git tag -l | grep alpha | while read -r line ; do
+  git tag --delete "$line"
+  git push --delete origin "$line"
+done
+
+git tag -l | grep beta | while read -r line ; do
+  git tag --delete "$line"
+  git push --delete origin "$line"
+done
+
+git tag -l | grep webpack | while read -r line ; do
+  git tag --delete "$line"
+  git push --delete origin "$line"
+done
+
+
 git tag -l | grep v1.
 git tag -l | grep v2.
 git tag -l | grep alpha
 git tag -l | grep beta
 git tag -l | grep webpack
 
-git tag --delete "$1"
-git push --delete origin "$1"
+// git tag --delete "$1"
+// git push --delete origin "$1"
 
 # for i in {0..80}
 # do
