@@ -12,8 +12,8 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    nodeResolve(),
     commonjs(),
+    nodeResolve(),
     typescript({
       exclude: ['**/*.test.ts'],
     }),
