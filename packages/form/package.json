@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "main": "cjs/index.js",
   "module": "esm/index.js",
+  "unpkg": "umd/index.js",
   "types": "types/index.d.ts",
   "exports": {
     "require": "./cjs/index.js",
@@ -23,6 +24,7 @@
     "@leanup/lib": "1.3.9"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "8.3.1",
     "@types/chai": "4.3.0",
     "@types/mocha": "9.1.0",
     "@types/node": "17.0.23",
@@ -36,6 +38,8 @@
     "mocha": "9.2.2",
     "mock-local-storage": "1.1.20",
     "nyc": "15.1.0",
+    "rollup": "2.70.1",
+    "rollup-plugin-terser": "7.0.2",
     "sinon": "13.0.1",
     "typescript": "4.5.5"
   },
@@ -43,7 +47,7 @@
     "build:cjs": "tsc -m commonjs --outDir cjs -p tsconfig.build.json",
     "build:esm": "tsc -m esnext --outDir esm -p tsconfig.build.json",
     "build:types": "tsc -d --outDir types -p tsconfig.build.json && rm -rf types/*.js types/*.map types/**/*.js types/**/*.map",
-    "build:umd": "tsc -m umd --outDir umd -p tsconfig.build.json",
+    "build:umd": "rollup -c rollup.config.js",
     "build:cleanup": "rm -rf cjs esm types umd",
     "build": "npm run build:cleanup && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:umd",
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
