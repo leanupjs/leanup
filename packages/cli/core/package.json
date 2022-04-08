@@ -62,9 +62,9 @@
     "leanup": "lib/cli.js"
   },
   "dependencies": {
-    "@babel/core": "7.17.8",
+    "@babel/core": "7.17.9",
     "@babel/plugin-proposal-class-properties": "7.16.7",
-    "@babel/plugin-proposal-decorators": "7.17.8",
+    "@babel/plugin-proposal-decorators": "7.17.9",
     "@babel/plugin-proposal-optional-chaining": "7.16.7",
     "@babel/preset-env": "7.16.11",
     "@babel/preset-typescript": "7.16.7",
@@ -88,7 +88,7 @@
     "postcss": "8.4.12",
     "postcss-loader": "4.3.0",
     "prettier": "2.6.2",
-    "sass": "1.49.11",
+    "sass": "1.50.0",
     "sass-loader": "10.2.1",
     "string-replace-loader": "2.3.0",
     "style-loader": "2.0.0",

@@ -48,7 +48,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.169",
+    "@leanup/cli": "~1.0.170",
     "preact": "^10"
   },
   "scripts": {
