@@ -48,7 +48,7 @@
     "husky": "7.0.4",
     "lerna": "4.0.0",
     "lint-staged": "11.2.6",
-    "npm-check-updates": "12.5.8",
+    "npm-check-updates": "12.5.9",
     "prettier": "2.6.2",
     "prettier-plugin-svelte": "2.7.0",
     "svelte": "3.47.0",
