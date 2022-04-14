@@ -41,7 +41,7 @@
     "nyc": "15.1.0",
     "preact": "10.7.1",
     "react": "18.0.0",
-    "sinon": "13.0.1",
+    "sinon": "13.0.2",
     "typescript": "4.6.3"
   },
   "scripts": {
