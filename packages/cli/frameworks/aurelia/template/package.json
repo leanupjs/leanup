@@ -33,7 +33,7 @@
   "dependencies": {
     "@leanup/form": "1.0.171",
     "@leanup/lib": "1.0.171",
-    "aurelia-bootstrapper": "2.3.3",
+    "aurelia-bootstrapper": "2.4.0",
     "aurelia-framework": "1.4.1",
     "navigo": "8.11.1",
     "rxjs": "7.5.5"
