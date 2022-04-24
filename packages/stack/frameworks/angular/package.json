@@ -45,7 +45,7 @@
     "babel-loader": "8.2.5"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "13.3.3",
+    "@angular/compiler-cli": "13.3.4",
     "@leanup/stack-webpack": "2.0.0-rc.47",
     "@types/node": "17.0.25",
     "tslib": "2.3.1",
