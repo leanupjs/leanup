@@ -46,11 +46,11 @@
   },
   "devDependencies": {
     "@types/node": "16.11.27",
-    "tslib": "2.3.1",
+    "tslib": "2.4.0",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.65"
+    "@leanup/stack": "~1.1.66"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
