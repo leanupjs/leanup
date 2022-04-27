@@ -40,7 +40,7 @@
     "inferno": "lib/cli.js"
   },
   "dependencies": {
-    "babel-plugin-inferno": "6.3.0"
+    "babel-plugin-inferno": "6.4.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.172",
