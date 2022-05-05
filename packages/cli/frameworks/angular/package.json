@@ -46,7 +46,7 @@
   },
   "peerDependencies": {
     "@angular/core": ">=8",
-    "@leanup/cli": "~1.0.173",
+    "@leanup/cli": "~1.0.174",
     "@ngtools/webpack": ">=8"
   },
   "scripts": {
