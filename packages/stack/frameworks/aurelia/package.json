@@ -34,7 +34,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "aurelia-webpack-plugin": "5.0.3",
+    "aurelia-webpack-plugin": "5.0.4",
     "html-loader": "3.1.0"
   },
   "devDependencies": {
