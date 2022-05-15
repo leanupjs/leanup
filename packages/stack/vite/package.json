@@ -39,9 +39,6 @@
   "peerDependencies": {
     "@leanup/stack": "~1.2.8"
   },
-  "cpu": [
-    "x64"
-  ],
   "engines": {
     "node": ">=14 <=18",
     "npm": ">=6 <=8"

@@ -75,9 +75,6 @@
     "postinstall": "node postinstall.js",
     "prepack": "cp ../../../README.md template/ && rm -rf lib && tsc -p tsconfig.json && tsc"
   },
-  "cpu": [
-    "x64"
-  ],
   "engines": {
     "node": ">=14 <=18",
     "npm": ">=6 <=8"
