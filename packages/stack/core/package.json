@@ -111,7 +111,7 @@
     "prepack": "npm run build"
   },
   "engines": {
-    "node": ">=14 <18",
-    "npm": ">=6 <9"
+    "node": ">=14 <=18",
+    "npm": ">=6 <=8"
   }
 }
