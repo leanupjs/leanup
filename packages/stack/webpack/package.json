@@ -40,18 +40,18 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@swc/core": "1.2.183",
+    "@swc/core": "1.2.185",
     "copy-modules-webpack-plugin": "2.2.1",
     "copy-webpack-plugin": "10.2.4",
     "css-loader": "6.7.1",
-    "esbuild-loader": "2.18.0",
+    "esbuild-loader": "2.19.0",
     "file-loader": "6.2.0",
     "less-loader": "10.2.0",
     "mini-css-extract-plugin": "2.6.0",
     "postcss-loader": "6.2.1",
     "sass-loader": "12.6.0",
     "string-replace-loader": "3.1.0",
-    "swc-loader": "0.2.0",
+    "swc-loader": "0.2.1",
     "webpack": "5.72.1",
     "webpack-cli": "4.9.2",
     "webpack-dev-server": "4.9.0"
