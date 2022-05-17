@@ -14,7 +14,7 @@ module.exports = {
     branches: [50, 75],
     statements: [50, 75],
   },
-  sourceMap: false,
+  sourceMap: true,
   instrument: true,
   statements: 50,
   branches: 50,
