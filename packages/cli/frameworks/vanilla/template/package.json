@@ -41,7 +41,7 @@
     "@leanup/cli-vanilla": "1.0.176",
     "@leanup/git-hooks": "1.0.176",
     "chromedriver": "90.0.1",
-    "cssnano": "5.1.8",
+    "cssnano": "5.1.9",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",
