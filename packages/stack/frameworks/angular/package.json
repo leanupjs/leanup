@@ -45,14 +45,14 @@
     "babel-loader": "8.2.5"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "13.3.9",
+    "@angular/compiler-cli": "13.3.10",
     "@leanup/stack-webpack": "1.2.40",
     "@types/node": "16.11.36",
     "tslib": "2.4.0",
     "typescript": "4.4.4"
   },
   "peerDependencies": {
-    "@angular/compiler-cli": "13.3.9",
+    "@angular/compiler-cli": "13.3.10",
     "@angular/core": "13.0.1",
     "@leanup/stack-webpack": "~1.2.8",
     "@ngtools/webpack": "13.0.2"
