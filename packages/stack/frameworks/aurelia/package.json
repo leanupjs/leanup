@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@leanup/stack-webpack": "2.0.0-rc.52",
-    "@types/node": "17.0.35",
+    "@types/node": "17.0.36",
     "tslib": "2.4.0",
     "typescript": "4.7.2"
   },
