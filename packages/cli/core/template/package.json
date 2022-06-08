@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.1.72",
+  "version": "1.1.73",
   "description": "",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha",
@@ -29,18 +29,18 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.1.72",
-    "@leanup/lib": "1.1.72",
+    "@leanup/form": "1.1.73",
+    "@leanup/lib": "1.1.73",
     "navigo": "8.11.1",
     "rxjs": "7.5.5"
   },
   "devDependencies": {
-    "@leanup/cli": "1.1.72",
-    "@leanup/git-hooks": "1.1.72",
-    "@leanup/stack": "1.1.72",
-    "@leanup/stack-snowpack": "1.1.72",
-    "@leanup/stack-vite": "1.1.72",
-    "@leanup/stack-webpack": "1.1.72",
+    "@leanup/cli": "1.1.73",
+    "@leanup/git-hooks": "1.1.73",
+    "@leanup/stack": "1.1.73",
+    "@leanup/stack-snowpack": "1.1.73",
+    "@leanup/stack-vite": "1.1.73",
+    "@leanup/stack-webpack": "1.1.73",
     "@tailwindcss/jit": "0.1.18",
     "chromedriver": "91.0.1",
     "npm-check-updates": "11.8.5",
