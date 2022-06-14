@@ -41,7 +41,7 @@
     "string-replace-loader": "3.1.0",
     "style-loader": "2.0.0",
     "webpack": "5.73.0",
-    "webpack-cli": "4.9.2",
+    "webpack-cli": "4.10.0",
     "webpack-dev-server": "3.11.3"
   },
   "devDependencies": {
@@ -50,7 +50,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.72"
+    "@leanup/stack": "~1.1.73"
   },
   "scripts": {
     "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
