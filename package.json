@@ -49,7 +49,7 @@
     "lerna": "5.1.4",
     "lint-staged": "13.0.1",
     "npm-check-updates": "13.1.5",
-    "prettier": "2.7.0",
+    "prettier": "2.7.1",
     "prettier-plugin-svelte": "2.7.0",
     "svelte": "3.48.0",
     "typescript": "4.7.3",
