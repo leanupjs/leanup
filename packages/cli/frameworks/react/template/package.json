@@ -42,7 +42,7 @@
     "@leanup/cli": "1.0.180",
     "@leanup/cli-react": "1.0.180",
     "@leanup/git-hooks": "1.0.180",
-    "@types/react": "17.0.45",
+    "@types/react": "17.0.46",
     "@types/react-dom": "17.0.17",
     "chromedriver": "90.0.1",
     "cssnano": "5.1.11",
