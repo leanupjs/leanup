@@ -34,7 +34,7 @@
     "@leanup/form": "1.0.181",
     "@leanup/lib": "1.0.181",
     "navigo": "8.11.1",
-    "preact": "10.8.1",
+    "preact": "10.8.2",
     "rxjs": "7.5.5"
   },
   "devDependencies": {
