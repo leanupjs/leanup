@@ -30,7 +30,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "vite": "2.9.12",
+    "vite": "2.9.13",
     "vite-plugin-replace": "0.1.1"
   },
   "devDependencies": {
