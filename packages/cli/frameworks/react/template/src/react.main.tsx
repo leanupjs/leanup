@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as PACKAGE_JSON from 'react/package.json';
 
 import { run } from './app.run';
@@ -11,6 +11,7 @@ const TYPED_PACKAGE_JSON = typeIt<{ version: string }>(PACKAGE_JSON);
 run('React', TYPED_PACKAGE_JSON.version, () => {
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
   if (htmlDivElement instanceof HTMLDivElement) {
-    ReactDOM.render(<AppComponent />, htmlDivElement);
+    const root = createRoot(htmlDivElement);
+    root.render(<AppComponent />);
   }
 });
