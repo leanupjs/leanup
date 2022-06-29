@@ -1,6 +1,6 @@
 {
   "name": "@template/aurelia",
-  "version": "1.0.181",
+  "version": "1.0.182",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,17 +31,17 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.181",
-    "@leanup/lib": "1.0.181",
+    "@leanup/form": "1.0.182",
+    "@leanup/lib": "1.0.182",
     "aurelia-bootstrapper": "2.4.0",
     "aurelia-framework": "1.4.1",
     "navigo": "8.11.1",
     "rxjs": "7.5.5"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.181",
-    "@leanup/cli-aurelia": "1.0.181",
-    "@leanup/git-hooks": "1.0.181",
+    "@leanup/cli": "1.0.182",
+    "@leanup/cli-aurelia": "1.0.182",
+    "@leanup/git-hooks": "1.0.182",
     "chromedriver": "90.0.1",
     "cssnano": "5.1.12",
     "geckodriver": "2.0.4",
