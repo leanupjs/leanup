@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.3.21",
+  "version": "1.3.22",
   "dependencies": {
     "@angular/common": "13.3.11",
     "@angular/compiler": "13.3.11",
@@ -14,8 +14,8 @@
     "zone.js": "0.11.6"
   },
   "devDependencies": {
-    "@leanup/cli-angular": "1.3.21",
-    "@leanup/stack-angular": "1.3.21",
+    "@leanup/cli-angular": "1.3.22",
+    "@leanup/stack-angular": "1.3.22",
     "@ngtools/webpack": "13.3.8",
     "typescript": "4.5.5"
   }
