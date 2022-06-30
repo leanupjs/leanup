@@ -75,7 +75,7 @@
     "@typescript-eslint/parser": "5.30.0",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.14.47",
+    "esbuild": "0.14.48",
     "esbuild-register": "3.3.3",
     "eslint": "8.18.0",
     "eslint-plugin-html": "6.2.0",
