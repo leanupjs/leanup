@@ -2,7 +2,7 @@
   "name": "@template/lit-element",
   "version": "1.2.45",
   "dependencies": {
-    "lit-element": "3.2.0"
+    "lit-element": "3.2.1"
   },
   "devDependencies": {
     "@leanup/cli-lit-element": "1.2.45",
