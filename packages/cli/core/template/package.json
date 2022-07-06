@@ -41,7 +41,7 @@
     "@leanup/stack": "2.0.0-rc.58",
     "@leanup/stack-webpack": "2.0.0-rc.58",
     "chromedriver": "103.0.0",
-    "npm-check-updates": "14.1.1",
+    "npm-check-updates": "15.0.4",
     "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
     "typescript": "4.7.4"
