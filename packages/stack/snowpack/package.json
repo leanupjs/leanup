@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-snowpack",
-  "version": "2.0.0-rc.57",
+  "version": "2.0.0-rc.58",
   "description": "This module contains all snowpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -39,7 +39,7 @@
     "snowpack-plugin-replace": "1.0.4"
   },
   "devDependencies": {
-    "@leanup/stack": "2.0.0-rc.57"
+    "@leanup/stack": "2.0.0-rc.58"
   },
   "peerDependencies": {
     "@leanup/stack": "~2.0.0-rc.20"
