@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-react",
-  "version": "1.0.182",
+  "version": "1.0.183",
   "description": "This package contains the React framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -44,7 +44,7 @@
     "@babel/preset-react": "7.18.6"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.182",
+    "@leanup/cli": "1.0.183",
     "@types/node": "15.14.9",
     "typescript": "4.3.5"
   },
