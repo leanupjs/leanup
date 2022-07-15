@@ -2,7 +2,7 @@
   "name": "@template/svelte",
   "version": "1.1.77",
   "dependencies": {
-    "svelte": "3.48.0"
+    "svelte": "3.49.0"
   },
   "devDependencies": {
     "@leanup/cli-svelte": "1.1.77",
