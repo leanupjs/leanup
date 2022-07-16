@@ -33,7 +33,7 @@
   "dependencies": {
     "@snowpack/plugin-postcss": "1.4.3",
     "@snowpack/plugin-sass": "1.4.0",
-    "postcss-cli": "9.1.0",
+    "postcss-cli": "10.0.0",
     "snowpack": "3.8.8",
     "snowpack-plugin-less": "1.0.7",
     "snowpack-plugin-replace": "1.0.4"
