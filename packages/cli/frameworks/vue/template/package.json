@@ -3,11 +3,11 @@
   "version": "1.2.46",
   "dependencies": {
     "@vue/composition-api": "1.7.0",
-    "vue": "2.7.6"
+    "vue": "2.7.7"
   },
   "devDependencies": {
     "@leanup/cli-vue": "1.2.46",
     "@leanup/stack-vue": "1.2.46",
-    "vue-template-compiler": "2.7.6"
+    "vue-template-compiler": "2.7.7"
   }
 }
