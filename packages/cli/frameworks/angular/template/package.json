@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "2.0.0-rc.58",
+  "version": "2.0.0-rc.59",
   "dependencies": {
     "@angular/common": "14.0.6",
     "@angular/compiler": "14.0.6",
@@ -14,8 +14,8 @@
     "zone.js": "0.11.6"
   },
   "devDependencies": {
-    "@leanup/cli-angular": "2.0.0-rc.58",
-    "@leanup/stack-angular": "2.0.0-rc.58",
+    "@leanup/cli-angular": "2.0.0-rc.59",
+    "@leanup/stack-angular": "2.0.0-rc.59",
     "@ngtools/webpack": "14.0.6",
     "typescript": "4.7.4"
   }

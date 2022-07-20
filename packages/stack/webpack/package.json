@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-webpack",
-  "version": "2.0.0-rc.58",
+  "version": "2.0.0-rc.59",
   "description": "This module contains all webpack-related functionalities for the @leanup/stack.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -57,7 +57,7 @@
     "webpack-dev-server": "4.9.3"
   },
   "devDependencies": {
-    "@leanup/stack": "2.0.0-rc.58",
+    "@leanup/stack": "2.0.0-rc.59",
     "@types/node": "18.0.6",
     "tslib": "2.4.0",
     "typescript": "4.7.4"
