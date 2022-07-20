@@ -43,7 +43,7 @@
     "@typescript-eslint/parser": "5.30.7",
     "auto-changelog": "2.4.0",
     "eslint": "8.20.0",
-    "eslint-plugin-html": "6.2.0",
+    "eslint-plugin-html": "7.0.0",
     "eslint-plugin-json": "3.1.0",
     "husky": "8.0.1",
     "lerna": "5.1.8",
