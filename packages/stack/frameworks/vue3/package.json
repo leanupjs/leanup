@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-vue3",
-  "version": "2.0.0-rc.59",
+  "version": "2.0.0-rc.60",
   "description": "This package contains the Vue3 framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -43,7 +43,7 @@
     "vue-loader": "17.0.0"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "2.0.0-rc.59",
+    "@leanup/stack-webpack": "2.0.0-rc.60",
     "@types/node": "18.0.6",
     "typescript": "4.7.4"
   },
