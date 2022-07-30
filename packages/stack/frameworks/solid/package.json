@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-solid",
-  "version": "1.2.46",
+  "version": "1.2.47",
   "description": "This package contains the Solid framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -38,12 +38,12 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@leanup/cli-core-babel": "1.2.46",
+    "@leanup/cli-core-babel": "1.2.47",
     "@snowpack/plugin-babel": "2.1.7",
     "babel-preset-solid": "1.4.8"
   },
   "devDependencies": {
-    "@leanup/stack-webpack": "1.2.46",
+    "@leanup/stack-webpack": "1.2.47",
     "@types/node": "16.11.46",
     "typescript": "4.4.4"
   },
