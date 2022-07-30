@@ -40,11 +40,11 @@
   "dependencies": {
     "@leanup/cli-core-babel": "1.2.46",
     "@snowpack/plugin-babel": "2.1.7",
-    "babel-preset-solid": "1.4.6"
+    "babel-preset-solid": "1.4.8"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.2.46",
-    "@types/node": "16.11.45",
+    "@types/node": "16.11.46",
     "typescript": "4.4.4"
   },
   "peerDependencies": {
