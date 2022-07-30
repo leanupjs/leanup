@@ -9,9 +9,9 @@
     "@angular/forms": "11.2.14",
     "@angular/platform-browser": "11.2.14",
     "@angular/platform-browser-dynamic": "11.2.14",
-    "core-js": "3.23.5",
+    "core-js": "3.24.1",
     "rxjs": "6.6.7",
-    "zone.js": "0.11.6"
+    "zone.js": "0.11.7"
   },
   "devDependencies": {
     "@leanup/cli-angular": "1.1.77",
