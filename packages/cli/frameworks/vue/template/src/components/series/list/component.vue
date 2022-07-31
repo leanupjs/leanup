@@ -37,7 +37,7 @@
 import { ListSerieController } from './controller';
 import CreateSerieComponent from '../create/component.vue';
 import EditSerieComponent from '../edit/component.vue';
-import { ref } from '@vue/composition-api';
+import { ref } from 'vue';
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
 export default {

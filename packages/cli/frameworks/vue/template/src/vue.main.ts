@@ -2,8 +2,6 @@ import Vue, { Component } from 'vue';
 import * as PACKAGE_JSON from 'vue/package.json';
 import { CreateElement, VNode } from 'vue/types/umd';
 
-import VueCompositionApi from '@vue/composition-api';
-
 import { run } from './app.run';
 import App from './components/app/component.vue';
 import { APP_HTML_ELEMENT } from './shares/constant';
@@ -18,8 +16,6 @@ const ENVs = {
 Vue.config.devtools = ENVs.NODE_ENV === 'development';
 
 run('Vue', TYPED_PACKAGE_JSON.version, () => {
-  Vue.use(VueCompositionApi);
-
   const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue');
   if (htmlDivElement instanceof HTMLDivElement) {
     htmlDivElement.appendChild(APP_HTML_ELEMENT);

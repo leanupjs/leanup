@@ -10,7 +10,7 @@
 <script>
 import { CreateSerieController } from './controller';
 import EditorSerieComponent from '../editor/component.vue';
-import { ref } from '@vue/composition-api';
+import { ref } from 'vue';
 
 export default {
   components: {
