@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
-    "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "jsx": "react-jsx"
   },
   "include": ["node_modules/preact/src/index.d.ts"]
 }
