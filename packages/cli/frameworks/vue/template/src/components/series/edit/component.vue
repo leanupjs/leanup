@@ -11,7 +11,7 @@
 <script>
 import { EditSerieController } from './controller';
 import EditorSerieComponent from '../editor/component.vue';
-import { ref, watchEffect } from '@vue/composition-api';
+import { ref, watchEffect } from 'vue';
 
 export default {
   props: ['resolvedRoute'],

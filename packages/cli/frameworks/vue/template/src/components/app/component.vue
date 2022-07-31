@@ -9,13 +9,13 @@
         <img :src="stackImg" alt="Vue Framework" class="m-auto w-24" />
       </a>
     </div>
-    <h1>{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }}</h1>
-    <small>{{ $ctrl.finishedRendering }} ms upcomming time</small>
+    <h1>{{ ctrl.framework.name }} v{{ ctrl.framework.version }}</h1>
+    <small>{{ ctrl.finishedRendering }} ms upcomming time</small>
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
     <edit-serie v-if="resolvedRouteRef.url === 'series/:id/edit'" :resolvedRoute="resolvedRouteRef"></edit-serie>
-    <small>Used filters: {{ date($ctrl.dummies.date) }} | {{ currency($ctrl.dummies.price) }} €</small><br />
-    <small>Build with {{ $ctrl.cli.name }} v{{ $ctrl.cli.version }}</small>
+    <small>Used filters: {{ date(ctrl.dummies.date) }} | {{ currency(ctrl.dummies.price) }} €</small><br />
+    <small>Build with {{ ctrl.cli.name }} v{{ ctrl.cli.version }}</small>
   </div>
 </template>
 
@@ -23,7 +23,7 @@
 import { AppController } from './controller';
 import { RouterService } from '../../services/router/service';
 import InputComponent from '../input/component.vue';
-import { ref } from '@vue/composition-api';
+import { ref } from 'vue';
 import ListSerieComponent from '../series/list/component.vue';
 import CreateSerieComponent from '../series/create/component.vue';
 import EditSerieComponent from '../series/edit/component.vue';
@@ -39,7 +39,7 @@ export default {
     'edit-serie': EditSerieComponent,
   },
   setup() {
-    const $ctrl = new AppController();
+    const ctrl = new AppController();
     const resolvedRouteRef = ref({
       url: 'series',
     });
@@ -53,7 +53,7 @@ export default {
     return {
       frameworkImg: IMG_FRAMEWORK,
       stackImg: IMG_LEANUP,
-      $ctrl,
+      ctrl,
       currency,
       date,
       resolvedRouteRef,
