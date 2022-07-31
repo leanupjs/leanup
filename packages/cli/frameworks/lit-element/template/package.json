@@ -1,11 +1,11 @@
 {
   "name": "@template/lit-element",
-  "version": "1.3.25",
+  "version": "1.3.26",
   "dependencies": {
     "lit-element": "3.2.2"
   },
   "devDependencies": {
-    "@leanup/cli-lit-element": "1.3.25",
+    "@leanup/cli-lit-element": "1.3.26",
     "@leanup/stack-lit-element": "1.3.16"
   }
 }
