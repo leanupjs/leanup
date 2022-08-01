@@ -1,4 +1,4 @@
-import { Component, FormEvent, h, JSX } from 'preact';
+import { Component, FormEvent, JSX } from 'preact';
 
 import { GenericComponent } from '@leanup/lib';
 
