@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-cucumber",
-  "version": "2.0.0-rc.63",
+  "version": "2.0.0-rc.64",
   "description": "This module contains the cucumber feature for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -28,7 +28,7 @@
     "nightwatch-api": "3.0.2"
   },
   "devDependencies": {
-    "@leanup/cli": "2.0.0-rc.63",
+    "@leanup/cli": "2.0.0-rc.64",
     "@types/node": "18.6.3",
     "typescript": "4.7.4"
   },
