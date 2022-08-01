@@ -9,7 +9,7 @@
     "format": "prettier --check \"{src,tests}/**\" --ignore-unknown",
     "lint": "eslint \"{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}\"",
     "reinstall": "npm run remove && npm install",
-    "remove": "rm -rf node_modules package-lock.json",
+    "remove": "rimraf node_modules package-lock.json",
     "update": "ncu -t minor -u && npm install && ncu",
     "build": "cross-env NODE_ENV=production webpack",
     "start": "npm run serve -- --open",
@@ -18,15 +18,9 @@
     "test": "cross-env NODE_ENV=test mocha",
     "prepare:husky": "husky install",
     "commit-msg": "commitlint",
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
-      "eslint"
-    ],
-    "{src,tests}/**": [
-      "prettier --check"
-    ]
+    "pre-commit": "lint-staged",
+		"unused": "ts-prune -e src",
+		"prepare": "rimraf .husky && husky install && husky add .husky/commit-msg \"npx commitlint --edit $1\" && husky add .husky/pre-commit \"npm run lint\" && husky add .husky/pre-commit \"npm run format\" && husky add .husky/pre-commit \"npm run ts-prune\""
   },
   "dependencies": {
     "@leanup/form": "2.0.0-rc.64",
@@ -44,6 +38,7 @@
     "npm-check-updates": "16.0.4",
     "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
+    "rimraf": "3.0.2",
     "typescript": "4.7.4"
   }
 }

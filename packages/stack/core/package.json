@@ -53,9 +53,10 @@
     "sass",
     "scss",
     "sinon",
+    "swc",
     "typescript",
     "spa",
-    "webhint",
+    "unused",
     "workbox"
   ],
   "license": "Apache-2.0",
@@ -91,6 +92,7 @@
     "prettier": "2.7.1",
     "sass": "1.54.0",
     "sinon": "14.0.0",
+    "ts-prune": "0.10.3",
     "tslib": "2.4.0"
   },
   "devDependencies": {
