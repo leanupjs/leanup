@@ -1,4 +1,4 @@
-import { Component, createRef, h, JSX } from 'preact';
+import { Component, createRef, JSX } from 'preact';
 
 import { GenericComponent } from '@leanup/lib';
 
