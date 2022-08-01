@@ -1,6 +1,6 @@
 import 'preact/debug';
 
-import { h, render } from 'preact';
+import { render } from 'preact';
 import * as PACKAGE_JSON from 'preact/package.json';
 
 import { run } from './app.run';
