@@ -1,4 +1,4 @@
-import { h, JSX } from 'preact';
+import { JSX } from 'preact';
 
 import { InputControl } from '@leanup/form/controls/controls';
 import { PreactComponent } from '@leanup/lib/components/preact';
