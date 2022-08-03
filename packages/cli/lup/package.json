@@ -1,6 +1,6 @@
 {
   "name": "lup",
-  "version": "1.0.186",
+  "version": "1.0.187",
   "description": "This package contains the slim CLI to get started with leanupjs.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -24,7 +24,7 @@
     "lup": "lib/cli.js"
   },
   "dependencies": {
-    "@leanup/cli": "1.0.185"
+    "@leanup/cli": "1.0.187"
   },
   "devDependencies": {
     "@types/node": "15.14.9",
