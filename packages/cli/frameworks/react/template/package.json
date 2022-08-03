@@ -1,13 +1,13 @@
 {
   "name": "@template/react",
-  "version": "1.2.49",
+  "version": "1.2.50",
   "dependencies": {
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@leanup/cli-react": "1.2.49",
-    "@leanup/stack-react": "1.2.49",
+    "@leanup/cli-react": "1.2.50",
+    "@leanup/stack-react": "1.2.50",
     "@types/react": "17.0.48",
     "@types/react-dom": "17.0.17"
   }
