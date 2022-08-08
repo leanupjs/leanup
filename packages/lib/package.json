@@ -17,7 +17,7 @@
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@types/chai": "4.3.1",
+    "@types/chai": "4.3.3",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "9.1.1",
     "@types/node": "16.11.47",
@@ -32,7 +32,7 @@
     "mocha": "9.2.2",
     "mock-local-storage": "1.1.23",
     "nyc": "15.1.0",
-    "preact": "10.10.0",
+    "preact": "10.10.1",
     "react": "17.0.2",
     "sinon": "12.0.1",
     "typescript": "4.4.4"
