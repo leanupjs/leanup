@@ -23,9 +23,9 @@
     "@leanup/lib": "2.0.0-rc.65"
   },
   "devDependencies": {
-    "@types/chai": "4.3.1",
+    "@types/chai": "4.3.3",
     "@types/mocha": "9.1.1",
-    "@types/node": "18.6.3",
+    "@types/node": "18.6.4",
     "@types/sinon": "10.0.13",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
