@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@leanup/stack": "2.0.0-rc.65",
-    "@types/node": "18.6.4",
+    "@types/node": "18.6.5",
     "tslib": "2.4.0",
     "typescript": "4.7.4"
   },
