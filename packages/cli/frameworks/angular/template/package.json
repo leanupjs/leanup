@@ -43,7 +43,7 @@
     "core-js": "3.24.1",
     "navigo": "8.11.1",
     "rxjs": "6.6.7",
-    "zone.js": "0.11.7"
+    "zone.js": "0.11.8"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.188",
@@ -51,7 +51,7 @@
     "@leanup/git-hooks": "1.0.188",
     "@ngtools/webpack": "11.2.19",
     "chromedriver": "90.0.1",
-    "cssnano": "5.1.12",
+    "cssnano": "5.1.13",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",
