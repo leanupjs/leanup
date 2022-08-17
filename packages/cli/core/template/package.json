@@ -20,7 +20,7 @@
     "commit-msg": "commitlint",
     "pre-commit": "lint-staged",
     "unused": "ts-prune -e src",
-    "prepare": "rimraf .husky && husky install && husky add .husky/commit-msg \"npx commitlint --edit $1\" && husky add .husky/pre-commit \"npm run lint\" && husky add .husky/pre-commit \"npm run format\" && husky add .husky/pre-commit \"npm run ts-prune\""
+    ":prepare": "rimraf .husky && husky install && husky add .husky/commit-msg \"npx commitlint --edit $1\" && husky add .husky/pre-commit \"npm run lint\" && husky add .husky/pre-commit \"npm run format\" && husky add .husky/pre-commit \"npm run ts-prune\""
   },
   "dependencies": {
     "@leanup/form": "2.0.0-rc.66",
