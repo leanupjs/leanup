@@ -33,7 +33,7 @@
     "@types/sinon": "10.0.13",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.15.3",
+    "esbuild": "0.15.5",
     "esbuild-register": "3.3.3",
     "jsdom": "19.0.0",
     "jsdom-global": "3.0.2",
