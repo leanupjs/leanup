@@ -31,7 +31,7 @@
     "@types/sinon": "10.0.13",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.15.3",
+    "esbuild": "0.15.5",
     "esbuild-register": "3.3.3",
     "inferno": "7.4.11",
     "jsdom": "18.1.1",
@@ -39,7 +39,7 @@
     "mocha": "9.2.2",
     "mock-local-storage": "1.1.23",
     "nyc": "15.1.0",
-    "preact": "10.10.2",
+    "preact": "10.10.3",
     "react": "17.0.2",
     "sinon": "12.0.1",
     "typescript": "4.4.4"
