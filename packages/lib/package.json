@@ -39,7 +39,7 @@
     "mocha": "9.2.2",
     "mock-local-storage": "1.1.23",
     "nyc": "15.1.0",
-    "preact": "10.10.3",
+    "preact": "10.10.4",
     "react": "17.0.2",
     "sinon": "12.0.1",
     "typescript": "4.4.4"
