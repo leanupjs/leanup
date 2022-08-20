@@ -90,12 +90,12 @@
     "nyc": "15.1.0",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
-    "sass": "1.54.4",
+    "sass": "1.54.5",
     "sinon": "12.0.1",
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.49",
+    "@types/node": "16.11.51",
     "tsc": "2.0.4",
     "typescript": "4.4.4"
   },
