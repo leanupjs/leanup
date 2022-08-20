@@ -2,11 +2,11 @@
   "name": "@template/vue",
   "version": "2.0.0-rc.67",
   "dependencies": {
-    "vue": "2.7.8"
+    "vue": "2.7.9"
   },
   "devDependencies": {
     "@leanup/cli-vue": "2.0.0-rc.67",
     "@leanup/stack-vue": "2.0.0-rc.67",
-    "vue-template-compiler": "2.7.8"
+    "vue-template-compiler": "2.7.9"
   }
 }
