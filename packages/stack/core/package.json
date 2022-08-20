@@ -64,12 +64,12 @@
     "nyc": "15.1.0",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
-    "sass": "1.54.4",
+    "sass": "1.54.5",
     "sinon": "11.1.2",
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.49",
+    "@types/node": "16.11.51",
     "typescript": "4.3.2"
   },
   "peerDependencies": {
