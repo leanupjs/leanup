@@ -40,7 +40,7 @@
     "@commitlint/config-conventional": "17.0.3",
     "@commitlint/format": "17.0.0",
     "@typescript-eslint/eslint-plugin": "5.34.0",
-    "@typescript-eslint/parser": "5.34.0",
+    "@typescript-eslint/parser": "5.35.1",
     "auto-changelog": "2.4.0",
     "eslint": "8.22.0",
     "eslint-plugin-html": "7.1.0",
