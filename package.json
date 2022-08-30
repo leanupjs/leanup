@@ -36,11 +36,11 @@
     "commitLimit": false
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.1",
+    "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@commitlint/format": "17.0.0",
-    "@typescript-eslint/eslint-plugin": "5.35.1",
-    "@typescript-eslint/parser": "5.35.1",
+    "@typescript-eslint/eslint-plugin": "5.36.0",
+    "@typescript-eslint/parser": "5.36.0",
     "auto-changelog": "2.4.0",
     "eslint": "8.23.0",
     "eslint-plugin-html": "7.1.0",
