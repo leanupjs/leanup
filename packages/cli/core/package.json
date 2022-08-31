@@ -88,7 +88,7 @@
     "postcss": "8.4.16",
     "postcss-loader": "4.3.0",
     "prettier": "2.7.1",
-    "sass": "1.54.6",
+    "sass": "1.54.7",
     "sass-loader": "10.3.1",
     "string-replace-loader": "2.3.0",
     "style-loader": "2.0.0",
