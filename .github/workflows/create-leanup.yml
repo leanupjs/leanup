@@ -24,7 +24,13 @@ jobs:
           node-version: '14.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
-      - name: Install and publish only @${{env.alias}}/stack-snowpack
+      - name: List
+        run: ls -la
+        working-directory: packages/cli/create-leanup/templates
+      - name: List React
+        run: ls -la
+        working-directory: packages/cli/create-leanup/templates/react
+      - name: Install and publish only create-${{env.alias}}
         run: |
           npm install
           npm pack
