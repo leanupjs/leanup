@@ -17,9 +17,5 @@ create("create-leanup", {
   defaultPackageManager: "pnpm",
   promptForPackageManager: true,
   promptForTemplate: true,
-  after: async ({ installNpmPackage }) => {
-    console.log("Installing additional packages");
-    await installNpmPackage("npm-check-updates rimraf ts-prune");
-  },
   caveat,
 });

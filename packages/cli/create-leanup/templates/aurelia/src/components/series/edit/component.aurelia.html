@@ -1,0 +1,10 @@
+<template>
+  <require from="../editor/component.aurelia"></require>
+  <form submit.delegate="onSubmit()">
+    <h2>Edit a existing measuring serie</h2>
+    <editor-serie editor-form.bind="editorForm"></editor-serie>
+    <button class="primary" type="submit" id="submit">Edit</button>
+    <button class="secondary" type="reset" id="cancel" click.delegate="onCancel()">Abbrechen</button>
+    <button class="danger" id="delete" type="button" click.delegate="onDelete()">Delete</button>
+  </form>
+</template>

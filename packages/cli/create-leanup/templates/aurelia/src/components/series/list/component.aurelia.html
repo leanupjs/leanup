@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <h2>List</h2>
+    <div>
+      <button class="primary" id="add" type="button" click.delegate="add()">Add</button>
+      <button class="secondary" id="start" type="button" if.bind="showPerformanceButton" click.delegate="onStart()">
+        Performance
+      </button>
+    </div>
+    <table repeat.for="element of elements">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Unit</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr repeat.for="serie of measuredSeries">
+          <td>${$index + 1}</td>
+          <td>${serie.getId()}</td>
+          <td>${serie.getTitle()}</td>
+          <td>${serie.getUnit()}</td>
+          <td>
+            <button id="edit-${$index}" type="button" click.delegate="edit(serie)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <small>Duration: ${duration} ms</small>
+  </div>
+</template>
