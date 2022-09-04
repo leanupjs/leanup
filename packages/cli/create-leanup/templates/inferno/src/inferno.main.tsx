@@ -1,5 +1,5 @@
 import { render } from 'inferno';
-import * as PACKAGE_JSON from 'inferno-shared/package.json';
+import * as PACKAGE_JSON from '../node_modules/inferno/package.json';
 
 import { run } from './app.run';
 import { AppComponent } from './components/app/component.inferno';
