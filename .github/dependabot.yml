@@ -21,6 +21,99 @@ updates:
     target-branch: release/2.0
     ignore:
       - dependency-name: '@leanup*'
+
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/angular'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/angularjs'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/aurelia'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/inferno'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/lit-element'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/preact'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/react'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/solid'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/svelte'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/vanilla'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/vue'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+  - package-ecosystem: npm
+    directory: '/packages/cli/create-leanup/templates/vue3'
+    schedule:
+      interval: daily
+    target-branch: release/2.0
+    ignore:
+      - dependency-name: '@leanup*'
+
   - package-ecosystem: npm
     directory: '/packages/cli/core/template'
     schedule:
