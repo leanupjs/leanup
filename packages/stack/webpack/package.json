@@ -40,7 +40,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@swc/core": "1.2.248",
+    "@swc/core": "1.2.249",
     "copy-modules-webpack-plugin": "2.2.1",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.1",
