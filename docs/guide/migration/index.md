@@ -2,7 +2,62 @@
 
 The `@leanup stack` is maximally decoupled, so we can proceed quickly and with only tiny changes.
 
+## Migrate from 1.3 to 2.0
+
+- ✨ Introducing the new leanup create module: `create-leanup`
+- 🔥 The following cli modules are deprecated and have been removed. Because they are now implemented using the create module.
+  - @leanup/cli
+  - @leanup/cli-angular
+  - @leanup/cli-angularjs
+  - @leanup/cli-aurelia
+  - @leanup/cli-inferno
+  - @leanup/cli-lit-element
+  - @leanup/cli-preact
+  - @leanup/cli-react
+  - @leanup/cli-solid
+  - @leanup/cli-vanilla
+  - @leanup/cli-vue
+  - @leanup/cli-vue3
+- 🔥 The following plugin modules are deprecated and have been removed.
+  - @leanup/cli-addons
+  - @leanup/cli-graphql
+  - @leanup/cli-webhint
+- 🔧 We update all used modules and their configuration while preserving the stack behavior.
+- 🔧 We switched to the webpack assets module: <https://webpack.js.org/guides/asset-modules/>
+- 🔥 We removed the deprecated snowpack bundler: <https://www.snowpack.dev/>
+
+### Migrate
+
+You can upgrade the stack to version 2.0 without any changes. Please remove all outdated packages first.
+
+## Migrate from 1.2 to 1.3
+
+There are no significate changes.
+
+### Migrate
+
+Follow the steps below to update the stack.
+
+#### Fetch changes
+
+```bash
+> git checkout -b chore/update-leanup-stack-to-v1.3
+> npm i -D @leanup/cli@^1.3 @leanup/cli-<framework>@^1.3
+> npx <framework> create --only-config --no-install --overwrite
+```
+
+Available for 12 Frameworks: `angular`, `angularjs`, `aurelia`, `inferno`, `lit-element`, `preact`, `react`, `solid`, `svelte`, `vanilla`, `vue` and `vue3`
+
+#### Clearing changes
+
+After the changes have been fetched, the changed files must be reviewed. Some changes can then be corrected again.
+
+#### Install dependencies
+
+Now execute `npm install`.
+
 ## Migrate from 1.1 to 1.2
+
 1. ✋ The inline css inside the `main.js` will extract in seperate artifact file (`main.css`). (CSP)
 2. ✋ Add copy public folder to dist (`copy-webpack-plugin`)
 3. ✋ add `"type": "module"` in the `package.json` of your own npm modules (required by `mocha` v9)
@@ -16,10 +71,10 @@ The `@leanup stack` is maximally decoupled, so we can proceed quickly and with o
 2. ⛔ `cssnano` dependency was removed from default template, it is to handle in project scope
 3. ⛔ `postcss.config.js` file was removed from stack, it is to handle in project scope
 4. ⛔ `InfernoComponent`, `PreactComponent` and `ReactComponent` are removed from `@leanup/lib`. use the default `Component` classes from `Inferno`, `Preact` or `React`
-5. ⛔ you should replace all import path like `from '@leanup/lib/...';` to `from '@leanup/lib';` and  `from '@leanup/form/...';` to `from '@leanup/form';`<br><br>
-Regular expression: `/(from ('|")@leanup\/(lib|form))[^'|"]+/g`<br>
-Replacement: $1<br><br>
-![An image](../../assets/leanup-migrate-1.2-module.png)
+5. ⛔ you should replace all import path like `from '@leanup/lib/...';` to `from '@leanup/lib';` and `from '@leanup/form/...';` to `from '@leanup/form';`<br><br>
+   Regular expression: `/(from ('|")@leanup\/(lib|form))[^'|"]+/g`<br>
+   Replacement: $1<br><br>
+   ![An image](../../assets/leanup-migrate-1.2-module.png)
 
 ### Migrate
 
