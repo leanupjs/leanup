@@ -29,7 +29,8 @@
     "lean",
     "compiler",
     "transpiler",
-    "postcss"
+    "postcss",
+    "assets"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -45,7 +46,6 @@
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.1",
     "esbuild-loader": "2.20.0",
-    "file-loader": "6.2.0",
     "less-loader": "11.0.0",
     "mini-css-extract-plugin": "2.6.1",
     "postcss-loader": "7.0.1",

@@ -61,25 +61,11 @@ const SWC_LOADER_TS = {
 };
 const FONT_FILE_LOADER = {
   test: /\.(woff|woff2|eot|ttf|otf)$/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        outputPath: 'assets/fonts',
-      },
-    },
-  ],
+  type: 'asset/resource',
 };
 const IMAGE_FILE_LOADER = {
   test: /\.(png|svg|jpg|jpeg|gif)$/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        outputPath: 'assets/images',
-      },
-    },
-  ],
+  type: 'asset/resource',
 };
 const LESS_LOADER = {
   test: /\.less$/,
