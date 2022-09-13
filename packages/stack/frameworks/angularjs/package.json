@@ -44,13 +44,14 @@
   "devDependencies": {
     "@leanup/stack-webpack": "2.0.0-rc.69",
     "@types/node": "18.7.14",
+    "rimraf": "3.0.2",
     "typescript": "4.7.4"
   },
   "peerDependencies": {
     "angular": "^1"
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc -p tsconfig.json && tsc"
+    "prepack": "rimraf lib && tsc -p tsconfig.json && tsc"
   },
   "engines": {
     "node": ">=14 <=18",

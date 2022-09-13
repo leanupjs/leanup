@@ -41,19 +41,20 @@
     "nyc": "15.1.0",
     "preact": "10.10.6",
     "react": "18.2.0",
+    "rimraf": "3.0.2",
     "sinon": "14.0.0",
     "typescript": "4.8.2"
   },
   "scripts": {
     "build:cjs": "tsc -m commonjs --outDir cjs -p tsconfig.build.json",
     "build:esm": "tsc -m esnext --outDir esm -p tsconfig.build.json",
-    "build:types": "tsc -d --outDir types -p tsconfig.build.json && rm -rf types/*.js types/*.map types/**/*.js types/**/*.map",
+    "build:types": "tsc -d --outDir types -p tsconfig.build.json && rimraf types/*.js types/*.map types/**/*.js types/**/*.map",
     "build:umd": "tsc -m umd --outDir umd -p tsconfig.build.json",
-    "build:cleanup": "rm -rf cjs esm types umd",
+    "build:cleanup": "rimraf cjs esm types umd",
     "build": "npm run build:cleanup && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:umd",
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
     "prepack": "npm test && npm run build",
-    "remove": "rm -rf node_modules",
+    "remove": "rimraf node_modules",
     "reinstall": "npm run remove && npm run update",
     "update": "npm install && npm update && npm outdated"
   },
