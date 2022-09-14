@@ -1,7 +1,7 @@
 {
   "name": "create-leanup",
   "description": "This package contains the slim CLI to get started with leanupjs.",
-  "version": "2.0.0-rc.72",
+  "version": "2.0.0-rc.73",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "scripts": {
     "build": "rimraf dist && tsup src/cli.ts --minify",

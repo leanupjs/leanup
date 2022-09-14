@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-vue3",
-  "version": "2.0.0-rc.72",
+  "version": "2.0.0-rc.73",
   "description": "This package contains the Vue3 framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
