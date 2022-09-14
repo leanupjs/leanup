@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.86",
-    "@types/node": "16.11.58",
+    "@types/node": "16.11.59",
     "tslib": "2.4.0",
     "typescript": "4.3.5"
   },
