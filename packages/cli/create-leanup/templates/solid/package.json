@@ -5,7 +5,7 @@
     "@leanup/openapi-demo": "2.0.0-rc.68",
     "navigo": "8.11.1",
     "rxjs": "7.5.6",
-    "solid-js": "1.5.2"
+    "solid-js": "1.5.4"
   },
   "name": "{{kebab name}}",
   "version": "0.0.0",
