@@ -35,7 +35,7 @@
     "@leanup/stack": "2.0.0-rc.73",
     "@leanup/stack-webpack": "2.0.0-rc.73",
     "chromedriver": "104.0.0",
-    "npm-check-updates": "16.1.2",
+    "npm-check-updates": "16.1.3",
     "postcss-windicss": "1.0.0",
     "rimraf": "3.0.2",
     "selenium-server": "3.141.59",
