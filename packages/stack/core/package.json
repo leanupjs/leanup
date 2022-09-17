@@ -70,7 +70,7 @@
   "dependencies": {
     "@types/chai": "4.3.3",
     "@types/mocha": "9.1.1",
-    "@types/nightwatch": "2.3.9",
+    "@types/nightwatch": "2.3.10",
     "@types/sinon": "10.0.13",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
