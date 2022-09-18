@@ -1,12 +1,12 @@
 {
   "name": "@template/vue",
-  "version": "2.0.0-rc.69",
+  "version": "2.0.0-rc.73",
   "dependencies": {
     "vue": "2.7.10"
   },
   "devDependencies": {
-    "@leanup/cli-vue": "2.0.0-rc.69",
-    "@leanup/stack-vue": "2.0.0-rc.69",
+    "@leanup/cli-vue": "2.0.0-rc.73",
+    "@leanup/stack-vue": "2.0.0-rc.73",
     "vue-template-compiler": "2.7.10"
   }
 }

@@ -24,13 +24,13 @@
     "lit-element": "lib/cli.js"
   },
   "devDependencies": {
-    "@leanup/cli": "2.0.0-rc.69",
+    "@leanup/cli": "2.0.0-rc.73",
     "@types/node": "18.7.18",
     "rimraf": "3.0.2",
     "typescript": "4.8.3"
   },
   "peerDependencies": {
-    "@leanup/cli": "~2.0.0-rc.20"
+    "@leanup/cli": "~2.0.0-rc.73"
   },
   "scripts": {
     "prepack": "rimraf lib && tsc -p tsconfig.json && tsc"

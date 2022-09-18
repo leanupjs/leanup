@@ -64,7 +64,7 @@
     "typescript": "4.8.3"
   },
   "peerDependencies": {
-    "@leanup/stack": "~2.0.0-rc.20"
+    "@leanup/stack": "~2.0.0-rc.73"
   },
   "scripts": {
     "build:cjs": "tsc --outDir dist/cjs -p tsconfig.cjs.json && node ../../../scripts/package.js dist/cjs commonjs",

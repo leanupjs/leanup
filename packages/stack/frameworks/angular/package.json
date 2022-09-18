@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-angular",
-  "version": "2.0.0-rc.69",
+  "version": "2.0.0-rc.73",
   "description": "This package contains the Angular framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "14.2.0",
-    "@leanup/stack-webpack": "2.0.0-rc.69",
+    "@leanup/stack-webpack": "2.0.0-rc.73",
     "@types/node": "18.7.14",
     "rimraf": "3.0.2",
     "tslib": "2.4.0",
@@ -55,7 +55,7 @@
   "peerDependencies": {
     "@angular/compiler-cli": "^14",
     "@angular/core": "^14",
-    "@leanup/stack-webpack": "~2.0.0-rc.20",
+    "@leanup/stack-webpack": "~2.0.0-rc.73",
     "@ngtools/webpack": "^14"
   },
   "scripts": {
