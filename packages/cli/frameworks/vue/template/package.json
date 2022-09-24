@@ -2,7 +2,7 @@
   "name": "@template/vue",
   "version": "1.2.57",
   "dependencies": {
-    "@vue/composition-api": "1.7.0",
+    "@vue/composition-api": "1.7.1",
     "vue": "2.7.10"
   },
   "devDependencies": {
