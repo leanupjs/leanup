@@ -35,7 +35,7 @@
     "@leanup/lib": "1.0.194",
     "inferno": "7.4.11",
     "navigo": "8.11.1",
-    "rxjs": "7.5.6"
+    "rxjs": "7.5.7"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.194",

@@ -35,7 +35,7 @@
     "@leanup/lib": "1.0.194",
     "navigo": "8.11.1",
     "preact": "10.11.0",
-    "rxjs": "7.5.6"
+    "rxjs": "7.5.7"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.194",

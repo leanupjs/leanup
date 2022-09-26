@@ -34,7 +34,7 @@
     "@leanup/form": "1.0.194",
     "@leanup/lib": "1.0.194",
     "navigo": "8.11.1",
-    "rxjs": "7.5.6",
+    "rxjs": "7.5.7",
     "svelte": "3.50.1"
   },
   "devDependencies": {
