@@ -1,6 +1,6 @@
 {
   "name": "@template/vue",
-  "version": "1.0.194",
+  "version": "1.0.195",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -31,8 +31,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.0.194",
-    "@leanup/lib": "1.0.194",
+    "@leanup/form": "1.0.195",
+    "@leanup/lib": "1.0.195",
     "@vue/composition-api": "0.6.7",
     "navigo": "8.11.1",
     "rxjs": "7.5.7",
@@ -40,9 +40,9 @@
     "vue-template-compiler": "2.7.10"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.194",
-    "@leanup/cli-vue": "1.0.194",
-    "@leanup/git-hooks": "1.0.194",
+    "@leanup/cli": "1.0.195",
+    "@leanup/cli-vue": "1.0.195",
+    "@leanup/git-hooks": "1.0.195",
     "chromedriver": "90.0.1",
     "cssnano": "5.1.13",
     "geckodriver": "2.0.4",
