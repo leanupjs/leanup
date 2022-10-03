@@ -34,7 +34,7 @@
     "esbuild": "0.15.9",
     "esbuild-register": "3.3.3",
     "inferno": "8.0.3",
-    "jsdom": "20.0.0",
+    "jsdom": "20.0.1",
     "jsdom-global": "3.0.2",
     "mocha": "10.0.0",
     "mock-local-storage": "1.1.23",
