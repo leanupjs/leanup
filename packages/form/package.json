@@ -18,11 +18,11 @@
   "devDependencies": {
     "@types/chai": "4.3.3",
     "@types/mocha": "9.1.1",
-    "@types/node": "16.11.62",
+    "@types/node": "16.11.64",
     "@types/sinon": "10.0.13",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.15.9",
+    "esbuild": "0.15.10",
     "esbuild-register": "3.3.3",
     "esm": "3.2.25",
     "jsdom": "18.1.1",
