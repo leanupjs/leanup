@@ -27,7 +27,7 @@
     "@leanup/cli": "2.0.0-rc.73"
   },
   "devDependencies": {
-    "@types/node": "18.8.2",
+    "@types/node": "18.8.3",
     "rimraf": "3.0.2",
     "typescript": "4.8.4"
   },
