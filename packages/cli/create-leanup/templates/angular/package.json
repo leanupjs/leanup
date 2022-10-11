@@ -12,7 +12,7 @@
     "@angular/forms": "14.2.0",
     "@angular/platform-browser": "14.2.0",
     "@angular/platform-browser-dynamic": "14.2.0",
-    "core-js": "3.25.0",
+    "core-js": "3.25.5",
     "zone.js": "0.11.8"
   },
   "name": "{{kebab name}}",
