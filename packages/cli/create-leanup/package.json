@@ -21,7 +21,7 @@
     "create-create-app": "7.3.0"
   },
   "devDependencies": {
-    "@types/node": "18.8.4",
+    "@types/node": "18.8.5",
     "npm-check-updates": "16.3.11",
     "rimraf": "3.0.2",
     "tsup": "6.2.3",
