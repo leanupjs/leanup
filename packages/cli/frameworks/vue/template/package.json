@@ -36,8 +36,8 @@
     "@vue/composition-api": "0.6.7",
     "navigo": "8.11.1",
     "rxjs": "7.5.7",
-    "vue": "2.7.11",
-    "vue-template-compiler": "2.7.11"
+    "vue": "2.7.12",
+    "vue-template-compiler": "2.7.12"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.195",
