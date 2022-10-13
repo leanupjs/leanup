@@ -11,5 +11,5 @@
     "packages/openapi",
     "packages/stack/*"
   ],
-  "version": "2.0.0-rc.75"
+  "version": "2.0.0-rc.76"
 }
