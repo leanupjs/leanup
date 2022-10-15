@@ -22,7 +22,7 @@
     "@types/sinon": "10.0.13",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.15.10",
+    "esbuild": "0.15.11",
     "esbuild-register": "3.3.3",
     "esm": "3.2.25",
     "jsdom": "18.1.1",
