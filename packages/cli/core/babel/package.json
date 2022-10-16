@@ -31,7 +31,7 @@
     "babel-loader": "8.2.5"
   },
   "devDependencies": {
-    "@types/node": "16.11.65",
+    "@types/node": "16.11.66",
     "typescript": "4.3.5"
   },
   "scripts": {
