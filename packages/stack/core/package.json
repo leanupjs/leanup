@@ -75,7 +75,7 @@
     "@typescript-eslint/parser": "5.40.0",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.15.10",
+    "esbuild": "0.15.11",
     "esbuild-register": "3.3.3",
     "eslint": "8.25.0",
     "eslint-plugin-html": "6.2.0",
@@ -95,7 +95,7 @@
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.65",
+    "@types/node": "16.11.66",
     "tsc": "2.0.4",
     "typescript": "4.4.4"
   },
