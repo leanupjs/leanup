@@ -1,6 +1,6 @@
 {
   "name": "@leanup/cli-preact",
-  "version": "2.0.0-rc.76",
+  "version": "2.0.0-rc.77",
   "description": "This package contains the Preact framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",

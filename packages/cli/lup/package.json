@@ -1,6 +1,6 @@
 {
   "name": "lup",
-  "version": "2.0.0-rc.76",
+  "version": "2.0.0-rc.77",
   "description": "This package contains the slim CLI to get started with leanupjs.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
