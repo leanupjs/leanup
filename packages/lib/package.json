@@ -31,7 +31,7 @@
     "@types/sinon": "10.0.13",
     "chai": "4.3.6",
     "cross-env": "7.0.3",
-    "esbuild": "0.15.11",
+    "esbuild": "0.15.12",
     "esbuild-register": "3.3.3",
     "inferno": "8.0.4",
     "jsdom": "20.0.1",
