@@ -40,7 +40,7 @@
     "@leanup/git-hooks": "2.0.0-rc.73",
     "@leanup/stack": "2.0.0-rc.73",
     "@leanup/stack-webpack": "2.0.0-rc.73",
-    "chromedriver": "104.0.0",
+    "chromedriver": "107.0.1",
     "npm-check-updates": "16.0.6",
     "postcss-windicss": "1.0.0",
     "rimraf": "3.0.2",
