@@ -43,7 +43,7 @@
     "@leanup/cli-aurelia": "1.0.197",
     "@leanup/git-hooks": "1.0.197",
     "chromedriver": "90.0.1",
-    "cssnano": "5.1.13",
+    "cssnano": "5.1.14",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",

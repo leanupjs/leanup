@@ -48,7 +48,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.196",
+    "@leanup/cli": "~1.0.197",
     "aurelia-bootstrapper": "^2",
     "aurelia-framework": "^1"
   },
