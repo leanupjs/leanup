@@ -39,7 +39,7 @@
   "devDependencies": {
     "@leanup/stack-webpack": "1.1.91",
     "@types/node": "16.18.3",
-    "tslib": "2.4.0",
+    "tslib": "2.4.1",
     "typescript": "4.3.5"
   },
   "peerDependencies": {

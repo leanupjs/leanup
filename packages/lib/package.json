@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "loglevel": "1.8.0",
-    "tslib": "2.4.0"
+    "tslib": "2.4.1"
   },
   "devDependencies": {
     "@types/chai": "4.3.3",
