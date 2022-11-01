@@ -60,7 +60,7 @@
     "@leanup/stack": "2.0.0-rc.77",
     "@types/node": "18.11.8",
     "rimraf": "3.0.2",
-    "tslib": "2.4.0",
+    "tslib": "2.4.1",
     "typescript": "4.8.4"
   },
   "peerDependencies": {
