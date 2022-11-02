@@ -5,7 +5,7 @@
     "@leanup/openapi-demo": "2.0.0-rc.73",
     "navigo": "8.11.1",
     "rxjs": "7.5.6",
-    "vue": "3.2.38"
+    "vue": "3.2.41"
   },
   "name": "{{kebab name}}",
   "version": "0.0.0",
