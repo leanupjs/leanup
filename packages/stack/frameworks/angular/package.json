@@ -42,7 +42,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "babel-loader": "8.2.5"
+    "babel-loader": "8.3.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "13.3.11",
