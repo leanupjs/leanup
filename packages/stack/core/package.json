@@ -78,7 +78,7 @@
     "cross-env": "7.0.3",
     "esbuild": "0.15.13",
     "esbuild-register": "3.3.3",
-    "eslint": "8.26.0",
+    "eslint": "8.27.0",
     "eslint-plugin-html": "7.1.0",
     "eslint-plugin-json": "3.1.0",
     "jsdom": "20.0.2",
