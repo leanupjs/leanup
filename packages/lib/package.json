@@ -24,12 +24,12 @@
     "tslib": "2.4.1"
   },
   "devDependencies": {
-    "@types/chai": "4.3.3",
+    "@types/chai": "4.3.4",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "9.1.1",
     "@types/node": "16.18.3",
     "@types/sinon": "10.0.13",
-    "chai": "4.3.6",
+    "chai": "4.3.7",
     "cross-env": "7.0.3",
     "esbuild": "0.15.13",
     "esbuild-register": "3.3.3",
