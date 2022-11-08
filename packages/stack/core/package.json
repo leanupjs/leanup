@@ -68,13 +68,13 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "@types/chai": "4.3.3",
+    "@types/chai": "4.3.4",
     "@types/mocha": "9.1.1",
     "@types/nightwatch": "2.3.12",
     "@types/sinon": "10.0.13",
-    "@typescript-eslint/eslint-plugin": "5.42.0",
-    "@typescript-eslint/parser": "5.42.0",
-    "chai": "4.3.6",
+    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "@typescript-eslint/parser": "5.42.1",
+    "chai": "4.3.7",
     "cross-env": "7.0.3",
     "esbuild": "0.15.13",
     "esbuild-register": "3.3.3",
@@ -91,7 +91,7 @@
     "postcss": "8.4.18",
     "prettier": "2.7.1",
     "sass": "1.56.0",
-    "sinon": "14.0.1",
+    "sinon": "14.0.2",
     "ts-prune": "0.10.3",
     "tslib": "2.4.1"
   },
