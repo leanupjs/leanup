@@ -20,7 +20,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "loglevel": "1.8.0",
+    "loglevel": "1.8.1",
     "tslib": "2.4.1"
   },
   "devDependencies": {
