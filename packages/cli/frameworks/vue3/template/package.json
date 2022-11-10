@@ -7,6 +7,6 @@
   "devDependencies": {
     "@leanup/cli-vue3": "2.0.0-rc.73",
     "@leanup/stack-vue3": "2.0.0-rc.73",
-    "@vue/compiler-sfc": "3.2.38"
+    "@vue/compiler-sfc": "3.2.44"
   }
 }
