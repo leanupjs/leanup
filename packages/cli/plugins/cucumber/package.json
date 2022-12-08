@@ -31,7 +31,7 @@
     "@leanup/cli": "2.0.0-rc.73",
     "@types/node": "18.11.9",
     "rimraf": "3.0.2",
-    "typescript": "4.8.4"
+    "typescript": "4.9.4"
   },
   "peerDependencies": {
     "@leanup/cli": "~2.0.0-rc.73"
