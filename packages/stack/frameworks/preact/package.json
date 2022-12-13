@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@leanup/stack-webpack": "2.0.0-rc.73",
-    "@types/node": "18.7.14",
+    "@types/node": "18.11.14",
     "rimraf": "3.0.2",
     "typescript": "4.8.3"
   },
