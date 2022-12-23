@@ -33,7 +33,7 @@
     "@leanup/lib": "1.2.62",
     "@leanup/openapi-demo": "1.2.61",
     "navigo": "8.11.1",
-    "rxjs": "7.5.7"
+    "rxjs": "7.8.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.2.62",
