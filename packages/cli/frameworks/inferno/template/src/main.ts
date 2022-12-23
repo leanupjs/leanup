@@ -1,1 +1,0 @@
-import './inferno.main';

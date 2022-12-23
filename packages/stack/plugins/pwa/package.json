@@ -1,0 +1,42 @@
+{
+  "name": "@leanup/stack-plugin-pwa",
+  "version": "2.0.0-rc.78",
+  "description": "This module contains pwa features for the @leanup/cli.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "lib/**",
+    "template/**",
+    "index.js",
+    "webpack.config.js"
+  ],
+  "keywords": [
+    "manifest",
+    "workbox",
+    "pwa"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "webpack-pwa-manifest": "4.3.0",
+    "workbox-webpack-plugin": "6.5.4"
+  },
+  "devDependencies": {
+    "@leanup/stack": "2.0.0-rc.73",
+    "@types/node": "18.11.17",
+    "rimraf": "3.0.2",
+    "typescript": "4.8.4"
+  },
+  "peerDependencies": {
+    "@leanup/stack": "~2.0.0-rc.73"
+  },
+  "scripts": {
+    "prepack": "rimraf lib && tsc -p tsconfig.json && tsc"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "create-leanup",
+  "description": "This package contains the slim CLI to get started with leanupjs.",
+  "version": "2.0.0-rc.78",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "scripts": {
+    "build": "rimraf dist && tsup src/cli.ts --minify",
+    "clean": "git clean -f -d -X",
+    "dev": "tsup src/cli.ts --watch",
+    "prepack": "npm run build",
+    "update": "ncu -t minor -u && ncu",
+    "try": "npm run prepack && rimraf try-demo && node dist/cli.js try-demo"
+  },
+  "bin": "dist/cli.js",
+  "files": [
+    "dist",
+    "templates/**/*"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "create-create-app": "7.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.17",
+    "npm-check-updates": "16.6.2",
+    "rimraf": "3.0.2",
+    "tsup": "6.5.0",
+    "typescript": "4.8.4"
+  }
+}

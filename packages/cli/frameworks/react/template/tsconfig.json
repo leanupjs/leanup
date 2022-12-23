@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "types": ["react", "react-dom"],
-    "jsx": "react",
-    "jsxFactory": "React.createElement",
-    "jsxFragmentFactory": "React.Fragment"
-  }
-}

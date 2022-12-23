@@ -1,0 +1,36 @@
+{
+  "name": "@leanup/stack-plugin-git-hooks",
+  "version": "2.0.0-rc.78",
+  "description": "This module contains some nice tools to organize git hooks for NodeJs projects.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "keywords": [
+    "git",
+    "hooks",
+    "commitlint",
+    "husky",
+    "lint-staged",
+    "changelog",
+    "eslint",
+    "prettier"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@commitlint/format": "17.0.0",
+    "husky": "8.0.2",
+    "lint-staged": "13.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8",
+    "prettier": "^2"
+  }
+}

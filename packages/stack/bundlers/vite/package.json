@@ -1,0 +1,46 @@
+{
+  "name": "@leanup/stack-vite",
+  "version": "2.0.0-rc.78",
+  "description": "This module contains all vite-related functionalities for the @leanup/stack.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://leanupjs.org",
+  "files": [
+    "vite.config.js"
+  ],
+  "keywords": [
+    "esbuild",
+    "vite",
+    "less",
+    "sass",
+    "scss",
+    "typescript",
+    "spa",
+    "pwa",
+    "lean",
+    "compiler",
+    "transpiler",
+    "postcss"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "vite": "2.9.15",
+    "vite-plugin-replace": "0.1.1"
+  },
+  "devDependencies": {
+    "@leanup/stack": "2.0.0-rc.79"
+  },
+  "peerDependencies": {
+    "@leanup/stack": "~2.0.0-rc.73"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  }
+}
