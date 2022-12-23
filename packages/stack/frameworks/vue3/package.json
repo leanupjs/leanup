@@ -40,7 +40,7 @@
   "dependencies": {
     "@snowpack/plugin-vue": "2.6.2",
     "@vitejs/plugin-vue": "3.0.3",
-    "vue-loader": "17.0.0"
+    "vue-loader": "17.0.1"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "2.0.0-rc.73",
