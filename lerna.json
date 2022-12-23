@@ -1,15 +1,4 @@
 {
-  "packages": [
-    "packages/cli/core/*",
-    "packages/cli/create-leanup",
-    "packages/cli/frameworks/*",
-    "packages/cli/lup",
-    "packages/cli/plugins/*",
-    "packages/form",
-    "packages/git-hooks",
-    "packages/lib",
-    "packages/openapi",
-    "packages/stack/*"
-  ],
+  "packages": ["packages/create-leanup", "packages/form", "packages/lib", "packages/openapi", "packages/stack/**"],
   "version": "2.0.0-rc.78"
 }

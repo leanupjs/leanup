@@ -1,1 +1,3 @@
-module.exports = require('./packages/git-hooks/commitlint.config');
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+};
