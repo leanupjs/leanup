@@ -34,14 +34,14 @@
     "@leanup/form": "1.0.199",
     "@leanup/lib": "1.0.199",
     "navigo": "8.11.1",
-    "rxjs": "7.5.7",
-    "vue": "3.2.41"
+    "rxjs": "7.8.0",
+    "vue": "3.2.45"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.199",
     "@leanup/cli-vue3": "1.0.199",
     "@leanup/git-hooks": "1.0.198",
-    "@vue/compiler-sfc": "3.2.41",
+    "@vue/compiler-sfc": "3.2.45",
     "chromedriver": "90.0.1",
     "cssnano": "5.1.14",
     "geckodriver": "2.0.4",

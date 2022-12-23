@@ -36,7 +36,7 @@
     "@types/angular": "1.8.4",
     "angular": "1.8.3",
     "navigo": "8.11.1",
-    "rxjs": "7.5.7"
+    "rxjs": "7.8.0"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.199",
