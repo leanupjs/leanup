@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "aurelia-webpack-plugin": "5.0.4",
-    "html-loader": "4.1.0"
+    "html-loader": "4.2.0"
   },
   "devDependencies": {
     "@leanup/stack-webpack": "2.0.0-rc.73",
