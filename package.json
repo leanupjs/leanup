@@ -15,6 +15,7 @@
     "ts-prune": "lerna exec --stream -- ts-prune src",
     "depcheck": "lerna exec --stream -- depcheck --ignore-bin-package --skip-missing",
     "update": "npm run ncu",
+    "reinstall": "npm run clean:locks && npm i",
     "ci": "npm ci && lerna exec --concurrency 2 --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/* --ignore-unknown",
     "outdated": "(npm outdated || true) && lerna exec --stream -- npm outdated",
