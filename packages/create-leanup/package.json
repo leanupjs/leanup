@@ -1,11 +1,11 @@
 {
-  "name": "create-leanup",
-  "description": "This package contains the slim CLI to get started with leanupjs.",
-  "version": "2.0.0-rc.78",
-  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
-  "license": "Apache-2.0",
-  "scripts": {
-    "build": "rimraf dist && tsup src/cli.ts --minify",
+	"name": "create-leanup",
+	"description": "This package contains the slim CLI to get started with leanupjs.",
+	"version": "2.0.0-rc.78",
+	"author": "Martin Oppitz <npmjs@martinoppitz.com>",
+	"license": "Apache-2.0",
+	"scripts": {
+		"build": "rimraf dist && tsup src/cli.ts --minify",
 		"clean": "git clean -f -d -X",
 		":postinstall": "npm-run-all postinstall:*",
 		"postinstall:angular": "cpy \"defaults/**/*\" \"!defaults/unocss.config.ts\" templates/angular-app/ --dot",
@@ -19,8 +19,8 @@
 		"postinstall:static": "cpy \"defaults/{public/**/*,**/.npmrc,**/gitignore}\" \"!defaults/public/index.html\" templates/static-page --dot",
 		"dev": "tsup src/cli.ts --watch",
 		"prepack": "git clean -f -d -X templates/ && npm run build",
-    ":test": "npm run clean && npm i && npm run build && rimraf my-app && node dist/cli.js my-app"
-  },
+		":test": "npm run clean && npm i && npm run build && rimraf my-app && node dist/cli.js my-app"
+	},
 	"bin": "dist/cli.js",
 	"dependencies": {
 		"cpy-cli": "4.2.0",
