@@ -48,7 +48,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-vite
         run: |
-          npm install
+          npm install --registry=${{env.registry}}
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/bundlers/vite
         env:
