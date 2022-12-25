@@ -35,10 +35,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
+          registry-url: '${{env.registry}}'
+          scope: '@${{env.alias}}'
       - name: Clear npm cache
         run: npm cache clean -f
       - name: Install and publish only @${{env.alias}}/stack
         run: |
+          rm package-lock.json
           npm install --legacy-peer-deps
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/core
@@ -46,6 +49,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-vite
         run: |
+          rm package-lock.json
           npm install --legacy-peer-deps
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/bundlers/vite
