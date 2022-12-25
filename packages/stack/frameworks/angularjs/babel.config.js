@@ -1,4 +1,4 @@
-const config = require('@leanupjs/stack-plugin-babel/babel.config');
+const config = require('@leanup/stack-plugin-babel/babel.config');
 
 config.plugins.push('angularjs-annotate');
 
