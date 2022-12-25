@@ -34,7 +34,7 @@
     "typescript": "4.8.4"
   },
   "peerDependencies": {
-    "@leanup/stack": "~2.0.0-rc.73"
+    "@leanup/stack": "~2.0.0-rc.79"
   },
   "scripts": {
     "prepack": "rimraf lib && tsc -p tsconfig.json && tsc"

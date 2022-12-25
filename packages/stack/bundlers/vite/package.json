@@ -37,7 +37,7 @@
     "@leanup/stack": "2.0.0-rc.79"
   },
   "peerDependencies": {
-    "@leanup/stack": "~2.0.0-rc.73"
+    "@leanup/stack": "~2.0.0-rc.79"
   },
   "engines": {
     "node": ">=16",
