@@ -41,35 +41,35 @@ jobs:
         run: npm cache clean -f
       - name: Install and publish only @${{env.alias}}/stack
         run: |
-          npm install
+          npm install --legacy-peer-deps --registry=${{env.registry}}
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-vite
         run: |
-          npm install --registry=${{env.registry}}
+          npm install --legacy-peer-deps --registry=${{env.registry}}
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/bundlers/vite
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-webpack
         run: |
-          npm install
+          npm install --legacy-peer-deps --registry=${{env.registry}}
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/bundlers/webpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib
         run: |
-          npm install
+          npm install --legacy-peer-deps --registry=${{env.registry}}
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-plugin-babel
         run: |
-          npm install
+          npm install --legacy-peer-deps --registry=${{env.registry}}
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/plugin/babel
         env:
