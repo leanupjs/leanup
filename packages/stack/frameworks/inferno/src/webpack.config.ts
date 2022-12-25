@@ -1,4 +1,4 @@
-import { BABEL_LOADER } from '@leanup/cli-core-babel/lib/webpack.config';
+import { BABEL_LOADER } from '@leanupjs/stack-plugin-babel/lib/webpack.config';
 import webpackConfig from '@leanup/stack-webpack';
 
 export default function webpackInfernoConfig(env: any, argv: any): Object {

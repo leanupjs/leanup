@@ -15,8 +15,8 @@
 [![lernajs][lernajs]][lernajs-url]
 [![prettier][prettier]][prettier-url]
 
-[npm]: https://img.shields.io/npm/v/@leanup/cli-core-babel
-[npm-url]: https://www.npmjs.com/package/@leanup/cli-core-babel
+[npm]: https://img.shields.io/npm/v/@leanupjs/stack-plugin-babel
+[npm-url]: https://www.npmjs.com/package/@leanupjs/stack-plugin-babel
 [dependencies]: https://david-dm.org/leanupjs/leanup/release%2F1.1/status.svg?path=packages/cli/core/e2e
 [dependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/core/e2e
 [peerdependencies]: https://img.shields.io/david/peer/leanupjs/leanup?path=packages/cli/core/e2e
@@ -25,12 +25,12 @@
 [optionaldependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/core/e2e&type=optional
 [devdependencies]: https://img.shields.io/david/dev/leanupjs/leanup?path=packages/cli/core/e2e
 [devdependencies-url]: https://david-dm.org/leanupjs/leanup/release%2F1.1?path=packages/cli/core/e2e&type=dev
-[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanup/cli-core-babel
-[vulnerabilities-url]: https://snyk.io/test/npm/@leanup/cli-core-babel
-[downloads]: https://img.shields.io/npm/dt/@leanup/cli-core-babel
-[downloads-url]: https://npmcharts.com/compare/@leanup/cli-core-babel?minimal=true
-[install-size]: https://packagephobia.now.sh/badge?p=@leanup/cli-core-babel@next
-[install-size-url]: https://packagephobia.now.sh/result?p=@leanup/cli-core-babel@next
+[vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/@leanupjs/stack-plugin-babel
+[vulnerabilities-url]: https://snyk.io/test/npm/@leanupjs/stack-plugin-babel
+[downloads]: https://img.shields.io/npm/dt/@leanupjs/stack-plugin-babel
+[downloads-url]: https://npmcharts.com/compare/@leanupjs/stack-plugin-babel?minimal=true
+[install-size]: https://packagephobia.now.sh/badge?p=@leanupjs/stack-plugin-babel@next
+[install-size-url]: https://packagephobia.now.sh/result?p=@leanupjs/stack-plugin-babel@next
 [license]: https://img.shields.io/npm/l/@leanup/cli
 [license-url]: https://github.com/leanupjs/leanup/blob/master/LICENSE
 [lernajs]: https://img.shields.io/badge/managed%20with-lerna-blueviolet
@@ -38,7 +38,7 @@
 [prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [prettier-url]: https://prettier.io
 
-# `@leanup/cli-core-babel`
+# `@leanupjs/stack-plugin-babel`
 
 > This module contains some [babeljs](https://babeljs.io/) feature for the [@leanup/cli](https://www.npmjs.com/package/@leanup/cli).
 
