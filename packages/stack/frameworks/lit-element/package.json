@@ -1,6 +1,6 @@
 {
   "name": "@leanup/stack-lit-element",
-  "version": "1.2.60",
+  "version": "1.2.63",
   "description": "This package contains the Lit-Element framework extension for the @leanup/cli.",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "homepage": "https://leanupjs.org",
