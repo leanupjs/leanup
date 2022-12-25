@@ -34,7 +34,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
       - name: Clear npm cache
@@ -76,7 +76,7 @@ jobs:
           rm package-lock.json
           npm install --legacy-peer-deps
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
-        working-directory: packages/stack/plugin/babel
+        working-directory: packages/stack/plugins/babel
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish non @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-plugin-babel, @${{env.alias}}/stack-vite and @${{env.alias}}/stack-webpack
