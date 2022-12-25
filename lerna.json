@@ -1,4 +1,5 @@
 {
   "packages": ["packages/create-leanup", "packages/form", "packages/lib", "packages/openapi", "packages/stack/**"],
+  "useNx": false,
   "version": "2.0.0-rc.79"
 }
