@@ -33,6 +33,10 @@
   "dependencies": {
     "@leanup/form": "1.0.199",
     "@leanup/lib": "1.0.199",
+    "@public-oss/kolibri-themes": "0.0.1",
+    "@public-ui/components": "1.1.15",
+    "@public-ui/core": "1.1.15",
+    "@public-ui/themes": "1.1.15",
     "navigo": "8.11.1",
     "rxjs": "7.8.0",
     "vue": "3.2.45"
