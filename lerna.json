@@ -1,4 +1,4 @@
 {
   "packages": ["packages/create-leanup", "packages/form", "packages/lib", "packages/openapi", "packages/stack/**"],
-  "version": "2.0.0-rc.78"
+  "version": "2.0.0-rc.79"
 }
