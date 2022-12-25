@@ -1,20 +1,4 @@
-# This workflow will build a Java project with Maven
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: GitHub CI - Publish to NPM (DRY)
-
-on:
-  workflow_dispatch:
-  release:
-    types:
-      - prereleased
-
-env:
-  access: public
-  alias: leanupjs
-  registry: https://npm.pkg.github.com
-  tag: next
-  token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -57,6 +41,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-webpack
         run: |
+          rm package-lock.json
           npm install --legacy-peer-deps
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/bundlers/webpack
@@ -64,6 +49,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib
         run: |
+          rm package-lock.json
           npm install --legacy-peer-deps
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/lib
@@ -71,6 +57,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-plugin-babel
         run: |
+          rm package-lock.json
           npm install --legacy-peer-deps
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/plugin/babel
@@ -79,7 +66,7 @@ jobs:
       - name: Install and publish non @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-plugin-babel, @${{env.alias}}/stack-vite and @${{env.alias}}/stack-webpack
         run: |
           rm -rf packages/stack/core/dist packages/stack/webpack/dist
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-plugin-babel --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --stream -- npm install
+          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-plugin-babel --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --stream -- npm install --legacy-peer-deps
           npx lerna exec --ignore @template/* --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-plugin-babel --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
