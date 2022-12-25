@@ -1,5 +1,15 @@
 {
-  "packages": ["packages/create-leanup", "packages/form", "packages/lib", "packages/openapi", "packages/stack/**"],
+  "packages": [
+    "packages/create-leanup",
+    "packages/form",
+    "packages/lib",
+    "packages/openapi",
+    "packages/stack/bundlers/vite",
+    "packages/stack/bundlers/webpack",
+    "packages/stack/core",
+    "packages/stack/frameworks/**",
+    "packages/stack/plugins"
+  ],
   "useNx": false,
   "version": "2.0.0-rc.79"
 }
