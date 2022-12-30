@@ -44,7 +44,7 @@
     "@public-ui/components": "1.1.15",
     "@public-ui/core": "1.1.15",
     "@public-ui/themes": "1.1.15",
-    "core-js": "3.26.1",
+    "core-js": "3.27.1",
     "navigo": "8.11.1",
     "rxjs": "6.6.7",
     "zone.js": "0.12.0"

@@ -48,7 +48,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.199",
+    "@leanup/cli": "~1.0.200",
     "inferno": "^7"
   },
   "scripts": {
