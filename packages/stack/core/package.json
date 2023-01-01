@@ -70,7 +70,7 @@
   "dependencies": {
     "@types/chai": "4.3.4",
     "@types/mocha": "9.1.1",
-    "@types/nightwatch": "2.3.16",
+    "@types/nightwatch": "2.3.17",
     "@types/sinon": "10.0.13",
     "@typescript-eslint/eslint-plugin": "5.47.1",
     "@typescript-eslint/parser": "5.47.1",
@@ -78,7 +78,7 @@
     "cross-env": "7.0.3",
     "esbuild": "0.16.12",
     "esbuild-register": "3.4.2",
-    "eslint": "8.30.0",
+    "eslint": "8.31.0",
     "eslint-plugin-html": "7.1.0",
     "eslint-plugin-json": "3.1.0",
     "jsdom": "20.0.3",
