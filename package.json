@@ -51,7 +51,7 @@
     "eslint": "8.31.0",
     "eslint-plugin-html": "7.1.0",
     "eslint-plugin-json": "3.1.0",
-    "husky": "8.0.2",
+    "husky": "8.0.3",
     "lerna": "5.6.2",
     "lint-staged": "13.1.0",
     "npm-check-updates": "16.6.2",
