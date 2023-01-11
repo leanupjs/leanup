@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.2.64",
+  "version": "1.2.65",
   "description": "",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha",
@@ -29,8 +29,8 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.2.64",
-    "@leanup/lib": "1.2.64",
+    "@leanup/form": "1.2.65",
+    "@leanup/lib": "1.2.65",
     "@leanup/openapi-demo": "1.2.63",
     "@public-oss/kolibri-themes": "0.0.2",
     "@public-ui/components": "1.1.16",
@@ -40,10 +40,10 @@
     "rxjs": "7.8.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.2.64",
+    "@leanup/cli": "1.2.65",
     "@leanup/git-hooks": "1.2.63",
-    "@leanup/stack": "1.2.64",
-    "@leanup/stack-webpack": "1.2.64",
+    "@leanup/stack": "1.2.65",
+    "@leanup/stack-webpack": "1.2.65",
     "chromedriver": "95.0.0",
     "npm-check-updates": "12.5.12",
     "postcss-windicss": "1.0.0",
