@@ -1,6 +1,6 @@
 {
   "name": "@template/angular",
-  "version": "1.0.201",
+  "version": "1.0.202",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
@@ -38,8 +38,8 @@
     "@angular/forms": "11.2.14",
     "@angular/platform-browser": "11.2.14",
     "@angular/platform-browser-dynamic": "11.2.14",
-    "@leanup/form": "1.0.201",
-    "@leanup/lib": "1.0.201",
+    "@leanup/form": "1.0.202",
+    "@leanup/lib": "1.0.202",
     "@public-oss/kolibri-themes": "0.0.2",
     "@public-ui/components": "1.1.16",
     "@public-ui/core": "1.1.16",
@@ -50,8 +50,8 @@
     "zone.js": "0.12.0"
   },
   "devDependencies": {
-    "@leanup/cli": "1.0.201",
-    "@leanup/cli-angular": "1.0.201",
+    "@leanup/cli": "1.0.202",
+    "@leanup/cli-angular": "1.0.202",
     "@leanup/git-hooks": "1.0.200",
     "@ngtools/webpack": "11.2.19",
     "chromedriver": "90.0.1",
