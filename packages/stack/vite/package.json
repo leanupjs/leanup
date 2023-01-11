@@ -33,7 +33,7 @@
     "vite": "2.9.15"
   },
   "peerDependencies": {
-    "@leanup/stack": "~1.1.94"
+    "@leanup/stack": "~1.1.95"
   },
   "engines": {
     "node": ">=12 <16",
