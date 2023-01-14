@@ -34,9 +34,9 @@
     "@leanup/form": "1.0.202",
     "@leanup/lib": "1.0.202",
     "@public-oss/kolibri-themes": "0.0.2",
-    "@public-ui/components": "1.1.16",
-    "@public-ui/core": "1.1.16",
-    "@public-ui/themes": "1.1.16",
+    "@public-ui/components": "1.1.18",
+    "@public-ui/core": "1.2.0",
+    "@public-ui/themes": "1.1.18",
     "navigo": "8.11.1",
     "preact": "10.11.3",
     "rxjs": "7.8.0"
