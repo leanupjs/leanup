@@ -45,7 +45,7 @@
     "copy-modules-webpack-plugin": "2.2.1",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.3",
-    "esbuild-loader": "2.20.0",
+    "esbuild-loader": "2.21.0",
     "less-loader": "11.1.0",
     "mini-css-extract-plugin": "2.7.2",
     "postcss-loader": "7.0.2",
