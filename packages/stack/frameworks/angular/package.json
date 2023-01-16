@@ -48,7 +48,7 @@
     "@angular/compiler-cli": "14.2.12",
     "@leanup/stack-webpack": "2.0.0-rc.82",
     "@types/node": "18.11.18",
-    "rimraf": "3.0.2",
+    "rimraf": "4.0.7",
     "tslib": "2.4.1",
     "typescript": "4.8.4"
   },
