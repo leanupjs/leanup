@@ -26,7 +26,7 @@
   "devDependencies": {
     "@types/chai": "4.3.4",
     "@types/loglevel": "1.6.3",
-    "@types/mocha": "9.1.1",
+    "@types/mocha": "10.0.1",
     "@types/node": "18.11.18",
     "@types/sinon": "10.0.13",
     "chai": "4.3.7",
