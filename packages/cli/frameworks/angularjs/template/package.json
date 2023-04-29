@@ -7,6 +7,6 @@
   "devDependencies": {
     "@leanup/cli-angularjs": "1.1.97",
     "@leanup/stack-angularjs": "1.1.97",
-    "@types/angular": "1.8.4"
+    "@types/angular": "1.8.5"
   }
 }
