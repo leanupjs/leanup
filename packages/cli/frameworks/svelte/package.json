@@ -41,8 +41,8 @@
     "svelte": "lib/cli.js"
   },
   "dependencies": {
-    "prettier-plugin-svelte": "2.9.0",
-    "svelte-loader": "3.1.5"
+    "prettier-plugin-svelte": "2.10.0",
+    "svelte-loader": "3.1.7"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.203",
@@ -50,7 +50,7 @@
     "typescript": "4.3.5"
   },
   "peerDependencies": {
-    "@leanup/cli": "~1.0.202",
+    "@leanup/cli": "~1.0.203",
     "svelte": "^3"
   },
   "scripts": {

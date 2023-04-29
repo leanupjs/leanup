@@ -16,13 +16,13 @@
     "@leanup/lib": "1.0.203"
   },
   "devDependencies": {
-    "@types/chai": "4.3.4",
+    "@types/chai": "4.3.5",
     "@types/mocha": "9.1.1",
-    "@types/node": "16.18.11",
-    "@types/sinon": "10.0.13",
+    "@types/node": "16.18.25",
+    "@types/sinon": "10.0.14",
     "chai": "4.3.7",
     "cross-env": "7.0.3",
-    "esbuild": "0.17.2",
+    "esbuild": "0.17.18",
     "esbuild-register": "3.4.2",
     "esm": "3.2.25",
     "jsdom": "18.1.1",

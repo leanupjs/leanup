@@ -33,20 +33,20 @@
   "dependencies": {
     "@leanup/form": "1.0.203",
     "@leanup/lib": "1.0.203",
-    "@public-oss/kolibri-themes": "0.0.2",
-    "@public-ui/components": "1.1.18",
-    "@public-ui/core": "1.2.0",
-    "@public-ui/themes": "1.1.18",
+    "@public-oss/kolibri-themes": "0.0.3",
+    "@public-ui/components": "1.4.2",
+    "@public-ui/core": "1.4.2",
+    "@public-ui/themes": "1.4.2",
     "inferno": "7.4.11",
     "navigo": "8.11.1",
-    "rxjs": "7.8.0"
+    "rxjs": "7.8.1"
   },
   "devDependencies": {
     "@leanup/cli": "1.0.203",
     "@leanup/cli-inferno": "1.0.203",
     "@leanup/git-hooks": "1.0.200",
     "chromedriver": "90.0.1",
-    "cssnano": "5.1.14",
+    "cssnano": "5.1.15",
     "geckodriver": "2.0.4",
     "npm-check-updates": "11.8.5",
     "selenium-server": "3.141.59",
