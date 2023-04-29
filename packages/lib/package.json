@@ -21,17 +21,17 @@
   },
   "dependencies": {
     "loglevel": "1.8.1",
-    "tslib": "2.4.1"
+    "tslib": "2.5.0"
   },
   "devDependencies": {
-    "@types/chai": "4.3.4",
+    "@types/chai": "4.3.5",
     "@types/loglevel": "1.6.3",
     "@types/mocha": "9.1.1",
-    "@types/node": "16.18.11",
-    "@types/sinon": "10.0.13",
+    "@types/node": "16.18.25",
+    "@types/sinon": "10.0.14",
     "chai": "4.3.7",
     "cross-env": "7.0.3",
-    "esbuild": "0.17.2",
+    "esbuild": "0.17.18",
     "esbuild-register": "3.4.2",
     "inferno": "7.4.11",
     "jsdom": "18.1.1",
@@ -39,7 +39,7 @@
     "mocha": "9.2.2",
     "mock-local-storage": "1.1.23",
     "nyc": "15.1.0",
-    "preact": "10.11.3",
+    "preact": "10.13.2",
     "react": "17.0.2",
     "sinon": "12.0.1",
     "typescript": "4.4.4"
