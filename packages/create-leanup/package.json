@@ -1,7 +1,7 @@
 {
   "name": "create-leanup",
   "description": "This package contains the slim CLI to get started with leanupjs.",
-  "version": "2.0.0-rc.83",
+  "version": "2.0.0-rc.84",
   "author": "Martin Oppitz <npmjs@martinoppitz.com>",
   "license": "Apache-2.0",
   "scripts": {
