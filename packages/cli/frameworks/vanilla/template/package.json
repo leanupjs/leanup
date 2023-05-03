@@ -1,7 +1,7 @@
 {
   "name": "@template/vanilla",
-  "version": "1.2.66",
+  "version": "1.2.67",
   "devDependencies": {
-    "@leanup/cli-vanilla": "1.2.66"
+    "@leanup/cli-vanilla": "1.2.67"
   }
 }
