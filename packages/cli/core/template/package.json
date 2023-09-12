@@ -1,6 +1,6 @@
 {
   "name": "@template/core",
-  "version": "1.3.45",
+  "version": "1.3.46",
   "description": "",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha",
@@ -29,29 +29,29 @@
     ]
   },
   "dependencies": {
-    "@leanup/form": "1.3.45",
-    "@leanup/lib": "1.3.45",
-    "@leanup/openapi-demo": "1.3.45",
+    "@leanup/form": "1.3.46",
+    "@leanup/lib": "1.3.46",
+    "@leanup/openapi-demo": "1.3.46",
     "@public-oss/kolibri-themes": "0.0.3",
-    "@public-ui/components": "1.4.2",
-    "@public-ui/core": "1.4.2",
-    "@public-ui/themes": "1.4.2",
+    "@public-ui/components": "1.6.2",
+    "@public-ui/core": "1.6.2",
+    "@public-ui/themes": "1.6.2",
     "navigo": "8.11.1",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@leanup/cli": "1.3.45",
-    "@leanup/git-hooks": "1.3.45",
-    "@leanup/stack": "1.3.45",
-    "@leanup/stack-vite": "1.3.45",
-    "@leanup/stack-webpack": "1.3.45",
+    "@leanup/cli": "1.3.46",
+    "@leanup/git-hooks": "1.3.46",
+    "@leanup/stack": "1.3.46",
+    "@leanup/stack-vite": "1.3.46",
+    "@leanup/stack-webpack": "1.3.46",
     "@unocss/preset-mini": "0.51.8",
     "@unocss/vite": "0.51.8",
     "@unocss/webpack": "0.51.8",
     "chromedriver": "97.0.4",
-    "npm-check-updates": "12.5.12",
+    "npm-check-updates": "16.13.3",
     "postcss-windicss": "1.0.0",
     "selenium-server": "3.141.59",
-    "typescript": "4.5.5"
+    "typescript": "5.2.2"
   }
 }
