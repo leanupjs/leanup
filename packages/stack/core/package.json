@@ -88,7 +88,7 @@
     "nightwatch": "2.6.21",
     "nyc": "15.1.0",
     "postcss": "8.4.29",
-    "prettier": "3.0.3",
+    "prettier": "2.8.8",
     "sass": "1.66.1",
     "sinon": "13.0.2",
     "tslib": "2.6.2"
@@ -107,7 +107,7 @@
     "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && node ../../../scripts/package.js dist/mjs module",
     "build:rm": "rm -rf dist",
     "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
-    "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
-    "prepack": "npm run build"
+    "build": "pnpm build:rm && pnpm build:cjs && pnpm build:mjs && pnpm build:types",
+    "prepack": "pnpm build"
   }
 }

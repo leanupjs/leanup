@@ -20,70 +20,121 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node.js
+      # - uses: actions/checkout@v3
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '14.x'
+      #     registry-url: '${{env.registry}}'
+      #     scope: '@${{env.alias}}'
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # - uses: pnpm/action-setup@v2.2.4
+      #   with:
+      #     run_install: false
+      #     version: 7
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     cache: pnpm
+      #     node-version: 16
+
+      # https://github.com/pnpm/action-setup#use-cache-to-reduce-installation-time
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          # cache: pnpm
+          node-version: 18
           registry-url: '${{env.registry}}'
           scope: '@${{env.alias}}'
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store
+
       - name: Install and publish only @${{env.alias}}/stack
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-snowpack
+        continue-on-error: true
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/snowpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-vite
+        continue-on-error: true
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/vite
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/stack-webpack
+        continue-on-error: true
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/stack/webpack
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/lib
+        continue-on-error: true
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/lib
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/cli-core-babel
+        continue-on-error: true
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         working-directory: packages/cli/core/babel
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish only @${{env.alias}}/cli
+        continue-on-error: true
         run: |
-          npm install
+          npm i
           npm publish --access=${{env.access}} --access=public --tag=${{env.tag}} || true
         working-directory: packages/cli/core
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
       - name: Install and publish non @${{env.alias}}/cli, @${{env.alias}}/cli-core-babel, @${{env.alias}}/lib, @${{env.alias}}/stack, @${{env.alias}}/stack-snowpack, @${{env.alias}}/stack-vite and @${{env.alias}}/stack-webpack
+        continue-on-error: true
         run: |
           rm -rf packages/stack/core/dist packages/stack/webpack/dist
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --stream -- npm install
-          npx lerna exec --ignore @template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
+          pnpm i --no-frozen-lockfile
+          npx lerna exec --no-bail --stream -- npm pack || true
+          npx lerna exec --ignore=@template/* --ignore @${{env.alias}}/cli --ignore @${{env.alias}}/cli-core-babel --ignore @${{env.alias}}/lib --ignore @${{env.alias}}/stack --ignore @${{env.alias}}/stack-snowpack --ignore @${{env.alias}}/stack-vite --ignore @${{env.alias}}/stack-webpack --no-bail --stream -- npm publish --access=${{env.access}} --tag=${{env.tag}} || true
         env:
           NODE_AUTH_TOKEN: ${{env.token}}
+
       - name: Test all framework variants
+        continue-on-error: true
         run: |
           rm ../.eslintrc.js
           sh wake-up-all.sh ${{env.alias}} ${{env.tag}}

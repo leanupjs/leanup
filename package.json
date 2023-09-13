@@ -4,14 +4,14 @@
   "scripts": {
     "ci": "npm ci && lerna exec --ignore=@template/* --stream -- npm ci",
     "format:tpl": "prettier --write packages/cli/frameworks/*/template/src/**/* --ignore-unknown",
-    "ncu": "npm run ncu:patch && npm run ncu:minor && npm run ncu:major",
+    "ncu": "pnpm ncu:patch && pnpm ncu:minor && pnpm ncu:major",
     "ncu:minor": "ncu -t minor -u && pnpm -r exec ncu -t minor -u -x @leanup/*,typescript",
     "ncu:patch": "ncu -t patch -u && pnpm -r exec ncu -t patch -u",
     "ncu:major": "ncu && pnpm -r exec ncu",
     "pack": "lerna exec --ignore=@template/* --stream -- npm install && lerna exec --ignore=@template/* --stream -- npm pack",
     "outdated": "(npm outdated || true) && pnpm -r exec npm outdated",
     "remove": "pnpm -r exec rm -rf node_modules package-lock.json *.log *.tgz && rm -rf node_modules package-lock.json *.log *.tgz && git clean -f -d -X",
-    "reinstall": "npm run remove && npm run update",
+    "reinstall": "pnpm remove && pnpm update",
     "update": "npm install && lerna exec --ignore=@template/* --no-bail --stream -- npm install",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -23,7 +23,7 @@
   },
   "lint-staged": {
     "{packages}/**": [
-      "npm run format:tpl"
+      "pnpm format:tpl"
     ]
   },
   "repository": {
@@ -48,11 +48,11 @@
     "husky": "8.0.3",
     "lerna": "7.2.0",
     "lint-staged": "14.0.1",
-    "npm-check-updates": "16.13.3",
+    "npm-check-updates": "16.14.0",
     "prettier": "3.0.3",
     "prettier-plugin-svelte": "3.0.3",
     "svelte": "3.59.2",
     "typescript": "5.2.2",
-    "vitepress": "1.0.0-rc.12"
+    "vitepress": "1.0.0-rc.13"
   }
 }

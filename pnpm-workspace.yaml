@@ -1,6 +1,6 @@
 packages:
   - 'packages/cli/core'
-  - 'packages/cli/babel'
+  - 'packages/cli/core/babel'
   - 'packages/cli/frameworks/angular'
   - 'packages/cli/frameworks/angularjs'
   - 'packages/cli/frameworks/aurelia'
@@ -21,4 +21,3 @@ packages:
   - 'packages/openapi'
   - 'packages/stack/*'
   - 'packages/stack/frameworks/*'
-

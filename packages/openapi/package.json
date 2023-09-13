@@ -18,11 +18,11 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "scripts": {
-    "build": "rm -rf dist typescript-rxjs && npm run generate:typescript-rxjs",
+    "build": "rm -rf dist typescript-rxjs && pnpm generate:typescript-rxjs",
     "generate:typescript-rxjs": "openapi-generator-cli generate -g typescript-rxjs -o typescript-rxjs -i src/openapi.yml",
     "create:package-json": "node scripts/create-package-json.js dipa-projekt dipa-openapi 0.0.0 dipa-projekt/dipa-hub",
     "add:bearer-handling": "node scripts/add-bearer-handling.js",
-    "prepack": "npm run build && tsc -p typescript-rxjs && mv typescript-rxjs/dist dist"
+    "prepack": "pnpm build && tsc -p typescript-rxjs && mv typescript-rxjs/dist dist"
   },
   "dependencies": {
     "rxjs": "7.8.1"

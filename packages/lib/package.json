@@ -29,7 +29,6 @@
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "8.5.0",
     "@types/chai": "4.3.6",
-    "@types/loglevel": "1.6.3",
     "@types/mocha": "9.1.1",
     "@types/node": "20.6.0",
     "@types/sinon": "10.0.16",
@@ -56,11 +55,11 @@
     "build:types": "tsc -d --outDir types -p tsconfig.build.json && rm -rf types/*.js types/*.map types/**/*.js types/**/*.map",
     "build:umd": "rollup -c rollup.config.js",
     "build:cleanup": "rm -rf cjs esm types umd",
-    "build": "npm run build:cleanup && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:umd",
+    "build": "pnpm build:cleanup && pnpm build:cjs && pnpm build:esm && pnpm build:types && pnpm build:umd",
     "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
-    "prepack": "npm test && npm run build",
+    "prepack": "npm test && pnpm build",
     "remove": "rm -rf node_modules",
-    "reinstall": "npm run remove && npm run update",
+    "reinstall": "pnpm remove && pnpm update",
     "update": "npm install && npm update && npm outdated"
   },
   "files": [

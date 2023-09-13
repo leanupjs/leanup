@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 
 export let PROXIES: Object = {};
@@ -8,7 +9,12 @@ try {
 }
 
 const packageJsonApp = require(path.resolve(process.cwd(), 'package.json'));
-const packageJsonCli = require(path.resolve(process.cwd(), 'node_modules/@leanup/stack/package.json'));
+let packageJsonCli;
+try {
+  packageJsonCli = JSON.parse(fs.readFileSync(require.resolve('@leanup/stack/package.json'), 'utf-8'));
+} catch (error) {
+  packageJsonCli = {};
+}
 
 let proxyConfig;
 try {

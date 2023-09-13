@@ -70,7 +70,7 @@
     "build:mjs": "tsc --outDir dist/mjs -p tsconfig.mjs.json && node ../../../scripts/package.js dist/mjs module",
     "build:rm": "rm -rf dist",
     "build:types": "tsc -d --outDir dist/types -p tsconfig.mjs.json && rm -rf dist/types/*.{js,map} dist/types/**/*.{js,map}",
-    "build": "npm run build:rm && npm run build:cjs && npm run build:mjs && npm run build:types",
-    "prepack": "npm run build"
+    "build": "pnpm build:rm && pnpm build:cjs && pnpm build:mjs && pnpm build:types",
+    "prepack": "pnpm build"
   }
 }
