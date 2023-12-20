@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { createRequire } from 'module';
 
 export let PROXIES: Object = {};
 try {
@@ -9,10 +8,18 @@ try {
   PROXIES = {};
 }
 
-const packageJsonApp = require(path.resolve(process.cwd(), 'package.json'));
+let packageJsonApp;
+try {
+  packageJsonApp = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
+} catch (error) {
+  packageJsonApp = {};
+}
+
 let packageJsonCli;
 try {
-  packageJsonCli = JSON.parse(fs.readFileSync(require.resolve('@leanup/stack/package.json'), 'utf-8'));
+  packageJsonCli = JSON.parse(
+    fs.readFileSync(path.resolve(process.cwd(), 'node_modules/@leanup/stack/package.json'), 'utf-8')
+  );
 } catch (error) {
   packageJsonCli = {};
 }
