@@ -1,23 +1,27 @@
+import fs from 'fs';
 import path from 'path';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
 
 export let PROXIES: Object = {};
 try {
-  PROXIES = require(path.resolve(process.cwd(), 'proxy.conf.json'));
+  PROXIES = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'proxy.conf.json'), 'utf-8'));
 } catch (error) {
   PROXIES = {};
 }
 
-const packageJsonApp = require(path.resolve(process.cwd(), 'package.json'));
-const packageJsonCli = require(path.resolve(process.cwd(), 'node_modules/@leanup/stack/package.json'));
-
-let proxyConfig;
+let packageJsonApp;
 try {
-  proxyConfig = require(path.resolve(process.cwd(), 'proxy.conf.json'));
+  packageJsonApp = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
 } catch (error) {
-  proxyConfig = {};
+  packageJsonApp = {};
+}
+
+let packageJsonCli;
+try {
+  packageJsonCli = JSON.parse(
+    fs.readFileSync(path.resolve(process.cwd(), 'node_modules/@leanup/stack/package.json'), 'utf-8')
+  );
+} catch (error) {
+  packageJsonCli = {};
 }
 
 export interface Replacement {
