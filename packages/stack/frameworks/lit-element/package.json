@@ -22,7 +22,7 @@
     "url": "https://github.com/leanupjs/leanup/issues"
   },
   "dependencies": {
-    "regenerator-runtime": "0.14.0"
+    "regenerator-runtime": "0.14.1"
   },
   "peerDependencies": {
     "@swc/core": "^1",
