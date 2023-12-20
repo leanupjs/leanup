@@ -3,24 +3,25 @@ const path = require('path');
 
 export let PROXIES: Object = {};
 try {
-  PROXIES = require(path.resolve(process.cwd(), 'proxy.conf.json'));
+  PROXIES = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'proxy.conf.json'), 'utf-8'));
 } catch (error) {
   PROXIES = {};
 }
 
-const packageJsonApp = require(path.resolve(process.cwd(), 'package.json'));
-let packageJsonCli;
+let packageJsonApp;
 try {
-  packageJsonCli = JSON.parse(fs.readFileSync(require.resolve('@leanup/stack/package.json'), 'utf-8'));
+  packageJsonApp = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
 } catch (error) {
-  packageJsonCli = {};
+  packageJsonApp = {};
 }
 
-let proxyConfig;
+let packageJsonCli;
 try {
-  proxyConfig = require(path.resolve(process.cwd(), 'proxy.conf.json'));
+  packageJsonCli = JSON.parse(
+    fs.readFileSync(path.resolve(process.cwd(), 'node_modules/@leanup/stack/package.json'), 'utf-8')
+  );
 } catch (error) {
-  proxyConfig = {};
+  packageJsonCli = {};
 }
 
 export interface Replacement {

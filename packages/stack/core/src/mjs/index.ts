@@ -3,7 +3,7 @@ import path from 'path';
 
 export let PROXIES: Object = {};
 try {
-  PROXIES = require(path.resolve(process.cwd(), 'proxy.conf.json'));
+  PROXIES = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'proxy.conf.json'), 'utf-8'));
 } catch (error) {
   PROXIES = {};
 }
@@ -22,13 +22,6 @@ try {
   );
 } catch (error) {
   packageJsonCli = {};
-}
-
-let proxyConfig;
-try {
-  proxyConfig = require(path.resolve(process.cwd(), 'proxy.conf.json'));
-} catch (error) {
-  proxyConfig = {};
 }
 
 export interface Replacement {
