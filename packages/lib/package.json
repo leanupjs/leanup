@@ -43,7 +43,7 @@
     "react": "18.2.0",
     "rimraf": "3.0.2",
     "sinon": "14.0.2",
-    "typescript": "4.8.4"
+    "typescript": "4.9.4"
   },
   "scripts": {
     "build:cjs": "tsc -m commonjs --outDir cjs -p tsconfig.build.json",
